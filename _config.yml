@@ -22,3 +22,8 @@ plugins:
 
 # SEO-ish basics
 lang: en-SG
+
+# Files that exist for repo/tooling purposes only, not part of the site
+exclude:
+  - CLAUDE.md
+  - README.md
