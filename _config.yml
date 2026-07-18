@@ -1,0 +1,24 @@
+title: Lesser Known Singapore
+description: Forgotten facts, obscure history, and overlooked people from Singapore's past and present.
+theme: minima
+minima:
+  skin: dark
+  social_links:
+    github: pikaia
+
+# Show latest posts on the homepage
+show_excerpts: true
+
+# Markdown settings
+markdown: kramdown
+
+# Permalink structure: /2026/07/18/post-title/
+permalink: /:year/:month/:day/:title/
+
+# Plugins (all supported natively by GitHub Pages, no build step needed)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# SEO-ish basics
+lang: en-SG
