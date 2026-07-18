@@ -5,6 +5,9 @@ date: 2026-07-18
 categories: [history, world-war-two]
 ---
 
+![The tree tunnel staircase in Fort Canning Park](https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg)
+*Fort Canning Park today — the quiet green space with a wartime command bunker hidden beneath it. (Photo: DianaAndassova / Wikimedia Commons, CC BY-SA 4.0)*
+
 Beneath Fort Canning Hill, a quiet green space in the middle of the city, sits a concrete bunker most visitors to the park above never notice. Known as the Battlebox, it was once the underground command centre for the British Malaya Command, and it's roughly the size of three basketball courts, buried entirely out of sight.
 
 ![Entrance to the Battlebox at Fort Canning Hill](https://upload.wikimedia.org/wikipedia/commons/8/8a/BattleBoxEntrance.JPG)
