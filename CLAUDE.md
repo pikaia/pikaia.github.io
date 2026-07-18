@@ -23,6 +23,10 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 - The `image` front matter value should match the header/hero image, and is used as the small thumbnail next to the post link on the homepage.
 - Closing line is bolded, tying the post back to the blog's "overlooked/lesser-known" theme (e.g. `**Why it matters today:**`, `**Where it fits in the bigger story:**`).
 
+## Charts
+
+When a post calls for a chart (not just photos), load the `dataviz` skill and follow it — form choice, color-by-job, mark specs, hover interaction, accessibility (table fallback, ARIA label on the SVG). Source real data (e.g. data.gov.sg for HDB figures) rather than approximating from secondary articles when an authoritative dataset exists. Charts are self-contained inline HTML/SVG/JS embedded directly in the post's markdown (kramdown passes raw HTML through) — no external chart libraries, since the site has no JS build step. Preview the chart as a standalone Artifact before embedding, since there's no local Jekyll to render it in.
+
 ## Git
 
 Commit and push directly without asking for confirmation for routine content changes (posts, images, about page). Still check before anything destructive (force-push, history rewrite, deleting content).
