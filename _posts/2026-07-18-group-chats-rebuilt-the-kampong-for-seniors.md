@@ -22,4 +22,13 @@ That's the quieter story behind all those senior citizens tapping away in coffee
 
 **Why it matters today:** a programme built to close a "digital divide" ended up doing something more specific — rebuilding the kind of tight, everyday social contact that public housing and smaller families had quietly eroded, one group chat at a time.
 
+---
+
+**Sources:**
+- [MCI response to PQ on update on Digital Ambassador outreach effort — Ministry of Digital Development and Information](https://www.mddi.gov.sg/newsroom/pq-on-update-on-digital-ambassador-outreach-effort/)
+- [Seniors Go Digital Programme Factsheet — IMDA](https://www.imda.gov.sg/-/media/imda/files/news-and-events/media-room/media-releases/08/annex-a-seniors-go-digital-programme-factsheet.pdf)
+- [Smartphone ownership, digital literacy, and the mediating role of social connectedness and loneliness in improving the wellbeing of community-dwelling older adults of low socio-economic status in Singapore — PLOS ONE](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0290557)
+- [Building Digital Literacy in Older Adults of Low Socioeconomic Status in Singapore (Project Wire Up) — Journal of Medical Internet Research](https://www.jmir.org/2022/12/e40341)
+- [File:Bishan Community Club.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bishan_Community_Club.JPG)
+
 [← Back to all posts](/)

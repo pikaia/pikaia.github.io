@@ -268,4 +268,18 @@ Then came the 2021–2026 run-up, the steepest on the chart. Part of it was low 
 
 **Why it matters today:** the shape of that line isn't just a market history — every kink in it marks a specific shock or policy response, most of which the people paying today's prices have never had reason to trace back to a chart.
 
+---
+
+**Sources:**
+- [Resale Flat Prices (Based on Approval Date), 1990-1999 — data.gov.sg](https://data.gov.sg/datasets/d_ebc5ab87086db484f88045b47411ebc5/view)
+- [Resale Flat Prices (Based on Approval Date), 2000-Feb 2012 — data.gov.sg](https://data.gov.sg/datasets/d_43f493c6c50d54243cc1eab0df142d6a/view)
+- [Resale Flat Prices (Based on Registration Date), Mar 2012-Dec 2014 — data.gov.sg](https://data.gov.sg/datasets/d_2d5ff9ea31397b66239f245f57751537/view)
+- [Resale Flat Prices (Based on Registration Date), Jan 2015-Dec 2016 — data.gov.sg](https://data.gov.sg/datasets/d_ea9ed51da2787afaf8e51f827c304208/view)
+- [Resale Flat Prices (Based on Registration Date), Jan 2017 onwards — data.gov.sg](https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view)
+- [Property Cooling Measures In SG: Complete Timeline — DollarBack Mortgage](https://dollarbackmortgage.com/blog/property-cooling-measures-timeline/)
+- [Singapore Cooling Measures — History since 2009 — StackedHomes](https://stackedhomes.com/editorial/singapore-cooling-measures-history/)
+- [All Buyers of Last Two Pandemic-Delayed BTO Projects Have Been Scheduled to Collect Their Keys — HDB](https://www.hdb.gov.sg/about-us/news-and-publications/press-releases/All-Buyers-of-Last-Two-Pandemic-Delayed-BTO-Projects-Have-Been-Scheduled-to-Collect-Their-Keys)
+- [All pandemic-delayed BTO projects are now completed. What's next? — 99.co](https://www.99.co/singapore/insider/pandemic-delayed-bto-projects/)
+- [File:HDB flats in Singapore 2.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HDB_flats_in_Singapore_2.jpg)
+
 [← Back to all posts](/)

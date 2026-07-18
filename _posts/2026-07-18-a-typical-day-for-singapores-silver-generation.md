@@ -28,4 +28,15 @@ The government's response has been to build the infrastructure this generation m
 
 **Why it matters today:** the generation now in their 80s and 90s is, in many ways, the last to have lived most of their working life before Singapore's retirement systems caught up — which makes the hubs, subsidies, and quiet daily routines built around them one of the more overlooked ways the island is still adjusting for its own history.
 
+---
+
+**Sources:**
+- [Silver Support Scheme — CPF Board](https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme)
+- [Central Provident Fund — Wikipedia](https://en.wikipedia.org/wiki/Central_Provident_Fund)
+- [PCS Active Ageing Centres](https://pcs.org.sg/services/seniors/active-ageing-centre/)
+- [Our Tampines Hub — Wikipedia](https://en.wikipedia.org/wiki/Our_Tampines_Hub)
+- [File:Our Tampines Hub Town Square.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Our_Tampines_Hub_Town_Square.jpg)
+- [File:Bedok Hawker Centre.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bedok_Hawker_Centre.jpg)
+- [File:CPF Building.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CPF_Building.jpg)
+
 [← Back to all posts](/)

@@ -28,4 +28,12 @@ After the war the bunker was sealed up and largely forgotten for decades. It's s
 
 **Where it fits in the bigger story:** the Battlebox sits alongside other lesser-known wartime sites across Singapore — a reminder that much of the island's most pivotal history happened in unremarkable, easy-to-miss places.
 
+---
+
+**Sources:**
+- [Battlebox — Wikipedia](https://en.wikipedia.org/wiki/Battlebox)
+- [File:Fort Canning Park Tree Tunnel.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fort_Canning_Park_Tree_Tunnel.jpg)
+- [File:BattleBoxEntrance.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BattleBoxEntrance.JPG)
+- [File:Door of The Battle Box, Singapore - 20100306.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Door_of_The_Battle_Box,_Singapore_-_20100306.jpg)
+
 [← Back to all posts](/)
