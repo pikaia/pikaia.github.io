@@ -5,6 +5,8 @@ date: 2026-07-18
 categories: [history, world-war-two]
 ---
 
+[← Back to all posts](/)
+
 ![The tree tunnel staircase in Fort Canning Park](https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg)
 *Fort Canning Park today — the quiet green space with a wartime command bunker hidden beneath it. (Photo: DianaAndassova / Wikimedia Commons, CC BY-SA 4.0)*
 
@@ -21,3 +23,5 @@ After the war the bunker was sealed up and largely forgotten for decades. It's s
 *The heavy blast door guarding the entrance to the bunker's tunnels. (Photo: Roberto Arias / Wikimedia Commons, CC BY 2.0)*
 
 **Where it fits in the bigger story:** the Battlebox sits alongside other lesser-known wartime sites across Singapore — a reminder that much of the island's most pivotal history happened in unremarkable, easy-to-miss places.
+
+[← Back to all posts](/)

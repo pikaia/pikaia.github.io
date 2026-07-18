@@ -20,6 +20,7 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 - Each post gets a header image right after the front matter (before the first paragraph) as a thumbnail, plus 1-2 more images inline near the text they illustrate.
 - Images are hotlinked directly from Wikimedia Commons (`upload.wikimedia.org`) — no binaries committed to the repo. Each image has an italicized caption crediting the author and license.
 - Closing line is bolded, tying the post back to the blog's "overlooked/lesser-known" theme (e.g. `**Why it matters today:**`, `**Where it fits in the bigger story:**`).
+- Include a `[← Back to all posts](/)` link right after the front matter (before the thumbnail) and again at the very end, so readers can return to the homepage without using the browser back button.
 
 ## Git
 
