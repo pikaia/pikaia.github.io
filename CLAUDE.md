@@ -16,7 +16,9 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 ## Post conventions
 
 - Files live in `_posts/`, named `YYYY-MM-DD-title-slug.md`.
-- Front matter: `layout: post`, `title`, `date`, `categories`, `image` (URL of the post's header/thumbnail image — also used as the small thumbnail next to the post link on the homepage, via the custom `_layouts/home.html`).
+- Front matter: `layout: post`, `title`, `date`, `last_modified_at`, `categories`, `image` (URL of the post's header/thumbnail image — also used as the small thumbnail next to the post link on the homepage, via the custom `_layouts/home.html`).
+- `date` includes a time (e.g. `2026-07-18 09:00:00 +0800`), not just a day, so new posts sort correctly even when published the same calendar day. `last_modified_at` starts equal to `date`. The homepage (`_layouts/home.html`) sorts posts by `last_modified_at` descending, so it reflects post/update recency, not just original publish date.
+- **Whenever an existing post's content is substantively edited** (not routine site-wide convention changes like this one), bump that post's `last_modified_at` to the current time — the homepage will then correctly move it to the top and show "Updated <date>" instead of the original publish date.
 - The post's **first paragraph must come immediately after the front matter**, before any image or link. `show_excerpts: true` means Jekyll uses the first paragraph as the homepage teaser, so anything placed before it (images, the back-link) would leak onto the homepage instead of a proper excerpt.
 - After that first paragraph, include a `[← Back to all posts](/)` link, then the header/thumbnail image as a hero, then 1-2 more images inline near the text they illustrate. Add the back-link again at the very end of the post too.
 - Images are hotlinked directly from Wikimedia Commons (`upload.wikimedia.org`) — no binaries committed to the repo. Each image has an italicized caption crediting the author and license, on its own line separated from the image by a blank line (otherwise Markdown merges them into one paragraph and the caption wraps beside the image instead of sitting below it).

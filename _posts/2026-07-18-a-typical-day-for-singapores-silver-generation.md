@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "A Typical Day for Singapore's Silver Generation"
-date: 2026-07-18
+date: 2026-07-18 10:00:00 +0800
+last_modified_at: 2026-07-18 10:00:00 +0800
 categories: [society, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/7/7a/Our_Tampines_Hub_Town_Square.jpg
 ---

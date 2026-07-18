@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "What a Square Foot of HDB Flat Has Cost, 1990–2026"
-date: 2026-07-18
+date: 2026-07-18 11:00:00 +0800
+last_modified_at: 2026-07-18 11:00:00 +0800
 categories: [economy, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/d/d3/HDB_flats_in_Singapore_2.jpg
 ---

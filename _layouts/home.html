@@ -14,14 +14,21 @@ layout: default
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {%- assign sorted_posts = site.posts | sort: 'last_modified_at' | reverse -%}
+      {%- for post in sorted_posts -%}
       <li style="display: flex; align-items: flex-start; gap: 1em;">
         {%- if post.image -%}
         <img src="{{ post.image }}" alt="" width="72" height="72" style="width: 72px; height: 72px; object-fit: cover; border-radius: 4px; flex-shrink: 0; margin-top: 0.3em;">
         {%- endif -%}
         <div>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-meta">
+            {%- if post.last_modified_at and post.last_modified_at != post.date -%}
+              Updated {{ post.last_modified_at | date: date_format }}
+            {%- else -%}
+              {{ post.date | date: date_format }}
+            {%- endif -%}
+          </span>
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "How Group Chats Rebuilt the Kampong for Singapore's Seniors"
-date: 2026-07-18
+date: 2026-07-18 12:00:00 +0800
+last_modified_at: 2026-07-18 12:00:00 +0800
 categories: [society, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/1/1a/Bishan_Community_Club.JPG
 ---
