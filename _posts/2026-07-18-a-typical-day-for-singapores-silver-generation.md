@@ -6,13 +6,13 @@ categories: [society, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/7/7a/Our_Tampines_Hub_Town_Square.jpg
 ---
 
+For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win.
+
 [← Back to all posts](/)
 
 ![Our Tampines Hub Town Square, Singapore](https://upload.wikimedia.org/wikipedia/commons/7/7a/Our_Tampines_Hub_Town_Square.jpg)
 
 *Our Tampines Hub — one of the regional hubs built to support seniors' daily routines. (Photo: Tamprovers / Wikimedia Commons, CC BY-SA 4.0)*
-
-For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win.
 
 ![Bedok Hawker Centre, Singapore](https://upload.wikimedia.org/wikipedia/commons/6/66/Bedok_Hawker_Centre.jpg)
 
