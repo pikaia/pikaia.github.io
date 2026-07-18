@@ -16,8 +16,8 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 ## Post conventions
 
 - Files live in `_posts/`, named `YYYY-MM-DD-title-slug.md`.
-- Front matter: `layout: post`, `title`, `date`, `categories`.
-- Each post gets a header image right after the front matter (before the first paragraph) as a thumbnail, plus 1-2 more images inline near the text they illustrate.
+- Front matter: `layout: post`, `title`, `date`, `categories`, `image` (URL of the post's header/thumbnail image — also used as the small thumbnail next to the post link on the homepage, via the custom `_layouts/home.html`).
+- Each post gets a header image right after the front matter (before the first paragraph) as a thumbnail, plus 1-2 more images inline near the text they illustrate. The `image` front matter value should match this header image.
 - Images are hotlinked directly from Wikimedia Commons (`upload.wikimedia.org`) — no binaries committed to the repo. Each image has an italicized caption crediting the author and license, on its own line separated from the image by a blank line (otherwise Markdown merges them into one paragraph and the caption wraps beside the image instead of sitting below it).
 - Closing line is bolded, tying the post back to the blog's "overlooked/lesser-known" theme (e.g. `**Why it matters today:**`, `**Where it fits in the bigger story:**`).
 - Include a `[← Back to all posts](/)` link right after the front matter (before the thumbnail) and again at the very end, so readers can return to the homepage without using the browser back button.

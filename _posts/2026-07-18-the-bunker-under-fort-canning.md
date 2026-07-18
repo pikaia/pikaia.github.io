@@ -3,6 +3,7 @@ layout: post
 title: "The Bunker Under Fort Canning Hill"
 date: 2026-07-18
 categories: [history, world-war-two]
+image: https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg
 ---
 
 [← Back to all posts](/)
