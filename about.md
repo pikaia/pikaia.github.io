@@ -9,3 +9,5 @@ This blog collects lesser-known facts and overlooked people connected to Singapo
 The goal isn't to be comprehensive. It's to surface the odd, the forgotten, and the interesting: a colonial-era eccentric, a building that no longer exists, a law nobody remembers, a person whose contribution got lost along the way.
 
 Posts are researched from public sources; corrections and suggestions are always welcome via [GitHub](https://github.com/pikaia).
+
+This site is written and maintained with the help of [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant — used for research, drafting, and publishing posts.
