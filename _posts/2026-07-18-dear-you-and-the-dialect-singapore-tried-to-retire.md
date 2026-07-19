@@ -132,6 +132,166 @@ The "why" behind that gap is a matter of public record. Singapore's census track
 <p style="color: var(--text-muted); font-size: 0.8em; margin-top: 0.6em;">Source: Singapore Census of Population / General Household Survey, via Wikipedia's "Speak Mandarin Campaign" summary table. Figures are for Chinese resident population aged 5 and over.</p>
 </div>
 
+<script>
+(function () {
+  var series = {
+    english: [[1980,10.2],[1990,20.6],[2000,23.0],[2010,32.6],[2015,37.4],[2020,48.3]],
+    mandarin: [[1980,13.1],[1990,32.8],[2000,35.0],[2010,47.7],[2015,46.1],[2020,29.9]],
+    dialect: [[1980,76.2],[1990,46.2],[2000,30.7],[2010,19.2],[2015,16.1],[2020,8.7]]
+  };
+  var years = [1980,1990,2000,2010,2015,2020];
+
+  var scope = document.currentScript.parentElement.querySelector('.lang-chart');
+  if (!scope) { return; }
+
+  var svgEl = scope.querySelector('svg');
+  var left = 46, right = 656, top = 24, bottom = 326;
+  var yMin = 0, yMax = 100;
+  var xMin = 1980, xMax = 2020;
+
+  function sx(year) { return left + (year - xMin) / (xMax - xMin) * (right - left); }
+  function sy(val) { return top + (yMax - val) / (yMax - yMin) * (bottom - top); }
+
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) { e.setAttribute(k, attrs[k]); }
+    return e;
+  }
+
+  var gridG = scope.querySelector('#lang-gridlines');
+  for (var v = 0; v <= 100; v += 20) {
+    var y = sy(v);
+    gridG.appendChild(el('line', { class: v === 0 ? 'lang-baseline' : 'lang-grid', x1: left, x2: right, y1: y, y2: y }));
+    var t = el('text', { class: 'lang-tick', x: left - 8, y: y + 3, 'text-anchor': 'end' });
+    t.textContent = v + '%';
+    gridG.appendChild(t);
+  }
+
+  var xG = scope.querySelector('#lang-xticks');
+  years.forEach(function (yr) {
+    var x = sx(yr);
+    var t2 = el('text', { class: 'lang-tick', x: x, y: bottom + 18, 'text-anchor': 'middle' });
+    t2.textContent = String(yr);
+    xG.appendChild(t2);
+  });
+
+  var dotsG = scope.querySelector('#lang-dots');
+  function drawSeries(key, lineId, dotClass) {
+    var pts = series[key];
+    var d = pts.map(function (p, i) { return (i === 0 ? 'M' : 'L') + sx(p[0]) + ',' + sy(p[1]); }).join(' ');
+    scope.querySelector('#' + lineId).setAttribute('d', d);
+    pts.forEach(function (p) {
+      dotsG.appendChild(el('circle', { class: dotClass, cx: sx(p[0]), cy: sy(p[1]), r: 3 }));
+    });
+  }
+  drawSeries('english', 'lang-line-1', 'lang-dot-1');
+  drawSeries('mandarin', 'lang-line-2', 'lang-dot-2');
+  drawSeries('dialect', 'lang-line-3', 'lang-dot-3');
+
+  var annoG = scope.querySelector('#lang-annotations');
+
+  var startDialect = series.dialect[0];
+  var sdx = sx(startDialect[0]), sdy = sy(startDialect[1]);
+  var startLabel = el('text', { class: 'lang-startlabel', x: sdx + 6, y: sdy - 8, 'text-anchor': 'start' });
+  startLabel.textContent = '76.2% (1980)';
+  annoG.appendChild(startLabel);
+
+  function endLabel(key, cls, text, dy) {
+    var pts = series[key];
+    var p = pts[pts.length - 1];
+    var ex = sx(p[0]), ey = sy(p[1]);
+    var lbl = el('text', { class: cls, x: ex - 6, y: ey + dy, 'text-anchor': 'end' });
+    lbl.textContent = text;
+    annoG.appendChild(lbl);
+  }
+  endLabel('english', 'lang-endlabel-1', '48.3%', -8);
+  endLabel('mandarin', 'lang-endlabel-2', '29.9%', 16);
+  endLabel('dialect', 'lang-endlabel-3', '8.7%', 14);
+
+  var hit = scope.querySelector('#lang-hitrect');
+  var crosshair = scope.querySelector('#lang-crosshair');
+  var tipBg = scope.querySelector('#lang-tooltip-bg');
+  var tipYear = scope.querySelector('#lang-tooltip-year');
+  var tip1 = scope.querySelector('#lang-tooltip-1');
+  var tip2 = scope.querySelector('#lang-tooltip-2');
+  var tip3 = scope.querySelector('#lang-tooltip-3');
+
+  function nearestYear(year) {
+    var best = years[0], bestDist = Infinity;
+    years.forEach(function (y) {
+      var dist = Math.abs(y - year);
+      if (dist < bestDist) { bestDist = dist; best = y; }
+    });
+    return best;
+  }
+  function valueAt(key, year) {
+    var pt = series[key].filter(function (p) { return p[0] === year; })[0];
+    return pt ? pt[1] : null;
+  }
+
+  function handleMove(clientX) {
+    var rect = svgEl.getBoundingClientRect();
+    var scale = 720 / rect.width;
+    var svgX = (clientX - rect.left) * scale;
+    var year = xMin + (svgX - left) / (right - left) * (xMax - xMin);
+    year = Math.max(xMin, Math.min(xMax, year));
+    var ny = nearestYear(year);
+    var px2 = sx(ny);
+
+    crosshair.setAttribute('x1', px2);
+    crosshair.setAttribute('x2', px2);
+    crosshair.style.opacity = 1;
+
+    var flip = px2 > (left + right) / 2;
+    var boxW = 150, boxH = 70;
+    var boxX = flip ? px2 - boxW - 10 : px2 + 10;
+    var boxY = top + 10;
+    tipBg.setAttribute('x', boxX);
+    tipBg.setAttribute('y', boxY);
+    tipBg.setAttribute('width', boxW);
+    tipBg.setAttribute('height', boxH);
+    tipBg.style.opacity = 0.95;
+
+    tipYear.setAttribute('x', boxX + 10);
+    tipYear.setAttribute('y', boxY + 16);
+    tipYear.textContent = String(ny);
+    tipYear.style.opacity = 1;
+
+    tip1.setAttribute('x', boxX + 10);
+    tip1.setAttribute('y', boxY + 33);
+    tip1.setAttribute('fill', 'var(--series-1)');
+    tip1.textContent = 'English ' + valueAt('english', ny) + '%';
+    tip1.style.opacity = 1;
+
+    tip2.setAttribute('x', boxX + 10);
+    tip2.setAttribute('y', boxY + 49);
+    tip2.setAttribute('fill', 'var(--series-2)');
+    tip2.textContent = 'Mandarin ' + valueAt('mandarin', ny) + '%';
+    tip2.style.opacity = 1;
+
+    tip3.setAttribute('x', boxX + 10);
+    tip3.setAttribute('y', boxY + 65);
+    tip3.setAttribute('fill', 'var(--series-3)');
+    tip3.textContent = 'Dialect ' + valueAt('dialect', ny) + '%';
+    tip3.style.opacity = 1;
+  }
+
+  function handleLeave() {
+    crosshair.style.opacity = 0;
+    tipBg.style.opacity = 0;
+    tipYear.style.opacity = 0;
+    tip1.style.opacity = 0;
+    tip2.style.opacity = 0;
+    tip3.style.opacity = 0;
+  }
+
+  hit.addEventListener('pointermove', function (e) { handleMove(e.clientX); });
+  hit.addEventListener('pointerleave', handleLeave);
+  hit.addEventListener('touchmove', function (e) { if (e.touches[0]) { handleMove(e.touches[0].clientX); } }, { passive: true });
+})();
+</script>
+
 Prime Minister Lee Kuan Yew launched the Speak Mandarin Campaign in 1979 with an explicit target: young Chinese Singaporeans would stop speaking dialects within five years, and Mandarin would replace them in public life within ten. Dialect programming was squeezed off free-to-air television and radio. The campaign didn't fully hit its five-year target, but the chart shows it basically won the war — dialect went from the language of more than three-quarters of Chinese households to under one in ten within two generations. What the campaign didn't anticipate was English quietly overtaking Mandarin too, only in the most recent decade.
 
 That's the backdrop Dear You landed on. The film — shot largely in Teochew, its plot built around qiaopi, the letters Teochew migrants once sent home to family across Southeast Asia — became a sleeper hit in China on a tiny budget. In Singapore, distributors planned a wide release in Mandarin dubbing, "in line with Singapore's bilingual language policy," with only a limited run of the original Teochew version. The original sold out in two hours. Golden Village ended up working with the Infocomm Media Development Authority to add eight more original-dialect screenings — a small but real instance of the same government apparatus that spent decades discouraging dialect content now clearing space for more of it.
