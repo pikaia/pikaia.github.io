@@ -23,6 +23,9 @@ plugins:
 # SEO-ish basics
 lang: en-SG
 
+# Google Analytics (GA4) - minima's built-in include handles the gtag.js snippet
+google_analytics: G-RPS2BGYR39
+
 # Files that exist for repo/tooling purposes only, not part of the site
 exclude:
   - CLAUDE.md
