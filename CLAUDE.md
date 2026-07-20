@@ -1,6 +1,6 @@
 # pikaia.github.io
 
-Jekyll blog on Lesser Known Singapore — forgotten facts, obscure history, and overlooked people from Singapore's past and present. Hosted on GitHub Pages, `minima` theme, no local build step.
+Jekyll blog on Lesser Known Singapore — forgotten facts, obscure history, and overlooked people from Singapore's past and present. Hosted on GitHub Pages, `minima` theme. No Gemfile is committed (GitHub Pages builds it directly), but a local Jekyll install (Ruby + `jekyll`/`minima`/`jekyll-feed`/`jekyll-sitemap`/`jekyll-seo-tag` gems) is available on this machine for previewing posts before publishing — run `jekyll serve` from the repo root and view at `http://127.0.0.1:4000`.
 
 ## Writing a new post
 
@@ -22,6 +22,7 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 - The post's **first paragraph must come immediately after the front matter**, before any image or link. `show_excerpts: true` means Jekyll uses the first paragraph as the homepage teaser, so anything placed before it (images, the back-link) would leak onto the homepage instead of a proper excerpt.
 - After that first paragraph, include a `[← Back to all posts](/)` link, then the header/thumbnail image as a hero, then 1-2 more images inline near the text they illustrate. Add the back-link again at the very end of the post too.
 - Images are hotlinked directly from Wikimedia Commons (`upload.wikimedia.org`) — no binaries committed to the repo. Each image has an italicized caption crediting the author and license, on its own line separated from the image by a blank line (otherwise Markdown merges them into one paragraph and the caption wraps beside the image instead of sitting below it).
+- **Any image narrower than half the post's content width must float** (e.g. a portrait-oriented photo sized to ~250-320px) so body text wraps beside it instead of leaving blank space on both sides — use a raw HTML `<div style="float: left; max-width: ...; margin: 0 1.5em 1em 0;">` wrapping the `<img>` and its caption `<em>`, and add `clear: both;` to whatever block follows (e.g. a chart's wrapper) so it doesn't overlap the floated image. Full-width landscape hero/inline images (e.g. skyline shots) don't need this — just center them normally.
 - The `image` front matter value should match the header/hero image, and is used as the small thumbnail next to the post link on the homepage.
 - Closing line is bolded, tying the post back to the blog's "overlooked/lesser-known" theme (e.g. `**Why it matters today:**`, `**Where it fits in the bigger story:**`).
 - After the closing line, add a `---` divider and a **Sources** section: a bulleted list of markdown links to every fact source and image credit page actually used while researching/writing the post (article/dataset pages, not just the image URLs — link to the Wikimedia Commons file page, not the raw `upload.wikimedia.org` URL). Only list sources actually consulted. This goes before the final back-link.
