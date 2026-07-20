@@ -1,0 +1,5 @@
+# Local-only overrides for `jekyll serve`, layered on top of _config.yml with:
+#   jekyll serve --config _config.yml,_config_dev.yml
+# Not used by GitHub Pages (which builds from _config.yml alone), so production is unaffected.
+
+title: "LOCAL — Lesser Known Singapore"

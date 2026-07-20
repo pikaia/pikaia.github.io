@@ -1,6 +1,6 @@
 # pikaia.github.io
 
-Jekyll blog on Lesser Known Singapore — forgotten facts, obscure history, and overlooked people from Singapore's past and present. Hosted on GitHub Pages, `minima` theme. No Gemfile is committed (GitHub Pages builds it directly), but a local Jekyll install (Ruby + `jekyll`/`minima`/`jekyll-feed`/`jekyll-sitemap`/`jekyll-seo-tag` gems) is available on this machine for previewing posts before publishing — run `jekyll serve` from the repo root and view at `http://127.0.0.1:4000`.
+Jekyll blog on Lesser Known Singapore — forgotten facts, obscure history, and overlooked people from Singapore's past and present. Hosted on GitHub Pages, `minima` theme. No Gemfile is committed (GitHub Pages builds it directly), but a local Jekyll install (Ruby + `jekyll`/`minima`/`jekyll-feed`/`jekyll-sitemap`/`jekyll-seo-tag` gems) is available on this machine for previewing posts before publishing — run `jekyll serve --config _config.yml,_config_dev.yml` from the repo root and view at `http://127.0.0.1:4000`. The `--config` flag layers `_config_dev.yml` (a local-only override, not read by GitHub Pages) on top, which prefixes the site title with "LOCAL —" in the browser tab so the local preview is never mistaken for the live site.
 
 ## Writing a new post
 
