@@ -12,9 +12,9 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 
 ## People
 
-- **Dr Benjamin Sheares** — Singapore's second president was a leading obstetrician whose medical work on family planning fed directly into the state's population-control campaigns — a nice bridge between a person and a policy story.
 - **William Farquhar, the co-founder written out of the story** — Singapore's first Resident did much of the actual early nation-building work, but was overshadowed and later pushed out by Raffles, who gets sole founding-father credit today.
 - **The Chetti Melaka (Peranakan Indians)** — a centuries-old community blending Chinese, Malay, and South Indian heritage into its own Creole language and dress, now down to only a few hundred officially recorded members. A genuinely obscure counterpart to the much more famous (Chinese) Peranakan story.
+- **Ya'acob Mohamed, the forgotten pioneer** — a first-generation PAP leader whose political career spanned the formative years of Singapore and Malaysia's political journeys, now far less remembered than his contemporaries; the Malay-medium schools he helped establish have since closed.
 
 ## Present-day / policy
 
