@@ -18,5 +18,5 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 
 ## Present-day / policy
 
-- **The shadow tuition economy** — ~70% of students in private tuition, widely normalized but rarely examined as a driver of inequality despite an ostensibly meritocratic system.
 - **"Quiet cracking" at work** — roughly 30% of Singapore workers report this quieter, harder-to-spot form of disengagement/burnout in 2026 surveys; unlike "quiet quitting," employees keep performing while struggling, so managers often miss it entirely.
+- **The Platform Workers Act's slow-motion phase-in** — CPF contributions for delivery riders and ride-hail drivers only became mandatory in 2025, with transition support covering 100% of the worker's added cost in 2025 but sliding to 75% (2026), 50% (2027), and 25% (2028) — a safety net for gig workers that's already scheduled to quietly thin out just as it's introduced.
