@@ -5,7 +5,6 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 ## History
 
 - **Singapore sold Christmas Island to Australia (1958)** — the territory was under Singapore's administration from 1946, then sold for £2.9M because Australia wanted its phosphate. A clean, little-known "lost territory" story.
-- **The 1960s ban on long hair for men** — a real government crackdown on hippie style, with fines and forced haircuts at checkpoints. Quirky social-control history.
 - **Opium farming funded colonial Singapore** — opium was legal and taxed for decades; opium farm revenue was one of the largest sources of government income before WWII. Bigger, more systemic story than the usual "founding of Singapore" fare.
 - **Pulau Tekong before it was an NS island** — it had civilian kampongs and migrant communities well into the 20th century before being turned into a military training ground everyone now only knows from National Service.
 - **The 1915 Singapore Mutiny** — a WWI-era revolt by sepoys of a Muslim Indian regiment, fueled partly by rumors that the Kaiser had converted to Islam; put down with help from Russian, French, and Japanese troops, with 47 executed by firing squad. Barely discussed compared to WWII history.
@@ -15,6 +14,7 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 
 - **Dr Benjamin Sheares** — Singapore's second president was a leading obstetrician whose medical work on family planning fed directly into the state's population-control campaigns — a nice bridge between a person and a policy story.
 - **William Farquhar, the co-founder written out of the story** — Singapore's first Resident did much of the actual early nation-building work, but was overshadowed and later pushed out by Raffles, who gets sole founding-father credit today.
+- **The Chetti Melaka (Peranakan Indians)** — a centuries-old community blending Chinese, Malay, and South Indian heritage into its own Creole language and dress, now down to only a few hundred officially recorded members. A genuinely obscure counterpart to the much more famous (Chinese) Peranakan story.
 
 ## Present-day / policy
 
