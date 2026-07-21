@@ -4,7 +4,7 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 
 ## History
 
-- **Singapore sold Christmas Island to Australia (1958)** — the territory was under Singapore's administration from 1946, then sold for £2.9M because Australia wanted its phosphate. A clean, little-known "lost territory" story.
+- **The Malaysian enclave inside Singapore that lasted until 2011** — Tanjong Pagar Railway Station and the KTM railway land stayed under Malaysian administration for decades after independence, a foreign-controlled strip inside Singapore's own downtown, resolved only by a 2010 land-swap deal.
 - **Opium farming funded colonial Singapore** — opium was legal and taxed for decades; opium farm revenue was one of the largest sources of government income before WWII. Bigger, more systemic story than the usual "founding of Singapore" fare.
 - **The 1915 Singapore Mutiny** — a WWI-era revolt by sepoys of a Muslim Indian regiment, fueled partly by rumors that the Kaiser had converted to Islam; put down with help from Russian, French, and Japanese troops, with 47 executed by firing squad. Barely discussed compared to WWII history.
 - **Bugis Street before redevelopment** — from the 1950s-80s it was internationally famous nightlife strip known for its transgender community, until a 1980s urban renewal project erased it; a "then vs. now" story about what sanitized redevelopment actually replaced.
