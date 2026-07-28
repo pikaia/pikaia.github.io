@@ -15,6 +15,19 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 - **William Farquhar, the co-founder written out of the story** — Singapore's first Resident did much of the actual early nation-building work, but was overshadowed and later pushed out by Raffles, who gets sole founding-father credit today.
 - **The Chetti Melaka (Peranakan Indians)** — a centuries-old community blending Chinese, Malay, and South Indian heritage into its own Creole language and dress, now down to only a few hundred officially recorded members. A genuinely obscure counterpart to the much more famous (Chinese) Peranakan story.
 - **Ya'acob Mohamed, the forgotten pioneer** — a first-generation PAP leader whose political career spanned the formative years of Singapore and Malaysia's political journeys, now far less remembered than his contemporaries; the Malay-medium schools he helped establish have since closed.
+- **Lim Yew Hock, Singapore's vanished Chief Minister** — the second Chief Minister, who crushed leftist unions and student unrest in the 1950s, then left politics, converted to Islam, and reinvented himself as a diplomat in Australia — a dramatic, controversial arc almost nobody remembers today.
+- **Tan Tock Seng, the pauper who became a hospital's namesake** — a penniless immigrant vegetable seller turned wealthy philanthropist who funded Singapore's first hospital for the poor; most Singaporeans who pass the hospital daily know nothing about the man himself.
+- **Lim Peng Siang, the forgotten "greatest magnate"** — founder of the Ho Hong business empire spanning shipping, banking, cement, and rice, once ranked among Singapore's biggest tycoons in the 1930s, now almost entirely absent from popular memory.
+- **P. Govindasamy Pillai, from cloth peddler to retail pioneer** — a South Indian immigrant who built the PGP department store chain and became a major community philanthropist, overshadowed today by better-remembered Chinese business dynasties.
+- **David Marshall, the reluctant first Chief Minister** — a Sephardic Jewish criminal lawyer who became Singapore's first Chief Minister in 1955, then resigned within a year on a point of principle over self-government talks, later serving as a globe-trotting ambassador.
+
+## Japan–Singapore
+
+- **Tani Yutaka, the "Tiger of Malaya"** — a Japanese Cemetery Park burial, a bandit-turned-spy who guided Japanese troops through Malaya's jungles before the 1942 invasion, mythologised in Japanese films as a folk hero and reviled locally as a traitor-collaborator.
+- **Syonan Jinja, the Shinto shrine the Japanese blew up themselves** — a wartime shrine built by occupation forces at MacRitchie Reservoir, dynamited by the retreating Japanese in 1945 to keep it from Allied hands; its ruins still sit half-forgotten in the reservoir forest.
+- **Japan's quiet hand in building Jurong** — in the 1960s-70s, Japanese capital and firms like Bridgestone and Sumitomo were early industrial partners in Singapore's EDB-led manufacturing push, a reconciliation-through-investment story that gets little attention next to the WWII narrative.
+- **The Japanese Garden that reconciliation built, then forgot** — opened in 1975 in Jurong as a twin to the Chinese Garden, meant to symbolise postwar healing between the two countries, it has spent long stretches closed or under-visited compared to its more famous sibling.
+- **Singapore's own Japanese war crimes trials** — lesser-known than Tokyo's, the 1946-48 tribunals held at Victoria Memorial Hall prosecuted Japanese officers for the Sook Ching massacres, a chapter of local legal history overshadowed by the postwar diplomacy story already covered on this blog.
 
 ## Present-day / policy
 
