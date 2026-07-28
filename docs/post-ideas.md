@@ -25,7 +25,6 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 
 - **Tani Yutaka, the "Tiger of Malaya"** — a Japanese Cemetery Park burial, a bandit-turned-spy who guided Japanese troops through Malaya's jungles before the 1942 invasion, mythologised in Japanese films as a folk hero and reviled locally as a traitor-collaborator.
 - **Syonan Jinja, the Shinto shrine the Japanese blew up themselves** — a wartime shrine built by occupation forces at MacRitchie Reservoir, dynamited by the retreating Japanese in 1945 to keep it from Allied hands; its ruins still sit half-forgotten in the reservoir forest.
-- **Japan's quiet hand in building Jurong** — in the 1960s-70s, Japanese capital and firms like Bridgestone and Sumitomo were early industrial partners in Singapore's EDB-led manufacturing push, a reconciliation-through-investment story that gets little attention next to the WWII narrative.
 - **The Japanese Garden that reconciliation built, then forgot** — opened in 1975 in Jurong as a twin to the Chinese Garden, meant to symbolise postwar healing between the two countries, it has spent long stretches closed or under-visited compared to its more famous sibling.
 - **Singapore's own Japanese war crimes trials** — lesser-known than Tokyo's, the 1946-48 tribunals held at Victoria Memorial Hall prosecuted Japanese officers for the Sook Ching massacres, a chapter of local legal history overshadowed by the postwar diplomacy story already covered on this blog.
 
