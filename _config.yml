@@ -15,6 +15,12 @@ markdown: kramdown
 # Permalink structure: /2026/07/18/post-title/
 permalink: /:year/:month/:day/:title/
 
+# Per-post historical photo galleries, linked from each post
+collections:
+  gallery:
+    output: true
+    permalink: /gallery/:path/
+
 # Plugins (all supported natively by GitHub Pages, no build step needed)
 plugins:
   - jekyll-feed
