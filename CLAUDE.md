@@ -27,6 +27,17 @@ Keep this lightweight — a few chat questions, not a formal spec doc. Only writ
 - Closing line is bolded, tying the post back to the blog's "overlooked/lesser-known" theme (e.g. `**Why it matters today:**`, `**Where it fits in the bigger story:**`).
 - After the closing line, add a `---` divider and a **Sources** section: a bulleted list of markdown links to every fact source and image credit page actually used while researching/writing the post (article/dataset pages, not just the image URLs — link to the Wikimedia Commons file page, not the raw `upload.wikimedia.org` URL). Only list sources actually consulted. This goes before the final back-link.
 
+## Photo galleries
+
+Every post needs a companion gallery page with additional historical/vintage photos beyond the ones inline in the post itself (aim for 5; fewer is fine if the topic is genuinely thin on real historical photography — never pad with weak or irrelevant images to hit the count).
+
+- Gallery pages live in `_gallery/<slug>.md` (same slug as the post, no date prefix), rendered by `_layouts/gallery.html` via the `gallery` collection registered in `_config.yml` (permalink `/gallery/:path/`).
+- Front matter: `layout: gallery`, `title` (e.g. `"More Historical Photos: <short topic label>"`), `post_url` (the post's actual permalink), `post_title` (must match the post's title exactly).
+- Body: a one-sentence intro, then each photo as `### <short heading>`, the image via markdown `![alt](url)`, then an italicized caption on its own line (blank line separating it from the image, same rule as inline post images) crediting author/source/license exactly as shown on the image's Commons file page.
+- Never duplicate an image URL that's already used inline in the post itself.
+- In the post, add one line linking to the gallery (e.g. `[See five more historical photos related to this post →](/gallery/<slug>/)`), placed naturally in the prose near the end, before the closing bolded line. Append the gallery images' Commons file-page links to the post's own Sources list.
+- Adding a gallery to an already-published post is a site-wide convention rollout, not a substantive content edit — don't bump `last_modified_at` for it.
+
 ## Charts
 
 When a post calls for a chart (not just photos), load the `dataviz` skill and follow it — form choice, color-by-job, mark specs, hover interaction, accessibility (table fallback, ARIA label on the SVG). Source real data (e.g. data.gov.sg for HDB figures) rather than approximating from secondary articles when an authoritative dataset exists. Charts are self-contained inline HTML/SVG/JS embedded directly in the post's markdown (kramdown passes raw HTML through) — no external chart libraries, since the site has no JS build step. Preview the chart standalone as an Artifact first (fast iteration on an isolated chart), then check it again in place in the full post via the local Jekyll preview (see above) before publishing.
