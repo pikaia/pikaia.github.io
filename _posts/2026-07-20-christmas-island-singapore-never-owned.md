@@ -144,7 +144,8 @@ Singapore's government, led by Chief Minister Lim Yew Hock, received a lump-sum 
 
 <script>
 (function() {
-  var svg = document.currentScript.previousElementSibling.previousElementSibling;
+  var card = document.currentScript.previousElementSibling;
+  var svg = card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#ci-tooltip');
   var hits = svg.querySelectorAll('.ci-hit');
