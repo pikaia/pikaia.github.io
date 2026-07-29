@@ -26,7 +26,7 @@ Earlier this year, a 43-year-old man named Tang Bo Xiang was fined S$2,500 and h
 
 **Then there's the one genuinely serious rule that fits neither pattern.** Section 377A of the Penal Code, a colonial-era law from 1938 criminalising sex between men, sat unenforced for decades — Singapore's courts confirmed in 2022 it couldn't actually be used to prosecute consenting adults — before Parliament actually repealed it that November, effective from January 2023. It's the rare example of a dead-letter law that didn't just fade into irrelevance like the long hair ban; it was formally taken off the books, after sustained public pressure and years of the government insisting the status quo — unenforced, but still technically a crime — was itself the compromise.
 
-What ties all five together isn't strictness or leniency — it's how unevenly Singapore's reputation tracks reality. The rules everyone's heard of are the ones the government has quietly relaxed or abandoned. The ones nobody talks about are the ones still generating fines and Corrective Work Orders every single week.
+What ties all five together isn't strictness or leniency — it's how unevenly Singapore's reputation tracks reality. The rules everyone's heard of are the ones the government has quietly relaxed or abandoned. The ones nobody talks about are the ones still generating fines and Corrective Work Orders every single week. [See more historical photos related to this post →](/gallery/fine-city-fine-print-singapore-rules-still-stick/)
 
 <div class="viz-root" style="clear: both;">
 <style>
@@ -226,5 +226,8 @@ What ties all five together isn't strictness or leniency — it's how unevenly S
 - [Singapore: UN Human Rights Office welcomes repealing of Section 377A of the Penal Code — OHCHR](https://bangkok.ohchr.org/news/2022/news-release-singapore-un-human-rights-office-welcomes-repealing-section-377a-penal-code)
 - [File:Singapore MRT Fines.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_MRT_Fines.jpg)
 - [File:Crowd at pink dot 16.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crowd_at_pink_dot_16.jpg)
+- [File:Lee Kuan Yew, 1965 (cropped).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lee_Kuan_Yew,_1965_(cropped).jpg)
+- [File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kampong_in_Braddell_Hill_Singapore_about_1964.jpg)
+- [File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Street_Vendor_1973-74-WUS08155.jpg)
 
 [← Back to all posts](/)

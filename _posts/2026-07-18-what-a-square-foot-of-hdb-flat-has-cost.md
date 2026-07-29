@@ -265,7 +265,7 @@ The first stretch, from 1990 to 1997, is a boom: prices more than tripled as the
 
 The next big move starts around 2009. Interest rates fell sharply after the global financial crisis, and new supply hadn't kept pace with a fast-growing population — prices climbed almost every year, hitting $464 a square foot by 2013. That run is also why the government's stamp-duty and loan curbs exist in their current form: the Additional Buyer's Stamp Duty arrived in December 2011, followed by the Total Debt Servicing Ratio framework in June 2013. Prices flattened almost immediately after, sitting in a narrow $419–$440 band for the next six years — a rare stretch where policy visibly did what it was built to do.
 
-Then came the 2021–2026 run-up, the steepest on the chart. Part of it was low interest rates during the pandemic; part of it was 92 Build-To-Order projects — 75,800 flats — running about a year behind schedule because of COVID-era construction stoppages, with the last of them only finishing in early 2025. With new flats delayed, more buyers competed for the same resale supply, and prices rose almost 60% in five years, to where they sit today.
+Then came the 2021–2026 run-up, the steepest on the chart. Part of it was low interest rates during the pandemic; part of it was 92 Build-To-Order projects — 75,800 flats — running about a year behind schedule because of COVID-era construction stoppages, with the last of them only finishing in early 2025. With new flats delayed, more buyers competed for the same resale supply, and prices rose almost 60% in five years, to where they sit today. [See four more historical photos related to this post →](/gallery/what-a-square-foot-of-hdb-flat-has-cost/)
 
 **Why it matters today:** the shape of that line isn't just a market history — every kink in it marks a specific shock or policy response, most of which the people paying today's prices have never had reason to trace back to a chart.
 
@@ -282,5 +282,9 @@ Then came the 2021–2026 run-up, the steepest on the chart. Part of it was low 
 - [All Buyers of Last Two Pandemic-Delayed BTO Projects Have Been Scheduled to Collect Their Keys — HDB](https://www.hdb.gov.sg/about-us/news-and-publications/press-releases/All-Buyers-of-Last-Two-Pandemic-Delayed-BTO-Projects-Have-Been-Scheduled-to-Collect-Their-Keys)
 - [All pandemic-delayed BTO projects are now completed. What's next? — 99.co](https://www.99.co/singapore/insider/pandemic-delayed-bto-projects/)
 - [File:HDB flats in Singapore 2.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HDB_flats_in_Singapore_2.jpg)
+- [File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kampong_in_Braddell_Hill_Singapore_about_1964.jpg)
+- [File:ST27May1961.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ST27May1961.jpg)
+- [File:Singapore-Public Housing-1973-74-WUS08215.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Public_Housing-1973-74-WUS08215.jpg)
+- [File:Singapore-Public Housing-1973-74-WUS08216.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Public_Housing-1973-74-WUS08216.jpg)
 
 [← Back to all posts](/)

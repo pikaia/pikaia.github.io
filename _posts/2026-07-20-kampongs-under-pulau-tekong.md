@@ -186,6 +186,8 @@ Tekong isn't done being remade, either. In September 2025, Singapore completed i
 
 <div style="clear: both;"></div>
 
+The names survived because the SAF kept them as location labels; photographs of the kampongs themselves are far harder to come by. [See five more historical photos related to this post →](/gallery/kampongs-under-pulau-tekong/)
+
 **Where it fits in the bigger story:** Pulau Tekong is one of the only places nearly every Singaporean man has personally set foot on, and almost none of them know it used to be someone's home — the clearest possible case of a place being hidden not by secrecy, but by nobody thinking to ask what a training area's name actually meant.
 
 ---
@@ -200,5 +202,10 @@ Tekong isn't done being remade, either. In September 2025, Singapore completed i
 - [Tekong Polder — PUB, Singapore's National Water Agency](https://www.pub.gov.sg/Resources/News-Room/PressReleases/2025/09/Tekong-Polder)
 - [File:Pulau Tekong BMTC.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pulau_Tekong_BMTC.JPG)
 - [File:An old house in Lorong Buangkok Singapore.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:An_old_house_in_Lorong_Buangkok_Singapore.JPG)
+- [File:Malay - village Pulo Brani Singapore (NYPL Hades-2359734-4044499).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malay_-_village_Pulo_Brani_Singapore_(NYPL_Hades-2359734-4044499).jpg)
+- [File:Malay village, Singapore (NYPL Hades-2359721-4044486).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malay_village,_Singapore_(NYPL_Hades-2359721-4044486).jpg)
+- [File:KITLV - 105811 - Kampong Baru at Singapore - circa 1890 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_105811_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Kampong_Baru_at_Singapore_-_circa_1890.tif)
+- [File:KITLV - 105810 - Kampong Buggis, the Buginese district of Singapore - circa 1900 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_105810_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Kampong_Buggis,_the_Buginese_district_of_Singapore_-_circa_1900.tif)
+- [File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kampong_in_Braddell_Hill_Singapore_about_1964.jpg)
 
 [← Back to all posts](/)

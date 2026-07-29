@@ -177,7 +177,7 @@ Singapore's government, led by Chief Minister Lim Yew Hock, received a lump-sum 
 
 The timing makes the deal stranger still. It was finalised entirely by outgoing colonial administrators in London and Canberra — Singapore's own Legislative Assembly could object, as Abdul Hamid Jumat's remarks show it did, but it had no power to stop it. Singapore wouldn't win full internal self-government for another year, in 1959, with its own elected Legislative Assembly and Lee Kuan Yew's PAP taking office that May. The last chapter of Singapore's administrative link to Christmas Island was written by people who, within twelve months, would no longer be the ones running the place.
 
-Christmas Island today has nothing to do with phosphate, and even less to do with Singapore. Since 2008, its North West Point facility has been Australia's flashpoint immigration detention centre, built to process asylum seekers who arrived by boat — one of the most politically fraught pieces of infrastructure in Australian public life. The island is also famous for something far less grim: every wet season, tens of millions of native red crabs migrate from the rainforest to the sea in a single synchronised wave, drawing naturalists from around the world. Almost nobody making that connection — to detention policy or to crabs — has any idea the rock they're picturing was once run out of an office in Singapore.
+Christmas Island today has nothing to do with phosphate, and even less to do with Singapore. Since 2008, its North West Point facility has been Australia's flashpoint immigration detention centre, built to process asylum seekers who arrived by boat — one of the most politically fraught pieces of infrastructure in Australian public life. The island is also famous for something far less grim: every wet season, tens of millions of native red crabs migrate from the rainforest to the sea in a single synchronised wave, drawing naturalists from around the world. Almost nobody making that connection — to detention policy or to crabs — has any idea the rock they're picturing was once run out of an office in Singapore. [See five more historical photos related to this post →](/gallery/christmas-island-singapore-never-owned/)
 
 <div style="clear: both;"></div>
 
@@ -203,5 +203,10 @@ Christmas Island today has nothing to do with phosphate, and even less to do wit
 - [File:Flying Fish Cove (25341355156).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Flying_Fish_Cove_(25341355156).jpg)
 - [File:Lim Yew Hock, 1956 (cropped).png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lim_Yew_Hock,_1956_(cropped).png)
 - [File:Christmas Island Immigration Detention Centre and the Lilac compound (5774458263).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Christmas_Island_Immigration_Detention_Centre_and_the_Lilac_compound_(5774458263).jpg)
+- [File:0-8-0 tender locomotive for the Christmas Island Phosphate Co.'s Railway by Peckett & Sons Ltd. of Bristol, No. 1824 of March 1931.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:0-8-0_tender_locomotive_for_the_Christmas_Island_Phosphate_Co.%27s_Railway_by_Peckett_%26_Sons_Ltd._of_Bristol,_No._1824_of_March_1931.jpg)
+- [File:Japanese Marines in Christmas Island 1942.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Japanese_Marines_in_Christmas_Island_1942.jpg)
+- [File:Abdul Hamid bin Haji Jumat.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Abdul_Hamid_bin_Haji_Jumat.jpg)
+- [File:Stamp Christmas Island 1958 2c.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Stamp_Christmas_Island_1958_2c.jpg)
+- [File:ST31May1959.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ST31May1959.jpg)
 
 [← Back to all posts](/)

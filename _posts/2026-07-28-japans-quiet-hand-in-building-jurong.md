@@ -32,7 +32,7 @@ Bridgestone's tyre plant, which broke ground that same year, followed the same p
 
 None of this waited for Tokyo and Singapore to resolve the blood debt. If anything, it made the political settlement easier: by the time the two governments sat down to negotiate compensation in the mid-1960s, Japanese firms were already Singapore's business partners, not just its former occupiers. Japan's insistence on calling the 1967 settlement "economic cooperation" — a label Singapore's negotiators resented — reads differently against that backdrop. It wasn't just face-saving. The two countries were already knee-deep in exactly that kind of cooperation, and had been for years.
 
-Jurong Shipyard is a Sembcorp Marine yard today, its Japanese joint-venture origins reduced to a line in corporate histories. The Bridgestone plant is long gone. But the Jurong template — court whoever has the capital and expertise, let the politics catch up later — became the EDB's playbook for decades, applied just as readily to American, European, and later Chinese investment. Japan was just the test case that proved it could work, even under the worst possible historical conditions.
+Jurong Shipyard is a Sembcorp Marine yard today, its Japanese joint-venture origins reduced to a line in corporate histories. The Bridgestone plant is long gone. But the Jurong template — court whoever has the capital and expertise, let the politics catch up later — became the EDB's playbook for decades, applied just as readily to American, European, and later Chinese investment. Japan was just the test case that proved it could work, even under the worst possible historical conditions. [See five more historical photos related to this post →](/gallery/japans-quiet-hand-in-building-jurong/)
 
 **Why it matters today:** Singapore's economic development is usually told as a story of Lee Kuan Yew's vision and Winsemius's advice. The fact that some of the earliest capital came from wartime Japan — years before the two countries formally made peace — is a reminder that Singapore's "pragmatism over sentiment" reputation started paying off almost immediately, on the most sensitive relationship it could have chosen.
 
@@ -50,5 +50,10 @@ Jurong Shipyard is a Sembcorp Marine yard today, its Japanese joint-venture orig
 - [Albert Winsemius — Wikipedia](https://en.wikipedia.org/wiki/Albert_Winsemius)
 - [File: Signs pointing to Jurong Industrial Estate in Singapore June 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Signs_pointing_to_Jurong_Industrial_Estate_in_Singapore_June_1964.jpg)
 - [File: Goh Keng Swee in Australia, 1967.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Goh_Keng_Swee_in_Australia,_1967.jpg)
+- [File: Signing of the Japanese Surrender at Singapore, 1945 CF720.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Signing_of_the_Japanese_Surrender_at_Singapore,_1945_CF720.jpg)
+- [File: Singapore roadstead 1963 01.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_roadstead_1963_01.jpg)
+- [File: Malay village near Tengah Singapore October 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malay_village_near_Tengah_Singapore_October_1964.jpg)
+- [File: 1967 - Winding Road to Jurong Staff Quarters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1967_-_Winding_Road_to_Jurong_Staff_Quarters.jpg)
+- [File: Jurong Staff Quarters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jurong_Staff_Quarters.jpg)
 
 [← Back to all posts](/)

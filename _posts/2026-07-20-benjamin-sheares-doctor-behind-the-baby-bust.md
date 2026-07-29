@@ -214,7 +214,7 @@ Two years after passing that Act through Parliament, Sheares was pulled out of h
 </script>
 </div>
 
-The government has spent the years since trying to undo exactly what Sheares' generation built. "Have 3 or More" in 1987, cash incentives, tax rebates, matched savings for newborns, an entire Ministry-level population strategy — none of it has come close to reversing the trend, and the total fertility rate has instead kept sliding to record lows. The machinery Sheares helped design turned out to work far better, and for far longer, than anyone building it in 1969 seems to have expected.
+The government has spent the years since trying to undo exactly what Sheares' generation built. "Have 3 or More" in 1987, cash incentives, tax rebates, matched savings for newborns, an entire Ministry-level population strategy — none of it has come close to reversing the trend, and the total fertility rate has instead kept sliding to record lows. The machinery Sheares helped design turned out to work far better, and for far longer, than anyone building it in 1969 seems to have expected. [See five more historical photos related to this post →](/gallery/benjamin-sheares-doctor-behind-the-baby-bust/)
 
 *A personal note: by the time I had children of my own, stopping at two wasn't something I remember agonising over — it just felt like the obvious, sensible thing to do, the same way most people I knew saw it. Singapore was rising in the world by then but hadn't quite arrived, and there was always an undercurrent of financial anxiety feeding into that thinking: a smaller family read as the economically smart choice, not an unusual one.*
 
@@ -234,5 +234,10 @@ The government has spent the years since trying to undo exactly what Sheares' ge
 - [Demographics of Singapore — Wikipedia](https://en.wikipedia.org/wiki/Demographics_of_Singapore)
 - [File:Benjamin Sheares, 1951.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares,_1951.jpg)
 - [File:Kandang Kerbau Hospital group photo.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kandang_Kerbau_Hospital_group_photo.jpg)
+- [File:Benjamin Sheares at the University of Malaya in Singapore, 1951.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_at_the_University_of_Malaya_in_Singapore,_1951.jpg)
+- [File:Benjamin Sheares and Yeo Seh Geok, 1939.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_and_Yeo_Seh_Geok,_1939.jpg)
+- [File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08140.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Mandarin_Hotel-Istana-1973-74-WUS08140.jpg)
+- [File:Benjamin Sheares and his family.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_and_his_family.jpg)
+- [File:ST13May1981.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ST13May1981.jpg)
 
 [← Back to all posts](/)

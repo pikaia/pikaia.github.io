@@ -187,6 +187,8 @@ That's the part official messaging never quite captures. MOE has always been car
 
 <div style="clear: both;"></div>
 
+Most of the infrastructure behind that spending — the classrooms, the assessment-book aisles, the streets that grew into book districts — predates the tuition industry itself by decades. [See five more historical photos related to this post →](/gallery/shadow-tuition-economy-singapore-meritocracy/)
+
 **Where it fits in the bigger story:** Singapore's meritocracy was designed to measure ability; what it's actually measuring, increasingly, is which families can afford to buy their children more attempts at demonstrating it — a shadow economy the official system has never had to answer for, because on paper, it was never supposed to exist.
 
 ---
@@ -199,5 +201,10 @@ That's the part official messaging never quite captures. MOE has always been car
 - [MTL Requirement for University Admission — NUS Office of Admissions](https://nus.edu.sg/oam/docs/default-source/admissions/mtl-requirement.pdf)
 - [File:Popular Book Store, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Popular_Book_Store,_Singapore.jpg)
 - [File:NUS University Hall, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:NUS_University_Hall,_Singapore.jpg)
+- [File:Singapore. Brass Bassa Road., KITLV 1404985.tiff — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore._Brass_Bassa_Road.,_KITLV_1404985.tiff)
+- [File:Classroom building in the 50s.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Classroom_building_in_the_50s.JPG)
+- [File:Science building of CHS in 50s.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Science_building_of_CHS_in_50s.JPG)
+- [File:Dormitory in the 50s.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dormitory_in_the_50s.JPG)
+- [File:Class at Dover Court Preparatory School, Singapore.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Class_at_Dover_Court_Preparatory_School,_Singapore.png)
 
 [← Back to all posts](/)

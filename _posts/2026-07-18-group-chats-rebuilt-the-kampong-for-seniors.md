@@ -19,7 +19,7 @@ The programme behind it is called Seniors Go Digital, launched in June 2020 as t
 
 The problem it was built to solve is a real one: a Singapore study of nearly 6,000 seniors aged 68 to 77 found that 46.5% showed signs of social isolation. What's less obvious is that teaching someone to use a smartphone doesn't automatically fix that — a local trial found digital-literacy training alone often fell short, simply because a senior's existing friends and family weren't online either, so there was no one to actually talk to on the other end. The fix that worked, in a related programme called Project Wire Up, was explicitly three-part: hand over a smartphone, train the person to use it, and then deliberately reconnect them to their own social network — not just teach the skill, but rebuild the community around it. A separate Singapore study following that same logic found the mediation runs in a clear line: digital literacy leads to stronger social connectedness, which leads to less isolation, which shows up as measurably better wellbeing.
 
-That's the quieter story behind all those senior citizens tapping away in coffee shops and community clubs — it was never really about the smartphone. It was about giving a generation that had started losing its social circles a new, unglamorous way to hold onto them.
+That's the quieter story behind all those senior citizens tapping away in coffee shops and community clubs — it was never really about the smartphone. It was about giving a generation that had started losing its social circles a new, unglamorous way to hold onto them. [See five more historical photos related to this post →](/gallery/group-chats-rebuilt-the-kampong-for-seniors/)
 
 **Why it matters today:** a programme built to close a "digital divide" ended up doing something more specific — rebuilding the kind of tight, everyday social contact that public housing and smaller families had quietly eroded, one group chat at a time.
 
@@ -31,5 +31,10 @@ That's the quieter story behind all those senior citizens tapping away in coffee
 - [Smartphone ownership, digital literacy, and the mediating role of social connectedness and loneliness in improving the wellbeing of community-dwelling older adults of low socio-economic status in Singapore — PLOS ONE](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0290557)
 - [Building Digital Literacy in Older Adults of Low Socioeconomic Status in Singapore (Project Wire Up) — Journal of Medical Internet Research](https://www.jmir.org/2022/12/e40341)
 - [File:Bishan Community Club.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bishan_Community_Club.JPG)
+- [File:KITLV - 105810 - Lambert & Co., G.R. - Singapore - Kampong Buggis, the Buginese district of Singapore - circa 1900 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_105810_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Kampong_Buggis,_the_Buginese_district_of_Singapore_-_circa_1900.tif)
+- [File:KITLV - 105811 - Lambert & Co., G.R. - Singapore - Kampong Baru at Singapore - circa 1890 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_105811_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Kampong_Baru_at_Singapore_-_circa_1890.tif)
+- [File:Malay Dwelling House Singapore., KITLV 1404990 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malay_Dwelling_House_Singapore.,_KITLV_1404990.tiff)
+- [File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kampong_in_Braddell_Hill_Singapore_about_1964.jpg)
+- [File:Singapore-Public Housing-1973-74-WUS08215.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Public_Housing-1973-74-WUS08215.jpg)
 
 [← Back to all posts](/)

@@ -258,7 +258,7 @@ Two things happened at roughly the same time to make this possible. The first wa
 
 The other barrier that quietly disappeared was knowing what to do once you landed. Google Maps launched in February 2005; Google Translate followed in April 2006, with mobile apps arriving a few years after that. Before smartphones carried both in your pocket, independent travel meant a paper map, a phrasebook or a lot of hand gestures, and trusting a printed guidebook that might already be a year out of date. E-visas, mobile boarding passes, and instant currency conversion did the same thing to the logistics of a trip that budget airlines did to its cost — they took a list of small, specialised skills that used to matter and made most of them unnecessary.
 
-The 2020–2021 collapse on the chart, when Singapore's borders shut for COVID-19, is really the exception that proves the point: once travel had become an assumed part of ordinary life rather than a rare event, its sudden absence felt like a genuine deprivation, not just a cancelled luxury. The recovery by 2023 — and the record set in 2025 — suggests that feeling stuck.
+The 2020–2021 collapse on the chart, when Singapore's borders shut for COVID-19, is really the exception that proves the point: once travel had become an assumed part of ordinary life rather than a rare event, its sudden absence felt like a genuine deprivation, not just a cancelled luxury. The recovery by 2023 — and the record set in 2025 — suggests that feeling stuck. [See five more historical photos related to this post →](/gallery/the-travel-bug-rise-of-travelling-among-singaporeans/)
 
 **Why it matters today:** the version of Singapore where an overseas trip was a once-in-a-lifetime event is, within living memory, still recent — which makes the packed departure halls at Changi a quieter marker of just how fast the island's relationship with the rest of the world has changed.
 
@@ -273,5 +273,10 @@ The 2020–2021 collapse on the chart, when Singapore's borders shut for COVID-1
 - [Google Maps — Wikipedia](https://en.wikipedia.org/wiki/Google_Maps)
 - [Google Translate — Wikipedia](https://en.wikipedia.org/wiki/Google_Translate)
 - [File:Changi Airport, Terminal 1, Departure Hall.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Changi_Airport,_Terminal_1,_Departure_Hall.JPG)
+- [File:Singapore International Airport control tower and terminal building, photographed February 1969 × July 1971.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_International_Airport_control_tower_and_terminal_building,_photographed_February_1969_%C3%97_July_1971.jpg)
+- [File:SAS airliner at Singapore International Airport, photographed February 1969 × July 1971.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SAS_airliner_at_Singapore_International_Airport,_photographed_February_1969_%C3%97_July_1971.jpg)
+- [File:Malaysia-Singapore Airlines B707 at Zurich 1972.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malaysia-Singapore_Airlines_B707_at_Zurich_1972.jpg)
+- [File:Singapore Airlines Boeing 727 Martin.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Airlines_Boeing_727_Martin.jpg)
+- [File:Singapore Airlines Airbus A300 Green-1.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Airlines_Airbus_A300_Green-1.jpg)
 
 [← Back to all posts](/)

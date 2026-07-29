@@ -234,7 +234,7 @@ Somewhere along that decade, SkillsFuture also picked up a second, unplanned pur
 </script>
 </div>
 
-The top-up was meant to fix exactly this kind of drift. In 2020, the government handed every eligible Singaporean an extra $500 — but this time with an actual deadline, five years, to force the decision that the open-ended Opening Credit never had. It didn't really work. By November 2024, only 26% had used it. By September 2025, with three months left on the clock, that had inched up to about 30% — still meaning seven in ten people were about to lose free money. The government held firm on the deadline anyway: no extension, and — as the January 2026 exchange in Parliament confirmed — no way to hand the unused balance to someone else either.
+The top-up was meant to fix exactly this kind of drift. In 2020, the government handed every eligible Singaporean an extra $500 — but this time with an actual deadline, five years, to force the decision that the open-ended Opening Credit never had. It didn't really work. By November 2024, only 26% had used it. By September 2025, with three months left on the clock, that had inched up to about 30% — still meaning seven in ten people were about to lose free money. The government held firm on the deadline anyway: no extension, and — as the January 2026 exchange in Parliament confirmed — no way to hand the unused balance to someone else either. [See five more historical photos related to this post →](/gallery/skillsfuture-at-ten-promise-vs-practice/)
 
 **Where it fits in the bigger story:** A policy built to close a skills gap has, after a decade, done something quieter and more human — become a way for an aging Singapore to try something new just because it can. But that same decade shows the gap between offering people something and getting them to actually take it hasn't closed at all; it just moved from Singaporeans' skills to their bank of unclaimed government credit.
 
@@ -255,5 +255,10 @@ The top-up was meant to fix exactly this kind of drift. In 2020, the government 
 - [Feature: Inside an AI class for seniors in Singapore — Xinhua](https://english.news.cn/20260626/8ba165e1b4d449faba7ff5f7338eeadb/c.html)
 - [File:Parliament House Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Parliament_House_Singapore.jpg)
 - [File:Tharman Shanmugaratnam Official photo 2023.tif — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tharman_Shanmugaratnam_Official_photo_2023.tif)
+- [File:Signs pointing to Jurong Industrial Estate in Singapore June 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Signs_pointing_to_Jurong_Industrial_Estate_in_Singapore_June_1964.jpg)
+- [File:ITE College Central.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ITE_College_Central.jpg)
+- [File:Institute of Technical Education Headquarters, Nov 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Institute_of_Technical_Education_Headquarters,_Nov_06.JPG)
+- [File:2018-skillsfuture-festival.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2018-skillsfuture-festival.jpg)
+- [File:Old Parliament House, Singapore, Feb 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Old_Parliament_House,_Singapore,_Feb_06.JPG)
 
 [← Back to all posts](/)

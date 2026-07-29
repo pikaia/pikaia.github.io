@@ -27,6 +27,8 @@ After the war the bunker was sealed up and largely forgotten for decades. It's s
 
 *The heavy blast door guarding the entrance to the bunker's tunnels. (Photo: Roberto Arias / Wikimedia Commons, CC BY 2.0)*
 
+Fort Canning Hill's part in the story didn't start or end with the bunker itself — it runs from the hill's pre-war role as the seat of British Malaya Command through to the commanders on both sides of the surrender table. [See five more historical photos related to this post →](/gallery/the-bunker-under-fort-canning/)
+
 **Where it fits in the bigger story:** the Battlebox sits alongside other lesser-known wartime sites across Singapore — a reminder that much of the island's most pivotal history happened in unremarkable, easy-to-miss places.
 
 ---
@@ -36,5 +38,10 @@ After the war the bunker was sealed up and largely forgotten for decades. It's s
 - [File:Fort Canning Park Tree Tunnel.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fort_Canning_Park_Tree_Tunnel.jpg)
 - [File:BattleBoxEntrance.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BattleBoxEntrance.JPG)
 - [File:Door of The Battle Box, Singapore - 20100306.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Door_of_The_Battle_Box,_Singapore_-_20100306.jpg)
+- [File:Fort Canning Hill-1902.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fort_Canning_Hill-1902.jpg)
+- [File:Lieutenant General Arthur Percival.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lieutenant_General_Arthur_Percival.jpg)
+- [File:Yamashita e Suzuki.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Yamashita_e_Suzuki.jpg)
+- [File:British troops surrender in Singapore.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:British_troops_surrender_in_Singapore.png)
+- [File:Singaporesurrender.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singaporesurrender.jpg)
 
 [← Back to all posts](/)

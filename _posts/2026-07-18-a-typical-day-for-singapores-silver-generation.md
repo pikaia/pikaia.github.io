@@ -25,7 +25,7 @@ The reason this generation leans so heavily on subsidised programmes traces back
 
 *The CPF Building on Robinson Road, once the headquarters of the scheme meant to be every worker's retirement fund. (Photo: Nlannuzel / Wikimedia Commons, CC BY-SA 3.0)*
 
-The government's response has been to build the infrastructure this generation missed the first time around. The Silver Support Scheme, introduced in 2016, gives seniors with low lifetime wages and little family support a quarterly cash top-up — enhanced in 2025 to as much as $1,080 a quarter, and reaching roughly 260,000 seniors in 2023 alone. Alongside the cash support sit the physical spaces: Active Ageing Centres in almost every neighbourhood, and larger integrated developments like Our Tampines Hub, which opened in 2017 and folds a library, hawker centre, sports facilities, and community programming for seniors into a single town square.
+The government's response has been to build the infrastructure this generation missed the first time around. The Silver Support Scheme, introduced in 2016, gives seniors with low lifetime wages and little family support a quarterly cash top-up — enhanced in 2025 to as much as $1,080 a quarter, and reaching roughly 260,000 seniors in 2023 alone. Alongside the cash support sit the physical spaces: Active Ageing Centres in almost every neighbourhood, and larger integrated developments like Our Tampines Hub, which opened in 2017 and folds a library, hawker centre, sports facilities, and community programming for seniors into a single town square. [See five more historical photos related to this post →](/gallery/a-typical-day-for-singapores-silver-generation/)
 
 **Why it matters today:** the generation now in their 80s and 90s is, in many ways, the last to have lived most of their working life before Singapore's retirement systems caught up — which makes the hubs, subsidies, and quiet daily routines built around them one of the more overlooked ways the island is still adjusting for its own history.
 
@@ -39,5 +39,10 @@ The government's response has been to build the infrastructure this generation m
 - [File:Our Tampines Hub Town Square.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Our_Tampines_Hub_Town_Square.jpg)
 - [File:Bedok Hawker Centre.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bedok_Hawker_Centre.jpg)
 - [File:CPF Building.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CPF_Building.jpg)
+- [File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Street_Vendor_1973-74-WUS08155.jpg)
+- [File:Singapore-Hawker Centre.1973-74-WUS08151.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Hawker_Centre.1973-74-WUS08151.jpg)
+- [File:Singapore-Public Housing-1973-74-WUS08215.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Public_Housing-1973-74-WUS08215.jpg)
+- [File:Family planning, Singapore - UNESCO - PHOTO0000000902 0001.tiff — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Family_planning,_Singapore_-_UNESCO_-_PHOTO0000000902_0001.tiff)
+- [File:HDB living room (1970s and 1980s), Singapore History Gallery, National Museum of Singapore - 20151125-01.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HDB_living_room_(1970s_and_1980s),_Singapore_History_Gallery,_National_Museum_of_Singapore_-_20151125-01.jpg)
 
 [← Back to all posts](/)

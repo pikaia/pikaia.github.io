@@ -76,6 +76,8 @@ The same gap turns up in complaint data. Between 2018 and 2022, the Tripartite A
 
 Little of this looks like deliberate exclusion. Research on managers in this region points instead to unconscious assumptions: that older employees work more slowly, or that their skills — particularly around technology — have gone stale, even when neither is actually true for the person in front of them. It's a quieter kind of bias than an outright rejection, which is part of why it survives so easily alongside official messaging that says the opposite.
 
+None of this policy machinery appeared overnight. [See five more historical photos related to this post →](/gallery/the-ageism-gap-singapore-employers/), tracing the ministers and institutions that built it.
+
 **Why it matters today:** Singapore has largely solved the policy side of ageism — the laws, the guidelines, the retirement-age math all point the same direction — but a law can mandate that a door stays open without doing anything about who actually decides to walk an older applicant through it, which is the part the statistics above are still measuring.
 
 ---
@@ -88,5 +90,10 @@ Little of this looks like deliberate exclusion. Research on managers in this reg
 - [Workplace ageism: A top concern despite lower incidence rates in Singapore — Michael Page](https://www.michaelpage.com.sg/recruitment-expertise/employer-insights/workplace-ageism-age-discrimination)
 - [Ageism greatest barrier in Singapore workplaces — HR Director Asia](https://www.hcamag.com/asia/news/general/ageism-greatest-barrier-in-singapore-workplaces/213729)
 - [File:Singapore Skyline Raffles Place.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Skyline_Raffles_Place.jpg)
+- [File:Devan Nair, 1953 (3x4 crop).png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Devan_Nair,_1953_(3x4_crop).png)
+- [File:Jek Yeun Thong, 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jek_Yeun_Thong,_1964.jpg)
+- [File:S Rajaratnam c. 1940s.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:S_Rajaratnam_c._1940s.jpg)
+- [File:CPF Building, Jan 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CPF_Building,_Jan_06.JPG)
+- [File:Former Ministry of Labour Building, October 2025.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Former_Ministry_of_Labour_Building,_October_2025.jpg)
 
 [← Back to all posts](/)

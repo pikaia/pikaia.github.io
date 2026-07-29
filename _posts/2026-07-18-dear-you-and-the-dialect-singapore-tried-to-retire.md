@@ -296,7 +296,7 @@ Prime Minister Lee Kuan Yew launched the Speak Mandarin Campaign in 1979 with an
 
 That's the backdrop Dear You landed on. The film — shot largely in Teochew, its plot built around qiaopi, the letters Teochew migrants once sent home to family across Southeast Asia — became a sleeper hit in China on a tiny budget. In Singapore, distributors planned a wide release in Mandarin dubbing, "in line with Singapore's bilingual language policy," with only a limited run of the original Teochew version. The original sold out in two hours. Golden Village ended up working with the Infocomm Media Development Authority to add eight more original-dialect screenings — a small but real instance of the same government apparatus that spent decades discouraging dialect content now clearing space for more of it.
 
-It isn't even the first time recently. When COVID-19 hit in 2020, health officials found themselves needing to reach elderly dialect speakers who Mandarin and English campaigns couldn't fully cover — and turned to Hokkien, Teochew, and Cantonese outreach videos, including ones fronted by the Health Minister himself, to get the message through. The campaign that once tried to retire dialect quietly needed it back, for the one audience it had never fully stopped speaking it.
+It isn't even the first time recently. When COVID-19 hit in 2020, health officials found themselves needing to reach elderly dialect speakers who Mandarin and English campaigns couldn't fully cover — and turned to Hokkien, Teochew, and Cantonese outreach videos, including ones fronted by the Health Minister himself, to get the message through. The campaign that once tried to retire dialect quietly needed it back, for the one audience it had never fully stopped speaking it. [See five more historical photos related to this post →](/gallery/dear-you-and-the-dialect-singapore-tried-to-retire/)
 
 **Why it matters today:** Dear You didn't reverse forty-five years of language policy, and most of the people cheering for the Teochew version still can't hold a full conversation in it — but the sold-out screenings are a reminder that a language doesn't have to be spoken fluently to still be wanted, which is a stranger and more overlooked outcome than either total success or total loss would have been.
 
@@ -311,5 +311,10 @@ It isn't even the first time recently. When COVID-19 hit in 2020, health officia
 - [WATCH: Novel Coronavirus Safety Videos In Hokkien, Cantonese & Teochew — Wonderwall.sg](https://wonderwall.sg/health/novel-coronavirus-safety-videos-in-hokkien-cantonese-teochew/)
 - [Yueh Hai Ching Temple — Wikipedia](https://en.wikipedia.org/wiki/Yueh_Hai_Ching_Temple)
 - [File:Yueh Hai Ching Temple 8, Mar 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Yueh_Hai_Ching_Temple_8,_Mar_06.JPG)
+- [File:KITLV - 106226 - Lambert & Co., G.R. - Singapore - Chinese theater in the Straits Settlements - circa 1900 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_106226_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Chinese_theater_in_the_Straits_Settlements_-_circa_1900.tif)
+- [File:Former Lai Chun Yuen, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Former_Lai_Chun_Yuen,_Singapore.jpg)
+- [File:Great World Amusement Park.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Great_World_Amusement_Park.jpg)
+- [File:KITLV - 103776 - Chinese street vendor in Singapore - circa 1890 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_103776_-_Chinese_street_vendor_in_Singapore_-_circa_1890.tif)
+- [File:KITLV - 29181 - Chinese temple in Singapore - 1895 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_29181_-_Chinese_temple_in_Singapore_-_1895.tif)
 
 [← Back to all posts](/)
