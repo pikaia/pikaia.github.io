@@ -1,5 +1,7 @@
 # pikaia.github.io
 
+[![Built with Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-D97757)](https://claude.com/claude-code)
+
 Source for my blog on lesser-known facts and people from Singapore's history, built with Jekyll and hosted on GitHub Pages.
 
 Live at: https://pikaia.github.io
