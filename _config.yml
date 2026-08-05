@@ -37,3 +37,4 @@ google_analytics: G-RPS2BGYR39
 exclude:
   - CLAUDE.md
   - README.md
+  - docs
