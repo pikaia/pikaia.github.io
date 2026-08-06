@@ -7,7 +7,6 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 - **The Malaysian enclave inside Singapore that lasted until 2011** — Tanjong Pagar Railway Station and the KTM railway land stayed under Malaysian administration for decades after independence, a foreign-controlled strip inside Singapore's own downtown, resolved only by a 2010 land-swap deal.
 - **Opium farming funded colonial Singapore** — opium was legal and taxed for decades; opium farm revenue was one of the largest sources of government income before WWII. Bigger, more systemic story than the usual "founding of Singapore" fare.
 - **The 1915 Singapore Mutiny** — a WWI-era revolt by sepoys of a Muslim Indian regiment, fueled partly by rumors that the Kaiser had converted to Islam; put down with help from Russian, French, and Japanese troops, with 47 executed by firing squad. Barely discussed compared to WWII history.
-- **The Japanese Cemetery Park and the karayuki-san** — established in 1891, it's the largest Japanese cemetery in Southeast Asia, and its earliest graves belong to karayuki-san, Japanese women brought to Singapore as prostitutes in the late 19th/early 20th century — a somber, little-discussed chapter that predates the WWII-era Japan history the blog has already covered.
 
 ## People
 
