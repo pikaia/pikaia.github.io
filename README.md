@@ -21,3 +21,8 @@ Live at: https://pikaia.github.io
    ```
 4. Write the post body in Markdown below the `---` block
 5. Commit — the site rebuilds automatically in about a minute
+
+## Future ideas
+
+- [Post ideas](docs/post-ideas.md) — candidate topics not yet written up
+- [Feature ideas](docs/feature-ideas.md) — candidate site features not yet built
