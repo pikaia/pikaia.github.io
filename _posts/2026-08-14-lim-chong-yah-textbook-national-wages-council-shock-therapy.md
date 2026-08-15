@@ -2,7 +2,7 @@
 layout: post
 title: "He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It"
 date: 2026-08-14 15:00:00 +0800
-last_modified_at: 2026-08-14 15:00:00 +0800
+last_modified_at: 2026-08-15 08:20:00 +0800
 categories: [history, economy]
 image: https://upload.wikimedia.org/wikipedia/commons/4/4a/Oei_Tiong_Ham_Building.jpg
 ---
@@ -17,7 +17,14 @@ For decades, almost every Singaporean who sat for pre-university economics learn
 
 Lim was born in Malacca in 1932 to Hainanese parents. His mother died when he was eight, leaving him with an elder sister and three younger siblings; when the Japanese invaded Malaya soon after, his father's coffee shop and retail business collapsed, and the young Lim took over managing what was left of the family's finances. He planted tapioca and caught fish in paddy fields to help feed his siblings, and was jailed as a ten-year-old during the occupation. He grew up speaking Hainanese, Malay, Mandarin and Hokkien before learning English — his fifth language — at Anglo Chinese School in Malacca. In 1951 a Malacca Straits Settlement scholarship took him to the University of Malaya in Singapore to study economics; a decade later, a Commonwealth scholarship sent him to Oxford, where he studied under the Nobel laureate John Hicks and finished his doctorate in two years.
 
+<div style="float: left; max-width: 250px; margin: 0.25em 1.5em 1em 0;">
+<img src="https://eservice.nlb.gov.sg/bookcoverwrapper/cover/0195846125?s=LG" alt="Cover of Elements of Economic Theory by Lim Chong-Yah, Lee Sheng-Yi and Chia Siow-Yue" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Cover of *Elements of Economic Theory*, the Oxford University Press textbook Lim co-wrote in 1971. (Cover image: National Library Board Singapore)</em>
+</div>
+
 By 1971, back in Singapore and established as an economics professor, Lim co-wrote *Elements of Economic Theory* with fellow economists Lee Sheng Yi and Chia Siow Yue. Published by Oxford University Press, it became one of the most widely used economics textbooks of its time, carrying generations of Singaporean students through the basics of markets, prices and trade-offs. Lim's academic career deepened alongside it — elected Dean of the Faculty of Arts and Social Sciences at the National University of Singapore from 1971 to 1977, later Head of the Department of Economics and Statistics, and Senior Professor from 1983 until his retirement in 1992, when he crossed over to Nanyang Technological University as its Albert Winsemius Chair Professor of Economics.
+
+<div style="clear: both;"></div>
 
 ![Striking employees of the Singapore Glass Manufacturers Company picketing outside their factory, July 1951](https://upload.wikimedia.org/wikipedia/commons/d/d3/Singapore_Glass_Factory_1951_strike.jpg)
 
@@ -49,6 +56,7 @@ Lim died in July 2023, aged 91. Singapore's manpower minister called him the man
 - [If Only Singaporeans Stopped to Think: Professor Lim Chong Yah's wage shock therapy very risky, warns Labour chief Lim Swee Say](https://ifonlysingaporeans.blogspot.com/2012/04/wage-shock-therapy-very-risky-warns.html)
 - [In defence of Lim Chong Yah — Tembusu College, NUS](https://tembusu.nus.edu.sg/news/2012/in-defence-of-lim-chong-yah)
 - [1979 to 1984: Economic Restructuring — SG101](https://www.sg101.gov.sg/economy/growing-our-economy/1979/)
+- [Elements of economic theory — National Library Board Singapore catalogue](https://catalogue.nlb.gov.sg/search/card?recordId=4079894)
 - [File:Oei Tiong Ham Building.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Oei_Tiong_Ham_Building.jpg)
 - [File:Singapore Glass Factory 1951 strike.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Glass_Factory_1951_strike.jpg)
 - [File:Singapore-Joiner-1973-74-WUS08244.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Joiner-1973-74-WUS08244.jpg)
