@@ -13,6 +13,8 @@ Always brainstorm before drafting. Do not generate post content until the topic,
 
 Keep this lightweight — a few chat questions, not a formal spec doc. Only write the post file once the outline is approved.
 
+Keep the tone of posts objective and balanced — temper subjective commentary, since it could unnecessarily provoke reactions.
+
 ## Post conventions
 
 - Files live in `_posts/`, named `YYYY-MM-DD-title-slug.md`.
