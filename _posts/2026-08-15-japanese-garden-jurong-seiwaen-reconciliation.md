@@ -11,6 +11,45 @@ When the Japanese Garden in Jurong reopened in September 2024 after five years o
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/japanese-garden-jurong-seiwaen-reconciliation.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![The red arched bridge in the Japanese Garden, Jurong, photographed in 2012](https://upload.wikimedia.org/wikipedia/commons/0/08/Redbridge_(8166305323).jpg)
 
 *The red arched bridge in the Japanese Garden, photographed in November 2012, before its 2019–2024 redevelopment. (Photo: Erwin Soo / Wikimedia Commons, CC BY 2.0)*

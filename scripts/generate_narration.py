@@ -20,6 +20,32 @@ MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
 ITALIC_CAPTION_RE = re.compile(r"^\*[^*].*[^*]\*$", re.DOTALL)
 
+# Raw-HTML block tags used in this codebase (floated images, charts, the
+# listen widget). Whitelisted rather than matching any "<tag" generically,
+# so JS/CSS content inside those blocks (e.g. "year < xMax") can't be
+# mistaken for markup and thcorw off the depth count.
+HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr|td|th)\b", re.IGNORECASE)
+
+
+def _process_block(block: str, narrative: list[str]) -> bool:
+    """Returns False if this block signals the Sources divider (stop)."""
+    if block == "---":
+        return False
+    if block.startswith("!["):
+        return True  # image
+    if BACK_LINK_RE.match(block):
+        return True
+    if ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
+        return True  # image caption
+
+    cleaned = GALLERY_LINK_RE.sub("", block)
+    cleaned = MD_LINK_RE.sub(r"\1", cleaned)
+    cleaned = BOLD_RE.sub(r"\1", cleaned)
+    cleaned = cleaned.strip()
+    if cleaned:
+        narrative.append(cleaned)
+    return True
+
 
 def extract_narrative(markdown_text: str) -> list[str]:
     # Drop front matter
@@ -32,28 +58,41 @@ def extract_narrative(markdown_text: str) -> list[str]:
     title_match = re.search(r'^title:\s*"?(.+?)"?\s*$', front_matter, re.MULTILINE)
     title = title_match.group(1) if title_match else ""
 
-    blocks = [b.strip() for b in body.strip().split("\n\n")]
-
     narrative = [title] if title else []
-    for block in blocks:
-        if not block:
-            continue
-        if block == "---":
-            break  # Sources divider - stop
-        if block.startswith("!["):
-            continue  # image
-        if BACK_LINK_RE.match(block):
-            continue
-        if ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
-            continue  # image caption
+    buf: list[str] = []
+    html_depth = 0
 
-        cleaned = GALLERY_LINK_RE.sub("", block)
-        cleaned = MD_LINK_RE.sub(r"\1", cleaned)
-        cleaned = BOLD_RE.sub(r"\1", cleaned)
-        cleaned = cleaned.strip()
-        if cleaned:
-            narrative.append(cleaned)
+    def flush() -> bool:
+        """Flush buffered prose lines as one block. Returns False to stop."""
+        text = "\n".join(buf).strip()
+        buf.clear()
+        if not text:
+            return True
+        return _process_block(text, narrative)
 
+    for line in body.strip("\n").split("\n"):
+        if html_depth > 0:
+            for m in HTML_TAG_RE.finditer(line):
+                html_depth += -1 if m.group(1) else 1
+            html_depth = max(html_depth, 0)
+            continue
+
+        if line.strip().startswith("<"):
+            if not flush():
+                return narrative
+            for m in HTML_TAG_RE.finditer(line):
+                html_depth += -1 if m.group(1) else 1
+            html_depth = max(html_depth, 0)
+            continue
+
+        if line.strip() == "":
+            if not flush():
+                return narrative
+            continue
+
+        buf.append(line)
+
+    flush()
     return narrative
 
 
