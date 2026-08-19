@@ -4,11 +4,18 @@ Local dev tool only - not part of the deployed Jekyll site. Extracts the
 post's narrative paragraphs (skipping images, captions, back-links, and the
 Sources section) and synthesizes them with a Microsoft Edge neural voice.
 
+Also captures real per-sentence timestamps for free from edge-tts's
+SentenceBoundary events (same API call, no extra cost) and writes them
+alongside the audio as <out>.timing.json and <out>.srt - use these instead
+of guessing at even timing splits when syncing captions/video to the audio.
+
 Usage:
     python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice en-US-AvaMultilingualNeural]
 """
 import argparse
 import asyncio
+import json
+import os
 import re
 import sys
 
@@ -101,6 +108,36 @@ async def synthesize(text: str, voice: str, out_path: str) -> None:
     await communicate.save(out_path)
 
 
+async def synthesize_with_timing(text: str, voice: str, out_path: str) -> list[dict]:
+    """Like synthesize(), but also captures real per-sentence timestamps
+    from edge-tts's SentenceBoundary events (free, same API call). Writes
+    <out_path>.timing.json (list of {text, offset_s, duration_s}) and
+    <out_path>.srt alongside the audio. Returns the sentence list."""
+    communicate = edge_tts.Communicate(text, voice)
+    submaker = edge_tts.SubMaker()
+    sentences: list[dict] = []
+
+    with open(out_path, "wb") as audio_file:
+        async for chunk in communicate.stream():
+            if chunk["type"] == "audio":
+                audio_file.write(chunk["data"])
+            elif chunk["type"] in ("WordBoundary", "SentenceBoundary"):
+                submaker.feed(chunk)
+                sentences.append({
+                    "text": chunk["text"],
+                    "offset_s": chunk["offset"] / 10_000_000,
+                    "duration_s": chunk["duration"] / 10_000_000,
+                })
+
+    base = os.path.splitext(out_path)[0]
+    with open(f"{base}.timing.json", "w", encoding="utf-8") as f:
+        json.dump(sentences, f, indent=2, ensure_ascii=False)
+    with open(f"{base}.srt", "w", encoding="utf-8") as f:
+        f.write(submaker.get_srt())
+
+    return sentences
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
@@ -120,8 +157,9 @@ def main() -> None:
         return
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
-    asyncio.run(synthesize(full_text, args.voice, args.out_path))
-    print(f"Wrote {args.out_path}", file=sys.stderr)
+    sentences = asyncio.run(synthesize_with_timing(full_text, args.voice, args.out_path))
+    base = os.path.splitext(args.out_path)[0]
+    print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt ({len(sentences)} sentences)", file=sys.stderr)
 
 
 if __name__ == "__main__":
