@@ -75,14 +75,14 @@ Millions of people photograph the Merlion every year, and almost none of them co
 <script>
 (function () {
   var slides = [
-    { src: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG", type: "cover", zoom: [1, 1.15], pan: ["50% 50%", "70% 50%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Merlion_Closeup_Large.JPG", type: "cover", zoom: [1, 1.2], pan: ["50% 50%", "30% 50%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/8/81/Lim_Nang_Seng.jpg", type: "letterbox", zoom: [1, 1.04], pan: ["50% 50%", "58% 50%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Merlion_and_the_Singapore_Skyline.JPG", type: "cover", zoom: [1.15, 1], pan: ["50% 30%", "50% 70%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/2/20/Rear_view_of_the_Merlion_statue_at_Merlion_Park%2C_Singapore%2C_with_Marina_Bay_Sands_in_the_distance_-_20140307.jpg", type: "cover", zoom: [1, 1.15], pan: ["50% 70%", "50% 30%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Singapore_Mini_Merlion.JPG", type: "cover", zoom: [1, 1.18], pan: ["70% 50%", "30% 50%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/8/80/2005_%E6%96%B0%E5%8A%A0%E5%9D%A1_-_panoramio_%282%29.jpg", type: "cover", zoom: [1.15, 1], pan: ["30% 50%", "70% 50%"] },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Former_Merlion_Park.JPG", type: "cover", zoom: [1, 1.12], pan: ["50% 30%", "50% 70%"] }
+    { src: "https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG", type: "cover", zoom: [1, 1.12, 1.18], pan: ["45% 35%", "62% 55%", "72% 45%"], ease: "ease-in-out" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Merlion_Closeup_Large.JPG", type: "cover", zoom: [1, 1.1, 1.22], pan: ["55% 60%", "40% 45%", "28% 40%"], ease: "ease-in" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/8/81/Lim_Nang_Seng.jpg", type: "letterbox", zoom: [1, 1.02, 1.05], pan: ["50% 50%", "54% 46%", "58% 42%"], ease: "linear" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Merlion_and_the_Singapore_Skyline.JPG", type: "cover", zoom: [1.18, 1.08, 1], pan: ["60% 25%", "50% 50%", "40% 75%"], ease: "ease-out" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/2/20/Rear_view_of_the_Merlion_statue_at_Merlion_Park%2C_Singapore%2C_with_Marina_Bay_Sands_in_the_distance_-_20140307.jpg", type: "cover", zoom: [1, 1.1, 1.16], pan: ["35% 72%", "55% 50%", "65% 28%"], ease: "ease-in-out" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Singapore_Mini_Merlion.JPG", type: "cover", zoom: [1, 1.12, 1.2], pan: ["75% 60%", "50% 45%", "25% 35%"], ease: "ease-in" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/8/80/2005_%E6%96%B0%E5%8A%A0%E5%9D%A1_-_panoramio_%282%29.jpg", type: "cover", zoom: [1.16, 1.06, 1], pan: ["30% 65%", "50% 45%", "72% 30%"], ease: "ease-out" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Former_Merlion_Park.JPG", type: "cover", zoom: [1, 1.08, 1.14], pan: ["45% 30%", "55% 55%", "65% 75%"], ease: "linear" }
   ];
 
   // Real per-sentence timestamps captured for free from edge-tts's
@@ -143,10 +143,12 @@ Millions of people photograph the Merlion every year, and almost none of them co
     var el = document.createElement('div');
     el.style.cssText = 'position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease;';
 
+    var ease = s.ease || 'linear';
+
     if (s.type === 'letterbox') {
       var bg = document.createElement('div');
       bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
-      bg.style.animation = 'kb' + i + ' ' + segDuration + 's linear forwards';
+      bg.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
       var fg = document.createElement('div');
       fg.style.cssText = 'position:absolute;inset:6%;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:url(\'' + s.src + '\');';
       el.appendChild(bg);
@@ -155,12 +157,12 @@ Millions of people photograph the Merlion every year, and almost none of them co
     } else {
       var layer = document.createElement('div');
       layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');';
-      layer.style.animation = 'kb' + i + ' ' + segDuration + 's linear forwards';
+      layer.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
       el.appendChild(layer);
       el._animTargets = [layer];
     }
 
-    styleEl.textContent += '@keyframes kb' + i + ' { from { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } to { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } }\n';
+    styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\n';
     stage.appendChild(el);
     return el;
   });
@@ -193,10 +195,11 @@ Millions of people photograph the Merlion every year, and almost none of them co
         slideEls.forEach(function (el, i) {
           el.style.opacity = (i === idx) ? '1' : '0';
           if (i === idx) {
+            var ease = slides[i].ease || 'linear';
             el._animTargets.forEach(function (target) {
               target.style.animation = 'none';
               void target.offsetWidth;
-              target.style.animation = 'kb' + i + ' ' + segDuration + 's linear forwards';
+              target.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
             });
           }
         });
