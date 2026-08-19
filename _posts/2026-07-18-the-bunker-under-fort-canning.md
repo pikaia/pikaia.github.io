@@ -2,7 +2,7 @@
 layout: post
 title: "The Bunker Under Fort Canning Hill"
 date: 2026-07-18 09:00:00 +0800
-last_modified_at: 2026-08-20 04:56:00 +0800
+last_modified_at: 2026-08-20 05:02:00 +0800
 categories: [history, world-war-two]
 image: https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg
 ---
@@ -91,5 +91,8 @@ Fort Canning Hill's part in the story didn't start or end with the bunker itself
 - [File:Percival with war correspondents.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Percival_with_war_correspondents.jpg)
 - [File:Terauchi Hisaichi in Singapore 1942.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Terauchi_Hisaichi_in_Singapore_1942.png)
 - [File:Liberated British Prisoners of War in the Far East, 1945, HU 69968.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Liberated_British_Prisoners_of_War_in_the_Far_East,_1945,_HU_69968.jpg)
+- [File:In the Battle Box, Singapore - panoramio.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:In_the_Battle_Box,_Singapore_-_panoramio.jpg)
+- [File:Interior of the Battle Box, Singapore - 20110506-01.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Interior_of_the_Battle_Box,_Singapore_-_20110506-01.jpg)
+- [File:Interior of the Battle Box, Singapore - 20120722-01.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Interior_of_the_Battle_Box,_Singapore_-_20120722-01.jpg)
 
 [← Back to all posts](/)

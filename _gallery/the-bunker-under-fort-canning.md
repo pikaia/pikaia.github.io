@@ -5,7 +5,7 @@ post_url: /2026/07/18/the-bunker-under-fort-canning/
 post_title: "The Bunker Under Fort Canning Hill"
 ---
 
-Fourteen more images from the story that played out above and around the Battlebox — the hill across six centuries of legend and empire, the commanders on both sides of the table, the day the decision made underground became public, and what came after.
+Seventeen more images from the story that played out above and around the Battlebox — the hill across six centuries of legend and empire, the room where the decision itself was made, the commanders on both sides of the table, the day that decision became public, and what came after.
 
 ### Long before the war: the legend that named the hill
 
@@ -42,6 +42,24 @@ Fourteen more images from the story that played out above and around the Battleb
 ![The Old Christian Cemetery at Fort Canning Park](https://upload.wikimedia.org/wikipedia/commons/8/80/20250628_oldchristiancemetery.jpg)
 
 *Headstones from the 1820s to 1860s lining the wall of the Old Christian Cemetery, relocated here when the hill was cleared for military use — long before the Battlebox was ever dug into it. (Photo: Wombatjpw / Wikimedia Commons, CC BY-SA 4.0)*
+
+### The room where the decision was made
+
+![In the Battle Box, Singapore](https://upload.wikimedia.org/wikipedia/commons/4/4e/In_the_Battle_Box%2C_Singapore_-_panoramio.jpg)
+
+*A life-sized reconstruction of the war council meeting inside the Battlebox, recreating the tense final conference before Percival ordered the surrender. (Photo: jokertrekker / Wikimedia Commons, CC BY 3.0)*
+
+### Inside the command room
+
+![Interior of the Battle Box, Singapore](https://upload.wikimedia.org/wikipedia/commons/e/eb/Interior_of_the_Battle_Box%2C_Singapore_-_20110506-01.jpg)
+
+*Reconstructed figures inside the Battlebox today, surrounded by wartime maps, an old telephone, and papers on the desk — part of the museum's recreation of the final days before the surrender. (Photo: Michael Coghlan / Wikimedia Commons, CC BY-SA 2.0)*
+
+### The signals room
+
+![Interior of the Battle Box, Singapore, communication booths](https://upload.wikimedia.org/wikipedia/commons/c/cf/Interior_of_the_Battle_Box%2C_Singapore_-_20120722-01.jpg)
+
+*One of the Battlebox's reconstructed rooms, lined with communication booths and wartime memorabilia. (Photo: Bryn Pinzgauer / Wikimedia Commons, CC BY 2.0)*
 
 ### General Percival arrives in Singapore
 
