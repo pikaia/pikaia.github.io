@@ -2,7 +2,7 @@
 layout: post
 title: "The Two Men Behind Singapore's Most Photographed Statue"
 date: 2026-08-19 17:00:00 +0800
-last_modified_at: 2026-08-20 02:04:00 +0800
+last_modified_at: 2026-08-20 03:17:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG
 ---
@@ -311,7 +311,7 @@ Turning that emblem into a monument fell to Lim Nang Seng, a sculptor with no fo
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Lim Nang Seng and his wife at Tiger Balm Gardens, 1950, two decades before the Merlion commission. (Photo: National Archives of Singapore / Wikimedia Commons, public domain)</em>
 </div>
 
-The statue outgrew both of them almost immediately. It was relocated a short distance to its current spot at Merlion Park in 2002, after the newly built Esplanade Bridge blocked the original view, and it has since been joined by a two-metre "cub" and by unrelated Merlion statues elsewhere in the country, none of which changes the fact that the entire image, lion head, fish tail and all, traces back to one aquarium curator's sketch and one sculptor's cement. [See more historical photos related to this post →](/gallery/two-men-behind-singapore-merlion-statue/) Lim never got to see how far the statue's fame would travel. On 17 November 1987, during Merlion Week, a set of annual celebrations built around the very statue he had built fifteen years earlier, he collapsed while working on a set of clay figurines and died shortly afterward at Singapore General Hospital.
+The statue outgrew both of them almost immediately. It was relocated a short distance to its current spot at Merlion Park in 2002, after the newly built Esplanade Bridge blocked the original view, and it has since been joined by a two-metre "cub" and by unrelated Merlion statues elsewhere in the country, none of which changes the fact that the entire image, lion head, fish tail and all, traces back to one aquarium curator's sketch and one sculptor's cement. [See more historical photos related to this post →](/gallery/two-men-behind-singapore-merlion-statue/), or [watch this story as a video on YouTube →](https://youtu.be/w6Q-1Ps9k6Y). Lim never got to see how far the statue's fame would travel. On 17 November 1987, during Merlion Week, a set of annual celebrations built around the very statue he had built fifteen years earlier, he collapsed while working on a set of clay figurines and died shortly afterward at Singapore General Hospital.
 
 **Why it matters today:** the Merlion is reproduced on more souvenirs, postcards and Instagram grids than any other image associated with Singapore, and almost nobody buying or posting one could tell you that a British fish taxonomist drew it as a logo, or that a former schoolteacher and his eight children built it out of cement over nine months. The most famous thing to come out of Singapore's tourism board turned out to be the perfect case study in how completely a creation can eclipse its creators.
 
