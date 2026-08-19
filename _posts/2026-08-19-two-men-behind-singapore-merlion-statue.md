@@ -2,7 +2,7 @@
 layout: post
 title: "The Two Men Behind Singapore's Most Photographed Statue"
 date: 2026-08-19 17:00:00 +0800
-last_modified_at: 2026-08-20 01:25:00 +0800
+last_modified_at: 2026-08-20 02:04:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG
 ---
@@ -139,18 +139,42 @@ Millions of people photograph the Merlion every year, and almost none of them co
 
   var styleEl = document.createElement('style');
   document.head.appendChild(styleEl);
-  var segDuration = 25.92;
+
+  // Which slide is on screen at any given time, aligned to what the
+  // narration is actually saying at that moment (real sentence offsets
+  // above) rather than an even split of total duration - e.g. slide 2
+  // (Lim Nang Seng) doesn't start until 109.51s, right as the narration
+  // actually turns to him, so it never shows up mid-Fraser-Brunner story.
+  // This is hand-mapped to this post's specific narration/image set and
+  // will need re-deriving if the sentences or slide order ever change.
+  var imageSchedule = [
+    { t: 0, slide: 0 },       // hero - intro
+    { t: 38.09, slide: 1 },   // closeup - Fraser-Brunner's design story
+    { t: 109.51, slide: 2 },  // Lim Nang Seng portrait - his bio + building it
+    { t: 181.13, slide: 3 },  // skyline - statue outgrew both of them
+    { t: 190.0, slide: 4 },   // rear view - relocated 2002, Esplanade Bridge
+    { t: 198.0, slide: 5 },   // mini merlion - "joined by a two-metre cub"
+    { t: 204.0, slide: 6 },   // tourism court - "unrelated Merlion statues elsewhere"
+    { t: 210.03, slide: 9 },  // former merlion park - Lim never saw its fame, died 1987
+    { t: 230.52, slide: 7 },  // sentosa - "why it matters today"
+    { t: 250.35, slide: 8 }   // 1978 photo - closing line
+  ];
+  var slideDurations = imageSchedule.map(function (entry, i) {
+    var next = i + 1 < imageSchedule.length ? imageSchedule[i + 1].t : 259.2;
+    return next - entry.t;
+  });
 
   var slideEls = slides.map(function (s, i) {
     var el = document.createElement('div');
     el.style.cssText = 'position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease;';
 
     var ease = s.ease || 'linear';
+    var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === i; })];
 
     if (s.type === 'letterbox') {
       var bg = document.createElement('div');
       bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
-      bg.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
+      bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
       var fg = document.createElement('div');
       fg.style.cssText = 'position:absolute;inset:6%;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:url(\'' + s.src + '\');';
       el.appendChild(bg);
@@ -159,7 +183,7 @@ Millions of people photograph the Merlion every year, and almost none of them co
     } else {
       var layer = document.createElement('div');
       layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');';
-      layer.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
+      layer.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
       el.appendChild(layer);
       el._animTargets = [layer];
     }
@@ -189,23 +213,31 @@ Millions of people photograph the Merlion every year, and almost none of them co
     return idx;
   }
 
+  function slideIndexForTime(t) {
+    // Schedule entries are in ascending time order; find the last one that has started.
+    var idx = imageSchedule[0].slide;
+    for (var i = 0; i < imageSchedule.length; i++) {
+      if (imageSchedule[i].t <= t) idx = imageSchedule[i].slide; else break;
+    }
+    return idx;
+  }
+
   function updateForTime(t) {
-    if (segDuration) {
-      var idx = Math.min(slides.length - 1, Math.floor(t / segDuration));
-      if (idx !== currentIndex) {
-        currentIndex = idx;
-        slideEls.forEach(function (el, i) {
-          el.style.opacity = (i === idx) ? '1' : '0';
-          if (i === idx) {
-            var ease = slides[i].ease || 'linear';
-            el._animTargets.forEach(function (target) {
-              target.style.animation = 'none';
-              void target.offsetWidth;
-              target.style.animation = 'kb' + i + ' ' + segDuration + 's ' + ease + ' forwards';
-            });
-          }
-        });
-      }
+    var idx = slideIndexForTime(t);
+    if (idx !== currentIndex) {
+      currentIndex = idx;
+      var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === idx; })];
+      slideEls.forEach(function (el, i) {
+        el.style.opacity = (i === idx) ? '1' : '0';
+        if (i === idx) {
+          var ease = slides[i].ease || 'linear';
+          el._animTargets.forEach(function (target) {
+            target.style.animation = 'none';
+            void target.offsetWidth;
+            target.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
+          });
+        }
+      });
     }
 
     var sIdx = sentenceIndexForTime(t);
@@ -235,7 +267,6 @@ Millions of people photograph the Merlion every year, and almost none of them co
   document.getElementById('watch-close').addEventListener('click', closeViewer);
 
   watchAudio.addEventListener('loadedmetadata', function () {
-    segDuration = watchAudio.duration / slides.length;
     timeLabel.textContent = '0:00 / ' + fmtTime(watchAudio.duration);
   });
   watchAudio.addEventListener('timeupdate', function () {
