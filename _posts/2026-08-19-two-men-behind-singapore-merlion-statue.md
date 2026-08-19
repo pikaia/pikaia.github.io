@@ -2,7 +2,7 @@
 layout: post
 title: "The Two Men Behind Singapore's Most Photographed Statue"
 date: 2026-08-19 17:00:00 +0800
-last_modified_at: 2026-08-20 01:25:00 +0800
+last_modified_at: 2026-08-20 01:40:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG
 ---
@@ -266,6 +266,11 @@ Millions of people photograph the Merlion every year, and almost none of them co
 
 *The Merlion at Merlion Park, Marina Bay. (Photo: PookieFugglestein / Wikimedia Commons, CC0)*
 
+<div style="float: left; max-width: 240px; width: 40%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://waicblog.wordpress.com/wp-content/uploads/2015/03/fb.jpg" alt="Alec Fraser-Brunner" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Alec Fraser-Brunner, editor of <em>The Aquarist and Pondkeeper</em> magazine from 1946, around the time he sketched the Merlion emblem. (Photo via <em>The Aquarist and Pondkeeper</em> magazine archive, reproduced from waicblog.wordpress.com)</em>
+</div>
+
 The creature itself was never supposed to become a monument. It began in 1964 as a piece of graphic design, drawn by Alec Fraser-Brunner, an Englishman who had spent the previous decade as curator of the Van Kleef Aquarium at the foot of Fort Canning Hill. Fraser-Brunner was a career ichthyologist, not an artist by trade, a man who had catalogued fish for Britain's Colonial Office and would later curate the aquarium at Edinburgh Zoo. Sitting on a committee tasked with giving Singapore's fledgling tourism board a logo, he sketched a creature with a lion's head grafted onto a fish's body: the lion for the founding legend of Sang Nila Utama, the Sumatran prince said to have spotted the beast that gave the island its name, Singapura, "Lion City"; the fish for Temasek, the older name for the settlement, meaning "sea town." The trademark was registered in 1966 and used quietly as a tourism board emblem for the rest of the decade, a flat piece of branding with no statue attached to it and, outside of ichthyology circles, no name attached to Fraser-Brunner either. He died in 1986, and today the clearest public record of his authorship is a Wikipedia article.
 
 <div style="float: left; max-width: 280px; width: 45%; margin: 0.25em 1.5em 1em 0;">
@@ -288,6 +293,7 @@ The statue outgrew both of them almost immediately. It was relocated a short dis
 
 **Sources:**
 - [Alec Fraser-Brunner — Wikipedia](https://en.wikipedia.org/wiki/Alec_Fraser-Brunner)
+- [The Aquarist and Pondkeeper Magazine from 1924 to the mid-1970s — WAIC Blog (photo source)](https://waicblog.wordpress.com/2015/03/11/the-aquarist-and-pondkeeper-magazine-from-1924-to-the-mid-1970s/)
 - [Van Kleef Aquarium — Wikipedia](https://en.wikipedia.org/wiki/Van_Kleef_Aquarium)
 - [Lim Nang Seng — Wikipedia](https://en.wikipedia.org/wiki/Lim_Nang_Seng)
 - [Celebrating 50 Years of the Merlion: Stories Behind the National Icon — Roots.gov.sg, National Heritage Board](https://www.roots.gov.sg/stories-landing/stories/celebrating-50-years-of-the-merlion-stories-behind-the-national-icon/story)
