@@ -31,13 +31,13 @@ Keep the tone of posts objective and balanced — temper subjective commentary, 
 
 ## Photo galleries
 
-Every post needs a companion gallery page with additional historical/vintage photos beyond the ones inline in the post itself (aim for 5; fewer is fine if the topic is genuinely thin on real historical photography — never pad with weak or irrelevant images to hit the count).
+Every post needs a companion gallery page with additional historical/vintage photos beyond the ones inline in the post itself. Aim for up to 20 images total across the whole post where possible — hero + inline images + gallery combined (this also gives posts with a Ken Burns-style "Watch" slideshow widget enough source images for a dynamic result). Fewer is fine if the topic is genuinely thin on real historical photography — never pad with weak or irrelevant images to hit the count.
 
 - Gallery pages live in `_gallery/<slug>.md` (same slug as the post, no date prefix), rendered by `_layouts/gallery.html` via the `gallery` collection registered in `_config.yml` (permalink `/gallery/:path/`).
 - Front matter: `layout: gallery`, `title` (e.g. `"More Historical Photos: <short topic label>"`), `post_url` (the post's actual permalink), `post_title` (must match the post's title exactly).
 - Body: a one-sentence intro, then each photo as `### <short heading>`, the image via markdown `![alt](url)`, then an italicized caption on its own line (blank line separating it from the image, same rule as inline post images) crediting author/source/license exactly as shown on the image's Commons file page.
 - Never duplicate an image URL that's already used inline in the post itself.
-- In the post, add one line linking to the gallery (e.g. `[See five more historical photos related to this post →](/gallery/<slug>/)`), placed naturally in the prose near the end, before the closing bolded line. Append the gallery images' Commons file-page links to the post's own Sources list.
+- In the post, add one line linking to the gallery (e.g. `[See more historical photos related to this post →](/gallery/<slug>/)`, adjusting the wording to the actual count), placed naturally in the prose near the end, before the closing bolded line. Append the gallery images' Commons file-page links to the post's own Sources list.
 - Adding a gallery to an already-published post is a site-wide convention rollout, not a substantive content edit — don't bump `last_modified_at` for it.
 
 ## Charts
