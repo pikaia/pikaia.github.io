@@ -2,7 +2,7 @@
 layout: post
 title: "The Bunker Under Fort Canning Hill"
 date: 2026-07-18 09:00:00 +0800
-last_modified_at: 2026-07-18 09:00:00 +0800
+last_modified_at: 2026-08-20 04:56:00 +0800
 categories: [history, world-war-two]
 image: https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg
 ---
@@ -66,7 +66,7 @@ After the war the bunker was sealed up and largely forgotten for decades. It's s
 
 *The heavy blast door guarding the entrance to the bunker's tunnels. (Photo: Roberto Arias / Wikimedia Commons, CC BY 2.0)*
 
-Fort Canning Hill's part in the story didn't start or end with the bunker itself — it runs from the hill's pre-war role as the seat of British Malaya Command through to the commanders on both sides of the surrender table. [See five more historical photos related to this post →](/gallery/the-bunker-under-fort-canning/)
+Fort Canning Hill's part in the story didn't start or end with the bunker itself — it runs from the hill's pre-war role as the seat of British Malaya Command through to the commanders on both sides of the surrender table. [See more historical photos related to this post →](/gallery/the-bunker-under-fort-canning/)
 
 **Where it fits in the bigger story:** the Battlebox sits alongside other lesser-known wartime sites across Singapore — a reminder that much of the island's most pivotal history happened in unremarkable, easy-to-miss places.
 
@@ -82,5 +82,14 @@ Fort Canning Hill's part in the story didn't start or end with the bunker itself
 - [File:Yamashita e Suzuki.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Yamashita_e_Suzuki.jpg)
 - [File:British troops surrender in Singapore.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:British_troops_surrender_in_Singapore.png)
 - [File:Singaporesurrender.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singaporesurrender.jpg)
+- [File:Sang nila utama garden.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sang_nila_utama_garden.jpg)
+- [File:Singapore from the Sea June 1823 - Lt. Phillip Jackson.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_from_the_Sea_June_1823_-_Lt._Phillip_Jackson.jpg)
+- [File:Part of Singapore Island (British Library India Office Records, 1825, detail).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Part_of_Singapore_Island_(British_Library_India_Office_Records,_1825,_detail).jpg)
+- [File:Fort Canning from the Singapore River - 1860–1900.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fort_Canning_from_the_Singapore_River_-_1860%E2%80%931900.jpg)
+- [File:20250628 oldchristiancemetery.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20250628_oldchristiancemetery.jpg)
+- [File:Dispositions of the Garrison February-1942.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dispositions_of_the_Garrison_February-1942.png)
+- [File:Percival with war correspondents.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Percival_with_war_correspondents.jpg)
+- [File:Terauchi Hisaichi in Singapore 1942.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Terauchi_Hisaichi_in_Singapore_1942.png)
+- [File:Liberated British Prisoners of War in the Far East, 1945, HU 69968.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Liberated_British_Prisoners_of_War_in_the_Far_East,_1945,_HU_69968.jpg)
 
 [← Back to all posts](/)
