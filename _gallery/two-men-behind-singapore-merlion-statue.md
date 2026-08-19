@@ -5,7 +5,7 @@ post_url: /2026/08/19/two-men-behind-singapore-merlion-statue/
 post_title: "The Two Men Behind Singapore's Most Photographed Statue"
 ---
 
-Five more images of the statue, its smaller companion, and the spot where it originally stood.
+Seven more images of the statue, its smaller companion, its lesser-known cousins around the island, and the spot where it originally stood.
 
 ### The Merlion and the skyline it now overlooks
 
@@ -25,11 +25,23 @@ Five more images of the statue, its smaller companion, and the spot where it ori
 
 *The two-metre "cub," Lim Nang Seng's smaller companion statue standing beside the main Merlion. (Photo: C1815 / Wikimedia Commons, CC0)*
 
+### A Merlion hiding in a corporate lobby
+
+![Merlion statue at Tourism Court, Singapore](https://upload.wikimedia.org/wikipedia/commons/2/24/Merlion_statue_at_Tourism_Court%2C_Singapore_-_20150329.jpg)
+
+*A Merlion statue inside Tourism Court, the Singapore Tourism Board's own headquarters — one of several official and unofficial Merlions scattered around the island beyond the original at Marina Bay. (Photo: C1815 / Wikimedia Commons, CC0)*
+
 ### The giant that didn't last
 
 ![2005 Sentosa Merlion](https://upload.wikimedia.org/wikipedia/commons/8/80/2005_%E6%96%B0%E5%8A%A0%E5%9D%A1_-_panoramio_%282%29.jpg)
 
 *A separate, unrelated 37-metre Merlion statue on Sentosa Island, photographed in 2005 — one of several built elsewhere in Singapore after the original made the image famous. Demolished in 2020 to make way for a new development. (Photo: 张元柏 / Wikimedia Commons, CC BY-SA 3.0)*
+
+### Spouting water at its original site, 1978
+
+![Singapore Merlion in 1978](https://upload.wikimedia.org/wikipedia/commons/5/51/Singapore_Merlion_in_1978.jpg)
+
+*The Merlion at the mouth of the Singapore River, just six years after its 1972 unveiling — its original site before the 2002 move to make way for the Esplanade Bridge. (Photo: AlexSin66 / Wikimedia Commons, CC0)*
 
 ### Where the statue actually stood until 2002
 

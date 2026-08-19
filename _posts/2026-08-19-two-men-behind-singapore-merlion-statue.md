@@ -2,7 +2,7 @@
 layout: post
 title: "The Two Men Behind Singapore's Most Photographed Statue"
 date: 2026-08-19 17:00:00 +0800
-last_modified_at: 2026-08-19 17:00:00 +0800
+last_modified_at: 2026-08-20 01:25:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/c/c0/Merlion%2C_Singapore.JPG
 ---
@@ -81,7 +81,9 @@ Millions of people photograph the Merlion every year, and almost none of them co
     { src: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Merlion_and_the_Singapore_Skyline.JPG", type: "cover", zoom: [1.18, 1.08, 1], pan: ["60% 25%", "50% 50%", "40% 75%"], ease: "ease-out" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/2/20/Rear_view_of_the_Merlion_statue_at_Merlion_Park%2C_Singapore%2C_with_Marina_Bay_Sands_in_the_distance_-_20140307.jpg", type: "cover", zoom: [1, 1.1, 1.16], pan: ["35% 72%", "55% 50%", "65% 28%"], ease: "ease-in-out" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Singapore_Mini_Merlion.JPG", type: "cover", zoom: [1, 1.12, 1.2], pan: ["75% 60%", "50% 45%", "25% 35%"], ease: "ease-in" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/2/24/Merlion_statue_at_Tourism_Court%2C_Singapore_-_20150329.jpg", type: "cover", zoom: [1, 1.08, 1.15], pan: ["40% 30%", "55% 50%", "45% 65%"], ease: "ease-in" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/8/80/2005_%E6%96%B0%E5%8A%A0%E5%9D%A1_-_panoramio_%282%29.jpg", type: "cover", zoom: [1.16, 1.06, 1], pan: ["30% 65%", "50% 45%", "72% 30%"], ease: "ease-out" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Singapore_Merlion_in_1978.jpg", type: "cover", zoom: [1.14, 1.06, 1], pan: ["55% 60%", "48% 45%", "35% 35%"], ease: "ease-out" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Former_Merlion_Park.JPG", type: "cover", zoom: [1, 1.08, 1.14], pan: ["45% 30%", "55% 55%", "65% 75%"], ease: "linear" }
   ];
 
@@ -137,7 +139,7 @@ Millions of people photograph the Merlion every year, and almost none of them co
 
   var styleEl = document.createElement('style');
   document.head.appendChild(styleEl);
-  var segDuration = 32.4;
+  var segDuration = 25.92;
 
   var slideEls = slides.map(function (s, i) {
     var el = document.createElement('div');
@@ -278,7 +280,7 @@ Turning that emblem into a monument fell to Lim Nang Seng, a sculptor with no fo
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Lim Nang Seng and his wife at Tiger Balm Gardens, 1950, two decades before the Merlion commission. (Photo: National Archives of Singapore / Wikimedia Commons, public domain)</em>
 </div>
 
-The statue outgrew both of them almost immediately. It was relocated a short distance to its current spot at Merlion Park in 2002, after the newly built Esplanade Bridge blocked the original view, and it has since been joined by a two-metre "cub" and by unrelated Merlion statues elsewhere in the country, none of which changes the fact that the entire image, lion head, fish tail and all, traces back to one aquarium curator's sketch and one sculptor's cement. [See five more historical photos related to this post →](/gallery/two-men-behind-singapore-merlion-statue/) Lim never got to see how far the statue's fame would travel. On 17 November 1987, during Merlion Week, a set of annual celebrations built around the very statue he had built fifteen years earlier, he collapsed while working on a set of clay figurines and died shortly afterward at Singapore General Hospital.
+The statue outgrew both of them almost immediately. It was relocated a short distance to its current spot at Merlion Park in 2002, after the newly built Esplanade Bridge blocked the original view, and it has since been joined by a two-metre "cub" and by unrelated Merlion statues elsewhere in the country, none of which changes the fact that the entire image, lion head, fish tail and all, traces back to one aquarium curator's sketch and one sculptor's cement. [See more historical photos related to this post →](/gallery/two-men-behind-singapore-merlion-statue/) Lim never got to see how far the statue's fame would travel. On 17 November 1987, during Merlion Week, a set of annual celebrations built around the very statue he had built fifteen years earlier, he collapsed while working on a set of clay figurines and died shortly afterward at Singapore General Hospital.
 
 **Why it matters today:** the Merlion is reproduced on more souvenirs, postcards and Instagram grids than any other image associated with Singapore, and almost nobody buying or posting one could tell you that a British fish taxonomist drew it as a logo, or that a former schoolteacher and his eight children built it out of cement over nine months. The most famous thing to come out of Singapore's tourism board turned out to be the perfect case study in how completely a creation can eclipse its creators.
 
@@ -295,5 +297,12 @@ The statue outgrew both of them almost immediately. It was relocated a short dis
 - [File:Merlion, Singapore.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Merlion,_Singapore.JPG)
 - [File:Merlion Closeup Large.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Merlion_Closeup_Large.JPG)
 - [File:Lim Nang Seng.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lim_Nang_Seng.jpg)
+- [File:Merlion and the Singapore Skyline.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Merlion_and_the_Singapore_Skyline.JPG)
+- [File:Rear view of the Merlion statue at Merlion Park, Singapore, with Marina Bay Sands in the distance - 20140307.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rear_view_of_the_Merlion_statue_at_Merlion_Park,_Singapore,_with_Marina_Bay_Sands_in_the_distance_-_20140307.jpg)
+- [File:Singapore Mini Merlion.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Mini_Merlion.JPG)
+- [File:Merlion statue at Tourism Court, Singapore - 20150329.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Merlion_statue_at_Tourism_Court,_Singapore_-_20150329.jpg)
+- [File:2005 新加坡 - panoramio (2).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2005_%E6%96%B0%E5%8A%A0%E5%9D%A1_-_panoramio_(2).jpg)
+- [File:Singapore Merlion in 1978.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore_Merlion_in_1978.jpg)
+- [File:Former Merlion Park.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Former_Merlion_Park.JPG)
 
 [← Back to all posts](/)
