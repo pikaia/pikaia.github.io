@@ -5,7 +5,7 @@ post's narrative paragraphs (skipping images, captions, back-links, and the
 Sources section) and synthesizes them with a Microsoft Edge neural voice.
 
 Usage:
-    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice en-SG-WayneNeural]
+    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice en-US-AvaMultilingualNeural]
 """
 import argparse
 import asyncio
@@ -105,7 +105,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
     parser.add_argument("out_path")
-    parser.add_argument("--voice", default="en-SG-WayneNeural")
+    parser.add_argument("--voice", default="en-US-AvaMultilingualNeural")
     parser.add_argument("--dry-run", action="store_true", help="print extracted text only")
     args = parser.parse_args()
 
