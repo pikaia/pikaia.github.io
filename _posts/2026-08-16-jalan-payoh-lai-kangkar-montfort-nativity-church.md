@@ -2,7 +2,7 @@
 layout: post
 title: "The Lane Was Probably Named After My School. Neither Is There Anymore."
 date: 2026-08-16 00:55:00 +0800
-last_modified_at: 2026-08-16 00:55:00 +0800
+last_modified_at: 2026-08-20 22:10:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg
 ---
@@ -102,5 +102,9 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [File:Church of the Nativity of the Blessed Virgin Mary, night, July 2017.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity_of_the_Blessed_Virgin_Mary,_night,_July_2017.jpg)
 - [File:Village house with verandah and diner.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Village_house_with_verandah_and_diner.jpg)
 - [File:Hougang HDB 3.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_HDB_3.JPG)
+- [File:Hougang location.svg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_location.svg)
+- [File:Sungei Serangoon, panorama, Nov 06.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sungei_Serangoon,_panorama,_Nov_06.jpg)
+- [File:Hougang Single Member Constituency, 2025.svg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_Single_Member_Constituency,_2025.svg)
+- [File:WorkersPartyHougangSupporters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WorkersPartyHougangSupporters.jpg)
 
 [← Back to all posts](/)

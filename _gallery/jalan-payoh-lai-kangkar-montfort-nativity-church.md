@@ -5,7 +5,19 @@ post_url: /2026/08/16/jalan-payoh-lai-kangkar-montfort-nativity-church/
 post_title: "The Lane Was Named After My School. Neither Is There Anymore."
 ---
 
-Five more photographs of the places connected to this post — the church, the school's parish, and the park now sitting where the old Kangkar villages once stood.
+Nine more photographs of the places connected to this post — where Hougang sits on the map, the river the kangkars were named for, the church, the school's parish, the park now sitting where the old Kangkar villages once stood, and the political fact that outlasted all of it.
+
+### Where Hougang sits on the island
+
+![Map showing the location of Hougang planning area within Singapore](https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg)
+
+*Hougang's planning area (in red) within Singapore, its waterways visible including Sungei Serangoon. (Map: AridCeption / Wikimedia Commons, CC BY-SA 4.0)*
+
+### Sungei Serangoon, the river the kangkars were named for
+
+![Sungei Serangoon, panorama, photographed in 2006](https://upload.wikimedia.org/wikipedia/commons/f/f1/Sungei_Serangoon%2C_panorama%2C_Nov_06.jpg)
+
+*Sungei Serangoon, photographed in November 2006 — the river along which the old kangchu plantations once clustered, HDB towers now standing where the kangkars would have been. (Photo: User:Sengkang / Wikimedia Commons, copyrighted free use)*
 
 ### Punggol Park, on the old Kangkar's ground
 
@@ -36,5 +48,17 @@ Five more photographs of the places connected to this post — the church, the s
 ![HDB flats in Hougang, photographed in 2007](https://upload.wikimedia.org/wikipedia/commons/4/4b/Hougang_HDB_3.JPG)
 
 *HDB flats in Hougang, photographed in 2007. (Photo: Terence Ong / Wikimedia Commons, CC BY-SA 3.0)*
+
+### Hougang Single Member Constituency, 2025
+
+![Map of Hougang Single Member Constituency boundaries, 2025](https://upload.wikimedia.org/wikipedia/commons/0/06/Hougang_Single_Member_Constituency%2C_2025.svg)
+
+*The boundaries of Hougang Single Member Constituency (in red) as of the 2025 general election — the seat the Workers' Party has held since 1991. (Map: CrawlerGrey / Wikimedia Commons, CC BY-SA 4.0)*
+
+### The fact that never got redeveloped
+
+![Workers' Party supporters at Hougang, Singapore](https://upload.wikimedia.org/wikipedia/commons/9/9c/WorkersPartyHougangSupporters.jpg)
+
+*Workers' Party supporters gathered in Hougang on election night, July 2020 — the constituency has been held by the same opposition party in every general election since 1991. (Photo: Magyer Lohasa / Wikimedia Commons, CC BY-SA 4.0)*
 
 [← Back to all posts](/)
