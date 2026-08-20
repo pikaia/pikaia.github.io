@@ -2,7 +2,7 @@
 layout: post
 title: "The Lane Was Probably Named After My School. Neither Is There Anymore."
 date: 2026-08-16 00:55:00 +0800
-last_modified_at: 2026-08-21 04:54:00 +0800
+last_modified_at: 2026-08-20 20:00:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg
 ---
@@ -97,7 +97,14 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
 (function () {
   var slides = [
     { src: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg", type: "cover", zoom: [1, 1.08, 1.14], pan: ["50% 40%", "60% 55%", "45% 65%"], ease: "ease-in-out" },
-    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Sungei_Serangoon%2C_panorama%2C_Nov_06.jpg", type: "cover", zoom: [1, 1.1, 1.16], pan: ["30% 60%", "50% 45%", "68% 30%"], ease: "ease-in" },
+    { type: "route-walk", src: "/assets/images/jalan-payoh-lai-route-map.png", w: 581, h: 688, animS: 7,
+      path: "M72,560 C95,555 120,552 145,548 C175,543 190,510 210,460 C230,410 250,400 272,385",
+      nodes: [
+        { x: 72, y: 560, label: "Jalan Payoh Lai", delayS: 0.1 },
+        { x: 145, y: 548, label: "Upper Serangoon Rd Junction", delayS: 1.5 },
+        { x: 210, y: 460, label: "Holy Innocents\u2019 Lane", delayS: 4.0 },
+        { x: 272, y: 385, label: "Montfort School", delayS: 6.5 }
+      ] },
     { src: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg", type: "cover", zoom: [1, 1.1, 1.18], pan: ["45% 30%", "55% 50%", "65% 65%"], ease: "ease-in-out" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_night%2C_July_2017.jpg", type: "cover", zoom: [1.15, 1.06, 1], pan: ["60% 30%", "50% 50%", "35% 65%"], ease: "ease-out" },
     { src: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary_5%2C_Nov_06.JPG", type: "cover", zoom: [1, 1.08, 1.15], pan: ["40% 55%", "52% 45%", "62% 35%"], ease: "ease-in" },
@@ -192,6 +199,134 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     return next - entry.t;
   });
 
+  styleEl.textContent +=
+    '@keyframes routeDraw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }\n' +
+    '@keyframes markerWalk { from { opacity: 1; offset-distance: 0%; } to { opacity: 1; offset-distance: 100%; } }\n' +
+    '@keyframes labelFade { from { opacity: 0; } to { opacity: 1; } }\n';
+
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+
+  function buildRouteWalk(el, s) {
+    var svg = document.createElementNS(SVG_NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + s.w + ' ' + s.h);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    svg.style.cssText = 'position:absolute;inset:6%;width:88%;height:88%;overflow:visible;';
+
+    var img = document.createElementNS(SVG_NS, 'image');
+    img.setAttributeNS('http://www.w3.org/1999/xlink', 'href', s.src);
+    img.setAttribute('x', 0);
+    img.setAttribute('y', 0);
+    img.setAttribute('width', s.w);
+    img.setAttribute('height', s.h);
+    svg.appendChild(img);
+
+    var halo = document.createElementNS(SVG_NS, 'path');
+    halo.setAttribute('d', s.path);
+    halo.setAttribute('pathLength', '100');
+    halo.setAttribute('fill', 'none');
+    halo.setAttribute('stroke', '#fdf6e8');
+    halo.setAttribute('stroke-width', '4');
+    halo.setAttribute('stroke-linecap', 'round');
+    halo.setAttribute('stroke-linejoin', 'round');
+    halo.setAttribute('opacity', '0.85');
+    halo.setAttribute('stroke-dasharray', '100');
+    halo.setAttribute('stroke-dashoffset', '100');
+    svg.appendChild(halo);
+
+    var route = document.createElementNS(SVG_NS, 'path');
+    route.setAttribute('d', s.path);
+    route.setAttribute('pathLength', '100');
+    route.setAttribute('fill', 'none');
+    route.setAttribute('stroke', '#e2572e');
+    route.setAttribute('stroke-width', '2');
+    route.setAttribute('stroke-linecap', 'round');
+    route.setAttribute('stroke-linejoin', 'round');
+    route.setAttribute('stroke-dasharray', '100');
+    route.setAttribute('stroke-dashoffset', '100');
+    svg.appendChild(route);
+
+    s.nodes.forEach(function (n) {
+      var dot = document.createElementNS(SVG_NS, 'circle');
+      dot.setAttribute('cx', n.x);
+      dot.setAttribute('cy', n.y);
+      dot.setAttribute('r', 3.5);
+      dot.setAttribute('fill', '#e2572e');
+      dot.setAttribute('stroke', '#fdf6e8');
+      dot.setAttribute('stroke-width', '1.5');
+      svg.appendChild(dot);
+    });
+
+    var marker = document.createElementNS(SVG_NS, 'g');
+    marker.style.offsetPath = "path('" + s.path + "')";
+    marker.style.opacity = '0';
+    var markerHalo = document.createElementNS(SVG_NS, 'circle');
+    markerHalo.setAttribute('r', 7);
+    markerHalo.setAttribute('fill', '#e2572e');
+    markerHalo.setAttribute('opacity', '0.3');
+    var markerDot = document.createElementNS(SVG_NS, 'circle');
+    markerDot.setAttribute('r', 3.5);
+    markerDot.setAttribute('fill', '#e2572e');
+    markerDot.setAttribute('stroke', '#2a0f08');
+    markerDot.setAttribute('stroke-width', '1');
+    marker.appendChild(markerHalo);
+    marker.appendChild(markerDot);
+    svg.appendChild(marker);
+
+    var credit = document.createElement('div');
+    credit.textContent = 'Map data \u00A9 OpenStreetMap contributors';
+    credit.style.cssText = 'position:absolute;left:7%;top:7%;font-size:0.68em;color:rgba(255,255,255,0.75);background:rgba(0,0,0,0.45);padding:0.2em 0.5em;border-radius:3px;';
+
+    el.appendChild(svg);
+    el.appendChild(credit);
+
+    var labelEls = s.nodes.map(function (n) {
+      var lbl = document.createElement('div');
+      lbl.textContent = n.label;
+      lbl.style.cssText = 'position:absolute;transform:translate(-50%,-120%);background:rgba(0,0,0,0.6);color:#fff;font-size:0.85em;font-weight:600;padding:0.35em 0.6em;border-radius:4px;opacity:0;white-space:nowrap;z-index:1;pointer-events:none;';
+      stage.appendChild(lbl);
+      return lbl;
+    });
+
+    return { svg: svg, halo: halo, route: route, marker: marker, labelEls: labelEls, nodes: s.nodes, animS: s.animS };
+  }
+
+  function restartRouteWalk(rw) {
+    if (!rw) return;
+    var animS = rw.animS + 's linear forwards';
+    [rw.halo, rw.route].forEach(function (p) { p.style.animation = 'none'; });
+    rw.marker.style.animation = 'none';
+    rw.labelEls.forEach(function (lbl) { lbl.style.animation = 'none'; });
+    void rw.svg.offsetWidth;
+    rw.halo.style.animation = 'routeDraw ' + animS;
+    rw.route.style.animation = 'routeDraw ' + animS;
+    rw.marker.style.animation = 'markerWalk ' + animS;
+    rw.nodes.forEach(function (n, i) {
+      rw.labelEls[i].style.animation = 'labelFade 0.5s ease forwards';
+      rw.labelEls[i].style.animationDelay = n.delayS + 's';
+    });
+    positionRouteLabels(rw);
+  }
+
+  function positionRouteLabels(rw) {
+    var ctm = rw.svg.getScreenCTM();
+    if (!ctm) return;
+    var pt = rw.svg.createSVGPoint();
+    var stageRect = stage.getBoundingClientRect();
+    rw.nodes.forEach(function (n, i) {
+      pt.x = n.x;
+      pt.y = n.y;
+      var screenPt = pt.matrixTransform(ctm);
+      rw.labelEls[i].style.left = (screenPt.x - stageRect.left) + 'px';
+      rw.labelEls[i].style.top = (screenPt.y - stageRect.top) + 'px';
+    });
+  }
+
+  window.addEventListener('resize', function () {
+    if (slides[currentIndex] && slides[currentIndex].type === 'route-walk') {
+      positionRouteLabels(slideEls[currentIndex]._routeWalk);
+    }
+  });
+
   var slideEls = slides.map(function (s, i) {
     var el = document.createElement('div');
     el.style.cssText = 'position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease;';
@@ -199,7 +334,9 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     var ease = s.ease || 'linear';
     var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === i; })];
 
-    if (s.type === 'letterbox') {
+    if (s.type === 'route-walk') {
+      el._routeWalk = buildRouteWalk(el, s);
+    } else if (s.type === 'letterbox') {
       var bg = document.createElement('div');
       bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
       bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
@@ -216,7 +353,9 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
       el._animTargets = [layer];
     }
 
-    styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\n';
+    if (s.type !== 'route-walk') {
+      styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\n';
+    }
     stage.appendChild(el);
     return el;
   });
@@ -256,11 +395,20 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
       slideEls.forEach(function (el, i) {
         el.style.opacity = (i === idx) ? '1' : '0';
         if (i === idx) {
-          var ease = slides[i].ease || 'linear';
-          el._animTargets.forEach(function (target) {
-            target.style.animation = 'none';
-            void target.offsetWidth;
-            target.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
+          if (slides[i].type === 'route-walk') {
+            restartRouteWalk(el._routeWalk);
+          } else {
+            var ease = slides[i].ease || 'linear';
+            el._animTargets.forEach(function (target) {
+              target.style.animation = 'none';
+              void target.offsetWidth;
+              target.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
+            });
+          }
+        } else if (slides[i].type === 'route-walk' && el._routeWalk) {
+          el._routeWalk.labelEls.forEach(function (lbl) {
+            lbl.style.animation = 'none';
+            lbl.style.opacity = '0';
           });
         }
       });
@@ -376,5 +524,6 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [File:Sungei Serangoon, panorama, Nov 06.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sungei_Serangoon,_panorama,_Nov_06.jpg)
 - [File:Hougang Single Member Constituency, 2025.svg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_Single_Member_Constituency,_2025.svg)
 - [File:WorkersPartyHougangSupporters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WorkersPartyHougangSupporters.jpg)
+- [OpenStreetMap](https://www.openstreetmap.org/copyright) — map data © OpenStreetMap contributors, ODbL
 
 [← Back to all posts](/)
