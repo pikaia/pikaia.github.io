@@ -2,7 +2,7 @@
 layout: post
 title: "The Lane Was Probably Named After My School. Neither Is There Anymore."
 date: 2026-08-16 00:55:00 +0800
-last_modified_at: 2026-08-21 04:14:00 +0800
+last_modified_at: 2026-08-21 04:36:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg
 ---
@@ -11,7 +11,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
 
 [← Back to all posts](/)
 
-<div style="display: flex; gap: 2em; margin: 0.5em 0 1.5em 0;">
+<div style="display: flex; gap: 2em; margin: 0.5em 0 1.5em 0; align-items: flex-end;">
   <div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; user-select: none;">
     <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.1em; height: 2.1em; border-radius: 50%; border: 1px solid #888; font-size: 1.1em;">&#127911;</span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
@@ -20,6 +20,12 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.1em; height: 2.1em; border-radius: 50%; border: 1px solid #888; font-size: 1.1em;">&#127916;</span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Watch</span>
   </div>
+  <a href="https://youtu.be/fqQ4_iS8pOo" target="_blank" rel="noopener" aria-label="Watch this story as a video on YouTube" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
+    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">
+      <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="5" fill="#FF0000"/><path d="M10 8.5l6 3.5-6 3.5z" fill="#fff"/></svg>
+    </span>
+    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">YouTube</span>
+  </a>
 </div>
 
 <audio id="listen-audio" preload="none" style="display: none;">
