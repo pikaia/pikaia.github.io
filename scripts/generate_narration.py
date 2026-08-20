@@ -134,7 +134,7 @@ ABBREVIATIONS = {
 def split_sentences(text: str) -> list[str]:
     sentences = []
     start = 0
-    for m in re.finditer(r"[.!?]+(?=\s|$)", text):
+    for m in re.finditer(r"[.!?]+[\"')\]]*(?=\s|$)", text):
         end = m.end()
         after = text[end:end + 2].lstrip()
         if after and not (after[0].isupper() or after[0] in "\"'"):
