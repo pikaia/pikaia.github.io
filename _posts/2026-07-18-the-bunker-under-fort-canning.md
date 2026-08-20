@@ -2,7 +2,7 @@
 layout: post
 title: "The Bunker Under Fort Canning Hill"
 date: 2026-07-18 09:00:00 +0800
-last_modified_at: 2026-08-20 05:28:00 +0800
+last_modified_at: 2026-08-20 10:35:00 +0800
 categories: [history, world-war-two]
 image: https://upload.wikimedia.org/wikipedia/commons/c/ce/Fort_Canning_Park_Tree_Tunnel.jpg
 ---
@@ -25,6 +25,21 @@ Beneath Fort Canning Hill, a quiet green space in the middle of the city, sits a
       <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="5" fill="#FF0000"/><path d="M10 8.5l6 3.5-6 3.5z" fill="#fff"/></svg>
     </span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">YouTube</span>
+  </a>
+  <a href="https://youtube.com/shorts/-eVbKn77syE" target="_blank" rel="noopener" aria-label="Watch a short version of this story on YouTube Shorts" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
+    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">
+      <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true">
+        <defs>
+          <linearGradient id="shortsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF0000"/>
+            <stop offset="100%" stop-color="#FF4E8B"/>
+          </linearGradient>
+        </defs>
+        <rect x="1" y="1" width="22" height="22" rx="7" fill="url(#shortsGrad)"/>
+        <path d="M13 6 L7.5 13.5 H11.5 L10.5 18 L16.5 10 H12.5 Z" fill="#fff"/>
+      </svg>
+    </span>
+    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Shorts</span>
   </a>
 </div>
 
