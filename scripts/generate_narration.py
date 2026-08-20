@@ -1,25 +1,38 @@
-"""Generate a narration MP3 for a blog post using edge-tts.
+"""Generate a narration MP3 for a blog post using Kokoro TTS.
 
 Local dev tool only - not part of the deployed Jekyll site. Extracts the
 post's narrative paragraphs (skipping images, captions, back-links, and the
-Sources section) and synthesizes them with a Microsoft Edge neural voice.
+Sources section) and synthesizes them with Kokoro (hexgrad/Kokoro-82M,
+Apache 2.0 licensed - both code and weights), voice af_heart by default.
 
-Also captures real per-sentence timestamps for free from edge-tts's
-SentenceBoundary events (same API call, no extra cost) and writes them
-alongside the audio as <out>.timing.json and <out>.srt - use these instead
-of guessing at even timing splits when syncing captions/video to the audio.
+Kokoro replaced edge-tts (2026-08) because edge-tts is an unofficial wrapper
+around Microsoft Edge's "Read Aloud" feature with no clear license for
+redistributing the synthesized audio in published posts/videos. Kokoro's
+Apache 2.0 license resolves that ambiguity outright. Runs fine on CPU - no
+GPU needed, quality is identical either way, just slower per-sentence.
+
+Real per-sentence timestamps come free as a byproduct: each sentence is
+synthesized as its own Kokoro call (see split_sentences() below - Kokoro's
+own internal chunking is phoneme-length-driven, not sentence-aligned, so we
+do our own splitting first), and its exact audio duration becomes that
+sentence's timing. Written alongside the audio as <out>.timing.json and
+<out>.srt - use these instead of guessing at even timing splits when
+syncing captions/video to the audio.
+
+Requires: pip install kokoro soundfile
+(torch is a kokoro dependency; CPU-only build is fine: pip install torch
+--index-url https://download.pytorch.org/whl/cpu)
+First run downloads the model from Hugging Face (hexgrad/Kokoro-82M).
 
 Usage:
-    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice en-US-AvaMultilingualNeural]
+    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice af_heart]
 """
 import argparse
-import asyncio
 import json
 import os
 import re
 import sys
-
-import edge_tts
+import warnings
 
 BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
 GALLERY_LINK_RE = re.compile(r"\[See[^\]]*\]\([^)]*\)")
@@ -103,46 +116,118 @@ def extract_narrative(markdown_text: str) -> list[str]:
     return narrative
 
 
-async def synthesize(text: str, voice: str, out_path: str) -> None:
-    communicate = edge_tts.Communicate(text, voice)
-    await communicate.save(out_path)
+# Sentence splitting for per-sentence synthesis (needed for real timing -
+# see module docstring). General-purpose sentence tokenizers (spaCy's
+# default sentencizer, NLTK's Punkt) were both tested against this blog's
+# actual text and got real cases wrong (e.g. splitting "Fr. Ambroise
+# Maistre" into two sentences at "Fr."), so this uses a small deterministic
+# abbreviation whitelist instead - a period only ends a sentence if the
+# word before it isn't a known abbreviation AND the text after it starts
+# with an uppercase letter or a quote. Extend ABBREVIATIONS if a new post's
+# text hits another false split.
+ABBREVIATIONS = {
+    "fr", "mr", "mrs", "ms", "dr", "st", "rev", "prof", "sgt", "capt", "lt", "gen", "col",
+    "ave", "blvd", "rd", "no", "vs", "etc", "jr", "sr", "inc", "ltd", "co",
+}
 
 
-async def synthesize_with_timing(text: str, voice: str, out_path: str) -> list[dict]:
-    """Like synthesize(), but also captures real per-sentence timestamps
-    from edge-tts's SentenceBoundary events (free, same API call). Writes
+def split_sentences(text: str) -> list[str]:
+    sentences = []
+    start = 0
+    for m in re.finditer(r"[.!?]+(?=\s|$)", text):
+        end = m.end()
+        after = text[end:end + 2].lstrip()
+        if after and not (after[0].isupper() or after[0] in "\"'"):
+            continue
+        before = text[:m.start()]
+        word_match = re.search(r"(\w+)$", before)
+        word = word_match.group(1).lower() if word_match else ""
+        if word in ABBREVIATIONS:
+            continue
+        sentences.append(text[start:end].strip())
+        start = end
+    tail = text[start:].strip()
+    if tail:
+        sentences.append(tail)
+    return sentences
+
+
+SAMPLE_RATE = 24000
+
+
+def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> list[dict]:
+    """Synthesize each sentence separately (see split_sentences() above),
+    concatenating the audio and recording each sentence's exact real
+    duration as its timing - free, no separate alignment step. Writes
     <out_path>.timing.json (list of {text, offset_s, duration_s}) and
     <out_path>.srt alongside the audio. Returns the sentence list."""
-    communicate = edge_tts.Communicate(text, voice)
-    submaker = edge_tts.SubMaker()
-    sentences: list[dict] = []
+    import numpy as np
+    import soundfile as sf
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        from kokoro import KPipeline
+        pipeline = KPipeline(lang_code="a")
 
-    with open(out_path, "wb") as audio_file:
-        async for chunk in communicate.stream():
-            if chunk["type"] == "audio":
-                audio_file.write(chunk["data"])
-            elif chunk["type"] in ("WordBoundary", "SentenceBoundary"):
-                submaker.feed(chunk)
-                sentences.append({
-                    "text": chunk["text"],
-                    "offset_s": chunk["offset"] / 10_000_000,
-                    "duration_s": chunk["duration"] / 10_000_000,
-                })
+    all_audio = []
+    sentences_out: list[dict] = []
+    cumulative_s = 0.0
+
+    for para in paragraphs:
+        for sent in split_sentences(para):
+            if not sent:
+                continue
+            generator = pipeline(sent, voice=voice, split_pattern=None)
+            seg_parts = []
+            for result in generator:
+                if result.audio is not None:
+                    a = result.audio
+                    seg_parts.append(a.numpy() if hasattr(a, "numpy") else a)
+            if not seg_parts:
+                continue
+            seg_audio = np.concatenate(seg_parts)
+            dur = len(seg_audio) / SAMPLE_RATE
+            sentences_out.append({
+                "text": sent,
+                "offset_s": round(cumulative_s, 4),
+                "duration_s": round(dur, 4),
+            })
+            all_audio.append(seg_audio)
+            cumulative_s += dur
+
+    full_audio = np.concatenate(all_audio) if all_audio else np.zeros(0, dtype=np.float32)
+    sf.write(out_path, full_audio, SAMPLE_RATE)
 
     base = os.path.splitext(out_path)[0]
     with open(f"{base}.timing.json", "w", encoding="utf-8") as f:
-        json.dump(sentences, f, indent=2, ensure_ascii=False)
+        json.dump(sentences_out, f, indent=2, ensure_ascii=False)
     with open(f"{base}.srt", "w", encoding="utf-8") as f:
-        f.write(submaker.get_srt())
+        f.write(_build_srt(sentences_out))
 
-    return sentences
+    return sentences_out
+
+
+def _srt_timestamp(t: float) -> str:
+    h = int(t // 3600)
+    m = int((t % 3600) // 60)
+    s = int(t % 60)
+    ms = round((t - int(t)) * 1000)
+    return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+
+def _build_srt(sentences: list[dict]) -> str:
+    blocks = []
+    for i, s in enumerate(sentences, 1):
+        start = _srt_timestamp(s["offset_s"])
+        end = _srt_timestamp(s["offset_s"] + s["duration_s"])
+        blocks.append(f"{i}\n{start} --> {end}\n{s['text']}\n")
+    return "\n".join(blocks)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
     parser.add_argument("out_path")
-    parser.add_argument("--voice", default="en-US-AvaMultilingualNeural")
+    parser.add_argument("--voice", default="af_heart")
     parser.add_argument("--dry-run", action="store_true", help="print extracted text only")
     args = parser.parse_args()
 
@@ -157,7 +242,7 @@ def main() -> None:
         return
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
-    sentences = asyncio.run(synthesize_with_timing(full_text, args.voice, args.out_path))
+    sentences = synthesize_with_timing(narrative, args.voice, args.out_path)
     base = os.path.splitext(args.out_path)[0]
     print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt ({len(sentences)} sentences)", file=sys.stderr)
 
