@@ -480,6 +480,17 @@ def full_path_points():
     return points
 
 
+def resize_cover(img, canvas_w, canvas_h):
+    """Resize+crop to fill canvas_w x canvas_h without distortion - the
+    PIL equivalent of CSS background-size:cover, matching the live
+    letterbox background layer's behavior."""
+    scale = max(canvas_w / img.width, canvas_h / img.height)
+    new_w, new_h = int(img.width * scale) + 1, int(img.height * scale) + 1
+    resized = img.resize((new_w, new_h))
+    left, top = (new_w - canvas_w) // 2, (new_h - canvas_h) // 2
+    return resized.crop((left, top, left + canvas_w, top + canvas_h))
+
+
 def load_font(size):
     for candidate in ("arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf"):
         try:
@@ -495,14 +506,15 @@ def compose_frame(tile, canvas_w, canvas_h, elapsed_s, anim_s):
     disp_w, disp_h = int(tile.width * scale), int(tile.height * scale)
     off_x, off_y = (canvas_w - disp_w) // 2, (canvas_h - disp_h) // 2
 
-    bg = tile.resize((canvas_w, canvas_h))
+    bg = resize_cover(tile, canvas_w, canvas_h)
     bg = bg.filter(ImageFilter.GaussianBlur(18))
     bg = ImageEnhance.Brightness(bg).enhance(0.42)
 
     frame = bg.convert("RGB")
     frame.paste(tile.resize((disp_w, disp_h)), (off_x, off_y))
+    frame = frame.convert("RGBA")
 
-    draw = ImageDraw.Draw(frame, "RGBA")
+    draw = ImageDraw.Draw(frame)
 
     def to_canvas(pt):
         return (off_x + pt[0] * scale, off_y + pt[1] * scale)
@@ -543,7 +555,7 @@ def compose_frame(tile, canvas_w, canvas_h, elapsed_s, anim_s):
     draw.rectangle([8, 8, 8 + credit_w + 12, 30], fill=(0, 0, 0, 115))
     draw.text((14, 12), CREDIT_TEXT, font=credit_font, fill=(255, 255, 255, 166))
 
-    return frame
+    return frame.convert("RGB")
 
 
 def render(tile_path, out_path, duration_s, anim_s, width, height, fps):
