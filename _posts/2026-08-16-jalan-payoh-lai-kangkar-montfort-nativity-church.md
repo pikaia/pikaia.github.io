@@ -100,7 +100,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     { type: "route-walk", src: "/assets/images/jalan-payoh-lai-route-map.png", w: 581, h: 688, animS: 7,
       path: "M72,560 C95,555 120,552 145,548 C175,543 190,510 210,460 C230,410 250,400 272,385",
       nodes: [
-        { x: 72, y: 560, label: "Jalan Payoh Lai", delayS: 0.1 },
+        { x: 72, y: 560, label: "Jalan Payoh Lai", delayS: 0.1, labelBelow: true },
         { x: 145, y: 548, label: "Upper Serangoon Rd Junction", delayS: 1.5 },
         { x: 210, y: 460, label: "Holy Innocents\u2019 Lane", delayS: 4.0 },
         { x: 272, y: 385, label: "Montfort School", delayS: 6.5 }
@@ -207,6 +207,10 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
   var SVG_NS = 'http://www.w3.org/2000/svg';
 
   function buildRouteWalk(el, s) {
+    var bg = document.createElement('div');
+    bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
+    el.appendChild(bg);
+
     var svg = document.createElementNS(SVG_NS, 'svg');
     svg.setAttribute('viewBox', '0 0 ' + s.w + ' ' + s.h);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
@@ -282,7 +286,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     var labelEls = s.nodes.map(function (n) {
       var lbl = document.createElement('div');
       lbl.textContent = n.label;
-      lbl.style.cssText = 'position:absolute;transform:translate(-50%,-120%);background:rgba(0,0,0,0.6);color:#fff;font-size:0.85em;font-weight:600;padding:0.35em 0.6em;border-radius:4px;opacity:0;white-space:nowrap;z-index:1;pointer-events:none;';
+      lbl.style.cssText = 'position:absolute;transform:translate(-50%,' + (n.labelBelow ? '20%' : '-120%') + ');background:rgba(0,0,0,0.6);color:#fff;font-size:0.85em;font-weight:600;padding:0.35em 0.6em;border-radius:4px;opacity:0;white-space:nowrap;z-index:1;pointer-events:none;';
       stage.appendChild(lbl);
       return lbl;
     });
