@@ -2,7 +2,7 @@
 layout: post
 title: "The Largest Japanese Cemetery in Southeast Asia Began as a Grave for Trafficked Women"
 date: 2026-08-05 14:00:00 +0800
-last_modified_at: 2026-08-05 14:00:00 +0800
+last_modified_at: 2026-08-21 18:30:00 +0800
 categories: [history, world-war-two]
 image: https://upload.wikimedia.org/wikipedia/commons/6/6c/Japanese_Cemetery_Park.jpg
 ---
@@ -54,7 +54,18 @@ Walk into the Japanese Cemetery Park in Hougang today and the oldest graves aren
 
 *The entrance to the Japanese Cemetery Park on Chuan Hoe Avenue, Hougang — the largest Japanese cemetery in Southeast Asia. (Photo: ProjectManhattan / Wikimedia Commons, CC BY-SA 3.0)*
 
+![Map showing the location of the Japanese Cemetery Park within Singapore](/assets/images/osm-japanese-cemetery-park-location.png)
+
+*The Japanese Cemetery Park sits on an ordinary residential street in Hougang, boxed in by condominiums — easy to pass without ever noticing it's there. (Map data: © OpenStreetMap contributors)*
+
+<div style="float: left; max-width: 220px; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Karayukisan_in_Saigon.JPG" alt="A karayuki-san photographed in Saigon, circa 1910" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A karayuki-san photographed in Saigon, circa 1910 — the same trade that populated brothels across Southeast Asia, including Singapore's. (Photo: from "Japan of 100 Years Ago," Life Information Center / Wikimedia Commons, public domain)</em>
+</div>
+
 Karayuki-san — literally "one who has gone abroad" — were mostly girls from Amakusa and Shimabara, two of the poorest, most volcanic corners of Kyushu, sold by their own families or lured by brokers known as *zegen* who promised factory work overseas and delivered them instead to brothels. Some were smuggled out hidden in ships' holds; contemporary accounts describe girls suffocating or starving during the crossing. Singapore's Japanese-run brothel district — concentrated along Malay, Malabar, Hylam and Bugis Streets — grew from about 14 women in two brothels in 1877 to an officially recorded 633 women in 109 brothels by 1905, peaking at roughly 2,086 Japanese sex workers in 1906. The real total, including unlicensed workers, was almost certainly higher.
+
+<div style="clear: both;"></div>
 
 The cemetery exists because of that trade, not despite it. In 1891, three Japanese brothel keepers — Futaki Takajiro, Shibuya Ginji and Nakagawa Kikuzo — petitioned Singapore's colonial government for land to bury destitute karayuki-san, who until then had been buried informally or not at all. Futaki donated six acres from his own rubber plantation; the government added roughly another acre of public land. Most of the karayuki-san graves are modest granite pillars, plainer than the elaborate monuments built later for wealthier community members — and many were left deliberately unmarked, to spare families back in Japan the shame of a daughter's profession.
 
@@ -236,7 +247,7 @@ The cemetery outlived the trade that founded it by decades, and it didn't stay a
 </script>
 </div>
 
-The Japanese Association, Singapore has managed the cemetery since 1969; it was restored and reopened as a public heritage park in 1987. Guided tours today walk visitors past both kinds of history side by side — the trafficked women who are the reason the cemetery exists, and the war dead and executed war criminals who arrived four decades later under entirely different circumstances. [See more photos of the cemetery today →](/gallery/japanese-cemetery-park-karayuki-san/)
+The Japanese Association, Singapore has managed the cemetery since 1969; it was restored and reopened as a public heritage park in 1987. Guided tours today walk visitors past both kinds of history side by side — the trafficked women who are the reason the cemetery exists, and the war dead and executed war criminals who arrived four decades later under entirely different circumstances. [See six more historical photos related to this post →](/gallery/japanese-cemetery-park-karayuki-san/)
 
 **Where it fits in the bigger story:** A cemetery a brothel keeper paid for so trafficked women wouldn't go unburied ended up, within two lifetimes, holding the graves of the general who commanded Japan's wartime forces across Southeast Asia and the men executed for war crimes committed under him — two very different kinds of Japanese history sharing one plot of land in Hougang, with the women who came first still the least remembered of anyone buried there.
 
@@ -259,5 +270,10 @@ The Japanese Association, Singapore has managed the cemetery since 1969; it was 
 - [File:Hisaichi Terauchi memorial, Japanese Cemetery Park, Singapore - 20070526.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hisaichi_Terauchi_memorial,_Japanese_Cemetery_Park,_Singapore_-_20070526.jpg)
 - [File:Prayer hall, Japanese Cemetery Park, Singapore - 20070526.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Prayer_hall,_Japanese_Cemetery_Park,_Singapore_-_20070526.jpg)
 - [File:Caretaker's quarters, Japanese Cemetery Park, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Caretaker%27s_quarters,_Japanese_Cemetery_Park,_Singapore.jpg)
+- [File:Karayukisan in Saigon.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Karayukisan_in_Saigon.JPG)
+- [File:Otokichi.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Otokichi.jpg)
+- [File:General Hisaichi Terauchi, Djawa Baroe, Vol. 1, Iss. 13 (1943-07-01), p11.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:General_Hisaichi_Terauchi,_Djawa_Baroe,_Vol._1,_Iss._13_(1943-07-01),_p11.jpg)
+- [Japanese Cemetery Park (way) — OpenStreetMap](https://www.openstreetmap.org/way/159148707)
+- [The Straits Times, 13 June 1946 — NewspaperSG, National Library Board](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19460613-1)
 
 [← Back to all posts](/)
