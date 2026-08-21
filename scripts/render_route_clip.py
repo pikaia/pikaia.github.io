@@ -32,7 +32,7 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 NODES = [
     {"x": 72, "y": 560, "label": "Jalan Payoh Lai", "delay_s": 0.1, "label_below": True},
     {"x": 145, "y": 548, "label": "Upper Serangoon Rd Junction", "delay_s": 1.5},
-    {"x": 210, "y": 460, "label": "Holy Innocentsâ€™ Lane", "delay_s": 4.0},
+    {"x": 210, "y": 460, "label": "Holy Innocents\u2019 Lane", "delay_s": 4.0},
     {"x": 272, "y": 385, "label": "Montfort School", "delay_s": 6.5},
 ]
 # Cubic Bezier control points (start, c1, c2, end) per segment - same
@@ -44,7 +44,7 @@ PATH_SEGMENTS = [
 ]
 ROUTE_COLOR = (226, 87, 46)      # #e2572e
 HALO_COLOR = (253, 246, 232)     # #fdf6e8
-CREDIT_TEXT = "Map data Â© OpenStreetMap contributors"
+CREDIT_TEXT = "Map data Ã‚Â© OpenStreetMap contributors"
 
 
 def cubic_bezier_points(p0, p1, p2, p3, n=40):
