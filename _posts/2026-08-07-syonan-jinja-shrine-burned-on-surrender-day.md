@@ -177,6 +177,9 @@ On 15 August 1945 — the day Emperor Hirohito's broadcast ended the Pacific War
   var progress = document.getElementById('watch-progress');
   var progressFill = document.getElementById('watch-progress-fill');
   var timeEl = document.getElementById('watch-time');
+  var listenAudio = document.getElementById('listen-audio');
+  var watchAudio = new Audio(listenAudio.querySelector('source').src);
+  watchAudio.preload = 'none';
   var watchWidget = document.getElementById('watch-widget');
 
   var styleEl = document.createElement('style');
@@ -260,14 +263,14 @@ On 15 August 1945 — the day Emperor Hirohito's broadcast ended the Pacific War
     currentIndex = -1;
     currentSentenceIndex = -1;
     slideEls.forEach(function (el) { el.style.opacity = '0'; });
-    audio.currentTime = 0;
+    watchAudio.currentTime = 0;
     updateForTime(0);
-    audio.play();
+    watchAudio.play();
   }
 
   function closeViewer() {
     viewer.style.display = 'none';
-    audio.pause();
+    watchAudio.pause();
   }
 
   watchWidget.addEventListener('click', openViewer);
@@ -276,16 +279,16 @@ On 15 August 1945 — the day Emperor Hirohito's broadcast ended the Pacific War
   });
   closeBtn.addEventListener('click', closeViewer);
   playBtn.addEventListener('click', function () {
-    if (audio.paused) audio.play(); else audio.pause();
+    if (watchAudio.paused) watchAudio.play(); else watchAudio.pause();
   });
-  audio.addEventListener('play', function () { playBtn.innerHTML = '&#10074;&#10074;'; });
-  audio.addEventListener('pause', function () { playBtn.innerHTML = '&#9654;'; });
-  audio.addEventListener('timeupdate', function () { updateForTime(audio.currentTime); });
-  audio.addEventListener('ended', closeViewer);
+  watchAudio.addEventListener('play', function () { playBtn.innerHTML = '&#10074;&#10074;'; });
+  watchAudio.addEventListener('pause', function () { playBtn.innerHTML = '&#9654;'; });
+  watchAudio.addEventListener('timeupdate', function () { updateForTime(watchAudio.currentTime); });
+  watchAudio.addEventListener('ended', closeViewer);
   progress.addEventListener('click', function (e) {
     var rect = progress.getBoundingClientRect();
     var pct = (e.clientX - rect.left) / rect.width;
-    audio.currentTime = pct * TOTAL_DURATION;
+    watchAudio.currentTime = pct * TOTAL_DURATION;
   });
 })();
 </script>
