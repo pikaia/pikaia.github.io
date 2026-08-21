@@ -44,6 +44,26 @@ Every post needs a companion gallery page with additional historical/vintage pho
 
 When a post calls for a chart (not just photos), load the `dataviz` skill and follow it — form choice, color-by-job, mark specs, hover interaction, accessibility (table fallback, ARIA label on the SVG). Source real data (e.g. data.gov.sg for HDB figures) rather than approximating from secondary articles when an authoritative dataset exists. Charts are self-contained inline HTML/SVG/JS embedded directly in the post's markdown (kramdown passes raw HTML through) — no external chart libraries, since the site has no JS build step. Preview the chart standalone as an Artifact first (fast iteration on an isolated chart), then check it again in place in the full post via the local Jekyll preview (see above) before publishing.
 
+## Route animations
+
+When a passage describes a specific place or journey with no commercially-licensable
+photo available (a demolished lane, an unmapped backlane, a walk through a place that
+no longer exists), use a `route-walk` Watch slide instead of forcing an unrelated
+stand-in photo: an animated route line over a real OpenStreetMap tile (ODbL-licensed,
+commercial reuse permitted with attribution — never Google Maps or any other
+non-freely-licensed map source). The route is hand-plotted against the tile as an
+approximate stand-in that conveys a sense of distance and direction, not a claim of
+precise historical accuracy.
+
+Source an OSM export/screenshot covering the relevant area, then hand-plot landmark
+nodes and a connecting path as pixel coordinates against that image (the same way
+pan/zoom values are hand-set for photo slides). Preview the slide standalone as an
+Artifact first, then check it in place via local Jekyll preview before publishing —
+same pattern as Charts. Always credit "Map data © OpenStreetMap contributors" both
+on-screen (small corner overlay) and in the post's Sources list. See
+`docs/superpowers/specs/2026-08-20-route-walk-animation-design.md` for the full design,
+and `scripts/render_route_clip.py` for the matching video-export renderer.
+
 ## Git
 
 Commit and push directly without asking for confirmation for routine content changes (posts, images, about page). Still check before anything destructive (force-push, history rewrite, deleting content).
