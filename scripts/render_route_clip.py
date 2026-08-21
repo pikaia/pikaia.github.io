@@ -47,6 +47,21 @@ ROUTE_COLOR = (226, 87, 46)      # #e2572e
 HALO_COLOR = (253, 246, 232)     # #fdf6e8
 CREDIT_TEXT = "Map data \u00A9 OpenStreetMap contributors"
 
+# Narration caption chunks for this slide's absolute timeline position
+# (24.775s-49.825s of the full post narration) - mirrors the live widget's
+# splitLongSentence() output exactly (same MAX=100 chunking), needed because
+# the standalone video has no separate caption layer the way the live Watch
+# widget does; captions must be burned into the frame like the rest of the
+# pre-existing video. Only used when --captions-offset is passed.
+CAPTIONS = [
+    {"text": "My favourite shortcut ran along a backlane to the left of Montfort School called Holy Innocents\u2019", "offset_s": 24.775, "duration_s": 6.297},
+    {"text": "Lane.", "offset_s": 31.072, "duration_s": 0.328},
+    {"text": "I only learned recently, while researching this post, that the name traces back to a cluster of", "offset_s": 31.4, "duration_s": 6.0949},
+    {"text": "Catholic schools that once shared that stretch of Upper Serangoon Road.", "offset_s": 37.4949, "duration_s": 4.5551},
+    {"text": "Montfort was one of them.", "offset_s": 42.05, "duration_s": 2.025},
+    {"text": "Today, neither the lane nor the cemetery that once stood beside it appears on any map.", "offset_s": 44.075, "duration_s": 5.75},
+]
+
 
 def cubic_bezier_points(p0, p1, p2, p3, n=40):
     points = []
@@ -87,7 +102,45 @@ def load_font(size):
     return ImageFont.load_default()
 
 
-def compose_frame(tile, bg_layer, canvas_w, canvas_h, elapsed_s, anim_s):
+def wrap_text(text, font, draw, max_width):
+    words = text.split(" ")
+    lines = []
+    cur = ""
+    for w in words:
+        trial = (cur + " " + w).strip()
+        if not cur or draw.textlength(trial, font=font) <= max_width:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = w
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def draw_caption(draw, canvas_w, canvas_h, text, scale):
+    """Matches the live widget's caption styling exactly - rgba(0,0,0,0.55)
+    box, bold white text, bottom-anchored around 87% of frame height
+    (equivalent to the live CSS's bottom:13%) - confirmed by sampling a
+    pixel from this post's existing rendered video's caption box."""
+    font = load_font(max(16, int(28 * scale)))
+    max_width = canvas_w * 0.78
+    lines = wrap_text(text, font, draw, max_width)
+    line_height = font.size * 1.35
+    pad_x, pad_y = int(18 * scale), int(14 * scale)
+    line_widths = [draw.textlength(line, font=font) for line in lines]
+    box_w = max(line_widths) + pad_x * 2
+    box_h = line_height * len(lines) + pad_y * 2
+    box_x = (canvas_w - box_w) / 2
+    box_y = canvas_h * 0.87 - box_h / 2
+    draw.rounded_rectangle([box_x, box_y, box_x + box_w, box_y + box_h], radius=6, fill=(0, 0, 0, 140))
+    for i, line in enumerate(lines):
+        tx = box_x + (box_w - line_widths[i]) / 2
+        ty = box_y + pad_y + i * line_height
+        draw.text((tx, ty), line, font=font, fill=(255, 255, 255, 255))
+
+
+def compose_frame(tile, bg_layer, canvas_w, canvas_h, elapsed_s, anim_s, captions_offset=None):
     progress = min(1.0, elapsed_s / anim_s) if anim_s > 0 else 1.0
     scale = min(canvas_w / tile.width, canvas_h / tile.height)
     disp_w, disp_h = int(tile.width * scale), int(tile.height * scale)
@@ -151,10 +204,17 @@ def compose_frame(tile, bg_layer, canvas_w, canvas_h, elapsed_s, anim_s):
     draw.rectangle([margin, margin, margin + credit_w + 12, margin + box_h], fill=(0, 0, 0, 115))
     draw.text((margin + 6, margin + (box_h - 11 * scale) / 2), CREDIT_TEXT, font=credit_font, fill=(255, 255, 255, 166))
 
+    if captions_offset is not None:
+        absolute_t = captions_offset + elapsed_s
+        for cap in CAPTIONS:
+            if cap["offset_s"] <= absolute_t < cap["offset_s"] + cap["duration_s"]:
+                draw_caption(draw, canvas_w, canvas_h, cap["text"], scale)
+                break
+
     return frame.convert("RGB")
 
 
-def render(tile_path, out_path, duration_s, anim_s, width, height, fps):
+def render(tile_path, out_path, duration_s, anim_s, width, height, fps, captions_offset=None):
     tile = Image.open(tile_path).convert("RGB")
     total_frames = int(duration_s * fps)
 
@@ -170,7 +230,7 @@ def render(tile_path, out_path, duration_s, anim_s, width, height, fps):
 
     for frame_i in range(total_frames):
         t = frame_i / fps
-        frame = compose_frame(tile, bg_layer, width, height, t, anim_s)
+        frame = compose_frame(tile, bg_layer, width, height, t, anim_s, captions_offset)
         buf = io.BytesIO()
         frame.save(buf, format="PNG")
         proc.stdin.write(buf.getvalue())
@@ -192,8 +252,9 @@ def main():
     parser.add_argument("--width", type=int, default=1920)
     parser.add_argument("--height", type=int, default=1080)
     parser.add_argument("--fps", type=int, default=30)
+    parser.add_argument("--captions-offset", type=float, default=None, help="absolute narration time (seconds) this clip starts at, to burn in matching captions")
     args = parser.parse_args()
-    render(args.tile, args.out, args.duration, args.anim_seconds, args.width, args.height, args.fps)
+    render(args.tile, args.out, args.duration, args.anim_seconds, args.width, args.height, args.fps, args.captions_offset)
 
 
 if __name__ == "__main__":
