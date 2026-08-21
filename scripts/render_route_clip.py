@@ -21,6 +21,7 @@ Usage:
         --duration 25.05
 """
 import argparse
+import functools
 import io
 import subprocess
 import sys
@@ -76,6 +77,7 @@ def resize_cover(img, canvas_w, canvas_h):
     return resized.crop((left, top, left + canvas_w, top + canvas_h))
 
 
+@functools.lru_cache(maxsize=None)
 def load_font(size):
     for candidate in ("arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf"):
         try:
@@ -85,17 +87,13 @@ def load_font(size):
     return ImageFont.load_default()
 
 
-def compose_frame(tile, canvas_w, canvas_h, elapsed_s, anim_s):
+def compose_frame(tile, bg_layer, canvas_w, canvas_h, elapsed_s, anim_s):
     progress = min(1.0, elapsed_s / anim_s) if anim_s > 0 else 1.0
     scale = min(canvas_w / tile.width, canvas_h / tile.height)
     disp_w, disp_h = int(tile.width * scale), int(tile.height * scale)
     off_x, off_y = (canvas_w - disp_w) // 2, (canvas_h - disp_h) // 2
 
-    bg = resize_cover(tile, canvas_w, canvas_h)
-    bg = bg.filter(ImageFilter.GaussianBlur(18))
-    bg = ImageEnhance.Brightness(bg).enhance(0.42)
-
-    frame = bg.convert("RGB")
+    frame = bg_layer.copy().convert("RGB")
     frame.paste(tile.resize((disp_w, disp_h)), (off_x, off_y))
     frame = frame.convert("RGBA")
 
@@ -160,6 +158,10 @@ def render(tile_path, out_path, duration_s, anim_s, width, height, fps):
     tile = Image.open(tile_path).convert("RGB")
     total_frames = int(duration_s * fps)
 
+    bg_layer = resize_cover(tile, width, height)
+    bg_layer = bg_layer.filter(ImageFilter.GaussianBlur(18))
+    bg_layer = ImageEnhance.Brightness(bg_layer).enhance(0.42)
+
     proc = subprocess.Popen(
         ["ffmpeg", "-y", "-f", "image2pipe", "-vcodec", "png", "-r", str(fps), "-i", "-",
          "-vcodec", "libx264", "-pix_fmt", "yuv420p", "-r", str(fps), out_path],
@@ -168,7 +170,7 @@ def render(tile_path, out_path, duration_s, anim_s, width, height, fps):
 
     for frame_i in range(total_frames):
         t = frame_i / fps
-        frame = compose_frame(tile, width, height, t, anim_s)
+        frame = compose_frame(tile, bg_layer, width, height, t, anim_s)
         buf = io.BytesIO()
         frame.save(buf, format="PNG")
         proc.stdin.write(buf.getvalue())

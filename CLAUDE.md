@@ -57,10 +57,15 @@ precise historical accuracy.
 
 Source an OSM export/screenshot covering the relevant area, then hand-plot landmark
 nodes and a connecting path as pixel coordinates against that image (the same way
-pan/zoom values are hand-set for photo slides). Preview the slide standalone as an
-Artifact first, then check it in place via local Jekyll preview before publishing —
-same pattern as Charts. Always credit "Map data © OpenStreetMap contributors" both
-on-screen (small corner overlay) and in the post's Sources list. See
+pan/zoom values are hand-set for photo slides). This data is duplicated in both places
+by design (see the spec's Architecture section) — if you adjust one, update the other
+to match. Preview the slide standalone as an Artifact first, then check it in place via
+local Jekyll preview before publishing — same pattern as Charts. Always credit "Map
+data © OpenStreetMap contributors" both on-screen (small corner overlay) and in the
+post's Sources list. Unlike sourced photos, the OSM tile itself is committed to
+`assets/images/` rather than hotlinked — OpenStreetMap doesn't support the kind of
+stable hotlinking Commons file pages allow, so this is a deliberate, documented
+exception to that convention. See
 `docs/superpowers/specs/2026-08-20-route-walk-animation-design.md` for the full design,
 and `scripts/render_route_clip.py` for the matching video-export renderer.
 

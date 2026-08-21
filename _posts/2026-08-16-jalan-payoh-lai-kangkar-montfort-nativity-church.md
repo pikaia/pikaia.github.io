@@ -2,7 +2,7 @@
 layout: post
 title: "The Lane Was Probably Named After My School. Neither Is There Anymore."
 date: 2026-08-16 00:55:00 +0800
-last_modified_at: 2026-08-20 20:00:00 +0800
+last_modified_at: 2026-08-21 08:10:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg
 ---
@@ -178,7 +178,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
   // above) rather than an even split of total duration.
   var imageSchedule = [
     { t: 0, slide: 0 },        // location map - title + born 1960 + backlane to Montfort
-    { t: 24.775, slide: 1 },   // Serangoon river - Holy Innocents Lane origin + lane/cemetery gone
+    { t: 24.775, slide: 1 },   // route-walk map - Jalan Payoh Lai to Montfort/Holy Innocents Lane + lane/cemetery gone
     { t: 49.825, slide: 2 },   // church exterior - Sunday walk to Mass + church intro + Fr Maistre
     { t: 79.125, slide: 3 },   // church night - attap->Neo-Gothic, blessed 1901, monument 2005
     { t: 97.425, slide: 4 },   // church interior - Teochew Mass tradition
@@ -300,7 +300,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
     [rw.halo, rw.route].forEach(function (p) { p.style.animation = 'none'; });
     rw.marker.style.animation = 'none';
     rw.labelEls.forEach(function (lbl) { lbl.style.animation = 'none'; });
-    void rw.svg.offsetWidth;
+    void stage.offsetWidth;
     rw.halo.style.animation = 'routeDraw ' + animS;
     rw.route.style.animation = 'routeDraw ' + animS;
     rw.marker.style.animation = 'markerWalk ' + animS;
