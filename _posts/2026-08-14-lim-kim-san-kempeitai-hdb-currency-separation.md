@@ -85,28 +85,28 @@ Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a 
   var MEMORIAL = "https://upload.wikimedia.org/wikipedia/commons/2/27/Civilian_War_Memorial%2C_Singapore-3276.jpg";
 
   var slides = [
-    { src: LIM, type: "cover", zoom: [1, 1.08, 1.15], pan: ["50% 40%", "55% 50%", "60% 60%"], ease: "ease-in-out" },
+    { src: LIM, type: "letterbox", zoom: [1, 1.08, 1.15], pan: ["50% 40%", "55% 50%", "60% 60%"], ease: "ease-in-out" },
     { src: RAFFLES, type: "cover", zoom: [1, 1.1, 1.18], pan: ["40% 50%", "50% 45%", "60% 40%"], ease: "ease-out" },
-    { src: WEDDING, type: "cover", zoom: [1, 1.1, 1.2], pan: ["50% 30%", "50% 50%", "50% 70%"], ease: "ease-in" },
+    { src: WEDDING, type: "letterbox", zoom: [1, 1.1, 1.2], pan: ["50% 30%", "50% 50%", "50% 70%"], ease: "ease-in" },
     { src: SHONAN, type: "cover", zoom: [1, 1.12, 1.2], pan: ["30% 50%", "50% 50%", "70% 50%"], ease: "linear" },
-    { src: MEMORIAL, type: "cover", zoom: [1.15, 1.06, 1], pan: ["60% 30%", "50% 50%", "40% 70%"], ease: "ease-in-out" },
-    { src: LIM, type: "cover", zoom: [1, 1.1, 1.16], pan: ["45% 60%", "50% 50%", "55% 40%"], ease: "ease-out" },
+    { src: MEMORIAL, type: "letterbox", zoom: [1.15, 1.06, 1], pan: ["60% 30%", "50% 50%", "40% 70%"], ease: "ease-in-out" },
+    { src: LIM, type: "letterbox", zoom: [1, 1.1, 1.16], pan: ["45% 60%", "50% 50%", "55% 40%"], ease: "ease-out" },
     { src: BLOCK45, type: "cover", zoom: [1, 1.08, 1.15], pan: ["35% 40%", "50% 50%", "65% 60%"], ease: "ease-in" },
     { src: BLOCK45, type: "cover", zoom: [1.15, 1.06, 1], pan: ["65% 60%", "50% 50%", "35% 40%"], ease: "ease-in-out" },
     { src: FIRE, type: "letterbox", zoom: [1, 1.04, 1.08], pan: ["50% 30%", "50% 50%", "50% 70%"], ease: "linear" },
     { src: QUEENSTOWN, type: "cover", zoom: [1, 1.1, 1.18], pan: ["40% 60%", "50% 45%", "60% 30%"], ease: "ease-out" },
     { src: BLOCK45, type: "cover", zoom: [1, 1.1, 1.17], pan: ["50% 50%", "55% 45%", "60% 40%"], ease: "ease-in-out" },
-    { src: LIM, type: "cover", zoom: [1, 1.09, 1.16], pan: ["55% 45%", "50% 50%", "45% 55%"], ease: "ease-in" },
-    { src: LIM, type: "cover", zoom: [1.14, 1.06, 1], pan: ["40% 55%", "50% 50%", "60% 45%"], ease: "ease-out" },
-    { src: GOH, type: "cover", zoom: [1, 1.1, 1.18], pan: ["50% 35%", "50% 50%", "50% 65%"], ease: "ease-in-out" },
-    { src: GOH, type: "cover", zoom: [1.16, 1.06, 1], pan: ["60% 60%", "50% 50%", "40% 40%"], ease: "ease-in" },
-    { src: GOH, type: "cover", zoom: [1, 1.08, 1.15], pan: ["45% 40%", "50% 50%", "55% 60%"], ease: "ease-out" },
-    { src: GOH, type: "cover", zoom: [1, 1.12, 1.2], pan: ["50% 50%", "55% 45%", "60% 40%"], ease: "linear" },
-    { src: LIM, type: "cover", zoom: [1, 1.1, 1.17], pan: ["60% 40%", "50% 50%", "40% 60%"], ease: "ease-in-out" },
+    { src: LIM, type: "letterbox", zoom: [1, 1.09, 1.16], pan: ["55% 45%", "50% 50%", "45% 55%"], ease: "ease-in" },
+    { src: LIM, type: "letterbox", zoom: [1.14, 1.06, 1], pan: ["40% 55%", "50% 50%", "60% 45%"], ease: "ease-out" },
+    { src: GOH, type: "letterbox", zoom: [1, 1.1, 1.18], pan: ["50% 35%", "50% 50%", "50% 65%"], ease: "ease-in-out" },
+    { src: GOH, type: "letterbox", zoom: [1.16, 1.06, 1], pan: ["60% 60%", "50% 50%", "40% 40%"], ease: "ease-in" },
+    { src: GOH, type: "letterbox", zoom: [1, 1.08, 1.15], pan: ["45% 40%", "50% 50%", "55% 60%"], ease: "ease-out" },
+    { src: GOH, type: "letterbox", zoom: [1, 1.12, 1.2], pan: ["50% 50%", "55% 45%", "60% 40%"], ease: "linear" },
+    { src: LIM, type: "letterbox", zoom: [1, 1.1, 1.17], pan: ["60% 40%", "50% 50%", "40% 60%"], ease: "ease-in-out" },
     { src: QUEENSTOWN, type: "cover", zoom: [1.15, 1.06, 1], pan: ["35% 55%", "50% 50%", "65% 45%"], ease: "ease-out" },
-    { src: LIM, type: "cover", zoom: [1, 1.09, 1.16], pan: ["50% 60%", "50% 50%", "50% 40%"], ease: "ease-in" },
+    { src: LIM, type: "letterbox", zoom: [1, 1.09, 1.16], pan: ["50% 60%", "50% 50%", "50% 40%"], ease: "ease-in" },
     { src: BLOCK45, type: "cover", zoom: [1, 1.1, 1.18], pan: ["45% 50%", "50% 50%", "55% 50%"], ease: "ease-out" },
-    { src: MEMORIAL, type: "cover", zoom: [1, 1.12, 1.2], pan: ["40% 65%", "50% 50%", "60% 35%"], ease: "ease-in-out" }
+    { src: MEMORIAL, type: "letterbox", zoom: [1, 1.12, 1.2], pan: ["40% 65%", "50% 50%", "60% 35%"], ease: "ease-in-out" }
   ];
 
   // Real per-sentence timestamps captured for free from Kokoro TTS's own
