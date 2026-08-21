@@ -5,7 +5,13 @@ post_url: /2026/08/15/victoria-memorial-hall-culture-war-crimes-trials/
 post_title: "The Concert Hall That Was Once a Courtroom for Hanging Men"
 ---
 
-Five more photographs of Victoria Theatre and Concert Hall, spanning its civic life from the 1960s to today.
+Six more photographs of Victoria Theatre and Concert Hall, spanning its civic life from the early 1900s to today.
+
+### The Town Hall, early 1900s
+
+![Town Hall and Victoria Theatre, Singapore, on an early postcard](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/KITLV_A740_-_Stadhuis_te_Singapore%2C_KITLV_90268.tiff/lossy-page1-1280px-KITLV_A740_-_Stadhuis_te_Singapore%2C_KITLV_90268.tiff.jpg)
+
+*"Town Hall & Victoria Theatre, Singapore" on an early postcard, dated by Commons to circa 1915. (Photo: Leiden University Libraries / KITLV, via Wikimedia Commons, CC BY 4.0)*
 
 ### The theatre, May 1960
 

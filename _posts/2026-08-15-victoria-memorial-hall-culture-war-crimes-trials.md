@@ -2,7 +2,7 @@
 layout: post
 title: "The Concert Hall That Was Once a Courtroom for Hanging Men"
 date: 2026-08-15 23:55:00 +0800
-last_modified_at: 2026-08-15 23:55:00 +0800
+last_modified_at: 2026-08-21 16:00:00 +0800
 categories: [history, world-war-two]
 image: https://upload.wikimedia.org/wikipedia/commons/e/e6/Victoria_Theatre_and_Victoria_Memorial_Hall_-_c_1930.jpg
 ---
@@ -54,9 +54,21 @@ Every week, concertgoers file into Victoria Concert Hall to hear the Singapore S
 
 *Victoria Theatre and Victoria Memorial Hall, photographed for a postcard in the 1930s. (Photo: National Archives of Singapore / Wikimedia Commons, public domain)*
 
+![Map showing the location of Victoria Theatre and Concert Hall within Singapore's Civic District](/assets/images/osm-victoria-theatre-concert-hall-location.png)
+
+*Victoria Theatre and Concert Hall sits on the Singapore River, between the Padang and Boat Quay, in the heart of the Civic District. (Map data: © OpenStreetMap contributors)*
+
 The complex began as two separate civic projects joined almost by accident. The older half, the Town Hall, had its foundation stone laid in 1855 after the colony's previous theatre fell into disrepair; designed by municipal engineer John Bennett, it opened in 1862 with a theatre downstairs and government offices upstairs, and housed Singapore's public library until 1876. After Queen Victoria died in 1901, a public meeting held inside that same Town Hall resolved to build her a memorial hall next door — designed by colonial engineer Alexander Murray and completed by R.A.J. Bidwell of Swan & Maclaren in Palladian style, opened in October 1905, and joined to the older building by a 54-metre clock tower finished the following year. The extra construction funds went toward renovating the old Town Hall to match, and it reopened in 1909, renamed Victoria Theatre, with a staging of *The Pirates of Penzance*.
 
+![Victoria Theatre and Memorial Hall, Singapore, photographed circa 1900](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/KITLV_-_33196_-_Victoria_Theatre_and_Memorial_Hall_in_Singapore_-_circa_1900.tif/lossy-page1-1280px-KITLV_-_33196_-_Victoria_Theatre_and_Memorial_Hall_in_Singapore_-_circa_1900.tif.jpg)
+
+*Victoria Theatre and Memorial Hall on an early postcard. Commons dates this to circa 1900, though the completed clock tower — finished in 1906 — suggests it's from somewhat later. (Photo: Leiden University Libraries / KITLV, via Wikimedia Commons, public domain)*
+
 For over three decades it stayed exactly what it looked like: a civic hall for concerts, meetings and public events. That changed in December 1941, when a Japanese bomb struck the colonnade before Singapore had even surrendered. Early in the occupation the buildings served as a makeshift hospital for the wounded; once the fighting ended, the new administration moved the Raffles statue out to erase the most visible symbol of colonial rule, renamed the complex Syonan Kokkaido — "Public Hall of the Light of the South" — and turned it into a stage for Japanese culture, hosting noh and kabuki performances and concerts as part of the propaganda for Japan's "Greater East Asia Co-Prosperity Sphere."
+
+![The Stamford Raffles statue outside Victoria Theatre and Concert Hall, photographed in 2004](https://upload.wikimedia.org/wikipedia/commons/5/5a/Victoria_Theatre_and_Concert_Hall_-_Stamford_Raffles_Statue_2004.jpg)
+
+*The Stamford Raffles statue outside Victoria Theatre and Concert Hall, photographed in 2004 — long since restored to its plinth after the occupation-era administration moved it out. (Photo: Orderinchaos / Wikimedia Commons, CC BY-SA 4.0)*
 
 Within two years, the same hall was staging something entirely different. From 1946 to 1947, it hosted British military tribunals trying Japanese officers for war crimes — including, in a case tied directly to [the Sook Ching massacre and Blood Debt settlement already covered on this blog](/2026/07/18/four-chopsticks-blood-debt-singapore-japan/), the trial of seven officers between 10 March and 2 April 1947. Lieutenant-General Kawamura Saburo, the garrison commander, and Lieutenant-Colonel Oishi Masayuki, the Kempeitai commander who had overseen the killings, were both sentenced to death; the other five received life imprisonment. Kawamura and Oishi were hanged on 26 June 1947, with only six family members of their victims permitted to witness it. The room that had staged Japanese cultural propaganda in 1943 was, by 1947, the room where the men responsible for the killings were sentenced to die for it.
 
@@ -64,7 +76,7 @@ Within two years, the same hall was staging something entirely different. From 1
 
 *Victoria Theatre and Concert Hall, photographed in 1973 or 1974, by then long restored to civic and cultural use. (Photo: Rainer Halama / Wikimedia Commons, CC BY-SA 4.0)*
 
-After the trials, the hall went straight back to ordinary civic life — briefing election officials and counting ballots from 1948, hosting two public hearings of the constitutional Rendel Commission in the 1950s, and, on 21 November 1954, hosting the newly formed People's Action Party's first-ever meeting. A 1952–58 renovation added air-conditioning and soundproofing; Singapore's first television broadcasts launched from the hall in 1963; and a further 1979 renovation, which enlarged its seating and renamed the Memorial Hall the Victoria Concert Hall, made it the permanent home of the Singapore Symphony Orchestra — a role it still holds. [See five more historical photos related to this post →](/gallery/victoria-memorial-hall-culture-war-crimes-trials/)
+After the trials, the hall went straight back to ordinary civic life — briefing election officials and counting ballots from 1948, hosting two public hearings of the constitutional Rendel Commission in the 1950s, and, on 21 November 1954, hosting the newly formed People's Action Party's first-ever meeting. A 1952–58 renovation added air-conditioning and soundproofing; Singapore's first television broadcasts launched from the hall in 1963; and a further 1979 renovation, which enlarged its seating and renamed the Memorial Hall the Victoria Concert Hall, made it the permanent home of the Singapore Symphony Orchestra — a role it still holds. [See six more historical photos related to this post →](/gallery/victoria-memorial-hall-culture-war-crimes-trials/)
 
 ![The reopened atrium entrance of Victoria Theatre and Concert Hall, photographed in 2014](https://upload.wikimedia.org/wikipedia/commons/8/80/Entrance_to_the_atrium_of_Victoria_Theatre_and_Concert_Hall%2C_Singapore_-_20141101-01.JPG)
 
@@ -91,5 +103,9 @@ The building was gazetted a national monument in 1992, then closed again in 2010
 - [File:Rear entrance of Victoria Theatre and Concert Hall, Singapore - 20141101.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rear_entrance_of_Victoria_Theatre_and_Concert_Hall,_Singapore_-_20141101.JPG)
 - [File:Front of Victoria Theatre, Singapore - 20141101-01.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Front_of_Victoria_Theatre,_Singapore_-_20141101-01.JPG)
 - [File:Victoria Memorial Hall, Singapore, August 2023.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Victoria_Memorial_Hall,_Singapore,_August_2023.jpg)
+- [File:KITLV - 33196 - Victoria Theatre and Memorial Hall in Singapore - circa 1900.tif — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_33196_-_Victoria_Theatre_and_Memorial_Hall_in_Singapore_-_circa_1900.tif)
+- [File:KITLV A740 - Stadhuis te Singapore, KITLV 90268.tiff — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_A740_-_Stadhuis_te_Singapore,_KITLV_90268.tiff)
+- [File:Victoria Theatre and Concert Hall - Stamford Raffles Statue 2004.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Victoria_Theatre_and_Concert_Hall_-_Stamford_Raffles_Statue_2004.jpg)
+- [Victoria Theatre and Concert Hall (relation) — OpenStreetMap](https://www.openstreetmap.org/relation/3899820)
 
 [← Back to all posts](/)
