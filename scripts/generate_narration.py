@@ -238,7 +238,12 @@ def main() -> None:
     full_text = "\n\n".join(narrative)
 
     if args.dry_run:
-        print(full_text)
+        # sys.stdout's default encoding on Windows is the system codepage
+        # (cp1252), not UTF-8 - plain print() silently mangles em-dashes and
+        # other non-ASCII characters in the preview. Write UTF-8 bytes
+        # directly so --dry-run actually reflects what gets synthesized.
+        sys.stdout.buffer.write(full_text.encode("utf-8"))
+        sys.stdout.buffer.write(b"\n")
         return
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
