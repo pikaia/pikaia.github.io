@@ -30,7 +30,7 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 # Route data - must match the "route-walk" slide entry in
 # _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md
 NODES = [
-    {"x": 72, "y": 560, "label": "Jalan Payoh Lai", "delay_s": 0.1},
+    {"x": 72, "y": 560, "label": "Jalan Payoh Lai", "delay_s": 0.1, "label_below": True},
     {"x": 145, "y": 548, "label": "Upper Serangoon Rd Junction", "delay_s": 1.5},
     {"x": 210, "y": 460, "label": "Holy Innocents\u2019 Lane", "delay_s": 4.0},
     {"x": 272, "y": 385, "label": "Montfort School", "delay_s": 6.5},
@@ -131,14 +131,27 @@ def compose_frame(tile, canvas_w, canvas_h, elapsed_s, anim_s):
         bbox = draw.textbbox((0, 0), label, font=font)
         pad = 6
         w, h = bbox[2] - bbox[0] + pad * 2, bbox[3] - bbox[1] + pad * 2
-        lx, ly = cx - w / 2, cy - h - 14
+        lx = cx - w / 2
+        # "Jalan Payoh Lai" and "Upper Serangoon Rd Junction" sit close together
+        # (only 12 map units / ~19px apart in y at default scale), so the
+        # below-marker label also nudges right and gets extra clearance to
+        # separate the two boxes diagonally instead of relying on a tight
+        # vertical gap alone - mirrors the collision fix already applied to
+        # the live JS/SVG widget for this same pair of nodes.
+        if node.get("label_below"):
+            lx += 18 * scale
+            ly = cy + 22 * scale
+        else:
+            ly = cy - h - 14
         draw.rounded_rectangle([lx, ly, lx + w, ly + h], radius=4, fill=(0, 0, 0, 153))
         draw.text((lx + pad, ly + pad), label, font=font, fill=(255, 255, 255, 255))
 
     credit_font = load_font(max(10, int(11 * scale)))
     credit_w = draw.textlength(CREDIT_TEXT, font=credit_font)
-    draw.rectangle([8, 8, 8 + credit_w + 12, 30], fill=(0, 0, 0, 115))
-    draw.text((14, 12), CREDIT_TEXT, font=credit_font, fill=(255, 255, 255, 166))
+    margin = max(8, int(8 * scale))
+    box_h = max(22, int(22 * scale))
+    draw.rectangle([margin, margin, margin + credit_w + 12, margin + box_h], fill=(0, 0, 0, 115))
+    draw.text((margin + 6, margin + (box_h - 11 * scale) / 2), CREDIT_TEXT, font=credit_font, fill=(255, 255, 255, 166))
 
     return frame.convert("RGB")
 
