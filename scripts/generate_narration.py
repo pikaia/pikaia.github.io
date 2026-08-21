@@ -3,7 +3,9 @@
 Local dev tool only - not part of the deployed Jekyll site. Extracts the
 post's narrative paragraphs (skipping images, captions, back-links, and the
 Sources section) and synthesizes them with Kokoro (hexgrad/Kokoro-82M,
-Apache 2.0 licensed - both code and weights), voice af_heart by default.
+Apache 2.0 licensed - both code and weights), voice bm_george by default
+(British male; switched from af_heart 2026-08-21 after Chris compared it
+on the Victoria Memorial Hall post and preferred it - see project memory).
 
 Kokoro replaced edge-tts (2026-08) because edge-tts is an unofficial wrapper
 around Microsoft Edge's "Read Aloud" feature with no clear license for
@@ -25,7 +27,7 @@ Requires: pip install kokoro soundfile
 First run downloads the model from Hugging Face (hexgrad/Kokoro-82M).
 
 Usage:
-    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice af_heart]
+    python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice bm_george]
 """
 import argparse
 import json
@@ -163,10 +165,16 @@ def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> 
     <out_path>.srt alongside the audio. Returns the sentence list."""
     import numpy as np
     import soundfile as sf
+    # Kokoro's lang_code selects the espeak-ng phonemization backend and
+    # must match the voice's accent, not just be a fixed default - an
+    # American lang_code on a British voice (bf_*/bm_*) mispronounces
+    # accent-dependent phonemes. Voice prefixes: af/am=American,
+    # bf/bm=British (the only two accents this project has used so far).
+    lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         from kokoro import KPipeline
-        pipeline = KPipeline(lang_code="a")
+        pipeline = KPipeline(lang_code=lang_code)
 
     all_audio = []
     sentences_out: list[dict] = []
@@ -227,7 +235,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
     parser.add_argument("out_path")
-    parser.add_argument("--voice", default="af_heart")
+    parser.add_argument("--voice", default="bm_george")
     parser.add_argument("--dry-run", action="store_true", help="print extracted text only")
     args = parser.parse_args()
 
