@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
+<div style="float: left; max-width: 160px; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/logo/LesserKnownSingapore.jpg" alt="Lesser Known Singapore logo" style="width: 100%; border-radius: 50%; display: block;">
+</div>
+
 This blog collects lesser-known facts and overlooked people connected to Singapore — the stories that sit just outside the usual retellings of the island's history.
 
 The goal isn't to be comprehensive. It's to surface the odd, the forgotten, and the interesting: a colonial-era eccentric, a building that no longer exists, a law nobody remembers, a person whose contribution got lost along the way.
@@ -11,3 +15,5 @@ The goal isn't to be comprehensive. It's to surface the odd, the forgotten, and 
 Posts are researched from public sources; corrections and suggestions are always welcome via [GitHub](https://github.com/pikaia).
 
 This site is written and maintained with the help of <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg" alt="Claude" width="16" height="16" style="vertical-align: -2px;"> [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant — used for research, drafting, and publishing posts.
+
+<div style="clear: both;"></div>
