@@ -29,6 +29,15 @@ Config module contract (see scripts/video-configs/ for real examples):
                                    ("ease" may be present for parity with the
                                    live widget's slides array; unused here -
                                    see the docstring above cover_crop.)
+                                   A "chart" slide instead has no img/zoom/
+                                   pan - see compose_chart_frame's docstring
+                                   for its {"type": "chart", "data": [(x,y),
+                                   ...], "x_range": (x0,x1), "y_range":
+                                   (y0,y1), "title": str, "annotations":
+                                   [(x, y, label, "above"|"below"|"left")]}
+                                   contract. Animates its own data line
+                                   drawing left to right over the slide's
+                                   on-screen duration.
     SCHEDULE: list[(t, slide_index)]
     TOTAL_DURATION: float
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
@@ -173,6 +182,120 @@ def prepare_letterbox_foreground(img, out_w, out_h):
     return fg, fx, fy
 
 
+# Colors mirror the post's own .hdb-psf-chart dark theme (see the post's
+# embedded <style> block) so the video's chart slide reads as the same
+# chart, not a different one.
+CHART_BG = (26, 26, 25)
+CHART_GRID = (44, 44, 42)
+CHART_BASELINE = (56, 56, 53)
+CHART_LINE = (57, 135, 229)
+CHART_TEXT = (255, 255, 255)
+CHART_SECONDARY = (195, 194, 183)
+CHART_MUTED = (137, 135, 129)
+
+
+def interp_value_at_year(data, year):
+    # data: list of (year, value) sorted by year. Linear-interpolates so the
+    # drawn line moves continuously frame to frame instead of jumping once
+    # per calendar year - narration timing doesn't land on year boundaries.
+    if year <= data[0][0]:
+        return data[0][1]
+    if year >= data[-1][0]:
+        return data[-1][1]
+    for i in range(len(data) - 1):
+        y0, v0 = data[i]
+        y1, v1 = data[i + 1]
+        if y0 <= year <= y1:
+            frac = (year - y0) / (y1 - y0) if y1 != y0 else 0
+            return v0 + (v1 - v0) * frac
+    return data[-1][1]
+
+
+def compose_chart_frame(slide, out_w, out_h, progress):
+    # Animates the post's own price-per-square-foot line chart drawing
+    # itself left to right, in sync with the slide's own time window -
+    # requested by Chris (2026-08-22) instead of showing the finished chart
+    # as a static image the way every other slide shows a static photo.
+    data = slide["data"]
+    x_min, x_max = slide.get("x_range", (data[0][0], data[-1][0]))
+    y_min, y_max = slide.get("y_range", (0, data[-1][1] * 1.05))
+    title = slide.get("title", "")
+
+    frame = Image.new("RGB", (out_w, out_h), CHART_BG)
+    draw = ImageDraw.Draw(frame, "RGBA")
+
+    left, right = out_w * 0.09, out_w * 0.95
+    top, bottom = out_h * 0.16, out_h * 0.82
+
+    def sx(year):
+        return left + (year - x_min) / (x_max - x_min) * (right - left)
+
+    def sy(val):
+        return top + (y_max - val) / (y_max - y_min) * (bottom - top)
+
+    title_font = load_font(int(out_h * 0.032), bold=True)
+    tick_font = load_font(int(out_h * 0.022), bold=False)
+    label_font = load_font(int(out_h * 0.026), bold=True)
+    sub_font = load_font(int(out_h * 0.02), bold=False)
+
+    if title:
+        draw.text((left, out_h * 0.06), title, font=title_font, fill=CHART_TEXT)
+
+    step = 100 if y_max <= 800 else 200
+    v = 0
+    while v <= y_max:
+        y = sy(v)
+        draw.line([(left, y), (right, y)], fill=CHART_BASELINE if v == 0 else CHART_GRID, width=1)
+        draw.text((left - 10, y), f"${v}", font=tick_font, fill=CHART_MUTED, anchor="rm")
+        v += step
+
+    yr = int(x_min)
+    while yr <= x_max:
+        x = sx(yr)
+        draw.text((x, bottom + out_h * 0.03), str(yr), font=tick_font, fill=CHART_MUTED, anchor="mm")
+        yr += 5
+
+    # Current point on the timeline this slide is animating through - the
+    # visible line only extends up to here, drawing left to right as
+    # progress goes 0 -> 1 over the slide's own on-screen duration.
+    cur_year = x_min + (x_max - x_min) * progress
+    points = [(x0, y0) for x0, y0 in data if x0 <= cur_year]
+    cur_val = interp_value_at_year(data, cur_year)
+    points.append((cur_year, cur_val))
+
+    if len(points) >= 2:
+        xy = [(sx(x0), sy(y0)) for x0, y0 in points]
+        draw.line(xy, fill=CHART_LINE, width=max(2, int(out_h * 0.0035)), joint="curve")
+
+    # Reveal each annotated dot only once the drawing line has actually
+    # reached it, so the peak/start/end callouts appear as part of the
+    # same rising motion rather than all being visible from frame one.
+    for ann_year, ann_val, ann_label, side in slide.get("annotations", []):
+        if ann_year > cur_year + 0.01:
+            continue
+        ax, ay = sx(ann_year), sy(ann_val)
+        r = max(3, int(out_h * 0.006))
+        draw.ellipse([ax - r, ay - r, ax + r, ay + r], fill=CHART_LINE, outline=CHART_BG, width=2)
+        if side == "above":
+            draw.text((ax, ay - r - 6), ann_label, font=sub_font, fill=CHART_SECONDARY, anchor="mb")
+        elif side == "below":
+            draw.text((ax, ay + r + 6), ann_label, font=sub_font, fill=CHART_SECONDARY, anchor="mt")
+        elif side == "left":
+            draw.text((ax - r - 8, ay), ann_label, font=sub_font, fill=CHART_SECONDARY, anchor="rm")
+
+    # Live end-dot and value readout, tracking the current point every frame.
+    ex, ey = sx(cur_year), sy(cur_val)
+    r2 = max(4, int(out_h * 0.007))
+    draw.ellipse([ex - r2, ey - r2, ex + r2, ey + r2], fill=CHART_LINE, outline=CHART_BG, width=2)
+    year_label = f"{int(round(cur_year))}"
+    val_label = f"${int(round(cur_val))} / sqft"
+    label_x = min(ex + 14, right - out_w * 0.16)
+    draw.text((label_x, ey - out_h * 0.05), val_label, font=label_font, fill=CHART_TEXT)
+    draw.text((label_x, ey - out_h * 0.025), year_label, font=sub_font, fill=CHART_SECONDARY)
+
+    return frame
+
+
 def compose_letterbox_frame_from_prepared(prepared, work_w, work_h, fg, fx, fy, out_w, out_h, zoom, max_zoom, pan_x, pan_y):
     # Mirrors the live widget exactly: only the blurred cover background is
     # Ken-Burns animated (pan/zoom); the contained foreground stays sharp
@@ -291,6 +414,8 @@ def build_prepared_cache(cfg, out_w, out_h):
     # to render than cover; see compose_letterbox_frame_from_prepared.
     cache = {}
     for i, slide in enumerate(cfg.SLIDES):
+        if slide["type"] == "chart":
+            continue
         src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
         max_zoom = max(slide["zoom"])
         is_letterbox = slide["type"] == "letterbox"
@@ -304,10 +429,31 @@ def build_prepared_cache(cfg, out_w, out_h):
     return cache
 
 
+def caption_for_time(t, captions):
+    for c in captions:
+        if c["offset_s"] <= t < c["offset_s"] + c["duration_s"]:
+            return c["text"]
+    return None
+
+
+def apply_caption(frame, t, out_w, out_h, cfg, captions):
+    cap_text = caption_for_time(t, captions)
+    if not cap_text:
+        return frame
+    font_ratio = getattr(cfg, "CAPTION_FONT_RATIO", DEFAULT_CAPTION_FONT_RATIO)
+    max_width_frac = getattr(cfg, "CAPTION_MAX_WIDTH_FRAC", DEFAULT_CAPTION_MAX_WIDTH_FRAC)
+    y_frac = getattr(cfg, "CAPTION_Y_FRAC", DEFAULT_CAPTION_Y_FRAC)
+    return draw_caption(frame, cap_text, out_w, out_h, font_ratio, max_width_frac, y_frac)
+
+
 def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
     slide_idx, seg_start, seg_end = slide_for_time(t, cfg.SCHEDULE, cfg.TOTAL_DURATION)
     slide = cfg.SLIDES[slide_idx]
     progress = min(1.0, max(0.0, (t - seg_start) / max(0.001, seg_end - seg_start)))
+    if slide["type"] == "chart":
+        frame = compose_chart_frame(slide, out_w, out_h, progress)
+        frame = apply_caption(frame, t, out_w, out_h, cfg, captions)
+        return frame, slide_idx
     zoom = interp3(*slide["zoom"], progress)
     pan_x = interp3(slide["pan"][0][0], slide["pan"][1][0], slide["pan"][2][0], progress)
     pan_y = interp3(slide["pan"][0][1], slide["pan"][1][1], slide["pan"][2][1], progress)
@@ -319,16 +465,7 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
         max_zoom, prepared, work_w, work_h = prepared_cache[slide_idx]
         frame = crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
 
-    cap_text = None
-    for c in captions:
-        if c["offset_s"] <= t < c["offset_s"] + c["duration_s"]:
-            cap_text = c["text"]
-            break
-    if cap_text:
-        font_ratio = getattr(cfg, "CAPTION_FONT_RATIO", DEFAULT_CAPTION_FONT_RATIO)
-        max_width_frac = getattr(cfg, "CAPTION_MAX_WIDTH_FRAC", DEFAULT_CAPTION_MAX_WIDTH_FRAC)
-        y_frac = getattr(cfg, "CAPTION_Y_FRAC", DEFAULT_CAPTION_Y_FRAC)
-        frame = draw_caption(frame, cap_text, out_w, out_h, font_ratio, max_width_frac, y_frac)
+    frame = apply_caption(frame, t, out_w, out_h, cfg, captions)
     return frame, slide_idx
 
 
@@ -383,7 +520,8 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
         if max_held_streak >= 2:
             any_bad = True
         slide = cfg.SLIDES[slide_idx]
-        print(f"slide {slide_idx} ({slide['img']}, {slide['type']}): "
+        label = slide.get("img", slide["type"])
+        print(f"slide {slide_idx} ({label}, {slide['type']}): "
               f"{held}/{max(1, len(frames)-1)} held-frame gaps, max consecutive streak {max_held_streak} -> {status}",
               file=sys.stderr)
     return not any_bad
