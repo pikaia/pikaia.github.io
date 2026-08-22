@@ -57,6 +57,18 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = REPO_ROOT / ".video-cache"
 WORK_SCALE = 4
+# Letterbox backgrounds get GaussianBlur(30) applied every frame (see
+# compose_letterbox_frame_from_prepared), which erases the fine positional
+# precision WORK_SCALE exists to provide - so they don't need the full
+# supersample factor. Skipping this distinction blew up badly on a vertical
+# Short: cover-scaling a landscape source into a much taller 1080x1920
+# target makes height the constraining dimension, and at WORK_SCALE=4 that
+# alone forced a ~114-megapixel prepared image (source 3555x2208 -> roughly
+# 13600x8449), collapsing per-frame crop+resize to a fraction of a frame
+# per second. A blurred background doesn't need that; 1.5x still leaves
+# comfortable pan/zoom slack without the runaway cost. Diagnosed rendering
+# the Japanese Cemetery Park Short, 2026-08-21.
+LETTERBOX_WORK_SCALE = 1.5
 USER_AGENT = "pikaia-blog-tool/1.0 (https://pikaia.github.io; chriskslee@gmail.com)"
 
 DEFAULT_CAPTION_FONT_RATIO = 0.045
@@ -281,8 +293,10 @@ def build_prepared_cache(cfg, out_w, out_h):
     for i, slide in enumerate(cfg.SLIDES):
         src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
         max_zoom = max(slide["zoom"])
-        prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom)
-        if slide["type"] == "letterbox":
+        is_letterbox = slide["type"] == "letterbox"
+        work_scale = LETTERBOX_WORK_SCALE if is_letterbox else WORK_SCALE
+        prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom, work_scale=work_scale)
+        if is_letterbox:
             fg, fx, fy = prepare_letterbox_foreground(src, out_w, out_h)
             cache[i] = (max_zoom, prepared, work_w, work_h, fg, fx, fy)
         else:
