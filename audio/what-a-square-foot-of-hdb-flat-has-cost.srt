@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:07,500
+What a Square Foot of HDB Flat Has Cost, 1990–2026
+
+2
+00:00:07,500 --> 00:00:22,400
+A four-room HDB resale flat today goes for roughly $662 a square foot — for an 807 sqft unit, that's north of half a million dollars before you've even picked a floor.
+
+3
+00:00:22,400 --> 00:00:27,350
+In 1990, the same square foot cost about $80.
+
+4
+00:00:27,350 --> 00:00:36,250
+Most of the last thirty-five years of Singapore's economic history is hiding somewhere in the distance between those two numbers.
+
+5
+00:00:36,250 --> 00:00:44,750
+Plotted out, the price isn't a straight line up — it moves in distinct eras, each one a response to something specific.
+
+6
+00:00:44,750 --> 00:01:01,450
+The first stretch, from 1990 to 1997, is a boom: prices more than tripled as the economy grew and the resale market matured, peaking at $293 a square foot right before the Asian Financial Crisis hit.
+
+7
+00:01:01,450 --> 00:01:13,750
+What follows is a decade of going nowhere — prices fell after the crisis and then just sat in the low $200s through SARS, the dot-com bust, and a generally cautious 2000s.
+
+8
+00:01:13,750 --> 00:01:17,675
+The next big move starts around 2009.
+
+9
+00:01:17,675 --> 00:01:33,750
+Interest rates fell sharply after the global financial crisis, and new supply hadn't kept pace with a fast-growing population — prices climbed almost every year, hitting $464 a square foot by 2013.
+
+10
+00:01:33,750 --> 00:01:50,450
+That run is also why the government's stamp-duty and loan curbs exist in their current form: the Additional Buyer's Stamp Duty arrived in December 2011, followed by the Total Debt Servicing Ratio framework in June 2013.
+
+11
+00:01:50,450 --> 00:02:04,450
+Prices flattened almost immediately after, sitting in a narrow $419–$440 band for the next six years — a rare stretch where policy visibly did what it was built to do.
+
+12
+00:02:04,450 --> 00:02:11,750
+Then came the 2021–2026 run-up, the steepest on the chart.
+
+13
+00:02:11,750 --> 00:02:31,000
+Part of it was low interest rates during the pandemic; part of it was 92 Build-To-Order projects — 75,800 flats — running about a year behind schedule because of COVID-era construction stoppages, with the last of them only finishing in early 2025.
+
+14
+00:02:31,000 --> 00:02:41,425
+With new flats delayed, more buyers competed for the same resale supply, and prices rose almost 60% in five years, to where they sit today.
+
+15
+00:02:41,425 --> 00:02:56,825
+Why it matters today: the shape of that line isn't just a market history — every kink in it marks a specific shock or policy response, most of which the people paying today's prices have never had reason to trace back to a chart.

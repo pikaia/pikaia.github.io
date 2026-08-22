@@ -194,6 +194,30 @@ CHART_SECONDARY = (195, 194, 183)
 CHART_MUTED = (137, 135, 129)
 
 
+def piecewise_interp(checkpoints, x):
+    # checkpoints: list of (x, y) sorted by x, linearly interpolated between
+    # them. Used to map absolute post time -> the chart's current year at a
+    # non-constant rate, so the drawn line's pace actually matches what the
+    # narration is saying at that moment (lingering through a densely-
+    # narrated stretch, jumping quickly through a skipped one) instead of
+    # crawling through 36 years at one constant year-per-second regardless
+    # of what's being said. Chris caught the mismatch on the HDB post,
+    # 2026-08-22 - a uniform time->year rate reads as correct pacing only
+    # by coincidence, since real narration never covers historical time at
+    # a constant rate either.
+    if x <= checkpoints[0][0]:
+        return checkpoints[0][1]
+    if x >= checkpoints[-1][0]:
+        return checkpoints[-1][1]
+    for i in range(len(checkpoints) - 1):
+        x0, y0 = checkpoints[i]
+        x1, y1 = checkpoints[i + 1]
+        if x0 <= x <= x1:
+            frac = (x - x0) / (x1 - x0) if x1 != x0 else 0
+            return y0 + (y1 - y0) * frac
+    return checkpoints[-1][1]
+
+
 def interp_value_at_year(data, year):
     # data: list of (year, value) sorted by year. Linear-interpolates so the
     # drawn line moves continuously frame to frame instead of jumping once
@@ -222,11 +246,17 @@ CHART_SUPERSAMPLE = 3
 # shows up as gradual antialiasing change frame to frame.
 
 
-def compose_chart_frame(slide, out_w, out_h, progress):
+def compose_chart_frame(slide, out_w, out_h, t, progress):
     # Animates the post's own price-per-square-foot line chart drawing
     # itself left to right, in sync with the slide's own time window -
     # requested by Chris (2026-08-22) instead of showing the finished chart
     # as a static image the way every other slide shows a static photo.
+    #
+    # If the slide config has "year_checkpoints" - [(absolute_t, year), ...]
+    # - the line's pace follows those instead of a uniform progress*year
+    # rate, so it lingers/jumps in step with what the narration is actually
+    # saying (see piecewise_interp's docstring). Falls back to the uniform
+    # rate if a slide never sets checkpoints.
     data = slide["data"]
     x_min, x_max = slide.get("x_range", (data[0][0], data[-1][0]))
     y_min, y_max = slide.get("y_range", (0, data[-1][1] * 1.05))
@@ -270,9 +300,12 @@ def compose_chart_frame(slide, out_w, out_h, progress):
         yr += 5
 
     # Current point on the timeline this slide is animating through - the
-    # visible line only extends up to here, drawing left to right as
-    # progress goes 0 -> 1 over the slide's own on-screen duration.
-    cur_year = x_min + (x_max - x_min) * progress
+    # visible line only extends up to here.
+    checkpoints = slide.get("year_checkpoints")
+    if checkpoints:
+        cur_year = piecewise_interp(checkpoints, t)
+    else:
+        cur_year = x_min + (x_max - x_min) * progress
     points = [(x0, y0) for x0, y0 in data if x0 <= cur_year]
     cur_val = interp_value_at_year(data, cur_year)
     points.append((cur_year, cur_val))
@@ -465,7 +498,7 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
     slide = cfg.SLIDES[slide_idx]
     progress = min(1.0, max(0.0, (t - seg_start) / max(0.001, seg_end - seg_start)))
     if slide["type"] == "chart":
-        frame = compose_chart_frame(slide, out_w, out_h, progress)
+        frame = compose_chart_frame(slide, out_w, out_h, t, progress)
         frame = apply_caption(frame, t, out_w, out_h, cfg, captions)
         return frame, slide_idx
     zoom = interp3(*slide["zoom"], progress)

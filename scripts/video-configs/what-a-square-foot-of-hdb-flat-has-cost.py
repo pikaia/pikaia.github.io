@@ -43,6 +43,20 @@ SLIDES = [
             (1990, 80, "$80 (1990)", "below"),
             (1997, 293, "$293 (1997)", "above"),
         ],
+        # Maps absolute post time -> the chart's current year at a pace
+        # matching what each sentence actually says, not a uniform
+        # year-per-second rate (Chris caught this mismatch, 2026-08-22):
+        # boom-to-peak (44.75-61.45s covers 1990-1997), a fast decade
+        # skimmed in one sentence (61.45-73.75s covers 1997-2009), a hold
+        # through the 2009 transition line, run-up to 2013, a hold through
+        # the ABSD/TDSR sentence (which explains 2011-2013 policy, not new
+        # years), the flat 2013-2019 band, a jump straight to 2021, the
+        # BTO-delay stretch to 2025, and the closing line finishing at 2026.
+        "year_checkpoints": [
+            (44.75, 1990), (61.45, 1997), (73.75, 2009), (77.675, 2009),
+            (93.75, 2013), (110.45, 2013), (124.45, 2019), (131.75, 2021),
+            (151.0, 2025), (161.425, 2026),
+        ],
     },
     {"img": "HOUSING1973B", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.50, 0.55), (0.50, 0.50), (0.50, 0.45)]},
 ]
