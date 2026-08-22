@@ -2,7 +2,7 @@
 layout: post
 title: "Japan's Quiet Hand in Building Jurong"
 date: 2026-07-28 10:00:00 +0800
-last_modified_at: 2026-07-28 10:00:00 +0800
+last_modified_at: 2026-08-22 02:00:00 +0800
 categories: [history, economy]
 image: https://upload.wikimedia.org/wikipedia/commons/0/04/Signs_pointing_to_Jurong_Industrial_Estate_in_Singapore_June_1964.jpg
 ---
@@ -63,9 +63,20 @@ The quieter story ran underneath it, on the ground in Jurong, and it started bef
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Goh Keng Swee, Singapore's finance minister and chief architect of its industrialisation drive, pictured on a visit to Australia in 1967. (Photo: J. Crowther, Australian News and Information Bureau / Wikimedia Commons, public domain)</em>
 </div>
 
+<div style="float: right; max-width: 220px; margin: 0.25em 0 1em 1.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Albert_Winsemius_%281971%29.jpg" alt="Albert Winsemius, photographed in 1971" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Albert Winsemius, the Dutch economist whose 1961 development plan set the EDB's original "take whatever capital and know-how will come" strategy — photographed in 1971 at an unrelated press conference in the Netherlands. (Photo: Bert Verhoeff / Anefo, Wikimedia Commons, CC BY-SA 3.0 NL)</em>
+</div>
+
 When the Economic Development Board was set up in 1961, newly self-governing Singapore had almost no industrial base. Its economy still ran on entrepot trade. On the advice of Albert Winsemius, a Dutch UN economist brought in to draw up a development plan, the EDB's strategy was blunt: take whatever foreign capital and technical know-how would actually come, and don't be choosy about the source. EDB officers courted American firms like Texas Instruments and Fairchild — and Japanese manufacturers barely a generation removed from being the occupying power. Finance minister Goh Keng Swee, who did much of the deal-making, called it pragmatism, not forgiveness: Singapore needed jobs and factories, and Japan had capital sitting idle for a market willing to take it.
 
-Jurong — a swampy stretch of reclaimed land designated as the country's first industrial estate — is where that pragmatism took physical shape. Jurong Shipyard, Singapore's first commercial shipyard, was incorporated in April 1963 as a joint venture between Ishikawajima-Harima Heavy Industries of Japan and the Singapore government. Goh laid its foundation stone himself in February 1964. Early Singaporean shipwrights were sent to Japan for apprenticeships; Japanese engineers ran the yard floor. The model was simple: Singapore supplied the land, the labour, and the state backing, while Japan supplied the machines and the know-how.
+<div style="clear: both;"></div>
+
+Jurong — a swampy stretch of reclaimed land designated as the country's first industrial estate — is where that pragmatism took physical shape. Jurong Shipyard, Singapore's first commercial shipyard, was incorporated in April 1963 as a joint venture between Ishikawajima-Harima Heavy Industries of Japan and the Singapore government. Goh laid its foundation stone himself on 20 February 1964, at a ceremony The Straits Times covered across a full page the same day — EDB chairman Hon Sui Sen used the occasion to argue that "the shipbuilding and ship repairing industry in Singapore must be expanded to meet the needs of the ever-increasing number and tonnage of ships passing through" the port, while the yard's own board already mixed Japanese directors (Messrs Takata, Hashimoto, Sakirai, and Shinto) with Singaporean ones (Hon Sui Sen, Tan Teck Chwee, J.Y. Pillay) from day one. Early Singaporean shipwrights were sent to Japan for apprenticeships; Japanese engineers ran the yard floor. The model was simple: Singapore supplied the land, the labour, and the state backing, while Japan supplied the machines and the know-how.
+
+<img src="/assets/images/straits-times-19640220-jurong-shipyard-foundation-stone.jpg" alt="The Straits Times, 20 February 1964, page 8, covering the Jurong Shipyard foundation-stone ceremony" style="width:100%; max-width:500px; display:block; margin:0 auto;">
+
+*The Straits Times, 20 February 1964, page 8 — full coverage of the Jurong Shipyard foundation-stone ceremony, including a "bird's eye view" rendering of the planned yard and a photo of its floating dock, towed in from Japan. Pre-1987 Singapore newspaper editions are public domain in their page layout under the Copyright Act (Cap. 63 §96); this scan is reproduced from NLB's NewspaperSG archive while awaiting a clean copy from SPH Media. (The Straits Times / SPH Media, via NewspaperSG, National Library Board)*
 
 Bridgestone's tyre plant, which broke ground that same year, followed the same playbook on the consumer side — Singapore's first taste of large-scale Japanese industrial capital. It ran for seventeen years, closing in 1980 once the government judged the local tyre industry strong enough to survive without tariff protection.
 
@@ -94,5 +105,6 @@ Jurong Shipyard is a Sembcorp Marine yard today, its Japanese joint-venture orig
 - [File: Malay village near Tengah Singapore October 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Malay_village_near_Tengah_Singapore_October_1964.jpg)
 - [File: 1967 - Winding Road to Jurong Staff Quarters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1967_-_Winding_Road_to_Jurong_Staff_Quarters.jpg)
 - [File: Jurong Staff Quarters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jurong_Staff_Quarters.jpg)
+- [The Straits Times, 20 February 1964 — NewspaperSG, National Library Board](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19640220-1)
 
 [← Back to all posts](/)
