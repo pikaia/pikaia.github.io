@@ -516,6 +516,41 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
     return frame, slide_idx
 
 
+DEFAULT_GAP_THRESHOLD = 30.0
+
+
+def report_slide_gaps(cfg, threshold=DEFAULT_GAP_THRESHOLD):
+    # Flags any single slide held on screen longer than `threshold` seconds
+    # - the site's own pacing convention (CLAUDE.md / project memory) treats
+    # ~8-15s per image as ideal Ken Burns pacing, so a much longer single
+    # hold usually means the image-gathering pass left a real gap that
+    # another photo (or a route-walk/OSM/chart slide - see
+    # feedback_copyright_free_video_toolkit) would fill better than one
+    # image just sitting there. Requested by Chris, 2026-08-22, to run on
+    # every render instead of only being caught by eye after the fact.
+    # Doesn't apply to a chart slide's own long single-topic stretch by
+    # itself - that's still worth a glance, but a moving chart isn't a
+    # "static hold" the way a photo is.
+    schedule = cfg.SCHEDULE
+    total = cfg.TOTAL_DURATION
+    gaps = []
+    for i, (t, slide_idx) in enumerate(schedule):
+        end = schedule[i + 1][0] if i + 1 < len(schedule) else total
+        dur = end - t
+        if dur > threshold:
+            slide = cfg.SLIDES[slide_idx]
+            label = slide.get("img", slide["type"])
+            gaps.append((slide_idx, label, dur))
+    if gaps:
+        print(f"NOTE: {len(gaps)} slide(s) held longer than {threshold:.0f}s - "
+              f"consider another image/slide to fill the gap:", file=sys.stderr)
+        for slide_idx, label, dur in gaps:
+            print(f"  slide {slide_idx} ({label}): {dur:.1f}s", file=sys.stderr)
+    else:
+        print(f"No slide held longer than {threshold:.0f}s.", file=sys.stderr)
+    return gaps
+
+
 def check_smoothness(cfg, duration=4.0, sample_slides=None):
     # Render a short slice of every requested slide through the exact same
     # compose_frame_at() code path the real render uses (critical - a
@@ -640,12 +675,14 @@ def main():
     cfg = load_config(args.config)
 
     if args.check_only:
+        report_slide_gaps(cfg)
         ok = check_smoothness(cfg, duration=args.check_duration)
         print("ALL SMOOTH" if ok else "SOME JERKY (see per-slide detail above; letterbox+zero-pan false positives are expected)", file=sys.stderr)
         sys.exit(0 if ok else 1)
 
     if not args.out:
         ap.error("--out is required unless --check-only is passed")
+    report_slide_gaps(cfg)
     render(cfg, args.out)
 
 
