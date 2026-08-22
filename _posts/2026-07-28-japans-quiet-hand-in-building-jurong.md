@@ -64,7 +64,7 @@ The quieter story ran underneath it, on the ground in Jurong, and it started bef
 </div>
 
 <div style="float: right; max-width: 220px; margin: 0.25em 0 1em 1.5em;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Albert_Winsemius_%281971%29.jpg" alt="Albert Winsemius, photographed in 1971" style="width: 100%; display: block; border-radius: 4px;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Albert_Winsemius_%281971%29.jpg" alt="Albert Winsemius, photographed in 1971" style="width: 100%; display: block; border-radius: 4px;">
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Albert Winsemius, the Dutch economist whose 1961 development plan set the EDB's original "take whatever capital and know-how will come" strategy — photographed in 1971 at an unrelated press conference in the Netherlands. (Photo: Bert Verhoeff / Anefo, Wikimedia Commons, CC BY-SA 3.0 NL)</em>
 </div>
 
@@ -98,6 +98,7 @@ Jurong Shipyard is a Sembcorp Marine yard today, its Japanese joint-venture orig
 - [Speech by DPM Lee Hsien Loong at the Jurong Shipyard National Day Observance Ceremony, 2002 — National Archives of Singapore](https://www.nas.gov.sg/archivesonline/data/pdfdoc/2002081002.htm)
 - [Tokyo kept war redress out of '67 Singapore accord title — The Japan Times](https://www.japantimes.co.jp/news/2003/12/25/national/tokyo-kept-war-redress-out-of-67-singapore-accord-title/)
 - [Albert Winsemius — Wikipedia](https://en.wikipedia.org/wiki/Albert_Winsemius)
+- [File: Albert Winsemius (1971).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Albert_Winsemius_(1971).jpg)
 - [File: Signs pointing to Jurong Industrial Estate in Singapore June 1964.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Signs_pointing_to_Jurong_Industrial_Estate_in_Singapore_June_1964.jpg)
 - [File: Goh Keng Swee in Australia, 1967.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Goh_Keng_Swee_in_Australia,_1967.jpg)
 - [File: Signing of the Japanese Surrender at Singapore, 1945 CF720.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Signing_of_the_Japanese_Surrender_at_Singapore,_1945_CF720.jpg)
