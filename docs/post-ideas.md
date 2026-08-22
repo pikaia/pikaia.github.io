@@ -23,6 +23,10 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 - **Japanese POWs used as forced labor to clear Singapore's wreckage after 1945** — after the surrender, thousands of Japanese soldiers were held back to clear minefields, unexploded ordnance, and war debris before repatriation — a role reversal from the POW-labor stories usually told about the occupation itself.
 - **Singapore's own Japanese war crimes trials** — lesser-known than Tokyo's, the 1946-48 tribunals held at Victoria Memorial Hall prosecuted Japanese officers for the Sook Ching massacres, a chapter of local legal history overshadowed by the postwar diplomacy story already covered on this blog.
 
+## Food & culture
+
+- **The Esplanade Satay Club, Singapore's original hawker "food court"** — a beachfront row of satay stalls at the Esplanade that ran for decades before being cleared in 1995 for the Esplanade arts centre and waterfront redevelopment, forcing vendors to relocate; a demolished-institution story in the same vein as Bugis Street. Photo already sourced: [Singapore-Satay-1973-74-WUS08150.jpg](https://commons.wikimedia.org/wiki/File:Singapore-Satay-1973-74-WUS08150.jpg) (Rainer Halama, CC BY-SA 4.0, color slide dated 1973-74, coordinates 1°17'23.65"N 103°51'14.32"E) — found while researching hawker images for the Bugis Street post, confirmed to be Satay Club specifically, not Bugis Street.
+
 ## Present-day / policy
 
 - **"Quiet cracking" at work** — roughly 30% of Singapore workers report this quieter, harder-to-spot form of disengagement/burnout in 2026 surveys; unlike "quiet quitting," employees keep performing while struggling, so managers often miss it entirely.
