@@ -211,6 +211,17 @@ def interp_value_at_year(data, year):
     return data[-1][1]
 
 
+CHART_SUPERSAMPLE = 3
+# The line's endpoint can move under 1px/frame when a single chart slide
+# spans a long narration stretch (this post's chart runs ~117s covering 36
+# years across ~1100px - well under 1px/frame) - PIL's aliased line drawing
+# then holds the same rasterized pixel for several frames before jumping,
+# the same jerky-motion failure as the original photo-panning bug (see
+# prepare_source's docstring). Fixed the same way: draw at a supersampled
+# resolution and downscale with LANCZOS, so sub-pixel motion actually
+# shows up as gradual antialiasing change frame to frame.
+
+
 def compose_chart_frame(slide, out_w, out_h, progress):
     # Animates the post's own price-per-square-foot line chart drawing
     # itself left to right, in sync with the slide's own time window -
@@ -220,6 +231,9 @@ def compose_chart_frame(slide, out_w, out_h, progress):
     x_min, x_max = slide.get("x_range", (data[0][0], data[-1][0]))
     y_min, y_max = slide.get("y_range", (0, data[-1][1] * 1.05))
     title = slide.get("title", "")
+
+    ss = CHART_SUPERSAMPLE
+    out_w, out_h = out_w * ss, out_h * ss
 
     frame = Image.new("RGB", (out_w, out_h), CHART_BG)
     draw = ImageDraw.Draw(frame, "RGBA")
@@ -293,7 +307,7 @@ def compose_chart_frame(slide, out_w, out_h, progress):
     draw.text((label_x, ey - out_h * 0.05), val_label, font=label_font, fill=CHART_TEXT)
     draw.text((label_x, ey - out_h * 0.025), year_label, font=sub_font, fill=CHART_SECONDARY)
 
-    return frame
+    return frame.resize((out_w // ss, out_h // ss), Image.LANCZOS)
 
 
 def compose_letterbox_frame_from_prepared(prepared, work_w, work_h, fg, fx, fy, out_w, out_h, zoom, max_zoom, pan_x, pan_y):
@@ -485,6 +499,14 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
     # only shows up on `cover` slides or any slide with actual pan
     # movement; treat a letterbox-with-zero-pan JERKY flag as expected, not
     # a signal to block the render on.
+    #
+    # Same false-positive class hits `chart` slides: the mostly-static dark
+    # background/gridlines/text dominate the frame's pixel count, so even a
+    # correctly-antialiased moving line tip barely moves the whole-frame
+    # mean diff. Verified directly on the HDB post's chart slide (2026-08-22)
+    # by diffing just the line-tip region across frames instead of the whole
+    # frame - real, continuous, non-repeating motion every frame - before
+    # concluding the JERKY flag here was the metric, not the rendering.
     import numpy as np
 
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
