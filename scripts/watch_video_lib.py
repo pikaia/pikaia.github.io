@@ -150,17 +150,33 @@ def cover_crop(img, out_w, out_h, zoom, pan_x, pan_y, work_scale=WORK_SCALE):
     return crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, zoom, pan_x, pan_y)
 
 
-def compose_letterbox_frame(img, out_w, out_h, zoom, pan_x, pan_y):
-    # Mirrors the live widget exactly: only the blurred cover background is
-    # Ken-Burns animated (pan/zoom); the contained foreground stays sharp
-    # and static (inset 6%, background-size:contain, no animation target).
-    bg = cover_crop(img, out_w, out_h, zoom, pan_x, pan_y)
-    bg = bg.filter(ImageFilter.GaussianBlur(30))
-    bg = ImageEnhance.Brightness(bg).enhance(0.55)
+def prepare_letterbox_foreground(img, out_w, out_h):
+    # The foreground never pans or zooms (see compose_letterbox_frame_from_prepared's
+    # docstring) so its resize is identical on every frame of a slide - compute once
+    # per slide and reuse, instead of redoing a full LANCZOS resize per frame.
     fw, fh = out_w * 0.88, out_h * 0.88
     scale_fg = min(fw / img.width, fh / img.height)
     fg = img.resize((int(img.width * scale_fg), int(img.height * scale_fg)), Image.LANCZOS)
     fx, fy = (out_w - fg.width) // 2, (out_h - fg.height) // 2
+    return fg, fx, fy
+
+
+def compose_letterbox_frame_from_prepared(prepared, work_w, work_h, fg, fx, fy, out_w, out_h, zoom, max_zoom, pan_x, pan_y):
+    # Mirrors the live widget exactly: only the blurred cover background is
+    # Ken-Burns animated (pan/zoom); the contained foreground stays sharp
+    # and static (inset 6%, background-size:contain, no animation target).
+    #
+    # Originally recomputed the background from the raw source every frame
+    # (a fresh prepare_source() LANCZOS upscale plus a fresh foreground
+    # resize) even though only the background's crop window actually
+    # changes frame to frame - the same wasted-repeat-work bug the cover-
+    # slide panning fix addressed, just never extended to letterbox. That
+    # made letterbox slides ~10x slower to render than cover slides.
+    # Fixed 2026-08-21 while rendering the Japanese Cemetery Park post,
+    # the first post to use letterbox slides in the main (non-Short) video.
+    bg = crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
+    bg = bg.filter(ImageFilter.GaussianBlur(30))
+    bg = ImageEnhance.Brightness(bg).enhance(0.55)
     bg.paste(fg, (fx, fy))
     return bg
 
@@ -256,18 +272,21 @@ def slide_for_time(t, schedule, total_duration):
 
 def build_prepared_cache(cfg, out_w, out_h):
     # One supersampled prepare per slide (not per frame) - see
-    # prepare_source()'s docstring for why. Skipped for letterbox slides,
-    # which prepare fresh per frame inside compose_letterbox_frame (only
-    # matters if a letterbox slide also pans - none observed so far; the
-    # foreground is always static so a letterbox slide's motion budget is
-    # small regardless).
+    # prepare_source()'s docstring for why. Letterbox slides get the same
+    # treatment for their blurred background, plus a one-off resize of the
+    # static foreground (see prepare_letterbox_foreground) - both used to
+    # be recomputed from scratch every frame, making letterbox ~10x slower
+    # to render than cover; see compose_letterbox_frame_from_prepared.
     cache = {}
     for i, slide in enumerate(cfg.SLIDES):
-        if slide["type"] == "letterbox":
-            continue
         src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
         max_zoom = max(slide["zoom"])
-        cache[i] = (max_zoom,) + prepare_source(src, out_w, out_h, max_zoom)
+        prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom)
+        if slide["type"] == "letterbox":
+            fg, fx, fy = prepare_letterbox_foreground(src, out_w, out_h)
+            cache[i] = (max_zoom, prepared, work_w, work_h, fg, fx, fy)
+        else:
+            cache[i] = (max_zoom, prepared, work_w, work_h)
     return cache
 
 
@@ -279,8 +298,9 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
     pan_x = interp3(slide["pan"][0][0], slide["pan"][1][0], slide["pan"][2][0], progress)
     pan_y = interp3(slide["pan"][0][1], slide["pan"][1][1], slide["pan"][2][1], progress)
     if slide["type"] == "letterbox":
-        src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
-        frame = compose_letterbox_frame(src, out_w, out_h, zoom, pan_x, pan_y)
+        max_zoom, prepared, work_w, work_h, fg, fx, fy = prepared_cache[slide_idx]
+        frame = compose_letterbox_frame_from_prepared(
+            prepared, work_w, work_h, fg, fx, fy, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
     else:
         max_zoom, prepared, work_w, work_h = prepared_cache[slide_idx]
         frame = crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
