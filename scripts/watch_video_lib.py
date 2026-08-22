@@ -551,26 +551,39 @@ def report_slide_gaps(cfg, threshold=DEFAULT_GAP_THRESHOLD):
     return gaps
 
 
+GAP_REPORT_DIR = REPO_ROOT / "docs" / "video-gaps"
+# Tracked in git (unlike preview-motion/, which stays untracked scratch) -
+# Chris wants a real history of which gaps existed and when they got filled
+# in, since a gap might sit open for a long time before a suitable image
+# turns up. See docs/post-ideas.md for the existing precedent of a tracked,
+# slowly-evolving planning doc in this repo.
+
+
 def write_gap_report(cfg, gaps, out_path):
     # For each flagged gap, pulls the actual sentences spoken during that
     # slide's time window (from the post's own timing.json, not the
     # caption-chunked text) and writes a plain-text report - so reviewing
     # which sections need another image means reading what's being said,
     # not just a bare duration number. Requested by Chris, 2026-08-22.
-    if not gaps:
-        return
+    # Always writes, even when there are no gaps, so a later re-render
+    # that clears a gap shows up as a real diff in the tracked file's
+    # git history instead of the file just vanishing.
     with open(REPO_ROOT / cfg.TIMING_JSON, encoding="utf-8") as f:
         sentences = json.load(f)
     lines = [f"Long-hold report for {Path(out_path).name}", ""]
+    if not gaps:
+        lines.append(f"No slide held longer than {DEFAULT_GAP_THRESHOLD:.0f}s.")
     for g in gaps:
         lines.append(f"=== slide {g['slide_idx']} ({g['label']}): {g['duration']:.1f}s "
                       f"[{g['start']:.1f}s - {g['end']:.1f}s] ===")
         spoken = [s["text"] for s in sentences if g["start"] <= s["offset_s"] < g["end"]]
         lines.append(" ".join(spoken) if spoken else "(no sentence starts in this window)")
         lines.append("")
-    report_path = Path(out_path).with_name(Path(out_path).stem + "-gap.txt")
+    GAP_REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    report_path = GAP_REPORT_DIR / (Path(out_path).stem + "-gap.txt")
     report_path.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote gap report to {report_path}", file=sys.stderr)
+    return report_path
     return report_path
 
 
