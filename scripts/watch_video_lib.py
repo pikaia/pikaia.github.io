@@ -540,15 +540,38 @@ def report_slide_gaps(cfg, threshold=DEFAULT_GAP_THRESHOLD):
         if dur > threshold:
             slide = cfg.SLIDES[slide_idx]
             label = slide.get("img", slide["type"])
-            gaps.append((slide_idx, label, dur))
+            gaps.append({"slide_idx": slide_idx, "label": label, "start": t, "end": end, "duration": dur})
     if gaps:
         print(f"NOTE: {len(gaps)} slide(s) held longer than {threshold:.0f}s - "
               f"consider another image/slide to fill the gap:", file=sys.stderr)
-        for slide_idx, label, dur in gaps:
-            print(f"  slide {slide_idx} ({label}): {dur:.1f}s", file=sys.stderr)
+        for g in gaps:
+            print(f"  slide {g['slide_idx']} ({g['label']}): {g['duration']:.1f}s", file=sys.stderr)
     else:
         print(f"No slide held longer than {threshold:.0f}s.", file=sys.stderr)
     return gaps
+
+
+def write_gap_report(cfg, gaps, out_path):
+    # For each flagged gap, pulls the actual sentences spoken during that
+    # slide's time window (from the post's own timing.json, not the
+    # caption-chunked text) and writes a plain-text report - so reviewing
+    # which sections need another image means reading what's being said,
+    # not just a bare duration number. Requested by Chris, 2026-08-22.
+    if not gaps:
+        return
+    with open(REPO_ROOT / cfg.TIMING_JSON, encoding="utf-8") as f:
+        sentences = json.load(f)
+    lines = [f"Long-hold report for {Path(out_path).name}", ""]
+    for g in gaps:
+        lines.append(f"=== slide {g['slide_idx']} ({g['label']}): {g['duration']:.1f}s "
+                      f"[{g['start']:.1f}s - {g['end']:.1f}s] ===")
+        spoken = [s["text"] for s in sentences if g["start"] <= s["offset_s"] < g["end"]]
+        lines.append(" ".join(spoken) if spoken else "(no sentence starts in this window)")
+        lines.append("")
+    report_path = Path(out_path).with_name(Path(out_path).stem + "-gap.txt")
+    report_path.write_text("\n".join(lines), encoding="utf-8")
+    print(f"Wrote gap report to {report_path}", file=sys.stderr)
+    return report_path
 
 
 def check_smoothness(cfg, duration=4.0, sample_slides=None):
@@ -682,8 +705,9 @@ def main():
 
     if not args.out:
         ap.error("--out is required unless --check-only is passed")
-    report_slide_gaps(cfg)
+    gaps = report_slide_gaps(cfg)
     render(cfg, args.out)
+    write_gap_report(cfg, gaps, args.out)
 
 
 if __name__ == "__main__":
