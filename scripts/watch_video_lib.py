@@ -378,14 +378,28 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
 def render(cfg, out_path):
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
     fps = getattr(cfg, "FPS", 25)
-    captions = load_captions(str(REPO_ROOT / cfg.TIMING_JSON))
+    timing_path = REPO_ROOT / cfg.TIMING_JSON
+    captions = load_captions(str(timing_path))
     total_frames = int(cfg.TOTAL_DURATION * fps)
     prepared_cache = build_prepared_cache(cfg, out_w, out_h)
 
+    # The narration mp3 lives alongside the .timing.json this config already
+    # points at (audio/<slug>.mp3, audio/<slug>.timing.json - same base
+    # name, established by generate_narration.py's output convention).
+    audio_path = timing_path.with_suffix("").with_suffix(".mp3")
+    if not audio_path.exists():
+        print(f"WARNING: narration audio not found at {audio_path} - rendering video with no sound", file=sys.stderr)
+        audio_args = []
+        map_args = []
+    else:
+        audio_args = ["-i", str(audio_path)]
+        map_args = ["-map", "0:v", "-map", "1:a", "-c:a", "aac", "-shortest"]
+
     proc = subprocess.Popen(
         ["ffmpeg", "-y", "-f", "image2pipe", "-vcodec", "png", "-r", str(fps), "-i", "-",
+         *audio_args,
          "-vcodec", "libx264", "-pix_fmt", "yuv420p", "-r", str(fps), "-preset", "medium",
-         "-crf", "20", out_path],
+         "-crf", "20", *map_args, out_path],
         stdin=subprocess.PIPE,
     )
 
