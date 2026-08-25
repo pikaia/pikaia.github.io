@@ -71,6 +71,26 @@ def js_pan(pan: tuple) -> str:
     return f'"{fmt_pct(pan[0])} {fmt_pct(pan[1])}"'
 
 
+def audio_web_path(cfg) -> str:
+    """The <audio> tag's web-facing src, derived from TIMING_JSON's own
+    basename - NOT from the slug/config filename. Most posts' audio
+    happens to share the config's slug, but a few (e.g. a post that was
+    A/B-tested between TTS engines) keep a differently-suffixed filename
+    as canonical (jalan-payoh-lai-kangkar-montfort-nativity-church's
+    real audio is ...-kokoro.mp3, not the bare slug). Deriving from
+    TIMING_JSON matches watch_video_lib.py's render() and guarantees the
+    widget's audio always matches the sentence timings it's driven by -
+    the two can never legitimately point at different files.
+
+    Pure string manipulation, deliberately NOT pathlib.Path - this is a
+    web URL, always forward-slashed, and Path() on Windows renders with
+    backslashes (a real bug caught by the diff-audit: it produced
+    "/audio\\foo.mp3" instead of "/audio/foo.mp3")."""
+    tj = cfg.TIMING_JSON
+    base = tj[: -len(".timing.json")] if tj.endswith(".timing.json") else tj.rsplit(".", 1)[0]
+    return "/" + base + ".mp3"
+
+
 def gradient_id(slug: str) -> str:
     """A per-post-unique SVG gradient id for the Shorts icon - collisions
     only matter if two posts' widgets ever render in the same DOM (not
@@ -339,8 +359,24 @@ WATCH_SCRIPT_TAIL = """
 </script>"""
 
 
+JS_IDENTIFIER_RE = re.compile(r'^[A-Za-z_$][A-Za-z0-9_$]*$')
+
+
 def build_watch_script(cfg, slug: str) -> tuple[str, int]:
     images_by_key = cfg.IMAGES
+    for key in images_by_key:
+        if not JS_IDENTIFIER_RE.match(key):
+            # Every IMAGES key becomes a bare `var KEY = "url";` and a bare
+            # `src: KEY` reference in the generated JS - not a valid target
+            # for arbitrary strings the way a Python dict key is. Caught for
+            # real: an auto-derived key starting with a digit ("2005...")
+            # produced `var 2005... = ...;`, invalid JS that node --check
+            # rejects outright. Fail loudly here rather than ship it.
+            raise ValueError(
+                f'IMAGES key {key!r} in {cfg.__name__} is not a valid JS identifier '
+                f'(used as `var {key} = ...;` in the generated widget script) - '
+                f'rename it to something like {"IMG_" + key if key else "IMG1"!r}.'
+            )
     image_lines = [f'  var {key} = "{url}";' for key, url in images_by_key.items()]
 
     slide_lines, manual_count = build_slides_js(cfg, images_by_key)
@@ -405,7 +441,7 @@ def main() -> None:
         MARKER_BEGIN,
         row_markup,
         (f'<audio id="listen-audio" preload="none" style="display: none;">\n'
-         f'  <source src="/audio/{slug}.mp3" type="audio/mpeg">\n'
+         f'  <source src="{audio_web_path(cfg)}" type="audio/mpeg">\n'
          f'</audio>'),
         VIEWER_MARKUP,
         LISTEN_SCRIPT,
