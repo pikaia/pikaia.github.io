@@ -17,10 +17,18 @@ section before pasting, especially any line ending in "[REVIEW CREDIT]".
 Usage:
     python scripts/stage_youtube_text.py \\
         _posts/<file>.md \\
-        scripts/video-configs/<slug>.py \\
-        scripts/video-configs/<slug>-short.py \\
+        [scripts/video-configs/<slug>.py] \\
+        [scripts/video-configs/<slug>-short.py] \\
         --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/ \\
         [--voice bm_george] [--out preview-motion/<slug>-youtube.txt]
+
+The two video-config paths are optional - a post that hasn't been
+through the video pipeline yet (no scripts/video-configs/<slug>.py)
+still gets a draft with Title/Description/Sources filled in; its Images
+list is a placeholder instead of a real credit list, and the Short
+section is a placeholder too when only the main config is given (or a
+placeholder Images list, same as the main section, when both are given
+but a particular one is missing/doesn't exist yet).
 
 --post-url must be the post's real LIVE permalink (check sitemap.xml,
 not the filename - a pre-08:00 SGT post date can build one calendar day
@@ -221,7 +229,13 @@ def load_video_config(config_path: Path):
     return module
 
 
-def images_used_in_order(config_path: Path) -> list[str]:
+def images_used_in_order(config_path: Path | None) -> list[str] | None:
+    """Returns None (not an empty list) when no config was given or the
+    path doesn't exist yet - the caller needs to tell "video not built"
+    apart from "video built with zero photo slides" (e.g. an all-chart
+    config), which render as different output."""
+    if config_path is None or not config_path.exists():
+        return None
     cfg = load_video_config(config_path)
     seen, ordered = set(), []
     for slide in cfg.SLIDES:
@@ -235,7 +249,41 @@ def images_used_in_order(config_path: Path) -> list[str]:
     return ordered
 
 
-def build_credit_lines(urls: list[str], captions: dict[str, dict[str, str]]) -> list[str]:
+NO_VIDEO_PLACEHOLDER = ("[PLACEHOLDER - no video built yet for this post; run the production "
+                         "pipeline first (docs/production-pipeline.md), then re-run this script "
+                         "with the resulting scripts/video-configs/<slug>.py]")
+
+# href="..." followed later by an aria-label naming YouTube - matches this
+# blog's established widget-row markup (see docs/production-pipeline.md
+# section 11) regardless of attribute order.
+YOUTUBE_HREF_RE = re.compile(r'href="(https://(?:youtu\.be|(?:www\.)?youtube\.com)/[^"]+)"')
+
+
+def find_existing_youtube_urls(text: str) -> tuple[str | None, str | None]:
+    """A post from BEFORE the scripts/video-configs/ pipeline existed can
+    already have a real, published video with no committed config to read
+    - that's a different situation from "no video was ever built" and
+    deserves a different placeholder message, not a claim that no video
+    exists. Classifies by whether the URL itself contains "/shorts/"."""
+    main_url, short_url = None, None
+    for m in YOUTUBE_HREF_RE.finditer(text):
+        url = m.group(1)
+        if "/shorts/" in url:
+            short_url = short_url or url
+        else:
+            main_url = main_url or url
+    return main_url, short_url
+
+
+def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str]],
+                        existing_video_url: str | None = None) -> list[str]:
+    if urls is None:
+        if existing_video_url:
+            return [f"[Video already published at {existing_video_url}, but predates the "
+                    f"scripts/video-configs/ pipeline - no committed config exists to auto-generate "
+                    f"this Images list. Fill in manually from the post's own image credits, or build "
+                    f"a config retroactively and re-run this script.]"]
+        return [NO_VIDEO_PLACEHOLDER]
     lines = []
     for url in urls:
         info = captions.get(normalize_commons_url(url))
@@ -268,11 +316,16 @@ def shorten_url(url: str, method: str) -> str:
     return url
 
 
+POST_DATE_PREFIX_RE = re.compile(r'^\d{4}-\d{2}-\d{2}-')
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("post_path")
-    ap.add_argument("main_config_path")
-    ap.add_argument("short_config_path")
+    ap.add_argument("main_config_path", nargs="?", default=None,
+                     help="scripts/video-configs/<slug>.py - omit if no video's been built yet")
+    ap.add_argument("short_config_path", nargs="?", default=None,
+                     help="scripts/video-configs/<slug>-short.py - omit if no Short's been built yet")
     ap.add_argument("--post-url", required=True, help="The post's real live permalink (check sitemap.xml first)")
     ap.add_argument("--voice", default="bm_george")
     ap.add_argument("--shortener", choices=["dagd", "tinyurl", "none"], default="dagd")
@@ -280,9 +333,9 @@ def main() -> None:
     args = ap.parse_args()
 
     post_path = Path(args.post_path)
-    main_config_path = Path(args.main_config_path)
-    short_config_path = Path(args.short_config_path)
-    slug = main_config_path.stem
+    main_config_path = Path(args.main_config_path) if args.main_config_path else None
+    short_config_path = Path(args.short_config_path) if args.short_config_path else None
+    slug = main_config_path.stem if main_config_path else POST_DATE_PREFIX_RE.sub("", post_path.stem)
 
     post_text = post_path.read_text(encoding="utf-8")
     fm, body = parse_front_matter(post_text)
@@ -298,6 +351,7 @@ def main() -> None:
 
     main_images = images_used_in_order(main_config_path)
     short_images = images_used_in_order(short_config_path)
+    existing_main_url, existing_short_url = find_existing_youtube_urls(post_text)
 
     short_url = shorten_url(args.post_url, args.shortener)
     narration_line = (f"Narration: synthesized voice (Kokoro TTS, open-source, "
@@ -316,8 +370,9 @@ def main() -> None:
     out_lines.append("")
     out_lines.append(narration_line)
     out_lines.append("")
-    out_lines.append("Images (Wikimedia Commons and NewspaperSG, credited individually):")
-    out_lines.extend(build_credit_lines(main_images, captions))
+    if main_images is not None:
+        out_lines.append("Images (Wikimedia Commons and NewspaperSG, credited individually):")
+    out_lines.extend(build_credit_lines(main_images, captions, existing_main_url))
     if sources:
         out_lines.append("")
         out_lines.append("Sources:")
@@ -338,8 +393,9 @@ def main() -> None:
     out_lines.append("")
     out_lines.append(narration_line)
     out_lines.append("")
-    out_lines.append("Images (Wikimedia Commons):")
-    out_lines.extend(build_credit_lines(short_images, captions))
+    if short_images is not None:
+        out_lines.append("Images (Wikimedia Commons):")
+    out_lines.extend(build_credit_lines(short_images, captions, existing_short_url))
 
     out_text = "\n".join(out_lines) + "\n"
 
