@@ -47,6 +47,14 @@ image-gathering as closed before starting narration.
 python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
 ```
 
+**Example** (the Jalan Payoh Lai / Kangkar post, used throughout this
+doc as a running worked example — slug
+`jalan-payoh-lai-kangkar-montfort-nativity-church`):
+
+```
+python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+```
+
 - Voice defaults to `bm_george` (British male) — this is the sitewide
   standard, don't override it unless explicitly asked to A/B test
   another voice.
@@ -56,6 +64,10 @@ python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
   the parser's tag whitelist doesn't yet cover:
   ```
   python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run
+  ```
+  Example:
+  ```
+  python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run
   ```
   If something looks wrong (JS/CSS text leaking into the narration),
   extend `HTML_TAG_RE` in `scripts/generate_narration.py` to whitelist
@@ -67,6 +79,12 @@ python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
   ```
   ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3
   ```
+  Example (real output for this post — a ~5.5 minute post, so ~343s of
+  audio is plausible; not a truncated file):
+  ```
+  $ ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+  343.056000
+  ```
   Should succeed with no error and print a duration that's plausible for
   the post's word count (a post with several minutes of prose should
   yield several minutes of audio, not a few seconds).
@@ -76,6 +94,10 @@ python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
   ```
   ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3
   ```
+  Example:
+  ```
+  ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+  ```
 
 ---
 
@@ -83,6 +105,12 @@ python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
 
 ```
 python scripts/insert_listen_widget.py _posts/<file>.md <slug>
+```
+
+**Example:**
+
+```
+python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church
 ```
 
 Inserts the clickable headphones-icon widget right after the post's
@@ -421,6 +449,48 @@ Copy an existing config (e.g.
 `scripts/video-configs/japans-quiet-hand-in-building-jurong.py`) as a
 starting template rather than writing one from scratch.
 
+**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py`
+— this specific file doesn't exist yet, since this post's real,
+published video predates the `scripts/video-configs/` system and was
+built by an earlier per-post scratch script instead; shown here as a
+worked example of what a config for it would look like, translated
+directly from the real `slides`/`imageSchedule` data still sitting in
+the post's own Watch-widget `<script>` block — the first 4 of its real
+15 slides, trimmed for length):
+
+```python
+IMAGES = {
+    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
+    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
+    "CHURCH_NIGHT": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_night%2C_July_2017.jpg",
+    "CHURCH_INTERIOR": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary_5%2C_Nov_06.JPG",
+    # ... 11 more keys for the remaining real slides (kampong houses,
+    # Sungei Serangoon, Punggol Park, HDB blocks, the SMC map, a WP
+    # rally crowd photo) - see the post's own <script> block for all 15.
+}
+
+SLIDES = [
+    {"img": "MAP", "type": "cover", "zoom": [1, 1.08, 1.14], "pan": [(0.50, 0.40), (0.60, 0.55), (0.45, 0.65)]},
+    # Slide 1 in the real post is a "route-walk" slide (Jalan Payoh Lai
+    # to Montfort School, no photo exists for this demolished backlane)
+    # - see CLAUDE.md's Route animations section for that slide type's
+    # own {"type": "route-walk", "path": ..., "nodes": [...]} contract,
+    # not shown here.
+    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.45, 0.30), (0.55, 0.50), (0.65, 0.65)]},
+    {"img": "CHURCH_NIGHT", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.60, 0.30), (0.50, 0.50), (0.35, 0.65)]},
+    {"img": "CHURCH_INTERIOR", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.40, 0.55), (0.52, 0.45), (0.62, 0.35)]},
+    # ... remaining 11 slides
+]
+
+SCHEDULE = [
+    (0.0, 0), (24.775, 1), (49.825, 2), (79.125, 3), (97.425, 4),
+    (110.3, 5), (149.05, 6), (183.05, 7), (216.125, 8), (228.425, 9),
+    (269.55, 10), (287.725, 11), (300.45, 12), (312.675, 13), (336.875, 14),
+]  # real values from the published post's imageSchedule
+TOTAL_DURATION = 361.125  # real value, matches the post's own TOTAL_DURATION
+TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
+```
+
 ---
 
 ## 5. Check smoothness and review the gap report
@@ -430,6 +500,12 @@ run the cheap pre-check:
 
 ```
 python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only
+```
+
+**Example:**
+
+```
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only
 ```
 
 This does two things, both instantly (no rendering of the real video):
@@ -465,6 +541,12 @@ This does two things, both instantly (no rendering of the real video):
 python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4
 ```
 
+**Example:**
+
+```
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4
+```
+
 A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
 roughly 15-25 minutes for a 5-6 minute video. **On Windows, do not run
 this as a foreground Bash/PowerShell call and do not rely on
@@ -474,6 +556,12 @@ OS-detached process instead:
 
 ```powershell
 Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/<slug>-render.log -RedirectStandardError preview-motion/<slug>-render.err
+```
+
+Example:
+
+```powershell
+Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.log -RedirectStandardError preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.err
 ```
 
 Poll progress with `Get-Content preview-motion/<slug>-render.log -Tail
@@ -519,6 +607,36 @@ CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80
 ```
 
+**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py`
+— again illustrative, since this post's real, already-published Short
+at `youtube.com/shorts/rVX4caKw0os` predates this config system; the
+excerpt boundary below is a real one, though — the post's own sentence
+timings put a clean beat right at 24.775s, "...took about twenty
+minutes.", which is also where the real published video's first slide
+transition already happens):
+
+```python
+WIDTH, HEIGHT = 1080, 1920
+
+IMAGES = {
+    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
+    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
+}
+
+SLIDES = [
+    {"img": "MAP", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3},
+    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.5, 0.4), (0.5, 0.5), (0.5, 0.6)]},
+]
+
+SCHEDULE = [(0.0, 0), (12.4, 1)]
+TOTAL_DURATION = 24.775  # real sentence-timing boundary for this post's opening hook
+TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
+
+CAPTION_FONT_RATIO = 0.032
+CAPTION_MAX_WIDTH_FRAC = 0.86
+CAPTION_Y_FRAC = 0.80
+```
+
 The exact same zoom/pan **percentage** values from a landscape slide
 carry over unchanged to the vertical 1080x1920 target — cover-crop
 normalizes to whatever `WIDTH`/`HEIGHT` is set, no per-image rework
@@ -534,6 +652,13 @@ output path (Shorts are short enough to usually finish within the
 10-minute tool timeout, but the `Start-Process` pattern is still safe
 to use).
 
+**Example:**
+
+```
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4
+```
+
 ---
 
 ## 8. Verify both files
@@ -544,9 +669,16 @@ Don't trust that a render "looks done" — verify:
 ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4
 ```
 
+Example:
+
+```
+ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4
+```
+
 Compare against the expected frame count, `TOTAL_DURATION * FPS`
 (e.g. `322.625 * 25 = 8065.625` → expect `8066`, off-by-one from
-rounding is fine). This is a **full decode**, not a spot-check — if the
+rounding is fine; for this post, `361.125 * 25 = 9028.125` → expect
+`9028` or `9029`). This is a **full decode**, not a spot-check — if the
 video ever needs trimming/concatenation with ffmpeg's `-c copy` path, a
 full-decode verify is mandatory (a real past bug: non-monotonic source
 DTS silently truncated the video track during a trim+concat, completely
@@ -555,6 +687,14 @@ frames at meaningful timestamps and eyeball them:
 
 ```
 ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png
+```
+
+Example (a frame at t=110.3s should land on the "church exterior
+(reused) - Montfort founding 1916-1958" slide, per this post's real
+schedule in section 4):
+
+```
+ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png
 ```
 
 Confirm the image and caption match what should be on screen at that
@@ -574,11 +714,31 @@ python scripts/stage_youtube_text.py \
     --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/
 ```
 
-It writes `docs/youtube_helper/<slug>-youtube.txt` (override with `--out`)
-— unlike `preview-motion/`, this folder is git-tracked, so these drafts
-keep real history
-with both `=== FULL VIDEO ===` and `=== SHORT ===` sections, assembled
-from data already sitting in the repo:
+**Example** (this one is a real, already-run command — this post has
+no `scripts/video-configs/` file, so the two config paths are simply
+omitted, per section 4's note; `--out` is shown explicitly even though
+it matches the default, for clarity):
+
+```
+python scripts/stage_youtube_text.py \
+    _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
+    --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/ \
+    --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt
+```
+
+Real result: `docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt`
+— since this post already has a real published video and Short (see
+section 4's note), the script detected both existing YouTube links in
+the post's own widget markup and correctly reported "video already
+published at `https://youtu.be/GTIpKWDZBNA`, but predates the
+`scripts/video-configs/` pipeline" instead of the generic "no video
+built yet" placeholder it would show for a post with no video at all.
+
+It writes `docs/youtube_helper/<slug>-youtube.txt` (override with
+`--out`) — unlike `preview-motion/`, this folder is git-tracked, so
+these drafts keep real history — with both `=== FULL VIDEO ===` and
+`=== SHORT ===` sections, assembled from data already sitting in the
+repo:
 
 - **Title** — the post's front-matter `title`.
 - **Description hook** — the post's own opening paragraph (the first
@@ -622,7 +782,9 @@ was created recently" gate on fresh links) is the least confusing of
 the options tried and is the settled default. The script retries 3
 times before giving up; if da.gd is down, pass `--shortener tinyurl`
 (`curl "https://tinyurl.com/api-create.php?url=<urlencoded-url>"` is
-the equivalent manual fallback) — but don't switch over a single blip.
+the equivalent manual fallback — e.g.
+`curl "https://tinyurl.com/api-create.php?url=https%3A%2F%2Fpikaia.github.io%2F2026%2F08%2F15%2Fjalan-payoh-lai-kangkar-montfort-nativity-church%2F"`)
+— but don't switch over a single blip.
 is.gd/v.gd outright refuse to shorten any `pikaia.github.io` URL
 (domain-level block, not worth trying).
 
@@ -726,6 +888,21 @@ gap report under `docs/video-gaps/`) without asking first. `audio/` and
 `preview-motion/` — check whether `audio/*.mp3`/`.timing.json`/`.srt`
 are tracked in this repo (they have been for every post so far) vs.
 `preview-motion/` which is deliberately never committed.
+
+**Example:**
+
+```
+git add _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
+        scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py \
+        scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py \
+        docs/video-gaps/jalan-payoh-lai-kangkar-montfort-nativity-church-gap.txt \
+        docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt \
+        audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 \
+        audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json \
+        audio/jalan-payoh-lai-kangkar-montfort-nativity-church.srt
+git commit -m "Add Watch widget, video, and Short for the Kangkar post"
+git push
+```
 
 ---
 
