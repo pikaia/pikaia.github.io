@@ -2,7 +2,7 @@
 layout: post
 title: "Dear You and the Dialect Singapore Spent 45 Years Trying to Retire"
 date: 2026-07-18 15:00:00 +0800
-last_modified_at: 2026-07-18 15:00:00 +0800
+last_modified_at: 2026-08-25 09:00:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/7/71/Yueh_Hai_Ching_Temple_8%2C_Mar_06.JPG
 ---
@@ -333,6 +333,10 @@ The "why" behind that gap is a matter of public record. Singapore's census track
 
 Prime Minister Lee Kuan Yew launched the Speak Mandarin Campaign in 1979 with an explicit target: young Chinese Singaporeans would stop speaking dialects within five years, and Mandarin would replace them in public life within ten. Dialect programming was squeezed off free-to-air television and radio. The campaign didn't fully hit its five-year target, but the chart shows it basically won the war — dialect went from the language of more than three-quarters of Chinese households to under one in ten within two generations. What the campaign didn't anticipate was English quietly overtaking Mandarin too, only in the most recent decade.
 
+![Logo of the 2026 film Dear You](https://upload.wikimedia.org/wikipedia/commons/a/ad/Dear_You_film_logo.png)
+
+*Logo of the 2026 film Dear You. (Public domain — logo consists only of simple text/geometric shapes, below the threshold of originality for copyright)*
+
 That's the backdrop Dear You landed on. The film — shot largely in Teochew, its plot built around qiaopi, the letters Teochew migrants once sent home to family across Southeast Asia — became a sleeper hit in China on a tiny budget. In Singapore, distributors planned a wide release in Mandarin dubbing, "in line with Singapore's bilingual language policy," with only a limited run of the original Teochew version. The original sold out in two hours. Golden Village ended up working with the Infocomm Media Development Authority to add eight more original-dialect screenings — a small but real instance of the same government apparatus that spent decades discouraging dialect content now clearing space for more of it.
 
 It isn't even the first time recently. When COVID-19 hit in 2020, health officials found themselves needing to reach elderly dialect speakers who Mandarin and English campaigns couldn't fully cover — and turned to Hokkien, Teochew, and Cantonese outreach videos, including ones fronted by the Health Minister himself, to get the message through. The campaign that once tried to retire dialect quietly needed it back, for the one audience it had never fully stopped speaking it. [See five more historical photos related to this post →](/gallery/dear-you-and-the-dialect-singapore-tried-to-retire/)
@@ -350,6 +354,7 @@ It isn't even the first time recently. When COVID-19 hit in 2020, health officia
 - [WATCH: Novel Coronavirus Safety Videos In Hokkien, Cantonese & Teochew — Wonderwall.sg](https://wonderwall.sg/health/novel-coronavirus-safety-videos-in-hokkien-cantonese-teochew/)
 - [Yueh Hai Ching Temple — Wikipedia](https://en.wikipedia.org/wiki/Yueh_Hai_Ching_Temple)
 - [File:Yueh Hai Ching Temple 8, Mar 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Yueh_Hai_Ching_Temple_8,_Mar_06.JPG)
+- [File:Dear You film logo.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Dear_You_film_logo.png)
 - [File:KITLV - 106226 - Lambert & Co., G.R. - Singapore - Chinese theater in the Straits Settlements - circa 1900 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_106226_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Chinese_theater_in_the_Straits_Settlements_-_circa_1900.tif)
 - [File:Former Lai Chun Yuen, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Former_Lai_Chun_Yuen,_Singapore.jpg)
 - [File:Great World Amusement Park.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Great_World_Amusement_Park.jpg)
