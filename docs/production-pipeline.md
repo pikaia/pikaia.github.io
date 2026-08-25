@@ -209,16 +209,38 @@ post with one (e.g.
 `_posts/2026-07-28-japans-quiet-hand-in-building-jurong.md`) rather
 than retyping from memory if you ever do need to hand-edit.
 
-**Audited against all 6 posts that already have real, published
+**Audited against all 10 posts that already have real, published
 widgets** (regenerate + diff against the live markup, nothing written
 to the actual posts) — every remaining difference is cosmetic (JS
 formatting style, auto-generated vs. hand-picked gradient IDs, JSON
 key spacing, trailing commas) or the one documented, by-design
-exception (a chart slide's flagged placeholder). No functional bugs.
-The one real gap the audit found — lost per-slide `ease` variety — is
-now fixed by backfilling real values into all 6 configs (see the ease
-note below); re-running the script on any of those posts today
-reproduces the live widget with no loss of motion variety.
+exception (a chart/route-walk slide's flagged placeholder). No
+functional bugs remain, but two real ones were caught and fixed along
+the way — worth knowing about since they were subtle:
+- **Lost per-slide `ease` variety** — the generator defaulted every
+  slide to `"ease-in-out"` since none of the 6 originally-config'd
+  posts populated the (always-optional) `"ease"` key. Fixed by
+  backfilling real values into all 10 configs.
+- **Wrong/OS-broken `<audio>` source path** — the generator derived
+  the audio filename from the config's slug, but a post that was
+  A/B-tested between TTS engines can have a differently-suffixed
+  canonical audio file (two of the 4 older posts really do). Fixed by
+  deriving it from `TIMING_JSON` instead (matches
+  `watch_video_lib.py`'s own `render()`); a first attempt at that fix
+  used `pathlib.Path`, which renders backslashes on Windows and broke
+  the path a different way - fixed with plain string manipulation.
+
+Six of the ten configs (Jurong, HDB, Bugis Street, Japanese Cemetery
+Park, Syonan Jinja, Victoria Memorial Hall) were authored fresh through
+the normal section-4 workflow. The other four (Fort Canning, Merlion,
+Jalan Payoh Lai/Kangkar, Lim Kim San) predate `scripts/video-configs/`
+entirely — their configs were reverse-engineered from each post's own
+already-published widget script, which is also how a real bug in that
+process got caught: an auto-derived `IMAGES` key from a Commons
+filename starting with a digit produced invalid JS (`var 2005... =
+...;`) that only Python's dict syntax tolerated. Fixed the one real
+occurrence and added a defensive check in `build_watch_script()` so an
+invalid key fails loudly at generation time instead of shipping.
 
 **Row markup** (place right after the first back-link, replacing a
 bare Listen-only widget if one exists):
