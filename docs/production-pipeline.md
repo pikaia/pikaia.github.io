@@ -21,17 +21,23 @@ from "generate the narration" through "the video is live on YouTube."
 1. Post finished (text + images + gallery)      -- CLAUDE.md
 2. Generate narration audio (Kokoro TTS)         -- section 1 below
 3. Insert the Listen widget                      -- section 2
-4. Author the Watch widget (live slideshow)      -- section 3
-5. Write the video config (per post)             -- section 4
+4. Write the video config (per post)             -- section 4 (do this before step 5)
+5. Generate the Watch widget from that config     -- section 3
 6. Check smoothness + review the gap report      -- section 5
 7. Render the main video                         -- section 6
 8. Render the YouTube Short                      -- section 7
 9. Verify both files                             -- section 8
 10. Stage the YouTube upload text file            -- section 9
 11. Upload to YouTube (Chris does the clicks)     -- section 10
-12. Wire the published URLs into the post         -- section 11
+12. Wire the published URLs into the post         -- section 11 (or just re-run step 5's script)
 13. Commit and push                               -- section 12
 ```
+
+Section numbers still match the doc's headings below (unchanged, so
+existing cross-references stay valid) - only the *order you actually do
+them in* has flipped for steps 4/5, since `build_watch_widget.py`
+(section 3) now generates the Watch widget from the video config
+(section 4) instead of the other way around.
 
 Steps 2-8 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
@@ -124,11 +130,74 @@ combined block below.
 
 ## 3. Author the Watch widget (live in-browser slideshow)
 
-This is hand-authored per post — there's no generator script for this
-part. Copy the block below from an existing post that already has one
-(e.g. `_posts/2026-07-28-japans-quiet-hand-in-building-jurong.md`) and
-adapt it, rather than retyping from memory — the two inline `<script>`
-blocks are easy to get subtly wrong (see the gotchas in section 13).
+**This step depends on section 4's video config already existing** —
+`scripts/build_watch_widget.py` generates the widget FROM that config
+(translating Python pan tuples to CSS percentage strings, SCHEDULE to
+imageSchedule, pasting in the real sentences from TIMING_JSON), so
+write the video config first (skip ahead to section 4, then come back
+here) rather than following the pipeline's numbering literally.
+
+```
+python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py
+```
+
+**Example:**
+
+```
+python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
+```
+
+- **Does not require a YouTube/Shorts URL** — those almost never exist
+  yet at this point in the pipeline (the video isn't rendered, let
+  alone uploaded). Omit `--youtube-url`/`--shorts-url` and the row
+  simply gets Listen+Watch only; the script prints a reminder to
+  re-run once the URL(s) exist:
+  ```
+  python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...
+  ```
+  Example, once both are known (this is exactly section 11's "wire the
+  URLs in" step, now folded into the same command instead of a separate
+  hand-edit):
+  ```
+  python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os
+  ```
+- **Safe to re-run** — the generated block is wrapped in
+  `<!-- WATCH-WIDGET:BEGIN -->`/`END` marker comments; a second run
+  replaces the block in place (e.g. to add the YouTube/Shorts URLs
+  once they exist) rather than duplicating it. Re-running with only a
+  new `--youtube-url` (no `--shorts-url`) keeps a previously-set Shorts
+  URL — it reads whichever links are already in the post before
+  regenerating, so a partial re-run never blanks the other button.
+- **First run on a post that already has the site-wide bare Listen
+  widget** (every post does, from the original rollout) upgrades it
+  in place — this is the normal, expected case, not something to work
+  around by deleting the Listen widget by hand first.
+- **Chart and route-walk slides aren't auto-generated** — their JS is
+  structurally different from a plain image slide (an SVG chart or
+  route line, not a `background-image` div) and still needs hand
+  authoring, copied from an existing post with one (see CLAUDE.md's
+  Charts/Route animations sections). The script fills in a flagged
+  `/* MANUAL: ... */` placeholder for any such slide instead of
+  producing something silently wrong, and reports the count on exit.
+- **Refuses rather than guesses** if the post already has a full Watch
+  widget that wasn't generated by this script (no marker comments) —
+  that widget may carry real hand-tuned data (published URLs, tuned
+  pan/zoom) this script can't safely tell apart from something stale.
+  Remove it by hand first, or add the marker comments yourself.
+
+Verify locally (`jekyll serve`, see CLAUDE.md's intro) after running
+it: click Watch, confirm the image/caption/progress bar all advance
+with zero console errors. This class of bug (a variable valid in one
+`<script>` block's scope but not the other) only surfaces by actually
+running the page — the generator removes the most common instance of
+it by construction (see the gotchas in section 13), but still verify.
+
+The rest of this section shows exactly what the script generates — useful
+for understanding the output, or as a hand-authoring fallback for a
+chart/route-walk slide the script flagged. Copy it from an existing
+post with one (e.g.
+`_posts/2026-07-28-japans-quiet-hand-in-building-jurong.md`) rather
+than retyping from memory if you ever do need to hand-edit.
 
 **Row markup** (place right after the first back-link, replacing a
 bare Listen-only widget if one exists):
@@ -399,6 +468,11 @@ running the page — static review won't catch it.
 ---
 
 ## 4. Write the video config
+
+**In practice, write this before section 3** — since
+`scripts/build_watch_widget.py` (section 3) generates the Watch widget
+FROM this file, this is the config that should exist first, even
+though it's numbered after the widget step in this doc's overview.
 
 Video rendering is driven by a **shared engine**,
 `scripts/watch_video_lib.py`, with per-post data in
@@ -841,6 +915,15 @@ resurfaces in a changed upload UI.
 
 ## 11. Wire the published URLs into the post
 
+**The easiest path is re-running section 3's script** with
+`--youtube-url`/`--shorts-url` now that both are known — it replaces
+the whole widget block in place (safe, idempotent) and adds the row's
+YouTube/Shorts buttons as part of that, so the manual markup edit below
+is now a fallback, not the default: use it only when hand-patching a
+widget the script didn't generate (no marker comments), or when only
+adding the two buttons without wanting to touch anything else the
+script would also regenerate.
+
 Once both the video and the Short are live, add the YouTube + Shorts
 icon buttons to the post's widget row (section 3's row markup),
 between the Watch button and the closing `</div>`:
@@ -913,7 +996,10 @@ git push
   `watchAudio = new Audio(...)`, never reference the Listen widget's
   `audio` variable — they're separate script scopes. See the CRITICAL
   comment in section 3's skeleton. This exact bug has shipped twice
-  before by copying an incomplete version of the pattern.
+  before by copying an incomplete version of the pattern by hand —
+  `scripts/build_watch_widget.py` (section 3) generates this correctly
+  every time, so this specific bug shouldn't recur for any widget the
+  script produced; still worth knowing about if ever hand-editing one.
 - **Rendered video plays with no sound.** `render()` in
   `watch_video_lib.py` mixes in `audio/<slug>.mp3` automatically
   (derived from `TIMING_JSON`'s path) — if this ever breaks again,
@@ -950,6 +1036,7 @@ git push
 |---|---|
 | Narration generator | `scripts/generate_narration.py` |
 | Listen-widget inserter | `scripts/insert_listen_widget.py` |
+| Watch-widget generator | `scripts/build_watch_widget.py` |
 | Shared video render engine | `scripts/watch_video_lib.py` |
 | Per-post video config (main) | `scripts/video-configs/<slug>.py` |
 | Per-post video config (Short) | `scripts/video-configs/<slug>-short.py` |
