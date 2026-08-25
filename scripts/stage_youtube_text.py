@@ -47,6 +47,17 @@ PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
 PHOTO_BY_RE = re.compile(r'Photo by\s+([^,]+),\s*licensed under\s+(.+?)\.?\s*$')
 TRAILING_PAREN_RE = re.compile(r'\(([^()]+)\)\s*$')
 BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
+COMMONS_THUMB_RE = re.compile(r'^(https://upload\.wikimedia\.org/wikipedia/commons)/thumb(/.+)/\d+px-[^/]+$')
+
+
+def normalize_commons_url(url: str) -> str:
+    """Wikimedia Commons thumbnail URLs (used in galleries for bandwidth,
+    e.g. ".../thumb/8/87/File.jpg/960px-File.jpg") and full-res URLs
+    (used in video configs, ".../8/87/File.jpg") point at the same file
+    but don't match as strings - normalize thumbnails back to the
+    canonical full-res form so caption lookups match across both."""
+    m = COMMONS_THUMB_RE.match(url)
+    return m.group(1) + m.group(2) if m else url
 
 
 def clean_text(text: str) -> str:
@@ -149,7 +160,7 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
         combined = _pair_from_block(block)
         if combined:
             url, alt, raw_caption = combined
-            result[url] = {"alt": alt, "credit": extract_image_credit(raw_caption)}
+            result[normalize_commons_url(url)] = {"alt": alt, "credit": extract_image_credit(raw_caption)}
             pending_url = None
             continue
 
@@ -166,7 +177,7 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
                 alt = alt_m.group(1) if alt_m else ""
 
         if img_url:
-            pending_url, pending_alt = img_url, alt
+            pending_url, pending_alt = normalize_commons_url(img_url), alt
             continue
 
         if pending_url and ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
@@ -221,7 +232,7 @@ def images_used_in_order(config_path: Path) -> list[str]:
 def build_credit_lines(urls: list[str], captions: dict[str, dict[str, str]]) -> list[str]:
     lines = []
     for url in urls:
-        info = captions.get(url)
+        info = captions.get(normalize_commons_url(url))
         if info:
             desc = info["alt"] or Path(urllib.parse.urlparse(url).path).stem
             lines.append(f"- {desc} — {info['credit']}")
