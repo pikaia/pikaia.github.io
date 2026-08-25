@@ -43,6 +43,7 @@ IMG_TAG_RE = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"[^>]*>')
 IMG_ALT_RE = re.compile(r'\balt="([^"]*)"')
 MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\(([^)]+)\)$')
 EM_TAG_RE = re.compile(r'<em\b[^>]*>(.*?)</em>', re.DOTALL)
+ITALIC_RE = re.compile(r'\*([^*]+)\*')
 PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
 PHOTO_BY_RE = re.compile(r'Photo by\s+([^,]+),\s*licensed under\s+(.+?)\.?\s*$')
 TRAILING_PAREN_RE = re.compile(r'\(([^()]+)\)\s*$')
@@ -64,6 +65,11 @@ def clean_text(text: str) -> str:
     text = GALLERY_LINK_RE.sub("", text)
     text = MD_LINK_RE.sub(r"\1", text)
     text = BOLD_RE.sub(r"\1", text)
+    # A caption's own book/publication title can be italicized with single
+    # asterisks INSIDE the caption's outer *...* wrapper (e.g. "from
+    # *Showa History Vol. 10*, public domain") - strip those too, after
+    # BOLD_RE so **already-consumed** double-asterisks don't confuse this.
+    text = ITALIC_RE.sub(r"\1", text)
     return text.strip()
 
 
