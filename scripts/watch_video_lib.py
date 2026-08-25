@@ -559,7 +559,7 @@ GAP_REPORT_DIR = REPO_ROOT / "docs" / "video-gaps"
 # slowly-evolving planning doc in this repo.
 
 
-def write_gap_report(cfg, gaps, out_path):
+def write_gap_report(cfg, gaps, slug):
     # For each flagged gap, pulls the actual sentences spoken during that
     # slide's time window (from the post's own timing.json, not the
     # caption-chunked text) and writes a plain-text report - so reviewing
@@ -568,9 +568,18 @@ def write_gap_report(cfg, gaps, out_path):
     # Always writes, even when there are no gaps, so a later re-render
     # that clears a gap shows up as a real diff in the tracked file's
     # git history instead of the file just vanishing.
+    #
+    # Takes `slug` (not an mp4 out_path) deliberately: the report only
+    # reads from SCHEDULE/TIMING_JSON, both known before a single frame
+    # is rendered, so it doesn't need to wait on render() at all - a
+    # ~230-line config carries a live video-vs-widget parity assumption
+    # already (this file mirrors a post's own JS by hand throughout the
+    # pipeline), and Chris pointed out the gap report can lean on that
+    # same assumption instead of waiting through a real render just to
+    # read numbers already sitting in the config. Confirmed 2026-08-22.
     with open(REPO_ROOT / cfg.TIMING_JSON, encoding="utf-8") as f:
         sentences = json.load(f)
-    lines = [f"Long-hold report for {Path(out_path).name}", ""]
+    lines = [f"Long-hold report for {slug}", ""]
     if not gaps:
         lines.append(f"No slide held longer than {DEFAULT_GAP_THRESHOLD:.0f}s.")
     for g in gaps:
@@ -580,7 +589,7 @@ def write_gap_report(cfg, gaps, out_path):
         lines.append(" ".join(spoken) if spoken else "(no sentence starts in this window)")
         lines.append("")
     GAP_REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    report_path = GAP_REPORT_DIR / (Path(out_path).stem + "-gap.txt")
+    report_path = GAP_REPORT_DIR / (slug + "-gap.txt")
     report_path.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote gap report to {report_path}", file=sys.stderr)
     return report_path
@@ -710,17 +719,24 @@ def main():
 
     cfg = load_config(args.config)
 
+    # Gap report needs only SCHEDULE/TIMING_JSON, both known before any
+    # frame is rendered - generate it immediately so --check-only gets one
+    # too, and the render path doesn't wait on render() just to read
+    # numbers already sitting in the config. Slug comes from the config
+    # filename (not --out) since the live Watch widget the video mirrors
+    # is presumed a close copy - see Chris, 2026-08-22.
+    slug = Path(args.config).stem
+    gaps = report_slide_gaps(cfg)
+    write_gap_report(cfg, gaps, slug)
+
     if args.check_only:
-        report_slide_gaps(cfg)
         ok = check_smoothness(cfg, duration=args.check_duration)
         print("ALL SMOOTH" if ok else "SOME JERKY (see per-slide detail above; letterbox+zero-pan false positives are expected)", file=sys.stderr)
         sys.exit(0 if ok else 1)
 
     if not args.out:
         ap.error("--out is required unless --check-only is passed")
-    gaps = report_slide_gaps(cfg)
     render(cfg, args.out)
-    write_gap_report(cfg, gaps, args.out)
 
 
 if __name__ == "__main__":
