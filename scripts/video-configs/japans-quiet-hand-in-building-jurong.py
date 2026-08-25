@@ -21,22 +21,22 @@ IMAGES = {
 }
 
 SLIDES = [
-    {"img": "HERO", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.45), (0.50, 0.50), (0.50, 0.55)]},
-    {"img": "SURRENDER1945", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.35, 0.50), (0.50, 0.50), (0.65, 0.50)]},
-    {"img": "ROADSTEAD1963", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.40), (0.50, 0.50), (0.50, 0.60)]},
-    {"img": "WINSEMIUS", "type": "letterbox", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)]},
-    {"img": "GOH", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)]},
-    {"img": "TENGAH1964", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)]},
-    {"img": "HERO", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)]},
-    {"img": "STPAGE", "type": "letterbox", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)]},
-    {"img": "STAFFQUARTERS1967", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)]},
-    {"img": "ROADSTEAD1963", "type": "cover", "zoom": [1.16, 1.06, 1], "pan": [(0.65, 0.55), (0.50, 0.50), (0.35, 0.45)]},
-    {"img": "SURRENDER1945", "type": "cover", "zoom": [1.16, 1.06, 1], "pan": [(0.65, 0.45), (0.50, 0.50), (0.35, 0.55)]},
-    {"img": "WINDINGROAD1967", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.45), (0.50, 0.50), (0.50, 0.55)]},
-    {"img": "HERO", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.40, 0.50), (0.50, 0.50), (0.60, 0.50)]},
-    {"img": "STAFFQUARTERS1967", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)]},
-    {"img": "WINSEMIUS", "type": "letterbox", "zoom": [1.12, 1.06, 1], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)]},
-    {"img": "HERO", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.50, 0.60), (0.50, 0.50), (0.50, 0.40)]},
+    {"img": "HERO", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.45), (0.50, 0.50), (0.50, 0.55)], "ease": "ease-in-out"},
+    {"img": "SURRENDER1945", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.35, 0.50), (0.50, 0.50), (0.65, 0.50)], "ease": "ease-out"},
+    {"img": "ROADSTEAD1963", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.40), (0.50, 0.50), (0.50, 0.60)], "ease": "ease-in-out"},
+    {"img": "WINSEMIUS", "type": "letterbox", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)], "ease": "linear"},
+    {"img": "GOH", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)], "ease": "ease-in-out"},
+    {"img": "TENGAH1964", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)], "ease": "ease-in"},
+    {"img": "HERO", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)], "ease": "ease-in"},
+    {"img": "STPAGE", "type": "letterbox", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)], "ease": "linear"},
+    {"img": "STAFFQUARTERS1967", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)], "ease": "ease-in-out"},
+    {"img": "ROADSTEAD1963", "type": "cover", "zoom": [1.16, 1.06, 1], "pan": [(0.65, 0.55), (0.50, 0.50), (0.35, 0.45)], "ease": "ease-in"},
+    {"img": "SURRENDER1945", "type": "cover", "zoom": [1.16, 1.06, 1], "pan": [(0.65, 0.45), (0.50, 0.50), (0.35, 0.55)], "ease": "ease-in"},
+    {"img": "WINDINGROAD1967", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.45), (0.50, 0.50), (0.50, 0.55)], "ease": "ease-in-out"},
+    {"img": "HERO", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.40, 0.50), (0.50, 0.50), (0.60, 0.50)], "ease": "ease-out"},
+    {"img": "STAFFQUARTERS1967", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)], "ease": "ease-in"},
+    {"img": "WINSEMIUS", "type": "letterbox", "zoom": [1.12, 1.06, 1], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)], "ease": "linear"},
+    {"img": "HERO", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.50, 0.60), (0.50, 0.50), (0.50, 0.40)], "ease": "ease-in-out"},
 ]
 
 SCHEDULE = [

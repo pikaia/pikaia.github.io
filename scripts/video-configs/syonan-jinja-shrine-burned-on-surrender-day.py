@@ -17,18 +17,18 @@ IMAGES = {
 }
 
 SLIDES = [
-    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.40), (0.45, 0.45), (0.40, 0.50)]},
-    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)]},
-    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.40, 0.45), (0.50, 0.50), (0.60, 0.55)]},
-    {"img": "STAMP", "type": "letterbox", "zoom": [1, 1.04, 1.08], "pan": [(0.50, 0.50), (0.50, 0.50), (0.50, 0.50)]},
-    {"img": "DJAWA", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.45, 0.40), (0.50, 0.50), (0.55, 0.60)]},
-    {"img": "OFFICERS", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)]},
-    {"img": "OFFICERS", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.40, 0.55), (0.50, 0.50), (0.60, 0.45)]},
-    {"img": "BRIDGE1", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.50, 0.55), (0.50, 0.50), (0.50, 0.40)]},
-    {"img": "BRIDGE2", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)]},
-    {"img": "BRIDGE3", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)]},
-    {"img": "LOCATOR", "type": "cover", "zoom": [1, 1.06, 1.12], "pan": [(0.50, 0.50), (0.48, 0.50), (0.46, 0.50)]},
-    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.1, 1.2], "pan": [(0.50, 0.50), (0.45, 0.45), (0.40, 0.40)]},
+    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.50, 0.40), (0.45, 0.45), (0.40, 0.50)], "ease": "ease-in-out"},
+    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.55), (0.50, 0.50), (0.45, 0.45)], "ease": "ease-out"},
+    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.40, 0.45), (0.50, 0.50), (0.60, 0.55)], "ease": "ease-in"},
+    {"img": "STAMP", "type": "letterbox", "zoom": [1, 1.04, 1.08], "pan": [(0.50, 0.50), (0.50, 0.50), (0.50, 0.50)], "ease": "linear"},
+    {"img": "DJAWA", "type": "cover", "zoom": [1, 1.09, 1.16], "pan": [(0.45, 0.40), (0.50, 0.50), (0.55, 0.60)], "ease": "ease-in-out"},
+    {"img": "OFFICERS", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)], "ease": "ease-out"},
+    {"img": "OFFICERS", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.40, 0.55), (0.50, 0.50), (0.60, 0.45)], "ease": "ease-in"},
+    {"img": "BRIDGE1", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.50, 0.55), (0.50, 0.50), (0.50, 0.40)], "ease": "linear"},
+    {"img": "BRIDGE2", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.45, 0.50), (0.50, 0.50), (0.55, 0.50)], "ease": "ease-in-out"},
+    {"img": "BRIDGE3", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.55, 0.45), (0.50, 0.50), (0.45, 0.55)], "ease": "ease-out"},
+    {"img": "LOCATOR", "type": "cover", "zoom": [1, 1.06, 1.12], "pan": [(0.50, 0.50), (0.48, 0.50), (0.46, 0.50)], "ease": "linear"},
+    {"img": "CONSTRUCTION", "type": "cover", "zoom": [1, 1.1, 1.2], "pan": [(0.50, 0.50), (0.45, 0.45), (0.40, 0.40)], "ease": "ease-in-out"},
 ]
 
 SCHEDULE = [
