@@ -21,23 +21,17 @@ from "generate the narration" through "the video is live on YouTube."
 1. Post finished (text + images + gallery)      -- CLAUDE.md
 2. Generate narration audio (Kokoro TTS)         -- section 1 below
 3. Insert the Listen widget                      -- section 2
-4. Write the video config (per post)             -- section 4 (do this before step 5)
-5. Generate the Watch widget from that config     -- section 3
+4. Write the video config (per post)             -- section 3
+5. Generate the Watch widget from that config     -- section 4
 6. Check smoothness + review the gap report      -- section 5
 7. Render the main video                         -- section 6
 8. Render the YouTube Short                      -- section 7
 9. Verify both files                             -- section 8
 10. Stage the YouTube upload text file            -- section 9
 11. Upload to YouTube (Chris does the clicks)     -- section 10
-12. Wire the published URLs into the post         -- section 11 (or just re-run step 5's script)
+12. Wire the published URLs into the post         -- section 11 (or just re-run section 4's script)
 13. Commit and push                               -- section 12
 ```
-
-Section numbers still match the doc's headings below (unchanged, so
-existing cross-references stay valid) - only the *order you actually do
-them in* has flipped for steps 4/5, since `build_watch_widget.py`
-(section 3) now generates the Watch widget from the video config
-(section 4) instead of the other way around.
 
 Steps 2-8 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
@@ -121,21 +115,114 @@ python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar
 
 Inserts the clickable headphones-icon widget right after the post's
 first `[← Back to all posts](/)` link. Skips posts that already have
-one. If the post is getting the full Watch widget too (section 3), the
+one. If the post is getting the full Watch widget too (section 4), the
 Listen markup gets folded into that combined block anyway — running
 this first is still fine, or skip straight to hand-authoring the
 combined block below.
 
 ---
 
-## 3. Author the Watch widget (live in-browser slideshow)
+## 3. Write the video config
 
-**This step depends on section 4's video config already existing** —
-`scripts/build_watch_widget.py` generates the widget FROM that config
-(translating Python pan tuples to CSS percentage strings, SCHEDULE to
-imageSchedule, pasting in the real sentences from TIMING_JSON), so
-write the video config first (skip ahead to section 4, then come back
-here) rather than following the pipeline's numbering literally.
+Video rendering is driven by a **shared engine**,
+`scripts/watch_video_lib.py`, with per-post data in
+`scripts/video-configs/<slug>.py` (main video) and
+`scripts/video-configs/<slug>-short.py` (Shorts, section 7). Never
+copy the engine itself into a scratch/per-post script — that's exactly
+how a real jerky-panning bug regressed in the past (a fix landed in one
+copy and not the others). Only the config module is per-post.
+
+**Config module contract:**
+
+```python
+IMAGES = {
+    "KEY": "https://upload.wikimedia.org/...",  # or "/assets/images/..." (site-root path)
+                                                    # or a path relative to the config file's own dir
+}
+
+SLIDES = [
+    {"img": "KEY", "type": "cover", "zoom": [z0, z1, z2], "pan": [(x0,y0), (x1,y1), (x2,y2)]},
+    {"img": "KEY2", "type": "letterbox", "zoom": [...], "pan": [...]},
+    # A "chart" slide instead has no img/zoom/pan - see CLAUDE.md's
+    # Charts section and compose_chart_frame()'s docstring in
+    # watch_video_lib.py for the {"type": "chart", "data": [...], ...}
+    # contract, including year_checkpoints for narration-paced motion.
+]
+
+SCHEDULE = [(0.0, 0), (23.7, 1), ...]   # (absolute_time, slide_index) pairs - must match
+                                          # the Watch widget's imageSchedule (section 4) by value
+TOTAL_DURATION = 322.625                 # must match the Watch widget's TOTAL_DURATION
+TIMING_JSON = "audio/<slug>.timing.json" # path relative to repo root
+
+# Optional, default 1280x720x25:
+WIDTH, HEIGHT, FPS = 1280, 720, 25
+```
+
+`pan` values here are `(x, y)` floats in 0-1 (fraction of image width/
+height), **not** the `"50% 50%"` CSS strings the Watch widget's JS
+uses for the same slide — same values, different literal syntax, keep
+both in sync when you tune a slide's motion.
+
+Write one `SLIDES`/`SCHEDULE` entry per image *appearance* (an image
+can repeat with different zoom/pan for a bookend effect — two separate
+entries pointing at the same `IMAGES` key). Aim for roughly 8-15s+ dwell
+time per slide for an engaging pace; shorter bursts are fine for a
+quick enumeration-style sentence.
+
+Copy an existing config (e.g.
+`scripts/video-configs/japans-quiet-hand-in-building-jurong.py`) as a
+starting template rather than writing one from scratch.
+
+**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py`
+— this specific file doesn't exist yet, since this post's real,
+published video predates the `scripts/video-configs/` system and was
+built by an earlier per-post scratch script instead; shown here as a
+worked example of what a config for it would look like, translated
+directly from the real `slides`/`imageSchedule` data still sitting in
+the post's own Watch-widget `<script>` block — the first 4 of its real
+15 slides, trimmed for length):
+
+```python
+IMAGES = {
+    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
+    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
+    "CHURCH_NIGHT": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_night%2C_July_2017.jpg",
+    "CHURCH_INTERIOR": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary_5%2C_Nov_06.JPG",
+    # ... 11 more keys for the remaining real slides (kampong houses,
+    # Sungei Serangoon, Punggol Park, HDB blocks, the SMC map, a WP
+    # rally crowd photo) - see the post's own <script> block for all 15.
+}
+
+SLIDES = [
+    {"img": "MAP", "type": "cover", "zoom": [1, 1.08, 1.14], "pan": [(0.50, 0.40), (0.60, 0.55), (0.45, 0.65)]},
+    # Slide 1 in the real post is a "route-walk" slide (Jalan Payoh Lai
+    # to Montfort School, no photo exists for this demolished backlane)
+    # - see CLAUDE.md's Route animations section for that slide type's
+    # own {"type": "route-walk", "path": ..., "nodes": [...]} contract,
+    # not shown here.
+    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.45, 0.30), (0.55, 0.50), (0.65, 0.65)]},
+    {"img": "CHURCH_NIGHT", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.60, 0.30), (0.50, 0.50), (0.35, 0.65)]},
+    {"img": "CHURCH_INTERIOR", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.40, 0.55), (0.52, 0.45), (0.62, 0.35)]},
+    # ... remaining 11 slides
+]
+
+SCHEDULE = [
+    (0.0, 0), (24.775, 1), (49.825, 2), (79.125, 3), (97.425, 4),
+    (110.3, 5), (149.05, 6), (183.05, 7), (216.125, 8), (228.425, 9),
+    (269.55, 10), (287.725, 11), (300.45, 12), (312.675, 13), (336.875, 14),
+]  # real values from the published post's imageSchedule
+TOTAL_DURATION = 361.125  # real value, matches the post's own TOTAL_DURATION
+TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
+```
+
+---
+
+## 4. Author the Watch widget (live in-browser slideshow)
+
+`scripts/build_watch_widget.py` generates the widget FROM the video
+config written in section 3 (translating Python pan tuples to CSS
+percentage strings, SCHEDULE to imageSchedule, pasting in the real
+sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
 python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py
@@ -313,12 +400,12 @@ authoring. Skeleton (fill in the placeholders):
 <script>
 (function () {
   // One `var NAME = "url";` per image used in the video, same keys as
-  // the video config's IMAGES dict (section 4) so the two stay easy to
+  // the video config's IMAGES dict (section 3) so the two stay easy to
   // cross-reference.
   var HERO = "https://upload.wikimedia.org/...";
 
   // One entry per slide appearance (an image can repeat with different
-  // zoom/pan for a bookend effect - see section 4's SLIDES contract).
+  // zoom/pan for a bookend effect - see section 3's SLIDES contract).
   // pan values are CSS background-position strings ("50% 50%"), NOT the
   // 0-1 floats the Python video config uses for the same slide - the
   // two are written in different formats by design, keep them in sync
@@ -366,7 +453,7 @@ authoring. Skeleton (fill in the placeholders):
   // sentence offset (from timing.json) where that image should appear.
   // This is the one genuinely manual step: read the sentence timings,
   // decide which image best represents each narrative beat, pick cut
-  // points. Must match the Python config's SCHEDULE (section 4) exactly
+  // points. Must match the Python config's SCHEDULE (section 3) exactly
   // in timing (same values, different variable name/shape).
   var imageSchedule = [
     { t: 0, slide: 0 } /* ... */
@@ -500,113 +587,13 @@ For a chart-driven post or a route-walk slide (no photo available for a
 demolished/unmapped place), see CLAUDE.md's **Charts** and **Route
 animations** sections — those slide types have their own dedicated
 build process and are cross-referenced from the video config contract
-in section 4 below.
+in section 3 above.
 
 Verify locally (`jekyll serve`, see CLAUDE.md's intro) before pushing:
 click Watch, confirm the image/caption/progress bar all advance with
 zero console errors. This class of bug (a variable valid in one
 `<script>` block's scope but not the other) only surfaces by actually
 running the page — static review won't catch it.
-
----
-
-## 4. Write the video config
-
-**In practice, write this before section 3** — since
-`scripts/build_watch_widget.py` (section 3) generates the Watch widget
-FROM this file, this is the config that should exist first, even
-though it's numbered after the widget step in this doc's overview.
-
-Video rendering is driven by a **shared engine**,
-`scripts/watch_video_lib.py`, with per-post data in
-`scripts/video-configs/<slug>.py` (main video) and
-`scripts/video-configs/<slug>-short.py` (Shorts, section 7). Never
-copy the engine itself into a scratch/per-post script — that's exactly
-how a real jerky-panning bug regressed in the past (a fix landed in one
-copy and not the others). Only the config module is per-post.
-
-**Config module contract:**
-
-```python
-IMAGES = {
-    "KEY": "https://upload.wikimedia.org/...",  # or "/assets/images/..." (site-root path)
-                                                    # or a path relative to the config file's own dir
-}
-
-SLIDES = [
-    {"img": "KEY", "type": "cover", "zoom": [z0, z1, z2], "pan": [(x0,y0), (x1,y1), (x2,y2)]},
-    {"img": "KEY2", "type": "letterbox", "zoom": [...], "pan": [...]},
-    # A "chart" slide instead has no img/zoom/pan - see CLAUDE.md's
-    # Charts section and compose_chart_frame()'s docstring in
-    # watch_video_lib.py for the {"type": "chart", "data": [...], ...}
-    # contract, including year_checkpoints for narration-paced motion.
-]
-
-SCHEDULE = [(0.0, 0), (23.7, 1), ...]   # (absolute_time, slide_index) pairs - must match
-                                          # the Watch widget's imageSchedule (section 3) by value
-TOTAL_DURATION = 322.625                 # must match the Watch widget's TOTAL_DURATION
-TIMING_JSON = "audio/<slug>.timing.json" # path relative to repo root
-
-# Optional, default 1280x720x25:
-WIDTH, HEIGHT, FPS = 1280, 720, 25
-```
-
-`pan` values here are `(x, y)` floats in 0-1 (fraction of image width/
-height), **not** the `"50% 50%"` CSS strings the Watch widget's JS
-uses for the same slide — same values, different literal syntax, keep
-both in sync when you tune a slide's motion.
-
-Write one `SLIDES`/`SCHEDULE` entry per image *appearance* (an image
-can repeat with different zoom/pan for a bookend effect — two separate
-entries pointing at the same `IMAGES` key). Aim for roughly 8-15s+ dwell
-time per slide for an engaging pace; shorter bursts are fine for a
-quick enumeration-style sentence.
-
-Copy an existing config (e.g.
-`scripts/video-configs/japans-quiet-hand-in-building-jurong.py`) as a
-starting template rather than writing one from scratch.
-
-**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py`
-— this specific file doesn't exist yet, since this post's real,
-published video predates the `scripts/video-configs/` system and was
-built by an earlier per-post scratch script instead; shown here as a
-worked example of what a config for it would look like, translated
-directly from the real `slides`/`imageSchedule` data still sitting in
-the post's own Watch-widget `<script>` block — the first 4 of its real
-15 slides, trimmed for length):
-
-```python
-IMAGES = {
-    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
-    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
-    "CHURCH_NIGHT": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_night%2C_July_2017.jpg",
-    "CHURCH_INTERIOR": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary_5%2C_Nov_06.JPG",
-    # ... 11 more keys for the remaining real slides (kampong houses,
-    # Sungei Serangoon, Punggol Park, HDB blocks, the SMC map, a WP
-    # rally crowd photo) - see the post's own <script> block for all 15.
-}
-
-SLIDES = [
-    {"img": "MAP", "type": "cover", "zoom": [1, 1.08, 1.14], "pan": [(0.50, 0.40), (0.60, 0.55), (0.45, 0.65)]},
-    # Slide 1 in the real post is a "route-walk" slide (Jalan Payoh Lai
-    # to Montfort School, no photo exists for this demolished backlane)
-    # - see CLAUDE.md's Route animations section for that slide type's
-    # own {"type": "route-walk", "path": ..., "nodes": [...]} contract,
-    # not shown here.
-    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.1, 1.18], "pan": [(0.45, 0.30), (0.55, 0.50), (0.65, 0.65)]},
-    {"img": "CHURCH_NIGHT", "type": "cover", "zoom": [1.15, 1.06, 1], "pan": [(0.60, 0.30), (0.50, 0.50), (0.35, 0.65)]},
-    {"img": "CHURCH_INTERIOR", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.40, 0.55), (0.52, 0.45), (0.62, 0.35)]},
-    # ... remaining 11 slides
-]
-
-SCHEDULE = [
-    (0.0, 0), (24.775, 1), (49.825, 2), (79.125, 3), (97.425, 4),
-    (110.3, 5), (149.05, 6), (183.05, 7), (216.125, 8), (228.425, 9),
-    (269.55, 10), (287.725, 11), (300.45, 12), (312.675, 13), (336.875, 14),
-]  # real values from the published post's imageSchedule
-TOTAL_DURATION = 361.125  # real value, matches the post's own TOTAL_DURATION
-TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
-```
 
 ---
 
@@ -808,7 +795,7 @@ ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.
 
 Example (a frame at t=110.3s should land on the "church exterior
 (reused) - Montfort founding 1916-1958" slide, per this post's real
-schedule in section 4):
+schedule in section 3):
 
 ```
 ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png
@@ -833,7 +820,7 @@ python scripts/stage_youtube_text.py \
 
 **Example** (this one is a real, already-run command — this post has
 no `scripts/video-configs/` file, so the two config paths are simply
-omitted, per section 4's note; `--out` is shown explicitly even though
+omitted, per section 3's note; `--out` is shown explicitly even though
 it matches the default, for clarity):
 
 ```
@@ -845,7 +832,7 @@ python scripts/stage_youtube_text.py \
 
 Real result: `docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt`
 — since this post already has a real published video and Short (see
-section 4's note), the script detected both existing YouTube links in
+section 3's note), the script detected both existing YouTube links in
 the post's own widget markup and correctly reported "video already
 published at `https://youtu.be/GTIpKWDZBNA`, but predates the
 `scripts/video-configs/` pipeline" instead of the generic "no video
@@ -958,7 +945,7 @@ resurfaces in a changed upload UI.
 
 ## 11. Wire the published URLs into the post
 
-**The easiest path is re-running section 3's script** with
+**The easiest path is re-running section 4's script** with
 `--youtube-url`/`--shorts-url` now that both are known — it replaces
 the whole widget block in place (safe, idempotent) and adds the row's
 YouTube/Shorts buttons as part of that, so the manual markup edit below
@@ -968,7 +955,7 @@ adding the two buttons without wanting to touch anything else the
 script would also regenerate.
 
 Once both the video and the Short are live, add the YouTube + Shorts
-icon buttons to the post's widget row (section 3's row markup),
+icon buttons to the post's widget row (section 4's row markup),
 between the Watch button and the closing `</div>`:
 
 ```html
@@ -1038,9 +1025,9 @@ git push
   defined`.** The Watch script's own IIFE must create its own
   `watchAudio = new Audio(...)`, never reference the Listen widget's
   `audio` variable — they're separate script scopes. See the CRITICAL
-  comment in section 3's skeleton. This exact bug has shipped twice
+  comment in section 4's skeleton. This exact bug has shipped twice
   before by copying an incomplete version of the pattern by hand —
-  `scripts/build_watch_widget.py` (section 3) generates this correctly
+  `scripts/build_watch_widget.py` (section 4) generates this correctly
   every time, so this specific bug shouldn't recur for any widget the
   script produced; still worth knowing about if ever hand-editing one.
 - **Rendered video plays with no sound.** `render()` in
