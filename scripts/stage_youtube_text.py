@@ -176,15 +176,24 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
     return result
 
 
+# Greedy (not MD_LINK_RE's non-greedy [^)]+) so a URL containing literal
+# parentheses - e.g. a Commons File: link like
+# ".../File:Albert_Winsemius_(1971).jpg" - doesn't truncate the match at
+# the first ")" inside the URL instead of the link's real closing paren.
+SOURCE_LINK_RE = re.compile(r'^\[(.+)\]\(.+\)$')
+
+
 def extract_sources(text: str) -> list[str]:
-    m = re.search(r'\*\*Sources:\*\*\s*\n(.+?)(?:\n\n|\Z)', text, re.DOTALL)
+    m = re.search(r'\*\*Sources:?\*\*\s*\n(.+?)(?:\n\n|\Z)', text, re.DOTALL)
     if not m:
         return []
     lines = []
     for line in m.group(1).splitlines():
         line = line.strip()
-        if line.startswith("- "):
-            lines.append("- " + clean_text(line[2:]))
+        if not line.startswith("- "):
+            continue
+        link_m = SOURCE_LINK_RE.match(line[2:])
+        lines.append("- " + (link_m.group(1) if link_m else clean_text(line[2:])))
     return lines
 
 
