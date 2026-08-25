@@ -17,23 +17,26 @@ from "generate the narration" through "the video is live on YouTube."
 
 ## 0. Pipeline overview
 
+Prerequisite: post finished (text + images + gallery) — see CLAUDE.md.
+
+The rest maps 1:1 to this doc's own section numbers:
+
 ```
-1. Post finished (text + images + gallery)      -- CLAUDE.md
-2. Generate narration audio (Kokoro TTS)         -- section 1 below
-3. Insert the Listen widget                      -- section 2
-4. Write the video config (per post)             -- section 3
-5. Generate the Watch widget from that config     -- section 4
-6. Check smoothness + review the gap report      -- section 5
-7. Render the main video                         -- section 6
-8. Render the YouTube Short                      -- section 7
-9. Verify both files                             -- section 8
-10. Stage the YouTube upload text file            -- section 9
-11. Upload to YouTube (Chris does the clicks)     -- section 10
-12. Wire the published URLs into the post         -- section 11 (or just re-run section 4's script)
-13. Commit and push                               -- section 12
+1. Generate narration audio (Kokoro TTS)         -- section 1
+2. Insert the Listen widget                      -- section 2
+3. Write the video config (per post)             -- section 3
+4. Generate the Watch widget from that config     -- section 4
+5. Check smoothness + review the gap report      -- section 5
+6. Render the main video                         -- section 6
+7. Render the YouTube Short                      -- section 7
+8. Verify both files                             -- section 8
+9. Stage the YouTube upload text file            -- section 9
+10. Upload to YouTube (Chris does the clicks)     -- section 10
+11. Wire the published URLs into the post         -- section 11 (or just re-run section 4's script)
+12. Commit and push                               -- section 12
 ```
 
-Steps 2-8 (narration through both renders) should happen only **after**
+Steps 1-7 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
 dwell time both depend on the final image set, so redesigning the
 schedule mid-stream after adding a late image is wasted work. Treat
