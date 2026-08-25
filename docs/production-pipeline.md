@@ -564,73 +564,72 @@ moment.
 
 ## 9. Stage the YouTube upload text file
 
-Write `preview-motion/<slug>-youtube.txt` — plain text, copy-paste
-ready, two sections:
+Generate the draft with `scripts/stage_youtube_text.py`:
 
 ```
-=== FULL VIDEO ===
-
-Title:
-<Post title, verbatim>
-
-Description:
-<1-2 sentence hook, drawn from the post's own opening>
-
-Full story: <da.gd short link to the live post>
-
-Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
-
-Images (Wikimedia Commons and NewspaperSG, credited individually):
-- <filename/description> — <author>, <license>
-- ...
-
-Sources:
-- <Source title> — <Publisher>
-- ...
-
---------------------------------------------------------------------
-
-=== SHORT ===
-
-Title:
-<Post title> #Shorts
-
-Description:
-<Same hook, shorter> #Shorts
-
-Full story: <same da.gd link>
-Full-length video: <paste the main video's URL here after uploading it>
-
-Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
-
-Images (Wikimedia Commons):
-- <only the images actually used in the Short's excerpt>
+python scripts/stage_youtube_text.py \
+    _posts/<file>.md \
+    scripts/video-configs/<slug>.py \
+    scripts/video-configs/<slug>-short.py \
+    --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/
 ```
 
-**Shortening the post URL:** always shorten it first — a raw
-`pikaia.github.io` URL has repeatedly hit a real YouTube-side rendering
-bug where the description truncates mid-URL even after expanding
-"...more". Use **da.gd**:
+It writes `preview-motion/<slug>-youtube.txt` (override with `--out`)
+with both `=== FULL VIDEO ===` and `=== SHORT ===` sections, assembled
+from data already sitting in the repo:
 
-```
-curl "https://da.gd/shorten?url=<urlencoded-post-url>"
-```
+- **Title** — the post's front-matter `title`.
+- **Description hook** — the post's own opening paragraph (the first
+  block after the front matter), markdown-cleaned.
+- **`Full story:` link** — shortened automatically via da.gd (see
+  below).
+- **Narration credit** — fixed template line, `--voice` overrides the
+  `bm_george` default if a post used a different voice.
+- **Images list** — derived from the *actual* `IMAGES`/`SLIDES` used in
+  each video config (main vs. Short get separate, correctly-scoped
+  lists), each image's author/license pulled from its own caption in
+  the post (or the gallery page, if the image only appears there).
+- **Sources** — copied straight from the post's own `**Sources:**`
+  section (full video only; the Short doesn't get one).
+- **`Full-length video:` placeholder** — left as `<paste the main
+  video's URL here after uploading it>`, same as before; there's no
+  way to know this before the main video is actually uploaded.
 
-da.gd's click-through interstitial (a one-click "this link was created
-recently" gate on fresh links) is the least confusing of the options
-tried and is the settled default. If it fails 2-3 times in a row
-(genuine timeouts, not a slow response), fall back to TinyURL
-(`curl "https://tinyurl.com/api-create.php?url=<urlencoded-url>"`) —
-but don't switch to TinyURL over a single blip. is.gd/v.gd outright
-refuse to shorten any `pikaia.github.io` URL (domain-level block, not
-worth retrying).
+**This is a draft, not guaranteed publish-ready copy** — skim it before
+pasting into Studio, especially any line ending in `[REVIEW CREDIT]`.
+Caption phrasing isn't 100% consistent across older posts ("(Photo: X /
+Y, LICENSE)" vs "Photo by X, licensed under LICENSE." are both in use,
+plus some captions don't follow either pattern), so the credit-line
+extraction is best-effort regex, not a guarantee — a flagged line just
+means the script fell back to a looser extraction and wants a human
+glance, not that anything is necessarily wrong.
 
-Before shortening, double-check the post's actual **live** permalink
+**Before shortening, double-check the post's actual live permalink**
 via `sitemap.xml` (`http://127.0.0.1:4000/sitemap.xml` locally, or the
-real production sitemap) rather than assuming it from the filename —
-a post timestamped before 08:00 SGT can build one calendar day earlier
-than the filename date, on both local preview and the real GitHub
-Pages UTC build.
+real production sitemap) and pass that as `--post-url` — don't assume
+it from the filename. A post timestamped before 08:00 SGT can build one
+calendar day earlier than the filename date, on both local preview and
+the real GitHub Pages UTC build.
+
+**Shortening** happens automatically via da.gd inside the script
+(`--shortener dagd`, the default) — a raw `pikaia.github.io` URL has
+repeatedly hit a real YouTube-side rendering bug where the description
+truncates mid-URL even after expanding "...more", so this step isn't
+optional. da.gd's click-through interstitial (a one-click "this link
+was created recently" gate on fresh links) is the least confusing of
+the options tried and is the settled default. The script retries 3
+times before giving up; if da.gd is down, pass `--shortener tinyurl`
+(`curl "https://tinyurl.com/api-create.php?url=<urlencoded-url>"` is
+the equivalent manual fallback) — but don't switch over a single blip.
+is.gd/v.gd outright refuse to shorten any `pikaia.github.io` URL
+(domain-level block, not worth trying).
+
+If the script's output for a post looks wrong in a way worth fixing
+generally (a new caption phrasing pattern it doesn't recognize, a new
+image layout convention), fix the parser in
+`scripts/stage_youtube_text.py` rather than hand-editing just that
+post's output — the whole point is that this stays generic across
+posts.
 
 ---
 
@@ -776,6 +775,7 @@ are tracked in this repo (they have been for every post so far) vs.
 | Per-post video config (main) | `scripts/video-configs/<slug>.py` |
 | Per-post video config (Short) | `scripts/video-configs/<slug>-short.py` |
 | Route-walk clip renderer | `scripts/render_route_clip.py` |
+| YouTube upload text stager | `scripts/stage_youtube_text.py` |
 | Narration audio + timing | `audio/<slug>.mp3`, `.timing.json`, `.srt` |
 | Rendered video/Short (untracked scratch) | `preview-motion/<slug>.mp4`, `<slug>-short.mp4` |
 | Staged YouTube upload text | `preview-motion/<slug>-youtube.txt` |
