@@ -22,6 +22,10 @@ Live at: https://pikaia.github.io
 4. Write the post body in Markdown below the `---` block
 5. Commit — the site rebuilds automatically in about a minute
 
+For the full production pipeline — narration audio, the in-browser Watch
+slideshow, exported video, YouTube Shorts, and the YouTube upload itself
+— see [`docs/production-pipeline.md`](docs/production-pipeline.md).
+
 ## Future ideas
 
 - [Post ideas](docs/post-ideas.md) — candidate topics not yet written up
