@@ -1,0 +1,457 @@
+Delivered-To: chriskslee@gmail.com
+Received: by 2002:a05:7000:190c:b0:88c:5675:f6e6 with SMTP id g12csp3649166maz;
+        Sun, 23 Aug 2026 18:39:41 -0700 (PDT)
+X-Received: by 2002:a05:6a21:3511:b0:3bf:6acf:2940 with SMTP id adf61e73a8af0-3cd30060d76mr49652152637.11.1787535581371;
+        Sun, 23 Aug 2026 18:39:41 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1787535581; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=ePw9g0ul3ucW5hV1AifVTwivC/3kW5CtKk7q4JNO2QryKfA813aFcAG41Dh+KYlhGH
+         hnCPd2yRpJbfpWEDvProMrM443rdyA1wPLcQufcbuExgw71SyIzvS35zT67r1PuMavhP
+         iEsjL5Rnr/ZAB3xSZoAryDe6JB9oDfSbOxVBAjG4bDBB1yCa+Oh92NnGVvgXB2/Xisxj
+         aVAwBCDDraaeJuWvfEO4ePNmNPH/3NW5aHzhSUFwrYTQaO95Um6qOx8oIrxjtZGjMSP1
+         SRQ25Bw9PsZdNBQxpihhwkpbcRUdhkCko7a6dLIvT8x+PKrPRijjti5M9xsLzAldW5X5
+         Fd7g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature:dkim-signature;
+        bh=GxUxLL/HL7MZChi4I8eWK0Vh4vxvNo9RYs616uvTdA0=;
+        fh=AbVMv3CYjgjqRBAglEz3YRib2xzfL/AVDiYlGcJ9Wds=;
+        b=Up5ensBGcHVpRxe+dfpIMG+4Yx2uID8KkYRhgGGfQbQ5JGD6qlK7b+cQX0RIdoMG69
+         p/dxkvUI7mkzmYtuJywVEU7K/9GxYbyqY8YMFr+veBACw8isLBptfmqYfmi80QyFQOio
+         YSFtjln1Bghwjpc23/SMho4/orsVVHYhReKKntcdk5qSY1B/QPMG+kwGs1ZB0pCCNUtN
+         YDCVDvRUTCyie11vcRPDEPcszch1cXfD5YKPKWsOt1xXwRRHU48fleq1//Qn6Q6Ff6qy
+         495s6+208KcjoxHhkWEIHVEAi6Egt9XkRjR4ko1VE3MQK7qos1jvGP0fokPv0SkLR6yT
+         TjYA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@sph.com.sg header.s=pps28072025 header.b=LktmpAh9;
+       dkim=pass header.i=@sph.com.sg header.s=google header.b=OHr8klyj;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of prahladk@sph.com.sg designates 66.159.224.22 as permitted sender) smtp.mailfrom=prahladk@sph.com.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sph.com.sg;
+       dara=pass header.i=@gmail.com
+Return-Path: <prahladk@sph.com.sg>
+Received: from mx14-00716102.pphosted.com (mx14-00716102.pphosted.com. [66.159.224.22])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-cc199f501aesi4234102a12.396.2026.08.23.18.39.40
+        for <chriskslee@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 23 Aug 2026 18:39:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of prahladk@sph.com.sg designates 66.159.224.22 as permitted sender) client-ip=66.159.224.22;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sph.com.sg header.s=pps28072025 header.b=LktmpAh9;
+       dkim=pass header.i=@sph.com.sg header.s=google header.b=OHr8klyj;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of prahladk@sph.com.sg designates 66.159.224.22 as permitted sender) smtp.mailfrom=prahladk@sph.com.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sph.com.sg;
+       dara=pass header.i=@gmail.com
+Received: from pps.filterd (m0486524.ppops.net [127.0.0.1])
+	by mx14-00716102.pphosted.com (8.18.1.11/8.18.1.11) with ESMTP id 67O1TguN2837637
+	for <chriskslee@gmail.com>; Mon, 24 Aug 2026 09:39:39 +0800
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sph.com.sg; h=cc
+	:content-type:date:from:in-reply-to:message-id:mime-version
+	:references:subject:to; s=pps28072025; bh=GxUxLL/HL7MZChi4I8eWK0
+	Vh4vxvNo9RYs616uvTdA0=; b=LktmpAh9LwFltTHez3XZnNN+5kXKpI+U//G0XU
+	xplLBLOhibmibHFEFlyiaMC0G86vELJTGG+Iry6PFEb3Y9/zN8FUbz9a0AAQkRPz
+	Zq+wYcq3vJthdv7JHeXSTlaprl5Qbb8MttKRASCchoIsnFyAtxZuxOTEwUDREFzJ
+	Ddp8dIfge4mVueTc3MFnPPGUkxyrMAdtKpZdrSpIJa5T2Rp8Wg5SqDO0BXTDfo4J
+	Mnpcf5nwn4c1TPMxmOnIBw009+itC6Qf8z1dXFwWtE7IwfBAAXgr5ioTEUcaN64M
+	mu0U+29AMzjJono2gdCHIbC0HFMlrxd3C/1e8EOnPILu8EdA==
+Received: from mail-wr1-f72.google.com (mail-wr1-f72.google.com [209.85.221.72])
+	by mx14-00716102.pphosted.com (PPS) with ESMTPS id 4g7fxj14ue-1
+	(version=TLSv1.3 cipher=TLS_AES_128_GCM_SHA256 bits=128 verify=NOT)
+	for <chriskslee@gmail.com>; Mon, 24 Aug 2026 09:39:39 +0800 (WST)
+Received: by mail-wr1-f72.google.com with SMTP id ffacd0b85a97d-482a5e9400eso1916581f8f.2
+        for <chriskslee@gmail.com>; Sun, 23 Aug 2026 18:39:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1787535576; cv=none;
+        d=google.com; s=arc-20260327;
+        b=GcH2hkepIFVYzO0MJZmZ03M+imHg/J3cT6w8KTh8nmggeYkiuumACYiArVtwnCCmKi
+         XzSO6wz9TdP1cKNQ8u5ZPjIxeTwt+uPJwHC8vsfP5IJArjYyZpqk38mpWbV2uI7aSTud
+         8DqpnzeseGjR9a6SALYthaRrJCtvJvjeIqI91Y8p0yWqUBzvGNNiS+kMOZPUB9PO6bhT
+         VYcFSbAFyqytSHcp2ScqUdFqj+PrHz8Emu1PAQ+sZUbOYH5SZcDw5t47EndoFd0cWINH
+         KFK2GcUK7Q21tTQCKlMj2n3z9MsuGEiZEZV25AUQCOYCylikD2z4b3YJQsKbnnSl7UPW
+         3H7w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=GxUxLL/HL7MZChi4I8eWK0Vh4vxvNo9RYs616uvTdA0=;
+        fh=AbVMv3CYjgjqRBAglEz3YRib2xzfL/AVDiYlGcJ9Wds=;
+        b=Y+wBLXtDsbjAwo/dNXDoyhzaeGP25hQd4IXz62EOHONHZozXKoD68ef2BaNMsk6L9i
+         5/92H2eBlQh+3JmnJtX8TIr9gl2BqK38NqmiqUsKt0PlWRiGFFIbb+vxzumGg2aZJEf3
+         h+OIcBSYyMfuAubUaqqdY5bml7F//Id2HhDYBGHKRICh7JSauulx2e7wAvgZ8yayL9Pq
+         a623fyeiqanQQRmU8YN4OGi7c+qealxTMFKPc75Wp5d+AvJk5KFjX0nGgE4P8euPY8Fo
+         1Cc8/FwxZ4MuoEAyjkEAidCYIgFlI5iD420Tj0OWjsZwEOLXIUm7uJ1BilcN3yeZ3txm
+         xiaQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=sph.com.sg; s=google; t=1787535576; x=1788140376; dara=google.com;
+        h=content-type:cc:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=GxUxLL/HL7MZChi4I8eWK0Vh4vxvNo9RYs616uvTdA0=;
+        b=OHr8klyjvJ/w+3JiTGQVSE+tjCCh9TOzmW5Xi/ZBllZjUZwgcFdYSUDWn/Vs6H3BEP
+         G941QHjybvQfYjZYM5/1UkuNZgj9iPbhbbGMrDDrASyUNN769BwBriu1muEBKqAvS/zn
+         b6k/guzOoyIJHh8G+Y3PvmL2J5lsxIyD6rdJQ=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1787535576; x=1788140376;
+        h=content-type:cc:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:x-gm-gg:x-gm-message-state:from:to:cc
+         :subject:date:message-id:reply-to:content-type;
+        bh=GxUxLL/HL7MZChi4I8eWK0Vh4vxvNo9RYs616uvTdA0=;
+        b=T18PdPOXDbLV2pLewGWRKxzCAEulgvdc1UnwtpOJODUuRJw7yunHDUAqH99sZca4SW
+         dPibeau+TYzuvj83BPhtUY9+do9GFZnBRRXbWPFLE8Iiw/wgzqpeo+0ZuJ2IcOntAyDx
+         x8O4Re7kNndeTXL2t+ElxokTH6CFtum0vug6SfnlDsqRG31M6MctU7wHZjLdRL7rpPr5
+         oLqknAGXVVEVFftsadaTj7Z6SAmPm8xOy5moVcL0jR9Dr7RfJh8RZ6u0NjQG9WjL6liR
+         FZKrl4ztT23ARXo8qabn0foIuaaIKBLvSfDAXF/5ivH/ArtZbOHFURSCxhfBUsgQB3jw
+         URWQ==
+X-Gm-Message-State: AFuF++kdhpUQuOdeMSmWM6AAYNEC8xtCK3kjb8K6f68MfsyfxrT282Hz
+	fC7ljSmVbJcuy2TFQi7HDGeigACHzeQpa3rjufWbppQsTw/0vK7oBy4xgxMCYOGpfJ+TDejA1Fl
+	bXhsp5Wb9A/11qA2fMMXzq7RCEBeQpC4YPG1l7wC0y7/mxEVWvpmSac5lTeyDZpv+tfnBObDWcy
+	hy0oVhtZyic6G4OQZ1nH8NvW93tNj7G/6xIm/quw==
+X-Gm-Gg: AR+sD10rdkChZ+1Gbem9EtYnMe/CstQ3T6NDTPPpecfifgxSs+Rqha4mr+ydr0rjo9a
+	xQWWM2i98Lz4snBFW3smmljbB77OQfYD97VFQ1D6bVRlboFhYSeqeOJtyMCTQmb50kbXtFjGaUB
+	BOXmDDKOsOXLN51q9JWH0Sp8TPGpwk+gU8c/d3qjZ/2qLlPF/r+94Vg6RLFPrG7/VQyWIFV8xCh
+	PRSPZlxAKh4QA==
+X-Received: by 2002:a05:6000:1861:b0:481:4761:45dc with SMTP id ffacd0b85a97d-482c0b88ef4mr26450005f8f.13.1787535575908;
+        Sun, 23 Aug 2026 18:39:35 -0700 (PDT)
+X-Received: by 2002:a05:6000:1861:b0:481:4761:45dc with SMTP id
+ ffacd0b85a97d-482c0b88ef4mr26449994f8f.13.1787535575555; Sun, 23 Aug 2026
+ 18:39:35 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAPGAv9Q5RiUKWzsuc5DzX=VuaE1Zcskj5KY5Vd1uMMHJv_XVOQ@mail.gmail.com>
+ <CAGxs1GkPUYEOtFX3+h+YYpNFWZVTYuPPw-iO=yY86sUeYuNpHw@mail.gmail.com>
+In-Reply-To: <CAGxs1GkPUYEOtFX3+h+YYpNFWZVTYuPPw-iO=yY86sUeYuNpHw@mail.gmail.com>
+From: Prahlad Kunalan <prahladk@sph.com.sg>
+Date: Mon, 24 Aug 2026 09:38:58 +0800
+X-Gm-Features: AcwNN1Us0rBfVJ-mdlwsVC-thZwsrWMTcjsxls_O_80O4Ek70JIWuoAl_BP3fkc
+Message-ID: <CACcBP+TVSRH0FVAwHQhp4N7JXnDdmNZEn+VxOQt=D4XAMGpDPA@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Permission_request_=E2=80=94_reproducing_a_Straits_Tim?=
+	=?UTF-8?Q?es_page_from_your_archives_on_a_history_blog?=
+To: Chris Lee <chriskslee@gmail.com>
+Cc: Joanne Mok TE <joannem@sph.com.sg>
+Content-Type: multipart/alternative; boundary="0000000000000136fb0659c10fa2"
+X-Authority-Analysis: v=2.4 cv=SN9ykuvH c=1 sm=1 tr=0 ts=6a8ba0db cx=c_pps
+ a=C8Sa+zVB7PeSwznsLr31Mw==:117 a=Sv0fKeRqtYgA:10 a=5KLPUuaC_9wA:10
+ a=lkXi6fu_pNcA:10 a=VkNPw1HP01LnGYTKEx00:22 a=IqMittesU2tIlt09cowQ:22
+ a=CUbugca8Iud7O-hlmee4:22 a=9dHeoDduAAAA:8 a=M7Z7hGC-AAAA:8 a=vnREMb7VAAAA:8
+ a=pGLkceISAAAA:8 a=3rMYtvLhfMajlmyT8BkA:9 a=qcg49hLlgF0N60+LroqrWnV/Vu4=:19
+ a=QEXdDO2ut3YA:10 a=M41UG-rE7MJEHvOMVhgA:9 a=2q4O/K3rjNU7EHYdBHB6dYyilSc=:19
+ a=-5IiJeFg_XQ0_b_1:21 a=lqcHg5cX4UMA:10 a=PRpDppDLrCsA:10
+ a=eYhU8IiCvE_ms1W8Tcak:22 a=zY0JdQc1-4EAyPf5TuXT:22 a=6k07NdjZ3451ecC0dS0o:22
+ a=TlbCQs2N-CGWmjKAYP3H:22
+X-Proofpoint-GUID: G2cRxIYu8ZEGd9FzDMduTpgeH5MuJs3k
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwODI0MDAxMiBTYWx0ZWRfX3jE8I6F9+wOS
+ r7LFrtfyoQwwU6pOvqSBXY8EV0SX47sMBAE0jWqT0zgMkvcixnx0UHG3VKEzxynvNYv7AN0NZQ/
+ 0Kc6Zve42QXK+1r17Negnt6+71pGi/d/sbfl+7aq19XsfunLTsv3Jn4AKGd7IdD2Uz/3IfknP67
+ WGfvVi5X119vnJxCWlfv8knQpCYpk3FxMTj7fyvZs0u9NlLJ117/xu7HYY/n+EoEJp0qoOVJN45
+ ca/UOL1VFdFRANPYkH2tNK41ilaLIkR1KNE5jTts9lCFit+QuJr2SULq4JIaxoAJki3bzK/5hzG
+ 38FKTB2EcHElWttJLGX0T6H94Mlbo+foC/5Cbo9GNV0Q08LHUSq4YLe5XqJ/y5gmk/CWcbN9pWW
+ ng3hb+2aLrcwveLLyg0KajzWf+j3hd5QXTxeKosay5FSclqBMtMs203YNWw33fEjXZG77uajLYo
+ wnI3iT5XTkkszU7owKg==
+X-Proofpoint-Spam-Info: AW1haW4tMjYwODI0MDAxMiBTYWx0ZWRfXx+9voWrZTdUh
+ w6p+DJmeyACzGlvsCneBad8ezqKMMVvDCvFuOE7/s+72Tz71UmHdKaZ6oHwfquJ/hww0Ayq13wO
+ R/GvN/VwQTGEsLhfs3B8JvXPBAwGvXU=
+X-Proofpoint-ORIG-GUID: G2cRxIYu8ZEGd9FzDMduTpgeH5MuJs3k
+
+--0000000000000136fb0659c10fa2
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Chris,
+
+Thank you for reaching out to us. Since the article is in the public domain
+(before 1956), you can reproduce the page on your blog without any
+licensing charges.
+
+For future reference, there will be a licensing fee and content licensing
+agreement to reproduce all copyrighted SPH content on your blog. This will
+cost $300 per year before GST.
+
+Any article older than 70 years will be in the public domain and will not
+require a licensing agreement.
+You can send it to us for verification to avoid any unintended infringement=
+.
+
+Best Regards,
+
+K. Prahlad
+Archive Business
+Information Resource Centre (IRC)
+SPH Media Limited
+Tel: 6319 5583 / E-mail: Prahladk@sph.com.sg
+
+*SPH Media Limited* 1000 Toa Payoh North, News Centre Singapore 318994
+
+www.sph.com.sg
+<https://emailmetrics.sph.com.sg/c/eyJfcmFpbHMiOnsibWVzc2FnZSI6ImV5SmxiV0Zw=
+YkV4cGJtdEpaQ0k2SWpsbE9EVTRNemt4TFRFM1pUZ3RORFF5WkMwNFpEWmtMVGs1Tm1SbE1qbGp=
+PV0kwWVNJc0luSmxZV1JTWldObGFYQjBTV1FpT2lKa1pqTTNZekU0WVMxbFl6QTJMVFEwWVdNdE=
+9EQXpNeTAyTVdZeFpqVXdZMlprWlRNaWZRPT0iLCJleHAiOm51bGwsInB1ciI6ImVtYWlsX2FuY=
+Wx5dGljcyJ9fQ%3D%3D--e1ebc840c98dd0ebd11c72a708e4a0787d5d839b1632d8541352ef=
+92e7338001>
+
+
+
+
+On Mon, 24 Aug 2026 at 08:53, SPHLIB - <sphlib@sph.com.sg> wrote:
+
+> Dear Chris,
+>
+> Thank you for your email.
+>
+> I have copied staff responsible for handling copyright for SPH Media
+> materials to assist you further.
+>
+> Regards
+> Goke
+> Information Resource Centre
+> Reference Services
+> DID: 63195508 / 63195726
+>
+> On Sat, Aug 22, 2026 at 6:15=E2=80=AFAM Chris Lee <chriskslee@gmail.com> =
+wrote:
+>
+>> Dear SPH Media Information Resource Centre, I run Lesser Known Singapore
+>> (https: //pikaia. github. io and https: //www. youtube. com/@
+>> LesserKnownSingapore), a small non-commercial blog covering overlooked
+>> history and lesser-known facts about Singapore.
+>> ZjQcmQRYFpfptBannerStart
+>> CAUTION:
+>> This email originated from outside of the organization. Do not click
+>> links, open attachments or reply, unless you recognize the sender and kn=
+ow
+>> that the content is safe.
+>>
+>> ZjQcmQRYFpfptBannerEnd
+>> Dear SPH Media Information Resource Centre,
+>>
+>> I run Lesser Known Singapore (https://pikaia.github.io and
+>> https://www.youtube.com/@LesserKnownSingapore), a small non-commercial
+>> blog covering overlooked history and lesser-known facts about Singapore.
+>> I'd like to request permission to reproduce a page from The Straits Time=
+s
+>> archive on NewspaperSG for an upcoming post.
+>>
+>> Specifically:
+>> - The Straits Times, 13 June 1946, Page 3 (includes the articles
+>> "TERAUCHI DIES IN JOHORE" and "FOUR JAP OFFICERS SENTENCED TO DIE")
+>> - Intended use: a full-page reproduction (not cropped to a single
+>> article) as an illustration in a blog post about the Japanese Cemetery P=
+ark
+>> in Singapore, with full credit given to The Straits Times / SPH Media an=
+d a
+>> link back to the NewspaperSG record.
+>>
+>> Since the blog regularly covers dateable historical events and may want
+>> to reference other Straits Times pages in future posts, I'd also appreci=
+ate
+>> knowing the general terms for this kind of non-commercial reproduction
+>> (e.g. any fee, required credit line, resolution/watermark conditions) so=
+ I
+>> can follow the correct process going forward rather than asking one-off
+>> each time.
+>>
+>> Thank you for your time =E2=80=94 happy to provide more detail if useful=
+.
+>>
+>> Best regards,
+>> Chris Lee
+>> chriskslee@gmail.com
+>> https://pikaia.github.io
+>> https://www.youtube.com/@LesserKnownSingapore
+>>
+>
+
+--=20
+
+NOTE: Privileged/Confidential Information may be contained in this=20
+message. If you are not the addressee indicated in this message (or=20
+responsible for delivery of the message to such person), you may not copy=
+=20
+or deliver this message to anyone. In such case, you should destroy this=20
+message and kindly notify the sender by reply email. All opinions,=20
+conclusions and other information expressed in this message not of an=20
+official nature shall not be deemed as given or endorsed by SPH Media Trust=
+=20
+or any of its subsidiaries unless otherwise indicated by an authorised=20
+representative independent of this message.
+
+SPH Media Limited
+
+Co Regn=20
+No.: 202120748H
+
+--0000000000000136fb0659c10fa2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div class=3D"gmail_default" style=3D"font-family:ver=
+dana,sans-serif">Hi=C2=A0Chris,</div><div class=3D"gmail_default" style=3D"=
+font-family:verdana,sans-serif"><br></div><div class=3D"gmail_default" styl=
+e=3D"font-family:verdana,sans-serif">Thank you for reaching out to us. Sinc=
+e the article is in the public domain (before 1956), you can reproduce the =
+page on your blog without any licensing charges.</div><div class=3D"gmail_d=
+efault" style=3D"font-family:verdana,sans-serif"><br></div><div class=3D"gm=
+ail_default" style=3D"font-family:verdana,sans-serif">For future reference,=
+ there will be a licensing fee=C2=A0and content licensing agreement to repr=
+oduce all copyrighted=C2=A0SPH content on your blog. This will cost $300 pe=
+r year before GST.=C2=A0</div><div class=3D"gmail_default" style=3D"font-fa=
+mily:verdana,sans-serif"><br></div><div class=3D"gmail_default" style=3D"fo=
+nt-family:verdana,sans-serif">Any article older than 70 years will be in th=
+e public domain and will not require a licensing agreement.</div><div class=
+=3D"gmail_default" style=3D"font-family:verdana,sans-serif">You can send it=
+ to us for verification to avoid any unintended infringement.</div><br clea=
+r=3D"all"></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartm=
+ail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"col=
+or:rgb(34,34,34)"><font face=3D"verdana, sans-serif">Best Regards,</font></=
+div><div style=3D"color:rgb(34,34,34)"><font face=3D"verdana, sans-serif"><=
+br></font></div><div style=3D"color:rgb(34,34,34)"><font face=3D"verdana, s=
+ans-serif">K. Prahlad</font></div><div style=3D"color:rgb(34,34,34)"><div><=
+div><span style=3D"font-family:verdana,sans-serif">Archive Business=C2=A0</=
+span><br></div><div><font face=3D"verdana, sans-serif">Information Resource=
+ Centre (IRC)</font></div><div><font face=3D"verdana, sans-serif">SPH Media=
+ Limited</font></div><div><font face=3D"verdana, sans-serif">Tel: 6319 5<sp=
+an>583</span>=C2=A0/=C2=A0E-mail:<span>=C2=A0Prahladk@sph.com.s</span></fon=
+t><span style=3D"font-family:verdana,sans-serif">g</span></div></div><div><=
+p style=3D"line-height:inherit;color:rgb(0,0,0);font-family:Verdana,Geneva,=
+sans-serif;font-size:13px;background-color:rgb(247,253,255);margin:0px 0px =
+2px"><strong>SPH Media Limited</strong>=C2=A01000 Toa Payoh North, News Cen=
+tre Singapore 318994</p><p style=3D"line-height:inherit;color:rgb(0,0,0);fo=
+nt-family:Verdana,Geneva,sans-serif;font-size:13px;background-color:rgb(247=
+,253,255);margin:0px"><a href=3D"https://emailmetrics.sph.com.sg/c/eyJfcmFp=
+bHMiOnsibWVzc2FnZSI6ImV5SmxiV0ZwYkV4cGJtdEpaQ0k2SWpsbE9EVTRNemt4TFRFM1pUZ3R=
+ORFF5WkMwNFpEWmtMVGs1Tm1SbE1qbGpPV0kwWVNJc0luSmxZV1JTWldObGFYQjBTV1FpT2lKa1=
+pqTTNZekU0WVMxbFl6QTJMVFEwWVdNdE9EQXpNeTAyTVdZeFpqVXdZMlprWlRNaWZRPT0iLCJle=
+HAiOm51bGwsInB1ciI6ImVtYWlsX2FuYWx5dGljcyJ9fQ%3D%3D--e1ebc840c98dd0ebd11c72=
+a708e4a0787d5d839b1632d8541352ef92e7338001" rel=3D"noopener" style=3D"color=
+:rgb(0,175,210)" target=3D"_blank">www.sph.com.sg</a></p><p style=3D"line-h=
+eight:inherit;color:rgb(0,0,0);font-family:Verdana,Geneva,sans-serif;font-s=
+ize:13px;background-color:rgb(247,253,255);margin:0px"><img src=3D"https://=
+static.sph.com.sg/uploads/2025/11/Email-Banner_Final_A.gif"><br></p></div><=
+div></div></div></div></div></div></div><br></div><br><div class=3D"gmail_q=
+uote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 2=
+4 Aug 2026 at 08:53, SPHLIB - &lt;<a href=3D"mailto:sphlib@sph.com.sg">sphl=
+ib@sph.com.sg</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" sty=
+le=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);paddi=
+ng-left:1ex"><div dir=3D"ltr"><div><div class=3D"gmail_default" style=3D"fo=
+nt-family:arial,helvetica,sans-serif;font-size:small">Dear Chris,</div><div=
+ class=3D"gmail_default" style=3D"font-family:arial,helvetica,sans-serif;fo=
+nt-size:small"><br></div><div class=3D"gmail_default" style=3D"font-family:=
+arial,helvetica,sans-serif;font-size:small"><div style=3D"font-family:Arial=
+,Helvetica,sans-serif;color:rgb(31,31,31);letter-spacing:0.2px"><font face=
+=3D"arial, sans-serif">Thank you for your email.</font></div><div style=3D"=
+font-family:Arial,Helvetica,sans-serif;color:rgb(31,31,31);letter-spacing:0=
+.2px"><font face=3D"arial, sans-serif"><br></font></div><div style=3D"font-=
+family:Arial,Helvetica,sans-serif;color:rgb(31,31,31);letter-spacing:0.2px"=
+><font face=3D"arial, sans-serif">I have copied staff responsible for handl=
+ing copyright for SPH Media materials=C2=A0<span style=3D"letter-spacing:0.=
+2px">to assist you further.</span></font></div></div><br clear=3D"all"></di=
+v><div><span style=3D"background-color:transparent">Regards</span></div><di=
+v><div dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"l=
+tr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div class=3D"g=
+mail_default" style=3D"font-family:arial,helvetica,sans-serif;font-size:sma=
+ll">Goke</div></div><div><span style=3D"font-family:arial,helvetica,sans-se=
+rif">Information Resource Centre</span></div><div><div><font face=3D"arial,=
+ helvetica, sans-serif" size=3D"2">Reference Services</font></div><div><fon=
+t face=3D"arial, helvetica, sans-serif" size=3D"2">DID: 63195508 / 63195726=
+</font></div></div></div></div></div></div></div></div></div></div><br><div=
+ class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Sat, Aug 22=
+, 2026 at 6:15=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:chriskslee@gmail.=
+com" target=3D"_blank">chriskslee@gmail.com</a>&gt; wrote:<br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1p=
+x solid rgb(204,204,204);padding-left:1ex"><div>
+
+
+
+
+
+<div style=3D"font-size:1px;color:rgb(255,255,255);line-height:1px;max-heig=
+ht:0px;opacity:0;overflow:hidden;display:none">
+Dear SPH Media Information Resource Centre, I run Lesser Known Singapore (h=
+ttps:=E2=80=8A//pikaia.=E2=80=8Agithub.=E2=80=8Aio and https:=E2=80=8A//www=
+.=E2=80=8Ayoutube.=E2=80=8Acom/@=E2=80=8ALesserKnownSingapore), a small non=
+-commercial blog covering overlooked history and lesser-known facts about S=
+ingapore.=E2=80=8A</div>
+
+
+
+<div style=3D"font-size:1px;color:rgb(255,255,255);line-height:1px;max-heig=
+ht:0px;opacity:0;overflow:hidden;display:none">ZjQcmQRYFpfptBannerStart</di=
+v>
+
+
+
+<u></u>
+  <div dir=3D"ltr" lang=3D"en" id=3D"m_2091171182297757421m_831110232324881=
+1140pfptBannerrlkmc0x" style=3D"display:block;text-align:left;margin:0px 0p=
+x 10px;padding:7px 16px 8px;border-radius:4px;min-width:200px;background-co=
+lor:rgb(250,223,155);border-top:4px solid rgb(242,176,4)">
+    <div id=3D"m_2091171182297757421m_8311102323248811140pfptBannerrlkmc0x"=
+ style=3D"float:left;display:block;margin:1px 0px;max-width:600px">
+      <div id=3D"m_2091171182297757421m_8311102323248811140pfptBannerrlkmc0=
+x" style=3D"display:block;background-color:rgb(250,223,155);color:rgb(0,0,0=
+);font-family:Arial,sans-serif;font-weight:bold;font-size:14px;line-height:=
+1.29">
+	CAUTION:
+      </div>
+      <div id=3D"m_2091171182297757421m_8311102323248811140pfptBannerrlkmc0=
+x" style=3D"font-weight:normal;display:block;background-color:rgb(250,223,1=
+55);color:rgb(0,0,0);font-family:Arial,sans-serif;font-size:12px;line-heigh=
+t:1.5;margin-top:2px">
+This email originated from outside of the organization. Do not click links,=
+ open attachments or reply, unless you recognize the sender and know that t=
+he content is safe.
+      </div>
+
+    </div>
+
+    <div style=3D"height:0px;clear:both;display:block;line-height:0;font-si=
+ze:0.01px">=C2=A0</div>
+  </div>
+<u></u>
+
+<div style=3D"font-size:1px;color:rgb(255,255,255);line-height:1px;max-heig=
+ht:0px;opacity:0;overflow:hidden;display:none">ZjQcmQRYFpfptBannerEnd</div>
+
+
+
+<div dir=3D"ltr">Dear SPH Media Information Resource Centre,<br><br>I run L=
+esser Known Singapore (<a href=3D"https://pikaia.github.io" target=3D"_blan=
+k">https://pikaia.github.io</a> and <a href=3D"https://www.youtube.com/@Les=
+serKnownSingapore" target=3D"_blank">https://www.youtube.com/@LesserKnownSi=
+ngapore</a>), a small non-commercial blog covering overlooked history and l=
+esser-known facts about Singapore. I&#39;d like to request permission to re=
+produce a page=C2=A0from The Straits Times archive on NewspaperSG for an up=
+coming post.<br><br>Specifically:<br>- The Straits Times, 13 June 1946, Pag=
+e 3 (includes the articles &quot;TERAUCHI DIES IN JOHORE&quot; and &quot;FO=
+UR JAP OFFICERS SENTENCED TO DIE&quot;)<br>- Intended use: a full-page repr=
+oduction (not cropped to a single article) as an illustration in a blog pos=
+t about the Japanese Cemetery Park in Singapore, with full credit given to =
+The Straits Times / SPH Media and a link back to the NewspaperSG record.<br=
+><br>Since the blog regularly covers dateable historical events and may wan=
+t to reference other Straits Times pages in future posts, I&#39;d also appr=
+eciate knowing the general terms for this kind of non-commercial reproducti=
+on (e.g. any fee, required credit line, resolution/watermark conditions) so=
+ I can follow the correct process going forward rather than asking one-off =
+each time.<br><br>Thank you for your time =E2=80=94 happy to provide more d=
+etail if useful.<br><br>Best regards,<br>Chris Lee<br><a href=3D"mailto:chr=
+iskslee@gmail.com" target=3D"_blank">chriskslee@gmail.com</a><br><a href=3D=
+"https://pikaia.github.io" target=3D"_blank">https://pikaia.github.io</a><b=
+r><div><a href=3D"https://www.youtube.com/@LesserKnownSingapore" target=3D"=
+_blank">https://www.youtube.com/@LesserKnownSingapore</a></div></div>
+</div></blockquote></div>
+</blockquote></div>
+
+<br>
+<br clear=3D"both" style=3D"color:rgb(34,34,34);font-family:arial,sans-seri=
+f;font-size:12.8px;background-color:rgb(255,255,255)"><div>NOTE: Privileged=
+/Confidential Information may be contained in this message. If you are not =
+the addressee indicated in this message (or responsible for delivery of the=
+ message to such person), you may not copy or deliver this message to anyon=
+e. In such case, you should destroy this message and kindly notify the send=
+er by reply email. All opinions, conclusions and other information expresse=
+d in this message not of an official nature shall not be deemed as given or=
+ endorsed by SPH Media Trust or any of its subsidiaries unless otherwise in=
+dicated by an authorised representative independent of this message.<br></d=
+iv><div>SPH Media Limited<br></div><div>Co Regn No.: 202120748H</div>
+--0000000000000136fb0659c10fa2--
