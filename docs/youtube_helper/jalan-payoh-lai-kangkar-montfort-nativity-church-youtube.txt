@@ -10,7 +10,18 @@ Full story: https://da.gd/UPjPA
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[Video already published at https://youtu.be/GTIpKWDZBNA, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Map showing the location of Hougang planning area within Singapore — Map: AridCeption / Wikimedia Commons, CC BY-SA 4.0 [REVIEW CREDIT]
+- Church of the Nativity of the Blessed Virgin Mary, Hougang, photographed in 2025 — GoAheadFan95, CC BY-SA 4.0
+- Church of the Nativity of the Blessed Virgin Mary at night, photographed in 2017 — Banej, CC BY-SA 3.0
+- Interior of the Church of the Nativity of the Blessed Virgin Mary, photographed in 2006 — User:Sengkang, copyrighted free use
+- A zinc-roofed house in Kampong Lorong Buangkok, one of the last surviving kampongs in Singapore — Muhammad Adrian, CC BY 4.0
+- Sungei Serangoon, panorama, photographed in 2006 — User:Sengkang, copyrighted free use
+- Punggol Park signage, Hougang, photographed in 2006 — User:Sengkang, copyrighted free use
+- A village house with a verandah in Kampong Lorong Buangkok — M. Adrian Jurhami, CC BY 4.0
+- HDB flats in Hougang, photographed in 2007 — Terence Ong, CC BY-SA 3.0
+- Map of Hougang Single Member Constituency boundaries, 2025 — Map: CrawlerGrey / Wikimedia Commons, CC BY-SA 4.0 [REVIEW CREDIT]
+- Workers' Party supporters at Hougang, Singapore — Magyer Lohasa, CC BY-SA 4.0
 
 Sources:
 - Kangkar — Teochews in Singapore

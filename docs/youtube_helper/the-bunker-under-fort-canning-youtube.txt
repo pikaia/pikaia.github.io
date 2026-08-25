@@ -10,7 +10,16 @@ Full story: https://da.gd/XX9oGH
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[Video already published at https://youtu.be/fywz7gSzT_c, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- The tree tunnel staircase in Fort Canning Park — DianaAndassova, CC BY-SA 4.0
+- Entrance to the Battlebox at Fort Canning Hill — Zawed, public domain
+- Blast door leading into the Battlebox tunnels — Roberto Arias, CC BY 2.0
+- In the Battle Box, Singapore — jokertrekker, CC BY 3.0
+- Fort Canning Hill, Singapore, circa 1902 — Aldwin Teo, CC BY-SA
+- Interior of the Battle Box, Singapore — Michael Coghlan, CC BY-SA 2.0
+- Interior of the Battle Box, Singapore, communication booths — Bryn Pinzgauer, CC BY 2.0
+- Lieutenant-General Arthur Percival arriving in Singapore, 1941 — Imperial War Museums, public domain
+- General Tomoyuki Yamashita, 1942 — Wikimedia Commons, public domain
 
 Sources:
 - Battlebox — Wikipedia

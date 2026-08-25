@@ -10,7 +10,17 @@ Full story: https://da.gd/zPhZS
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[Video already published at https://youtu.be/w6Q-1Ps9k6Y, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- The Merlion statue at Merlion Park, Singapore — PookieFugglestein, CC0
+- Close-up of the Merlion statue's head — Jpatokal, CC BY-SA
+- Lim Nang Seng and his wife at Tiger Balm Gardens, 1950 — National Archives of Singapore, public domain
+- Merlion and the Singapore Skyline — Merlion444, public domain / CC0
+- Rear view of the Merlion statue at Merlion Park, Singapore, with Marina Bay Sands in the distance — fad3away, CC BY 2.0
+- Singapore Mini Merlion — C1815, CC0
+- Merlion statue at Tourism Court, Singapore — C1815, CC0
+- 2005 Sentosa Merlion — 张元柏, CC BY-SA 3.0
+- Singapore Merlion in 1978 — AlexSin66, CC0
+- Former Merlion Park — Terence Ong, CC BY-SA 3.0
 
 Sources:
 - Alec Fraser-Brunner — Wikipedia

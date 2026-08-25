@@ -10,7 +10,16 @@ Full story: https://da.gd/8hIs
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[Video already published at https://youtu.be/iTNZd1Op4fI, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Lim Kim San, photographed in the 1940s — National Archives of Singapore, via Wikimedia Commons, public domain
+- Graduates of Raffles College, 1934 — Eriko Ogihara-Schuck, via Wikimedia Commons, public domain
+- Lim Kim San with his wife Pang Gek Kim on their wedding day, 1940 — National Archives of Singapore, via Wikimedia Commons, public domain
+- A street in Shonan-to, the wartime Japanese name for Singapore, February 1943 — Mainichi Newspapers Co., from Hakyoku e no michi, public domain
+- The Civilian War Memorial, Singapore — Bijay Chaurasia, CC BY-SA 4.0
+- Block 45 Stirling Road, Singapore, one of the first flats built by the HDB, photographed in 2021 — Seloloving, CC BY-SA 4.0
+- The Straits Times front page, 27 May 1961, reporting on relief efforts after the Bukit Ho Swee fire — The Straits Times, 27 May 1961 — "AID for FIRE VICTIMS" — two days after the Bukit Ho Swee fire, reporting the government's plan to build 12,000 low-cost flats on the razed land. (Source: The Straits Times, via NLB NewspaperSG / Wikimedia Commons. Public domain in Singapore: under the Copyright Act (Cap. 63) §96, a published edition's copyright expires if first published before 10 April 1987 — this issue is from 1961, well before that cutoff.) [REVIEW CREDIT]
+- Thirty-storey HDB flats along Strathmore Avenue in Queenstown, Singapore — Calvin Teo, CC BY-SA 2.5
+- Goh Keng Swee, photographed in 1967 — Australian News and Information Bureau, expired
 
 Sources:
 - Lim Kim San — Wikipedia
