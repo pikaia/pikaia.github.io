@@ -1,0 +1,49 @@
+=== FULL VIDEO ===
+
+Title:
+He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It
+
+Description:
+For decades, almost every Singaporean who sat for pre-university economics learned supply and demand from the same textbook: Elements of Economic Theory, first published in 1971 and reprinted through the 1980s as the standard A-Level and junior college text. Its lead author, Lim Chong Yah, taught a generation the clean logic of free markets. Then, for 30 years running Singapore's actual wage-setting machinery, he spent much of his career deciding when that logic should be overruled.
+
+Full story: https://da.gd/y3TJr3
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Lim Chong Yah — NLB Infopedia
+- Lim Chong Yah — Professor's Brief CV, 17 February 2009
+- Lim Chong Yah: An Autobiography — World Scientific
+- Singapore's National Wages Council: An Insider's View — World Scientific
+- Books & Arts: Lim Chong Yah — Economics & Society, Vol 1, 2024
+- Prominent economist Lim Chong Yah passes on, aged 91 — NTUC
+- If Only Singaporeans Stopped to Think: Professor Lim Chong Yah's wage shock therapy very risky, warns Labour chief Lim Swee Say
+- In defence of Lim Chong Yah — Tembusu College, NUS
+- 1979 to 1984: Economic Restructuring — SG101
+- Elements of economic theory — National Library Board Singapore catalogue
+- File:Oei Tiong Ham Building.jpg — Wikimedia Commons
+- File:Singapore Glass Factory 1951 strike.jpg — Wikimedia Commons
+- File:Singapore-Joiner-1973-74-WUS08244.jpg — Wikimedia Commons
+- File:Manasseh Meyer Building, National University of Singapore Bukit Timah Campus, October 2025.jpg — Wikimedia Commons
+- File:Singapore-Potter-1973-74-WUS08246.jpg — Wikimedia Commons
+- File:Singapore-Coffin Maker-1973-74-WUS08245.jpg — Wikimedia Commons
+- File:Singapore-Sidewalk barber in 1973-74-WUS08232.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It #Shorts
+
+Description:
+For decades, almost every Singaporean who sat for pre-university economics learned supply and demand from the same textbook: Elements of Economic Theory, first published in 1971 and reprinted through the 1980s as the standard A-Level and junior college text. Its lead author, Lim Chong Yah, taught a generation the clean logic of free markets. Then, for 30 years running Singapore's actual wage-setting machinery, he spent much of his career deciding when that logic should be overruled. #Shorts
+
+Full story: https://da.gd/y3TJr3
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

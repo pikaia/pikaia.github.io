@@ -1,0 +1,44 @@
+=== FULL VIDEO ===
+
+Title:
+The Shadow Tuition Economy: Singapore's $1.8 Billion Bet Against Its Own Meritocracy
+
+Description:
+The Ministry of Education has never made private tuition a requirement for anything. Officially, it doesn't exist as part of the system at all — no school asks whether a student attends it, no policy assumes it. And yet Singaporean households spent S$1.8 billion on it in 2023, more than seven in ten students now receive some form of it, and it has quietly become the single largest discretionary expense in a typical Singaporean family's education budget, ahead of enrichment classes, overseas trips, and everything else combined. A system built on the promise that merit alone decides who gets ahead has, almost by accident, let a shadow industry become one of the biggest levers on outcomes it never officially acknowledges.
+
+Full story: https://da.gd/Lcuf
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Singapore Families Spent $1.8B on Private Tuition in 2023, Here's What That Means for 2025 — SmileTutor
+- What the Data Actually Says About Tuition in Singapore — A Review of the Research — DeepThink Blog
+- Meritocracy: Time for an Update? — Ethos, Civil Service College
+- Why is the Cost of Living So High? Part 3: Inequality in Singapore — New Naratif
+- MTL Requirement for University Admission — NUS Office of Admissions
+- File:Popular Book Store, Singapore.jpg — Wikimedia Commons
+- File:NUS University Hall, Singapore.jpg — Wikimedia Commons
+- File:Singapore. Brass Bassa Road., KITLV 1404985.tiff — Wikimedia Commons
+- File:Classroom building in the 50s.JPG — Wikimedia Commons
+- File:Science building of CHS in 50s.JPG — Wikimedia Commons
+- File:Dormitory in the 50s.JPG — Wikimedia Commons
+- File:Class at Dover Court Preparatory School, Singapore.png — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Shadow Tuition Economy: Singapore's $1.8 Billion Bet Against Its Own Meritocracy #Shorts
+
+Description:
+The Ministry of Education has never made private tuition a requirement for anything. Officially, it doesn't exist as part of the system at all — no school asks whether a student attends it, no policy assumes it. And yet Singaporean households spent S$1.8 billion on it in 2023, more than seven in ten students now receive some form of it, and it has quietly become the single largest discretionary expense in a typical Singaporean family's education budget, ahead of enrichment classes, overseas trips, and everything else combined. A system built on the promise that merit alone decides who gets ahead has, almost by accident, let a shadow industry become one of the biggest levers on outcomes it never officially acknowledges. #Shorts
+
+Full story: https://da.gd/Lcuf
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

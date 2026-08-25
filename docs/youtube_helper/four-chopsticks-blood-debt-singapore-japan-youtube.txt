@@ -1,0 +1,47 @@
+=== FULL VIDEO ===
+
+Title:
+The Four Chopsticks and the Blood Debt: How Singapore Made Peace With Japan
+
+Description:
+Commuters passing Esplanade MRT station walk beneath four tapering white columns that locals have nicknamed the "four chopsticks" for as long as most of them can remember, without necessarily knowing what the monument actually marks. Underneath it are the remains of more than 600 people, recovered from mass graves found around the island in 1962 — victims of a massacre that Singapore and Japan spent the following decades finding an uneasy but lasting way to live with.
+
+Full story: https://da.gd/9Fev8I
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Sook Ching — Wikipedia
+- Operation Sook Ching — National Library Board, Singapore
+- "Blood debt" rally is held at City Hall — National Library Board, Singapore
+- Civilian War Memorial — Wikipedia
+- Civilian War Memorial — Roots.gov.sg, National Heritage Board
+- Japan–Singapore relations — Wikipedia
+- Singapore-Japan Strategic Partnership and JETRO's 70-Year Role — IndexBox
+- History — AOTS
+- Association for Overseas Technical Scholarship — Wikipedia
+- File:Civilian War Memorial, Singapore-3276.jpg — Wikimedia Commons
+- File:Yamashita and Percival discuss surrender terms.jpg — Wikimedia Commons
+- File:JapaneseMarchSgpCity.jpg — Wikimedia Commons
+- File:Shinto shrine in Shonan (Singapore) - 194210.jpg — Wikimedia Commons
+- File:Japanese Surrender at Singapore, 12 September 1945 A30492.jpg — Wikimedia Commons
+- File:Items found in mass graves due to the Sook Ching massacre of 1942 by the Japanese.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Four Chopsticks and the Blood Debt: How Singapore Made Peace With Japan #Shorts
+
+Description:
+Commuters passing Esplanade MRT station walk beneath four tapering white columns that locals have nicknamed the "four chopsticks" for as long as most of them can remember, without necessarily knowing what the monument actually marks. Underneath it are the remains of more than 600 people, recovered from mass graves found around the island in 1962 — victims of a massacre that Singapore and Japan spent the following decades finding an uneasy but lasting way to live with. #Shorts
+
+Full story: https://da.gd/9Fev8I
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

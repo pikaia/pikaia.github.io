@@ -1,0 +1,57 @@
+=== FULL VIDEO ===
+
+Title:
+The Lane Was Probably Named After My School. Neither Is There Anymore.
+
+Description:
+I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Hougang. Memory that old gets slippery, so I can't be certain of every detail, but I remember walking to school and to church there for years afterward. The walk from the Upper Serangoon Road junction took about twenty minutes. My favourite shortcut ran along a backlane to the left of Montfort School called Holy Innocents' Lane. I only learned recently, while researching this post, that the name traces back to a cluster of Catholic schools that once shared that stretch of Upper Serangoon Road. Montfort was one of them. Today, neither the lane nor the cemetery that once stood beside it appears on any map.
+
+Full story: https://da.gd/UPjPA
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtu.be/GTIpKWDZBNA, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+Sources:
+- Kangkar — Teochews in Singapore
+- Hougang — Singapore Infopedia, National Library Board
+- Kampong Wak Sumang, Punggol — BiblioAsia, National Library Board
+- History of Punggol — Roots.gov.sg
+- Montfort Secondary School — Wikipedia
+- The Montfort Story — Montfort Secondary School
+- Holy Innocents' High School — Wikipedia
+- Hougang Heritage Trail — Roots.gov.sg
+- The Teochew Catholics of Aukang — history.catholic.sg
+- Church of the Nativity of the Blessed Virgin Mary — Roots.gov.sg
+- Hougang — HDB Towns, Your Home
+- Low Thia Khiang — Wikipedia
+- File:Church of the Nativity of the Blessed Virgin Mary, October 2025.jpg — Wikimedia Commons
+- File:Zinc roofed house at Kampong Lor Buangkok.jpg — Wikimedia Commons
+- File:Hougang HDB.JPG — Wikimedia Commons
+- File:Punggol Park, Nov 06.JPG — Wikimedia Commons
+- File:Church of the Nativity of the Blessed Virgin Mary 5, Nov 06.JPG — Wikimedia Commons
+- File:Church of the Nativity of the Blessed Virgin Mary, night, July 2017.jpg — Wikimedia Commons
+- File:Village house with verandah and diner.jpg — Wikimedia Commons
+- File:Hougang HDB 3.JPG — Wikimedia Commons
+- File:Hougang location.svg — Wikimedia Commons
+- File:Sungei Serangoon, panorama, Nov 06.jpg — Wikimedia Commons
+- File:Hougang Single Member Constituency, 2025.svg — Wikimedia Commons
+- File:WorkersPartyHougangSupporters.jpg — Wikimedia Commons
+- OpenStreetMap — map data © OpenStreetMap contributors, ODbL
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Lane Was Probably Named After My School. Neither Is There Anymore. #Shorts
+
+Description:
+I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Hougang. Memory that old gets slippery, so I can't be certain of every detail, but I remember walking to school and to church there for years afterward. The walk from the Upper Serangoon Road junction took about twenty minutes. My favourite shortcut ran along a backlane to the left of Montfort School called Holy Innocents' Lane. I only learned recently, while researching this post, that the name traces back to a cluster of Catholic schools that once shared that stretch of Upper Serangoon Road. Montfort was one of them. Today, neither the lane nor the cemetery that once stood beside it appears on any map. #Shorts
+
+Full story: https://da.gd/UPjPA
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtube.com/shorts/rVX4caKw0os, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]

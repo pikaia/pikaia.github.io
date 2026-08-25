@@ -1,0 +1,51 @@
+=== FULL VIDEO ===
+
+Title:
+SkillsFuture at Ten: The Promise Still Outruns the Practice
+
+Description:
+At the end of 2025, a $500 credit that the government had handed to every Singaporean aged 25 and older quietly expired. It had been sitting in accounts since 2020, meant to nudge people into a course, a workshop, anything that counted as upskilling, before a deadline forced the decision. Roughly seven in ten eligible Singaporeans let it lapse unused. Weeks later, in January 2026, an MP was still asking Parliament whether the unclaimed money could at least be passed on to a family member — an elderly parent, say, or someone with a disability — before it disappeared back into the state's books for good. The Ministry said no: SkillsFuture credits are not transferable, "including [to] immediate family members," because the scheme is built around Singaporeans "taking ownership of their own lifelong learning journey."
+
+Full story: https://da.gd/jsirrg
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Celebrating a Decade of Empowering Singaporeans to Upskill and Reskill — SkillsFuture Singapore
+- PM Lawrence Wong at the SkillsFuture 10th Anniversary — Prime Minister's Office Singapore
+- SkillsFuture Movement — SkillsFuture Singapore
+- SkillsFuture credits utilisation (2019/2020 figures) — MOE Parliamentary Replies
+- SkillsFuture Credits (2022 figures) — MOE Parliamentary Replies
+- Encouraging More Singaporeans to Utilise SkillsFuture Credits Top-up Given in 2020 before Expiration — MOE Parliamentary Replies
+- Reasons for Low Take-Up Rate of $500 SkillsFuture Credit Top-Up — MOE Parliamentary Replies
+- Considerations and Efforts Taken to Increase Usage of $500 — MOE Parliamentary Replies
+- Data on Unutilised SkillsFuture Credits and Plans for Redeployment of Unutilised Funds — MOE Parliamentary Replies
+- Unutilised SkillsFuture Credits and Transfer Options to Immediate Family Members — MOE Parliamentary Replies
+- Inside Singapore: More workers upskilling proves SkillsFuture ROI — People Matters
+- Feature: Inside an AI class for seniors in Singapore — Xinhua
+- File:Parliament House Singapore.jpg — Wikimedia Commons
+- File:Tharman Shanmugaratnam Official photo 2023.tif — Wikimedia Commons
+- File:Signs pointing to Jurong Industrial Estate in Singapore June 1964.jpg — Wikimedia Commons
+- File:ITE College Central.jpg — Wikimedia Commons
+- File:Institute of Technical Education Headquarters, Nov 06.JPG — Wikimedia Commons
+- File:2018-skillsfuture-festival.jpg — Wikimedia Commons
+- File:Old Parliament House, Singapore, Feb 06.JPG — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+SkillsFuture at Ten: The Promise Still Outruns the Practice #Shorts
+
+Description:
+At the end of 2025, a $500 credit that the government had handed to every Singaporean aged 25 and older quietly expired. It had been sitting in accounts since 2020, meant to nudge people into a course, a workshop, anything that counted as upskilling, before a deadline forced the decision. Roughly seven in ten eligible Singaporeans let it lapse unused. Weeks later, in January 2026, an MP was still asking Parliament whether the unclaimed money could at least be passed on to a family member — an elderly parent, say, or someone with a disability — before it disappeared back into the state's books for good. The Ministry said no: SkillsFuture credits are not transferable, "including [to] immediate family members," because the scheme is built around Singaporeans "taking ownership of their own lifelong learning journey." #Shorts
+
+Full story: https://da.gd/jsirrg
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

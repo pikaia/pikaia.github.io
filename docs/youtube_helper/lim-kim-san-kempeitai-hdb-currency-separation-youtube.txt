@@ -1,0 +1,47 @@
+=== FULL VIDEO ===
+
+Title:
+Tortured by the Kempeitai, He Went On to Build a Nation's Homes
+
+Description:
+Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a young Peranakan businessman named Lim Kim San — not once, but twice — and tortured him on the strength of two accusations that couldn't both be true: that he was a communist, and that he was a British sympathiser. Two decades later, that same man would be the one Singaporeans called "Mr HDB," credited with solving the housing crisis of a newly independent nation. Almost nobody remembers the part in between.
+
+Full story: https://da.gd/8hIs
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtu.be/iTNZd1Op4fI, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+Sources:
+- Lim Kim San — Wikipedia
+- Lim Kim San — Biographical Notes, ISEAS Library
+- Lim Kim San — Roots.gov.sg
+- Lim Kim San — NLB Infopedia
+- Why Singapore rejected a common currency with Malaysia — CashChanger Stories
+- Bukit Ho Swee fire — Wikipedia
+- File:Lim Kim San in the 1940s.jpg — Wikimedia Commons
+- File:ST27May1961.jpg — Wikimedia Commons
+- File:Goh Keng Swee, 1967 (3x4 crop).jpg — Wikimedia Commons
+- File:Street in Shonan.JPG — Wikimedia Commons
+- File:Block 45 Stirling Road, Singapore.jpg — Wikimedia Commons
+- File:Lim Kim San, 1940.jpg — Wikimedia Commons
+- File:Raffles College graduates 1934.webp — Wikimedia Commons
+- File:Queenstown hdb.jpg — Wikimedia Commons
+- File:Civilian War Memorial, Singapore-3276.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+Tortured by the Kempeitai, He Went On to Build a Nation's Homes #Shorts
+
+Description:
+Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a young Peranakan businessman named Lim Kim San — not once, but twice — and tortured him on the strength of two accusations that couldn't both be true: that he was a communist, and that he was a British sympathiser. Two decades later, that same man would be the one Singaporeans called "Mr HDB," credited with solving the housing crisis of a newly independent nation. Almost nobody remembers the part in between. #Shorts
+
+Full story: https://da.gd/8hIs
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtube.com/shorts/4GwevYQQ8lQ, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]

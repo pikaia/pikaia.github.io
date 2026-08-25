@@ -1,0 +1,45 @@
+=== FULL VIDEO ===
+
+Title:
+The Satay Club Moved Four Times. The Satay Stayed the Same.
+
+Description:
+I remember going to the Satay Club as a kid, though when I looked into it as an adult I realised I couldn't say for certain which of its addresses I'd actually visited. That's because the place I have in my head moved four times before it finally closed for good — and the version most people my age remember, the one at the Esplanade, wasn't even where it started.
+
+Full story: https://da.gd/4djpFL
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Satay Club — Wikipedia
+- Satay Club — Singapore Infopedia, National Library Board
+- Original Alhambra Satay: The Last Survivor Of Singapore's Historical Satay Club — Eatbook.sg
+- S'pore's cheapest satay at 30 cents a stick still in operation — Mothership.SG
+- Geylang Bahru Satay Stall Has Kept 1980s Price, Still $0.30/Stick 41 Years Later — MustShareNews
+- File:Singapore-Satay-1973-74-WUS08150.jpg — Wikimedia Commons
+- File:Singapore-Hawker Centre.1973-74-WUS08151.jpg — Wikimedia Commons
+- File:Satay by the Bay.jpg — Wikimedia Commons
+- File:Singapore-Satay-1973-74-WUS08150-2.jpg — Wikimedia Commons
+- File:Singapore-Food stall-1973-74-WUS08236.jpg — Wikimedia Commons
+- File:Satay by the Bay (14314).jpg — Wikimedia Commons
+- File:Lau Pa Sat satay and shrimp 10-08-2025.jpg — Wikimedia Commons
+- File:Lau Pa Sat satay and shrimp 04-12-2024.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Satay Club Moved Four Times. The Satay Stayed the Same. #Shorts
+
+Description:
+I remember going to the Satay Club as a kid, though when I looked into it as an adult I realised I couldn't say for certain which of its addresses I'd actually visited. That's because the place I have in my head moved four times before it finally closed for good — and the version most people my age remember, the one at the Esplanade, wasn't even where it started. #Shorts
+
+Full story: https://da.gd/4djpFL
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

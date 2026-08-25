@@ -574,7 +574,9 @@ python scripts/stage_youtube_text.py \
     --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/
 ```
 
-It writes `preview-motion/<slug>-youtube.txt` (override with `--out`)
+It writes `docs/youtube_helper/<slug>-youtube.txt` (override with `--out`)
+— unlike `preview-motion/`, this folder is git-tracked, so these drafts
+keep real history
 with both `=== FULL VIDEO ===` and `=== SHORT ===` sections, assembled
 from data already sitting in the repo:
 
@@ -778,6 +780,6 @@ are tracked in this repo (they have been for every post so far) vs.
 | YouTube upload text stager | `scripts/stage_youtube_text.py` |
 | Narration audio + timing | `audio/<slug>.mp3`, `.timing.json`, `.srt` |
 | Rendered video/Short (untracked scratch) | `preview-motion/<slug>.mp4`, `<slug>-short.mp4` |
-| Staged YouTube upload text | `preview-motion/<slug>-youtube.txt` |
+| Staged YouTube upload text (tracked) | `docs/youtube_helper/<slug>-youtube.txt` |
 | Gap report (auto-generated, tracked) | `docs/video-gaps/<slug>-gap.txt` |
 | Post-writing conventions, charts, route animations, copyright rules | `CLAUDE.md` |

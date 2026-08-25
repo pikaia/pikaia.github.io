@@ -1,0 +1,48 @@
+=== FULL VIDEO ===
+
+Title:
+National Service Moved to an Island. The Salute Stayed the Same.
+
+Description:
+I did my National Service the way a lot of Singaporean men my age did: reported to CMPB, got sent to SAFTI for Basic Military Training, was housed there, and trained on the slopes of Peng Kang Hill. Recruits today go through more or less the same rite of passage, but almost none of it happens in the places I remember — BMT has been on Pulau Tekong for decades, and even CMPB itself has since moved.
+
+Full story: https://da.gd/6aQad
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Our History — MINDEF
+- Implementation of National Service — Roots.gov.sg
+- New CMPB fact sheet — MINDEF
+- MINDEF's new home for National Service enlistment — Mothership.SG
+- Our History — SAFTI Military Institute
+- MINDEF #NS55 post on Peng Kang Hill and the SAFTI training hills — X (Twitter)
+- Pulau Tekong — Wikipedia
+- Islands of Singapore: Pulau Tekong — SG101
+- File:BMT passing out parade 100115.jpg — Wikimedia Commons
+- File:SAFTI MI commissioning parade.jpg — Wikimedia Commons
+- File:Pulau Tekong BMTC.JPG — Wikimedia Commons
+- File:Old IPPT.jpg — Wikimedia Commons
+- File:Singapore T3 statue national service.jpg — Wikimedia Commons
+- File:Singapore Armed Forces Passing Out Parade at Our Tampines Hub 20230304 185445.jpg — Wikimedia Commons
+- File:Singapore Army Uniform.jpg — Wikimedia Commons
+- File:Singapore Armed Forces Passing Out Parade at Our Tampines Hub 20230304 190305.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+National Service Moved to an Island. The Salute Stayed the Same. #Shorts
+
+Description:
+I did my National Service the way a lot of Singaporean men my age did: reported to CMPB, got sent to SAFTI for Basic Military Training, was housed there, and trained on the slopes of Peng Kang Hill. Recruits today go through more or less the same rite of passage, but almost none of it happens in the places I remember — BMT has been on Pulau Tekong for decades, and even CMPB itself has since moved. #Shorts
+
+Full story: https://da.gd/6aQad
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

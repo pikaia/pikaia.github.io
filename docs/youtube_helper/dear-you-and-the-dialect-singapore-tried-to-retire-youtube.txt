@@ -1,0 +1,46 @@
+=== FULL VIDEO ===
+
+Title:
+Dear You and the Dialect Singapore Spent 45 Years Trying to Retire
+
+Description:
+A lot of Singaporeans in their 40s and 50s can understand Teochew — enough to follow a grandmother's stories, or catch the gist of a hawker's banter — without being able to hold a real conversation in it. That gap between hearing and speaking isn't an accident. It's the direct, measurable result of a language policy that started in 1979 and largely succeeded. Which is what made it strange, this year, to watch a Teochew-language film called Dear You sell out its original-dialect screenings in Singapore faster than the Mandarin-dubbed version everyone expected to dominate.
+
+Full story: https://da.gd/Q7rYW3
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Speak Mandarin Campaign — Wikipedia
+- Dear You (film) — Wikipedia
+- Sold-out Teochew film 'Dear You' gets eight more original-dialect screenings at GV — TimeOut Singapore
+- 'Dear You' review — Screen Daily
+- Chinese Hit 'Dear You' Sets Global Theatrical Run Via Damai — Variety
+- WATCH: Novel Coronavirus Safety Videos In Hokkien, Cantonese & Teochew — Wonderwall.sg
+- Yueh Hai Ching Temple — Wikipedia
+- File:Yueh Hai Ching Temple 8, Mar 06.JPG — Wikimedia Commons
+- File:Dear You film logo.png — Wikimedia Commons
+- File:KITLV - 106226 - Lambert & Co., G.R. - Singapore - Chinese theater in the Straits Settlements - circa 1900 — Wikimedia Commons
+- File:Former Lai Chun Yuen, Singapore.jpg — Wikimedia Commons
+- File:Great World Amusement Park.jpg — Wikimedia Commons
+- File:KITLV - 103776 - Chinese street vendor in Singapore - circa 1890 — Wikimedia Commons
+- File:KITLV - 29181 - Chinese temple in Singapore - 1895 — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+Dear You and the Dialect Singapore Spent 45 Years Trying to Retire #Shorts
+
+Description:
+A lot of Singaporeans in their 40s and 50s can understand Teochew — enough to follow a grandmother's stories, or catch the gist of a hawker's banter — without being able to hold a real conversation in it. That gap between hearing and speaking isn't an accident. It's the direct, measurable result of a language policy that started in 1979 and largely succeeded. Which is what made it strange, this year, to watch a Teochew-language film called Dear You sell out its original-dialect screenings in Singapore faster than the Mandarin-dubbed version everyone expected to dominate. #Shorts
+
+Full story: https://da.gd/Q7rYW3
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

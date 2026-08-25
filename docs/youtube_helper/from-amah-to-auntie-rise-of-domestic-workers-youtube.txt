@@ -1,0 +1,45 @@
+=== FULL VIDEO ===
+
+Title:
+From Amah to Auntie: How Singapore Came to Rely on Foreign Domestic Workers
+
+Description:
+Before there were foreign domestic workers, there were amahs — Cantonese women, some of them majie who had taken vows never to marry, who ran Singaporean households through the mid-20th century. By the 1970s they were a vanishing breed: as female literacy rose from 27% in 1957 to over 60% by 1970, the young women who might once have gone into domestic service were going into factories and offices instead. Singapore's households still needed the help. It just had to come from somewhere else.
+
+Full story: https://da.gd/3dVUO
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- A Lifetime of Labour: Cantonese Amahs in Singapore — BiblioAsia, National Library Board
+- Majie — National Library Board
+- Foreign Domestic Workers in Singapore — Lee Kuan Yew School of Public Policy, NUS
+- Maids in Singaporean households no longer a luxury — The Independent Singapore
+- Fact sheet: Foreign domestic workers in Singapore (basic statistics) — TWC2
+- Foreign workforce numbers — Ministry of Manpower
+- Number of Foreign Domestic Workers and Construction, Marine, Process Work Permit Holders — MOM, via data.gov.sg
+- Total Foreign Workforce — MOM, via data.gov.sg
+- File:Lucky Plaza, Orchard Road, Singapore.jpg — Wikimedia Commons
+- File:KITLV - 29190 - Ten domestic servants of various ethnic origins, Singapore - circa 1900 — Wikimedia Commons
+- File:KITLV - 103979 - Washing and bleaching field, Singapore - circa 1880 — Wikimedia Commons
+- File:KITLV - 29191 - Klingalese tailor Singapore - circa 1900 — Wikimedia Commons
+- File:KITLV - 50183 - Lambert & Co., G.R. - Singapore - Malaysian knife sharpeners in Singapore - circa 1900 — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+From Amah to Auntie: How Singapore Came to Rely on Foreign Domestic Workers #Shorts
+
+Description:
+Before there were foreign domestic workers, there were amahs — Cantonese women, some of them majie who had taken vows never to marry, who ran Singaporean households through the mid-20th century. By the 1970s they were a vanishing breed: as female literacy rose from 27% in 1957 to over 60% by 1970, the young women who might once have gone into domestic service were going into factories and offices instead. Singapore's households still needed the help. It just had to come from somewhere else. #Shorts
+
+Full story: https://da.gd/3dVUO
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

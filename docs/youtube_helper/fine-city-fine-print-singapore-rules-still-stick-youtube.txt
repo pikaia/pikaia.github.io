@@ -1,0 +1,46 @@
+=== FULL VIDEO ===
+
+Title:
+The Fine City's Fine Print: Which of Singapore's Famous Rules Still Stick
+
+Description:
+Earlier this year, a 43-year-old man named Tang Bo Xiang was fined S$2,500 and handed a 12-hour Corrective Work Order — cleaning public areas in a bright vest, in full view of passersby — for flicking a cigarette butt onto the ground. It was his 13th littering conviction since 2000. Nobody outside Singapore has ever built a joke around the littering law. The one everybody knows is the chewing gum ban, which — decades after it made international headlines — has actually gotten gentler with time. The rules people abroad think are Singapore's strictest and the ones actually landing five-figure fines in 2026 turn out to be almost entirely different lists.
+
+Full story: https://da.gd/r7PSr
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Chewing gum sales ban in Singapore — Wikipedia
+- Singapore long hair ban — Wikipedia
+- Singapore's Hippie Hysteria and the Ban on Long Hair — BiblioAsia, National Library Board
+- Environmental Public Health Act is enacted — Singapore History, National Library Board
+- Unflushed Toilets and Vaping: 9 Things That Will Cost You in Singapore — Fodor's
+- S'porean man, 43, convicted for littering for the 13th time — Mothership.SG
+- Stepped-Up Enforcement Against Littering — National Environment Agency
+- Section 377A (Singapore) — Wikipedia
+- Singapore: UN Human Rights Office welcomes repealing of Section 377A of the Penal Code — OHCHR
+- File:Singapore MRT Fines.jpg — Wikimedia Commons
+- File:Crowd at pink dot 16.jpg — Wikimedia Commons
+- File:Lee Kuan Yew, 1965 (cropped).jpg — Wikimedia Commons
+- File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons
+- File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Fine City's Fine Print: Which of Singapore's Famous Rules Still Stick #Shorts
+
+Description:
+Earlier this year, a 43-year-old man named Tang Bo Xiang was fined S$2,500 and handed a 12-hour Corrective Work Order — cleaning public areas in a bright vest, in full view of passersby — for flicking a cigarette butt onto the ground. It was his 13th littering conviction since 2000. Nobody outside Singapore has ever built a joke around the littering law. The one everybody knows is the chewing gum ban, which — decades after it made international headlines — has actually gotten gentler with time. The rules people abroad think are Singapore's strictest and the ones actually landing five-figure fines in 2026 turn out to be almost entirely different lists. #Shorts
+
+Full story: https://da.gd/r7PSr
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

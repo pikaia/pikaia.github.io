@@ -1,0 +1,42 @@
+=== FULL VIDEO ===
+
+Title:
+How Group Chats Rebuilt the Kampong for Singapore's Seniors
+
+Description:
+Somewhere in Singapore right now, a 78-year-old is checking a family WhatsApp group before breakfast, sending a good-morning sticker to a chat of ex-colleagues, or reading updates from her Active Ageing Centre's exercise group — quietly maintaining a social circle that, a decade ago, would have shrunk along with her mobility. It's an unglamorous kind of connection, but it's doing real work: a government push to get seniors online has ended up rebuilding something closer to old kampong-style closeness than anyone quite planned for.
+
+Full story: https://da.gd/R9u4w
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- MCI response to PQ on update on Digital Ambassador outreach effort — Ministry of Digital Development and Information
+- Seniors Go Digital Programme Factsheet — IMDA
+- Smartphone ownership, digital literacy, and the mediating role of social connectedness and loneliness in improving the wellbeing of community-dwelling older adults of low socio-economic status in Singapore — PLOS ONE
+- Building Digital Literacy in Older Adults of Low Socioeconomic Status in Singapore (Project Wire Up) — Journal of Medical Internet Research
+- File:Bishan Community Club.JPG — Wikimedia Commons
+- File:KITLV - 105810 - Lambert & Co., G.R. - Singapore - Kampong Buggis, the Buginese district of Singapore - circa 1900 — Wikimedia Commons
+- File:KITLV - 105811 - Lambert & Co., G.R. - Singapore - Kampong Baru at Singapore - circa 1890 — Wikimedia Commons
+- File:Malay Dwelling House Singapore., KITLV 1404990 — Wikimedia Commons
+- File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons
+- File:Singapore-Public Housing-1973-74-WUS08215.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+How Group Chats Rebuilt the Kampong for Singapore's Seniors #Shorts
+
+Description:
+Somewhere in Singapore right now, a 78-year-old is checking a family WhatsApp group before breakfast, sending a good-morning sticker to a chat of ex-colleagues, or reading updates from her Active Ageing Centre's exercise group — quietly maintaining a social circle that, a decade ago, would have shrunk along with her mobility. It's an unglamorous kind of connection, but it's doing real work: a government push to get seniors online has ended up rebuilding something closer to old kampong-style closeness than anyone quite planned for. #Shorts
+
+Full story: https://da.gd/R9u4w
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

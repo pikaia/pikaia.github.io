@@ -1,0 +1,49 @@
+=== FULL VIDEO ===
+
+Title:
+The Two Men Behind Singapore's Most Photographed Statue
+
+Description:
+Millions of people photograph the Merlion every year, and almost none of them could name the men who made it. That is not a knock on the tourists. Singapore itself has done a poor job remembering: the lion-headed, fish-tailed statue at Marina Bay is arguably the single most recognisable image the country has ever produced, more instantly "Singapore" in a photo than the flag or the skyline, and yet the two people responsible for it, a British fish expert and a self-taught local sculptor, both died within a year of each other in the late 1980s without much public notice.
+
+Full story: https://da.gd/zPhZS
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtu.be/w6Q-1Ps9k6Y, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+Sources:
+- Alec Fraser-Brunner — Wikipedia
+- Van Kleef Aquarium — Wikipedia
+- Lim Nang Seng — Wikipedia
+- Celebrating 50 Years of the Merlion: Stories Behind the National Icon — Roots.gov.sg, National Heritage Board
+- Unveiling of The Merlion Statue — SG101
+- MR LIM NANG SENG SCULPTING A MINIATURE MERLION STATUE, 1972 — National Archives of Singapore
+- Waterboat House Garden — Wikipedia
+- File:Merlion, Singapore.JPG — Wikimedia Commons
+- File:Merlion Closeup Large.JPG — Wikimedia Commons
+- File:Lim Nang Seng.jpg — Wikimedia Commons
+- File:Merlion and the Singapore Skyline.JPG — Wikimedia Commons
+- File:Rear view of the Merlion statue at Merlion Park, Singapore, with Marina Bay Sands in the distance - 20140307.jpg — Wikimedia Commons
+- File:Singapore Mini Merlion.JPG — Wikimedia Commons
+- File:Merlion statue at Tourism Court, Singapore - 20150329.jpg — Wikimedia Commons
+- File:2005 新加坡 - panoramio (2).jpg — Wikimedia Commons
+- File:Singapore Merlion in 1978.jpg — Wikimedia Commons
+- File:Former Merlion Park.JPG — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Two Men Behind Singapore's Most Photographed Statue #Shorts
+
+Description:
+Millions of people photograph the Merlion every year, and almost none of them could name the men who made it. That is not a knock on the tourists. Singapore itself has done a poor job remembering: the lion-headed, fish-tailed statue at Marina Bay is arguably the single most recognisable image the country has ever produced, more instantly "Singapore" in a photo than the flag or the skyline, and yet the two people responsible for it, a British fish expert and a self-taught local sculptor, both died within a year of each other in the late 1980s without much public notice. #Shorts
+
+Full story: https://da.gd/zPhZS
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtube.com/shorts/IEWgCwCW41I, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]

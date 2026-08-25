@@ -1,0 +1,45 @@
+=== FULL VIDEO ===
+
+Title:
+The Travel Bug: How Travelling Overseas Stopped Being Rare
+
+Description:
+For a lot of Singaporeans now in their 60s and 70s, going overseas was something that happened once or twice in a lifetime — a work posting, maybe a honeymoon, saved up for and planned around for months. Flying was priced for business travellers and the well-off, full-service and formal, the kind of trip you dressed up for. Today, the departure halls at Changi are full of people for whom none of that is true: students backpacking on a budget, retirees on their third cruise this year, whole families flying to Bangkok for a long weekend the way an earlier generation might have taken a bus to Malacca.
+
+Full story: https://da.gd/bm3Q
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Outbound Departures Of Singapore Residents By Mode Of Transport, Annual — ICA, via data.gov.sg
+- Median Gross Monthly Income From Employment (Including Employer CPF) — SINGSTAT, via data.gov.sg
+- Tigerair — Wikipedia
+- Jetstar Asia — Wikipedia
+- Scoot — Wikipedia
+- Google Maps — Wikipedia
+- Google Translate — Wikipedia
+- File:Changi Airport, Terminal 1, Departure Hall.JPG — Wikimedia Commons
+- File:Singapore International Airport control tower and terminal building, photographed February 1969 × July 1971.jpg — Wikimedia Commons
+- File:SAS airliner at Singapore International Airport, photographed February 1969 × July 1971.jpg — Wikimedia Commons
+- File:Malaysia-Singapore Airlines B707 at Zurich 1972.jpg — Wikimedia Commons
+- File:Singapore Airlines Boeing 727 Martin.jpg — Wikimedia Commons
+- File:Singapore Airlines Airbus A300 Green-1.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Travel Bug: How Travelling Overseas Stopped Being Rare #Shorts
+
+Description:
+For a lot of Singaporeans now in their 60s and 70s, going overseas was something that happened once or twice in a lifetime — a work posting, maybe a honeymoon, saved up for and planned around for months. Flying was priced for business travellers and the well-off, full-service and formal, the kind of trip you dressed up for. Today, the departure halls at Changi are full of people for whom none of that is true: students backpacking on a budget, retirees on their third cruise this year, whole families flying to Bangkok for a long weekend the way an earlier generation might have taken a bus to Malacca. #Shorts
+
+Full story: https://da.gd/bm3Q
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

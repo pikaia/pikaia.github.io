@@ -1,0 +1,44 @@
+=== FULL VIDEO ===
+
+Title:
+A Typical Day for Singapore's Silver Generation
+
+Description:
+For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win.
+
+Full story: https://da.gd/bJo1W
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Silver Support Scheme — CPF Board
+- Central Provident Fund — Wikipedia
+- PCS Active Ageing Centres
+- Our Tampines Hub — Wikipedia
+- File:Our Tampines Hub Town Square.jpg — Wikimedia Commons
+- File:Bedok Hawker Centre.jpg — Wikimedia Commons
+- File:CPF Building.jpg — Wikimedia Commons
+- File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons
+- File:Singapore-Hawker Centre.1973-74-WUS08151.jpg — Wikimedia Commons
+- File:Singapore-Public Housing-1973-74-WUS08215.jpg — Wikimedia Commons
+- File:Family planning, Singapore - UNESCO - PHOTO0000000902 0001.tiff — Wikimedia Commons
+- File:HDB living room (1970s and 1980s), Singapore History Gallery, National Museum of Singapore - 20151125-01.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+A Typical Day for Singapore's Silver Generation #Shorts
+
+Description:
+For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win. #Shorts
+
+Full story: https://da.gd/bJo1W
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

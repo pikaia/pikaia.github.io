@@ -1,0 +1,46 @@
+=== FULL VIDEO ===
+
+Title:
+The Doctor Who Shrank Singapore's Families, Then Became Its President
+
+Description:
+In 1969, Singapore's Parliament passed the Voluntary Sterilisation Act without a single vote against it — a law that would go on to help engineer one of the steepest fertility declines any country has seen in peacetime. It wasn't pushed through by a career politician. It was pushed through by a working obstetrician who, two years later, would be tapped by Lee Kuan Yew to become Singapore's second president — a job most people since have treated as ceremonial, a name and a signature, with no real memory of the population engineering he'd already done before he ever moved into the Istana.
+
+Full story: https://da.gd/tGrZpv
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Benjamin Sheares — Wikipedia
+- Benjamin Sheares — Roots.gov.sg
+- Dr Benjamin Sheares — The Istana
+- Benjamin Sheares — NLB Infopedia
+- Benjamin Sheares: Singapore president & gynaecologist — Tabla
+- Population planning in Singapore — Wikipedia
+- Demographics of Singapore — Wikipedia
+- File:Benjamin Sheares, 1951.jpg — Wikimedia Commons
+- File:Kandang Kerbau Hospital group photo.jpg — Wikimedia Commons
+- File:Benjamin Sheares at the University of Malaya in Singapore, 1951.jpg — Wikimedia Commons
+- File:Benjamin Sheares and Yeo Seh Geok, 1939.jpg — Wikimedia Commons
+- File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08140.jpg — Wikimedia Commons
+- File:Benjamin Sheares and his family.jpg — Wikimedia Commons
+- File:ST13May1981.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Doctor Who Shrank Singapore's Families, Then Became Its President #Shorts
+
+Description:
+In 1969, Singapore's Parliament passed the Voluntary Sterilisation Act without a single vote against it — a law that would go on to help engineer one of the steepest fertility declines any country has seen in peacetime. It wasn't pushed through by a career politician. It was pushed through by a working obstetrician who, two years later, would be tapped by Lee Kuan Yew to become Singapore's second president — a job most people since have treated as ceremonial, a name and a signature, with no real memory of the population engineering he'd already done before he ever moved into the Istana. #Shorts
+
+Full story: https://da.gd/tGrZpv
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

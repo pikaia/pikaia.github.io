@@ -1,0 +1,44 @@
+=== FULL VIDEO ===
+
+Title:
+The Ageism Gap: What Singapore Employers Say vs. What They Do
+
+Description:
+Somewhere in the CBD right now, a 61-year-old is putting together a resume for the first time in twenty years — not because she wants a hobby, but because her CPF payouts don't quite stretch to cover the month, and re-employment at her old company runs out at 68. On paper, the system is built for exactly this: government messaging, tripartite guidelines, and a formal re-employment law all say older workers are welcome to keep working. In practice, a lot of resumes like hers go nowhere, and the reasons why rarely make it into any official statement.
+
+Full story: https://da.gd/39J1jL
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Singapore raises retirement and re-employment ages to 65 and 70 — Pinsent Masons
+- Retirement and re-employment ages raised to 63 and 68 — Allen & Gledhill
+- Labour Force in Singapore, Advance Release 2025 — Ministry of Manpower
+- A call to companies: Keep reskilling older workers, you'll need them — NTUC
+- Workplace ageism: A top concern despite lower incidence rates in Singapore — Michael Page
+- Ageism greatest barrier in Singapore workplaces — HR Director Asia
+- File:Singapore Skyline Raffles Place.jpg — Wikimedia Commons
+- File:Devan Nair, 1953 (3x4 crop).png — Wikimedia Commons
+- File:Jek Yeun Thong, 1964.jpg — Wikimedia Commons
+- File:S Rajaratnam c. 1940s.jpg — Wikimedia Commons
+- File:CPF Building, Jan 06.JPG — Wikimedia Commons
+- File:Former Ministry of Labour Building, October 2025.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Ageism Gap: What Singapore Employers Say vs. What They Do #Shorts
+
+Description:
+Somewhere in the CBD right now, a 61-year-old is putting together a resume for the first time in twenty years — not because she wants a hobby, but because her CPF payouts don't quite stretch to cover the month, and re-employment at her old company runs out at 68. On paper, the system is built for exactly this: government messaging, tripartite guidelines, and a formal re-employment law all say older workers are welcome to keep working. In practice, a lot of resumes like hers go nowhere, and the reasons why rarely make it into any official statement. #Shorts
+
+Full story: https://da.gd/39J1jL
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

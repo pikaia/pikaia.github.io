@@ -1,0 +1,47 @@
+=== FULL VIDEO ===
+
+Title:
+Singapore's National Symbols Were All Written on a Deadline
+
+Description:
+Singapore's national anthem was not written for a nation. It was written for the reopening of a concert hall. That anthem, along with the flag flown outside every void deck and the pledge recited by every schoolchild, exists because two different governments needed something to point to on a tight deadline: once in 1959, when self-government arrived faster than anyone had planned for, and again in 1966, when a newly independent country was still absorbing the shock of race riots and an unwanted divorce from Malaysia.
+
+Full story: https://da.gd/E45Me
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Singapore flag, Singapore, 1960-1980 — Roots.gov.sg, National Heritage Board
+- Flag of Singapore — Wikipedia
+- Singapore's national flag — National Library Board, Singapore
+- Majulah Singapura: Its origins and adoption as Singapore's national anthem — Professor Bernard Tan, National Archives of Singapore
+- "Majulah Singapura" and Other Love Songs — BiblioAsia, National Library Board
+- Majulah Singapura - Composing a National Anthem — National Archives of Singapore
+- Majulah Singapura — Wikipedia
+- Singapore National Pledge recited #OnThisDay (24 Aug 1966) — SG101
+- 51 years ago, 500,000 students in S'pore took the first National Pledge on Aug. 24, 1966 — Mothership.SG
+- National Pledge (Singapore) — Wikipedia
+- 1964 race riots in Singapore — Wikipedia
+- Toh Chin Chye — Wikipedia
+- File:Flag of Singapore.svg — Wikimedia Commons
+- File:Zubir Said in 1960 (cropped).jpg — Wikimedia Commons
+- File:S Rajaratnam c. 1940s.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+Singapore's National Symbols Were All Written on a Deadline #Shorts
+
+Description:
+Singapore's national anthem was not written for a nation. It was written for the reopening of a concert hall. That anthem, along with the flag flown outside every void deck and the pledge recited by every schoolchild, exists because two different governments needed something to point to on a tight deadline: once in 1959, when self-government arrived faster than anyone had planned for, and again in 1966, when a newly independent country was still absorbing the shock of race riots and an unwanted divorce from Malaysia. #Shorts
+
+Full story: https://da.gd/E45Me
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

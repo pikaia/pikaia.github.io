@@ -1,0 +1,50 @@
+=== FULL VIDEO ===
+
+Title:
+Singapore 'Sold' Christmas Island in 1958 — Except It Never Owned It
+
+Description:
+Ask most Singaporeans about Christmas Island and you'll get some version of the same story: Singapore used to own it, and sold it off to Australia in 1958 for far less than it was worth. It's a tidy story — a small colonial outpost cashing in an island, a year before Singapore even got a real vote in its own affairs. It's also wrong. Singapore never owned Christmas Island, so there was nothing for it to sell.
+
+Full story: https://da.gd/0wtC
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Christmas Island never belonged to S'pore — Mothership.SG
+- Was Christmas Island Part of Singapore? — ExplorerSG
+- CHRISTMAS ISLAND BILL — UK Parliament, House of Commons Hansard, 12 May 1958
+- CHRISTMAS ISLAND BILL [H.L.] — UK Parliament, House of Lords Hansard, 24 April 1958
+- Christmas Island — National Archives of Australia fact sheet
+- Christmas Island — Wikipedia
+- Battle of Christmas Island — Wikipedia
+- Self-governance of Singapore — Wikipedia
+- North West Point Immigration Detention Centre — Wikipedia
+- Lim Yew Hock — Wikipedia
+- File:Flying Fish Cove (25341355156).jpg — Wikimedia Commons
+- File:Lim Yew Hock, 1956 (cropped).png — Wikimedia Commons
+- File:Christmas Island Immigration Detention Centre and the Lilac compound (5774458263).jpg — Wikimedia Commons
+- File:0-8-0 tender locomotive for the Christmas Island Phosphate Co.'s Railway by Peckett & Sons Ltd. of Bristol, No. 1824 of March 1931.jpg — Wikimedia Commons
+- File:Japanese Marines in Christmas Island 1942.jpg — Wikimedia Commons
+- File:Abdul Hamid bin Haji Jumat.jpg — Wikimedia Commons
+- File:Stamp Christmas Island 1958 2c.jpg — Wikimedia Commons
+- File:ST31May1959.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+Singapore 'Sold' Christmas Island in 1958 — Except It Never Owned It #Shorts
+
+Description:
+Ask most Singaporeans about Christmas Island and you'll get some version of the same story: Singapore used to own it, and sold it off to Australia in 1958 for far less than it was worth. It's a tidy story — a small colonial outpost cashing in an island, a year before Singapore even got a real vote in its own affairs. It's also wrong. Singapore never owned Christmas Island, so there was nothing for it to sell. #Shorts
+
+Full story: https://da.gd/0wtC
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

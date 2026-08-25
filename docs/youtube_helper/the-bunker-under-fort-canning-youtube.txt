@@ -1,0 +1,53 @@
+=== FULL VIDEO ===
+
+Title:
+The Bunker Under Fort Canning Hill
+
+Description:
+Beneath Fort Canning Hill, a quiet green space in the middle of the city, sits a concrete bunker most visitors to the park above never notice. Known as the Battlebox, it was once the underground command centre for the British Malaya Command, and it's roughly the size of three basketball courts, buried entirely out of sight.
+
+Full story: https://da.gd/XX9oGH
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtu.be/fywz7gSzT_c, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+Sources:
+- Battlebox — Wikipedia
+- File:Fort Canning Park Tree Tunnel.jpg — Wikimedia Commons
+- File:BattleBoxEntrance.JPG — Wikimedia Commons
+- File:Door of The Battle Box, Singapore - 20100306.jpg — Wikimedia Commons
+- File:Fort Canning Hill-1902.jpg — Wikimedia Commons
+- File:Lieutenant General Arthur Percival.jpg — Wikimedia Commons
+- File:Yamashita e Suzuki.jpg — Wikimedia Commons
+- File:British troops surrender in Singapore.png — Wikimedia Commons
+- File:Singaporesurrender.jpg — Wikimedia Commons
+- File:Sang nila utama garden.jpg — Wikimedia Commons
+- File:Singapore from the Sea June 1823 - Lt. Phillip Jackson.jpg — Wikimedia Commons
+- File:Part of Singapore Island (British Library India Office Records, 1825, detail).jpg — Wikimedia Commons
+- File:Fort Canning from the Singapore River - 1860–1900.jpg — Wikimedia Commons
+- File:20250628 oldchristiancemetery.jpg — Wikimedia Commons
+- File:Dispositions of the Garrison February-1942.png — Wikimedia Commons
+- File:Percival with war correspondents.jpg — Wikimedia Commons
+- File:Terauchi Hisaichi in Singapore 1942.png — Wikimedia Commons
+- File:Liberated British Prisoners of War in the Far East, 1945, HU 69968.jpg — Wikimedia Commons
+- File:In the Battle Box, Singapore - panoramio.jpg — Wikimedia Commons
+- File:Interior of the Battle Box, Singapore - 20110506-01.jpg — Wikimedia Commons
+- File:Interior of the Battle Box, Singapore - 20120722-01.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Bunker Under Fort Canning Hill #Shorts
+
+Description:
+Beneath Fort Canning Hill, a quiet green space in the middle of the city, sits a concrete bunker most visitors to the park above never notice. Known as the Battlebox, it was once the underground command centre for the British Malaya Command, and it's roughly the size of three basketball courts, buried entirely out of sight. #Shorts
+
+Full story: https://da.gd/XX9oGH
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[Video already published at https://youtube.com/shorts/-eVbKn77syE, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]

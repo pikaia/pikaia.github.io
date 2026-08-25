@@ -1,10 +1,12 @@
 """Assemble a first-draft YouTube upload text file for a post's video + Short.
 
 Local dev tool only - not part of the deployed Jekyll site. Produces
-preview-motion/<slug>-youtube.txt (or wherever --out points), the staged
-Title/Description text Chris pastes directly into YouTube Studio - see
-docs/production-pipeline.md section 9 for the full staging step and
-upload flow this feeds into.
+docs/youtube_helper/<slug>-youtube.txt (or wherever --out points), the
+staged Title/Description text Chris pastes directly into YouTube Studio
+- see docs/production-pipeline.md section 9 for the full staging step
+and upload flow this feeds into. Unlike preview-motion/ (untracked
+scratch - the rendered mp4s themselves), docs/youtube_helper/ is
+git-tracked so these drafts keep real history.
 
 This is a DRAFT generator, not a guarantee of publish-ready copy: the
 hook paragraph, Sources list, and da.gd short link come out ready to use
@@ -20,7 +22,7 @@ Usage:
         [scripts/video-configs/<slug>.py] \\
         [scripts/video-configs/<slug>-short.py] \\
         --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/ \\
-        [--voice bm_george] [--out preview-motion/<slug>-youtube.txt]
+        [--voice bm_george] [--out docs/youtube_helper/<slug>-youtube.txt]
 
 The two video-config paths are optional - a post that hasn't been
 through the video pipeline yet (no scripts/video-configs/<slug>.py)
@@ -329,7 +331,7 @@ def main() -> None:
     ap.add_argument("--post-url", required=True, help="The post's real live permalink (check sitemap.xml first)")
     ap.add_argument("--voice", default="bm_george")
     ap.add_argument("--shortener", choices=["dagd", "tinyurl", "none"], default="dagd")
-    ap.add_argument("--out", help="Defaults to preview-motion/<slug>-youtube.txt")
+    ap.add_argument("--out", help="Defaults to docs/youtube_helper/<slug>-youtube.txt")
     args = ap.parse_args()
 
     post_path = Path(args.post_path)
@@ -399,7 +401,7 @@ def main() -> None:
 
     out_text = "\n".join(out_lines) + "\n"
 
-    out_path = Path(args.out) if args.out else REPO_ROOT / "preview-motion" / f"{slug}-youtube.txt"
+    out_path = Path(args.out) if args.out else REPO_ROOT / "docs" / "youtube_helper" / f"{slug}-youtube.txt"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(out_text, encoding="utf-8")
     print(f"Wrote {out_path}", file=sys.stderr)

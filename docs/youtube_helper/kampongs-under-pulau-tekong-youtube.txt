@@ -1,0 +1,46 @@
+=== FULL VIDEO ===
+
+Title:
+The Kampongs Under Tekong: What Every NS Recruit Marches Through Without Knowing
+
+Description:
+Every enlisted man in Singapore has spent his first weeks of National Service marching through training areas called Selabin, Permatang, and San Yong Kong, without ever being told what those names actually mean. They aren't military codenames. They're the names of kampongs — real villages, with real families — that stood on Pulau Tekong until the island was cleared for the Singapore Armed Forces. The only thing left of them today is the geography recruits train on, still labelled with names nobody explains.
+
+Full story: https://da.gd/NfInx
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- Pulau Tekong — Wikipedia
+- Pulau Tekong — National Library Board
+- Pulau Tekong land reclamation — Infopedia, National Library Board
+- Pulau Tekong used to be 2 islands & here's everything else you didn't know about it — Mothership.SG
+- Written Reply to Parliamentary Question on Tekong Polder — Ministry of Sustainability and the Environment
+- Singapore completes first below-sea-level land reclamation at Pulau Tekong using Dutch-style empoldering — The Online Citizen
+- Tekong Polder — PUB, Singapore's National Water Agency
+- File:Pulau Tekong BMTC.JPG — Wikimedia Commons
+- File:An old house in Lorong Buangkok Singapore.JPG — Wikimedia Commons
+- File:Malay - village Pulo Brani Singapore (NYPL Hades-2359734-4044499).jpg — Wikimedia Commons
+- File:Malay village, Singapore (NYPL Hades-2359721-4044486).jpg — Wikimedia Commons
+- File:KITLV - 105811 - Kampong Baru at Singapore - circa 1890 — Wikimedia Commons
+- File:KITLV - 105810 - Kampong Buggis, the Buginese district of Singapore - circa 1900 — Wikimedia Commons
+- File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Kampongs Under Tekong: What Every NS Recruit Marches Through Without Knowing #Shorts
+
+Description:
+Every enlisted man in Singapore has spent his first weeks of National Service marching through training areas called Selabin, Permatang, and San Yong Kong, without ever being told what those names actually mean. They aren't military codenames. They're the names of kampongs — real villages, with real families — that stood on Pulau Tekong until the island was cleared for the Singapore Armed Forces. The only thing left of them today is the geography recruits train on, still labelled with names nobody explains. #Shorts
+
+Full story: https://da.gd/NfInx
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
