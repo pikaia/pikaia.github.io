@@ -184,6 +184,16 @@ python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   that widget may carry real hand-tuned data (published URLs, tuned
   pan/zoom) this script can't safely tell apart from something stale.
   Remove it by hand first, or add the marker comments yourself.
+- **Give a new slide a real `"ease"` value in the config, not just
+  `zoom`/`pan`** — the Python contract has always allowed an optional
+  per-slide `"ease"` key (`"ease-in"`/`"ease-out"`/`"ease-in-out"`/
+  `"linear"`, see CLAUDE.md's Motion variety note), but it's easy to
+  forget since `watch_video_lib.py`'s renderer ignores it. Skipping it
+  isn't a bug — the script just defaults to `"ease-in-out"` for every
+  slide — but it does lose the deliberate motion variety a hand-tuned
+  mix gives the finished widget. All 6 existing configs' real ease
+  values were audited and backfilled (see below); keep doing this for
+  new slides going forward.
 
 Verify locally (`jekyll serve`, see CLAUDE.md's intro) after running
 it: click Watch, confirm the image/caption/progress bar all advance
@@ -198,6 +208,17 @@ chart/route-walk slide the script flagged. Copy it from an existing
 post with one (e.g.
 `_posts/2026-07-28-japans-quiet-hand-in-building-jurong.md`) rather
 than retyping from memory if you ever do need to hand-edit.
+
+**Audited against all 6 posts that already have real, published
+widgets** (regenerate + diff against the live markup, nothing written
+to the actual posts) — every remaining difference is cosmetic (JS
+formatting style, auto-generated vs. hand-picked gradient IDs, JSON
+key spacing, trailing commas) or the one documented, by-design
+exception (a chart slide's flagged placeholder). No functional bugs.
+The one real gap the audit found — lost per-slide `ease` variety — is
+now fixed by backfilling real values into all 6 configs (see the ease
+note below); re-running the script on any of those posts today
+reproduces the live widget with no loss of motion variety.
 
 **Row markup** (place right after the first back-link, replacing a
 bare Listen-only widget if one exists):
