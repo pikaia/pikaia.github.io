@@ -60,8 +60,11 @@ HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr
 # Add new entries here as they're caught, rather than guessing indefinitely
 # from the doc/CLAUDE.md - always verify by ear against the real render.
 PRONUNCIATION_OVERRIDES = {
-    "Ng": "ˈɪŋ",  # anglicized "ing", same ending as "sing"/"ring" - applies
-                   # to "Ng" and "Ng's" (misaki appends the possessive itself)
+    "Ng": "əŋ",  # anglicized "ung" (schwa + ng), closer to how the Chinese
+                 # surname is actually said than the "ing" ending tried
+                 # first - Chris confirmed by ear it's more "ung" than
+                 # "ing". Applies to "Ng" and "Ng's" (misaki appends the
+                 # possessive itself)
     "stung": "stˈʌŋ",  # misaki's own lexicon wrongly gives "stung" the same
                         # phonemes as "strung" (an extra "r" sound baked in,
                         # confirmed by testing both against misaki.en.G2P
