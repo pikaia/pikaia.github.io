@@ -111,13 +111,14 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   # 1. Generate narration audio
   ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3
   ```
-  Example (real output for this post — a ~5.5 minute post, so ~343s of
-  audio is plausible; not a truncated file):
+  Example:
   ```
   # 1. Generate narration audio
-  $ ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
-  343.056000
+  ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
   ```
+  Real output for this post — a ~5.5 minute post, so ~343s of audio is
+  plausible, not a truncated file: `343.056000`.
+
   Should succeed with no error and print a duration that's plausible for
   the post's word count (a post with several minutes of prose should
   yield several minutes of audio, not a few seconds).
@@ -255,6 +256,15 @@ SCHEDULE = [
 TOTAL_DURATION = 361.125  # real value, matches the post's own TOTAL_DURATION
 TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
 ```
+
+Note this `361.125` won't match section 1's `343.056` example — they're two
+different Kokoro narration runs for the same post. `361.125` is the
+original narration behind the *live, already-published* video (what its
+own widget script's `TOTAL_DURATION` says); `343.056` is a fresh re-run of
+`generate_narration.py` against the post's current text, done later while
+walking through section 1. A live post's original narration and a freshly
+regenerated one for the same text won't line up to the second — that's
+expected, not a sign either number is wrong.
 
 ---
 
