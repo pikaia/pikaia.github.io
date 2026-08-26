@@ -10,7 +10,14 @@ Full story: https://da.gd/Q7rYW3
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Yueh Hai Ching Temple roof detail, Singapore — Sengkang / Wikimedia Commons
+- Chinese street vendor in Singapore, circa 1890 — KITLV collection, public domain
+- Logo of the 2026 film Dear You — Public domain — logo consists only of simple text/geometric shapes, below the threshold of originality for copyright
+- Former Lai Chun Yuen opera theatre building, Trengganu Street, Singapore — ashish100, CC BY 2.0
+- Chinese theater in the Straits Settlements, circa 1900 — Lambert & Co., KITLV collection, public domain
+- Entrance to Great World Amusement Park, Singapore, circa 1950 — National Archives of Singapore, public domain
+- Chinese temple in Singapore, 1895, identified as Thian Hock Keng — KITLV collection, public domain
 
 Sources:
 - Speak Mandarin Campaign — Wikipedia
@@ -39,8 +46,9 @@ Description:
 A lot of Singaporeans in their 40s and 50s can understand Teochew — enough to follow a grandmother's stories, or catch the gist of a hawker's banter — without being able to hold a real conversation in it. That gap between hearing and speaking isn't an accident. It's the direct, measurable result of a language policy that started in 1979 and largely succeeded. Which is what made it strange, this year, to watch a Teochew-language film called Dear You sell out its original-dialect screenings in Singapore faster than the Mandarin-dubbed version everyone expected to dominate. #Shorts
 
 Full story: https://da.gd/Q7rYW3
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/0bQhgDGgiaU
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Yueh Hai Ching Temple roof detail, Singapore — Sengkang / Wikimedia Commons
