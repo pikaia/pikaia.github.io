@@ -62,6 +62,12 @@ HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr
 PRONUNCIATION_OVERRIDES = {
     "Ng": "ˈɪŋ",  # anglicized "ing", same ending as "sing"/"ring" - applies
                    # to "Ng" and "Ng's" (misaki appends the possessive itself)
+    "stung": "stˈʌŋ",  # misaki's own lexicon wrongly gives "stung" the same
+                        # phonemes as "strung" (an extra "r" sound baked in,
+                        # confirmed by testing both against misaki.en.G2P
+                        # directly - not a post-text or code issue, an
+                        # upstream dictionary bug) - caught by ear on the
+                        # fishball-noodle post ("what stung was...")
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
