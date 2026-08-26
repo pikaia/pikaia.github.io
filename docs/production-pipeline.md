@@ -664,32 +664,34 @@ This does two things, both instantly (no rendering of the real video):
 
 ## 6. Render the main video
 
-```
-python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4
-```
-
-**Example:**
-
-```
-python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4
-```
-
 A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
-roughly 15-25 minutes for a 5-6 minute video. **On Windows, do not run
-this as a foreground Bash/PowerShell call and do not rely on
-`run_in_background`** — both are capped at a 10-minute tool timeout and
-will get silently killed mid-render. Launch it as a genuinely
-OS-detached process instead:
+roughly 15-25 minutes for a 5-6 minute video. **Always launch it as a
+genuinely OS-detached process — never as a plain foreground Bash/
+PowerShell call, and never via `run_in_background`.** Both of those are
+capped at a 10-minute timeout and will get silently killed mid-render
+(a render started in plain bash and left to "die" partway through has
+already cost a wasted restart in practice - use `Start-Process` from
+the start, not as a fallback after a foreground attempt fails):
 
 ```powershell
 Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/<slug>-render.log -RedirectStandardError preview-motion/<slug>-render.err
 ```
 
-Example:
+**Example:**
 
 ```powershell
 Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.log -RedirectStandardError preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.err
 ```
+
+The command inside `-ArgumentList` is the same one `watch_video_lib.py`
+always takes:
+
+```
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4
+```
+
+— shown here for reference only. Run it through `Start-Process` above,
+not directly.
 
 Poll progress with `Get-Content preview-motion/<slug>-render.log -Tail
 20` or `Get-Process python` — don't kill it just because the output
