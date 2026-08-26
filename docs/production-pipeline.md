@@ -817,13 +817,23 @@ the one case worth a speed sanity-check (see
 slowdown (~0.2fps), already fixed in the shared engine, but worth
 knowing about if a future render looks unusually slow.
 
-Run the same `--check-only` then render commands as sections 5-6,
-swapping in the `-short.py` config and a `preview-motion/<slug>-short.mp4`
-output path (Shorts are short enough to usually finish within the
-10-minute tool timeout, but the `Start-Process` pattern is still safe
-to use).
+Run the same `--check-only` then render commands as sections 5-6, but
+**pointing at the `-short.py` config, not the main one** — same
+`watch_video_lib.py` invocation, different config file — and a
+`preview-motion/<slug>-short.mp4` output path (Shorts are short enough
+to usually finish within the 10-minute tool timeout, but the
+`Start-Process` pattern is still safe to use):
 
-**Example:**
+```
+# 7. Render the YouTube Short
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4
+```
+
+**Example** (note the `-short` suffix on the config path in both lines
+below — it's easy to instead reuse the main `<slug>.py` config out of
+habit from sections 5-6, which silently renders the full-length video
+again instead of the Short):
 
 ```
 # 7. Render the YouTube Short
