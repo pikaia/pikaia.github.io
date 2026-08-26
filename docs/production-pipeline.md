@@ -787,15 +787,22 @@ Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --confi
 ```
 
 The command inside `-ArgumentList` is the same one `watch_video_lib.py`
-always takes:
+always takes — it's also fine to run this plain form directly in your
+own bash terminal (not through Claude's tool), one post after another,
+if you'd rather just watch it run and don't mind tying up that window
+for the full 15-25+ minutes:
 
 ```
 # 6. Render the main video
-python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4 2>&1 | tee -a logs/<slug>.log
 ```
 
-— shown here for reference only. Run it through `Start-Process` above,
-not directly.
+**Example:**
+
+```
+# 6. Render the main video
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+```
 
 Poll progress with `Get-Content preview-motion/<slug>-render.log -Tail
 20` or `Get-Process python` — don't kill it just because the output
