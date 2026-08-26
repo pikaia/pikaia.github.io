@@ -59,6 +59,12 @@ schedule mid-stream after adding a late image is wasted work. Treat
 image-gathering as closed before starting narration.
 
 **Logging each step (optional, useful when prepping multiple posts):**
+`logs/` is git-ignored, so it won't exist yet on a fresh checkout —
+create it once before first use (`mkdir logs` in bash, `New-Item
+-ItemType Directory -Force logs` in PowerShell). `tee`/`Tee-Object`
+create the log *file* but not a missing parent directory, so piping
+into `logs/<slug>.log` before that folder exists fails outright.
+
 Pipe any command in this doc through `tee`/`Tee-Object` to save its
 output to a per-post log file *in addition to* printing it to the
 console as normal — nothing about the command's own behavior changes.
