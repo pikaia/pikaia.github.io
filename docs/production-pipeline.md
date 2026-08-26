@@ -69,7 +69,17 @@ Pipe any command in this doc through `tee`/`Tee-Object` to save its
 output to a per-post log file *in addition to* printing it to the
 console as normal — nothing about the command's own behavior changes.
 Use `-a`/`-Append` so every step's output accumulates into the same
-file rather than overwriting the previous step's:
+file rather than overwriting the previous step's.
+
+**`2>&1` is not optional** — most of these scripts print their real
+status (`OK: ...`, `NOTE: ...`, gap-report/smoothness results) to
+stderr, not stdout. Without `2>&1` merging stderr into the piped
+stream first, `tee` only ever sees stdout: the command still looks
+completely normal on your own screen (stderr always prints straight to
+the terminal, pipe or not), but the log file silently ends up empty —
+this happened on the very first real use of this feature, caught only
+because the log came back blank after an otherwise fully successful
+run.
 
 ```
 # bash
