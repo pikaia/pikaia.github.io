@@ -48,6 +48,38 @@ ITALIC_CAPTION_RE = re.compile(r"^\*[^*].*[^*]\*$", re.DOTALL)
 # mistaken for markup and thcorw off the depth count.
 HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr|td|th)\b", re.IGNORECASE)
 
+# Words Kokoro's phonemizer (misaki) doesn't recognize and falls back to
+# spelling out letter-by-letter instead of pronouncing - e.g. "Ng" (a
+# Chinese surname, a syllabic nasal English can't say word-initially) came
+# out as "N, G" on the fishball-noodle post. Keys match the exact casing
+# as it appears in post text (misaki's lexicon lookup is case-sensitive
+# unless the word is ALL CAPS); values are misaki/espeak-style IPA-ish
+# phoneme strings, found by testing candidates against
+# `misaki.en.G2P(british=False)` directly (e.g. borrowing the "-ing" ending
+# from a known word like "sing" -> "sˈɪŋ") until the output sounds right.
+# Add new entries here as they're caught, rather than guessing indefinitely
+# from the doc/CLAUDE.md - always verify by ear against the real render.
+PRONUNCIATION_OVERRIDES = {
+    "Ng": "ˈɪŋ",  # anglicized "ing", same ending as "sing"/"ring" - applies
+                   # to "Ng" and "Ng's" (misaki appends the possessive itself)
+}
+
+# Abbreviated titles that misaki can't pronounce (falls back to "?", same
+# failure mode as PRONUNCIATION_OVERRIDES above) - fixed by expanding the
+# text itself before synthesis instead of a phoneme override, since a
+# phoneme override still leaves the abbreviation's period as a literal
+# mid-sentence pause token (tested: "Fr." -> phoneme override still
+# produced an audible full-stop pause right after the word; text expansion
+# to "Father" avoids the period entirely). Deliberately NOT pre-expanding
+# every entry in ABBREVIATIONS above - several are ambiguous out of context
+# ("St." = Saint or Street, "No." = Number or the word "no") and would risk
+# a wrong expansion sounding worse than the original gap. Add an entry here
+# only once actually heard mispronounced in a real render, matching
+# PRONUNCIATION_OVERRIDES's policy above.
+ABBREVIATION_EXPANSIONS = {
+    re.compile(r"\bFr\.(?=\s)"): "Father",
+}
+
 
 def _process_block(block: str, narrative: list[str]) -> bool:
     """Returns False if this block signals the Sources divider (stop)."""
@@ -63,6 +95,8 @@ def _process_block(block: str, narrative: list[str]) -> bool:
     cleaned = GALLERY_LINK_RE.sub("", block)
     cleaned = MD_LINK_RE.sub(r"\1", cleaned)
     cleaned = BOLD_RE.sub(r"\1", cleaned)
+    for pattern, replacement in ABBREVIATION_EXPANSIONS.items():
+        cleaned = pattern.sub(replacement, cleaned)
     cleaned = cleaned.strip()
     if cleaned:
         narrative.append(cleaned)
@@ -175,6 +209,7 @@ def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> 
         warnings.simplefilter("ignore")
         from kokoro import KPipeline
         pipeline = KPipeline(lang_code=lang_code)
+        pipeline.g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
 
     all_audio = []
     sentences_out: list[dict] = []
