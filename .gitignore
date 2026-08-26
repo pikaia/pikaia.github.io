@@ -3,3 +3,4 @@ _site/
 .jekyll-metadata
 __pycache__/
 .video-cache/
+logs/

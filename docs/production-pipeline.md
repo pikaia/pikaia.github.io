@@ -58,6 +58,42 @@ dwell time both depend on the final image set, so redesigning the
 schedule mid-stream after adding a late image is wasted work. Treat
 image-gathering as closed before starting narration.
 
+**Logging each step (optional, useful when prepping multiple posts):**
+Pipe any command in this doc through `tee`/`Tee-Object` to save its
+output to a per-post log file *in addition to* printing it to the
+console as normal — nothing about the command's own behavior changes.
+Use `-a`/`-Append` so every step's output accumulates into the same
+file rather than overwriting the previous step's:
+
+```
+# bash
+<command> 2>&1 | tee -a logs/<slug>.log
+```
+
+```powershell
+# PowerShell
+<command> 2>&1 | Tee-Object -FilePath logs\<slug>.log -Append
+```
+
+A one-line header before each step keeps the log scannable when Claude
+reads it back later:
+
+```
+# bash
+echo "=== Step 3: watch_video_lib.py --check-only ===" | tee -a logs/<slug>.log
+```
+
+```powershell
+# PowerShell
+"=== Step 3: watch_video_lib.py --check-only ===" | Tee-Object -FilePath logs\<slug>.log -Append
+```
+
+`logs/` is git-ignored scratch, same treatment as `preview-motion/` —
+nothing here needs to be committed. Once you've run a step, just tell
+Claude "done with steps 1-3 of `<slug>`" and point at `logs/<slug>.log`
+instead of pasting the console output directly — Claude can read the
+file itself and pick up from there.
+
 ---
 
 ## 1. Generate narration audio
@@ -1174,6 +1210,7 @@ git push
 | YouTube upload text stager | `scripts/stage_youtube_text.py` |
 | Narration audio + timing | `audio/<slug>.mp3`, `.timing.json`, `.srt` |
 | Rendered video/Short (untracked scratch) | `preview-motion/<slug>.mp4`, `<slug>-short.mp4` |
+| Per-post step logs, `tee`'d (git-ignored scratch) | `logs/<slug>.log` |
 | Staged YouTube upload text (tracked) | `docs/youtube_helper/<slug>-youtube.txt` |
 | Gap report (auto-generated, tracked) | `docs/video-gaps/<slug>-gap.txt` |
 | Post-writing conventions, charts, route animations, copyright rules | `CLAUDE.md` |
