@@ -62,13 +62,35 @@ image-gathering as closed before starting narration.
 
 ## 1. Generate narration audio
 
+**Always sanity-check the extracted text first with `--dry-run`**
+(prints exactly what will be synthesized) before committing to a real
+run — catches leaked raw HTML/JS from a chart or floated-image block
+that the parser's tag whitelist doesn't yet cover:
+
 ```
-python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
+python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run
 ```
 
 **Example** (the Jalan Payoh Lai / Kangkar post, used throughout this
 doc as a running worked example — slug
 `jalan-payoh-lai-kangkar-montfort-nativity-church`):
+
+```
+python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run
+```
+
+If something looks wrong (JS/CSS text leaking into the narration),
+extend `HTML_TAG_RE` in `scripts/generate_narration.py` to whitelist
+the new tag before generating for real.
+
+Once the dry-run output looks right, generate for real (same command,
+without `--dry-run`):
+
+```
+python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
+```
+
+Example:
 
 ```
 python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
@@ -77,20 +99,6 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
 - Voice defaults to `bm_george` (British male) — this is the sitewide
   standard, don't override it unless explicitly asked to A/B test
   another voice.
-- Always sanity-check the extracted text first with `--dry-run` (prints
-  exactly what will be synthesized) before committing to a real run —
-  catches leaked raw HTML/JS from a chart or floated-image block that
-  the parser's tag whitelist doesn't yet cover:
-  ```
-  python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run
-  ```
-  Example:
-  ```
-  python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run
-  ```
-  If something looks wrong (JS/CSS text leaking into the narration),
-  extend `HTML_TAG_RE` in `scripts/generate_narration.py` to whitelist
-  the new tag before generating for real.
 - Output: `audio/<slug>.mp3`, `audio/<slug>.timing.json` (real
   per-sentence `{text, offset_s, duration_s}`, driven off Kokoro's own
   synthesis — not guessed even splits), and `audio/<slug>.srt`.
