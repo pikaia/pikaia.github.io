@@ -68,6 +68,7 @@ run — catches leaked raw HTML/JS from a chart or floated-image block
 that the parser's tag whitelist doesn't yet cover:
 
 ```
+# 1. Generate narration audio
 python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run
 ```
 
@@ -76,6 +77,7 @@ doc as a running worked example — slug
 `jalan-payoh-lai-kangkar-montfort-nativity-church`):
 
 ```
+# 1. Generate narration audio
 python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run
 ```
 
@@ -87,12 +89,14 @@ Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 
 ```
+# 1. Generate narration audio
 python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
 ```
 
 Example:
 
 ```
+# 1. Generate narration audio
 python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
 ```
 
@@ -104,11 +108,13 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   synthesis — not guessed even splits), and `audio/<slug>.srt`.
 - Verify the file is real (not truncated) before moving on:
   ```
+  # 1. Generate narration audio
   ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3
   ```
   Example (real output for this post — a ~5.5 minute post, so ~343s of
   audio is plausible; not a truncated file):
   ```
+  # 1. Generate narration audio
   $ ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
   343.056000
   ```
@@ -119,10 +125,12 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   occasional Kokoro issue), split the post's paragraphs into 2-8 pieces
   and synthesize each separately, then concatenate:
   ```
+  # 1. Generate narration audio
   ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3
   ```
   Example:
   ```
+  # 1. Generate narration audio
   ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
   ```
 
@@ -131,12 +139,14 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
 ## 2. Insert the Listen widget
 
 ```
+# 2. Insert the Listen widget
 python scripts/insert_listen_widget.py _posts/<file>.md <slug>
 ```
 
 **Example:**
 
 ```
+# 2. Insert the Listen widget
 python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church
 ```
 
@@ -256,12 +266,14 @@ percentage strings, SCHEDULE to imageSchedule, pasting in the real
 sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
+# 4. Author the Watch widget
 python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py
 ```
 
 **Example:**
 
 ```
+# 4. Author the Watch widget
 python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
 ```
 
@@ -271,12 +283,14 @@ python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   simply gets Listen+Watch only; the script prints a reminder to
   re-run once the URL(s) exist:
   ```
+  # 4. Author the Watch widget
   python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...
   ```
   Example, once both are known (this is exactly section 11's "wire the
   URLs in" step, now folded into the same command instead of a separate
   hand-edit):
   ```
+  # 4. Author the Watch widget
   python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os
   ```
 - **Safe to re-run** — the generated block is wrapped in
@@ -634,12 +648,14 @@ Before committing to a full render (which can take 15-25+ minutes),
 run the cheap pre-check:
 
 ```
+# 5. Check smoothness and review the gap report
 python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only
 ```
 
 **Example:**
 
 ```
+# 5. Check smoothness and review the gap report
 python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only
 ```
 
@@ -673,21 +689,33 @@ This does two things, both instantly (no rendering of the real video):
 ## 6. Render the main video
 
 A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
-roughly 15-25 minutes for a 5-6 minute video. **Always launch it as a
-genuinely OS-detached process — never as a plain foreground Bash/
-PowerShell call, and never via `run_in_background`.** Both of those are
-capped at a 10-minute timeout and will get silently killed mid-render
-(a render started in plain bash and left to "die" partway through has
-already cost a wasted restart in practice - use `Start-Process` from
-the start, not as a fallback after a foreground attempt fails):
+roughly 15-25 minutes for a 5-6 minute video. **If Claude is running
+this command through its own Bash/PowerShell tool, always launch it as
+a genuinely OS-detached process — never as a plain foreground call, and
+never via `run_in_background`.** Both of those are capped at a 10-minute
+tool timeout (confirmed: `run_in_background` does not bypass it, it
+just keeps the command from blocking Claude's own turn while it runs)
+and will get silently killed mid-render (a render started in plain bash
+and left to "die" partway through has already cost a wasted restart in
+practice - use `Start-Process` from the start, not as a fallback after
+a foreground attempt fails). **This cap is specific to Claude's own
+tool invocations** — if you're typing the command yourself into your
+own terminal window, no such limit exists and a plain foreground run
+will simply run to completion; `Start-Process` is still worth using
+there too, since it detaches the render from that terminal session so
+it survives even if the window gets closed, but a "stuck at 10 minutes"
+symptom in a human-run terminal points to something else (an actual
+crash, the window closing, the machine sleeping) rather than this cap:
 
 ```powershell
+# 6. Render the main video
 Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/<slug>-render.log -RedirectStandardError preview-motion/<slug>-render.err
 ```
 
 **Example:**
 
 ```powershell
+# 6. Render the main video
 Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4" -WindowStyle Hidden -RedirectStandardOutput preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.log -RedirectStandardError preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-render.err
 ```
 
@@ -695,6 +723,7 @@ The command inside `-ArgumentList` is the same one `watch_video_lib.py`
 always takes:
 
 ```
+# 6. Render the main video
 python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4
 ```
 
@@ -797,6 +826,7 @@ to use).
 **Example:**
 
 ```
+# 7. Render the YouTube Short
 python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only
 python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4
 ```
@@ -808,12 +838,14 @@ python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai
 Don't trust that a render "looks done" — verify:
 
 ```
+# 8. Verify both files
 ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4
 ```
 
 Example:
 
 ```
+# 8. Verify both files
 ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4
 ```
 
@@ -828,6 +860,7 @@ undetectable by spot-check frame extraction alone). Then pull 1-2 spot
 frames at meaningful timestamps and eyeball them:
 
 ```
+# 8. Verify both files
 ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png
 ```
 
@@ -836,6 +869,7 @@ Example (a frame at t=110.3s should land on the "church exterior
 schedule in section 3):
 
 ```
+# 8. Verify both files
 ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png
 ```
 
@@ -849,6 +883,7 @@ moment.
 Generate the draft with `scripts/stage_youtube_text.py`:
 
 ```
+# 9. Stage the YouTube upload text file
 python scripts/stage_youtube_text.py \
     _posts/<file>.md \
     scripts/video-configs/<slug>.py \
@@ -862,6 +897,7 @@ omitted, per section 3's note; `--out` is shown explicitly even though
 it matches the default, for clarity):
 
 ```
+# 9. Stage the YouTube upload text file
 python scripts/stage_youtube_text.py \
     _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
     --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/ \
@@ -1043,6 +1079,7 @@ are tracked in this repo (they have been for every post so far) vs.
 **Example:**
 
 ```
+# 12. Commit and push
 git add _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
         scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py \
         scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py \
