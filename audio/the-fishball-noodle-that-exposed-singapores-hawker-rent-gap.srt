@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:06,400
+The $2.70 Fishball Noodle That Exposed Singapore's Hawker Rent Gap
+
+2
+00:00:06,400 --> 00:00:18,725
+In July 2015, a 24-year-old hawker named Douglas Ng went to a tender briefing for a new government-run hawker centre in Bukit Panjang and came away furious.
+
+3
+00:00:18,725 --> 00:00:26,050
+His handmade fishball noodles, he was told, had to sell for a minimum of $2.70.
+
+4
+00:00:26,050 --> 00:00:33,025
+A stall selling pasta at the same centre could charge a minimum of $5.80.
+
+5
+00:00:33,025 --> 00:00:43,500
+Ng did the math out loud on Facebook: at $2.70 a bowl, after ingredients and labour, he was clearing about fifty cents of profit.
+
+6
+00:00:43,500 --> 00:00:58,200
+Ng's post, later picked up by the Singapore food outlet Makansutra, put the grievance plainly: "They say my fishball noodle must be sold at a minimum of $2.70 as there are poor and needy people around.
+
+7
+00:00:58,200 --> 00:01:01,350
+I understand and can accommodate.
+
+8
+00:01:01,350 --> 00:01:07,575
+But they say if you sell pasta, you can sell at minimum of $5.80."
+
+9
+00:01:07,575 --> 00:01:15,275
+It wasn't that Ng objected to keeping food affordable — he said outright that he understood and could work with that.
+
+10
+00:01:15,275 --> 00:01:21,175
+What stung was that "affordable" seemed to apply to some cuisines and not others.
+
+11
+00:01:21,175 --> 00:01:25,625
+The dispute was about more than one man's bowl of noodles.
+
+12
+00:01:25,625 --> 00:01:42,075
+Ng, then running The Fishball Story out of Golden Mile Food Centre, had entered NTUC Foodfare's open tender for a stall at the incoming Bukit Panjang Hawker Centre — one of more than 300 bids competing for 32 stalls.
+
+13
+00:01:42,075 --> 00:01:44,150
+He wasn't selected.
+
+14
+00:01:44,150 --> 00:02:02,650
+NTUC Foodfare later explained its process publicly: shortlisted bidders were scored on a system that weighted proposed rent at only 40%, with the remaining 60% covering food quality, variety, pricing, operating hours, and experience.
+
+15
+00:02:02,650 --> 00:02:06,450
+Losing wasn't simply a matter of Ng's price.
+
+16
+00:02:06,450 --> 00:02:15,800
+But the price-floor complaint pointed at something real and structural underneath it — one that a single tender result doesn't fully explain.
+
+17
+00:02:15,800 --> 00:02:22,900
+Singapore's hawker centres run on two very different rent structures, depending on who holds the lease.
+
+18
+00:02:22,900 --> 00:02:35,375
+Hawkers who have kept their stalls since the original waves of government hawker resettlement decades ago pay heavily subsidized rents, often carried over with the stall itself.
+
+19
+00:02:35,375 --> 00:02:41,325
+Newer hawkers, competing through open tender, pay whatever the bidding process sets.
+
+20
+00:02:41,325 --> 00:03:07,725
+A September 2023 parliamentary reply from then-Minister for Sustainability and the Environment Grace Fu put real numbers to the gap: subsidized legacy rents at the time ran between $192 and $384 a month, while the median rent for a non-subsidized stall was $1,250 a month — three to six times as much, depending on which end of the subsidized range you compare it to.
+
+21
+00:03:07,725 --> 00:03:23,950
+The same reply noted that the share of subsidized stalls had fallen from roughly 40% to roughly 30% over the preceding decade, as pioneer-generation hawkers retire and their stalls revert to market-rate tender.
+
+22
+00:03:23,950 --> 00:03:33,150
+That gap is the real reason "why can't you charge $2.50 like the auntie next door" doesn't hold up as a comparison.
+
+23
+00:03:33,150 --> 00:03:38,400
+The auntie next door may be paying a few hundred dollars a month in rent.
+
+24
+00:03:38,400 --> 00:03:46,025
+The newcomer trying to break into the trade could be paying five or six times that before a single bowl is sold.
+
+25
+00:03:46,025 --> 00:03:48,700
+Ng didn't leave the trade over it.
+
+26
+00:03:48,700 --> 00:04:04,775
+The Fishball Story moved from Golden Mile Food Centre to a food court at NUS's University Town, then to the hawker-style food park Timbre+, picking up a Michelin Bib Gourmand recognition in 2016 along the way.
+
+27
+00:04:04,775 --> 00:04:15,425
+By 2017 the stall had settled at Block 77, Circuit Road, in Macpherson — and as of the most recent public records, it's still there.
+
+28
+00:04:15,425 --> 00:04:22,425
+The tension Ng's post surfaced in 2015 hasn't gone away; if anything, it has sharpened.
+
+29
+00:04:22,425 --> 00:04:45,800
+Cooked-food prices at hawker centres rose 6.1% in 2023 — the steepest increase since 2008, according to the Singapore Department of Statistics — and fishball noodles specifically climbed from a national average of $3.77 in 2022 to $4.13 in 2023.
+
+30
+00:04:45,800 --> 00:04:49,925
+The rent side of the equation has kept climbing too.
+
+31
+00:04:49,925 --> 00:05:22,050
+In August 2024, a single stall at Marine Parade Central Market and Food Centre drew a winning tender bid of $10,158 a month — a record that prompted Workers' Party MP Louis Chua to file a parliamentary motion that November calling for rental caps and a shift away from bid-driven tenders toward a "price-quality" scoring method, echoing, on a national scale, the kind of system NTUC Foodfare had already used in a smaller way back in 2015.
+
+32
+00:05:22,050 --> 00:05:27,400
+The government's response has moved in that direction, if incrementally.
+
+33
+00:05:27,400 --> 00:05:51,550
+The National Environment Agency introduced a staggered rent-adjustment mechanism for hawker centre tenders in November 2024: on a stall's first lease renewal, rent moves only halfway toward the newly assessed market rate, with the full adjustment deferred to the second renewal, intended to blunt the kind of rent-spike bidding that produced the Marine Parade Central record.
+
+34
+00:05:51,550 --> 00:06:11,475
+Separately, the Hawkers' Succession Scheme, launched in 2022, pairs retiring hawkers who have no family successor with vetted newcomers through a three-month apprenticeship, an attempt to pass on a stall's subsidized-rent status rather than let it revert automatically to the open market.
+
+35
+00:06:11,475 --> 00:06:27,450
+The 2025 SG60 Budget added a one-off $600 rental support payment for every active hawker stallholder and a $1 billion, 20-to-30-year commitment to hawker centre infrastructure.
+
+36
+00:06:27,450 --> 00:06:41,450
+None of it closes the fundamental gap Ng pointed to in 2015 — a hawker on a decades-old subsidized lease and a hawker on a fresh market-rate tender are still, structurally, playing different games.
+
+37
+00:06:41,450 --> 00:06:50,475
+But a decade on, it is at least being argued about in Parliament, rather than dismissed as one young hawker's Facebook complaint.
+
+38
+00:06:50,475 --> 00:07:01,300
+Why it matters today: Ng's fishball noodles never made him famous the way a price-cap protest might have — his stall's Michelin recognition did that instead.
+
+39
+00:07:01,300 --> 00:07:17,800
+But the pricing rule he pushed back against in 2015 named a real fault line in how Singapore keeps hawker food cheap: not through some uniform national bargain, but by asking whichever hawker holds the newest lease to absorb most of the difference.
