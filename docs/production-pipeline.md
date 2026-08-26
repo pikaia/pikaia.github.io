@@ -22,19 +22,35 @@ Prerequisite: post finished (text + images + gallery) — see CLAUDE.md.
 The rest maps 1:1 to this doc's own section numbers:
 
 ```
-1. Generate narration audio (Kokoro TTS)         -- section 1
-2. Insert the Listen widget                      -- section 2
-3. Write the video config (per post)             -- section 3
-4. Generate the Watch widget from that config     -- section 4
-5. Check smoothness + review the gap report      -- section 5
-6. Render the main video                         -- section 6
-7. Render the YouTube Short                      -- section 7
-8. Verify both files                             -- section 8
-9. Stage the YouTube upload text file            -- section 9
-10. Upload to YouTube (Chris does the clicks)     -- section 10
-11. Wire the published URLs into the post         -- section 11 (or just re-run section 4's script)
-12. Commit and push                               -- section 12
+1. Generate narration audio (Kokoro TTS)         -- section 1   [Manual]
+2. Insert the Listen widget                      -- section 2   [Manual]
+3. Write the video config (per post)             -- section 3   [Claude]
+4. Generate the Watch widget from that config     -- section 4   [Manual]
+5. Check smoothness + review the gap report      -- section 5   [Manual]
+6. Render the main video                         -- section 6   [Manual]
+7. Render the YouTube Short                      -- section 7   [Claude, then Manual]
+8. Verify both files                             -- section 8   [Manual]
+9. Stage the YouTube upload text file            -- section 9   [Manual]
+10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
+11. Wire the published URLs into the post         -- section 11  [Manual]
+12. Commit and push                               -- section 12  [Manual]
 ```
+
+**`[Manual]` vs `[Claude]`:** every `[Manual]` step is a single mechanical
+script invocation with no real decision to make - safe and fast to run
+yourself when Claude's usage limit is hit. The two `[Claude]` steps are
+different in kind, not just difficulty: nothing exists yet for the
+script to transform, and producing it requires reading the real
+narration text and deciding which image best represents each beat -
+genuine judgment, not something a deterministic script can stand in
+for (confirmed in practice: `build_watch_widget.py` only replaced
+section 4 because it mechanically transforms an *existing* config;
+section 3 has no equivalent input to transform from). Section 7 is
+split: picking the Short's excerpt and writing its config needs the
+same judgment as section 3, but rendering it afterward (the actual
+`--check-only`/`--out` commands) is exactly as mechanical as section 6.
+If Claude is unavailable, everything except writing a new video config
+(main or Short) can still move forward solo.
 
 Steps 1-7 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
@@ -126,6 +142,10 @@ combined block below.
 ---
 
 ## 3. Write the video config
+
+**[Claude] — needs judgment, not just execution** (see section 0's
+legend). If Claude is unavailable, this is the one step to leave
+queued rather than attempt solo.
 
 Video rendering is driven by a **shared engine**,
 `scripts/watch_video_lib.py`, with per-post data in
@@ -687,6 +707,11 @@ scripts and gap reports that produced it.
 ---
 
 ## 7. Render the YouTube Short
+
+**[Claude, then Manual]** — picking the excerpt and writing the
+`-short.py` config below needs the same judgment as section 3; once
+that config exists, the render commands are exactly as mechanical as
+section 6.
 
 Pick a self-contained excerpt — not a mid-sentence truncation. Look for
 a real hook→payoff (→cliffhanger) arc in the real sentence timings: the
