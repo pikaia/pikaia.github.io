@@ -121,7 +121,7 @@ that the parser's tag whitelist doesn't yet cover:
 
 ```
 # 1. Generate narration audio
-python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run
+python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (the Jalan Payoh Lai / Kangkar post, used throughout this
@@ -130,7 +130,7 @@ doc as a running worked example — slug
 
 ```
 # 1. Generate narration audio
-python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run
+python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 If something looks wrong (JS/CSS text leaking into the narration),
@@ -142,14 +142,14 @@ without `--dry-run`):
 
 ```
 # 1. Generate narration audio
-python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3
+python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example:
 
 ```
 # 1. Generate narration audio
-python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 - Voice defaults to `bm_george` (British male) — this is the sitewide
@@ -161,12 +161,12 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
 - Verify the file is real (not truncated) before moving on:
   ```
   # 1. Generate narration audio
-  ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3
+  ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3 2>&1 | tee -a logs/<slug>.log
   ```
   Example:
   ```
   # 1. Generate narration audio
-  ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+  ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
   Real output for this post — a ~5.5 minute post, so ~343s of audio is
   plausible, not a truncated file: `343.056000`.
@@ -181,7 +181,7 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   each separately, then concatenate:
   ```
   # 1. FALLBACK (only if synthesis stalled) - do not run otherwise
-  ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3
+  ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3 2>&1 | tee -a logs/<slug>.log
   ```
   Example — note `part1.mp3`/`part2.mp3` here are placeholder pieces
   you'd have generated yourself while working around a stall, not real
@@ -189,7 +189,7 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   run this if your synthesis completed normally the first time:
   ```
   # 1. FALLBACK (only if synthesis stalled) - do not run otherwise
-  ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
+  ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
 
 ---
@@ -198,14 +198,14 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
 
 ```
 # 2. Insert the Listen widget
-python scripts/insert_listen_widget.py _posts/<file>.md <slug>
+python scripts/insert_listen_widget.py _posts/<file>.md <slug> 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
 # 2. Insert the Listen widget
-python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church
+python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Inserts the clickable headphones-icon widget right after the post's
@@ -334,14 +334,14 @@ sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
 # 4. Author the Watch widget
-python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py
+python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
 # 4. Author the Watch widget
-python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
+python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 - **Does not require a YouTube/Shorts URL** — those almost never exist
@@ -351,14 +351,14 @@ python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   re-run once the URL(s) exist:
   ```
   # 4. Author the Watch widget
-  python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...
+  python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/... 2>&1 | tee -a logs/<slug>.log
   ```
   Example, once both are known (this is exactly section 11's "wire the
   URLs in" step, now folded into the same command instead of a separate
   hand-edit):
   ```
   # 4. Author the Watch widget
-  python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os
+  python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
 - **Safe to re-run** — the generated block is wrapped in
   `<!-- WATCH-WIDGET:BEGIN -->`/`END` marker comments; a second run
@@ -716,14 +716,14 @@ run the cheap pre-check:
 
 ```
 # 5. Check smoothness and review the gap report
-python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
 # 5. Check smoothness and review the gap report
-python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 This does two things, both instantly (no rendering of the real video):
@@ -893,8 +893,8 @@ to usually finish within the 10-minute tool timeout, but the
 
 ```
 # 7. Render the YouTube Short
-python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only
-python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only 2>&1 | tee -a logs/<slug>.log
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (note the `-short` suffix on the config path in both lines
@@ -904,8 +904,8 @@ again instead of the Short):
 
 ```
 # 7. Render the YouTube Short
-python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only
-python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 ---
@@ -916,14 +916,14 @@ Don't trust that a render "looks done" — verify:
 
 ```
 # 8. Verify both files
-ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4
+ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example:
 
 ```
 # 8. Verify both files
-ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4
+ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Compare against the expected frame count, `TOTAL_DURATION * FPS`
@@ -938,7 +938,7 @@ frames at meaningful timestamps and eyeball them:
 
 ```
 # 8. Verify both files
-ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png
+ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example (a frame at t=110.3s should land on the "church exterior
@@ -947,7 +947,7 @@ schedule in section 3):
 
 ```
 # 8. Verify both files
-ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png
+ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Confirm the image and caption match what should be on screen at that
@@ -965,7 +965,7 @@ python scripts/stage_youtube_text.py \
     _posts/<file>.md \
     scripts/video-configs/<slug>.py \
     scripts/video-configs/<slug>-short.py \
-    --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/
+    --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/ 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (this one is a real, already-run command — this post has
@@ -978,7 +978,7 @@ it matches the default, for clarity):
 python scripts/stage_youtube_text.py \
     _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
     --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/ \
-    --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt
+    --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Real result: `docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt`
