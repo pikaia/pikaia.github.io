@@ -122,16 +122,21 @@ python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-m
   Should succeed with no error and print a duration that's plausible for
   the post's word count (a post with several minutes of prose should
   yield several minutes of audio, not a few seconds).
-- If synthesis stalls/hangs on a specific post's text (a known
-  occasional Kokoro issue), split the post's paragraphs into 2-8 pieces
-  and synthesize each separately, then concatenate:
+- **[FALLBACK — only if synthesis actually stalled/hung; skip entirely
+  if the normal command above already succeeded]** If synthesis
+  stalls/hangs on a specific post's text (a known occasional Kokoro
+  issue), split the post's paragraphs into 2-8 pieces and synthesize
+  each separately, then concatenate:
   ```
-  # 1. Generate narration audio
+  # 1. FALLBACK (only if synthesis stalled) - do not run otherwise
   ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3
   ```
-  Example:
+  Example — note `part1.mp3`/`part2.mp3` here are placeholder pieces
+  you'd have generated yourself while working around a stall, not real
+  files that exist for every post; don't just swap in your own slug and
+  run this if your synthesis completed normally the first time:
   ```
-  # 1. Generate narration audio
+  # 1. FALLBACK (only if synthesis stalled) - do not run otherwise
   ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3
   ```
 
