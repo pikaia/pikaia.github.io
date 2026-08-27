@@ -40,3 +40,10 @@ Candidate site features, not yet built. Remove an entry once it's implemented.
   - Same underlying constraint as comments: a fully static site can't tally anonymous votes without *some* backend to hold the counts — likely a small free-tier counter service (e.g. a Cloudflare Worker + KV, or a third-party anonymous-counter API), not yet decided.
   - Natural integration point: the existing `docs/post-ideas.md` backlog — would need a reader-facing page listing candidate topics (that file is currently excluded from the built site via `_config.yml`'s `exclude:`, so it'd need a public-facing counterpart or to be un-excluded/reformatted).
   - Not yet designed in detail — revisit when ready to implement.
+
+## Video audio loudness normalization
+
+- **Bake a fixed loudness target into `watch_video_lib.py`'s render step** (e.g. an `-af loudnorm` pass targeting -16 or -14 LUFS, matching YouTube's own stated normalization target for regular video) instead of the current straight AAC passthrough encode.
+  - Motivated by a real discrepancy found on the four-chopsticks-blood-debt-singapore-japan post: the main video and Short sounded different in loudness when viewed on YouTube, even though direct `ffmpeg loudnorm` measurement of both rendered mp4 files showed near-identical loudness (-25.08 vs -25.07 LUFS integrated) — confirming the divergence isn't in our files, it's YouTube normalizing regular videos and Shorts differently at playback.
+  - Pre-normalizing to a fixed target wouldn't necessarily fully close that gap (YouTube's own processing still runs on top regardless), but starting both files from the same normalized baseline should narrow it, since there'd be less room for YouTube's per-format processing to diverge.
+  - Not yet implemented or tested — revisit if the discrepancy recurs on future posts, or proactively before it does.
