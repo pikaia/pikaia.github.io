@@ -71,6 +71,15 @@ PRONUNCIATION_OVERRIDES = {
                         # directly - not a post-text or code issue, an
                         # upstream dictionary bug) - caught by ear on the
                         # fishball-noodle post ("what stung was...")
+    "graves": "ɡɹˈAvz",  # misaki gives plural "graves" the wrong vowel AND
+                          # drops the plural entirely ("ɡɹˈɑːv", sounds like
+                          # "grahv") - every other -aves word (caves, waves,
+                          # saves, staves, braves, shaves) phonemizes fine
+                          # ("ˈAvz"), so this looks like a lexicon entry
+                          # mistakenly keyed to the Bordeaux wine region name
+                          # (French pronunciation) instead of the burial-site
+                          # plural. Caught by ear on the four-chopsticks post
+                          # ("mass graves found around the island in 1962").
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
