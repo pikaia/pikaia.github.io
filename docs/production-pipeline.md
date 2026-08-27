@@ -1289,14 +1289,16 @@ git push
   the class of bug the "check for the closing line" step in section 1
   exists to catch if a similar one ever recurs.
 - **Kokoro mispronounces a specific word.** Not every mispronunciation
-  is a real/unknown-word problem (see `PRONUNCIATION_OVERRIDES` and
-  `ABBREVIATION_EXPANSIONS` at the top of `scripts/generate_narration.py`
-  for the growing list of confirmed cases, e.g. "Ng", "stung", "graves")
-  — misaki's own lexicon can just have a wrong entry for a common word,
-  confirmed by testing it directly against `misaki.en.G2P` and
-  comparing to similar words that phonemize correctly. Add a new
-  override only after verifying by ear against a real render, not
-  preemptively.
+  is a real/unknown-word problem — misaki's own lexicon can just have a
+  wrong entry for a common word, confirmed by testing it directly
+  against `misaki.en.G2P` and comparing to similar words that
+  phonemize correctly. See `docs/pronunciation-fixes.md` for the
+  growing list of confirmed cases (e.g. "Ng", "stung", "graves") and
+  how to verify a new one before adding it — the actual fixes live in
+  `PRONUNCIATION_OVERRIDES`/`ABBREVIATION_EXPANSIONS` at the top of
+  `scripts/generate_narration.py`, with that doc as a human-readable
+  summary kept in sync by hand. Add a new override only after verifying
+  by ear against a real render, not preemptively.
 
 ---
 
@@ -1305,6 +1307,7 @@ git push
 | Purpose | Path |
 |---|---|
 | Narration generator | `scripts/generate_narration.py` |
+| Narration pronunciation fixes (human-readable summary) | `docs/pronunciation-fixes.md` |
 | Listen-widget inserter | `scripts/insert_listen_widget.py` |
 | Watch-widget generator | `scripts/build_watch_widget.py` |
 | Shared video render engine | `scripts/watch_video_lib.py` |

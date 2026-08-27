@@ -59,6 +59,10 @@ HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr
 # from a known word like "sing" -> "sˈɪŋ") until the output sounds right.
 # Add new entries here as they're caught, rather than guessing indefinitely
 # from the doc/CLAUDE.md - always verify by ear against the real render.
+# Mirror every new entry into docs/pronunciation-fixes.md too - that doc
+# is a human-readable summary of this dict, not a separate source of
+# truth, and the two are duplicated by design (keep them in sync by
+# hand, same as the route-walk animation data described in CLAUDE.md).
 PRONUNCIATION_OVERRIDES = {
     "Ng": "əŋ",  # anglicized "ung" (schwa + ng), closer to how the Chinese
                  # surname is actually said than the "ing" ending tried
@@ -93,7 +97,8 @@ PRONUNCIATION_OVERRIDES = {
 # ("St." = Saint or Street, "No." = Number or the word "no") and would risk
 # a wrong expansion sounding worse than the original gap. Add an entry here
 # only once actually heard mispronounced in a real render, matching
-# PRONUNCIATION_OVERRIDES's policy above.
+# PRONUNCIATION_OVERRIDES's policy above. Mirror new entries into
+# docs/pronunciation-fixes.md too - see the note above that dict.
 ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bFr\.(?=\s)"): "Father",
 }
