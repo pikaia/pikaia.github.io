@@ -11,6 +11,28 @@ Candidate site features, not yet built. Remove an entry once it's implemented.
   - Explicitly ruled out: giscus/utterances (require commenters to have a GitHub account) and Disqus (ads/tracking on the free tier).
   - Not yet decided which option to build — revisit when ready to implement.
 
+## Narration voice
+
+- **Contribute a Singaporean-accented voice to Kokoro TTS** (long-term
+  goal, not started). The site's narration currently uses `bm_george`,
+  a British voice — serviceable, but not actually the accent of the
+  place the blog is about. Kokoro (`hexgrad/Kokoro-82M`) is open-source
+  (Apache 2.0), so a new voice is at least theoretically something
+  that could be trained and contributed upstream, rather than waiting
+  for one to show up.
+  - Would need a real recorded-speech dataset in Singaporean English
+    (a specific voice actor/speaker, enough clean audio to train
+    against) — the actual bottleneck, not the code.
+  - Unclear yet whether Kokoro's training pipeline realistically
+    supports a community-contributed voice this way, or what the
+    practical effort/cost looks like — this needs real research before
+    it's more than an idea.
+  - Payoff if it works: narration that actually sounds like it's
+    telling a Singapore story, not just narrating one in a borrowed
+    accent.
+  - Not yet researched in detail — revisit when there's a real chance
+    to invest the time.
+
 ## Reader voting on what to post next
 
 - **Let readers vote on candidate topics from the post-ideas backlog** — a signal to inform what gets written next, not a binding commitment to always follow the vote.
