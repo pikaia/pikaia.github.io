@@ -158,6 +158,19 @@ If something looks wrong (JS/CSS text leaking into the narration),
 extend `HTML_TAG_RE` in `scripts/generate_narration.py` to whitelist
 the new tag before generating for real.
 
+**Also check that the dry-run output reaches the post's closing
+line** — every post has one, bolded, right before the `---`/Sources
+divider (per CLAUDE.md's post-writing conventions), phrased as either
+`**Why it matters today:**` or `**Where it fits in the bigger
+story:**` (19 and 11 real posts respectively — both are valid, this
+isn't a single fixed phrase). If neither shows up in the dry-run text,
+extraction stopped early somewhere — this is exactly how a real bug
+was caught (`extract_narrative()`'s HTML-depth tracker silently
+swallowing everything after a Watch widget's script block, see section
+13's gotchas). The reverse doesn't hold: seeing the closing line only
+rules out *truncation*, it doesn't confirm the rest of the extraction
+is otherwise correct.
+
 Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 
@@ -1261,6 +1274,29 @@ git push
   copyright rules (two independent PD bases, a $300/yr licensing fee
   for anything not covered by either) — see CLAUDE.md's "Straits Times
   archive check" section before using any NewspaperSG-sourced image.
+- **Narration dry-run text stops partway through the post, with no
+  error.** `extract_narrative()`'s HTML-depth tracker scans every line
+  inside a `<script>` block for tag-like patterns, with no awareness of
+  JS comment context — a real comment in `build_watch_widget.py`'s
+  generated skeleton once mentioned an `<audio>` element in prose,
+  which got matched as an unclosed opening tag and left the depth
+  counter stuck above zero for the rest of the file, silently
+  swallowing every paragraph after the widget. Only ever triggers on a
+  post that already has a Watch widget installed when narration gets
+  regenerated (never happens on a fresh post, since narration normally
+  comes before the widget in the pipeline order) — fixed by skipping
+  tag-scanning on any standalone `//`-only line, but this is exactly
+  the class of bug the "check for the closing line" step in section 1
+  exists to catch if a similar one ever recurs.
+- **Kokoro mispronounces a specific word.** Not every mispronunciation
+  is a real/unknown-word problem (see `PRONUNCIATION_OVERRIDES` and
+  `ABBREVIATION_EXPANSIONS` at the top of `scripts/generate_narration.py`
+  for the growing list of confirmed cases, e.g. "Ng", "stung", "graves")
+  — misaki's own lexicon can just have a wrong entry for a common word,
+  confirmed by testing it directly against `misaki.en.G2P` and
+  comparing to similar words that phonemize correctly. Add a new
+  override only after verifying by ear against a real render, not
+  preemptively.
 
 ---
 
