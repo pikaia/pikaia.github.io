@@ -106,6 +106,37 @@ PRONUNCIATION_OVERRIDES = {
                            # neighbourhood. Built from "signal"'s "sig-"
                            # onset plus "lap"'s own phonemes. Caught by
                            # scan_for_unknown_tokens().
+    "tapped": "tˈapt",  # unknown word (no lexicon entry) - surprising for
+                         # such a common verb; "mapped" has the same gap,
+                         # while "trapped"/"wrapped"/"snapped"/"clapped"/
+                         # "napped" all phonemize fine, so this looks like a
+                         # narrow lexicon hole for this specific inflection
+                         # rather than something wrong with "-apped" in
+                         # general. Built by direct analogy with those
+                         # working "-apped" words. Caught by
+                         # scan_for_unknown_tokens() on the Benjamin Sheares
+                         # post.
+    "Istana": "ɪstˈɑːnə",  # unknown word (no lexicon entry) - the
+                            # President's official residence, mentioned
+                            # across many posts on this blog. Anglicized,
+                            # stress on the middle syllable, echoing the
+                            # "-ana" ending in "banana"/"veranda". Caught by
+                            # scan_for_unknown_tokens() on the Benjamin
+                            # Sheares post - likely affects other posts
+                            # mentioning the Istana too.
+    "Kandang": "kˈandaŋ",  # unknown word (no lexicon entry) - half of
+                            # "Kandang Kerbau", the historical Singapore
+                            # district (and hospital) whose name means
+                            # "buffalo pen" in Malay. "Kan-" borrowed from
+                            # "Kandy"'s working phonemization, "-dang" from
+                            # "hang"/"gang"'s "-ang" ending. Caught by
+                            # scan_for_unknown_tokens() on the Benjamin
+                            # Sheares post.
+    "Kerbau": "kəbˈaʊ",  # unknown word (no lexicon entry) - see "Kandang"
+                          # above, same place name. "Ker-" as a schwa,
+                          # "-bau" borrowed from "how"/"now"'s "aʊ"
+                          # diphthong. Caught by scan_for_unknown_tokens()
+                          # on the Benjamin Sheares post.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -358,7 +389,7 @@ def _build_srt(sentences: list[dict]) -> str:
     return "\n".join(blocks)
 
 
-def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[str]:
+def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str, list[str]]]:
     """Run the extracted narrative through misaki's G2P directly - text
     only, no audio synthesis, so this is nearly instant - and flag every
     sentence where it produces its own "unknown word/symbol" marker (a
@@ -371,6 +402,20 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[str]:
     entry, e.g. "stung"/"graves") where misaki's output looks like
     ordinary fluent phonemes with nothing to scan for - that category can
     only be caught by ear, this function does not attempt it.
+
+    Returns (sentence, [unknown words]) pairs, not just the flagged
+    sentence - pinpointing the exact word(s) matters, since a long
+    sentence with several rare proper nouns makes "the problem is
+    somewhere in here" nearly useless in practice (a real case: the
+    Benjamin Sheares post flagged two ~50-word sentences with no
+    indication of which word in each was the actual culprit, until
+    checked by hand). Found per-token, not by re-searching the
+    whole-sentence string for "?": an unknown word/proper-noun token gets
+    `phonemes=None` from misaki (checked first), while an unknown symbol
+    embedded inside a larger token (e.g. "S$50" tokenizes as one token
+    whose `phonemes` is "?s fifty", not None) still carries a literal "?"
+    inside that token's own phonemes string - both cases are checked here
+    since neither alone covers both.
 
     Applies PRONUNCIATION_OVERRIDES first so a word already fixed there
     (e.g. "Ng") doesn't get flagged again on every future post that
@@ -391,9 +436,13 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[str]:
         for sent in split_sentences(para):
             if not sent:
                 continue
-            phonemes, _ = g2p(sent)
-            if "❓" in phonemes:
-                flagged.append(sent)
+            _, toks = g2p(sent)
+            unknown_words = [
+                tok.text for tok in toks
+                if tok.phonemes is None or "❓" in tok.phonemes
+            ]
+            if unknown_words:
+                flagged.append((sent, unknown_words))
     return flagged
 
 
@@ -431,7 +480,10 @@ def main() -> None:
                 "misaki can't phonemize (would get spelled out letter by "
                 "letter in the real audio) - see docs/pronunciation-fixes.md:"
             ]
-            lines += [f"  - {sent}" for sent in flagged]
+            lines += [
+                f"  - {', '.join(repr(w) for w in words)} in: {sent}"
+                for sent, words in flagged
+            ]
         else:
             lines = [
                 "\nNo unknown words/symbols found (misaki's own scan) - "

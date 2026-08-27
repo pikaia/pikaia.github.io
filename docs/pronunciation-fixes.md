@@ -118,10 +118,24 @@ completely separate script which doesn't:
 `scan_for_unknown_tokens()` in `generate_narration.py` runs automatically
 as part of `--dry-run` (section 1.1 of `docs/production-pipeline.md`) —
 it phonemizes every sentence via misaki directly (text only, no audio,
-near-instant) and flags any that contain a literal `❓` token, printing
-each flagged sentence so you know exactly where to look. This closes off
-the *entire* "unknown word or symbol" root cause automatically, on every
-post, for free — no more waiting to catch it by ear.
+near-instant) and flags any sentence containing an unknown word/symbol.
+This closes off the *entire* "unknown word or symbol" root cause
+automatically, on every post, for free — no more waiting to catch it by
+ear.
+
+**The warning names the exact word(s), not just the sentence.** Earlier
+versions only flagged the whole sentence, which turned out to be nearly
+useless on a long sentence with several rare proper nouns in it (a real
+case: the Benjamin Sheares post flagged two ~50-word sentences with no
+indication of which word in each was the actual culprit — Chris had to
+ask before it got tracked down by hand). The function now walks misaki's
+per-token output directly: an unknown word/proper noun gets
+`phonemes=None` from misaki, while an unknown symbol embedded inside a
+larger token (e.g. "S$50" tokenizes as one token whose `phonemes` is
+`"?s fifty"`, not `None`) still carries a literal `❓` inside that
+token's own phonemes string — both cases are checked, since neither
+alone covers both, and the flagged word(s) are printed right next to
+the sentence they're in.
 
 It found 4 real cases in one pass on the four-chopsticks post ("Kuan" as
 in "Lee Kuan Yew", "Yasukuni", "rallied", "Siglap" — see the table below)
@@ -150,6 +164,10 @@ ear.
 | "rallied" | Unknown word | Spelled out letter by letter — no lexicon entry, even though the root "rally" phonemizes fine on its own | `ɹˈalɪd` (rally's root + the regular "-ied" ending pattern from "carried"/"hurried"/"married") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
 | "Siglap" (the Singapore neighbourhood) | Unknown word | Spelled out letter by letter — no lexicon entry | `sˈɪɡlap` (built from "signal"'s "sig-" onset + "lap") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
 | "DD Month" dates (e.g. "25 August 1963") | Correct entry, wrong number-reading convention | Day numeral read as cardinal ("twenty-five August") instead of the ordinal spoken English always uses for a day-of-month ("the twenty-fifth of August") | Text expanded to "the \<day\>\<ordinal suffix\> of \<Month\>" before synthesis (suffix computed per day: 1st/2nd/3rd/4th…11th-13th always "th") | `ABBREVIATION_EXPANSIONS` | four-chopsticks-blood-debt-singapore-japan (caught by ear, not by `scan_for_unknown_tokens()` — nothing is unknown or wrong in isolation, only in spoken-date context; likely affects most other posts too, since "DD Month YYYY" is the house style for dates in prose) |
+| "tapped" | Unknown word | Spelled out letter by letter — no lexicon entry, surprising for such a common verb; "mapped" has the same gap, while "trapped"/"wrapped"/"snapped"/"clapped"/"napped" all phonemize fine | `tˈapt` (direct analogy with those working "-apped" words) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()`) |
+| "Istana" (the President's official residence) | Unknown word | Spelled out letter by letter — no lexicon entry | `ɪstˈɑːnə` (anglicized, stress on the middle syllable, echoing "banana"/"veranda"'s "-ana" ending) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()` — likely affects other posts mentioning the Istana too) |
+| "Kandang" (half of "Kandang Kerbau", the historical district/hospital) | Unknown word | Spelled out letter by letter — no lexicon entry | `kˈandaŋ` ("Kan-" from "Kandy"'s working phonemization, "-dang" from "hang"/"gang"'s "-ang" ending) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()`) |
+| "Kerbau" (the other half of "Kandang Kerbau") | Unknown word | Spelled out letter by letter — no lexicon entry | `kəbˈaʊ` ("Ker-" as a schwa, "-bau" from "how"/"now"'s "aʊ" diphthong) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()`) |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
