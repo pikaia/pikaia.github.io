@@ -137,6 +137,85 @@ PRONUNCIATION_OVERRIDES = {
                           # "-bau" borrowed from "how"/"now"'s "aʊ"
                           # diphthong. Caught by scan_for_unknown_tokens()
                           # on the Benjamin Sheares post.
+    # These two are a different root cause from everything else in this
+    # dict: not unknown, and not spelled out by mistake - misaki *can*
+    # read them, correctly, as letters ("M-I-N-D-E-F", "F-O-F-O"), but
+    # that's not how Singaporeans actually say either of them out loud.
+    # Confirmed by Chris (2026-08-27): MINDEF is said as a blended word
+    # ("min-def"), not spelled out - same for FOFO ("foh-foh"). Caught by
+    # scan_for_letter_spelled_words(), which exists specifically for this
+    # category (see its docstring) - unlike the unknown-word/symbol scan,
+    # this one needs a human to confirm which letter-spelled tokens are
+    # actually correct as spelled (e.g. "MRT", "CPF") vs wrong (these
+    # two, and "II"/"VII" below).
+    "MINDEF": "mˈɪndɛf",  # "min" (mˈɪn) + "def" (dˈɛf), stress only on
+                           # the first syllable, matching the
+                           # "logo"/"photo"/"hobo" two-syllable-compound
+                           # stress pattern. Found on the National
+                           # Service post.
+    "FOFO": "fˈQfQ",  # "foe" (fˈQ) doubled, matching "logo"'s lˈQɡQ
+                       # stress pattern (stress on the first syllable
+                       # only). Found on the National Service post
+                       # ("FOFO Hill").
+    # The following 6 were all caught by scan_for_unknown_tokens() on the
+    # Lim Chong Yah post - not this session's original target, but
+    # surfaced anyway since the scan runs against the whole narrative,
+    # not just the sentence being worked on. "Lim" in particular is worth
+    # flagging: it's a common Chinese surname that appears in other posts
+    # too (Lim Kim San, and Lim Peng Siang in docs/post-ideas.md), so
+    # this fix likely helps narration well beyond the post that surfaced
+    # it - the same pattern as "Kuan" earlier.
+    "Lim": "lˈɪm",  # unknown word (no lexicon entry), even though
+                     # near-identical names "Tim"/"Jim"/"dim" all
+                     # phonemize fine (even "Kim" doesn't). Built by
+                     # direct analogy with those.
+    "Chong": "ʧˈɒŋ",  # unknown word (no lexicon entry) - built from
+                       # "check"'s "ʧ" onset plus "song"/"long"/"wrong"/
+                       # "gong"'s "-ong" ending.
+    "Hainanese": "hˌInənˈiːz",  # unknown word (no lexicon entry), even
+                                 # though "Hainan" alone phonemizes fine
+                                 # (hInˈan) - the "-ese" demonym suffix is
+                                 # the gap. Built by the same stress-shift
+                                 # pattern "Chinese"/"Japanese"/
+                                 # "Cantonese" all follow (secondary
+                                 # stress on the country name, primary
+                                 # stress moves to "-ese", middle syllable
+                                 # reduces to a schwa).
+    "Siow": "sˈW",  # unknown word (no lexicon entry) - a Chinese surname
+                     # (Hokkien/Teochew romanization). Built by analogy
+                     # with "how"/"now"/"cow"'s "-ow" diphthong as a
+                     # single syllable rhyming with those - not verified
+                     # by ear yet, flag if it sounds off (this romanized
+                     # spelling could plausibly also be two syllables,
+                     # "SEE-ow").
+    "Nanyang": "nˌanjˈaŋ",  # unknown word (no lexicon entry) - as in
+                             # Nanyang Technological University. Built
+                             # from "Nan" (nˈan) + "yang" (jˈaŋ, as in
+                             # yin-yang), secondary stress on the first
+                             # syllable matching typical two-part
+                             # Chinese-name compounds.
+    "paycheck": "pˈAʧɛk",  # unknown word (no lexicon entry) - surprising
+                            # for such a common compound, given "pay" and
+                            # "check" both phonemize fine on their own;
+                            # "daycare" has the same gap, so this looks
+                            # like a narrow hole in misaki's compound-word
+                            # handling rather than anything specific to
+                            # payroll vocabulary. Built from "pay" + the
+                            # existing "check" phonemes, stress pattern
+                            # matching "payday"'s (pˈAdA).
+    "paychecks": "pˈAʧɛks",  # see "paycheck" above - misaki doesn't
+                              # reliably derive the plural from a fixed
+                              # singular override, so both forms need
+                              # their own entry.
+    "Winsemius": "wɪnsˈiːmiəs",  # unknown word (no lexicon entry) -
+                                  # Albert Winsemius, the Dutch economist
+                                  # central to Singapore's early economic
+                                  # development (likely to recur in other
+                                  # posts on that topic). Anglicized:
+                                  # "win" (wˈɪn) + "seem" (sˈiːm) +
+                                  # "-ius" (from "genius"/"radius"'s
+                                  # ending) - not verified by ear yet,
+                                  # flag if it sounds off.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -193,17 +272,28 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\b(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)\b"):
         lambda m: f"the {m.group(1)}{_ordinal_suffix(int(m.group(1)))} of {m.group(2)}",
     # "King Edward VII" (the college of medicine named after him) - misaki
-    # reads a Roman numeral after a name as individual letters ("V, I, I")
-    # rather than the ordinal a regnal number is actually read as ("the
-    # Seventh"). Same "correct entry, wrong number-reading convention" root
-    # cause as the DD-Month dates above, but fixed as a literal phrase
-    # match here instead of a general Roman-numeral pattern: unlike dates,
-    # Roman numerals after a name are genuinely context-dependent - "World
-    # War II" is read as "World War Two" (cardinal), not "World War the
-    # Second" (ordinal), so a blanket regnal-number rule would get other
-    # cases wrong. Add another literal entry here if a different regnal
-    # number is ever heard mispronounced, rather than generalizing early.
+    # applies its letter-spelling fallback to the Roman numeral after the
+    # name ("V, I, I") instead of the ordinal a regnal number is actually
+    # read as ("the Seventh"). This is the "letter-spelling fallback
+    # applied to the wrong token" root cause (see the comment above
+    # KNOWN_LETTER_SPELLED / scan_for_letter_spelled_words() further down
+    # this file) - fixed as a literal phrase match here instead of a
+    # general Roman-numeral pattern, since a Roman numeral after a name
+    # is genuinely context-dependent: "World War II" is read as "World
+    # War Two" (cardinal), not "World War the Second" (ordinal), so a
+    # blanket regnal-number rule would get other cases wrong. Add another
+    # literal entry here if a different regnal number is ever caught
+    # mispronounced, rather than generalizing early.
     re.compile(r"\bKing Edward VII\b"): "King Edward the Seventh",
+    # "Shock Therapy II" (the 1979 wage policy's own nickname, as used on
+    # the Lim Chong Yah post) - same root cause as "King Edward VII"
+    # above, but the *other* reading direction: a Roman numeral after a
+    # program/sequel name is read as a cardinal ("World War Two"), not an
+    # ordinal, unlike a person's regnal number. Caught by
+    # scan_for_letter_spelled_words(), not scan_for_unknown_tokens() -
+    # misaki reads "II" as fluent, confident letters ("I, I"), it just
+    # doesn't know that's wrong here.
+    re.compile(r"\bShock Therapy II\b"): "Shock Therapy Two",
 }
 
 
@@ -458,6 +548,99 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
     return flagged
 
 
+# Initialisms confirmed, by ear, to genuinely be read as individual
+# letters in real speech ("H-D-B", not a blended word) - not a guess from
+# the text pattern alone, since misaki can't tell "HDB" (correct as
+# letters) from "II" or "VII" (wrong - should be a number word) purely by
+# looking at the token; both get the identical letter-by-letter treatment
+# internally. Seeded 2026-08-27 from a survey of every post's actual
+# narration text; grows reactively like the two dicts above - add an
+# entry here only once Chris has confirmed it's actually meant to be
+# spelled out, never speculatively. Anything letter-spelled that's NOT in
+# this set gets flagged by scan_for_letter_spelled_words() below for
+# review, the same way scan_for_unknown_tokens() flags a word/symbol
+# misaki has no lexicon entry for at all - a different root cause, same
+# "catch it before it ships instead of by ear" idea.
+KNOWN_LETTER_SPELLED = {
+    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "EDB", "HDB", "IPPT",
+    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "UK", "UN", "US",
+}
+
+_letter_phoneme_cache: dict[str, str] = {}
+
+
+def _letter_phoneme(letter: str, g2p) -> str:
+    """The phoneme misaki itself produces for a single letter name (e.g.
+    "V" -> "vˈiː"), stress marks and whitespace stripped - the building
+    block scan_for_letter_spelled_words() compares a token's actual
+    phonemes against, to tell "read as its own letters spelled out"
+    apart from "read as a word". Cached since every letter gets looked up
+    repeatedly across a post's many multi-letter tokens."""
+    if letter not in _letter_phoneme_cache:
+        ps, _ = g2p(letter)
+        _letter_phoneme_cache[letter] = re.sub(r"[ˈˌ\s]", "", ps)
+    return _letter_phoneme_cache[letter]
+
+
+def scan_for_letter_spelled_words(narrative: list[str], voice: str) -> list[tuple[str, list[str]]]:
+    """Flags every ALL-CAPS token misaki reads by spelling out its own
+    letters ("VII" -> "V, I, I") that isn't on the KNOWN_LETTER_SPELLED
+    allowlist above - a different, broader root cause than
+    scan_for_unknown_tokens(): that function catches a word/symbol
+    misaki has *no* lexicon entry for at all (phonemes=None or an
+    embedded "?"); this one catches a token misaki *can* phonemize,
+    confidently and correctly by its own internal rule for short
+    all-caps tokens, but where that rule is simply the wrong one for
+    this particular token (a Roman numeral after a name, or a genuine
+    acronym Singaporeans actually say as a blended word rather than
+    spelling out - "MINDEF", not "M-I-N-D-E-F").
+
+    Detected by comparison, not by guessing from capitalization alone:
+    build the phoneme string spelling the token's own letters out one by
+    one (via _letter_phoneme(), itself derived from misaki's own output
+    for each letter - not a hand-typed table) and check whether the
+    token's *actual* phonemes match that reconstruction. A token read as
+    a real word instead (e.g. "NASA", "COVID") won't match and is left
+    alone.
+
+    Every match gets checked against KNOWN_LETTER_SPELLED - a token on
+    that list (confirmed by ear to be genuinely correct as spelled
+    letters) is not flagged; anything else is, exactly like
+    scan_for_unknown_tokens()'s output. This is *not* a fully automated
+    check the way the unknown-word scan is - misaki cannot know that
+    "HDB" is correct as letters while "II" (in "Shock Therapy II") is
+    not, since both get identical treatment internally; a human has to
+    make that call once per new token, then it goes on the allowlist.
+    """
+    from misaki import en
+
+    lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
+    g2p = en.G2P(british=(lang_code == "b"))
+    g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+
+    flagged = []
+    for para in narrative:
+        for sent in split_sentences(para):
+            if not sent:
+                continue
+            _, toks = g2p(sent)
+            hits = []
+            for tok in toks:
+                if tok.phonemes is None or len(tok.text) < 2:
+                    continue
+                if not tok.text.isalpha() or not tok.text.isupper():
+                    continue
+                if tok.text in KNOWN_LETTER_SPELLED:
+                    continue
+                guess = "".join(_letter_phoneme(c, g2p) for c in tok.text)
+                actual = re.sub(r"[ˈˌ\s]", "", tok.phonemes)
+                if actual == guess:
+                    hits.append(tok.text)
+            if hits:
+                flagged.append((sent, hits))
+    return flagged
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
@@ -483,6 +666,7 @@ def main() -> None:
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             flagged = scan_for_unknown_tokens(narrative, args.voice)
+            letter_flagged = scan_for_letter_spelled_words(narrative, args.voice)
         # Same cp1252-vs-UTF-8 issue as the dry-run text above applies here
         # too - a flagged sentence containing an em-dash or other non-ASCII
         # character would otherwise get mangled by a plain print().
@@ -502,6 +686,25 @@ def main() -> None:
                 "this doesn't rule out a wrong-but-confident mispronunciation "
                 "(e.g. \"stung\"/\"graves\"), only the letter-spelling kind. "
                 "Still worth a listen after synthesis."
+            ]
+        if letter_flagged:
+            lines += [
+                f"\nWARNING: {len(letter_flagged)} sentence(s) contain a "
+                "word spelled out letter-by-letter that's NOT on the "
+                "KNOWN_LETTER_SPELLED allowlist - confirm by ear whether "
+                "each is actually correct as spelled (like \"HDB\") or "
+                "wrong (like \"II\"/\"VII\", which should be a number "
+                "word) - see docs/pronunciation-fixes.md:"
+            ]
+            lines += [
+                f"  - {', '.join(repr(w) for w in words)} in: {sent}"
+                for sent, words in letter_flagged
+            ]
+        else:
+            lines += [
+                "\nNo unreviewed letter-spelled words found (every "
+                "ALL-CAPS token read as its own letters is already on the "
+                "KNOWN_LETTER_SPELLED allowlist)."
             ]
         sys.stderr.buffer.write(("\n".join(lines) + "\n").encode("utf-8"))
         return
