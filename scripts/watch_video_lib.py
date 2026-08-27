@@ -628,6 +628,9 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
     prepared_cache = build_prepared_cache(cfg, out_w, out_h)
     slide_starts = {s: t for t, s in cfg.SCHEDULE}
     targets = sample_slides if sample_slides is not None else range(len(cfg.SLIDES))
+    targets = list(targets)
+
+    print(f"Checking smoothness for {len(targets)} slide(s)...", file=sys.stderr)
 
     any_bad = False
     for slide_idx in targets:
