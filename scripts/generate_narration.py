@@ -192,6 +192,18 @@ ABBREVIATION_EXPANSIONS = {
     # the correct suffix depends on the day's value.
     re.compile(r"\b(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)\b"):
         lambda m: f"the {m.group(1)}{_ordinal_suffix(int(m.group(1)))} of {m.group(2)}",
+    # "King Edward VII" (the college of medicine named after him) - misaki
+    # reads a Roman numeral after a name as individual letters ("V, I, I")
+    # rather than the ordinal a regnal number is actually read as ("the
+    # Seventh"). Same "correct entry, wrong number-reading convention" root
+    # cause as the DD-Month dates above, but fixed as a literal phrase
+    # match here instead of a general Roman-numeral pattern: unlike dates,
+    # Roman numerals after a name are genuinely context-dependent - "World
+    # War II" is read as "World War Two" (cardinal), not "World War the
+    # Second" (ordinal), so a blanket regnal-number rule would get other
+    # cases wrong. Add another literal entry here if a different regnal
+    # number is ever heard mispronounced, rather than generalizing early.
+    re.compile(r"\bKing Edward VII\b"): "King Edward the Seventh",
 }
 
 

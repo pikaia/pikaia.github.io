@@ -47,7 +47,14 @@ the fix follows the *shape* of the problem, not just its origin.
    convention applies; nothing is missing or mispronounced in
    isolation, so like the wrong-entry category this is only caught by
    ear (or, here, by deliberately reading a rendered date aloud against
-   how a person would actually say it).
+   how a person would actually say it). Same category covers a Roman
+   numeral after a name ("King Edward VII"), which misaki reads as
+   individual letters ("V, I, I") instead of the ordinal a regnal
+   number is actually read as ("the Seventh") — but unlike dates, this
+   one is genuinely context-dependent ("World War II" is read as
+   "World War Two," cardinal, not "World War the Second"), so it's
+   fixed as a literal phrase match rather than a general rule; see the
+   comment above `ABBREVIATION_EXPANSIONS`'s "King Edward VII" entry.
 
 **Fix mechanisms available:**
 
@@ -168,6 +175,7 @@ ear.
 | "Istana" (the President's official residence) | Unknown word | Spelled out letter by letter — no lexicon entry | `ɪstˈɑːnə` (anglicized, stress on the middle syllable, echoing "banana"/"veranda"'s "-ana" ending) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()` — likely affects other posts mentioning the Istana too) |
 | "Kandang" (half of "Kandang Kerbau", the historical district/hospital) | Unknown word | Spelled out letter by letter — no lexicon entry | `kˈandaŋ` ("Kan-" from "Kandy"'s working phonemization, "-dang" from "hang"/"gang"'s "-ang" ending) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()`) |
 | "Kerbau" (the other half of "Kandang Kerbau") | Unknown word | Spelled out letter by letter — no lexicon entry | `kəbˈaʊ` ("Ker-" as a schwa, "-bau" from "how"/"now"'s "aʊ" diphthong) | `PRONUNCIATION_OVERRIDES` | benjamin-sheares-doctor-behind-the-baby-bust (caught by `scan_for_unknown_tokens()`) |
+| "King Edward VII" (the college of medicine) | Correct entry, wrong number-reading convention | The Roman numeral read as individual letters ("V, I, I") instead of the ordinal a regnal number is actually read as ("the Seventh") | Text expanded to "King Edward the Seventh" (literal phrase match, not a general Roman-numeral rule — context-dependent, e.g. "World War II" stays "World War Two") | `ABBREVIATION_EXPANSIONS` | benjamin-sheares-doctor-behind-the-baby-bust (caught by ear, not by `scan_for_unknown_tokens()` — misaki produces confident, fluent-sounding phonemes, just the wrong ones) |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
