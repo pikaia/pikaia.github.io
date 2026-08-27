@@ -121,6 +121,15 @@ PRONUNCIATION_OVERRIDES = {
 # only once actually heard mispronounced in a real render, matching
 # PRONUNCIATION_OVERRIDES's policy above. Mirror new entries into
 # docs/pronunciation-fixes.md too - see the note above that dict.
+def _ordinal_suffix(n: int) -> str:
+    """"st"/"nd"/"rd"/"th" for a day-of-month number (11-13 are always
+    "th", including 11, 12, 13 - not just 11 - since "-teen" numbers don't
+    follow the last-digit pattern the way 21, 22, 23... do)."""
+    if 11 <= (n % 100) <= 13:
+        return "th"
+    return {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+
 ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bFr\.(?=\s)"): "Father",
     # "S$" (Singapore dollar notation) - misaki produces a literal "?"
@@ -134,6 +143,24 @@ ABBREVIATION_EXPANSIONS = {
     # Plain "$" (used elsewhere for prices, e.g. "$2.70") is untouched -
     # this only matches the "S$" prefix specifically.
     re.compile(r"S\$(\d[\d,]*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
+    # "DD Month" dates (the house style throughout post prose, e.g. "25
+    # August 1963") - misaki reads the bare day numeral as a cardinal
+    # ("twenty-five August"), but spoken English always reads the day-of-
+    # month as an ordinal regardless of how it's written ("the twenty-fifth
+    # of August"); the year stays cardinal ("nineteen sixty-three"), which
+    # is why only the day gets touched here, not the whole date. Confirmed
+    # by testing directly against misaki.en.G2P: appending the correct
+    # ordinal suffix and restoring "the ... of" both phonemize correctly,
+    # including misaki's own "a"/"an"-style linking of "the" to "ði" before
+    # a vowel (e.g. "the 18th of February" -> "ði ˌAtˈiːnθ"). This is a
+    # third, distinct root cause from the two in PRONUNCIATION_OVERRIDES's
+    # dict comment above: not an unknown word, not a wrong lexicon entry,
+    # but a correct entry read under the wrong number-reading convention -
+    # misaki can't tell from a bare numeral alone whether it's a cardinal
+    # or ordinal context. Matched as a function (not a static string) since
+    # the correct suffix depends on the day's value.
+    re.compile(r"\b(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)\b"):
+        lambda m: f"the {m.group(1)}{_ordinal_suffix(int(m.group(1)))} of {m.group(2)}",
 }
 
 

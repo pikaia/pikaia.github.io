@@ -36,6 +36,18 @@ the fix follows the *shape* of the problem, not just its origin.
    failures, since the output sounds like a real (wrong) word rather
    than obviously broken speech — only caught by ear, not by any
    automated signal.
+3. **Correct entry, wrong number-reading convention** — misaki *can*
+   pronounce the numeral fine, but defaults to the wrong reading for
+   context. A bare day-of-month numeral ("25 August") gets read as a
+   cardinal ("twenty-five August"), but spoken English always reads
+   the day-of-month as an ordinal regardless of how it's written ("the
+   twenty-fifth of August") — the year, by contrast, stays cardinal
+   ("nineteen sixty-three," never "the one thousand nine hundred
+   sixty-third"). Misaki can't tell from a bare numeral alone which
+   convention applies; nothing is missing or mispronounced in
+   isolation, so like the wrong-entry category this is only caught by
+   ear (or, here, by deliberately reading a rendered date aloud against
+   how a person would actually say it).
 
 **Fix mechanisms available:**
 
@@ -84,9 +96,10 @@ across many posts on this blog, this fix likely improves narration on
 posts far beyond the one that surfaced it, not just this one.
 
 It does **not** catch the "wrong entry / homograph collision" category
-(stung, graves) — misaki's output there is fluent, confident, and wrong,
-with no distinguishing signal to scan for. That category still needs a
-human ear.
+(stung, graves) or the "wrong number-reading convention" category (DD
+Month dates) — both produce fluent, confident, and wrong output with no
+distinguishing signal to scan for. Those categories still need a human
+ear.
 
 ## Confirmed fixes
 
@@ -101,6 +114,7 @@ human ear.
 | "Yasukuni" (the Tokyo shrine) | Unknown word | Spelled out letter by letter — no lexicon entry | `jˌasuːkˈuːni` (anglicized 4-syllable approximation) | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
 | "rallied" | Unknown word | Spelled out letter by letter — no lexicon entry, even though the root "rally" phonemizes fine on its own | `ɹˈalɪd` (rally's root + the regular "-ied" ending pattern from "carried"/"hurried"/"married") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
 | "Siglap" (the Singapore neighbourhood) | Unknown word | Spelled out letter by letter — no lexicon entry | `sˈɪɡlap` (built from "signal"'s "sig-" onset + "lap") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
+| "DD Month" dates (e.g. "25 August 1963") | Correct entry, wrong number-reading convention | Day numeral read as cardinal ("twenty-five August") instead of the ordinal spoken English always uses for a day-of-month ("the twenty-fifth of August") | Text expanded to "the \<day\>\<ordinal suffix\> of \<Month\>" before synthesis (suffix computed per day: 1st/2nd/3rd/4th…11th-13th always "th") | `ABBREVIATION_EXPANSIONS` | four-chopsticks-blood-debt-singapore-japan (caught by ear, not by `scan_for_unknown_tokens()` — nothing is unknown or wrong in isolation, only in spoken-date context; likely affects most other posts too, since "DD Month YYYY" is the house style for dates in prose) |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
