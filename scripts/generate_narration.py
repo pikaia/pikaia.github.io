@@ -101,6 +101,17 @@ PRONUNCIATION_OVERRIDES = {
 # docs/pronunciation-fixes.md too - see the note above that dict.
 ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bFr\.(?=\s)"): "Father",
+    # "S$" (Singapore dollar notation) - misaki produces a literal "?"
+    # token for the "$" right after "S" ("S$50 million" -> "S <unknown>
+    # fifty million"). Tried "SGD" as a fix first, but it spells out as
+    # individual letters ("S, G, D") rather than saying "Sing Dollar" -
+    # confirmed by testing directly against misaki.en.G2P. Reordering to
+    # "<amount> <million/billion/thousand> Singapore dollars" (moving the
+    # unit word after the amount, dropping the "S$" prefix, appending the
+    # full phrase at the end) phonemizes correctly and reads naturally.
+    # Plain "$" (used elsewhere for prices, e.g. "$2.70") is untouched -
+    # this only matches the "S$" prefix specifically.
+    re.compile(r"S\$(\d[\d,]*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
 }
 
 

@@ -20,11 +20,13 @@ the fix follows the *shape* of the problem, not just its origin.
 
 **Root causes seen so far:**
 
-1. **Unknown word** — misaki's lexicon has no entry at all, and it
-   falls back to spelling the word out letter by letter (an internal
-   `❓` marker becomes audible letter-by-letter speech). Happens with
-   foreign/rare proper nouns ("Ng") and abbreviated titles ("Fr.")
-   alike.
+1. **Unknown word or symbol** — misaki's lexicon has no entry at all,
+   and it falls back to spelling the word out letter by letter (an
+   internal `❓` marker becomes audible letter-by-letter speech), or
+   drops a symbol as an audible `❓` on its own. Happens with
+   foreign/rare proper nouns ("Ng"), abbreviated titles ("Fr."), and
+   currency notation misaki can't parse ("S$", the "$" producing a
+   literal `❓` right after "S") alike.
 2. **Wrong entry / homograph collision** — misaki *does* have an
    entry, but it's confidently wrong: the phonemes it produces belong
    to a different word or reading entirely. "stung" gets "strung"'s
@@ -44,11 +46,16 @@ the fix follows the *shape* of the problem, not just its origin.
   "stung"/"graves" where the *word itself* is already correct, only
   its pronunciation is wrong).
 - **`ABBREVIATION_EXPANSIONS`** — substitutes the narration *text*
-  itself before synthesis, for an unknown-word abbreviation that
-  *does* have an unambiguous full-word form (e.g. "Fr." → "Father"). A
-  phoneme override alone would still leave an audible pause from the
-  abbreviation's literal period, confirmed by testing both approaches
-  against "Fr." directly; text substitution removes the period
+  itself before synthesis, for an unknown-word/symbol case that has an
+  unambiguous natural-language equivalent (e.g. "Fr." → "Father", "S$"
+  → reordering the amount and appending "Singapore dollars"). Required
+  whenever the fix needs to *reorder* or restructure the surrounding
+  words, not just swap in different phonemes for one token — a
+  phoneme override can't move "million"/"billion" to a different
+  position in the sentence. Also the right choice when a phoneme
+  override alone would still leave an audible artifact: "Fr." tested
+  with a phoneme override still left an audible pause from the
+  abbreviation's literal period; text substitution removes the period
   entirely instead of working around it.
 
 Both dicts are meant to grow **reactively** — one confirmed
@@ -67,6 +74,7 @@ would sound worse than the gap it "fixes" — see the comment above
 | "Fr." (title) | Unknown word | Spelled out letter by letter ("F, R") — no lexicon entry | Text expanded to "Father" before synthesis | `ABBREVIATION_EXPANSIONS` | jalan-payoh-lai-kangkar-montfort-nativity-church (real name: Fr. Ambroise Maistre) |
 | "stung" | Wrong entry / homograph collision | `stɹˈʌŋ` — identical to "strung", an extra "r" sound baked in | `stˈʌŋ` | `PRONUNCIATION_OVERRIDES` | the-fishball-noodle-that-exposed-singapores-hawker-rent-gap |
 | "graves" (plural) | Wrong entry / homograph collision | `ɡɹˈɑːv` — wrong vowel *and* drops the plural entirely, sounds like "grahv" (every other `-aves` word — caves, waves, saves, staves, braves, shaves — phonemizes correctly; likely a lexicon entry misfiled to the Bordeaux wine region's French pronunciation) | `ɡɹˈAvz` | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan |
+| "S$" (Singapore dollar notation, e.g. "S$50 million") | Unknown symbol | "S" + a literal `❓` for the "$" ("S, [garbled], fifty million") | Reordered to "\<amount\> \<million/billion/thousand\> Singapore dollars" ("S$50 million" → "50 million Singapore dollars"). Tried "SGD" first — spells out as individual letters ("S, G, D"), not "Sing Dollar" as hoped, confirmed by testing directly | `ABBREVIATION_EXPANSIONS` | four-chopsticks-blood-debt-singapore-japan |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
