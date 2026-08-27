@@ -171,6 +171,19 @@ swallowing everything after a Watch widget's script block, see section
 rules out *truncation*, it doesn't confirm the rest of the extraction
 is otherwise correct.
 
+**`--dry-run` also automatically scans for the "unknown word or
+symbol" pronunciation-bug category** — see
+`docs/pronunciation-fixes.md` for what that means — and prints a
+`WARNING:` line naming every flagged sentence, or a clean "No unknown
+words/symbols found" line if none. This is a real, near-instant check
+(text only, no audio), not just a lint — it catches the exact class of
+bug that would otherwise need a full listen-through to notice, and has
+already found real cases (Ng, Fr., S$, Kuan, Yasukuni, rallied,
+Siglap) before they ever reached synthesized audio. It does *not*
+catch the other bug category (a confidently wrong existing
+pronunciation, e.g. "stung"/"graves") — that one still needs a human
+ear against the real render.
+
 Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 

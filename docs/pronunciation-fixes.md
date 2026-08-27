@@ -66,6 +66,28 @@ pre-expanded, since they're ambiguous out of context and a wrong guess
 would sound worse than the gap it "fixes" — see the comment above
 `ABBREVIATION_EXPANSIONS` in the code.
 
+## Automated scan for the "unknown word or symbol" category
+
+`scan_for_unknown_tokens()` in `generate_narration.py` runs automatically
+as part of `--dry-run` (section 1.1 of `docs/production-pipeline.md`) —
+it phonemizes every sentence via misaki directly (text only, no audio,
+near-instant) and flags any that contain a literal `❓` token, printing
+each flagged sentence so you know exactly where to look. This closes off
+the *entire* "unknown word or symbol" root cause automatically, on every
+post, for free — no more waiting to catch it by ear.
+
+It found 4 real cases in one pass on the four-chopsticks post ("Kuan" as
+in "Lee Kuan Yew", "Yasukuni", "rallied", "Siglap" — see the table below)
+that would otherwise have needed 4 separate listen-catch-fix-redo cycles.
+"Kuan" in particular is worth noting: since Lee Kuan Yew is mentioned
+across many posts on this blog, this fix likely improves narration on
+posts far beyond the one that surfaced it, not just this one.
+
+It does **not** catch the "wrong entry / homograph collision" category
+(stung, graves) — misaki's output there is fluent, confident, and wrong,
+with no distinguishing signal to scan for. That category still needs a
+human ear.
+
 ## Confirmed fixes
 
 | Word/phrase | Root cause | What misaki produces | Fix | Mechanism | Caught on |
@@ -75,6 +97,10 @@ would sound worse than the gap it "fixes" — see the comment above
 | "stung" | Wrong entry / homograph collision | `stɹˈʌŋ` — identical to "strung", an extra "r" sound baked in | `stˈʌŋ` | `PRONUNCIATION_OVERRIDES` | the-fishball-noodle-that-exposed-singapores-hawker-rent-gap |
 | "graves" (plural) | Wrong entry / homograph collision | `ɡɹˈɑːv` — wrong vowel *and* drops the plural entirely, sounds like "grahv" (every other `-aves` word — caves, waves, saves, staves, braves, shaves — phonemizes correctly; likely a lexicon entry misfiled to the Bordeaux wine region's French pronunciation) | `ɡɹˈAvz` | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan |
 | "S$" (Singapore dollar notation, e.g. "S$50 million") | Unknown symbol | "S" + a literal `❓` for the "$" ("S, [garbled], fifty million") | Reordered to "\<amount\> \<million/billion/thousand\> Singapore dollars" ("S$50 million" → "50 million Singapore dollars"). Tried "SGD" first — spells out as individual letters ("S, G, D"), not "Sing Dollar" as hoped, confirmed by testing directly | `ABBREVIATION_EXPANSIONS` | four-chopsticks-blood-debt-singapore-japan |
+| "Kuan" (as in "Lee Kuan Yew") | Unknown word | Spelled out letter by letter — no lexicon entry | `kwˈɑːn` | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`, not by ear — likely affects other posts mentioning Lee Kuan Yew too) |
+| "Yasukuni" (the Tokyo shrine) | Unknown word | Spelled out letter by letter — no lexicon entry | `jˌasuːkˈuːni` (anglicized 4-syllable approximation) | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
+| "rallied" | Unknown word | Spelled out letter by letter — no lexicon entry, even though the root "rally" phonemizes fine on its own | `ɹˈalɪd` (rally's root + the regular "-ied" ending pattern from "carried"/"hurried"/"married") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
+| "Siglap" (the Singapore neighbourhood) | Unknown word | Spelled out letter by letter — no lexicon entry | `sˈɪɡlap` (built from "signal"'s "sig-" onset + "lap") | `PRONUNCIATION_OVERRIDES` | four-chopsticks-blood-debt-singapore-japan (caught by `scan_for_unknown_tokens()`) |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —

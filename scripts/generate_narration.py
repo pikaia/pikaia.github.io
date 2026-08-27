@@ -84,6 +84,28 @@ PRONUNCIATION_OVERRIDES = {
                           # (French pronunciation) instead of the burial-site
                           # plural. Caught by ear on the four-chopsticks post
                           # ("mass graves found around the island in 1962").
+    "Kuan": "kwˈɑːn",  # unknown word (no lexicon entry) - "Kuan" as in "Lee
+                        # Kuan Yew". Caught by scan_for_unknown_tokens()
+                        # (the --dry-run "?" scan), not by ear - this name
+                        # almost certainly recurs across other already-
+                        # published posts on this blog, worth checking if
+                        # any of them get re-narrated for another reason.
+    "Yasukuni": "jˌasuːkˈuːni",  # unknown word (no lexicon entry) - the
+                                  # Tokyo shrine. Anglicized 4-syllable
+                                  # approximation (ya-soo-KOO-ni); caught by
+                                  # scan_for_unknown_tokens(), not verified
+                                  # by ear yet - flag if it sounds off.
+    "rallied": "ɹˈalɪd",  # unknown word (no lexicon entry), even though the
+                           # root "rally" phonemizes fine on its own -
+                           # misaki is missing the inflected past-tense
+                           # form specifically. Built from "rally"'s own
+                           # root plus the regular "-ied" ending pattern
+                           # (matches "carried"/"hurried"/"married").
+                           # Caught by scan_for_unknown_tokens().
+    "Siglap": "sˈɪɡlap",  # unknown word (no lexicon entry) - the Singapore
+                           # neighbourhood. Built from "signal"'s "sig-"
+                           # onset plus "lap"'s own phonemes. Caught by
+                           # scan_for_unknown_tokens().
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -309,6 +331,45 @@ def _build_srt(sentences: list[dict]) -> str:
     return "\n".join(blocks)
 
 
+def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[str]:
+    """Run the extracted narrative through misaki's G2P directly - text
+    only, no audio synthesis, so this is nearly instant - and flag every
+    sentence where it produces its own "unknown word/symbol" marker (a
+    literal U+2753 "?" character in the phoneme output). This is the
+    "unknown word or symbol" bug category from docs/pronunciation-fixes.md
+    (e.g. "Ng", "Fr.", "S$" before each was fixed) - misaki has no
+    lexicon entry at all for the word/symbol and falls back to spelling
+    it out letter by letter, which is a real, programmatically detectable
+    signal, unlike the *other* bug category (a confidently wrong existing
+    entry, e.g. "stung"/"graves") where misaki's output looks like
+    ordinary fluent phonemes with nothing to scan for - that category can
+    only be caught by ear, this function does not attempt it.
+
+    Applies PRONUNCIATION_OVERRIDES first so a word already fixed there
+    (e.g. "Ng") doesn't get flagged again on every future post that
+    happens to use it - this mirrors exactly what synthesize_with_timing()
+    does before the real synthesis run, so the scan reflects what will
+    actually be produced. ABBREVIATION_EXPANSIONS is already reflected in
+    `narrative`, since extract_narrative() applies it during extraction,
+    before this function ever sees the text.
+    """
+    from misaki import en
+
+    lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
+    g2p = en.G2P(british=(lang_code == "b"))
+    g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+
+    flagged = []
+    for para in narrative:
+        for sent in split_sentences(para):
+            if not sent:
+                continue
+            phonemes, _ = g2p(sent)
+            if "❓" in phonemes:
+                flagged.append(sent)
+    return flagged
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("post_path")
@@ -330,6 +391,28 @@ def main() -> None:
         # directly so --dry-run actually reflects what gets synthesized.
         sys.stdout.buffer.write(full_text.encode("utf-8"))
         sys.stdout.buffer.write(b"\n")
+
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            flagged = scan_for_unknown_tokens(narrative, args.voice)
+        # Same cp1252-vs-UTF-8 issue as the dry-run text above applies here
+        # too - a flagged sentence containing an em-dash or other non-ASCII
+        # character would otherwise get mangled by a plain print().
+        if flagged:
+            lines = [
+                f"\nWARNING: {len(flagged)} sentence(s) contain a word/symbol "
+                "misaki can't phonemize (would get spelled out letter by "
+                "letter in the real audio) - see docs/pronunciation-fixes.md:"
+            ]
+            lines += [f"  - {sent}" for sent in flagged]
+        else:
+            lines = [
+                "\nNo unknown words/symbols found (misaki's own scan) - "
+                "this doesn't rule out a wrong-but-confident mispronunciation "
+                "(e.g. \"stung\"/\"graves\"), only the letter-spelling kind. "
+                "Still worth a listen after synthesis."
+            ]
+        sys.stderr.buffer.write(("\n".join(lines) + "\n").encode("utf-8"))
         return
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
