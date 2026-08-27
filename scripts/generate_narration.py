@@ -216,6 +216,108 @@ PRONUNCIATION_OVERRIDES = {
                                   # "-ius" (from "genius"/"radius"'s
                                   # ending) - not verified by ear yet,
                                   # flag if it sounds off.
+    "Kang": "kˈʌŋ",  # unknown word (no lexicon entry) - part of "Peng
+                      # Kang Hill" on the National Service post. Chris
+                      # confirmed by ear it rhymes with "hung"/"sung"/
+                      # "rung" (an "-ung" vowel, not the "-ang" of
+                      # "hang"/"gang" the surrounding letters suggest -
+                      # verified by sending a synthesized "Peng Kang
+                      # Hill" sample directly, not guessed from spelling
+                      # alone).
+    # "Dr Goh Keng Swee" - the economist/Deputy PM behind Jurong's
+    # industrialization (likely to recur in other posts on that topic,
+    # same as "Winsemius" above). All three names on the National
+    # Service post; all three confirmed by ear against synthesized
+    # samples, not just derived by analogy and left unverified.
+    "Goh": "ɡˈQ",  # unknown word - "go"'s own vowel (as in "logo"'s
+                    # "-go" ending, already used for "FOFO" above).
+    "Keng": "kˈAŋ",  # unknown word - first guessed as "-ɛŋ" (matching
+                      # "Sheng"/"Peng"'s working "-eng" pattern), but
+                      # Chris corrected this by ear: it's actually the
+                      # "cane"/"lane" vowel, not "bed"/"ten"'s - a good
+                      # example of why guessing from a similar-looking
+                      # name isn't reliable, only confirming by ear is.
+    "Swee": "swˈiː",  # unknown word - straightforward, rhymes with
+                       # "tree"/"free" plus an "sw" onset.
+    # The following Malay place names are all on the National Service
+    # post. First attempt at these was guessed by English-word analogy
+    # and came back "mostly wrong" per Chris - standard Malay has its
+    # own vowel system that doesn't map cleanly onto English vowels, so
+    # guessing from spelling alone isn't reliable here the way it was
+    # for Chinese-surname romanizations above. Rebuilt from real IPA
+    # (Wiktionary's Malay entries where available) plus Chris's own
+    # corrections by ear, not guessed a second time.
+    "Pulau": "pˈuːlaʊ",  # confirmed correct by ear - matches Wiktionary
+                          # IPA /ˈpulaw/ (POO-lau, stress first syllable).
+    "Tekong": "təkˈɒŋ",  # no Wiktionary entry (a Singapore-specific place
+                          # name) - Chris confirmed by ear: "tuh-KONG",
+                          # stress on the second syllable, matching the
+                          # IPA [təˈkɔŋ] he separately found.
+    "Jurong": "ʤˈuːrɒŋ",  # confirmed correct by ear - matches Wiktionary
+                           # IPA /dʒuːrɒŋ/ (JOO-rong). First guess used
+                           # the "tour"/"poor" ʊə diphthong instead of a
+                           # plain long "oo" - wrong vowel, corrected
+                           # once the real IPA was checked. "Pulau" above
+                           # is worth flagging the same way as "Lim"/
+                           # "Istana"/"Winsemius" - it's a common word
+                           # across many Singapore-history posts, not
+                           # specific to this one.
+    "Taman": "tˈaman",  # confirmed correct by ear. First guess
+                         # ("tˈɑːmən") reduced the second syllable to a
+                         # schwa, an English habit that doesn't apply to
+                         # Malay - Malay keeps fuller vowels in
+                         # unstressed syllables than English does. That
+                         # same fix (schwa -> full "a") is what corrected
+                         # the whole batch below too.
+    "Bukit": "bˈuːkɪt",  # confirmed correct by ear.
+    "Gombak": "ɡˈɒmbak",  # confirmed correct by ear.
+    "Pasir": "pˈɑːsA",  # confirmed correct by ear - "PAH-say" (the
+                         # "A" symbol is misaki's own for the "day"/"say"
+                         # diphthong, not a plain "ah"). Also common
+                         # across many Singapore place names (Pasir Ris,
+                         # Pasir Panjang) beyond this post.
+    "Laba": "lˈɑːbˌɑː",  # confirmed correct by ear - "LAH-bah", two full
+                          # "ah" syllables (the second "ɑː" needed a
+                          # stress mark of its own, or misaki reduced it
+                          # to a schwa the same way "Taman" was wrong the
+                          # first time).
+    "Besar": "bəsˈɑː",  # confirmed correct by ear.
+    "Kechil": "kətʃˈiːl",  # confirmed correct by ear.
+    "Ris": "ɹˈɪs",  # unknown word - not actually used on the National
+                     # Service post, but caught while verifying "Pasir"
+                     # (as in the well-known "Pasir Ris" housing estate)
+                     # and confirmed by ear, so fixed pre-emptively for
+                     # whichever future post mentions it first.
+    "Selabin": "sˌɜːlˈɑːbɪn",  # unknown word - one of three former
+                                # kampong names on Pulau Tekong (National
+                                # Service post), now repurposed as
+                                # military training-area names. Confirmed
+                                # by ear: "sir-LAH-bin".
+    "Permatang": "pˌəmˌɑːtˈɑːŋ",  # unknown word - see "Selabin" above,
+                                   # same context. Confirmed by ear:
+                                   # "per-mah-tahng".
+    "Sanyongkong": "sˌɑːnjˌɒŋkˈɒŋ",  # unknown word - see "Selabin"
+                                      # above, but a different origin:
+                                      # per Wikipedia, this was a Chinese
+                                      # settlement (rubber-plantation era),
+                                      # not a Malay kampong like the other
+                                      # two - which likely explains why
+                                      # the name doesn't follow standard
+                                      # Malay phonetics. Confirmed by ear:
+                                      # "sahn-yohng-kohng".
+    "tri-service": "trˌIsˈɜːvɪs",  # unknown word (no lexicon entry for
+                                    # the hyphenated compound), even
+                                    # though "tri-" and "service" both
+                                    # phonemize fine separately (matches
+                                    # "try"/"triangle"/"tricycle"'s "tɹˈI"
+                                    # onset). Ordinary English gap, not
+                                    # Malay/Chinese like the entries
+                                    # above.
+    "outgrown": "ˌWtɡɹˈQn",  # unknown word (no lexicon entry for the
+                              # compound), even though "out" and "grown"
+                              # both phonemize fine separately - the same
+                              # kind of narrow compound-word gap as
+                              # "paycheck"/"daycare" above.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

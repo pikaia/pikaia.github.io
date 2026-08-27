@@ -228,6 +228,20 @@ new scan, just never chased down until this pass went looking.
 | "Nanyang" (Nanyang Technological University) | Unknown word | Spelled out letter by letter — no lexicon entry | `nˌanjˈaŋ` ("Nan" + "yang," as in yin-yang) | `PRONUNCIATION_OVERRIDES` | lim-chong-yah-textbook-national-wages-council-shock-therapy (caught by `scan_for_unknown_tokens()`) |
 | "paycheck"/"paychecks" | Unknown word | Spelled out letter by letter — no lexicon entry, surprising since "pay" and "check(s)" both phonemize fine on their own; "daycare" has the same gap | `pˈAʧɛk` / `pˈAʧɛks` (built from the working parts) | `PRONUNCIATION_OVERRIDES` | lim-chong-yah-textbook-national-wages-council-shock-therapy (caught by `scan_for_unknown_tokens()`) |
 | "Winsemius" (Albert Winsemius, the Dutch economist) | Unknown word | Spelled out letter by letter — no lexicon entry | `wɪnsˈiːmiəs` ("win" + "seem" + "-ius" from "genius"/"radius" — not verified by ear yet) | `PRONUNCIATION_OVERRIDES` | lim-chong-yah-textbook-national-wages-council-shock-therapy (caught by `scan_for_unknown_tokens()` — likely affects other posts about Singapore's early economic development) |
+| "Kang" (part of "Peng Kang Hill") | Unknown word | Spelled out letter by letter — no lexicon entry | `kˈʌŋ` — confirmed by ear: rhymes with "hung"/"sung," not the "hang"/"gang" vowel the spelling suggests | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Goh"/"Keng"/"Swee" (Dr Goh Keng Swee, architect of Jurong's industrialization) | Unknown word | Spelled out letter by letter — no lexicon entry | `ɡˈQ` / `kˈAŋ` / `swˈiː` — "Keng" first guessed with the "bed"/"ten" vowel, corrected by ear to the "cane"/"lane" vowel instead | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong (likely affects other posts about Singapore's economic development, same as "Winsemius") |
+| "Pulau" (island) | Unknown word | Spelled out letter by letter — no lexicon entry | `pˈuːlaʊ` — confirmed by ear, matches Wiktionary IPA /ˈpulaw/ | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong (common across many Singapore-history posts, not specific to this one) |
+| "Tekong" (the island) | Unknown word | Spelled out letter by letter — no lexicon entry, no Wiktionary entry either (Singapore-specific place name) | `təkˈɒŋ` — confirmed by ear: "tuh-KONG," stress on the second syllable | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Jurong" | Unknown word | Spelled out letter by letter — no lexicon entry | `ʤˈuːrɒŋ` — matches Wiktionary IPA /dʒuːrɒŋ/; first guess used the "tour"/"poor" diphthong instead of a plain long "oo," corrected once checked | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Taman" (Malay for "garden/park," as in Taman Jurong) | Unknown word | Spelled out letter by letter — no lexicon entry | `tˈaman` — first guess wrongly reduced the second syllable to a schwa (an English habit; Malay keeps fuller unstressed vowels), corrected by ear | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Bukit"/"Gombak" (Malay for "hill"; Bukit Gombak) | Unknown word | Spelled out letter by letter — no lexicon entry | `bˈuːkɪt` / `ɡˈɒmbak` — confirmed by ear | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Pasir" (Malay for "sand"; Pasir Laba, Pasir Ris) | Unknown word | Spelled out letter by letter — no lexicon entry | `pˈɑːsA` ("PAH-say") — two earlier attempts (a rhotic "-sir" ending, then a non-rhotic "-sia" ending) were both wrong; corrected by ear to the actual local reading | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong (common across many Singapore place names — Pasir Ris, Pasir Panjang) |
+| "Laba" (Pasir Laba) | Unknown word | Spelled out letter by letter — no lexicon entry | `lˈɑːbˌɑː` ("LAH-bah") — first guess reduced the second syllable to a schwa, same mistake as "Taman," corrected by ear | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Besar"/"Kechil" (Malay for "big"/"small"; Tekong Besar, Tekong Kechil) | Unknown word | Spelled out letter by letter — no lexicon entry | `bəsˈɑː` / `kətʃˈiːl` — confirmed by ear | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Ris" (Pasir Ris) | Unknown word | Spelled out letter by letter — no lexicon entry | `ɹˈɪs` (rhymes with "miss"/"kiss") — not actually on this post, caught and fixed pre-emptively while verifying "Pasir" | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "Selabin"/"Permatang"/"Sanyongkong" (former kampong names on Pulau Tekong, now training-area names) | Unknown word | Spelled out letter by letter — no lexicon entry | `sˌɜːlˈɑːbɪn` / `pˌəmˌɑːtˈɑːŋ` / `sˌɑːnjˌɒŋkˈɒŋ` — confirmed by ear. "Sanyongkong" was a Chinese settlement (rubber-plantation era), not Malay like the other two, per Wikipedia — likely why it doesn't follow standard Malay phonetics | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "tri-service" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "tri-" and "service" both phonemize fine separately | `trˌIsˈɜːvɪs` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "outgrown" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "out" and "grown" both phonemize fine separately; same gap pattern as "paycheck"/"daycare" | `ˌWtɡɹˈQn` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
@@ -258,6 +272,24 @@ vs. "caves"/"waves") to spot the exact difference before picking a
 fix. Once you have a candidate phoneme string, apply it via
 `g2p.lexicon.golds["word"] = "..."` and re-run the same test to
 confirm it's fixed *before* touching `generate_narration.py`.
+
+**For a foreign word (Malay, Chinese, etc.), don't guess from English
+spelling-analogy alone.** A batch of Malay place names on the National
+Service post (Taman, Bukit, Pasir, and others) came back "mostly
+wrong" on the first attempt, guessed the same way as everything else
+in this doc - by finding an English word with similar spelling and
+borrowing its phonemes. That works for English-derived proper nouns
+(surnames, place names spelled with English conventions) but not
+reliably for genuinely foreign phonetic systems, since English's
+habit of reducing unstressed vowels to a schwa doesn't apply to Malay,
+among other mismatches. Two things fixed it: (1) checking a word's
+real IPA on Wiktionary before guessing (most common Malay words have
+an entry), and (2) synthesizing a short audio sample and sending it
+directly for a listen - which is also just the fastest way to close
+the loop on *any* candidate fix, foreign or not, rather than describing
+phonemes back and forth in text. See `scripts/generate_narration.py`'s
+git history around the National Service post fixes for a worked
+example of the synthesis snippet used for this.
 
 For a confirmed-correct letter-spelled token (the last category
 above), the fix isn't a phoneme or text change at all - just add the
