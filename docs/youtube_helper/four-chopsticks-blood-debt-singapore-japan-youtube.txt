@@ -10,7 +10,13 @@ Full story: https://da.gd/9Fev8I
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Civilian War Memorial, Singapore — Bijay Chaurasia, CC BY-SA 4.0
+- Personal items recovered from Sook Ching mass graves, on display at the National Museum of Singapore — Wombatjpw, CC BY-SA 4.0
+- Lieutenant General Yamashita Tomoyuki and Lieutenant General A.E. Percival discuss surrender terms, 15 February 1942 — Imperial War Museums, public domain
+- Japanese troops marching through Singapore's city centre, February 1942 — Imperial War Museums, public domain
+- A Shinto shrine in Shonan (Singapore), October 1942 — Mainichi Newspapers Co., Showa History Vol. 10: Pacific War Breaks Out , scanned by Wikimedia Commons user Abasaa, public domain
+- Japanese Surrender at Singapore, 12 September 1945 — Royal Navy official photographer, public domain
 
 Sources:
 - Sook Ching — Wikipedia
@@ -44,4 +50,6 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Civilian War Memorial, Singapore — Bijay Chaurasia, CC BY-SA 4.0
+- Personal items recovered from Sook Ching mass graves, on display at the National Museum of Singapore — Wombatjpw, CC BY-SA 4.0
