@@ -5,7 +5,13 @@ post_url: /2026/07/20/benjamin-sheares-doctor-behind-the-baby-bust/
 post_title: "The Doctor Who Shrank Singapore's Families, Then Became Its President"
 ---
 
-Five more images from Benjamin Sheares' life — the young academic, the family man, the president, and the newspaper front page that marked the day he died in office.
+Eight more images from Benjamin Sheares' life — the young academic, the family man, the president's Istana, his resting place, and the newspaper front page that marked the day he died in office.
+
+### In academic dress, 1940s
+
+![Studio photograph of Benjamin Sheares in a graduation gown, 1940s](https://upload.wikimedia.org/wikipedia/commons/2/22/Benjamin_Sheares_1940s_full_photo.jpg)
+
+*A studio photograph of Benjamin Sheares in academic dress, taken sometime in the 1940s — the decade between his early medical career at Kandang Kerbau Hospital and Singapore General Hospital and his 1950 appointment as professor of obstetrics and gynaecology. (Photo: Benjamin Henry Sheares / Wikimedia Commons, public domain)*
 
 ### The young obstetrician at the University of Malaya
 
@@ -25,11 +31,23 @@ Five more images from Benjamin Sheares' life — the young academic, the family 
 
 *The Istana grounds seen from the Mandarin Hotel's rotating roof restaurant on Orchard Road, 1973-74 — squarely within Sheares' 1971-1981 term as president. (Photo: Rainer Halama / Wikimedia Commons, CC BY-SA 4.0)*
 
+### The Istana itself, seen from the same rooftop
+
+![Telephoto view of the Istana building from the Mandarin Hotel's rotating roof restaurant, 1973-74](https://upload.wikimedia.org/wikipedia/commons/e/e1/Singapore-Mandarin_Hotel-Istana-1973-74-WUS08214.jpg)
+
+*A closer frame from the same 1973-74 rooftop photo session, this time with the Istana building itself as the subject rather than the surrounding city. (Photo: Rainer Halama / Wikimedia Commons, CC BY-SA 4.0)*
+
 ### The family portrait, 1946
 
 ![Studio family portrait of Benjamin Sheares, Yeo Seh Geok, and their two children](https://upload.wikimedia.org/wikipedia/commons/a/ad/Benjamin_Sheares_and_his_family.jpg)
 
 *A studio family portrait of Dr Benjamin Sheares with his wife Yeo Seh Geok and their children Constance and Joseph, circa 1946 — decades before he became the public face of a campaign urging other families to stay smaller than his own. (Photo: Benjamin Sheares / Wikimedia Commons, public domain)*
+
+### Where he rests today
+
+![The tomb of President Benjamin Sheares at Kranji State Cemetery](https://upload.wikimedia.org/wikipedia/commons/e/ea/Tomb_of_President_Benjamin_Sheares.jpg)
+
+*The tomb of President Benjamin Sheares at Kranji State Cemetery, photographed in 2015 — one of the few physical markers left of a man most Singaporeans today would struggle to place. (Photo: Ronggy / Wikimedia Commons, CC BY-SA 4.0)*
 
 ### The morning the newspapers carried his death
 

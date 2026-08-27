@@ -2,7 +2,7 @@
 layout: post
 title: "The Doctor Who Shrank Singapore's Families, Then Became Its President"
 date: 2026-07-20 20:00:00 +0800
-last_modified_at: 2026-07-20 20:00:00 +0800
+last_modified_at: 2026-08-28 05:41:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/0/03/Benjamin_Sheares%2C_1951.jpg
 ---
@@ -64,6 +64,10 @@ Sheares' rise inside medicine came first, and it was itself a quiet barrier-brea
 That clinical authority is what made him useful to the state well before he held any office. In 1959, as debate simmered over whether to legalise abortion to slow population growth, Sheares instead pushed voluntary sterilisation as the answer — and spent real effort correcting critics who assumed he meant something coercive; he insisted the operative word was voluntary. He became president of the Singapore Family Planning Association from 1960 to 1963, reviving an organisation that had been largely dormant since its founding in 1949, and folded family planning services directly into his own hospital's clinical practice. The 1969 Voluntary Sterilisation Act was the capstone: it gave the "Stop at Two" campaign an actual medical backbone, not just a slogan on a poster.
 
 *A personal note: I grew up in Singapore through this period, and Sheares registered with me the way he did with most people — a face in the newspaper attached to a ceremonial title, nothing more. Stop at Two wasn't a policy that touched my own family; I was one of seven children, and by the time the campaign really took hold, my parents had already had all of us. It didn't change my household, but it clearly changed everyone else's sense of what a normal family looked like going forward.*
+
+![A man stands in front of "Stop at Two" family planning posters, Singapore, 1973](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Family_planning%2C_Singapore_-_UNESCO_-_PHOTO0000000902_0001.tiff/lossy-page1-1280px-Family_planning%2C_Singapore_-_UNESCO_-_PHOTO0000000902_0001.tiff.jpg)
+
+*A Singapore family planning display in 1973, including the campaign's "please stop at two" stork poster — the visual shorthand for the message Sheares had spent the previous decade building the medical infrastructure to back. (Photo: Dominique Roger / UNESCO, CC BY-SA 3.0 IGO)*
 
 Two years after passing that Act through Parliament, Sheares was pulled out of his own clinical career for good. He'd only opened a private practice two years earlier, at 63, when Lee Kuan Yew approached him about the presidency; he took the office on 2 January 1971 and went on to be elected three times, more than any other president, before dying in office in May 1981. The role itself was largely ceremonial by design — Singapore's presidency then carried little of the executive power it holds today — but the man who filled it had already done more to reshape the country's demographic future than most of the politicians serving around him.
 
@@ -253,7 +257,7 @@ Two years after passing that Act through Parliament, Sheares was pulled out of h
 </script>
 </div>
 
-The government has spent the years since trying to undo exactly what Sheares' generation built. "Have 3 or More" in 1987, cash incentives, tax rebates, matched savings for newborns, an entire Ministry-level population strategy — none of it has come close to reversing the trend, and the total fertility rate has instead kept sliding to record lows. The machinery Sheares helped design turned out to work far better, and for far longer, than anyone building it in 1969 seems to have expected. [See five more historical photos related to this post →](/gallery/benjamin-sheares-doctor-behind-the-baby-bust/)
+The government has spent the years since trying to undo exactly what Sheares' generation built. "Have 3 or More" in 1987, cash incentives, tax rebates, matched savings for newborns, an entire Ministry-level population strategy — none of it has come close to reversing the trend, and the total fertility rate has instead kept sliding to record lows. The machinery Sheares helped design turned out to work far better, and for far longer, than anyone building it in 1969 seems to have expected. [See eight more historical photos related to this post →](/gallery/benjamin-sheares-doctor-behind-the-baby-bust/)
 
 *A personal note: by the time I had children of my own, stopping at two wasn't something I remember agonising over — it just felt like the obvious, sensible thing to do, the same way most people I knew saw it. Singapore was rising in the world by then but hadn't quite arrived, and there was always an undercurrent of financial anxiety feeding into that thinking: a smaller family read as the economically smart choice, not an unusual one.*
 
@@ -278,5 +282,9 @@ The government has spent the years since trying to undo exactly what Sheares' ge
 - [File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08140.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Mandarin_Hotel-Istana-1973-74-WUS08140.jpg)
 - [File:Benjamin Sheares and his family.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_and_his_family.jpg)
 - [File:ST13May1981.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ST13May1981.jpg)
+- [File:Family planning, Singapore - UNESCO - PHOTO0000000902 0001.tiff — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Family_planning,_Singapore_-_UNESCO_-_PHOTO0000000902_0001.tiff)
+- [File:Benjamin Sheares 1940s full photo.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_1940s_full_photo.jpg)
+- [File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08214.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Mandarin_Hotel-Istana-1973-74-WUS08214.jpg)
+- [File:Tomb of President Benjamin Sheares.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tomb_of_President_Benjamin_Sheares.jpg)
 
 [← Back to all posts](/)
