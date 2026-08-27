@@ -215,7 +215,7 @@ echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangka
   each separately, then concatenate:
   ```
   echo "=== 1.4 [FALLBACK] Concatenate split narration ===" | tee -a logs/<slug>.log
-  { time ffmpeg -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3 ; } 2>&1 | tee -a logs/<slug>.log
+  { time ffmpeg -y -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3 ; } 2>&1 | tee -a logs/<slug>.log
   ```
   Example — note `part1.mp3`/`part2.mp3` here are placeholder pieces
   you'd have generated yourself while working around a stall, not real
@@ -223,7 +223,7 @@ echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangka
   run this if your synthesis completed normally the first time:
   ```
   echo "=== 1.4 [FALLBACK] Concatenate split narration ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-  { time ffmpeg -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+  { time ffmpeg -y -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
 
 ---
@@ -989,7 +989,7 @@ frames at meaningful timestamps and eyeball them:
 
 ```
 echo "=== 8.2 Verify spot frame ===" | tee -a logs/<slug>.log
-{ time ffmpeg -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png ; } 2>&1 | tee -a logs/<slug>.log
+{ time ffmpeg -y -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png ; } 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example (a frame at t=110.3s should land on the "church exterior
@@ -998,7 +998,7 @@ schedule in section 3):
 
 ```
 echo "=== 8.2 Verify spot frame ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time ffmpeg -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ time ffmpeg -y -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Confirm the image and caption match what should be on screen at that
@@ -1299,6 +1299,18 @@ git push
   `scripts/generate_narration.py`, with that doc as a human-readable
   summary kept in sync by hand. Add a new override only after verifying
   by ear against a real render, not preemptively.
+- **Re-running a command hangs with no output.** Only two commands in
+  this doc write a file without `-y` risk in mind: the section 1.4
+  fallback concat and section 8's spot-frame `ffmpeg -ss` check (both
+  now include `-y`, but if you're running an older or hand-typed
+  variant, watch for this). Without `-y`, re-running either against an
+  output path that already exists hits ffmpeg's own "File already
+  exists. Overwrite? [y/N]" prompt — which hangs forever in a
+  non-interactive shell, since nothing will ever type `y`. Every other
+  file-producing step is either safe to re-run by design (post/text
+  writers replace their own content in place; `watch_video_lib.py`'s
+  own `render()` already passes `-y` internally) or doesn't write a
+  reusable output path at all.
 
 ---
 
