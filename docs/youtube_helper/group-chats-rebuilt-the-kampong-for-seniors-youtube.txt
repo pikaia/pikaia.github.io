@@ -10,7 +10,13 @@ Full story: https://da.gd/R9u4w
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Kampong Buggis, the Buginese district of Singapore, circa 1900 — Leiden University Library, KITLV collection, public domain
+- Bishan Community Club, Singapore — Terence Ong, CC BY-SA 3.0
+- Kampong Baru at Singapore, circa 1890 — Leiden University Library, KITLV collection, public domain
+- A kampong in Braddell Hill, Singapore, circa 1964 — Don Christie, CC BY-SA 4.0
+- Public housing under construction in Singapore, 1973-74, with older low-rise structures still visible at the base of the new blocks — Rainer Halama, CC BY-SA 4.0
+- Malay Dwelling House, Singapore, hand-tinted postcard, early 20th century — Leiden University Library, KITLV collection, CC BY 4.0
 
 Sources:
 - MCI response to PQ on update on Digital Ambassador outreach effort — Ministry of Digital Development and Information
@@ -35,8 +41,11 @@ Description:
 Somewhere in Singapore right now, a 78-year-old is checking a family WhatsApp group before breakfast, sending a good-morning sticker to a chat of ex-colleagues, or reading updates from her Active Ageing Centre's exercise group — quietly maintaining a social circle that, a decade ago, would have shrunk along with her mobility. It's an unglamorous kind of connection, but it's doing real work: a government push to get seniors online has ended up rebuilding something closer to old kampong-style closeness than anyone quite planned for. #Shorts
 
 Full story: https://da.gd/R9u4w
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/sEZ_p9IgXcw
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Kampong Buggis, the Buginese district of Singapore, circa 1900 — Leiden University Library, KITLV collection, public domain
+- Bishan Community Club, Singapore — Terence Ong, CC BY-SA 3.0
+- Kampong Baru at Singapore, circa 1890 — Leiden University Library, KITLV collection, public domain
