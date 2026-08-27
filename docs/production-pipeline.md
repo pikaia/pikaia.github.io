@@ -24,11 +24,11 @@ The rest maps 1:1 to this doc's own section numbers:
 ```
 1. Generate narration audio (Kokoro TTS)         -- section 1   [Manual]
 2. Insert the Listen widget                      -- section 2   [Manual]
-3. Write the video config (per post)             -- section 3   [Claude]
+3. Write the video configs (main + Short)        -- section 3   [Claude]
 4. Generate the Watch widget from that config     -- section 4   [Manual]
 5. Check smoothness + review the gap report      -- section 5   [Manual]
 6. Render the main video                         -- section 6   [Manual]
-7. Render the YouTube Short                      -- section 7   [Claude, then Manual]
+7. Render the YouTube Short                      -- section 7   [Manual]
 8. Verify both files                             -- section 8   [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
@@ -38,19 +38,24 @@ The rest maps 1:1 to this doc's own section numbers:
 
 **`[Manual]` vs `[Claude]`:** every `[Manual]` step is a single mechanical
 script invocation with no real decision to make - safe and fast to run
-yourself when Claude's usage limit is hit. The two `[Claude]` steps are
-different in kind, not just difficulty: nothing exists yet for the
-script to transform, and producing it requires reading the real
-narration text and deciding which image best represents each beat -
-genuine judgment, not something a deterministic script can stand in
-for (confirmed in practice: `build_watch_widget.py` only replaced
-section 4 because it mechanically transforms an *existing* config;
-section 3 has no equivalent input to transform from). Section 7 is
-split: picking the Short's excerpt and writing its config needs the
-same judgment as section 3, but rendering it afterward (the actual
-`--check-only`/`--out` commands) is exactly as mechanical as section 6.
-If Claude is unavailable, everything except writing a new video config
-(main or Short) can still move forward solo.
+yourself when Claude's usage limit is hit. Section 3 is the one
+`[Claude]` step, and it's different in kind, not just difficulty:
+nothing exists yet for a script to transform, and producing either
+config requires reading the real narration text and deciding which
+image best represents each beat (main config) or which opening
+sentences form a self-contained hook (Short config) - genuine
+judgment, not something a deterministic script can stand in for
+(confirmed in practice: `build_watch_widget.py` only replaced section 4
+because it mechanically transforms an *existing* config; section 3 has
+no equivalent input to transform from). Both configs are written
+together in section 3, in the same sitting, rather than the Short's
+config being written separately later in section 7 - this used to be
+split across two sections, but doing both while already immersed in
+that post's sentence timings avoids a real failure mode: reaching
+section 7's Short render with no `-short.py` config yet written,
+because the two steps had drifted apart in practice. If Claude is
+unavailable, everything except writing the video configs (main and
+Short, both in section 3) can still move forward solo.
 
 Steps 1-7 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
@@ -233,19 +238,23 @@ combined block below.
 
 ---
 
-## 3. Write the video config
+## 3. Write the video configs (main + Short)
 
 **[Claude] — needs judgment, not just execution** (see section 0's
 legend). If Claude is unavailable, this is the one step to leave
-queued rather than attempt solo.
+queued rather than attempt solo. Both the main video's config and the
+Short's config get written here, in the same sitting — see section 0's
+legend for why that matters.
 
 Video rendering is driven by a **shared engine**,
 `scripts/watch_video_lib.py`, with per-post data in
 `scripts/video-configs/<slug>.py` (main video) and
-`scripts/video-configs/<slug>-short.py` (Shorts, section 7). Never
-copy the engine itself into a scratch/per-post script — that's exactly
-how a real jerky-panning bug regressed in the past (a fix landed in one
-copy and not the others). Only the config module is per-post.
+`scripts/video-configs/<slug>-short.py` (Shorts). Never copy the engine
+itself into a scratch/per-post script — that's exactly how a real
+jerky-panning bug regressed in the past (a fix landed in one copy and
+not the others). Only the config module is per-post.
+
+**Main video config first:**
 
 **Config module contract:**
 
@@ -338,6 +347,74 @@ own widget script's `TOTAL_DURATION` says); `343.056` is a fresh re-run of
 walking through section 1. A live post's original narration and a freshly
 regenerated one for the same text won't line up to the second — that's
 expected, not a sign either number is wrong.
+
+**Now the Short's config, while still working from the same sentence
+timings:**
+
+Pick a self-contained excerpt — not a mid-sentence truncation. Look for
+a real hook→payoff (→cliffhanger) arc in the real sentence timings: the
+post's opening few sentences almost always work well (title hook
+through the first strong beat). Write a second config,
+`scripts/video-configs/<slug>-short.py`:
+
+```python
+WIDTH, HEIGHT = 1080, 1920
+
+IMAGES = { "HERO": "..." }   # usually a subset of the main config's images
+
+SLIDES = [
+    {"img": "HERO", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5,0.5)]*3},
+    # 2-3 slides is typical for a ~30-50s Short
+]
+
+SCHEDULE = [(0.0, 0), (16.2, 1), (32.4, 2)]
+TOTAL_DURATION = 48.65          # the excerpt's own length, not the full post's
+TIMING_JSON = "audio/<slug>.timing.json"
+
+# Shorts want smaller/higher captions than the landscape default:
+CAPTION_FONT_RATIO = 0.032
+CAPTION_MAX_WIDTH_FRAC = 0.86
+CAPTION_Y_FRAC = 0.80
+```
+
+**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py`
+— again illustrative, since this post's real, already-published Short
+at `youtube.com/shorts/rVX4caKw0os` predates this config system; the
+excerpt boundary below is a real one, though — the post's own sentence
+timings put a clean beat right at 24.775s, "...took about twenty
+minutes.", which is also where the real published video's first slide
+transition already happens):
+
+```python
+WIDTH, HEIGHT = 1080, 1920
+
+IMAGES = {
+    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
+    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
+}
+
+SLIDES = [
+    {"img": "MAP", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3},
+    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.5, 0.4), (0.5, 0.5), (0.5, 0.6)]},
+]
+
+SCHEDULE = [(0.0, 0), (12.4, 1)]
+TOTAL_DURATION = 24.775  # real sentence-timing boundary for this post's opening hook
+TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
+
+CAPTION_FONT_RATIO = 0.032
+CAPTION_MAX_WIDTH_FRAC = 0.86
+CAPTION_Y_FRAC = 0.80
+```
+
+The exact same zoom/pan **percentage** values from a landscape slide
+carry over unchanged to the vertical 1080x1920 target — cover-crop
+normalizes to whatever `WIDTH`/`HEIGHT` is set, no per-image rework
+needed. A landscape source used as `letterbox` in a vertical Short is
+the one case worth a speed sanity-check (see
+`LETTERBOX_WORK_SCALE` in `watch_video_lib.py`) — this was a real past
+slowdown (~0.2fps), already fixed in the shared engine, but worth
+knowing about if a future render looks unusually slow.
 
 ---
 
@@ -837,75 +914,11 @@ scripts and gap reports that produced it.
 
 ## 7. Render the YouTube Short
 
-**[Claude, then Manual]** — picking the excerpt and writing the
-`-short.py` config below needs the same judgment as section 3; once
-that config exists, the render commands are exactly as mechanical as
-section 6.
-
-Pick a self-contained excerpt — not a mid-sentence truncation. Look for
-a real hook→payoff (→cliffhanger) arc in the real sentence timings: the
-post's opening few sentences almost always work well (title hook
-through the first strong beat). Write a second config,
-`scripts/video-configs/<slug>-short.py`:
-
-```python
-WIDTH, HEIGHT = 1080, 1920
-
-IMAGES = { "HERO": "..." }   # usually a subset of the main config's images
-
-SLIDES = [
-    {"img": "HERO", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5,0.5)]*3},
-    # 2-3 slides is typical for a ~30-50s Short
-]
-
-SCHEDULE = [(0.0, 0), (16.2, 1), (32.4, 2)]
-TOTAL_DURATION = 48.65          # the excerpt's own length, not the full post's
-TIMING_JSON = "audio/<slug>.timing.json"
-
-# Shorts want smaller/higher captions than the landscape default:
-CAPTION_FONT_RATIO = 0.032
-CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
-```
-
-**Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py`
-— again illustrative, since this post's real, already-published Short
-at `youtube.com/shorts/rVX4caKw0os` predates this config system; the
-excerpt boundary below is a real one, though — the post's own sentence
-timings put a clean beat right at 24.775s, "...took about twenty
-minutes.", which is also where the real published video's first slide
-transition already happens):
-
-```python
-WIDTH, HEIGHT = 1080, 1920
-
-IMAGES = {
-    "MAP": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hougang_location.svg",
-    "CHURCH_DAY": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg",
-}
-
-SLIDES = [
-    {"img": "MAP", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3},
-    {"img": "CHURCH_DAY", "type": "cover", "zoom": [1, 1.08, 1.15], "pan": [(0.5, 0.4), (0.5, 0.5), (0.5, 0.6)]},
-]
-
-SCHEDULE = [(0.0, 0), (12.4, 1)]
-TOTAL_DURATION = 24.775  # real sentence-timing boundary for this post's opening hook
-TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
-
-CAPTION_FONT_RATIO = 0.032
-CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
-```
-
-The exact same zoom/pan **percentage** values from a landscape slide
-carry over unchanged to the vertical 1080x1920 target — cover-crop
-normalizes to whatever `WIDTH`/`HEIGHT` is set, no per-image rework
-needed. A landscape source used as `letterbox` in a vertical Short is
-the one case worth a speed sanity-check (see
-`LETTERBOX_WORK_SCALE` in `watch_video_lib.py`) — this was a real past
-slowdown (~0.2fps), already fixed in the shared engine, but worth
-knowing about if a future render looks unusually slow.
+**[Manual]** — the `-short.py` config should already exist from section
+3. If it doesn't (e.g. you're resuming a post where only the main
+config was written), go back and write it there first rather than
+improvising it here — picking the excerpt is a judgment call, not a
+mechanical part of this step.
 
 Run the same `--check-only` then render commands as sections 5-6, but
 **pointing at the `-short.py` config, not the main one** — same
