@@ -1143,6 +1143,20 @@ widget the script didn't generate (no marker comments), or when only
 adding the two buttons without wanting to touch anything else the
 script would also regenerate.
 
+```
+echo "=== 11. Wire the published URLs into the post ===" | tee -a logs/<slug>.log
+{ time python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/... ; } 2>&1 | tee -a logs/<slug>.log
+```
+
+**Example** (the exact same command section 4.2 already documents —
+shown here too since this is the step where you'll actually have both
+real URLs in hand):
+
+```
+echo "=== 11. Wire the published URLs into the post ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ time python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+```
+
 Once both the video and the Short are live, add the YouTube + Shorts
 icon buttons to the post's widget row (section 4's row markup),
 between the Watch button and the closing `</div>`:
