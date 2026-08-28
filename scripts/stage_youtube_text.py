@@ -58,15 +58,18 @@ PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
 PHOTO_BY_RE = re.compile(r'Photo by\s+([^,]+),\s*licensed under\s+(.+?)\.?\s*$')
 TRAILING_PAREN_RE = re.compile(r'\(([^()]+)\)\s*$')
 BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
-COMMONS_THUMB_RE = re.compile(r'^(https://upload\.wikimedia\.org/wikipedia/commons)/thumb(/.+)/\d+px-[^/]+$')
+COMMONS_THUMB_RE = re.compile(r'^(https://upload\.wikimedia\.org/wikipedia/commons)/thumb(/.+?)/(?:lossy-page\d+-)?\d+px-[^/]+$')
 
 
 def normalize_commons_url(url: str) -> str:
-    """Wikimedia Commons thumbnail URLs (used in galleries for bandwidth,
-    e.g. ".../thumb/8/87/File.jpg/960px-File.jpg") and full-res URLs
-    (used in video configs, ".../8/87/File.jpg") point at the same file
-    but don't match as strings - normalize thumbnails back to the
-    canonical full-res form so caption lookups match across both."""
+    """Wikimedia Commons thumbnail URLs and full-res URLs point at the
+    same file but don't match as strings - normalize thumbnails back to
+    the canonical form so caption lookups match across both. Handles the
+    plain form (".../thumb/8/87/File.jpg/960px-File.jpg") and the
+    multi-page form used for .tif/.pdf/.djvu, where the width segment is
+    prefixed (".../thumb/3/3d/File.tif/lossy-page1-1280px-File.tif.jpg")
+    - a chart/video config often requests a wider thumb than the gallery,
+    so those two must still resolve to the same file."""
     m = COMMONS_THUMB_RE.match(url)
     return m.group(1) + m.group(2) if m else url
 
