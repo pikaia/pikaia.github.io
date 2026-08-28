@@ -63,6 +63,18 @@ the fix follows the *shape* of the problem, not just its origin.
    know that "HDB" is correct as letters while "VII" is not, since both
    get identical internal treatment, so a human has to judge each new
    case once before it goes on the allowlist.
+5. **Correct phonemes, wrong acoustic rendering** — the phonemizer is
+   right (verified: `KPipeline(lang_code="b").g2p(...)` returns the
+   intended reading), but the Kokoro *voice model* realises those
+   phonemes wrong anyway, and the error shifts with the surrounding
+   sentence. Seen once, on the amah post: "live-in workers" — the g2p
+   hands `bm_george` the adjective reading `lˈIvˌɪn` (/laɪv/, the same
+   token it uses in "live music" / "drive-in"), but the model collapses
+   the `/aɪ/` to the verb's short vowel in that sentence's context.
+   Because the phoneme string is already correct, a
+   `PRONUNCIATION_OVERRIDES` entry to the *same* phonemes does nothing,
+   and every alternate spelling tried (`lˈIvɪn`, `lˈIv ˌɪn`,
+   `lˈaɪ.vɪn`, `lˈIv-ɪn`, …) still came out wrong. Only caught by ear.
 
 **Fix mechanisms available:**
 
@@ -84,6 +96,16 @@ the fix follows the *shape* of the problem, not just its origin.
   with a phoneme override still left an audible pause from the
   abbreviation's literal period; text substitution removes the period
   entirely instead of working around it.
+- **Reword the post itself** — the only fix for root cause 5 (correct
+  phonemes, wrong acoustic rendering), and a clean, scalable dodge
+  whenever a word fights the voice model and no phoneme spelling wins.
+  Swap the offending word for a synonym that carries the same meaning
+  and phonemizes cleanly — "live-in workers" → "resident domestic
+  workers" on the amah post. This edits the post file on disk (unlike
+  the two dicts above), so it's a real content change; if it's an
+  invisible meaning-preserving swap, `last_modified_at` doesn't need
+  bumping. Confirmed as the preferred move by Chris (2026-08-28):
+  "avoiding the use is a clean scalable way to dodge this."
 
 Both dicts are meant to grow **reactively** — one confirmed
 mispronunciation at a time, verified by ear against a real render (or
