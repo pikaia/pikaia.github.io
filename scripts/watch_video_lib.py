@@ -374,13 +374,16 @@ def compose_chart_frame(slide, out_w, out_h, t, progress):
     anns = slide.get("annotations", [])
 
     if series2:
-        _draw_chart_panel(draw, data, cur_year, out_h * 0.15, out_h * 0.52,
+        # Both panels live in the top ~63% of the frame: the bottom third
+        # is where the exported video burns in the narration caption, and
+        # a full-height second panel would sit right under it.
+        _draw_chart_panel(draw, data, cur_year, out_h * 0.15, out_h * 0.40,
                           left, right, x_min, x_max, y_min, y_max, step, tick_fmt,
                           value_fmt, anns, tick_font, label_font, sub_font,
                           out_h, out_w, draw_x_ticks=False)
         s2 = series2
         s2_ymin, s2_ymax = s2.get("y_range", (0, s2["data"][-1][1] * 1.1))
-        _draw_chart_panel(draw, s2["data"], cur_year, out_h * 0.60, out_h * 0.82,
+        _draw_chart_panel(draw, s2["data"], cur_year, out_h * 0.45, out_h * 0.60,
                           left, right, x_min, x_max, s2_ymin, s2_ymax,
                           s2.get("y_tick_step", 5), s2.get("y_tick_format", "{:.0f}%"),
                           s2.get("value_format", "{:.0f}%"), s2.get("annotations", []),
