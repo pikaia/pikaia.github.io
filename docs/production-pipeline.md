@@ -230,6 +230,23 @@ catch the other bug category (a confidently wrong existing
 pronunciation, e.g. "stung"/"graves") — that one still needs a human
 ear against the real render.
 
+**Standard step whenever `--dry-run` flags a word (or a suspected
+mispronunciation surfaces any other way): prepare candidate audio
+samples in `scratch/` for Chris to ear-review before locking in a
+fix.** Don't just commit a guessed phoneme override and move on — a
+guessed reading of a place name or foreign word is wrong as often as
+not (see the Malay-place-name batch in `docs/pronunciation-fixes.md`).
+For each flagged word, synthesize 2-3 short samples of the actual
+sentence it appears in, one per candidate reading, into
+`scratch/<slug>-<word>/` (git-ignored) named so the reading is
+obvious (e.g. `A_chah-ngee.wav`, `B_chan-jee.wav`,
+`C_char-ngee-stress2.wav`). Put the current/leading candidate in the
+code so `--dry-run` passes, mark it `# NOT ear-verified yet` in the
+comment, and hand Chris the folder. He picks one by ear; then update
+the override to the chosen reading and drop the "not verified" note.
+This is [Claude]'s job as part of step 1, same as the video configs
+in step 3.
+
 Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 

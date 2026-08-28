@@ -343,13 +343,15 @@ PRONUNCIATION_OVERRIDES = {
                                 # (fɹˈAz, "A" = the "day"/"say" diphthong)
                                 # + "book" (bʊk). Same compound gap.
                                 # Travel-bug post.
-    "Changi": "ʧˈɑːŋi",  # unknown word (no lexicon entry) - the Singapore
-                          # airport/district, appears across many posts on
-                          # this blog. "CHAH-ngee": "ch" onset + "ah"
-                          # (ɑː) + "-ngi" with the /ŋ/ of "singer" (not a
-                          # hard /ndʒ/). NOT ear-verified yet - a Singapore
-                          # place name, so flag if it sounds off (same
-                          # caution as Tekong/Pasir/Siglap above).
+    "Changi": "ʧɑːŋˈiː",  # unknown word (no lexicon entry) - the Singapore
+                           # airport/district, appears across many posts on
+                           # this blog. "chah-NGEE": "ch" onset + "ah"
+                           # (ɑː) + "-ngee" with the /ŋ/ of "singer" (not a
+                           # hard /ndʒ/), stress on the second syllable, long
+                           # "ee". Confirmed by Chris by ear (2026-08-28),
+                           # picked from three synthesized samples - the
+                           # first-syllable-stress reading was the other
+                           # main candidate.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

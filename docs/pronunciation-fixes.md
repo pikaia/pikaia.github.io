@@ -268,7 +268,7 @@ new scan, just never chased down until this pass went looking.
 | "majie" | Unknown word | Spelled out letter by letter — no lexicon entry (妈姐/媽姐, Cantonese domestic-servant term) | `mˈɑːʤɛ` ("MAH-jeh": "ma" + "jie" as Cantonese "jeh" `ʤɛ`, per the variant spelling "mahjeh" — not Mandarin-pinyin "jiě". Confirmed by Chris) | `PRONUNCIATION_OVERRIDES` | from-amah-to-auntie-rise-of-domestic-workers |
 | "Jetstar" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "jet" and "star" phonemize fine separately (same compound gap as "paycheck"/"outgrown") | `ʤˈɛtstɑː` | `PRONUNCIATION_OVERRIDES` | the-travel-bug-rise-of-travelling-among-singaporeans |
 | "phrasebook" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "phrase" and "book" phonemize fine separately | `fɹˈAzbʊk` | `PRONUNCIATION_OVERRIDES` | the-travel-bug-rise-of-travelling-among-singaporeans |
-| "Changi" | Unknown word | Spelled out letter by letter — no lexicon entry (the airport/district; recurs across many posts) | `ʧˈɑːŋi` ("CHAH-ngee": "ch" + "ah" + "-ngi" with the /ŋ/ of "singer", not a hard /ndʒ/). **Not ear-verified yet** — a Singapore place name, flag if it sounds off | `PRONUNCIATION_OVERRIDES` | the-travel-bug-rise-of-travelling-among-singaporeans |
+| "Changi" | Unknown word | Spelled out letter by letter — no lexicon entry (the airport/district; recurs across many posts) | `ʧɑːŋˈiː` ("chah-NGEE": "ch" + "ah" + "-ngee" with the /ŋ/ of "singer", not a hard /ndʒ/; stress on the second syllable, long "ee"). Confirmed by Chris by ear from three synthesized samples — first-syllable-stress `ʧˈɑːŋi` was the runner-up | `PRONUNCIATION_OVERRIDES` | the-travel-bug-rise-of-travelling-among-singaporeans |
 | "2020–2021" (any 4-digit year range, en-dash or hyphen) | Unknown symbol | The dash drops as an audible "?" and the two years mush together ("twenty twenty? twenty twenty one") | Text-substituted to "2020 to 2021" (each year then read as the usual cardinal); regex `\b(\d{4})[–-](\d{4})\b` → `\1 to \2` | `ABBREVIATION_EXPANSIONS` | the-travel-bug-rise-of-travelling-among-singaporeans |
 
 **How to verify a new candidate fix** before adding it: test directly
@@ -318,6 +318,20 @@ the loop on *any* candidate fix, foreign or not, rather than describing
 phonemes back and forth in text. See `scripts/generate_narration.py`'s
 git history around the National Service post fixes for a worked
 example of the synthesis snippet used for this.
+
+**Preparing those samples is a standard step now, not a fallback**
+(confirmed by Chris, 2026-08-28). Whenever `--dry-run` flags a word,
+or a mispronunciation is suspected any other way, [Claude] synthesizes
+2-3 short samples of the real sentence — one per candidate reading —
+into `scratch/<slug>-<word>/` (git-ignored), named so the reading each
+one uses is obvious from the filename (`A_chah-ngee.wav`,
+`B_chan-jee.wav`, `C_char-ngee-stress2.wav`). The leading candidate
+goes into `PRONUNCIATION_OVERRIDES` straight away with a
+`# NOT ear-verified yet` comment so the dry-run passes; Chris picks
+the winner by ear, then the override is updated to the chosen reading
+and the note dropped. Worked example: the "Changi" row above (three
+samples, second-syllable stress chosen). This mirrors the note in
+`docs/production-pipeline.md` section 1.
 
 For a confirmed-correct letter-spelled token (the last category
 above), the fix isn't a phoneme or text change at all - just add the
