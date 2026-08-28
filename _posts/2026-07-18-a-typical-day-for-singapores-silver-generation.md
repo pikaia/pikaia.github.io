@@ -2,7 +2,7 @@
 layout: post
 title: "A Typical Day for Singapore's Silver Generation"
 date: 2026-07-18 10:00:00 +0800
-last_modified_at: 2026-07-18 10:00:00 +0800
+last_modified_at: 2026-08-28 10:08:00 +0800
 categories: [society, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/7/7a/Our_Tampines_Hub_Town_Square.jpg
 ---
@@ -54,6 +54,10 @@ For many Singaporeans now in their 80s, the day starts early — not out of habi
 
 *Our Tampines Hub — one of the regional hubs built to support seniors' daily routines. (Photo: Tamprovers / Wikimedia Commons, CC BY-SA 4.0)*
 
+![Outdoor adult exercise equipment at a housing estate on Woodlands Street 83, Singapore](https://upload.wikimedia.org/wikipedia/commons/7/75/Outdoor_adult_exercise_equipment_on_Woodlands_Street_83%2C_Singapore.jpg)
+
+*A public fitness corner outside an HDB block — the kind of neighbourhood exercise stations built into estates across Singapore, popular with seniors for a morning stretch before the heat sets in. (Photo: Wzhkevin / Wikimedia Commons, CC BY-SA 4.0)*
+
 ![Bedok Hawker Centre, Singapore](https://upload.wikimedia.org/wikipedia/commons/6/66/Bedok_Hawker_Centre.jpg)
 
 *A neighbourhood hawker centre — for some seniors, still a place of light work rather than just meals. (Photo: DylanAngGuanZhe / Wikimedia Commons, CC BY-SA 4.0)*
@@ -76,6 +80,7 @@ The government's response has been to build the infrastructure this generation m
 - [PCS Active Ageing Centres](https://pcs.org.sg/services/seniors/active-ageing-centre/)
 - [Our Tampines Hub — Wikipedia](https://en.wikipedia.org/wiki/Our_Tampines_Hub)
 - [File:Our Tampines Hub Town Square.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Our_Tampines_Hub_Town_Square.jpg)
+- [File:Outdoor adult exercise equipment on Woodlands Street 83, Singapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Outdoor_adult_exercise_equipment_on_Woodlands_Street_83,_Singapore.jpg)
 - [File:Bedok Hawker Centre.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bedok_Hawker_Centre.jpg)
 - [File:CPF Building.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CPF_Building.jpg)
 - [File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Singapore-Street_Vendor_1973-74-WUS08155.jpg)
