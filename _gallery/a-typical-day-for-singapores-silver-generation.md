@@ -5,7 +5,13 @@ post_url: /2026/07/18/a-typical-day-for-singapores-silver-generation/
 post_title: "A Typical Day for Singapore's Silver Generation"
 ---
 
-Five more images from the Singapore today's oldest generation grew up and grew old in — the informal trades they worked, the housing that replaced the kampong, and the campaign that shrank the large families many once counted on for old age.
+Six more images from the Singapore today's oldest generation grew up and grew old in — the informal trades they worked, the housing that replaced the kampong, the campaign that shrank the large families many once counted on for old age, and the fitness corners that are part of daily life today.
+
+### A fitness corner by the water
+
+![Fitness corner along East Coast Parkway, Singapore](/assets/images/east_cost_parkway.jpeg)
+
+*A public fitness corner along East Coast Parkway — the same kind of exercise stations found across Singapore's estates and parks, here set against the Strait of Singapore. (Photo: Chris Lee)*
 
 ### A street vendor's trade, 1973/74
 

@@ -58,6 +58,10 @@ For many Singaporeans now in their 80s, the day starts early — not out of habi
 
 *A public fitness corner outside an HDB block — the kind of neighbourhood exercise stations built into estates across Singapore, popular with seniors for a morning stretch before the heat sets in. (Photo: Wzhkevin / Wikimedia Commons, CC BY-SA 4.0)*
 
+![Seniors exercising at a fitness corner along the Haig Road park connector, Singapore](/assets/images/haig_road_park_connector.jpeg)
+
+*A morning scene at a fitness corner along the Haig Road park connector — much like the "unremarkable morning" this post opens with. (Photo: Chris Lee)*
+
 ![Bedok Hawker Centre, Singapore](https://upload.wikimedia.org/wikipedia/commons/6/66/Bedok_Hawker_Centre.jpg)
 
 *A neighbourhood hawker centre — for some seniors, still a place of light work rather than just meals. (Photo: DylanAngGuanZhe / Wikimedia Commons, CC BY-SA 4.0)*
@@ -68,7 +72,7 @@ The reason this generation leans so heavily on subsidised programmes traces back
 
 *The CPF Building on Robinson Road, once the headquarters of the scheme meant to be every worker's retirement fund. (Photo: Nlannuzel / Wikimedia Commons, CC BY-SA 3.0)*
 
-The government's response has been to build the infrastructure this generation missed the first time around. The Silver Support Scheme, introduced in 2016, gives seniors with low lifetime wages and little family support a quarterly cash top-up — enhanced in 2025 to as much as $1,080 a quarter, and reaching roughly 260,000 seniors in 2023 alone. Alongside the cash support sit the physical spaces: Active Ageing Centres in almost every neighbourhood, and larger integrated developments like Our Tampines Hub, which opened in 2017 and folds a library, hawker centre, sports facilities, and community programming for seniors into a single town square. [See five more historical photos related to this post →](/gallery/a-typical-day-for-singapores-silver-generation/)
+The government's response has been to build the infrastructure this generation missed the first time around. The Silver Support Scheme, introduced in 2016, gives seniors with low lifetime wages and little family support a quarterly cash top-up — enhanced in 2025 to as much as $1,080 a quarter, and reaching roughly 260,000 seniors in 2023 alone. Alongside the cash support sit the physical spaces: Active Ageing Centres in almost every neighbourhood, and larger integrated developments like Our Tampines Hub, which opened in 2017 and folds a library, hawker centre, sports facilities, and community programming for seniors into a single town square. [See six more photos related to this post →](/gallery/a-typical-day-for-singapores-silver-generation/)
 
 **Why it matters today:** the generation now in their 80s and 90s is, in many ways, the last to have lived most of their working life before Singapore's retirement systems caught up — which makes the hubs, subsidies, and quiet daily routines built around them one of the more overlooked ways the island is still adjusting for its own history.
 
