@@ -333,7 +333,7 @@ PRONUNCIATION_OVERRIDES = {
                          # "jie" as "jeh" (ʤɛ), following the Cantonese
                          # reading (姐 = ze2) and the variant spelling
                          # "mahjeh" - not the Mandarin-pinyin "jiě"/"jay".
-                         # Not ear-verified yet; flag if it sounds off.
+                         # Confirmed by Chris (2026-08-28).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
