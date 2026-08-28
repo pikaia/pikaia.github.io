@@ -37,7 +37,15 @@ Config module contract (see scripts/video-configs/ for real examples):
                                    [(x, y, label, "above"|"below"|"left")]}
                                    contract. Animates its own data line
                                    drawing left to right over the slide's
-                                   on-screen duration.
+                                   on-screen duration. Optional
+                                   "y_tick_step"/"y_tick_format"/
+                                   "value_format" override the y-axis tick
+                                   spacing and both label formats - all
+                                   default to the original dollar-price
+                                   styling (e.g. "$293") when unset, added
+                                   for the Benjamin Sheares post's
+                                   fertility-rate chart (decimal values,
+                                   no dollar sign).
     SCHEDULE: list[(t, slide_index)]
     TOTAL_DURATION: float
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
@@ -285,12 +293,19 @@ def compose_chart_frame(slide, out_w, out_h, t, progress):
     if title:
         draw.text((left, out_h * 0.06), title, font=title_font, fill=CHART_TEXT)
 
-    step = 100 if y_max <= 800 else 200
+    # y_tick_step/y_tick_format let a slide override the dollar-tuned
+    # defaults below - added for the Benjamin Sheares post's fertility-rate
+    # chart (0-6 range, decimal values), the first chart slide for a metric
+    # that isn't a dollar price. Both default to the exact original HDB
+    # price-chart behavior when a slide doesn't set them, so that post's
+    # config needed no changes.
+    step = slide.get("y_tick_step", 100 if y_max <= 800 else 200)
+    tick_fmt = slide.get("y_tick_format", "${:.0f}")
     v = 0
     while v <= y_max:
         y = sy(v)
         draw.line([(left, y), (right, y)], fill=CHART_BASELINE if v == 0 else CHART_GRID, width=1)
-        draw.text((left - 10, y), f"${v}", font=tick_font, fill=CHART_MUTED, anchor="rm")
+        draw.text((left - 10, y), tick_fmt.format(v), font=tick_font, fill=CHART_MUTED, anchor="rm")
         v += step
 
     yr = int(x_min)
@@ -335,7 +350,8 @@ def compose_chart_frame(slide, out_w, out_h, t, progress):
     r2 = max(4, int(out_h * 0.007))
     draw.ellipse([ex - r2, ey - r2, ex + r2, ey + r2], fill=CHART_LINE, outline=CHART_BG, width=2)
     year_label = f"{int(round(cur_year))}"
-    val_label = f"${int(round(cur_val))} / sqft"
+    value_fmt = slide.get("value_format", "${:.0f} / sqft")
+    val_label = value_fmt.format(cur_val)
     label_x = min(ex + 14, right - out_w * 0.16)
     draw.text((label_x, ey - out_h * 0.05), val_label, font=label_font, fill=CHART_TEXT)
     draw.text((label_x, ey - out_h * 0.025), year_label, font=sub_font, fill=CHART_SECONDARY)
