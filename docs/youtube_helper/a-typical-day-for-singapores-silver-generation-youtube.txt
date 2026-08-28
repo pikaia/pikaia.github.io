@@ -10,7 +10,16 @@ Full story: https://da.gd/bJo1W
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Our Tampines Hub Town Square, Singapore — Tamprovers, CC BY-SA 4.0
+- Seniors exercising at a fitness corner along the Haig Road park connector, Singapore — Chris Lee
+- Bedok Hawker Centre, Singapore — DylanAngGuanZhe, CC BY-SA 4.0
+- Street vendor in Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- The former CPF Building, Singapore — Nlannuzel, CC BY-SA 3.0
+- Recreated HDB flat living room from the 1970s and 1980s, National Museum of Singapore — Jacklee, CC BY-SA 4.0
+- Public housing construction in Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Outdoor adult exercise equipment at a housing estate on Woodlands Street 83, Singapore — Wzhkevin, CC BY-SA 4.0
+- Fitness corner along East Coast Parkway, Singapore — Chris Lee
 
 Sources:
 - Silver Support Scheme — CPF Board
@@ -18,6 +27,7 @@ Sources:
 - PCS Active Ageing Centres
 - Our Tampines Hub — Wikipedia
 - File:Our Tampines Hub Town Square.jpg — Wikimedia Commons
+- File:Outdoor adult exercise equipment on Woodlands Street 83, Singapore.jpg — Wikimedia Commons
 - File:Bedok Hawker Centre.jpg — Wikimedia Commons
 - File:CPF Building.jpg — Wikimedia Commons
 - File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons
@@ -41,4 +51,7 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Our Tampines Hub Town Square, Singapore — Tamprovers, CC BY-SA 4.0
+- Seniors exercising at a fitness corner along the Haig Road park connector, Singapore — Chris Lee
+- Bedok Hawker Centre, Singapore — DylanAngGuanZhe, CC BY-SA 4.0
