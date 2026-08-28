@@ -1167,39 +1167,33 @@ Generate the draft with `scripts/stage_youtube_text.py`:
 } 2>&1 | tee -a logs/<slug>.log
 ```
 
-**Example** (Benjamin Sheares post — the normal case, both video-config
-paths passed; without them the script can't build the real per-image
-credit list and drops in a "no video built yet" placeholder instead):
-
-```
-{ echo; echo "=== 9. Stage the YouTube upload text file ==="
-  cmd=(python scripts/stage_youtube_text.py
-      _posts/2026-07-20-benjamin-sheares-doctor-behind-the-baby-bust.md
-      scripts/video-configs/benjamin-sheares-doctor-behind-the-baby-bust.py
-      scripts/video-configs/benjamin-sheares-doctor-behind-the-baby-bust-short.py
-      --post-url https://pikaia.github.io/2026/07/20/benjamin-sheares-doctor-behind-the-baby-bust/)
-  echo "\$ ${cmd[*]}"; echo
-  time "${cmd[@]}"
-  echo
-} 2>&1 | tee -a logs/benjamin-sheares-doctor-behind-the-baby-bust.log
-```
-
-**Older post with no `scripts/video-configs/` file** (e.g. Jalan Payoh
-Lai / Kangkar — its published video predates the config system, per
-section 3's note): drop the two config-path lines and pass `--out`
-explicitly if the slug differs from the filename's:
+**Example** (same running-example slug as every other section, so a
+global find-replace of `jalan-payoh-lai-kangkar-montfort-nativity-church`
+→ your post's slug produces the command as-is — with both video-config
+paths, which is the normal case; **without** them the script can't
+build the real per-image credit list and drops in a "no video built
+yet" placeholder instead):
 
 ```
 { echo; echo "=== 9. Stage the YouTube upload text file ==="
   cmd=(python scripts/stage_youtube_text.py
       _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md
-      --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/
-      --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt)
+      scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
+      scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py
+      --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
+
+(The Kangkar post itself has no `scripts/video-configs/` file — its
+published video predates the config system, per section 3's note — so
+its own real run drops those two lines and adds `--out ...`. For a post
+whose video already exists, the script reads the YouTube links straight
+out of the widget markup and reports "already published at
+`https://youtu.be/...`, predates the pipeline" rather than the "no
+video built yet" placeholder.)
 
 For that Kangkar run the script detected both existing YouTube links in
 the post's own widget markup and reported "video already published at
