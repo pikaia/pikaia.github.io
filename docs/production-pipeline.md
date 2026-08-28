@@ -530,7 +530,7 @@ percentage strings, SCHEDULE to imageSchedule, pasting in the real
 sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
-{ echo; echo "=== 4.1 Author the Watch widget ==="
+{ echo; echo "=== 4. Author the Watch widget ==="
   cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -541,7 +541,7 @@ sentences from TIMING_JSON) - write that config first if you haven't.
 **Example:**
 
 ```
-{ echo; echo "=== 4.1 Author the Watch widget ==="
+{ echo; echo "=== 4. Author the Watch widget ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
