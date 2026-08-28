@@ -327,6 +327,13 @@ PRONUNCIATION_OVERRIDES = {
                                 # "-ing", same non-rhotic-linking rule
                                 # those words already follow). Found on
                                 # the silver-generation post.
+    "majie": "mˈɑːʤɛ",  # unknown word (no lexicon entry) - 妈姐/媽姐, the
+                         # Cantonese domestic-servant term on the amah post.
+                         # "MAH-jeh": "ma" (mˈɑː, "father"/"spa" vowel) +
+                         # "jie" as "jeh" (ʤɛ), following the Cantonese
+                         # reading (姐 = ze2) and the variant spelling
+                         # "mahjeh" - not the Mandarin-pinyin "jiě"/"jay".
+                         # Not ear-verified yet; flag if it sounds off.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

@@ -243,6 +243,7 @@ new scan, just never chased down until this pass went looking.
 | "tri-service" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "tri-" and "service" both phonemize fine separately | `trˌIsˈɜːvɪs` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
 | "outgrown" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "out" and "grown" both phonemize fine separately; same gap pattern as "paycheck"/"daycare" | `ˌWtɡɹˈQn` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
 | "portering" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "porter" phonemizes fine on its own | `pˈɔːtəɹɪŋ` ("porter" + the regular "-ering" pattern from "catering"/"watering", restoring the linking "r") | `PRONUNCIATION_OVERRIDES` | a-typical-day-for-singapores-silver-generation |
+| "majie" | Unknown word | Spelled out letter by letter — no lexicon entry (妈姐/媽姐, Cantonese domestic-servant term) | `mˈɑːʤɛ` ("MAH-jeh": "ma" + "jie" as Cantonese "jeh" `ʤɛ`, per the variant spelling "mahjeh" — not Mandarin-pinyin "jiě". Not ear-verified yet) | `PRONUNCIATION_OVERRIDES` | from-amah-to-auntie-rise-of-domestic-workers |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —
