@@ -255,85 +255,48 @@ CHART_SUPERSAMPLE = 3
 # shows up as gradual antialiasing change frame to frame.
 
 
-def compose_chart_frame(slide, out_w, out_h, t, progress):
-    # Animates the post's own price-per-square-foot line chart drawing
-    # itself left to right, in sync with the slide's own time window -
-    # requested by Chris (2026-08-22) instead of showing the finished chart
-    # as a static image the way every other slide shows a static photo.
-    #
-    # If the slide config has "year_checkpoints" - [(absolute_t, year), ...]
-    # - the line's pace follows those instead of a uniform progress*year
-    # rate, so it lingers/jumps in step with what the narration is actually
-    # saying (see piecewise_interp's docstring). Falls back to the uniform
-    # rate if a slide never sets checkpoints.
-    data = slide["data"]
-    x_min, x_max = slide.get("x_range", (data[0][0], data[-1][0]))
-    y_min, y_max = slide.get("y_range", (0, data[-1][1] * 1.05))
-    title = slide.get("title", "")
-
-    ss = CHART_SUPERSAMPLE
-    out_w, out_h = out_w * ss, out_h * ss
-
-    frame = Image.new("RGB", (out_w, out_h), CHART_BG)
-    draw = ImageDraw.Draw(frame, "RGBA")
-
-    left, right = out_w * 0.09, out_w * 0.95
-    top, bottom = out_h * 0.16, out_h * 0.82
-
+def _draw_chart_panel(draw, data, cur_year, panel_top, panel_bot, left, right,
+                      x_min, x_max, y_min, y_max, y_tick_step, y_tick_fmt,
+                      value_fmt, annotations, tick_font, label_font, sub_font,
+                      out_h, out_w, draw_x_ticks, panel_label=None):
+    # One line panel: gridlines + y ticks, the line drawn up to cur_year,
+    # annotation dots revealed as the line reaches them, and the live
+    # end-dot + value/year readout. Shared by the single-panel chart and
+    # each panel of the two-panel (series2) layout - the single-panel
+    # call passes the exact top/bottom the old inline code used, so that
+    # output stays pixel-identical.
     def sx(year):
         return left + (year - x_min) / (x_max - x_min) * (right - left)
 
     def sy(val):
-        return top + (y_max - val) / (y_max - y_min) * (bottom - top)
+        return panel_top + (y_max - val) / (y_max - y_min) * (panel_bot - panel_top)
 
-    title_font = load_font(int(out_h * 0.032), bold=True)
-    tick_font = load_font(int(out_h * 0.022), bold=False)
-    label_font = load_font(int(out_h * 0.026), bold=True)
-    sub_font = load_font(int(out_h * 0.02), bold=False)
-
-    if title:
-        draw.text((left, out_h * 0.06), title, font=title_font, fill=CHART_TEXT)
-
-    # y_tick_step/y_tick_format let a slide override the dollar-tuned
-    # defaults below - added for the Benjamin Sheares post's fertility-rate
-    # chart (0-6 range, decimal values), the first chart slide for a metric
-    # that isn't a dollar price. Both default to the exact original HDB
-    # price-chart behavior when a slide doesn't set them, so that post's
-    # config needed no changes.
-    step = slide.get("y_tick_step", 100 if y_max <= 800 else 200)
-    tick_fmt = slide.get("y_tick_format", "${:.0f}")
     v = 0
     while v <= y_max:
         y = sy(v)
         draw.line([(left, y), (right, y)], fill=CHART_BASELINE if v == 0 else CHART_GRID, width=1)
-        draw.text((left - 10, y), tick_fmt.format(v), font=tick_font, fill=CHART_MUTED, anchor="rm")
-        v += step
+        draw.text((left - 10, y), y_tick_fmt.format(v), font=tick_font, fill=CHART_MUTED, anchor="rm")
+        v += y_tick_step
 
-    yr = int(x_min)
-    while yr <= x_max:
-        x = sx(yr)
-        draw.text((x, bottom + out_h * 0.03), str(yr), font=tick_font, fill=CHART_MUTED, anchor="mm")
-        yr += 5
+    if draw_x_ticks:
+        yr = int(x_min)
+        while yr <= x_max:
+            x = sx(yr)
+            draw.text((x, panel_bot + out_h * 0.03), str(yr), font=tick_font, fill=CHART_MUTED, anchor="mm")
+            yr += 5
 
-    # Current point on the timeline this slide is animating through - the
-    # visible line only extends up to here.
-    checkpoints = slide.get("year_checkpoints")
-    if checkpoints:
-        cur_year = piecewise_interp(checkpoints, t)
-    else:
-        cur_year = x_min + (x_max - x_min) * progress
+    if panel_label:
+        draw.text((left, panel_top - out_h * 0.028), panel_label, font=sub_font, fill=CHART_SECONDARY)
+
     points = [(x0, y0) for x0, y0 in data if x0 <= cur_year]
     cur_val = interp_value_at_year(data, cur_year)
     points.append((cur_year, cur_val))
-
     if len(points) >= 2:
         xy = [(sx(x0), sy(y0)) for x0, y0 in points]
         draw.line(xy, fill=CHART_LINE, width=max(2, int(out_h * 0.0035)), joint="curve")
 
-    # Reveal each annotated dot only once the drawing line has actually
-    # reached it, so the peak/start/end callouts appear as part of the
-    # same rising motion rather than all being visible from frame one.
-    for ann_year, ann_val, ann_label, side in slide.get("annotations", []):
+    # Reveal each annotated dot only once the drawing line has reached it.
+    for ann_year, ann_val, ann_label, side in annotations:
         if ann_year > cur_year + 0.01:
             continue
         ax, ay = sx(ann_year), sy(ann_val)
@@ -346,16 +309,88 @@ def compose_chart_frame(slide, out_w, out_h, t, progress):
         elif side == "left":
             draw.text((ax - r - 8, ay), ann_label, font=sub_font, fill=CHART_SECONDARY, anchor="rm")
 
-    # Live end-dot and value readout, tracking the current point every frame.
     ex, ey = sx(cur_year), sy(cur_val)
     r2 = max(4, int(out_h * 0.007))
     draw.ellipse([ex - r2, ey - r2, ex + r2, ey + r2], fill=CHART_LINE, outline=CHART_BG, width=2)
     year_label = f"{int(round(cur_year))}"
-    value_fmt = slide.get("value_format", "${:.0f} / sqft")
     val_label = value_fmt.format(cur_val)
     label_x = min(ex + 14, right - out_w * 0.16)
     draw.text((label_x, ey - out_h * 0.05), val_label, font=label_font, fill=CHART_TEXT)
     draw.text((label_x, ey - out_h * 0.025), year_label, font=sub_font, fill=CHART_SECONDARY)
+
+
+def compose_chart_frame(slide, out_w, out_h, t, progress):
+    # Animates the post's own line chart drawing itself left to right, in
+    # sync with the slide's own time window - requested by Chris
+    # (2026-08-22) instead of showing the finished chart as a static image
+    # the way every other slide shows a static photo.
+    #
+    # If the slide config has "year_checkpoints" - [(absolute_t, year), ...]
+    # - the line's pace follows those instead of a uniform progress*year
+    # rate, so it lingers/jumps in step with what the narration is actually
+    # saying (see piecewise_interp's docstring). Falls back to the uniform
+    # rate if a slide never sets checkpoints.
+    #
+    # "series2" (optional) adds a second, shorter panel below the main one,
+    # sharing the x-axis - for showing a companion line like a share-of-
+    # total ratio next to the absolute count. Its own y_range / y_tick_step
+    # / y_tick_format / value_format / annotations / label. Absent -> a
+    # single full-height panel, pixel-identical to before (the Sheares /
+    # HDB chart slides don't set it). Added for the amah post (2026-08-28).
+    data = slide["data"]
+    x_min, x_max = slide.get("x_range", (data[0][0], data[-1][0]))
+    y_min, y_max = slide.get("y_range", (0, data[-1][1] * 1.05))
+    title = slide.get("title", "")
+    series2 = slide.get("series2")
+
+    ss = CHART_SUPERSAMPLE
+    out_w, out_h = out_w * ss, out_h * ss
+
+    frame = Image.new("RGB", (out_w, out_h), CHART_BG)
+    draw = ImageDraw.Draw(frame, "RGBA")
+
+    left, right = out_w * 0.09, out_w * 0.95
+
+    title_font = load_font(int(out_h * 0.032), bold=True)
+    tick_font = load_font(int(out_h * 0.022), bold=False)
+    label_font = load_font(int(out_h * 0.026), bold=True)
+    sub_font = load_font(int(out_h * 0.02), bold=False)
+
+    if title:
+        draw.text((left, out_h * 0.06), title, font=title_font, fill=CHART_TEXT)
+
+    checkpoints = slide.get("year_checkpoints")
+    if checkpoints:
+        cur_year = piecewise_interp(checkpoints, t)
+    else:
+        cur_year = x_min + (x_max - x_min) * progress
+
+    # y_tick_step/y_tick_format default to the original HDB dollar-chart
+    # behavior when a slide doesn't set them, so that post needed no config
+    # changes when these were added for the Sheares fertility-rate chart.
+    step = slide.get("y_tick_step", 100 if y_max <= 800 else 200)
+    tick_fmt = slide.get("y_tick_format", "${:.0f}")
+    value_fmt = slide.get("value_format", "${:.0f} / sqft")
+    anns = slide.get("annotations", [])
+
+    if series2:
+        _draw_chart_panel(draw, data, cur_year, out_h * 0.15, out_h * 0.52,
+                          left, right, x_min, x_max, y_min, y_max, step, tick_fmt,
+                          value_fmt, anns, tick_font, label_font, sub_font,
+                          out_h, out_w, draw_x_ticks=False)
+        s2 = series2
+        s2_ymin, s2_ymax = s2.get("y_range", (0, s2["data"][-1][1] * 1.1))
+        _draw_chart_panel(draw, s2["data"], cur_year, out_h * 0.60, out_h * 0.82,
+                          left, right, x_min, x_max, s2_ymin, s2_ymax,
+                          s2.get("y_tick_step", 5), s2.get("y_tick_format", "{:.0f}%"),
+                          s2.get("value_format", "{:.0f}%"), s2.get("annotations", []),
+                          tick_font, label_font, sub_font, out_h, out_w,
+                          draw_x_ticks=True, panel_label=s2.get("label"))
+    else:
+        _draw_chart_panel(draw, data, cur_year, out_h * 0.16, out_h * 0.82,
+                          left, right, x_min, x_max, y_min, y_max, step, tick_fmt,
+                          value_fmt, anns, tick_font, label_font, sub_font,
+                          out_h, out_w, draw_x_ticks=True)
 
     return frame.resize((out_w // ss, out_h // ss), Image.LANCZOS)
 
