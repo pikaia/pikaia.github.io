@@ -10,7 +10,12 @@ Full story: https://da.gd/3dVUO
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Ten domestic servants of various ethnic origins, each posed with an object relating to their task, Singapore, circa 1900 — Royal Netherlands Institute of Southeast Asian and Caribbean Studies (KITLV
+- Washing and bleaching field at Dhoby Ghaut, Singapore, circa 1880 — KITLV collection, public domain
+- Portrait of an itinerant tailor in Singapore, circa 1900 — G.R. Lambert & Co., public domain
+- Lucky Plaza, Orchard Road, Singapore — Exec8, CC BY-SA 3.0
+- Two itinerant knife sharpeners at work in Singapore, circa 1900 — G.R. Lambert & Co., public domain
 
 Sources:
 - A Lifetime of Labour: Cantonese Amahs in Singapore — BiblioAsia, National Library Board
@@ -42,4 +47,7 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Ten domestic servants of various ethnic origins, each posed with an object relating to their task, Singapore, circa 1900 — Royal Netherlands Institute of Southeast Asian and Caribbean Studies (KITLV
+- Washing and bleaching field at Dhoby Ghaut, Singapore, circa 1880 — KITLV collection, public domain
+- Lucky Plaza, Orchard Road, Singapore — Exec8, CC BY-SA 3.0
