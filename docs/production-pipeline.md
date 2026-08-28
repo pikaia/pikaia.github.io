@@ -1308,6 +1308,15 @@ widget the script didn't generate (no marker comments), or when only
 adding the two buttons without wanting to touch anything else the
 script would also regenerate.
 
+**If the post has a hand-authored `chart` or `route-walk` slide** (the
+`MANUAL:` case from section 4), that re-run wipes it — the script
+regenerates the whole block from the config and only knows how to emit
+the placeholder. So for those posts, do the URL re-run *first*, then
+re-apply the hand-authored slide as the last edit to the block (and
+commit it that way). The exported video isn't affected either way — it
+renders from the Python video config, which carries the full slide
+definition.
+
 ```
 { echo; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...)
