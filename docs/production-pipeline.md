@@ -1167,10 +1167,27 @@ Generate the draft with `scripts/stage_youtube_text.py`:
 } 2>&1 | tee -a logs/<slug>.log
 ```
 
-**Example** (this one is a real, already-run command — this post has
-no `scripts/video-configs/` file, so the two config paths are simply
-omitted, per section 3's note; `--out` is shown explicitly even though
-it matches the default, for clarity):
+**Example** (Benjamin Sheares post — the normal case, both video-config
+paths passed; without them the script can't build the real per-image
+credit list and drops in a "no video built yet" placeholder instead):
+
+```
+{ echo; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-07-20-benjamin-sheares-doctor-behind-the-baby-bust.md
+      scripts/video-configs/benjamin-sheares-doctor-behind-the-baby-bust.py
+      scripts/video-configs/benjamin-sheares-doctor-behind-the-baby-bust-short.py
+      --post-url https://pikaia.github.io/2026/07/20/benjamin-sheares-doctor-behind-the-baby-bust/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/benjamin-sheares-doctor-behind-the-baby-bust.log
+```
+
+**Older post with no `scripts/video-configs/` file** (e.g. Jalan Payoh
+Lai / Kangkar — its published video predates the config system, per
+section 3's note): drop the two config-path lines and pass `--out`
+explicitly if the slug differs from the filename's:
 
 ```
 { echo; echo "=== 9. Stage the YouTube upload text file ==="
@@ -1184,13 +1201,11 @@ it matches the default, for clarity):
 } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
-Real result: `docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt`
-— since this post already has a real published video and Short (see
-section 3's note), the script detected both existing YouTube links in
-the post's own widget markup and correctly reported "video already
-published at `https://youtu.be/GTIpKWDZBNA`, but predates the
-`scripts/video-configs/` pipeline" instead of the generic "no video
-built yet" placeholder it would show for a post with no video at all.
+For that Kangkar run the script detected both existing YouTube links in
+the post's own widget markup and reported "video already published at
+`https://youtu.be/GTIpKWDZBNA`, but predates the
+`scripts/video-configs/` pipeline" — not the generic "no video built
+yet" placeholder it shows for a post with no video at all.
 
 It writes `docs/youtube_helper/<slug>-youtube.txt` (override with
 `--out`) — unlike `preview-motion/`, this folder is git-tracked, so
