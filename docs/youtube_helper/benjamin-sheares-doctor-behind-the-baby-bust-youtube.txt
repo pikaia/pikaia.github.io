@@ -27,6 +27,10 @@ Sources:
 - File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08140.jpg — Wikimedia Commons
 - File:Benjamin Sheares and his family.jpg — Wikimedia Commons
 - File:ST13May1981.jpg — Wikimedia Commons
+- File:Family planning, Singapore - UNESCO - PHOTO0000000902 0001.tiff — Wikimedia Commons
+- File:Benjamin Sheares 1940s full photo.jpg — Wikimedia Commons
+- File:Singapore-Mandarin Hotel-Istana-1973-74-WUS08214.jpg — Wikimedia Commons
+- File:Tomb of President Benjamin Sheares.jpg — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -39,7 +43,7 @@ Description:
 In 1969, Singapore's Parliament passed the Voluntary Sterilisation Act without a single vote against it — a law that would go on to help engineer one of the steepest fertility declines any country has seen in peacetime. It wasn't pushed through by a career politician. It was pushed through by a working obstetrician who, two years later, would be tapped by Lee Kuan Yew to become Singapore's second president — a job most people since have treated as ceremonial, a name and a signature, with no real memory of the population engineering he'd already done before he ever moved into the Istana. #Shorts
 
 Full story: https://da.gd/tGrZpv
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/Ugj7GwI-dpY
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
