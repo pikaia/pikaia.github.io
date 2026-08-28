@@ -22,13 +22,15 @@ gets Listen+Watch only; the URLs get wired in later by re-running with
 (idempotent) - the generated block is wrapped in HTML comment markers
 so a second run replaces it in place rather than duplicating it.
 
-Chart and route-walk slides (see CLAUDE.md's Charts / Route animations
-sections) are NOT auto-generated - their JS is structurally different
-from a plain image slide (an SVG chart/route, not a background-image
-div) and needs its own hand-authored buildChartSlide()/route-walk block
-copied from an existing post with one. Any such slide in the config
-gets a loud placeholder comment in the generated output instead of
-being silently wrong.
+Chart slides ARE auto-generated: a `{"type": "chart", ...}` entry in
+the config becomes a full `{ type: "chart", ... }` JS object plus the
+generic `buildChartSlide()` SVG library, translated straight from the
+config (including a small Python-format-string -> JS-formatter
+converter for y_tick_format / value_format). A chart whose format
+strings the converter doesn't recognise falls back to a loud MANUAL
+placeholder rather than emitting broken JS. Route-walk slides are still
+NOT auto-generated - their JS is more bespoke - and get the MANUAL
+placeholder; hand-author those per CLAUDE.md's Route animations section.
 
 Usage:
     python scripts/build_watch_widget.py \\
@@ -100,25 +102,38 @@ def gradient_id(slug: str) -> str:
     return f"shortsGrad{camel}{digest}"
 
 
-def build_slides_js(cfg, images_by_key: dict) -> tuple[list[str], int]:
-    """Returns (lines, manual_count). Each SLIDES entry with an "img" key
-    becomes a real { src: KEY, ... } JS object; anything else (chart,
-    route-walk) becomes a flagged placeholder that still parses as valid
-    JS (falls back to the post's own hero image) so the file doesn't
-    break, but is unmistakably not the real slide."""
+def build_slides_js(cfg, images_by_key: dict) -> tuple[list[str], int, bool]:
+    """Returns (lines, manual_count, has_chart). Each SLIDES entry with an
+    "img" key becomes a real { src: KEY, ... } JS object. A "chart" slide
+    is translated to a full { type: "chart", ... } object (chart_slide_js)
+    unless a format string can't be converted. Anything else still
+    unhandled (route-walk, or an untranslatable chart) becomes a flagged
+    placeholder that still parses as valid JS (falls back to the hero
+    image) so the file doesn't break, but is unmistakably not the real
+    slide."""
     lines = []
     manual_count = 0
+    has_chart = False
     hero_key = next(iter(images_by_key), None)
     for i, slide in enumerate(cfg.SLIDES):
         key = slide.get("img")
         if key is None:
-            manual_count += 1
             slide_type = slide.get("type", "unknown")
+            if slide_type == "chart":
+                chart_js = chart_slide_js(slide)
+                if chart_js is not None:
+                    lines.append(chart_js)
+                    has_chart = True
+                    continue
+            manual_count += 1
+            why = ("its y_tick_format / value_format isn't one this script can "
+                   "convert to JS" if slide_type == "chart"
+                   else "auto-generation only covers cover/letterbox/chart")
             comment = (f'/* MANUAL: slide {i} is type "{slide_type}" in the video config - '
-                       f'auto-generation only covers cover/letterbox. Hand-author this slide '
-                       f"per CLAUDE.md's Charts/Route animations section, copying the pattern "
-                       f"from an existing post with one. Placeholder below just reuses the "
-                       f"hero image so the widget still loads. */")
+                       f"{why}. Hand-author this slide per CLAUDE.md's "
+                       f"Charts/Route animations section, copying the pattern from an "
+                       f"existing post with one. Placeholder below just reuses the hero "
+                       f"image so the widget still loads. */")
             lines.append(comment)
             lines.append(
                 f'{{ src: {hero_key}, type: "cover", zoom: [1, 1, 1], '
@@ -131,7 +146,7 @@ def build_slides_js(cfg, images_by_key: dict) -> tuple[list[str], int]:
         lines.append(
             f'{{ src: {key}, type: "{slide["type"]}", zoom: {zoom}, pan: [{pans}], ease: "{ease}" }},'
         )
-    return lines, manual_count
+    return lines, manual_count, has_chart
 
 
 def build_row_markup(youtube_url: str | None, shorts_url: str | None, grad_id: str) -> str:
@@ -254,6 +269,7 @@ WATCH_SCRIPT_TAIL = """
     return (next ? next.t : TOTAL_DURATION) - entry.t;
   });
 
+__CHART_LIB__
   var viewer = document.getElementById('watch-viewer');
   var stage = document.getElementById('watch-stage');
   var captionEl = document.getElementById('watch-caption');
@@ -281,7 +297,11 @@ WATCH_SCRIPT_TAIL = """
     var ease = s.ease || 'linear';
     var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === i; })];
 
-    if (s.type === 'letterbox') {
+    if (s.type === 'chart') {
+      var chart = buildChartSlide(s);
+      el.appendChild(chart.svg);
+      el._chartUpdate = chart.update;
+    } else if (s.type === 'letterbox') {
       var bg = document.createElement('div');
       bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\\'' + s.src + '\\');';
       bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
@@ -296,11 +316,13 @@ WATCH_SCRIPT_TAIL = """
       el.appendChild(layer);
       el._animTargets = [layer];
     }
-    styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\\n';
+    if (s.type !== 'chart') {
+      styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\\n';
+    }
     stage.appendChild(el);
     return el;
   });
-  slides.forEach(function (s) { var img = new Image(); img.src = s.src; });
+  slides.forEach(function (s) { if (s.src) { var img = new Image(); img.src = s.src; } });
 
   var currentIndex = -1, currentSentenceIndex = -1;
   function fmtTime(t) {
@@ -324,6 +346,14 @@ WATCH_SCRIPT_TAIL = """
       if (currentIndex >= 0) slideEls[currentIndex].style.opacity = '0';
       slideEls[sIdx].style.opacity = '1';
       currentIndex = sIdx;
+    }
+    if (slideEls[sIdx]._chartUpdate) {
+      var schedIdx = imageSchedule.findIndex(function (e) { return e.slide === sIdx; });
+      var segStart = imageSchedule[schedIdx].t;
+      var nextEntry = imageSchedule[schedIdx + 1];
+      var segEnd = nextEntry ? nextEntry.t : TOTAL_DURATION;
+      var chartProgress = Math.min(1, Math.max(0, (t - segStart) / Math.max(0.001, segEnd - segStart)));
+      slideEls[sIdx]._chartUpdate(t, chartProgress);
     }
     var cIdx = sentenceIndexForTime(t);
     if (cIdx !== currentSentenceIndex) { captionEl.textContent = captionChunks[cIdx].text; currentSentenceIndex = cIdx; }
@@ -358,10 +388,217 @@ WATCH_SCRIPT_TAIL = """
 </script>"""
 
 
+# Generic chart-slide SVG library - inserted into the widget script only
+# when a config has a "chart" slide. Mirrors compose_chart_frame() /
+# _draw_chart_panel() in scripts/watch_video_lib.py so the live widget
+# and the exported video animate identically. Has no per-post content;
+# a chart slide's data/formats/checkpoints live on the { type: "chart" }
+# object built by chart_slide_js(). `s.series2` adds a stacked second
+# panel (both panels in the top ~63% so the caption never overlaps).
+CHART_LIB_JS = """  var CHART_W = 1280, CHART_H = 720;
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function svgEl(tag, attrs) {
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) { e.setAttribute(k, attrs[k]); }
+    return e;
+  }
+
+  function buildChartSlide(s) {
+    var svg = svgEl('svg', { viewBox: '0 0 ' + CHART_W + ' ' + CHART_H, width: '100%', height: '100%', preserveAspectRatio: 'xMidYMid meet' });
+    svg.style.cssText = 'position:absolute;inset:0;background:#1a1a19;';
+
+    var left = CHART_W * 0.09, right = CHART_W * 0.95;
+    var xMin = s.xRange[0], xMax = s.xRange[1];
+    var FONT = 'system-ui,-apple-system,"Segoe UI",sans-serif';
+    function sx(yr) { return left + (yr - xMin) / (xMax - xMin) * (right - left); }
+
+    if (s.title) {
+      var titleEl = svgEl('text', { x: left, y: CHART_H * 0.08, fill: '#fff', 'font-size': CHART_H * 0.032, 'font-weight': '600', 'font-family': FONT });
+      titleEl.textContent = s.title;
+      svg.appendChild(titleEl);
+    }
+
+    function piecewiseInterp(checkpoints, x) {
+      if (x <= checkpoints[0][0]) return checkpoints[0][1];
+      if (x >= checkpoints[checkpoints.length - 1][0]) return checkpoints[checkpoints.length - 1][1];
+      for (var i = 0; i < checkpoints.length - 1; i++) {
+        var x0 = checkpoints[i][0], y0 = checkpoints[i][1], x1 = checkpoints[i + 1][0], y1 = checkpoints[i + 1][1];
+        if (x0 <= x && x <= x1) { var f = (x1 !== x0) ? (x - x0) / (x1 - x0) : 0; return y0 + (y1 - y0) * f; }
+      }
+      return checkpoints[checkpoints.length - 1][1];
+    }
+    function interpAt(data, year) {
+      if (year <= data[0][0]) return data[0][1];
+      if (year >= data[data.length - 1][0]) return data[data.length - 1][1];
+      for (var i = 0; i < data.length - 1; i++) {
+        var y0 = data[i][0], v0 = data[i][1], y1 = data[i + 1][0], v1 = data[i + 1][1];
+        if (y0 <= year && year <= y1) { var f = (y1 !== y0) ? (year - y0) / (y1 - y0) : 0; return v0 + (v1 - v0) * f; }
+      }
+      return data[data.length - 1][1];
+    }
+
+    function makePanel(pdata, spec, pTop, pBot, drawXTicks, panelLabel) {
+      var yMin = spec.yRange[0], yMax = spec.yRange[1];
+      function sy(v) { return pTop + (yMax - v) / (yMax - yMin) * (pBot - pTop); }
+      var yTickFormat = spec.yTickFormat || function (v) { return '$' + v; };
+      var valueFormat = spec.valueFormat || function (v) { return '$' + Math.round(v) + ' / sqft'; };
+      var step = spec.yTickStep || ((yMax <= 800) ? 100 : 200);
+      for (var v = 0; v <= yMax; v += step) {
+        var y = sy(v);
+        svg.appendChild(svgEl('line', { x1: left, x2: right, y1: y, y2: y, stroke: v === 0 ? '#383835' : '#2c2c2a', 'stroke-width': 1 }));
+        var lt = svgEl('text', { x: left - 10, y: y + 4, fill: '#898781', 'font-size': CHART_H * 0.022, 'text-anchor': 'end', 'font-family': FONT });
+        lt.textContent = yTickFormat(v);
+        svg.appendChild(lt);
+      }
+      if (drawXTicks) {
+        for (var yr = xMin; yr <= xMax; yr += 5) {
+          var xt = svgEl('text', { x: sx(yr), y: pBot + CHART_H * 0.045, fill: '#898781', 'font-size': CHART_H * 0.022, 'text-anchor': 'middle', 'font-family': FONT });
+          xt.textContent = String(yr);
+          svg.appendChild(xt);
+        }
+      }
+      if (panelLabel) {
+        var pl = svgEl('text', { x: left, y: pTop - CHART_H * 0.025, fill: '#c3c2b7', 'font-size': CHART_H * 0.02, 'font-family': FONT });
+        pl.textContent = panelLabel;
+        svg.appendChild(pl);
+      }
+
+      var d = pdata.map(function (p, i) { return (i === 0 ? 'M' : 'L') + sx(p[0]) + ',' + sy(p[1]); }).join(' ');
+      var path = svgEl('path', {
+        d: d, fill: 'none', stroke: '#3987e5', 'stroke-width': Math.max(2, CHART_H * 0.0035),
+        'stroke-linejoin': 'round', 'stroke-linecap': 'round', 'pathLength': '1',
+        'stroke-dasharray': '1', 'stroke-dashoffset': '1'
+      });
+      svg.appendChild(path);
+
+      var annEls = (spec.annotations || []).map(function (a) {
+        var ax = sx(a[0]), ay = sy(a[1]);
+        var r = Math.max(3, CHART_H * 0.006);
+        var g = svgEl('g', { opacity: 0 });
+        g.appendChild(svgEl('circle', { cx: ax, cy: ay, r: r, fill: '#3987e5', stroke: '#1a1a19', 'stroke-width': 2 }));
+        var ly = a[3] === 'below' ? ay + r + 14 : ay - r - 6;
+        var lbl = svgEl('text', { x: ax, y: ly, fill: '#c3c2b7', 'font-size': CHART_H * 0.02, 'text-anchor': 'middle', 'font-family': FONT });
+        lbl.textContent = a[2];
+        g.appendChild(lbl);
+        svg.appendChild(g);
+        return { year: a[0], el: g };
+      });
+
+      var dot = svgEl('circle', { r: Math.max(4, CHART_H * 0.007), fill: '#3987e5', stroke: '#1a1a19', 'stroke-width': 2, opacity: 0 });
+      svg.appendChild(dot);
+      var valText = svgEl('text', { fill: '#fff', 'font-size': CHART_H * 0.026, 'font-weight': '600', 'font-family': FONT, opacity: 0 });
+      svg.appendChild(valText);
+      var yearText = svgEl('text', { fill: '#c3c2b7', 'font-size': CHART_H * 0.02, 'font-family': FONT, opacity: 0 });
+      svg.appendChild(yearText);
+
+      return function updatePanel(curYear, progress) {
+        path.setAttribute('stroke-dashoffset', String(1 - progress));
+        var curVal = interpAt(pdata, curYear);
+        var ex = sx(curYear), ey = sy(curVal);
+        dot.setAttribute('cx', ex); dot.setAttribute('cy', ey); dot.setAttribute('opacity', 1);
+        var labelX = Math.min(ex + 14, right - CHART_W * 0.16);
+        valText.setAttribute('x', labelX); valText.setAttribute('y', ey - CHART_H * 0.03);
+        valText.textContent = valueFormat(curVal); valText.setAttribute('opacity', 1);
+        yearText.setAttribute('x', labelX); yearText.setAttribute('y', ey - CHART_H * 0.005);
+        yearText.textContent = String(Math.round(curYear)); yearText.setAttribute('opacity', 1);
+        annEls.forEach(function (a) { a.el.setAttribute('opacity', curYear >= a.year - 0.01 ? 1 : 0); });
+      };
+    }
+
+    var updaters;
+    if (s.series2) {
+      updaters = [
+        makePanel(s.data, s, CHART_H * 0.15, CHART_H * 0.40, false, null),
+        makePanel(s.series2.data, s.series2, CHART_H * 0.45, CHART_H * 0.60, true, s.series2.label)
+      ];
+    } else {
+      updaters = [makePanel(s.data, s, CHART_H * 0.16, CHART_H * 0.82, true, null)];
+    }
+
+    function update(t, progress) {
+      var curYear = s.yearCheckpoints ? piecewiseInterp(s.yearCheckpoints, t) : xMin + (xMax - xMin) * progress;
+      updaters.forEach(function (u) { u(curYear, progress); });
+    }
+
+    return { svg: svg, update: update };
+  }
+"""
+
+
+_CHART_FMT_RE = re.compile(r'^([^{}]*)\{:(,?)\.(\d+)f\}([^{}]*)$')
+
+
+def py_fmt_to_js(fmt: str) -> str | None:
+    """Translate a Python number format string (a chart slide's
+    y_tick_format / value_format) to a JS `function (v) { return ...; }`.
+    Handles the "[prefix]{:[,].Nf}[suffix]" shape the project's chart
+    configs use ("${:.0f} / sqft", "{:,.0f}", "{:.2f} children per
+    woman"). Returns None for anything else so the caller can fall back
+    to a MANUAL placeholder rather than emit broken JS."""
+    m = _CHART_FMT_RE.match(fmt)
+    if not m:
+        return None
+    pre, grp, prec, post = m.group(1), m.group(2), int(m.group(3)), m.group(4)
+    if grp == ",":
+        num = (f"v.toLocaleString('en-US', {{minimumFractionDigits: {prec}, "
+               f"maximumFractionDigits: {prec}}})")
+    else:
+        num = f"v.toFixed({prec})"
+    expr = num
+    if pre:
+        expr = f"{json.dumps(pre)} + " + expr
+    if post:
+        expr = expr + f" + {json.dumps(post)}"
+    return f"function (v) {{ return {expr}; }}"
+
+
+def _chart_spec_fields(d: dict) -> dict | None:
+    yt = py_fmt_to_js(d.get("y_tick_format", "${:.0f}"))
+    vf = py_fmt_to_js(d.get("value_format", "${:.0f} / sqft"))
+    if yt is None or vf is None:
+        return None
+    out = {
+        "data": json.dumps([list(p) for p in d["data"]]),
+        "yRange": json.dumps(list(d["y_range"])),
+        "yTickFormat": yt,
+        "valueFormat": vf,
+    }
+    if "y_tick_step" in d:
+        out["yTickStep"] = str(d["y_tick_step"])
+    if d.get("annotations"):
+        out["annotations"] = json.dumps([list(a) for a in d["annotations"]], ensure_ascii=False)
+    if d.get("label"):
+        out["label"] = json.dumps(d["label"], ensure_ascii=False)
+    return out
+
+
+def chart_slide_js(slide: dict) -> str | None:
+    """Build the `{ type: "chart", ... },` JS object for one chart slide,
+    from the video config's chart-slide dict. Returns None if a format
+    string can't be translated (caller emits a MANUAL placeholder)."""
+    top = _chart_spec_fields(slide)
+    if top is None:
+        return None
+    lines = ['type: "chart"', f'xRange: {json.dumps(list(slide["x_range"]))}']
+    if slide.get("title"):
+        lines.append(f'title: {json.dumps(slide["title"], ensure_ascii=False)}')
+    lines += [f"{k}: {v}" for k, v in top.items()]
+    if slide.get("year_checkpoints"):
+        lines.append("yearCheckpoints: "
+                     + json.dumps([list(c) for c in slide["year_checkpoints"]]))
+    if "series2" in slide:
+        s2 = _chart_spec_fields(slide["series2"])
+        if s2 is None:
+            return None
+        lines.append("series2: { "
+                     + ", ".join(f"{k}: {v}" for k, v in s2.items()) + " }")
+    return "{\n      " + ",\n      ".join(lines) + "\n    },"
+
+
 JS_IDENTIFIER_RE = re.compile(r'^[A-Za-z_$][A-Za-z0-9_$]*$')
 
 
-def build_watch_script(cfg, slug: str) -> tuple[str, int]:
+def build_watch_script(cfg, slug: str) -> tuple[str, int, bool]:
     images_by_key = cfg.IMAGES
     for key in images_by_key:
         if not JS_IDENTIFIER_RE.match(key):
@@ -378,7 +615,7 @@ def build_watch_script(cfg, slug: str) -> tuple[str, int]:
             )
     image_lines = [f'  var {key} = "{url}";' for key, url in images_by_key.items()]
 
-    slide_lines, manual_count = build_slides_js(cfg, images_by_key)
+    slide_lines, manual_count, has_chart = build_slides_js(cfg, images_by_key)
     slides_block = "  var slides = [\n    " + "\n    ".join(slide_lines) + "\n  ];"
 
     timing_path = REPO_ROOT / cfg.TIMING_JSON
@@ -396,7 +633,9 @@ def build_watch_script(cfg, slug: str) -> tuple[str, int]:
         + schedule_block + "\n"
         + f"  var TOTAL_DURATION = {cfg.TOTAL_DURATION};\n"
     )
-    return header + WATCH_SCRIPT_TAIL, manual_count
+    tail = WATCH_SCRIPT_TAIL.replace(
+        "__CHART_LIB__\n", (CHART_LIB_JS + "\n") if has_chart else "")
+    return header + tail, manual_count, has_chart
 
 
 def find_existing_urls(text: str) -> tuple[str | None, str | None]:
@@ -434,7 +673,7 @@ def main() -> None:
 
     grad_id = gradient_id(slug)
     row_markup = build_row_markup(youtube_url, shorts_url, grad_id)
-    watch_script, manual_count = build_watch_script(cfg, slug)
+    watch_script, manual_count, _has_chart = build_watch_script(cfg, slug)
 
     block = "\n\n".join([
         MARKER_BEGIN,
@@ -500,8 +739,9 @@ def main() -> None:
     print(f"OK: {mode} Watch widget in {post_path}", file=sys.stderr)
 
     if manual_count:
-        print(f"NOTE: {manual_count} slide(s) need manual authoring (chart/route-walk types "
-              f"aren't auto-generated) - search the file for 'MANUAL:' comments.", file=sys.stderr)
+        print(f"NOTE: {manual_count} slide(s) need manual authoring (route-walk, or a chart "
+              f"whose format strings this script can't convert) - search the file for "
+              f"'MANUAL:' comments.", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -103,37 +103,16 @@ Before there were foreign domestic workers, there were amahs — Cantonese women
     { src: HERO, type: "letterbox", zoom: [1.14, 1.07, 1], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     {
       type: "chart",
-      // Same data as scripts/video-configs/from-amah-to-auntie-rise-of-domestic-workers.py's
-      // FDW_DATA and the post's own .fdw-chart SVG above - duplicated by
-      // design, same pattern as every other Watch-widget data source here.
-      // 2014-2016 omitted (not in MOM's published annual series); the line
-      // runs straight 2013 -> 2017 across the gap.
-      // HAND-AUTHORED: build_watch_widget.py regenerates this whole block
-      // and emits a MANUAL placeholder here - re-apply this slide + the
-      // buildChartSlide() function below after any re-run (pipeline s.11).
-      data: [[2009,196000],[2010,201400],[2011,206300],[2012,209600],[2013,214500],[2017,246800],[2018,253800],[2019,261800],[2020,247400],[2021,246300],[2022,268500],[2023,286300],[2024,301600],[2025,316900]],
       xRange: [2009, 2025],
-      yRange: [0, 350000],
-      yTickStep: 50000,
-      yTickFormat: function (v) { return v.toLocaleString('en-US'); },
-      valueFormat: function (v) { return Math.round(v).toLocaleString('en-US'); },
       title: "Foreign domestic workers in Singapore, 2009-2025",
+      data: [[2009, 196000], [2010, 201400], [2011, 206300], [2012, 209600], [2013, 214500], [2017, 246800], [2018, 253800], [2019, 261800], [2020, 247400], [2021, 246300], [2022, 268500], [2023, 286300], [2024, 301600], [2025, 316900]],
+      yRange: [0, 350000],
+      yTickFormat: function (v) { return v.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0}); },
+      valueFormat: function (v) { return v.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0}); },
+      yTickStep: 50000,
       annotations: [[2009, 196000, "196,000", "above"]],
-      // Second panel: FDW as a % of Singapore's total foreign workforce
-      // (MOM year-end totals). Same years / same 2014-16 gap; animates on
-      // the same yearCheckpoints as the count line. Mirrors series2 on the
-      // chart slide in the video config.
-      series2: {
-        data: [[2009,18.6],[2010,18.1],[2011,17.2],[2012,16.5],[2013,16.2],[2017,18.0],[2018,18.3],[2019,18.3],[2020,20.1],[2021,20.5],[2022,18.9],[2023,18.8],[2024,19.1],[2025,19.4]],
-        yRange: [0, 25],
-        yTickStep: 5,
-        yTickFormat: function (v) { return v + "%"; },
-        valueFormat: function (v) { return Math.round(v) + "%"; },
-        label: "share of all foreign workers"
-      },
-      // Mirrors year_checkpoints in the video config exactly, so the live
-      // widget and the exported video pace the same way.
-      yearCheckpoints: [[72.125, 2009], [80.0, 2010.5], [102.55, 2025]]
+      yearCheckpoints: [[72.125, 2009], [80.0, 2010.5], [102.55, 2025]],
+      series2: { data: [[2009, 18.6], [2010, 18.1], [2011, 17.2], [2012, 16.5], [2013, 16.2], [2017, 18.0], [2018, 18.3], [2019, 18.3], [2020, 20.1], [2021, 20.5], [2022, 18.9], [2023, 18.8], [2024, 19.1], [2025, 19.4]], yRange: [0, 25], yTickFormat: function (v) { return v.toFixed(0) + "%"; }, valueFormat: function (v) { return v.toFixed(0) + "%"; }, yTickStep: 5, label: "share of all foreign workers" }
     },
     { src: KNIFE, type: "letterbox", zoom: [1, 1.07, 1.14], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: TAILOR, type: "letterbox", zoom: [1.12, 1.06, 1], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
@@ -184,14 +163,6 @@ Before there were foreign domestic workers, there were amahs — Cantonese women
     return (next ? next.t : TOTAL_DURATION) - entry.t;
   });
 
-  // HAND-AUTHORED chart-slide machinery - build_watch_widget.py doesn't
-  // generate this; re-apply after any re-run of that script (pipeline
-  // section 11). Mirrors compose_chart_frame() / _draw_chart_panel() in
-  // scripts/watch_video_lib.py so the live widget and the exported video
-  // animate the same way. `s.series2` (this post only) adds a second
-  // shorter panel below; both panels sit in the top ~63% of the frame so
-  // the caption never overlaps them. `meet` (not `slice`) so the lower
-  // panel can't get cropped on a wide viewport.
   var CHART_W = 1280, CHART_H = 720;
   var SVGNS = 'http://www.w3.org/2000/svg';
   function svgEl(tag, attrs) {
@@ -304,8 +275,6 @@ Before there were foreign domestic workers, there were amahs — Cantonese women
 
     var updaters;
     if (s.series2) {
-      // Both panels in the top ~63% - the bottom third is the caption zone
-      // (matches _draw_chart_panel's series2 bounds in watch_video_lib.py).
       updaters = [
         makePanel(s.data, s, CHART_H * 0.15, CHART_H * 0.40, false, null),
         makePanel(s.series2.data, s.series2, CHART_H * 0.45, CHART_H * 0.60, true, s.series2.label)
@@ -350,8 +319,6 @@ Before there were foreign domestic workers, there were amahs — Cantonese women
     var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === i; })];
 
     if (s.type === 'chart') {
-      // No zoom/pan, no keyframes - the chart animates its own data line
-      // instead of Ken-Burns panning a photo. (HAND-AUTHORED, see above.)
       var chart = buildChartSlide(s);
       el.appendChild(chart.svg);
       el._chartUpdate = chart.update;
