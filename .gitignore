@@ -4,3 +4,5 @@ _site/
 __pycache__/
 .video-cache/
 logs/
+preview-motion/
+scratch/

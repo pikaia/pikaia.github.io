@@ -18,6 +18,7 @@ this module's CLI, so every post automatically gets the current engine.
 Usage:
     python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out OUT.mp4
     python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only
+    python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --spot-frame [--slide N]
 
 Config module contract (see scripts/video-configs/ for real examples):
     IMAGES: dict[str, str]      - key -> Commons/https URL, or a site-root
@@ -681,6 +682,63 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
     return not any_bad
 
 
+def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
+    # Step 8.2 of docs/production-pipeline.md, made mechanical. Picks a
+    # representative timestamp for a slide (default slide 2 - slide 0 is
+    # usually the hero / front-matter image, already vetted, so the first
+    # "ordinary content" slide is the better canary for a stale
+    # timing.json, a wrong IMAGES url, or an off-by-one in SCHEDULE),
+    # pulls that one frame out of the already-rendered .mp4, and prints
+    # what *should* be on screen there (the slide's IMAGES key + the
+    # narration playing at that instant) to eyeball it against. It can't
+    # judge correctness itself - that stays a human glance - it just
+    # removes the by-hand ffmpeg-command construction that made this
+    # check easy to skip.
+    video = Path(video_override) if video_override else REPO_ROOT / "preview-motion" / f"{config_stem}.mp4"
+    if not video.exists():
+        print(f"{video} not found - render it first (section 6/7), or pass --video", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        wanted = [int(x) for x in str(slide_arg).split(",") if x.strip() != ""]
+    except ValueError:
+        print(f"--slide takes slide indices like '2' or '2,5,9', got {slide_arg!r}", file=sys.stderr)
+        sys.exit(1)
+    if not wanted:
+        wanted = [2]
+
+    captions = load_captions(str(REPO_ROOT / cfg.TIMING_JSON))
+    slide_starts = {s: t for t, s in cfg.SCHEDULE}
+    n_slides = len(cfg.SLIDES)
+
+    print(f"Spot-check: {video}", file=sys.stderr)
+    for want in wanted:
+        idx = want
+        if idx < 0 or idx >= n_slides:
+            idx = n_slides - 1
+            print(f"slide {want} out of range (this video has {n_slides} slides) - checking slide {idx} instead", file=sys.stderr)
+        start = slide_starts.get(idx)
+        if start is None:
+            print(f"slide {idx} is never shown by SCHEDULE - skipping", file=sys.stderr)
+            continue
+        end = min((t for t, s in cfg.SCHEDULE if t > start), default=cfg.TOTAL_DURATION)
+        t_mid = round((start + end) / 2, 2)
+        slide = cfg.SLIDES[idx]
+        key = slide.get("img", slide["type"])
+        caption = caption_for_time(t_mid, captions) or "(no caption on screen at this moment)"
+        out_png = REPO_ROOT / "preview-motion" / f"{config_stem}-spot-slide{idx}.png"
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t_mid), "-i", str(video),
+               "-frames:v", "1", str(out_png)]
+        rc = subprocess.run(cmd).returncode
+        if rc != 0:
+            print(f"ffmpeg exited {rc} extracting slide {idx} at {t_mid}s", file=sys.stderr)
+            sys.exit(1)
+        print(f"slide {idx}  |  t={t_mid}s  (on screen {start:g}-{end:g}s)  |  {key} ({slide['type']})", file=sys.stderr)
+        print(f"  narration then: \"{caption}\"", file=sys.stderr)
+        print(f"  {' '.join(cmd)}", file=sys.stderr)
+        print(f"Wrote {out_png} - open it and confirm the image + on-screen caption match the line above.", file=sys.stderr)
+
+
 def render(cfg, out_path):
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
     fps = getattr(cfg, "FPS", 25)
@@ -729,11 +787,25 @@ def render(cfg, out_path):
 
 
 def main():
+    # Captions carry em-dashes etc.; a cp1252 Windows console would
+    # otherwise mangle them to "?" in the spot-frame manifest (the log
+    # this feeds is UTF-8, same as generate_narration.py writes).
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
+
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--config", required=True, help="Path to a video config module (see scripts/video-configs/)")
     ap.add_argument("--out", help="Output .mp4 path (required unless --check-only)")
     ap.add_argument("--check-only", action="store_true", help="Run the smoothness pre-check and exit, no render")
     ap.add_argument("--check-duration", type=float, default=4.0, help="Seconds of test frames per slide for --check-only")
+    ap.add_argument("--spot-frame", action="store_true",
+                    help="Pull one frame from the rendered .mp4 for a slide and print what should be on screen (step 8.2, made mechanical); no render")
+    ap.add_argument("--slide", default="2",
+                    help="Slide index/indices for --spot-frame, e.g. '2' or '2,5,9' (default: 2)")
+    ap.add_argument("--video", help="Path to the rendered .mp4 for --spot-frame (default: preview-motion/<config-stem>.mp4)")
     args = ap.parse_args()
 
     cfg = load_config(args.config)
@@ -745,6 +817,11 @@ def main():
     # filename (not --out) since the live Watch widget the video mirrors
     # is presumed a close copy - see Chris, 2026-08-22.
     slug = Path(args.config).stem
+
+    if args.spot_frame:
+        spot_check_frames(cfg, slug, args.slide, args.video)
+        return
+
     gaps = report_slide_gaps(cfg)
     write_gap_report(cfg, gaps, slug)
 

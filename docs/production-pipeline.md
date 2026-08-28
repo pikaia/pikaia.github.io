@@ -75,40 +75,63 @@ create it once before first use (`mkdir logs` in bash, `New-Item
 create the log *file* but not a missing parent directory, so piping
 into `logs/<slug>.log` before that folder exists fails outright.
 
-Each command in the doc is preceded by an `echo`/`tee`'d header line
-naming a subsection (e.g. `1.1 Generate narration audio (dry run)`,
-`1.2 Generate narration audio`, `1.3 Verify audio file`) — within a
-section that has more than one distinct command, each gets its own
-`<section>.<n>` number and a short descriptive name, so the log reads
-as a clear timeline instead of a wall of undifferentiated output. A
-section with only one command purpose (e.g. section 2) just uses the
-bare section number as its label.
-
-The command itself is wrapped in `{ time ...; }`, which prints bash's
-built-in `real`/`user`/`sys` timing breakdown after it finishes — `real`
-is wall-clock time, `user`+`sys` is actual CPU time; a `real` much
-larger than `user`+`sys` points at I/O or network waiting rather than
-computation. This is what makes bottlenecks visible in the log after
-the fact, without having to watch the run live.
-
-Both pieces get piped to `tee -a` so they land in the log file *and*
-still print to the console as normal — nothing about the underlying
-command's own behavior changes:
+Each step in the doc runs as a single brace group piped once to
+`tee -a`, so the whole step — its header, the command line, the
+command's own output, and its timing — lands in the log as one
+contiguous block, with a blank line padding it top and bottom so
+sections never run together:
 
 ```
 # bash
-echo "=== <section>.<n> <short name> ===" | tee -a logs/<slug>.log
-{ time <command> ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== <section>.<n> <short name> ==="
+  cmd=(<command> <arg> <arg>)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
+
+Piece by piece:
+
+- **`echo; echo "=== ... ==="`** — a leading blank line, then the
+  header naming the subsection (e.g. `1.1 Generate narration audio
+  (dry run)`, `1.2 Generate narration audio`, `1.3 Verify audio
+  file`). Within a section that has more than one distinct command,
+  each gets its own `<section>.<n>` number and a short descriptive
+  name, so the log reads as a clear timeline instead of a wall of
+  undifferentiated output; a section with only one command purpose
+  (e.g. section 2) just uses the bare section number as its label.
+- **`cmd=(...)` then `echo "\$ ${cmd[*]}"`** — the command is defined
+  once as an array and echoed back verbatim before it runs, so the
+  log always records exactly what was executed. Defining it once,
+  rather than also typing it out inside a separate `echo`, is
+  deliberate: the echoed line then can't drift from the real command
+  as the doc gets edited over time.
+- **`time "${cmd[@]}"`** — runs the command, and prints bash's
+  built-in `real`/`user`/`sys` timing breakdown after it finishes.
+  `real` is wall-clock time, `user`+`sys` is actual CPU time; a `real`
+  much larger than `user`+`sys` points at I/O or network waiting
+  rather than computation. This is what makes bottlenecks visible in
+  the log after the fact, without having to watch the run live.
+- **trailing `echo`** — the closing blank line.
+- **`} 2>&1 | tee -a logs/<slug>.log`** — the whole group lands in the
+  log file *and* still streams to the console as normal; `2>&1` is
+  what makes that work (see below).
+
+Section 1.1, the pipeline's first step, also runs `date` just before
+its header — the single timestamp marking when the run started.
+
+The PowerShell equivalent (only section 6's `Start-Process` render
+genuinely needs PowerShell — every other step has a bash form):
 
 ```powershell
 # PowerShell - Measure-Command would work too, but it swallows the
 # block's live console output by design (it only returns a TimeSpan) -
 # a plain Stopwatch avoids that and still streams output normally:
-"=== <section>.<n> <short name> ===" | Tee-Object -FilePath logs\<slug>.log -Append
+"", "=== <section>.<n> <short name> ===", "`$ <command>" | Tee-Object -FilePath logs\<slug>.log -Append
 $sw = [Diagnostics.Stopwatch]::StartNew()
 <command> 2>&1 | Tee-Object -FilePath logs\<slug>.log -Append
-"took $($sw.Elapsed)" | Tee-Object -FilePath logs\<slug>.log -Append
+"took $($sw.Elapsed)", "" | Tee-Object -FilePath logs\<slug>.log -Append
 ```
 
 Use `-a`/`-Append` (bash) or `-Append` (PowerShell) throughout so every
@@ -141,8 +164,12 @@ run — catches leaked raw HTML/JS from a chart or floated-image block
 that the parser's tag whitelist doesn't yet cover:
 
 ```
-echo "=== 1.1 Generate narration audio (dry run) ===" | tee -a logs/<slug>.log
-{ time python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (the Jalan Payoh Lai / Kangkar post, used throughout this
@@ -150,8 +177,12 @@ doc as a running worked example — slug
 `jalan-payoh-lai-kangkar-montfort-nativity-church`):
 
 ```
-echo "=== 1.1 Generate narration audio (dry run) ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 If something looks wrong (JS/CSS text leaking into the narration),
@@ -188,15 +219,23 @@ Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 
 ```
-echo "=== 1.2 Generate narration audio ===" | tee -a logs/<slug>.log
-{ time python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example:
 
 ```
-echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 - Voice defaults to `bm_george` (British male) — this is the sitewide
@@ -207,13 +246,21 @@ echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangka
   synthesis — not guessed even splits), and `audio/<slug>.srt`.
 - Verify the file is real (not truncated) before moving on:
   ```
-  echo "=== 1.3 Verify audio file ===" | tee -a logs/<slug>.log
-  { time ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3 ; } 2>&1 | tee -a logs/<slug>.log
+  { echo; echo "=== 1.3 Verify audio file ==="
+    cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    echo
+  } 2>&1 | tee -a logs/<slug>.log
   ```
   Example:
   ```
-  echo "=== 1.3 Verify audio file ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-  { time ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+  { echo; echo "=== 1.3 Verify audio file ==="
+    cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    echo
+  } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
   Real output for this post — a ~5.5 minute post, so ~343s of audio is
   plausible, not a truncated file: `343.056000`.
@@ -227,16 +274,24 @@ echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangka
   issue), split the post's paragraphs into 2-8 pieces and synthesize
   each separately, then concatenate:
   ```
-  echo "=== 1.4 [FALLBACK] Concatenate split narration ===" | tee -a logs/<slug>.log
-  { time ffmpeg -y -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3 ; } 2>&1 | tee -a logs/<slug>.log
+  { echo; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
+    cmd=(ffmpeg -y -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    echo
+  } 2>&1 | tee -a logs/<slug>.log
   ```
   Example — note `part1.mp3`/`part2.mp3` here are placeholder pieces
   you'd have generated yourself while working around a stall, not real
   files that exist for every post; don't just swap in your own slug and
   run this if your synthesis completed normally the first time:
   ```
-  echo "=== 1.4 [FALLBACK] Concatenate split narration ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-  { time ffmpeg -y -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+  { echo; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
+    cmd=(ffmpeg -y -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    echo
+  } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
 
 ---
@@ -244,15 +299,23 @@ echo "=== 1.2 Generate narration audio ===" | tee -a logs/jalan-payoh-lai-kangka
 ## 2. Insert the Listen widget
 
 ```
-echo "=== 2. Insert the Listen widget ===" | tee -a logs/<slug>.log
-{ time python scripts/insert_listen_widget.py _posts/<file>.md <slug> ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/<file>.md <slug>)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
-echo "=== 2. Insert the Listen widget ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Inserts the clickable headphones-icon widget right after the post's
@@ -452,33 +515,25 @@ percentage strings, SCHEDULE to imageSchedule, pasting in the real
 sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
-echo "=== 4.1 Author the Watch widget ===" | tee -a logs/<slug>.log
-{ time python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 4.1 Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
-echo "=== 4.1 Author the Watch widget ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 4.1 Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
-- **Does not require a YouTube/Shorts URL** — those almost never exist
-  yet at this point in the pipeline (the video isn't rendered, let
-  alone uploaded). Omit `--youtube-url`/`--shorts-url` and the row
-  simply gets Listen+Watch only; the script prints a reminder to
-  re-run once the URL(s) exist:
-  ```
-  echo "=== 4.2 Author the Watch widget (with YouTube/Shorts URLs) ===" | tee -a logs/<slug>.log
-  { time python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/... ; } 2>&1 | tee -a logs/<slug>.log
-  ```
-  Example, once both are known (this is exactly section 11's "wire the
-  URLs in" step, now folded into the same command instead of a separate
-  hand-edit):
-  ```
-  echo "=== 4.2 Author the Watch widget (with YouTube/Shorts URLs) ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-  { time python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-  ```
 - **Safe to re-run** — the generated block is wrapped in
   `<!-- WATCH-WIDGET:BEGIN -->`/`END` marker comments; a second run
   replaces the block in place (e.g. to add the YouTube/Shorts URLs
@@ -834,15 +889,23 @@ Before committing to a full render (which can take 15-25+ minutes),
 run the cheap pre-check:
 
 ```
-echo "=== 5. Check smoothness and review the gap report ===" | tee -a logs/<slug>.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example:**
 
 ```
-echo "=== 5. Check smoothness and review the gap report ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 This does two things, both instantly (no rendering of the real video):
@@ -875,23 +938,45 @@ This does two things, both instantly (no rendering of the real video):
 ## 6. Render the main video
 
 A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
-roughly 15-25 minutes for a 5-6 minute video. **If Claude is running
-this command through its own Bash/PowerShell tool, always launch it as
-a genuinely OS-detached process — never as a plain foreground call, and
-never via `run_in_background`.** Both of those are capped at a 10-minute
-tool timeout (confirmed: `run_in_background` does not bypass it, it
-just keeps the command from blocking Claude's own turn while it runs)
-and will get silently killed mid-render (a render started in plain bash
-and left to "die" partway through has already cost a wasted restart in
-practice - use `Start-Process` from the start, not as a fallback after
-a foreground attempt fails). **This cap is specific to Claude's own
-tool invocations** — if you're typing the command yourself into your
-own terminal window, no such limit exists and a plain foreground run
-will simply run to completion; `Start-Process` is still worth using
-there too, since it detaches the render from that terminal session so
-it survives even if the window gets closed, but a "stuck at 10 minutes"
-symptom in a human-run terminal points to something else (an actual
-crash, the window closing, the machine sleeping) rather than this cap:
+roughly 15-25 minutes for a 5-6 minute video.
+
+**Running it yourself, in your own terminal** — the normal case — just
+run the plain form and let it tie up that window for the full 15-25+
+minutes; it streams progress live and tees into the log as it goes, so
+there's nothing to poll:
+
+```
+{ echo; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+```
+
+**Example:**
+
+```
+{ echo; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+```
+
+**Detached, via PowerShell `Start-Process`** — needed when Claude is
+running this through its own Bash/PowerShell tool (never as a plain
+foreground call, never via `run_in_background`: both are capped at a
+10-minute tool timeout — `run_in_background` doesn't bypass it, it just
+unblocks Claude's turn — and the render gets silently killed
+mid-flight; a half-dead render has already cost a wasted restart, so
+reach for `Start-Process` from the start, not as a fallback). That cap
+is specific to Claude's own tool invocations — a human-run terminal has
+no such limit, and a "stuck at 10 minutes" symptom there points at
+something else (a crash, the window closing, the machine sleeping).
+It's also handy in your own terminal if you'd rather not tie up the
+window — it detaches the render so it survives the window closing:
 
 ```powershell
 # 6. Render the main video
@@ -906,30 +991,15 @@ Start-Process -FilePath python -ArgumentList "scripts/watch_video_lib.py --confi
 ```
 
 The command inside `-ArgumentList` is the same one `watch_video_lib.py`
-always takes — it's also fine to run this plain form directly in your
-own bash terminal (not through Claude's tool), one post after another,
-if you'd rather just watch it run and don't mind tying up that window
-for the full 15-25+ minutes:
-
-```
-echo "=== 6. Render the main video ===" | tee -a logs/<slug>.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4 ; } 2>&1 | tee -a logs/<slug>.log
-```
-
-**Example:**
-
-```
-echo "=== 6. Render the main video ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-```
-
-Poll progress with `Get-Content preview-motion/<slug>-render.log -Tail
-20` or `Get-Process python` — don't kill it just because the output
-file's size looks flat between two checks a few minutes apart; ffmpeg's
-writes are bursty, and a false "stall" diagnosis has cost a wasted
-re-render before. Look for an actual completion signal (`Wrote
-<path>` in the log, or the process genuinely gone) before concluding
-it's stuck.
+always takes — only the detach-and-redirect wrapper differs. When
+detached, poll progress with `tail -n 20
+preview-motion/<slug>-render.log` (PowerShell: `Get-Content ... -Tail
+20`) or by checking whether the python process is still alive — don't
+kill it just because the output file's size looks flat between two
+checks a few minutes apart; ffmpeg's writes are bursty, and a false
+"stall" diagnosis has cost a wasted re-render before. Look for an
+actual completion signal (`Wrote <path>` in the log, or the process
+genuinely gone) before concluding it's stuck.
 
 `preview-motion/` is untracked scratch (confirmed via `git log --all --
 "*.mp4"` — never committed) — the blog embeds YouTube links, not local
@@ -954,10 +1024,18 @@ to usually finish within the 10-minute tool timeout, but the
 `Start-Process` pattern is still safe to use):
 
 ```
-echo "=== 7.1 Check smoothness (Short) ===" | tee -a logs/<slug>.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only ; } 2>&1 | tee -a logs/<slug>.log
-echo "=== 7.2 Render the Short ===" | tee -a logs/<slug>.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4 ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (note the `-short` suffix on the config path in both lines
@@ -966,10 +1044,18 @@ habit from sections 5-6, which silently renders the full-length video
 again instead of the Short):
 
 ```
-echo "=== 7.1 Check smoothness (Short) ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-echo "=== 7.2 Render the Short ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 ---
@@ -979,15 +1065,23 @@ echo "=== 7.2 Render the Short ===" | tee -a logs/jalan-payoh-lai-kangkar-montfo
 Don't trust that a render "looks done" — verify:
 
 ```
-echo "=== 8.1 Verify frame count ===" | tee -a logs/<slug>.log
-{ time ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4 ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 8.1 Verify frame count ==="
+  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example:
 
 ```
-echo "=== 8.1 Verify frame count ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 8.1 Verify frame count ==="
+  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Compare against the expected frame count, `TOTAL_DURATION * FPS`
@@ -997,25 +1091,47 @@ rounding is fine; for this post, `361.125 * 25 = 9028.125` → expect
 video ever needs trimming/concatenation with ffmpeg's `-c copy` path, a
 full-decode verify is mandatory (a real past bug: non-monotonic source
 DTS silently truncated the video track during a trim+concat, completely
-undetectable by spot-check frame extraction alone). Then pull 1-2 spot
-frames at meaningful timestamps and eyeball them:
+undetectable by spot-check frame extraction alone). Then eyeball one
+rendered frame against what the config says should be there —
+`--spot-frame` picks the timestamp, pulls the frame out of the `.mp4`,
+and prints the slide's image key plus the exact narration line playing
+at that instant, so there's nothing to construct by hand:
 
 ```
-echo "=== 8.2 Verify spot frame ===" | tee -a logs/<slug>.log
-{ time ffmpeg -y -ss <t> -i preview-motion/<slug>.mp4 -frames:v 1 preview-motion/spot-<t>.png ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
-Example (a frame at t=110.3s should land on the "church exterior
-(reused) - Montfort founding 1916-1958" slide, per this post's real
-schedule in section 3):
+Example:
 
 ```
-echo "=== 8.2 Verify spot frame ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time ffmpeg -y -ss 110.3 -i preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 -frames:v 1 preview-motion/spot-110.3.png ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
-Confirm the image and caption match what should be on screen at that
-moment.
+It defaults to **slide 2** — slide 0 is usually the hero / front-matter
+image (already vetted), so the first ordinary content slide is the best
+canary for a stale `timing.json`, a wrong `IMAGES` url, or an
+off-by-one in `SCHEDULE`. It writes `preview-motion/<slug>-spot-slide2.png`
+and prints a line like:
+
+```
+slide 2  |  t=110.3s  (on screen 97.4-149.1s)  |  CHURCH_EXTERIOR (cover)
+  narration then: "Montfort School opened on the site in 1916 ..."
+```
+
+Open that PNG and confirm the image and burned-in caption match the
+printed line. Pass `--slide 5` (or `--slide 2,5,9` for several, e.g.
+ones a review flagged) to check other slides; a `-short.py` config
+automatically reads `preview-motion/<slug>-short.mp4`.
 
 ---
 
@@ -1024,12 +1140,16 @@ moment.
 Generate the draft with `scripts/stage_youtube_text.py`:
 
 ```
-echo "=== 9. Stage the YouTube upload text file ===" | tee -a logs/<slug>.log
-{ time python scripts/stage_youtube_text.py \
-    _posts/<file>.md \
-    scripts/video-configs/<slug>.py \
-    scripts/video-configs/<slug>-short.py \
-    --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/ ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/<file>.md
+      scripts/video-configs/<slug>.py
+      scripts/video-configs/<slug>-short.py
+      --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 **Example** (this one is a real, already-run command — this post has
@@ -1038,11 +1158,15 @@ omitted, per section 3's note; `--out` is shown explicitly even though
 it matches the default, for clarity):
 
 ```
-echo "=== 9. Stage the YouTube upload text file ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/stage_youtube_text.py \
-    _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md \
-    --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/ \
-    --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md
+      --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/
+      --out docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Real result: `docs/youtube_helper/jalan-payoh-lai-kangkar-montfort-nativity-church-youtube.txt`
@@ -1170,17 +1294,24 @@ adding the two buttons without wanting to touch anything else the
 script would also regenerate.
 
 ```
-echo "=== 11. Wire the published URLs into the post ===" | tee -a logs/<slug>.log
-{ time python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/... ; } 2>&1 | tee -a logs/<slug>.log
+{ echo; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
-**Example** (the exact same command section 4.2 already documents —
-shown here too since this is the step where you'll actually have both
-real URLs in hand):
+**Example** (section 4's `build_watch_widget.py` again, this time with
+both real URLs in hand — same command, re-run in place):
 
 ```
-echo "=== 11. Wire the published URLs into the post ===" | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ time python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os ; } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 Once both the video and the Short are live, add the YouTube + Shorts
