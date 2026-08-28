@@ -334,6 +334,22 @@ PRONUNCIATION_OVERRIDES = {
                          # reading (姐 = ze2) and the variant spelling
                          # "mahjeh" - not the Mandarin-pinyin "jiě"/"jay".
                          # Confirmed by Chris (2026-08-28).
+    "Jetstar": "ʤˈɛtstɑː",  # unknown word (no lexicon entry) - the budget
+                              # airline, on the travel-bug post. "jet"
+                              # (ʤˈɛt) + "star" (stɑː), stress on the first
+                              # syllable, the same compound-word gap as
+                              # "paycheck"/"outgrown" above.
+    "phrasebook": "fɹˈAzbʊk",  # unknown word (no lexicon entry) - "phrase"
+                                # (fɹˈAz, "A" = the "day"/"say" diphthong)
+                                # + "book" (bʊk). Same compound gap.
+                                # Travel-bug post.
+    "Changi": "ʧˈɑːŋi",  # unknown word (no lexicon entry) - the Singapore
+                          # airport/district, appears across many posts on
+                          # this blog. "CHAH-ngee": "ch" onset + "ah"
+                          # (ɑː) + "-ngi" with the /ŋ/ of "singer" (not a
+                          # hard /ndʒ/). NOT ear-verified yet - a Singapore
+                          # place name, so flag if it sounds off (same
+                          # caution as Tekong/Pasir/Siglap above).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -412,6 +428,14 @@ ABBREVIATION_EXPANSIONS = {
     # misaki reads "II" as fluent, confident letters ("I, I"), it just
     # doesn't know that's wrong here.
     re.compile(r"\bShock Therapy II\b"): "Shock Therapy Two",
+    # A four-digit year range written with an en-dash or hyphen
+    # ("2020-2021", "1997-2025") - misaki drops the dash as an audible
+    # "?" and mushes the two years together ("twenty twenty? twenty
+    # twenty one"). Spoken as "<year> to <year>", each year read as the
+    # usual cardinal. Text substitution rather than a phoneme override
+    # since the dash sits between two separate tokens. First hit: the
+    # "2020-2021 collapse" on the travel-bug post.
+    re.compile(r"\b(\d{4})[–-](\d{4})\b"): r"\1 to \2",
 }
 
 
