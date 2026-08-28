@@ -15,13 +15,12 @@ correctly here) and Python/JS values drifting out of sync (there's only
 one source now).
 
 Does NOT require a YouTube/Shorts URL to run - a post's video is
-usually rendered and reviewed before it's uploaded, so those URLs often
-don't exist yet at Watch-widget-authoring time. Pass --youtube-url/
---shorts-url once they do; omit either (or both) and the row simply
-gets Listen+Watch only, with a note printed to re-run once the URL(s)
-exist. Re-running is always safe (idempotent) - the generated block is
-wrapped in HTML comment markers so a second run replaces it in place
-rather than duplicating it.
+rendered and reviewed before it's uploaded, so those URLs never exist
+yet at Watch-widget-authoring time (section 4). Omit them and the row
+gets Listen+Watch only; the URLs get wired in later by re-running with
+--youtube-url/--shorts-url (section 11). Re-running is always safe
+(idempotent) - the generated block is wrapped in HTML comment markers
+so a second run replaces it in place rather than duplicating it.
 
 Chart and route-walk slides (see CLAUDE.md's Charts / Route animations
 sections) are NOT auto-generated - their JS is structurally different
@@ -503,13 +502,6 @@ def main() -> None:
     if manual_count:
         print(f"NOTE: {manual_count} slide(s) need manual authoring (chart/route-walk types "
               f"aren't auto-generated) - search the file for 'MANUAL:' comments.", file=sys.stderr)
-
-    if not youtube_url or not shorts_url:
-        missing = ", ".join(n for n, v in (("YouTube", youtube_url), ("Shorts", shorts_url)) if not v)
-        print(f"NOTE: no {missing} URL yet - widget row omits {'that button' if ',' not in missing else 'those buttons'}. "
-              f"Re-run this exact command with --youtube-url/--shorts-url once the video is "
-              f"uploaded (see docs/production-pipeline.md sections 9-11) - it's safe to re-run, "
-              f"the generated block gets replaced in place.", file=sys.stderr)
 
 
 if __name__ == "__main__":
