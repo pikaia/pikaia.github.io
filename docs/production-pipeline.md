@@ -33,29 +33,44 @@ The rest maps 1:1 to this doc's own section numbers:
 9. Stage the YouTube upload text file            -- section 9   [Manual]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
-12. Commit and push                               -- section 12  [Manual]
+12. Commit and push                               -- section 12  [Claude]
 ```
 
 **`[Manual]` vs `[Claude]`:** every `[Manual]` step is a single mechanical
 script invocation with no real decision to make - safe and fast to run
-yourself when Claude's usage limit is hit. Section 3 is the one
-`[Claude]` step, and it's different in kind, not just difficulty:
-nothing exists yet for a script to transform, and producing either
-config requires reading the real narration text and deciding which
-image best represents each beat (main config) or which opening
-sentences form a self-contained hook (Short config) - genuine
-judgment, not something a deterministic script can stand in for
-(confirmed in practice: `build_watch_widget.py` only replaced section 4
-because it mechanically transforms an *existing* config; section 3 has
-no equivalent input to transform from). Both configs are written
-together in section 3, in the same sitting, rather than the Short's
-config being written separately later in section 7 - this used to be
-split across two sections, but doing both while already immersed in
-that post's sentence timings avoids a real failure mode: reaching
-section 7's Short render with no `-short.py` config yet written,
-because the two steps had drifted apart in practice. If Claude is
-unavailable, everything except writing the video configs (main and
-Short, both in section 3) can still move forward solo.
+yourself when Claude's usage limit is hit. Two steps are `[Claude]`,
+for different reasons.
+
+**Section 3** (write the video configs) is `[Claude]` because it's
+different in kind, not just difficulty: nothing exists yet for a script
+to transform, and producing either config requires reading the real
+narration text and deciding which image best represents each beat (main
+config) or which opening sentences form a self-contained hook (Short
+config) - genuine judgment, not something a deterministic script can
+stand in for (confirmed in practice: `build_watch_widget.py` only
+replaced section 4 because it mechanically transforms an *existing*
+config; section 3 has no equivalent input to transform from). Both
+configs are written together in section 3, in the same sitting, rather
+than the Short's config being written separately later in section 7 -
+this used to be split across two sections, but doing both while already
+immersed in that post's sentence timings avoids a real failure mode:
+reaching section 7's Short render with no `-short.py` config yet
+written, because the two steps had drifted apart in practice.
+
+**Section 12** (commit and push) is `[Claude]` because the working tree
+at that point is genuinely messy - regenerated `audio/`, new
+`video-configs/`/`video-gaps/`/`youtube_helper/` files, and usually
+some unrelated tooling or doc edits and stray scratch directories all
+mixed together - and sorting what belongs in the post's commit from
+what's a separate concern from what's scratch is a `git status` read,
+not a fixed `git add` list. It has a mechanical fallback (section 12's
+example block), but it goes wrong more often than the other steps when
+run on autopilot.
+
+If Claude is unavailable, section 3 is the one true blocker - the video
+configs can't be improvised mechanically. Section 12 can be done solo
+from its example block, just with a careful eye on `git status` and
+`.gitignore`; everything else is a straight script run.
 
 Steps 1-7 (narration through both renders) should happen only **after**
 image-gathering is fully finished — the video's slide list and per-image
@@ -1355,14 +1370,29 @@ genuinely published.
 
 ## 12. Commit and push
 
-Per CLAUDE.md's Git section: commit and push directly for routine
-content changes (the post file, the two video-config `.py` files, the
-gap report under `docs/video-gaps/`) without asking first. `audio/` and
-`preview-motion/` — check whether `audio/*.mp3`/`.timing.json`/`.srt`
-are tracked in this repo (they have been for every post so far) vs.
-`preview-motion/` which is deliberately never committed.
+**[Claude]** — not because committing is hard, but because the working
+tree here is messy (see section 0's legend). Since the last commit
+you'll typically have: the regenerated `audio/` files, the new
+`video-configs/` / `video-gaps/` / `youtube_helper/` files, whatever
+unrelated doc or tooling edits rode along, and untracked scratch
+(`preview-motion/`, `scratch/`, one-off `docs/` drafts). The work is
+reading `git status` and deciding what goes where.
 
-**Example:**
+Per CLAUDE.md's Git section, commit and push directly for routine
+content changes without asking first. Rough shape:
+
+- **The post's commit** — the post `.md`, both video-config `.py`
+  files, the gap report(s) under `docs/video-gaps/`, the
+  `docs/youtube_helper/` draft, and the `audio/` files (`.mp3`,
+  `.timing.json`, `.srt` — all tracked for every post so far).
+- **Separate commits** for anything unrelated that rode along —
+  pipeline/script changes, other posts, `.gitignore` additions.
+- **Never commit** `preview-motion/` or `scratch/` (both `.gitignore`d
+  already); check that nothing new outside them is scratch too, and
+  `.gitignore` it if so rather than committing it.
+
+**Solo fallback** (Claude unavailable) — the straightforward case is
+just the post's own commit:
 
 ```
 # 12. Commit and push
