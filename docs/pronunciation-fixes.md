@@ -242,6 +242,7 @@ new scan, just never chased down until this pass went looking.
 | "Selabin"/"Permatang"/"Sanyongkong" (former kampong names on Pulau Tekong, now training-area names) | Unknown word | Spelled out letter by letter — no lexicon entry | `sˌɜːlˈɑːbɪn` / `pˌəmˌɑːtˈɑːŋ` / `sˌɑːnjˌɒŋkˈɒŋ` — confirmed by ear. "Sanyongkong" was a Chinese settlement (rubber-plantation era), not Malay like the other two, per Wikipedia — likely why it doesn't follow standard Malay phonetics | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
 | "tri-service" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "tri-" and "service" both phonemize fine separately | `trˌIsˈɜːvɪs` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
 | "outgrown" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "out" and "grown" both phonemize fine separately; same gap pattern as "paycheck"/"daycare" | `ˌWtɡɹˈQn` | `PRONUNCIATION_OVERRIDES` | national-service-cmpb-safti-peng-kang-hill-tekong |
+| "portering" | Unknown word | Spelled out letter by letter — no lexicon entry, even though "porter" phonemizes fine on its own | `pˈɔːtəɹɪŋ` ("porter" + the regular "-ering" pattern from "catering"/"watering", restoring the linking "r") | `PRONUNCIATION_OVERRIDES` | a-typical-day-for-singapores-silver-generation |
 
 **How to verify a new candidate fix** before adding it: test directly
 against misaki, no post/pipeline involvement needed —

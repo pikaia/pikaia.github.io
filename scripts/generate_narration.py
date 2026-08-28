@@ -318,6 +318,15 @@ PRONUNCIATION_OVERRIDES = {
                               # both phonemize fine separately - the same
                               # kind of narrow compound-word gap as
                               # "paycheck"/"daycare" above.
+    "portering": "pˈɔːtəɹɪŋ",  # unknown word (no lexicon entry), even
+                                # though "porter" phonemizes fine on its
+                                # own. Built from "porter" (pˈɔːtə) plus
+                                # the regular "-ering" pattern from
+                                # "catering"/"watering" (restores the
+                                # linking "r" before the vowel-initial
+                                # "-ing", same non-rhotic-linking rule
+                                # those words already follow). Found on
+                                # the silver-generation post.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
