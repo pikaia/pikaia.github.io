@@ -46,7 +46,7 @@ Description:
 Commuters passing Esplanade MRT station walk beneath four tapering white columns that locals have nicknamed the "four chopsticks" for as long as most of them can remember, without necessarily knowing what the monument actually marks. Underneath it are the remains of more than 600 people, recovered from mass graves found around the island in 1962 — victims of a massacre that Singapore and Japan spent the following decades finding an uneasy but lasting way to live with. #Shorts
 
 Full story: https://da.gd/9Fev8I
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/_0FF7YFY3vA
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
