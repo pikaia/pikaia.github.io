@@ -1,11 +1,11 @@
 ---
 layout: gallery
-title: "More Historical Photos: Singapore's Airports and Airlines"
+title: "More Photos: Singapore's Airports, Airlines and Cruise Port"
 post_url: /2026/07/18/the-travel-bug-rise-of-travelling-among-singaporeans/
 post_title: "The Travel Bug: How Travelling Overseas Stopped Being Rare"
 ---
 
-Five more images tracing Singapore's air travel story from Paya Lebar's control tower to Changi's first years on the tarmac.
+Six more images tracing Singapore's travel story — from Paya Lebar's control tower and Changi's first years on the tarmac to the cruise ships that dock at Marina Bay today.
 
 ### Paya Lebar, the airport before Changi
 
@@ -36,3 +36,9 @@ Five more images tracing Singapore's air travel story from Paya Lebar's control 
 ![Singapore Airlines Airbus A300 at Singapore Changi Airport, 1983](https://upload.wikimedia.org/wikipedia/commons/4/4d/Singapore_Airlines_Airbus_A300_Green-1.jpg)
 
 *A Singapore Airlines Airbus A300 at Changi Airport in January 1983, as the airport settled into the role it still holds today. (Photo: Doug Green / Wikimedia Commons, GFDL 1.2)*
+
+### Travelling by sea, today
+
+![The cruise ship Anthem of the Seas berthed at Marina Bay Cruise Centre, Singapore, December 2024](https://upload.wikimedia.org/wikipedia/commons/9/96/Royal_Caribbean_Cruises_Anthem_of_the_Seas_05-12-2024%281%29.jpg)
+
+*Royal Caribbean's Anthem of the Seas at the Marina Bay Cruise Centre in December 2024. Flying is only part of the story — the same rise in incomes and appetite for getting away fills these ships with Singaporeans on their second or third cruise of the year. (Photo: LN9267 / Wikimedia Commons, CC BY-SA 4.0)*

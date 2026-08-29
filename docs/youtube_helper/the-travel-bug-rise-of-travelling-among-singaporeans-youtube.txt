@@ -10,7 +10,17 @@ Full story: https://da.gd/bm3Q
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Front page of The Straits Times, 21 August 1955, headlined 'The door to Singapore', reporting the opening of Paya Lebar airport — The Straits Times, public domain
+- Malaysia-Singapore Airlines Boeing 707 at Zurich, 1972 — Phillip Capper, CC BY 2.0
+- Changi Airport, Terminal 1, Departure Hall — Terence Ong, CC BY-SA 3.0
+- Singapore Airlines Boeing 727 and Garuda Indonesia DC-10 at Singapore Changi Airport, 1982 — Stefan Martin, GFDL 1.2
+- A Tigerair Airbus A319 in its tiger-stripe livery on approach to Bangkok's Suvarnabhumi Airport — Alec Wilson, CC BY-SA 2.0
+- A Jetstar Asia Airbus A320 taxiing at Osaka Kansai Airport in its silver-and-orange Jetstar livery — Alec Wilson, CC BY-SA 2.0
+- A Scoot Boeing 787-9 taxiing at Taipei Taoyuan Airport in its yellow flyscoot.com livery — Bahnfrend, CC BY-SA 4.0
+- Singapore International Airport control tower and terminal building, circa 1969-1971 — NSBReynolds, CC BY-SA 4.0
+- SAS Caravelle airliner at Singapore International Airport, circa 1969-1971 — NSBReynolds, CC BY-SA 4.0
+- The Rain Vortex, a 40-metre indoor waterfall, at the centre of Jewel Changi Airport — ScribblingGeek, CC BY-SA 4.0
 
 Sources:
 - Outbound Departures Of Singapore Residents By Mode Of Transport, Annual — ICA, via data.gov.sg
@@ -20,6 +30,13 @@ Sources:
 - Scoot — Wikipedia
 - Google Maps — Wikipedia
 - Google Translate — Wikipedia
+- "The door to Singapore" (Paya Lebar airport opening), The Sunday Times, 21 August 1955, p.1 — NewspaperSG, NLB
+- File:ST21August1955.jpg — Wikimedia Commons
+- File:9V-TRB (27682638542).jpg (Tigerair A319) — Wikimedia Commons
+- File:9V-JSU (45258845642).jpg (Jetstar Asia A320) — Wikimedia Commons
+- File:Scoot Boeing 787 9V-OJG Taiwan Taoyuan 2026 (01).jpg — Wikimedia Commons
+- File:HSBC Rain Vortex and Shiseido Forest Valley.jpg — Wikimedia Commons
+- File:Royal Caribbean Cruises Anthem of the Seas 05-12-2024(1).jpg — Wikimedia Commons
 - File:Changi Airport, Terminal 1, Departure Hall.JPG — Wikimedia Commons
 - File:Singapore International Airport control tower and terminal building, photographed February 1969 × July 1971.jpg — Wikimedia Commons
 - File:SAS airliner at Singapore International Airport, photographed February 1969 × July 1971.jpg — Wikimedia Commons
@@ -38,8 +55,11 @@ Description:
 For a lot of Singaporeans now in their 60s and 70s, going overseas was something that happened once or twice in a lifetime — a work posting, maybe a honeymoon, saved up for and planned around for months. Flying was priced for business travellers and the well-off, full-service and formal, the kind of trip you dressed up for. Today, the departure halls at Changi are full of people for whom none of that is true: students backpacking on a budget, retirees on their third cruise this year, whole families flying to Bangkok for a long weekend the way an earlier generation might have taken a bus to Malacca. #Shorts
 
 Full story: https://da.gd/bm3Q
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/NrTTi4nMkeE
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Front page of The Straits Times, 21 August 1955, headlined 'The door to Singapore', reporting the opening of Paya Lebar airport — The Straits Times, public domain
+- Malaysia-Singapore Airlines Boeing 707 at Zurich, 1972 — Phillip Capper, CC BY 2.0
+- Changi Airport, Terminal 1, Departure Hall — Terence Ong, CC BY-SA 3.0
