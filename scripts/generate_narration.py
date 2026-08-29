@@ -386,12 +386,14 @@ PRONUNCIATION_OVERRIDES = {
     "Tharman": "tˈɑːmən",  # unknown word (no lexicon entry) - Tharman
                             # Shanmugaratnam (former DPM, now President).
                             # Tamil name, hard "T" (not "th"/θ): "TAH-mun".
-                            # NOT ear-verified yet. SkillsFuture post.
+                            # Confirmed by Chris by ear (2026-08-29).
     "Shanmugaratnam": "ʃˌɑːnmʊɡəɹˈatnəm",  # unknown word (no lexicon
                             # entry) - "shahn-moo-guh-RAT-nam", stress on
-                            # "rat" (Tamil ratnam, "jewel"). NOT ear-
-                            # verified yet - a long Tamil surname, flag if
-                            # it sounds off. SkillsFuture post.
+                            # "rat" (Tamil ratnam, "jewel"). Picked by
+                            # Chris by ear from three samples (2026-08-29);
+                            # a hard Tamil name that people say slightly
+                            # differently anyway, so "close enough" is the
+                            # bar, not one canonical reading.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
