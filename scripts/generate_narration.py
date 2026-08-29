@@ -394,6 +394,26 @@ PRONUNCIATION_OVERRIDES = {
                             # a hard Tamil name that people say slightly
                             # differently anyway, so "close enough" is the
                             # bar, not one canonical reading.
+    "codenames": "kˈQdnAmz",  # unknown word (no lexicon entry) - "code" +
+                               # "names", same compound gap as "phrasebook".
+                               # Tekong post.
+    # Malay / Chinese kampong names on Pulau Tekong (the tekong post),
+    # the same batch pattern as the Malay place names on the National
+    # Service post - "San Yong Kong" is written as three words here, so
+    # "Yong"/"Kong" need their own entries even though the NS post has
+    # "Sanyongkong" as one word. NOT ear-verified yet (2026-08-29) -
+    # anglicized approximations, flag any that sound off.
+    "Yong": "jˈɒŋ",         # "yong", rhymes with "song" (cf. Sanyongkong)
+    "Kong": "kˈɒŋ",         # "kong", as in "Hong Kong"
+    "Batu": "bˈɑːtuː",      # Malay "stone" - "BAH-too"
+    "Koyok": "kˈQjɒk",      # "KOH-yok" (Kampong Batu Koyok)
+    "Merah": "mˈɛrɑː",      # Malay "red" - "MEH-rah" (Pasir Merah)
+    "Sungei": "sˈʊŋaɪ",     # Malay "river" (old spelling) - "SOONG-eye"
+    "Belang": "bˈɛlaŋ",     # Malay "striped" - "BEH-lang"
+    "Ayer": "ˈaɪə",         # Malay "water" (old spelling) - "EYE-yer"
+    "Samak": "sˈɑːmak",     # "SAH-mak" (Ayer Samak)
+    "Pengkalan": "pəŋkˈɑːlan",  # Malay "jetty" - "peng-KAH-lan"
+    "Pakau": "pˈɑːkaʊ",     # "PAH-kow" (Pengkalan Pakau)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
