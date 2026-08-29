@@ -360,9 +360,8 @@ PRONUNCIATION_OVERRIDES = {
     "Tsao": "tsˈW",  # unknown word (no lexicon entry) - the Tsao Foundation,
                       # one of the three partners in the ageism-gap post's
                       # 2023 employer survey. Chinese surname 曹, anglicized
-                      # "TSOW" (rhymes with "how"/"now"). NOT ear-verified yet
-                      # - flag if it sounds off; "chow"/"zow" were the other
-                      # candidates.
+                      # "TSOW" (rhymes with "how"/"now"). Confirmed by Chris
+                      # by ear (2026-08-28) over "chow" (ʧˈW) and "zow" (zˈW).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
