@@ -401,6 +401,12 @@ TIMING_JSON = "audio/<slug>.timing.json" # path relative to repo root
 
 # Optional, default 1280x720x25:
 WIDTH, HEIGHT, FPS = 1280, 720, 25
+
+# Optional. Credit lines (keyed by IMAGES key) for slides whose image
+# isn't a captioned Commons file - a chart PNG the site renders itself,
+# say. scripts/stage_youtube_text.py uses these in the YouTube
+# description instead of flagging the image [REVIEW CREDIT].
+CREDITS = {"CHART": "Chart by Lesser Known Singapore, data: <source>"}
 ```
 
 `pan` values here are `(x, y)` floats in 0-1 (fraction of image width/

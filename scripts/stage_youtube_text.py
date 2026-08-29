@@ -259,15 +259,21 @@ def load_video_config(config_path: Path):
     return module
 
 
-def images_used_in_order(config_path: Path | None) -> list[str] | None:
-    """Returns None (not an empty list) when no config was given or the
-    path doesn't exist yet - the caller needs to tell "video not built"
-    apart from "video built with zero photo slides" (e.g. an all-chart
-    config), which render as different output."""
+def images_used_in_order(config_path: Path | None) -> tuple[list[str] | None, dict[str, str]]:
+    """(ordered image URLs, {url: credit}). The URL list is None (not an
+    empty list) when no config was given or the path doesn't exist yet -
+    the caller needs to tell "video not built" apart from "video built
+    with zero photo slides" (e.g. an all-chart config), which render as
+    different output. The credit map comes from an optional `CREDITS`
+    dict in the config ({IMAGES key: credit line}) - used for a slide
+    whose image isn't a captioned Commons file, e.g. a chart PNG the site
+    renders itself (assets/images/...). Anything not covered by a
+    post/gallery caption or this map still gets flagged [REVIEW CREDIT]."""
     if config_path is None or not config_path.exists():
-        return None
+        return None, {}
     cfg = load_video_config(config_path)
-    seen, ordered = set(), []
+    config_credits = getattr(cfg, "CREDITS", {})
+    seen, ordered, credits = set(), [], {}
     for slide in cfg.SLIDES:
         key = slide.get("img")
         if not key:
@@ -276,7 +282,9 @@ def images_used_in_order(config_path: Path | None) -> list[str] | None:
         if url not in seen:
             seen.add(url)
             ordered.append(url)
-    return ordered
+            if key in config_credits:
+                credits[url] = config_credits[key]
+    return ordered, credits
 
 
 NO_VIDEO_PLACEHOLDER = ("[PLACEHOLDER - no video built yet for this post; run the production "
@@ -306,6 +314,7 @@ def find_existing_youtube_urls(text: str) -> tuple[str | None, str | None]:
 
 
 def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str]],
+                        config_credits: dict[str, str] | None = None,
                         existing_video_url: str | None = None) -> list[str]:
     if urls is None:
         if existing_video_url:
@@ -314,12 +323,15 @@ def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str
                     f"this Images list. Fill in manually from the post's own image credits, or build "
                     f"a config retroactively and re-run this script.]"]
         return [NO_VIDEO_PLACEHOLDER]
+    config_credits = config_credits or {}
     lines = []
     for url in urls:
         info = captions.get(normalize_commons_url(url))
         if info:
             desc = info["alt"] or Path(urllib.parse.urlparse(url).path).stem
             lines.append(f"- {desc} — {info['credit']}")
+        elif url in config_credits:
+            lines.append(f"- {config_credits[url]}")
         else:
             lines.append(f"- {url} [REVIEW CREDIT - not found in post/gallery captions]")
     return lines
@@ -379,8 +391,8 @@ def main() -> None:
         captions.update({k: v for k, v in extract_image_captions(gallery_path.read_text(encoding="utf-8")).items()
                           if k not in captions})
 
-    main_images = images_used_in_order(main_config_path)
-    short_images = images_used_in_order(short_config_path)
+    main_images, main_credits = images_used_in_order(main_config_path)
+    short_images, short_credits = images_used_in_order(short_config_path)
     existing_main_url, existing_short_url = find_existing_youtube_urls(post_text)
 
     short_url = shorten_url(args.post_url, args.shortener)
@@ -402,7 +414,7 @@ def main() -> None:
     out_lines.append("")
     if main_images is not None:
         out_lines.append("Images (Wikimedia Commons and NewspaperSG, credited individually):")
-    out_lines.extend(build_credit_lines(main_images, captions, existing_main_url))
+    out_lines.extend(build_credit_lines(main_images, captions, main_credits, existing_main_url))
     if sources:
         out_lines.append("")
         out_lines.append("Sources:")
@@ -425,7 +437,7 @@ def main() -> None:
     out_lines.append("")
     if short_images is not None:
         out_lines.append("Images (Wikimedia Commons):")
-    out_lines.extend(build_credit_lines(short_images, captions, existing_short_url))
+    out_lines.extend(build_credit_lines(short_images, captions, short_credits, existing_short_url))
 
     out_text = "\n".join(out_lines) + "\n"
 
