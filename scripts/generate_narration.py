@@ -401,8 +401,8 @@ PRONUNCIATION_OVERRIDES = {
     # the same batch pattern as the Malay place names on the National
     # Service post - "San Yong Kong" is written as three words here, so
     # "Yong"/"Kong" need their own entries even though the NS post has
-    # "Sanyongkong" as one word. NOT ear-verified yet (2026-08-29) -
-    # anglicized approximations, flag any that sound off.
+    # "Sanyongkong" as one word. Reviewed by Chris by ear (2026-08-29):
+    # all clear enough for the listener, no changes.
     "Yong": "jˈɒŋ",         # "yong", rhymes with "song" (cf. Sanyongkong)
     "Kong": "kˈɒŋ",         # "kong", as in "Hong Kong"
     "Batu": "bˈɑːtuː",      # Malay "stone" - "BAH-too"
