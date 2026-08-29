@@ -46,7 +46,7 @@ Description:
 Somewhere in the CBD right now, a 61-year-old is putting together a resume for the first time in twenty years — not because she wants a hobby, but because her CPF payouts don't quite stretch to cover the month, and re-employment at her old company runs out at 68. On paper, the system is built for exactly this: government messaging, tripartite guidelines, and a formal re-employment law all say older workers are welcome to keep working. In practice, a lot of resumes like hers go nowhere, and the reasons why rarely make it into any official statement. #Shorts
 
 Full story: https://da.gd/39J1jL
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/sfXL0kk47SA
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
