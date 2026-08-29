@@ -10,7 +10,14 @@ Full story: https://da.gd/39J1jL
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Singapore skyline, Raffles Place — Calvin Teo, CC BY-SA 2.5
+- The former Ministry of Labour Building, Singapore, 2025 — GoAheadFan95, CC BY-SA 4.0
+- The Ministry of Manpower building on Havelock Road, Singapore, 2006 — Terence Ong, CC BY 2.5
+- The CPF Building on Robinson Road, Singapore, 2006 — Sengkang, copyrighted free use
+- The NTUC Centre at One Marina Boulevard, Singapore, 2006 — Terence Ong, CC BY 2.5
+- Employer-hiring bar chart by Lesser Known Singapore, from the NTUC, Singapore University of Social Sciences & Tsao Foundation 2023 employer survey
+- Devan Nair with his wife Avadai Dhanam, 1953 — The Straits Times, public domain in Singapore
 
 Sources:
 - Singapore raises retirement and re-employment ages to 65 and 70 — Pinsent Masons
@@ -25,6 +32,8 @@ Sources:
 - File:S Rajaratnam c. 1940s.jpg — Wikimedia Commons
 - File:CPF Building, Jan 06.JPG — Wikimedia Commons
 - File:Former Ministry of Labour Building, October 2025.jpg — Wikimedia Commons
+- File:Ministry of Manpower.JPG — Wikimedia Commons
+- File:NTUC Centre.JPG — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -41,4 +50,6 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Singapore skyline, Raffles Place — Calvin Teo, CC BY-SA 2.5
+- The former Ministry of Labour Building, Singapore, 2025 — GoAheadFan95, CC BY-SA 4.0

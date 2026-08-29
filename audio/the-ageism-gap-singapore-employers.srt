@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:04,550
+The Ageism Gap: What Singapore Employers Say versus What They Do
+
+2
+00:00:04,550 --> 00:00:22,775
+Somewhere in the CBD right now, a 61-year-old is putting together a résumé for the first time in twenty years — not because she wants a hobby, but because her CPF payouts don't quite stretch to cover the month, and re-employment at her old company runs out at 68.
+
+3
+00:00:22,775 --> 00:00:34,850
+On paper, the system is built for exactly this: government messaging, tripartite guidelines, and a formal re-employment law all say older workers are welcome to keep working.
+
+4
+00:00:34,850 --> 00:00:42,875
+In practice, a lot of résumés like hers go nowhere, and the reasons why rarely make it into any official statement.
+
+5
+00:00:42,875 --> 00:01:00,350
+Singapore's retirement age was raised to 63 in 2022, with re-employment guaranteed to 68; it rises again to 64 from July 2026, on the way to a targeted 65 and 70 by 2030.
+
+6
+00:01:00,350 --> 00:01:17,050
+The policy logic is straightforward — with a quarter of the resident workforce already 55 or older, and CPF savings for many of that generation built up under an earlier, less generous system, working longer isn't optional for a lot of people.
+
+7
+00:01:17,050 --> 00:01:33,950
+Employment rates among seniors have risen accordingly: 70.8% of 55-to-64-year-olds and 31.5% of those 65 and over were working as of 2025, both up from a few years earlier.
+
+8
+00:01:33,950 --> 00:01:37,950
+The gap shows up once you ask employers directly.
+
+9
+00:01:37,950 --> 00:01:55,000
+In a 2023 survey by NTUC, the Singapore University of Social Sciences, and the Tsao Foundation, 52% of employers said they'd likely hire a worker aged 55 or older — a respectable-sounding topline number.
+
+10
+00:01:55,000 --> 00:02:01,550
+Split by whether the employer already had older workers on staff, though, the number falls apart:
+
+11
+00:02:01,550 --> 00:02:11,950
+An employer who already has older workers on the team is roughly three times more likely to say they'd hire another one than an employer who has none at all.
+
+12
+00:02:11,950 --> 00:02:23,400
+That's not really a story about principled support for older workers — it's a story about familiarity, or the lack of it, doing most of the work behind the topline number.
+
+13
+00:02:23,400 --> 00:02:30,175
+The employers who most need convincing are the ones the "52%" statistic hides.
+
+14
+00:02:30,175 --> 00:02:33,750
+The same gap turns up in complaint data.
+
+15
+00:02:33,750 --> 00:02:49,125
+Between 2018 and 2022, the Tripartite Alliance for Fair and Progressive Employment Practices received an average of 77 age-related complaints a year, already the second most common category.
+
+16
+00:02:49,125 --> 00:03:00,675
+By 2023, age discrimination had become the single most-cited form of workplace discrimination in Singapore, ahead of both race and gender.
+
+17
+00:03:00,675 --> 00:03:07,550
+Among older jobseekers specifically, age is the top-cited barrier to getting hired at all.
+
+18
+00:03:07,550 --> 00:03:11,275
+Little of this looks like deliberate exclusion.
+
+19
+00:03:11,275 --> 00:03:28,375
+Research on managers in this region points instead to unconscious assumptions: that older employees work more slowly, or that their skills — particularly around technology — have gone stale, even when neither is actually true for the person in front of them.
+
+20
+00:03:28,375 --> 00:03:38,775
+It's a quieter kind of bias than an outright rejection, which is part of why it survives so easily alongside official messaging that says the opposite.
+
+21
+00:03:38,775 --> 00:03:42,825
+None of this policy machinery appeared overnight.
+
+22
+00:03:42,825 --> 00:03:49,500
+It was put together over decades by a succession of officials and the institutions they built.
+
+23
+00:03:49,500 --> 00:04:12,250
+Why it matters today: Singapore has largely solved the policy side of ageism — the laws, the guidelines, the retirement-age math all point the same direction — but a law can mandate that a door stays open without doing anything about who actually decides to walk an older applicant through it, which is the part the statistics above are still measuring.

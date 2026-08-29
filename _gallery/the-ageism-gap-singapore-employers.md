@@ -1,11 +1,11 @@
 ---
 layout: gallery
-title: "More Historical Photos: Singapore's Labour Policy Roots"
+title: "More Photos: Singapore's Labour Policy, Past and Present"
 post_url: /2026/07/18/the-ageism-gap-singapore-employers/
 post_title: "The Ageism Gap: What Singapore Employers Say vs. What They Do"
 ---
 
-Five more images tracing the officials and institutions behind Singapore's employment and retirement-savings policy — the people and buildings behind the rules the ageism gap now runs up against.
+Seven more images tracing the officials and institutions behind Singapore's employment and retirement-savings policy — the people and buildings behind the rules the ageism gap now runs up against.
 
 ### Devan Nair, who built the modern labour movement
 
@@ -36,3 +36,15 @@ Five more images tracing the officials and institutions behind Singapore's emplo
 ![The former Ministry of Labour Building, Singapore, 2025](https://upload.wikimedia.org/wikipedia/commons/a/a3/Former_Ministry_of_Labour_Building%2C_October_2025.jpg)
 
 *The former Ministry of Labour Building on Havelock Square, built in 1928 and gazetted a national monument in 1997. It housed the ministry that shaped Singapore's early labour law, before the portfolio moved on and the building became the Family Justice Courts. (Photo: GoAheadFan95 / Wikimedia Commons, CC BY-SA 4.0)*
+
+### Where the labour portfolio sits today
+
+![The Ministry of Manpower building on Havelock Road, Singapore, 2006](https://upload.wikimedia.org/wikipedia/commons/9/97/Ministry_of_Manpower.JPG)
+
+*The Ministry of Manpower building on Havelock Road — successor to the old Ministry of Labour Building just up the street. MOM sets the retirement and re-employment ages the post describes, raising them again from July 2026. (Photo: Terence Ong / Wikimedia Commons, CC BY 2.5)*
+
+### The labour movement's headquarters now
+
+![The NTUC Centre at One Marina Boulevard, Singapore, 2006](https://upload.wikimedia.org/wikipedia/commons/a/ae/NTUC_Centre.JPG)
+
+*The NTUC Centre at One Marina Boulevard, headquarters of the National Trades Union Congress — the labour movement Devan Nair helped build, and one of the three partners behind the 2023 employer survey in the post. (Photo: Terence Ong / Wikimedia Commons, CC BY 2.5)*
