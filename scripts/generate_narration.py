@@ -414,6 +414,16 @@ PRONUNCIATION_OVERRIDES = {
     "Samak": "sˈɑːmak",     # "SAH-mak" (Ayer Samak)
     "Pengkalan": "pəŋkˈɑːlan",  # Malay "jetty" - "peng-KAH-lan"
     "Pakau": "pˈɑːkaʊ",     # "PAH-kow" (Pengkalan Pakau)
+    "ex-gratia": "ˌɛksɡɹˈAʃə",  # Latin legal phrase, misaki keeps it as one
+                                # token and can't phonemize "-gratia".
+                                # "eks-GRAY-shuh" - the standard anglicized
+                                # legal reading. Christmas Island post.
+    # Abdul Hamid Jumat - Singapore's Acting Chief Minister in 1958, the
+    # one who told the Assembly Christmas Island "was asked to administer
+    # it and nothing more". Malay/Arabic name misaki spells out.
+    "Abdul": "ˈabdʊl",      # "AB-dool"
+    "Hamid": "hɑːmˈiːd",    # "hah-MEED"
+    "Jumat": "dʒʊmˈat",     # "joo-MAT"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -481,6 +491,12 @@ ABBREVIATION_EXPANSIONS = {
     # plainclothes officers" was becoming "1,000, Singapore dollars and
     # plainclothes" (comma misplaced), caught on the fine-city post.
     re.compile(r"S\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
+    # "M$" - the Malayan dollar (the pre-1967 currency; officially the
+    # Malaya and British Borneo dollar, but universally shortened to
+    # "Malayan dollar"). Same failure mode as S$ ("M" + a literal "?" for
+    # the "$"), same fix. Caught on the Christmas Island post ("M$20
+    # million", "M$1.5 million", "M$48 million").
+    re.compile(r"M\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Malayan dollars",
     # "DD Month" dates (the house style throughout post prose, e.g. "25
     # August 1963") - misaki reads the bare day numeral as a cardinal
     # ("twenty-five August"), but spoken English always reads the day-of-
