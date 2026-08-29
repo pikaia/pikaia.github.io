@@ -10,7 +10,16 @@ Full story: https://da.gd/NfInx
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Aerial view of the Basic Military Training Centre on Pulau Tekong — Tunafish1990, CC BY-SA 3.0
+- Map of Singapore with Pulau Tekong circled in the north-east, in the Johor Strait off Changi — © OpenStreetMap contributors
+- An old wooden kampong house at Lorong Buangkok, Singapore's last surviving mainland kampong — Zarina Baguio, CC BY-SA 4.0
+- Malay village on Pulau Brani, Singapore, circa 1900 — New York Public Library, Pacific Pursuits postcard collection, public domain
+- Malay village, Singapore, 1907 — New York Public Library, Pacific Pursuits postcard collection, public domain
+- Population chart by Lesser Known Singapore, from the figures cited in the post
+- Kampong Baru at Singapore, circa 1890 — G.R. Lambert & Co., KITLV collection, public domain
+- A kampong at Braddell Hill, Singapore, about 1964 — Don Christie, CC BY-SA 4.0
+- Kampong Buggis, the Buginese district of Singapore, circa 1900 — G.R. Lambert & Co., KITLV collection, public domain
 
 Sources:
 - Pulau Tekong — Wikipedia
@@ -21,6 +30,7 @@ Sources:
 - Singapore completes first below-sea-level land reclamation at Pulau Tekong using Dutch-style empoldering — The Online Citizen
 - Tekong Polder — PUB, Singapore's National Water Agency
 - File:Pulau Tekong BMTC.JPG — Wikimedia Commons
+- Pulau Tekong on the map — OpenStreetMap
 - File:An old house in Lorong Buangkok Singapore.JPG — Wikimedia Commons
 - File:Malay - village Pulo Brani Singapore (NYPL Hades-2359734-4044499).jpg — Wikimedia Commons
 - File:Malay village, Singapore (NYPL Hades-2359721-4044486).jpg — Wikimedia Commons
@@ -43,4 +53,7 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Aerial view of the Basic Military Training Centre on Pulau Tekong — Tunafish1990, CC BY-SA 3.0
+- Map of Singapore with Pulau Tekong circled in the north-east, in the Johor Strait off Changi — © OpenStreetMap contributors
+- An old wooden kampong house at Lorong Buangkok, Singapore's last surviving mainland kampong — Zarina Baguio, CC BY-SA 4.0
