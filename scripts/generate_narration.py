@@ -373,6 +373,16 @@ PRONUNCIATION_OVERRIDES = {
     # ageism-gap post ("putting together a resume").
     "résumé": "ɹˈɛzuːmA",
     "résumés": "ɹˈɛzuːmAz",
+    "passersby": "pˈɑːsəzbI",  # unknown word (no lexicon entry) - "passers"
+                                # (pˈɑːsəz) + "by" (bI), both phonemize fine
+                                # alone, same compound gap as "phrasebook".
+                                # The fine-city post.
+    "plainclothes": "plˈAnklQðz",  # unknown word (no lexicon entry) -
+                                    # "plain" (plˈAn) + "clothes" (klˈQðz),
+                                    # dropping the second stress. Fine-city
+                                    # post ("plainclothes NEA officers").
+    "quo": "kwˈQ",  # unknown word (no lexicon entry) - Latin, only ever
+                     # seen in "status quo". "kwoh" (/kwəʊ/). Fine-city post.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -427,8 +437,12 @@ ABBREVIATION_EXPANSIONS = {
     # unit word after the amount, dropping the "S$" prefix, appending the
     # full phrase at the end) phonemizes correctly and reads naturally.
     # Plain "$" (used elsewhere for prices, e.g. "$2.70") is untouched -
-    # this only matches the "S$" prefix specifically.
-    re.compile(r"S\$(\d[\d,]*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
+    # this only matches the "S$" prefix specifically. The amount pattern
+    # requires proper thousands grouping (\d+(?:,\d{3})*) rather than a
+    # loose [\d,]* so it can't swallow a *trailing* comma - "S$1,000, and
+    # plainclothes officers" was becoming "1,000, Singapore dollars and
+    # plainclothes" (comma misplaced), caught on the fine-city post.
+    re.compile(r"S\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
     # "DD Month" dates (the house style throughout post prose, e.g. "25
     # August 1963") - misaki reads the bare day numeral as a cardinal
     # ("twenty-five August"), but spoken English always reads the day-of-
