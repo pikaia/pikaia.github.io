@@ -10,7 +10,15 @@ Full story: https://da.gd/jsirrg
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Parliament House, Singapore — TteckK, public domain
+- Old Parliament House, Singapore — Sengkang, copyrighted free use
+- Tharman Shanmugaratnam, official portrait, 2023 — Mohd Fyrol Anwar Aziz Marican &amp; Lim Sin Thai, Ministry of Communications and Information, CC BY-SA 4.0
+- ITE College Central, Singapore — Deoma12, CC BY-SA 4.0
+- SkillsFuture Festival event at St Joseph's Institution, Singapore, 2018 — Smartcocloud, CC BY-SA 4.0
+- SkillsFuture uptake chart by Lesser Known Singapore, from MOE parliamentary replies and SkillsFuture Singapore figures cited in the post
+- Signs pointing to Jurong Industrial Estate, Singapore, June 1964 — Don Christie, CC BY-SA 4.0
+- Institute of Technical Education headquarters, Singapore, November 2006 — Sengkang, copyrighted free use
 
 Sources:
 - Celebrating a Decade of Empowering Singaporeans to Upskill and Reskill — SkillsFuture Singapore
@@ -48,4 +56,6 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Parliament House, Singapore — TteckK, public domain
+- Old Parliament House, Singapore — Sengkang, copyrighted free use

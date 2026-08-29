@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:04,525
+SkillsFuture at Ten: The Promise Still Outruns the Practice
+
+2
+00:00:04,525 --> 00:00:15,375
+At the end of 2025, a $500 credit that the government had handed to every Singaporean aged 25 and older quietly expired.
+
+3
+00:00:15,375 --> 00:00:26,750
+It had been sitting in accounts since 2020, meant to nudge people into a course, a workshop, anything that counted as upskilling, before a deadline forced the decision.
+
+4
+00:00:26,750 --> 00:00:32,425
+Roughly seven in ten eligible Singaporeans let it lapse unused.
+
+5
+00:00:32,425 --> 00:00:49,725
+Weeks later, in January 2026, an MP was still asking Parliament whether the unclaimed money could at least be passed on to a family member — an elderly parent, say, or someone with a disability — before it disappeared back into the state's books for good.
+
+6
+00:00:49,725 --> 00:01:03,700
+The Ministry said no: SkillsFuture credits are not transferable, "including to immediate family members," because the scheme is built around Singaporeans "taking ownership of their own lifelong learning journey."
+
+7
+00:01:03,700 --> 00:01:09,225
+Rewind ten years and the mood around SkillsFuture was entirely different.
+
+8
+00:01:09,225 --> 00:01:27,425
+It launched in 2015 as a "national movement," the product of a SkillsFuture Council chaired by then-Deputy Prime Minister Tharman Shanmugaratnam, built on the promise that Singaporeans could keep developing their potential "throughout life, regardless of their starting points."
+
+9
+00:01:27,425 --> 00:01:38,650
+Every citizen turning 25 would get an Opening Credit of $500 — no strings, no expiry — to spend on courses whenever they were ready.
+
+10
+00:01:38,650 --> 00:01:43,200
+What followed was less a movement than a slow, patient build.
+
+11
+00:01:43,200 --> 00:01:49,100
+In its first year, just 126,000 people had used the credit.
+
+12
+00:01:49,100 --> 00:01:56,575
+By the end of 2019, that was 540,000 people — 20% of those eligible.
+
+13
+00:01:56,575 --> 00:02:01,200
+By mid-2022 it had crept to 29%.
+
+14
+00:02:01,200 --> 00:02:17,250
+Employers came along too, if gradually: the number of companies participating doubled from 12,000 in 2015 to 24,000 in 2024, and the training catalogue grew to more than 28,000 courses.
+
+15
+00:02:17,250 --> 00:02:34,225
+By the time SkillsFuture marked its tenth anniversary in 2025, more than half of eligible Singaporeans aged 30 to 75 had used their credit at least once — a genuinely large number, just one that took a full decade to reach.
+
+16
+00:02:34,225 --> 00:02:40,650
+Somewhere along that decade, SkillsFuture also picked up a second, unplanned purpose.
+
+17
+00:02:40,650 --> 00:03:00,925
+It was pitched as workforce policy — keep Singaporeans employable as industries change — but as the population has aged, take-up among older Singaporeans has kept climbing too: utilisation among those in their 60s rose from around a quarter in 2022 to roughly a third by 2025.
+
+18
+00:03:00,925 --> 00:03:13,950
+Community classes teaching seniors to use generative AI chatbots, reported on in mid-2026, aren't really about job security for people well past their working years.
+
+19
+00:03:13,950 --> 00:03:28,550
+For a lot of older Singaporeans, the credit has quietly become less a career tool and more a low-stakes way to try something new — proof that a scheme built around "upskilling" can end up mattering just as much for its own sake.
+
+20
+00:03:28,550 --> 00:03:33,000
+The top-up was meant to fix exactly this kind of drift.
+
+21
+00:03:33,000 --> 00:03:48,125
+In 2020, the government handed every eligible Singaporean an extra $500 — but this time with an actual deadline, five years, to force the decision that the open-ended Opening Credit never had.
+
+22
+00:03:48,125 --> 00:03:50,300
+It didn't really work.
+
+23
+00:03:50,300 --> 00:03:55,325
+By November 2024, only 26% had used it.
+
+24
+00:03:55,325 --> 00:04:07,200
+By September 2025, with three months left on the clock, that had inched up to about 30% — still meaning seven in ten people were about to lose free money.
+
+25
+00:04:07,200 --> 00:04:20,575
+The government held firm on the deadline anyway: no extension, and — as the January 2026 exchange in Parliament confirmed — no way to hand the unused balance to someone else either.
+
+26
+00:04:20,575 --> 00:04:34,925
+Where it fits in the bigger story: A policy built to close a skills gap has, after a decade, done something quieter and more human — become a way for an aging Singapore to try something new just because it can.
+
+27
+00:04:34,925 --> 00:04:49,100
+But that same decade shows the gap between offering people something and getting them to actually take it hasn't closed at all; it just moved from Singaporeans' skills to their bank of unclaimed government credit.
