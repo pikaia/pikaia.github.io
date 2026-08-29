@@ -383,6 +383,15 @@ PRONUNCIATION_OVERRIDES = {
                                     # post ("plainclothes NEA officers").
     "quo": "kwˈQ",  # unknown word (no lexicon entry) - Latin, only ever
                      # seen in "status quo". "kwoh" (/kwəʊ/). Fine-city post.
+    "Tharman": "tˈɑːmən",  # unknown word (no lexicon entry) - Tharman
+                            # Shanmugaratnam (former DPM, now President).
+                            # Tamil name, hard "T" (not "th"/θ): "TAH-mun".
+                            # NOT ear-verified yet. SkillsFuture post.
+    "Shanmugaratnam": "ʃˌɑːnmʊɡəɹˈatnəm",  # unknown word (no lexicon
+                            # entry) - "shahn-moo-guh-RAT-nam", stress on
+                            # "rat" (Tamil ratnam, "jewel"). NOT ear-
+                            # verified yet - a long Tamil surname, flag if
+                            # it sounds off. SkillsFuture post.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -414,6 +423,13 @@ ABBREVIATION_EXPANSIONS = {
     # (sport, law, comparisons alike), so a general expansion is safe.
     # Caught in the ageism-gap post's own title.
     re.compile(r"\bvs\.(?=\s|$)"): "versus",
+    # Editorial square brackets inside a quotation - "including [to]
+    # immediate family members", "[sic]", "[the Ministry] said". misaki
+    # reads the "[" and "]" as literal "?" tokens. Strip the brackets,
+    # keep the word(s). Only matches a bracketed run of letters/spaces,
+    # so a "[...]" ellipsis is left untouched. Caught on the SkillsFuture
+    # post ("including [to] immediate family members").
+    re.compile(r"\[([A-Za-z][A-Za-z ]*)\]"): r"\1",
     # The CV noun "resume"/"resumes" -> the accented "résumé"/"résumés",
     # which PRONUNCIATION_OVERRIDES then reads as "REH-zoo-may". This is
     # done as a text rewrite, not a phoneme override, so it can be
