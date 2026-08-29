@@ -33,6 +33,15 @@ layout: default
             {%- else -%}
               {{ post.date | date: date_format }}
             {%- endif -%}
+            {%- if site.pipeline_badges -%}
+              {%- if post.content contains 'watch-widget' -%}
+                <span style="margin-left:.6em;font-size:.85em;color:#1a7f37;">● full pipeline</span>
+              {%- elsif post.content contains 'listen-widget' -%}
+                <span style="margin-left:.6em;font-size:.85em;color:#9a6700;">● audio only</span>
+              {%- else -%}
+                <span style="margin-left:.6em;font-size:.85em;color:#999;">○ no video</span>
+              {%- endif -%}
+            {%- endif -%}
           </span>
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">

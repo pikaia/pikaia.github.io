@@ -3,3 +3,7 @@
 # Not used by GitHub Pages (which builds from _config.yml alone), so production is unaffected.
 
 title: "LOCAL — Lesser Known Singapore"
+
+# Show a per-post pipeline-status badge on the homepage (full pipeline /
+# audio only / no video). Local preview only - never rendered live.
+pipeline_badges: true
