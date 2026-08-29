@@ -10,7 +10,16 @@ Full story: https://da.gd/r7PSr
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Multi-prohibition sign on the Singapore MRT, listing food, drink, flammable liquids, smoking, and durians as banned — Steve Bennett, CC BY-SA 3.0
+- Boxes of dental chewing gum on sale at a pharmacy counter in Singapore — Eddie Wray, CC BY-SA 4.0
+- Rule timeline by Lesser Known Singapore, compiled from the post's cited sources
+- A street vendor in Singapore, 1973-74 — Rainer Halama, CC BY-SA 4.0
+- A kampong in Braddell Hill, Singapore, about 1964 — Don Christie, CC BY-SA 4.0
+- Lee Kuan Yew, 1965 — Australian News and Information Bureau, Canberra, public domain
+- Crowd at Pink Dot 16, an LGBT rights rally at Hong Lim Park, Singapore — Thegeekwing, public domain
+- Parliament House, Singapore, in 2023 — Johan Jönsson, CC BY-SA 4.0
+- The Speakers' Corner sign at Hong Lim Park, Singapore — Cory Doctorow, CC BY-SA 2.0
 
 Sources:
 - Chewing gum sales ban in Singapore — Wikipedia
@@ -27,6 +36,9 @@ Sources:
 - File:Lee Kuan Yew, 1965 (cropped).jpg — Wikimedia Commons
 - File:Kampong in Braddell Hill Singapore about 1964.jpg — Wikimedia Commons
 - File:Singapore-Street Vendor 1973-74-WUS08155.jpg — Wikimedia Commons
+- File:Chewinggumpharmacysg.jpg — Wikimedia Commons
+- File:Parliament House, Singapore, August 2023.jpg — Wikimedia Commons
+- File:Speakers' Corner sign, Singapore - 20050906.jpg — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -43,4 +55,6 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Multi-prohibition sign on the Singapore MRT, listing food, drink, flammable liquids, smoking, and durians as banned — Steve Bennett, CC BY-SA 3.0
+- Boxes of dental chewing gum on sale at a pharmacy counter in Singapore — Eddie Wray, CC BY-SA 4.0

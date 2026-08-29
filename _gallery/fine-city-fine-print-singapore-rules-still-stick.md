@@ -1,11 +1,11 @@
 ---
 layout: gallery
-title: "More Historical Photos: Singapore's Fine City Rules"
+title: "More Photos: Singapore's Fine City Rules"
 post_url: /2026/07/20/fine-city-fine-print-singapore-rules-still-stick/
 post_title: "The Fine City's Fine Print: Which of Singapore's Famous Rules Still Stick"
 ---
 
-Three more images tracing the era that produced Singapore's "fine city" rules — the government that passed them, and the crowded, informal street life they were written to clean up.
+Five more images — the 1960s and 70s conditions that produced Singapore's "fine city" rules, and the present-day places where the most famous of them were later eased or repealed.
 
 ### The government behind the 1968 clean-up law
 
@@ -24,3 +24,15 @@ Three more images tracing the era that produced Singapore's "fine city" rules �
 ![A street vendor in Singapore, 1973-74](https://upload.wikimedia.org/wikipedia/commons/e/ef/Singapore-Street_Vendor_1973-74-WUS08155.jpg)
 
 *A street vendor in Singapore, 1973-74 — the kind of unlicensed, informal street commerce that Singapore's public-order campaigns spent the following decades regulating and cleaning up. (Photo: Rainer Halama / Wikimedia Commons, CC BY-SA 4.0)*
+
+### Where Section 377A was repealed
+
+![Parliament House, Singapore, in 2023](https://upload.wikimedia.org/wikipedia/commons/0/01/Parliament_House%2C_Singapore%2C_August_2023.jpg)
+
+*Parliament House, Singapore, in 2023. Parliament repealed Section 377A here in November 2022 — the only one of the five rules that was formally taken off the books rather than just left to lapse. (Photo: Johan Jönsson / Wikimedia Commons, CC BY-SA 4.0)*
+
+### Speakers' Corner, Hong Lim Park
+
+![The Speakers' Corner sign at Hong Lim Park, Singapore](https://upload.wikimedia.org/wikipedia/commons/9/9b/Speakers%27_Corner_sign%2C_Singapore_-_20050906.jpg)
+
+*The Speakers' Corner sign at Hong Lim Park — the designated venue for Pink Dot, the annual rally that campaigned for years for the repeal of Section 377A. (Photo: Cory Doctorow / Wikimedia Commons, CC BY-SA 2.0)*
