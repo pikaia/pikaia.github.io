@@ -352,6 +352,17 @@ PRONUNCIATION_OVERRIDES = {
                            # picked from three synthesized samples - the
                            # first-syllable-stress reading was the other
                            # main candidate.
+    "topline": "tˈɒplIn",  # unknown word (no lexicon entry) - "top" + "line",
+                            # both phonemize fine alone (same compound gap as
+                            # "phrasebook"/"outgrown"). "TOP-line", stress on
+                            # the first syllable, "line" as /laɪn/. The
+                            # ageism-gap post.
+    "Tsao": "tsˈW",  # unknown word (no lexicon entry) - the Tsao Foundation,
+                      # one of the three partners in the ageism-gap post's
+                      # 2023 employer survey. Chinese surname 曹, anglicized
+                      # "TSOW" (rhymes with "how"/"now"). NOT ear-verified yet
+                      # - flag if it sounds off; "chow"/"zow" were the other
+                      # candidates.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -378,6 +389,11 @@ def _ordinal_suffix(n: int) -> str:
 
 ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bFr\.(?=\s)"): "Father",
+    # "vs." - misaki drops the abbreviation as a literal "?" ("Say vs.
+    # What" -> "Say <unknown> What"). Always reads as "versus" in prose
+    # (sport, law, comparisons alike), so a general expansion is safe.
+    # Caught in the ageism-gap post's own title.
+    re.compile(r"\bvs\.(?=\s|$)"): "versus",
     # "S$" (Singapore dollar notation) - misaki produces a literal "?"
     # token for the "$" right after "S" ("S$50 million" -> "S <unknown>
     # fifty million"). Tried "SGD" as a fix first, but it spells out as
@@ -441,6 +457,12 @@ ABBREVIATION_EXPANSIONS = {
 }
 
 
+def _apply_abbreviation_expansions(text: str) -> str:
+    for pattern, replacement in ABBREVIATION_EXPANSIONS.items():
+        text = pattern.sub(replacement, text)
+    return text
+
+
 def _process_block(block: str, narrative: list[str]) -> bool:
     """Returns False if this block signals the Sources divider (stop)."""
     if block == "---":
@@ -455,8 +477,7 @@ def _process_block(block: str, narrative: list[str]) -> bool:
     cleaned = GALLERY_LINK_RE.sub("", block)
     cleaned = MD_LINK_RE.sub(r"\1", cleaned)
     cleaned = BOLD_RE.sub(r"\1", cleaned)
-    for pattern, replacement in ABBREVIATION_EXPANSIONS.items():
-        cleaned = pattern.sub(replacement, cleaned)
+    cleaned = _apply_abbreviation_expansions(cleaned)
     cleaned = cleaned.strip()
     if cleaned:
         narrative.append(cleaned)
@@ -473,6 +494,11 @@ def extract_narrative(markdown_text: str) -> list[str]:
 
     title_match = re.search(r'^title:\s*"?(.+?)"?\s*$', front_matter, re.MULTILINE)
     title = title_match.group(1) if title_match else ""
+    # The title bypasses _process_block(), so apply the same abbreviation
+    # expansions here - otherwise a "vs." / "Fr." / date in a post's title
+    # gets spelled out letter-by-letter in the narration (the ageism-gap
+    # title, "... Say vs. What They Do").
+    title = _apply_abbreviation_expansions(title).strip()
 
     narrative = [title] if title else []
     buf: list[str] = []
