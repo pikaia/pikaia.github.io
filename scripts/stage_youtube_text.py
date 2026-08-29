@@ -141,6 +141,11 @@ def extract_image_credit(raw_caption: str) -> str:
     m = TRAILING_PAREN_RE.search(caption)
     if m:
         inner = m.group(1).strip()
+        # An OpenStreetMap map-data credit ("Map data: (c) OpenStreetMap
+        # contributors") is already the complete, correct attribution -
+        # there's no author/licence to split out, so take it as-is.
+        if re.search(r'OpenStreetMap|Map data', inner):
+            return re.sub(r'^Map data:\s*', '', inner).strip()
         # "<source> / Wikimedia Commons, public domain" and similar - an
         # institutional/PD credit with no named photographer and no CC
         # licence, so PHOTO_PAREN_RE / PHOTO_BY_RE don't catch it. Split
