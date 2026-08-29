@@ -10,7 +10,16 @@ Full story: https://da.gd/Lcuf
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Popular Book Store, Singapore, stocked with assessment books — ProjectManhattan, CC BY-SA 3.0
+- The Ministry of Education headquarters building in Buona Vista, Singapore — S5A-0043, CC BY 4.0
+- Encouragement posters near the examination hall at Nan Hua High School, Singapore, 2013 — JinKai97, CC BY-SA 3.0
+- University Hall at the National University of Singapore — Ralff Nestor Nacor, CC BY-SA 4.0
+- Tuition-spend chart by Lesser Known Singapore, from the Household Expenditure Survey figures cited in the post
+- An old bookshop inside Bras Basah Complex, Singapore, 2022 — Tony Ng, CC BY-SA 4.0
+- Class at Dover Court Preparatory School, Singapore, circa 1970s — Dover Court Preparatory School, CC BY-SA 4.0
+- Science building at The Chinese High School, Singapore, in the 1950s — Gisling, CC BY 3.0
+- Bras Basah Road, Singapore, early 20th century — KITLV collection, CC BY 4.0
 
 Sources:
 - Singapore Families Spent $1.8B on Private Tuition in 2023, Here's What That Means for 2025 — SmileTutor
@@ -20,7 +29,10 @@ Sources:
 - MTL Requirement for University Admission — NUS Office of Admissions
 - File:Popular Book Store, Singapore.jpg — Wikimedia Commons
 - File:NUS University Hall, Singapore.jpg — Wikimedia Commons
+- File:(SGP-Singapore) Ministry of Education Headquarters 2025-05-10.jpg — Wikimedia Commons
 - File:Singapore. Brass Bassa Road., KITLV 1404985.tiff — Wikimedia Commons
+- File:Encouragement posters for Secondary 4 students near the examination hall put up by the Student Council of Nan Hua High School, Singapore - 20131028.jpg — Wikimedia Commons
+- File:Old Bookshop in Bras Basah Complex.jpg — Wikimedia Commons
 - File:Classroom building in the 50s.JPG — Wikimedia Commons
 - File:Science building of CHS in 50s.JPG — Wikimedia Commons
 - File:Dormitory in the 50s.JPG — Wikimedia Commons
@@ -37,8 +49,10 @@ Description:
 The Ministry of Education has never made private tuition a requirement for anything. Officially, it doesn't exist as part of the system at all — no school asks whether a student attends it, no policy assumes it. And yet Singaporean households spent S$1.8 billion on it in 2023, more than seven in ten students now receive some form of it, and it has quietly become the single largest discretionary expense in a typical Singaporean family's education budget, ahead of enrichment classes, overseas trips, and everything else combined. A system built on the promise that merit alone decides who gets ahead has, almost by accident, let a shadow industry become one of the biggest levers on outcomes it never officially acknowledges. #Shorts
 
 Full story: https://da.gd/Lcuf
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/v6pWMo9YJiY
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Popular Book Store, Singapore, stocked with assessment books — ProjectManhattan, CC BY-SA 3.0
+- Tuition-spend chart by Lesser Known Singapore, from the Household Expenditure Survey figures cited in the post
