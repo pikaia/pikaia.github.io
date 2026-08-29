@@ -362,6 +362,17 @@ PRONUNCIATION_OVERRIDES = {
                       # 2023 employer survey. Chinese surname 曹, anglicized
                       # "TSOW" (rhymes with "how"/"now"). Confirmed by Chris
                       # by ear (2026-08-28) over "chow" (ʧˈW) and "zow" (zˈW).
+    # The CV noun. misaki's "resume" entry is the VERB reading
+    # (ɹɪzjˈuːm, "re-ZYOOM", as in "operations resumed"), and a plain
+    # PRONUNCIATION_OVERRIDES entry can't tell noun from verb. Instead,
+    # ABBREVIATION_EXPANSIONS rewrites the *noun* "resume"/"resumes" to
+    # the accented "résumé"/"résumés" (only in a determiner context /
+    # always for the plural), and misaki has no entry for those accented
+    # forms - so these overrides supply the "REH-zoo-may" reading while
+    # the bare verb "resume" is never touched. Confirmed by Chris on the
+    # ageism-gap post ("putting together a resume").
+    "résumé": "ɹˈɛzuːmA",
+    "résumés": "ɹˈɛzuːmAz",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -393,6 +404,20 @@ ABBREVIATION_EXPANSIONS = {
     # (sport, law, comparisons alike), so a general expansion is safe.
     # Caught in the ageism-gap post's own title.
     re.compile(r"\bvs\.(?=\s|$)"): "versus",
+    # The CV noun "resume"/"resumes" -> the accented "résumé"/"résumés",
+    # which PRONUNCIATION_OVERRIDES then reads as "REH-zoo-may". This is
+    # done as a text rewrite, not a phoneme override, so it can be
+    # context-aware: misaki's bare "resume" entry is the VERB ("the trial
+    # will resume", "operations resumed") and must stay untouched.
+    # Singular "resume" is only rewritten when a determiner / possessive /
+    # attributive adjective precedes it (the noun context); the whitelist
+    # has gaps, but a missed noun just keeps the verb reading - the safe
+    # direction. Plural "resumes" is taken as the noun by default (the
+    # 3rd-person-singular verb "resumes" is rare; handle per-post if it
+    # ever appears). Caught by Chris on the ageism-gap post.
+    re.compile(r"\b(a|an|the|her|his|my|your|their|our|its|one|another|each|every|that|this|these|those|hers|old|new|updated|fresh|blank|polished|first|second|two-page|one-page)\s+resume\b"):
+        lambda m: f"{m.group(1)} résumé",
+    re.compile(r"\bresumes\b"): "résumés",
     # "S$" (Singapore dollar notation) - misaki produces a literal "?"
     # token for the "$" right after "S" ("S$50 million" -> "S <unknown>
     # fifty million"). Tried "SGD" as a fix first, but it spells out as
