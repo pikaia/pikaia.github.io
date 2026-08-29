@@ -140,7 +140,16 @@ def extract_image_credit(raw_caption: str) -> str:
         return f"{m.group(1).strip()}, {m.group(2).strip()}"
     m = TRAILING_PAREN_RE.search(caption)
     if m:
-        return f"{m.group(1).strip()} [REVIEW CREDIT]"
+        inner = m.group(1).strip()
+        # "<source> / Wikimedia Commons, public domain" and similar - an
+        # institutional/PD credit with no named photographer and no CC
+        # licence, so PHOTO_PAREN_RE / PHOTO_BY_RE don't catch it. Split
+        # it the same way as the (Photo: ...) branch when it's clearly a
+        # credit (mentions a known repository or licence token).
+        if "," in inner and re.search(r'Wikimedia Commons|NewspaperSG|public domain|CC[ -]|GFDL|Open Government', inner):
+            source, license_ = inner.rsplit(",", 1)
+            return f"{source.split('/')[0].strip()}, {license_.strip()}"
+        return f"{inner} [REVIEW CREDIT]"
     return f"{caption} [REVIEW CREDIT]"
 
 
@@ -199,8 +208,24 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
             pending_url, pending_alt = normalize_commons_url(img_url), alt
             continue
 
-        if pending_url and ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
-            result[pending_url] = {"alt": pending_alt, "credit": extract_image_credit(block.strip("*").strip())}
+        caption = None
+        if ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
+            caption = block.strip("*").strip()
+        else:
+            # A lone <em>...</em> caption block, blank-line-separated from
+            # its <img> - the float-<div> convention CLAUDE.md documents
+            # ("caption ... on its own line separated from the image by a
+            # blank line"), including several stacked <img>/<em> pairs in
+            # one div. split_blocks() puts the <em> in its own block,
+            # optionally still carrying the div's own opening/closing tag.
+            em_m = EM_TAG_RE.search(block)
+            if em_m and not IMG_TAG_RE.search(block):
+                bare = re.sub(r'</?div\b[^>]*>', '', block).strip()
+                if bare.startswith("<em") and bare.endswith("</em>"):
+                    caption = em_m.group(1).strip()
+
+        if pending_url and caption is not None:
+            result[pending_url] = {"alt": pending_alt, "credit": extract_image_credit(caption)}
         pending_url = None
 
     return result
