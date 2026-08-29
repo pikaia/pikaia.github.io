@@ -10,7 +10,17 @@ Full story: https://da.gd/0wtC
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Flying Fish Cove, Christmas Island's main settlement, seen from the hillside above — David Stanley, CC BY 2.0
+- Map showing Singapore and Christmas Island about 1,550 km apart, with Christmas Island out in the Indian Ocean south of Java — © OpenStreetMap contributors
+- Portrait of Abdul Hamid Jumat — Renate Patzek, CC BY-SA 3.0 DE
+- Steam locomotive built for the Christmas Island Phosphate Company's railway, 1931 — The Locomotive Magazine and Railway Carriage & Wagon Review, 1931, public domain
+- Japanese naval troops posing with a captured British coastal gun on Christmas Island, April 1942 — Japanese wartime press, 1942, public domain
+- Portrait of Lim Yew Hock, Chief Minister of Singapore, 1956 — Central Office of Information, London, 1956, public domain
+- Christmas Island's first postage stamp, 1958, an Australian stamp overprinted "Christmas Island" — Wikimedia Commons, public domain
+- Payout chart by Lesser Known Singapore, from the figures cited in the post
+- Front page of The Sunday Times, Singapore, 31 May 1959, reporting the PAP's landslide election victory — The Straits Times, 1959, public domain
+- Christmas Island Immigration Detention Centre, seen from the surrounding rainforest — DIAC Images, CC BY 2.0
 
 Sources:
 - Christmas Island never belonged to S'pore — Mothership.SG
@@ -23,6 +33,7 @@ Sources:
 - Self-governance of Singapore — Wikipedia
 - North West Point Immigration Detention Centre — Wikipedia
 - Lim Yew Hock — Wikipedia
+- Singapore and Christmas Island on the map — OpenStreetMap
 - File:Flying Fish Cove (25341355156).jpg — Wikimedia Commons
 - File:Lim Yew Hock, 1956 (cropped).png — Wikimedia Commons
 - File:Christmas Island Immigration Detention Centre and the Lilac compound (5774458263).jpg — Wikimedia Commons
@@ -43,8 +54,10 @@ Description:
 Ask most Singaporeans about Christmas Island and you'll get some version of the same story: Singapore used to own it, and sold it off to Australia in 1958 for far less than it was worth. It's a tidy story — a small colonial outpost cashing in an island, a year before Singapore even got a real vote in its own affairs. It's also wrong. Singapore never owned Christmas Island, so there was nothing for it to sell. #Shorts
 
 Full story: https://da.gd/0wtC
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/l3-Ck7vGFkg
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Flying Fish Cove, Christmas Island's main settlement, seen from the hillside above — David Stanley, CC BY 2.0
+- Map showing Singapore and Christmas Island about 1,550 km apart, with Christmas Island out in the Indian Ocean south of Java — © OpenStreetMap contributors
