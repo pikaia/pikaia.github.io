@@ -463,6 +463,24 @@ PRONUNCIATION_OVERRIDES = {
     "Bahru": "bˈɑːruː",       # "BAH-roo" - Malay "new" (Geylang Bahru)
     "saté": "sɑːtˈeɪ",        # "sah-TAY" - the Dutch/Indonesian spelling of
                               # satay, used in the post as a menu term
+    # Japanese Garden (Seiwaen) post - Japanese proper nouns / terms plus a
+    # few ordinary English gaps. The Japanese readings are romaji-to-English
+    # approximations; ear-review samples in scratch/japanese-garden-samples/.
+    "dammed": "dˈamd",        # unknown word - misaki has "damned" (dˈamd)
+                              # but not the past tense of "to dam"; same sound
+    "masterplan": "mˈɑːstəplˌan",  # unknown compound - "master" + "plan",
+                              # same gap as "phrasebook"/"paycheck"
+    "Sentosa": "sɛntˈQsə",    # "sen-TOH-suh" - the resort island; common
+                              # across many Singapore posts
+    "Sentosa's": "sɛntˈQsəz",
+    "Seiwaen": "sˈeɪwɑːɛn",   # 清和園 - "SAY-wah-en", the garden's name
+    "Kinsaku": "kˈɪnsɑːkuː",  # 金作 - "KIN-sah-koo" (Kinsaku Nakane)
+    "Nakane": "nɑːkˈɑːneɪ",   # 中根 - "nah-KAH-nay", the landscape architect
+    "Nakane's": "nɑːkˈɑːneɪz",
+    "Muromachi": "mˌʊrəmˈɑːtʃi",   # 室町 - "moo-roh-MAH-chee" (art period)
+    "Momoyama": "mˌQmQjˈɑːmə",     # 桃山 - "moh-moh-YAH-mah" (art period)
+    "karesansui": "kˌarɛsˈansuːi",  # 枯山水 - "kah-reh-SAHN-soo-ee", dry
+                              # rock garden
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

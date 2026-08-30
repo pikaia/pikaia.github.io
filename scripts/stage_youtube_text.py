@@ -51,7 +51,13 @@ from generate_narration import BOLD_RE, GALLERY_LINK_RE, ITALIC_CAPTION_RE, MD_L
 REPO_ROOT = Path(__file__).resolve().parent.parent
 IMG_TAG_RE = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"[^>]*>')
 IMG_ALT_RE = re.compile(r'\balt="([^"]*)"')
-MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\(([^)]+)\)$')
+# URL group balances one level of parens so a markdown image whose URL
+# contains literal "(...)" - as kramdown allows, e.g.
+# ".../Redbridge_(8166305323).jpg" - is still captured. A plain "[^)]+"
+# stopped at the first ")" and the "$" anchor then failed the whole
+# match, dropping the image from the caption map. Caught on the Japanese
+# Garden post's hero.
+MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\(((?:[^()\s]|\([^()]*\))+)\)$')
 EM_TAG_RE = re.compile(r'<em\b[^>]*>(.*?)</em>', re.DOTALL)
 ITALIC_RE = re.compile(r'\*([^*]+)\*')
 PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
@@ -71,7 +77,12 @@ def normalize_commons_url(url: str) -> str:
     - a chart/video config often requests a wider thumb than the gallery,
     so those two must still resolve to the same file."""
     m = COMMONS_THUMB_RE.match(url)
-    return m.group(1) + m.group(2) if m else url
+    canonical = m.group(1) + m.group(2) if m else url
+    # Decode percent-encoding so a video config's "Redbridge_%288166305323%29.jpg"
+    # matches the post markdown's literal "Redbridge_(8166305323).jpg" (and
+    # vice versa). Both sides pass through here, so the comparison is
+    # encoding-agnostic. Caught on the Japanese Garden post.
+    return urllib.parse.unquote(canonical)
 
 
 def clean_text(text: str) -> str:

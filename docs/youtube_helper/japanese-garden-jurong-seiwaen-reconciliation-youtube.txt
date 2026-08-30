@@ -10,7 +10,16 @@ Full story: https://da.gd/ve4RR
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- The red arched bridge in the Japanese Garden, Jurong, photographed in 2012 — Erwin Soo, CC BY 2.0
+- The moon bridge in the reopened Japanese Garden, Jurong, photographed in 2024 — FN-082, CC BY-SA 4.0
+- A general view of the Japanese Garden, Jurong, photographed in 2015 — Zairon, CC BY-SA 4.0
+- A view of the Japanese Garden's grounds, Singapore, photographed in 2015 — Zairon, CC BY-SA 4.0
+- A bridge in the Japanese Garden, Jurong, photographed in 2012 — Erwin Soo, CC BY 2.0
+- Map of Jurong Lake showing the Japanese Garden and the neighbouring Chinese Garden — Map data © OpenStreetMap contributors
+- A view of the Japanese Garden, Jurong East, photographed in 2012 — Gareth Wyn Jones, CC BY-SA 4.0
+- The Double Beauty Bridge linking the Chinese and Japanese Gardens, Singapore, photographed in 2024 — FN-082, CC BY-SA 4.0
+- Niches with a horticultural showcase in the reopened Japanese Garden, Singapore, photographed in 2024 — FN-082, CC BY-SA 4.0
 
 Sources:
 - Japanese Garden, Singapore — Wikipedia
@@ -29,6 +38,8 @@ Sources:
 - File:2012-07-07 Jurong East 26.JPG — Wikimedia Commons
 - File:Bridge at Japanese Gardens (8153514054).jpg — Wikimedia Commons
 - File:Singapore Japanischer Garten 5.jpg — Wikimedia Commons
+- Jurong Lake and the Japanese Garden — OpenStreetMap
+- Straits Times, 17 February 1973, p.9 — "Barbaric music a serious menace says Goh" (NewspaperSG; report of Goh Keng Swee's speech at the garden's opening)
 
 ----------------------------------------------------------------------
 
@@ -41,8 +52,11 @@ Description:
 When the Japanese Garden in Jurong reopened in September 2024 after five years of redevelopment, the new attractions were a Water Lily Pavilion with over 150 varieties, a cenote-inspired Sunken Garden, and a "Breathing Gallery" of terrariums and aquariums. Nothing in the coverage of the relaunch explained why there was a Japanese garden at Jurong Lake in the first place. Fifty years earlier, its 1973 opening had nothing to do with water lilies — it was one of the more understated acts of postwar reconciliation between Singapore and the country whose army had occupied it only three decades before. #Shorts
 
 Full story: https://da.gd/ve4RR
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/7wCqucN-au0
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- The moon bridge in the reopened Japanese Garden, Jurong, photographed in 2024 — FN-082, CC BY-SA 4.0
+- The red arched bridge in the Japanese Garden, Jurong, photographed in 2012 — Erwin Soo, CC BY 2.0
+- Map of Jurong Lake showing the Japanese Garden and the neighbouring Chinese Garden — Map data © OpenStreetMap contributors
