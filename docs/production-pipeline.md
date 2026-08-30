@@ -543,6 +543,23 @@ the one case worth a speed sanity-check (see
 slowdown (~0.2fps), already fixed in the shared engine, but worth
 knowing about if a future render looks unusually slow.
 
+**Lint before moving on.** Both config files are Python, so run `ruff`
+over them (config in `pyproject.toml`, see CLAUDE.md's *Python linting*
+section):
+
+```bash
+ruff check scripts/video-configs/<slug>.py scripts/video-configs/<slug>-short.py
+```
+
+It must print `All checks passed!` — fix anything it flags before
+section 4. If this step also had you write a static-chart renderer
+(`scripts/render_<slug>_*.py`, per CLAUDE.md's *Charts* section) or edit
+`scripts/generate_narration.py` for a pronunciation override, lint those
+too — or just run `ruff check .` from the repo root to cover everything
+at once. The rule set is a bug-catching net only (pyflakes, syntax,
+import/statement footguns); it does not enforce formatting, so match the
+surrounding style by reading it.
+
 ---
 
 ## 4. Author the Watch widget (live in-browser slideshow)
@@ -1436,6 +1453,11 @@ content changes without asking first. Rough shape:
 - **Never commit** `preview-motion/` or `scratch/` (both `.gitignore`d
   already); check that nothing new outside them is scratch too, and
   `.gitignore` it if so rather than committing it.
+- **Before staging any `.py`** — video configs, a `render_<slug>_*.py`
+  renderer, a `generate_narration.py` override edit — run `ruff check .`
+  from the repo root and confirm `All checks passed!`. Section 3 already
+  lints the configs; this is the catch-all for anything Python that rode
+  along since.
 
 **Solo fallback** (Claude unavailable) — the straightforward case is
 just the post's own commit:
