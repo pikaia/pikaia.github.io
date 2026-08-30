@@ -481,6 +481,34 @@ PRONUNCIATION_OVERRIDES = {
     "Momoyama": "mˌQmQjˈɑːmə",     # 桃山 - "moh-moh-YAH-mah" (art period)
     "karesansui": "kˌarɛsˈansuːi",  # 枯山水 - "kah-reh-SAHN-soo-ee", dry
                               # rock garden
+    # National symbols post - names of the people and the anthem behind
+    # the 1958-66 flag/anthem/pledge scramble. Ear-review samples in
+    # scratch/national-symbols-samples/.
+    "Toh": "tˈQ",             # 杜 - "toh", rhymes with "go" (Toh Chin Chye)
+    "Chin": "ʧɪn",            # de-stressed: misaki's native "Chin" (ʧˈɪn)
+                              # made the middle of "Toh Chin Chye" pop;
+                              # the name should read flat, three even
+                              # syllables (per Chris). "chin" the body
+                              # part doesn't appear in these posts
+    "Chye": "tʃˈaɪ",          # "chai", rhymes with "eye" (Toh Chin Chye)
+    "Zubir": "zˈuːbɪə",       # "ZOO-bir" - the composer Zubir Said
+    "Saeed": "sɑːˈiːd",       # "sah-EED" - "Said" the surname (misaki reads
+                              # the raw word as English "said"); an
+                              # ABBREVIATION_EXPANSIONS rule rewrites
+                              # "Zubir Said" -> "Zubir Saeed" so this fires
+    "Majulah": "mˈɑːdʒʊlɑː",  # Malay "advance/onward" - "MAH-ju-lah",
+                              # stress on the first syllable (per Chris),
+                              # middle "ju" short and unstressed
+    "Singapura": "sˌɪŋɡəpˈuːrɑː",  # Malay for Singapore - "sing-ga-POO-ra"
+    "Yusof": "jˈuːsɒf",       # "YOO-sof" - Yusof bin Ishak, first president
+    "Ishak": "ɪshˈɑːk",       # "is-HAHK" - audible /h/ between the
+                              # syllables (per Chris), not "ish-AHK"
+    "Rajaratnam": "rˌɑːdʒɑːɹˈatnəm",  # "rah-jah-RAT-nam" - S. Rajaratnam.
+                              # Second syllable is a full "jah" (dʒɑː);
+                              # a schwa there voiced as "joo". "-ratnam"
+                              # as in Shanmugaratnam above
+    "expelled": "ɪkspˈɛld",   # unknown, though "expel" (ɪkspˈɛl) works
+    "namable": "nˈAməbᵊl",    # variant spelling of "nameable" (which works)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -595,6 +623,13 @@ ABBREVIATION_EXPANSIONS = {
     # misaki reads "II" as fluent, confident letters ("I, I"), it just
     # doesn't know that's wrong here.
     re.compile(r"\bShock Therapy II\b"): "Shock Therapy Two",
+    # "Zubir Said" - the composer's surname is /saˈiːd/ ("sah-EED"), but
+    # misaki reads the bare word "Said" as the English past tense
+    # ("sed"). Can't safely override "Said" in the phoneme dict (it would
+    # break "he said" in ordinary prose), so rewrite the full name to
+    # "Zubir Saeed", which PRONUNCIATION_OVERRIDES then voices correctly.
+    # National-symbols post.
+    re.compile(r"\bZubir Said\b"): "Zubir Saeed",
     # A four-digit year range written with an en-dash or hyphen
     # ("2020-2021", "1997-2025") - misaki drops the dash as an audible
     # "?" and mushes the two years together ("twenty twenty? twenty

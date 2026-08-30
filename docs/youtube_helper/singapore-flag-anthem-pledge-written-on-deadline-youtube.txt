@@ -10,7 +10,15 @@ Full story: https://da.gd/E45Me
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Rear entrance of Victoria Theatre and Concert Hall, Singapore — Jacklee, CC BY-SA 4.0
+- Flag of Singapore — Public domain, Wikimedia Commons.
+- Flag of Singapore (1952–1959) — Wikimedia Commons, CC BY-SA 4.0
+- Old Supreme Court Building and City Hall from the Padang, Singapore — Dayou_X, CC BY-SA 2.0
+- Zubir Said sitting for a portrait bust by sculptor Chua Mia Tee, 1960 — Dr Chua Yang, CC BY-SA 4.0
+- Front page of The Straits Times, 4 December 1959, headlined 'Singapore Rejoices — Yang di-Pertuan Negara Installed' — The Straits Times, public domain — pre-1987 edition
+- Front page of The Straits Times, 10 August 1966 — The Straits Times, public domain — pre-1987 edition
+- S. Rajaratnam, c. 1940s — National Archives of Singapore, public domain
 
 Sources:
 - Singapore flag, Singapore, 1960-1980 — Roots.gov.sg, National Heritage Board
@@ -28,6 +36,9 @@ Sources:
 - File:Flag of Singapore.svg — Wikimedia Commons
 - File:Zubir Said in 1960 (cropped).jpg — Wikimedia Commons
 - File:S Rajaratnam c. 1940s.jpg — Wikimedia Commons
+- File:ST4December1959.jpg — Wikimedia Commons
+- File:ST10August1966.jpg — Wikimedia Commons
+- The Straits Times, 4 December 1959, page 1 — "Singapore Rejoices / Yang di-Pertuan Negara Installed" (NewspaperSG)
 
 ----------------------------------------------------------------------
 
@@ -40,8 +51,10 @@ Description:
 Singapore's national anthem was not written for a nation. It was written for the reopening of a concert hall. That anthem, along with the flag flown outside every void deck and the pledge recited by every schoolchild, exists because two different governments needed something to point to on a tight deadline: once in 1959, when self-government arrived faster than anyone had planned for, and again in 1966, when a newly independent country was still absorbing the shock of race riots and an unwanted divorce from Malaysia. #Shorts
 
 Full story: https://da.gd/E45Me
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/O8ELoag2VVY
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Rear entrance of Victoria Theatre and Concert Hall, Singapore — Jacklee, CC BY-SA 4.0
+- Flag of Singapore — Public domain, Wikimedia Commons.

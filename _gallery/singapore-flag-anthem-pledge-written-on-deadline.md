@@ -5,7 +5,7 @@ post_url: /2026/08/19/singapore-flag-anthem-pledge-written-on-deadline/
 post_title: "Singapore's National Symbols Were All Written on a Deadline"
 ---
 
-Five more images from the same compressed, high-pressure years that produced Singapore's flag, anthem, and pledge.
+Six more images from the same compressed, high-pressure years that produced Singapore's flag, anthem, and pledge.
 
 ### The flag Singapore replaced
 
@@ -36,3 +36,9 @@ Five more images from the same compressed, high-pressure years that produced Sin
 ![Old Supreme Court Building and City Hall from the Padang, Singapore](https://upload.wikimedia.org/wikipedia/commons/7/70/Old_Supreme_Court_Building_and_City_Hall_from_the_Padang%2C_Singapore_-_20110205.jpg)
 
 *The Padang and the former City Hall, seen here in 2011. City Hall's Municipal Building Chamber hosted the installation ceremony where the flag, anthem, and coat of arms were all made public on the same afternoon. (Photo: Dayou_X / Wikimedia Commons, CC BY-SA 2.0)*
+
+### The independent country, seven years on
+
+![Front page of The Straits Times, 10 August 1966](https://upload.wikimedia.org/wikipedia/commons/c/ca/ST10August1966.jpg)
+
+*The Straits Times of 10 August 1966, the morning after Singapore's first National Day — the year the pledge was written and first recited, with the country still a few years past independence. (The Straits Times / Wikimedia Commons, public domain — pre-1987 edition)*
