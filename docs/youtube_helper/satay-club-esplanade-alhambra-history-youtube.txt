@@ -4,13 +4,26 @@ Title:
 The Satay Club Moved Four Times. The Satay Stayed the Same.
 
 Description:
-I remember going to the Satay Club as a kid, though when I looked into it as an adult I realised I couldn't say for certain which of its addresses I'd actually visited. That's because the place I have in my head moved four times before it finally closed for good — and the version most people my age remember, the one at the Esplanade, wasn't even where it started.
+I remember going to the Satay Club at the Esplanade as a kid — the waterfront version, under the big old trees, opposite Raffles Hotel. When I looked into it properly as an adult, I found that wasn't where it started. The place moved four times before it finally closed for good, and the Esplanade — the version most people my age picture — wasn't its first home.
 
 Full story: https://da.gd/4djpFL
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Satay being prepared at the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Map of the Satay Club's locations across central Singapore, from the 1940s to today — Map data © OpenStreetMap contributors
+- The Alhambra Cinema and the neighbouring Marlborough Cinema on Beach Road, Singapore, 1920s — Wikimedia Commons, CC BY-SA 4.0
+- Queen Elizabeth Walk, Singapore, 2006 — User:Sengkang, copyrighted free use
+- General view of the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Satay preparation at the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Esplanade - Theatres on the Bay, Singapore, at dusk — Basile Morin, CC BY-SA 4.0
+- A food stall at the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Inside Satay by the Bay food court, Singapore, 2026 — Kbseah, CC BY-SA 4.0
+- Satay by the Bay food court at Gardens by the Bay, Singapore, 2026 — Kbseah, CC BY-SA 4.0
+- Satay and shrimp at Lau Pa Sat, Singapore, 2025 — LN9267, CC BY-SA 4.0
+- Saté being prepared for an official rijsttafel, Dutch East Indies, 1943-45 — Wereldmuseum, Netherlands, public domain
+- Satay and shrimp at Lau Pa Sat, Singapore, 2024 — LN9267, CC BY-SA 4.0
 
 Sources:
 - Satay Club — Wikipedia
@@ -26,6 +39,12 @@ Sources:
 - File:Satay by the Bay (14314).jpg — Wikimedia Commons
 - File:Lau Pa Sat satay and shrimp 10-08-2025.jpg — Wikimedia Commons
 - File:Lau Pa Sat satay and shrimp 04-12-2024.jpg — Wikimedia Commons
+- File:1920s photo of Marlborough Cinema and the next-door Alhambra Cinema.jpg — Wikimedia Commons
+- File:KITLV - 103979 - Washing and bleaching field, Singapore - circa 1880.tif — Wikimedia Commons
+- File:Collectie Wereldmuseum, TM-FV-0586-104 (saté for a rijsttafel, 1943-45) — Wikimedia Commons
+- File:Esplanade Theatres on the Bay Singapore at blue hour.jpg — Wikimedia Commons
+- File:Queen Elizabeth Walk, Aug 06.JPG — Wikimedia Commons
+- Central Singapore — OpenStreetMap
 
 ----------------------------------------------------------------------
 
@@ -35,11 +54,14 @@ Title:
 The Satay Club Moved Four Times. The Satay Stayed the Same. #Shorts
 
 Description:
-I remember going to the Satay Club as a kid, though when I looked into it as an adult I realised I couldn't say for certain which of its addresses I'd actually visited. That's because the place I have in my head moved four times before it finally closed for good — and the version most people my age remember, the one at the Esplanade, wasn't even where it started. #Shorts
+I remember going to the Satay Club at the Esplanade as a kid — the waterfront version, under the big old trees, opposite Raffles Hotel. When I looked into it properly as an adult, I found that wasn't where it started. The place moved four times before it finally closed for good, and the Esplanade — the version most people my age picture — wasn't its first home. #Shorts
 
 Full story: https://da.gd/4djpFL
 Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Satay being prepared at the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- General view of the Esplanade Satay Club, Singapore, 1973/74 — Rainer Halama, CC BY-SA 4.0
+- Map of the Satay Club's locations across central Singapore, from the 1940s to today — Map data © OpenStreetMap contributors

@@ -445,6 +445,24 @@ PRONUNCIATION_OVERRIDES = {
     "Kim": "kˈɪm",            # rhymes with "him"/"dim" - Tan Kim Ching
     "Serangoon": "sˌɛrəŋɡˈuːn",  # "seh-rang-GOON"
     "Balestier": "bəlˈɛstɪə",   # "buh-LESS-teer" - after Joseph Balestier
+    # Satay Club post - a batch of Singapore place / person names misaki
+    # spells out. Several recur widely (Geylang, Dhoby Ghaut, Prinsep,
+    # Nicoll, Bahru). Ear-review samples in scratch/satay-club-samples/.
+    "Hoi": "hˈɔɪ",            # "hoy" (Hoi How Road, off Beach Road)
+    "Dhoby": "dˈQbi",         # "DOH-bee" (Dhoby Ghaut; from Hindi dhobi)
+    "Ghaut": "ɡˈɔːt",         # "gawt" (Dhoby Ghaut) - from "ghat"
+    "Prinsep": "pɹˈɪnsɛp",    # "PRIN-sep" (Prinsep Street)
+    "Elizabeth": "ɪlˈɪzəbəθ", # "ih-LIZ-uh-buth" (Queen Elizabeth Walk)
+    "Nicoll": "nˈɪkəl",       # "NIK-uhl", like "nickel" (Nicoll Highway)
+    "Saiful": "sˈaɪfʊl",      # "SY-fool" (Encik Saiful bin Haji Juwahir)
+    "Juwahir": "dʒʊwˈɑːhɪə",  # "joo-WAH-hir"
+    "Geylang": "ɡˈeɪlʌŋ",     # "GAY-lung" - second syllable is the "hung"/
+                              # "sung" vowel, not "hang"/"gang" (per Chris,
+                              # same correction pattern as "Kang" above).
+                              # Geylang Serai, Geylang Bahru
+    "Bahru": "bˈɑːruː",       # "BAH-roo" - Malay "new" (Geylang Bahru)
+    "saté": "sɑːtˈeɪ",        # "sah-TAY" - the Dutch/Indonesian spelling of
+                              # satay, used in the post as a menu term
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
