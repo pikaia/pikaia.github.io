@@ -7,3 +7,10 @@ title: "LOCAL — Lesser Known Singapore"
 # Show a per-post pipeline-status badge on the homepage (full pipeline /
 # audio only / no video). Local preview only - never rendered live.
 pipeline_badges: true
+
+# Show the inline "Watch" button (the Ken Burns animation player) in the
+# post widget row. Local preview only: in production the button is hidden
+# (via a <style> rule in _layouts/post.html) so viewers are routed to the
+# YouTube channel links instead. The Listen button and the YouTube /
+# Shorts links are unaffected in both environments.
+show_watch_widget: true

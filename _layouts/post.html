@@ -8,6 +8,15 @@ actually been revised, "· Last updated <date>" (dd-mmm-yyyy). No diffs,
 no version links - just the two dates. "Last updated" is suppressed when
 last_modified_at equals date, so an un-revised post reads only "Created …".
 {%- endcomment -%}
+{%- unless site.show_watch_widget -%}
+  {%- comment -%}
+  Production: hide the inline "Watch" button (the Ken Burns animation
+  player) so viewers click through to the YouTube channel instead. The
+  local dev preview sets show_watch_widget in _config_dev.yml and keeps
+  it visible. Listen button and the YouTube / Shorts links are untouched.
+  {%- endcomment -%}
+  <style>#watch-widget { display: none !important; }</style>
+{%- endunless -%}
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
