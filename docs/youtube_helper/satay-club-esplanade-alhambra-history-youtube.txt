@@ -57,7 +57,7 @@ Description:
 I remember going to the Satay Club at the Esplanade as a kid — the waterfront version, under the big old trees, opposite Raffles Hotel. When I looked into it properly as an adult, I found that wasn't where it started. The place moved four times before it finally closed for good, and the Esplanade — the version most people my age picture — wasn't its first home. #Shorts
 
 Full story: https://da.gd/4djpFL
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/7XjXiLQ3hhc
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
