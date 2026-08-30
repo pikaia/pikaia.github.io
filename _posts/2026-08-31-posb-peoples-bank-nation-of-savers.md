@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Bank That Spent a Century Teaching Singapore to Save"
-date: 2026-08-31 09:00:00 +0800
-last_modified_at: 2026-08-31 09:00:00 +0800
+date: 2026-08-31 05:00:00 +0800
+last_modified_at: 2026-08-31 05:00:00 +0800
 categories: [history, economy]
 image: https://upload.wikimedia.org/wikipedia/commons/e/ed/POSB_Waterway_Point_branch.jpg
 ---
