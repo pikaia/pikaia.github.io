@@ -4,6 +4,11 @@
 
 title: "LOCAL — Lesser Known Singapore"
 
+# Render posts whose date is in the future, so upcoming posts can be
+# previewed before their publish time. Local preview only - GitHub Pages
+# builds from _config.yml alone and never shows future-dated posts.
+future: true
+
 # Show a per-post pipeline-status badge on the homepage (full pipeline /
 # audio only / no video). Local preview only - never rendered live.
 pipeline_badges: true
