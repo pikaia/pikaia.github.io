@@ -10,7 +10,16 @@ Full story: https://da.gd/y3TJr3
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- The Oei Tiong Ham Building at the Bukit Timah campus of the National University of Singapore, formerly Raffles College — GoAheadFan95, CC BY-SA 4.0
+- Cover of Elements of Economic Theory by Lim Chong-Yah, Lee Sheng-Yi and Chia Siow-Yue — National Library Board Singapore
+- A potter at work in Singapore, 1973-74 — Rainer Halama, CC BY-SA 4.0
+- A coffin maker's shop in Singapore, 1973-74 — Rainer Halama, CC BY-SA 4.0
+- The Manasseh Meyer Building at the Bukit Timah campus of the National University of Singapore — GoAheadFan95, CC BY-SA 4.0
+- A joiner at work in Singapore, 1973-74 — Rainer Halama, CC BY-SA 4.0
+- Striking employees of the Singapore Glass Manufacturers Company picketing outside their factory, July 1951 — Singapore Press Holdings, via National Archives of Singapore, public domain
+- A Setron television set, a brand assembled in Singapore between 1964 and 1986 — Wikimedia Commons, CC BY-SA 4.0
+- A sidewalk barber at work in Singapore, 1973-74 — Rainer Halama, CC BY-SA 4.0
 
 Sources:
 - Lim Chong Yah — NLB Infopedia
@@ -30,6 +39,7 @@ Sources:
 - File:Singapore-Potter-1973-74-WUS08246.jpg — Wikimedia Commons
 - File:Singapore-Coffin Maker-1973-74-WUS08245.jpg — Wikimedia Commons
 - File:Singapore-Sidewalk barber in 1973-74-WUS08232.jpg — Wikimedia Commons
+- File:Setron TV Set.jpg — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -42,8 +52,11 @@ Description:
 For decades, almost every Singaporean who sat for pre-university economics learned supply and demand from the same textbook: Elements of Economic Theory, first published in 1971 and reprinted through the 1980s as the standard A-Level and junior college text. Its lead author, Lim Chong Yah, taught a generation the clean logic of free markets. Then, for 30 years running Singapore's actual wage-setting machinery, he spent much of his career deciding when that logic should be overruled. #Shorts
 
 Full story: https://da.gd/y3TJr3
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/0p3rzWl0y2g
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Cover of Elements of Economic Theory by Lim Chong-Yah, Lee Sheng-Yi and Chia Siow-Yue — National Library Board Singapore
+- The Oei Tiong Ham Building at the Bukit Timah campus of the National University of Singapore, formerly Raffles College — GoAheadFan95, CC BY-SA 4.0
+- Striking employees of the Singapore Glass Manufacturers Company picketing outside their factory, July 1951 — Singapore Press Holdings, via National Archives of Singapore, public domain

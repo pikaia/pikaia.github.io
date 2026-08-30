@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:05,450
+He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It
+
+2
+00:00:05,450 --> 00:00:24,650
+For decades, almost every Singaporean who sat for pre-university economics learned supply and demand from the same textbook: *Elements of Economic Theory*, first published in 1971 and reprinted through the 1980s as the standard A-Level and junior college text.
+
+3
+00:00:24,650 --> 00:00:30,925
+Its lead author, Lim Chong Yah, taught a generation the clean logic of free markets.
+
+4
+00:00:30,925 --> 00:00:40,625
+Then, for 30 years running Singapore's actual wage-setting machinery, he spent much of his career deciding when that logic should be overruled.
+
+5
+00:00:40,625 --> 00:00:46,100
+Lim was born in Malacca in 1932 to Hainanese parents.
+
+6
+00:00:46,100 --> 00:01:03,775
+His mother died when he was eight, leaving him with an elder sister and three younger siblings; when the Japanese invaded Malaya soon after, his father's coffee shop and retail business collapsed, and the young Lim took over managing what was left of the family's finances.
+
+7
+00:01:03,775 --> 00:01:13,775
+He planted tapioca and caught fish in paddy fields to help feed his siblings, and was jailed as a ten-year-old during the occupation.
+
+8
+00:01:13,775 --> 00:01:23,625
+He grew up speaking Hainanese, Malay, Mandarin and Hokkien before learning English — his fifth language — at Anglo Chinese School in Malacca.
+
+9
+00:01:23,625 --> 00:01:42,650
+In 1951 a Malacca Straits Settlement scholarship took him to the University of Malaya in Singapore to study economics; a decade later, a Commonwealth scholarship sent him to Oxford, where he studied under the Nobel laureate John Hicks and finished his doctorate in two years.
+
+10
+00:01:42,650 --> 00:01:55,875
+By 1971, back in Singapore and established as an economics professor, Lim co-wrote *Elements of Economic Theory* with fellow economists Lee Sheng Yi and Chia Siow Yue.
+
+11
+00:01:55,875 --> 00:02:10,050
+Published by Oxford University Press, it became one of the most widely used economics textbooks of its time, carrying generations of Singaporean students through the basics of markets, prices and trade-offs.
+
+12
+00:02:10,050 --> 00:02:37,700
+Lim's academic career deepened alongside it — elected Dean of the Faculty of Arts and Social Sciences at the National University of Singapore from 1971 to 1977, later Head of the Department of Economics and Statistics, and Senior Professor from 1983 until his retirement in 1992, when he crossed over to Nanyang Technological University as its Albert Winsemius Chair Professor of Economics.
+
+13
+00:02:37,700 --> 00:02:46,225
+But it's a job Lim took on the same year his textbook was published that shaped far more Singaporean lives than the book itself.
+
+14
+00:02:46,225 --> 00:03:11,700
+In 1972 he became founding chairman of the National Wages Council, a tripartite body of government, employer and union representatives set up to issue annual wage guidelines by consensus rather than by strike action — a deliberate break from the confrontational bargaining, picket lines and walkouts that had defined industrial relations in the 1950s and 60s.
+
+15
+00:03:11,700 --> 00:03:23,000
+Lim would chair it for almost 30 years, until 2001, guiding a system under which real wages grew by an average of 4.6 per cent a year.
+
+16
+00:03:23,000 --> 00:03:35,475
+It was, for most of that run, invisible work: no elections, no headlines, just a small group deciding every year how much of the country's growth should show up in ordinary paychecks.
+
+17
+00:03:35,475 --> 00:03:59,825
+The one time that consensus-driven caution gave way to something closer to shock treatment came in 1979, when Lim's NWC prescribed a deliberately aggressive "wage correction": 20 per cent guideline increases a year for three straight years, meant to price Singapore out of low-wage, labour-intensive industries and force a shift toward higher-skilled, higher-value work.
+
+18
+00:03:59,825 --> 00:04:14,400
+Wages did rise in line with the guideline through 1981, then kept climbing past it through 1983 and 1984, even as the Singapore dollar appreciated sharply against regional currencies.
+
+19
+00:04:14,400 --> 00:04:33,525
+By 1985, the combination had eroded Singapore's competitiveness enough to be counted among the causes of that year's recession — the country's first serious postwar downturn, and one that arrived on the watch of the same wage council built to keep the economy on an even keel.
+
+20
+00:04:33,525 --> 00:04:39,450
+That history makes what happened in 2012 harder to read as an aberration.
+
+21
+00:04:39,450 --> 00:05:14,050
+Lim, by then 80 and long retired from the NWC, publicly broke with the wage restraint he'd spent later years counselling and proposed what economists half-jokingly called "Shock Therapy Two": a cumulative 50 per cent pay rise over three years for everyone earning under $1,500 a month, paired with a voluntary freeze on salaries above $1 million a year, to be extended to anyone earning over $15,000 a month if income inequality kept widening.
+
+22
+00:05:14,050 --> 00:05:23,075
+He warned that Singapore's Gini coefficient was approaching dangerous territory and that the economy "needs shock therapy to wake up."
+
+23
+00:05:23,075 --> 00:05:41,550
+The labour movement he'd helped institutionalise turned on the idea almost immediately — NTUC leadership called it "very risky," and mainstream economists dismissed it as impractical, warning it would produce structural unemployment rather than close the gap it was meant to fix.
+
+24
+00:05:41,550 --> 00:05:45,950
+The NWC never adopted anything close to it.
+
+25
+00:05:45,950 --> 00:05:50,575
+Lim died in July 2023, aged 91.
+
+26
+00:05:50,575 --> 00:06:13,300
+Singapore's manpower minister called him the man who "laid the foundation for harmonious tripartite relations on which our progressive and prosperous economy is built"; the NTUC remembered him as someone who never stopped advocating for the country's lowest-paid workers, right up to a proposal most of the establishment he'd built considered indefensible.
+
+27
+00:06:13,300 --> 00:06:22,425
+Where it fits in the bigger story: The textbook taught Singaporeans that wages are just another price, set where supply meets demand.
+
+28
+00:06:22,425 --> 00:06:38,075
+The man who wrote it spent three decades proving that Singapore never actually let the market decide that price alone — and twice, forty years apart, tried to move that price by decree rather than wait for the market to get there on its own.

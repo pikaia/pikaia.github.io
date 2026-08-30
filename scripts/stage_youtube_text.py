@@ -146,6 +146,14 @@ def extract_image_credit(raw_caption: str) -> str:
         # there's no author/licence to split out, so take it as-is.
         if re.search(r'OpenStreetMap|Map data', inner):
             return re.sub(r'^Map data:\s*', '', inner).strip()
+        # A book-cover / institutional credit ("Cover image: National
+        # Library Board Singapore") is already the complete attribution:
+        # NLB's book-cover-service images carry no photographer and no
+        # CC/PD licence to split out, same as the OpenStreetMap case
+        # above. Caught on the Lim Chong Yah post (the *Elements of
+        # Economic Theory* cover, served from eservice.nlb.gov.sg).
+        if re.search(r'Cover image:|National Library Board', inner):
+            return re.sub(r'^Cover image:\s*', '', inner).strip()
         # "<source> / Wikimedia Commons, public domain" and similar - an
         # institutional/PD credit with no named photographer and no CC
         # licence, so PHOTO_PAREN_RE / PHOTO_BY_RE don't catch it. Split

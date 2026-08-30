@@ -5,7 +5,7 @@ post_url: /2026/08/14/lim-chong-yah-textbook-national-wages-council-shock-therap
 post_title: "He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It"
 ---
 
-Four more images tied to Lim Chong Yah's world — the campus where he taught, and three glimpses of the low-wage, labour-intensive economy his National Wages Council spent decades trying to move Singapore beyond.
+Five more images tied to Lim Chong Yah's world — the campus where he taught, three glimpses of the low-wage, labour-intensive economy his National Wages Council spent decades trying to move Singapore beyond, and one of the higher-value manufacturing it was trying to move toward.
 
 ### Another view of his academic home
 
@@ -30,3 +30,9 @@ Four more images tied to Lim Chong Yah's world — the campus where he taught, a
 ![A sidewalk barber at work in Singapore, 1973-74](https://upload.wikimedia.org/wikipedia/commons/3/39/Singapore-Sidewalk_barber_in_1973-74-WUS08232.jpg)
 
 *A sidewalk barber at work in Singapore, 1973–74 — the kind of informal, low-wage livelihood the National Wages Council's guidelines never directly touched. (Photo: Rainer Halama / Wikimedia Commons, CC BY-SA 4.0)*
+
+### What they were moving toward: a locally-assembled TV
+
+![A Setron television set, a brand assembled in Singapore between 1964 and 1986](https://upload.wikimedia.org/wikipedia/commons/3/38/Setron_TV_Set.jpg)
+
+*A Setron television set. Setron sets were assembled in Singapore from 1964 to 1986 at the Tanglin Halt Industrial Estate — the first locally-assembled black-and-white set rolled off the line in September 1965. Higher-value electronics manufacturing of this kind was exactly what the NWC's 1979 wage-correction policy was meant to push the economy toward. (Photo: Wikimedia Commons, CC BY-SA 4.0)*
