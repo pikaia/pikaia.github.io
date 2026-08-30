@@ -509,6 +509,17 @@ PRONUNCIATION_OVERRIDES = {
                               # as in Shanmugaratnam above
     "expelled": "ɪkspˈɛld",   # unknown, though "expel" (ɪkspˈɛl) works
     "namable": "nˈAməbᵊl",    # variant spelling of "nameable" (which works)
+    # Japanese Surrendered Personnel post - postwar Singapore place names
+    # and a couple of ordinary English gaps. Ear-review samples in
+    # scratch/jsp-samples/.
+    "Keppel": "kˈɛpəl",       # "KEP-uhl" - Keppel Harbour
+    "Seletar": "sˌɜːlˈiːtɑː",  # "sir-LEE-tar" (per Chris) - Seletar naval base/town
+    "Klang": "klˈaŋ",         # "clang" - Klang, Selangor (per Chris: rhymes with clang)
+    "Tengah": "tˈɛŋɑː",       # "TENG-ah" - RAF Tengah / Tengah town
+    "Rayman": "rˈeɪmən",      # "RAY-man" - the 1947 Singapore Municipal President
+    "banned": "bˈand",        # unknown, though "ban"/"banning" work - same
+                              # narrow inflection gap as "dammed"/"expelled"
+    "Dilwara": "dɪlwˈɑːrə",   # "dil-WAH-ra" - the troopship HMT Dilwara
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -638,6 +649,14 @@ ABBREVIATION_EXPANSIONS = {
     # since the dash sits between two separate tokens. First hit: the
     # "2020-2021 collapse" on the travel-bug post.
     re.compile(r"\b(\d{4})[–-](\d{4})\b"): r"\1 to \2",
+    # The abbreviated-second-year form of a year range ("1941-42",
+    # "2020-21") - misaki drops the dash and mangles the join the same
+    # way as the full form above. Expand the second year from the first
+    # two digits of the first: "1941-42" -> "1941 to 1942". Must sit
+    # after the \d{4}-\d{4} rule (that one has already consumed the full
+    # form). National-symbols... no, the JSP post ("the 1941-42
+    # campaign").
+    re.compile(r"\b(\d{2})(\d{2})[–-](\d{2})\b"): r"\g<1>\g<2> to \g<1>\g<3>",
 }
 
 
