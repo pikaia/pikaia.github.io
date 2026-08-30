@@ -10,7 +10,18 @@ Full story: https://da.gd/7CeC8
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons and NewspaperSG, credited individually):
+- Portrait of Tan Tock Seng — Margaret Tan Collection, National Archives of Singapore, public domain
+- Panorama of the Singapore River from Boat Quay, 1860 — KITLV collection, public domain
+- Shophouses along the Singapore River — KITLV collection, CC BY 4.0
+- Telok Ayer Market, Singapore, drawn by J.T. Thomson in 1847 — Image: John Turnbull Thomson, 1847, public domain
+- Public Offices, Singapore, drawn by J.T. Thomson in 1846 — Image: John Turnbull Thomson, 1846, public domain
+- Thian Hock Keng Temple, Singapore, circa 1890 — Lambert & Co., KITLV collection, public domain
+- Singapore harbour, January 1866, engraving by Frederick Grosse — Wikimedia Commons, public domain
+- Outram Prison on Pearl's Hill, Singapore, photographed in the 1850s — unknown photographer, c.1850s, public domain
+- Tan Tock Seng Hospital's original building at Pearl's Hill, circa 1844-1856 — Wikimedia Commons, public domain
+- Portrait of Tan Kim Ching — Source: Wikimedia Commons, CC BY-SA 4.0
+- Relocation timeline by Lesser Known Singapore, from the dates cited in the post
 
 Sources:
 - From Pauper to Philanthropist: The Tan Tock Seng Story — BiblioAsia
@@ -27,6 +38,9 @@ Sources:
 - File:KITLV - 29175 - View of the harbor of Singapore - 1860 — Wikimedia Commons
 - File:Singapore January 20 1866 Frederick Grosse.jpg — Wikimedia Commons
 - File:Shophouses aan de Singapore-rivier te Singapore, KITLV 156146 — Wikimedia Commons
+- File:Telok Ayer Market - J.T. Thomson.jpg — Wikimedia Commons
+- File:Public Offices, Singapore by John Turnbull Thomson 1846.jpg — Wikimedia Commons
+- File:Photograph of Outram Prison (Pearl's Hill Prison) in the 1850's.jpg — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -39,8 +53,11 @@ Description:
 In 1819, the same year Stamford Raffles landed and declared Singapore a free port, a 21-year-old migrant from Malacca arrived with no money, no land, and no name that meant anything on this side of the strait. Tan Tock Seng sold vegetables and poultry off a cart to get by. By the time he died in 1850, he'd become wealthy enough to fund Singapore's first hospital for the poor — a hospital that still operates today, under his name, at a fourth address he never saw. #Shorts
 
 Full story: https://da.gd/7CeC8
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/F_VE0_zWjOE
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- Portrait of Tan Tock Seng — Margaret Tan Collection, National Archives of Singapore, public domain
+- Panorama of the Singapore River from Boat Quay, 1860 — KITLV collection, public domain
+- Tan Tock Seng Hospital's original building at Pearl's Hill, circa 1844-1856 — Wikimedia Commons, public domain

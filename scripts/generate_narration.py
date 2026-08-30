@@ -424,6 +424,27 @@ PRONUNCIATION_OVERRIDES = {
     "Abdul": "ˈabdʊl",      # "AB-dool"
     "Hamid": "hɑːmˈiːd",    # "hah-MEED"
     "Jumat": "dʒʊmˈat",     # "joo-MAT"
+    # Tan Tock Seng post - a batch of 1840s Singapore proper nouns misaki
+    # spells out. Chinese-surname romanizations (Tock/Seng/Chan/Kim) built
+    # by the same analogy pattern as Lim/Chong/Goh/Keng above; Malay place
+    # names (Tanjong/Pagar/Telok/Serangoon) and the person-name Balestier
+    # from Wiktionary/Wikipedia IPA plus the "keep full unstressed vowels"
+    # rule that fixed the earlier Malay batches. Several of these are very
+    # common across Singapore-history posts (Stamford, Serangoon, Telok
+    # Ayer, Tanjong Pagar, Balestier), like Istana/Changi/Pulau above.
+    "Stamford": "stˈamfəd",   # "STAM-fuhd" - Stamford Raffles
+    "Tock": "tˈɒk",           # rhymes with "clock"/"dock" - Tan Tock Seng
+    "Seng": "sˈɛŋ",           # "-eng" (ɛŋ) pattern, cf. Peng/Sheng
+    "Tanjong": "tˈandʒɒŋ",    # "TAN-jong" (Tanjong Pagar)
+    "Pagar": "pɑːɡˈɑː",       # "pah-GAR", stress on the second syllable
+    "Butterworth": "bˈʌtəwəθ",  # "BUTTER-wuhth" - Governor William Butterworth
+    "Huay": "hwˈA",           # "hway", rhymes with "way" (Hokkien Huay Kuan)
+    "Thian": "tˈiːɛn",        # "TEE-en", hard T not "th"/θ (Thian Hock Keng)
+    "Telok": "tˈɛlɒk",        # "TEH-lok" (Telok Ayer); Malay [təloʔ]
+    "Chan": "ʧˈɑːn",          # "chahn" - Cham Chan Sang
+    "Kim": "kˈɪm",            # rhymes with "him"/"dim" - Tan Kim Ching
+    "Serangoon": "sˌɛrəŋɡˈuːn",  # "seh-rang-GOON"
+    "Balestier": "bəlˈɛstɪə",   # "buh-LESS-teer" - after Joseph Balestier
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
