@@ -1,0 +1,22 @@
+# Ruff config. This repo is a Jekyll blog; the only Python is the
+# audio-narration / Watch-video pipeline under scripts/ (plus the
+# per-post configs in scripts/video-configs/). Ruff is a safety net,
+# not a style enforcer - run `ruff check .` before committing script
+# changes.
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["_site", ".jekyll-cache"]
+
+[tool.ruff.lint]
+# Bug-catching core only, deliberately no style churn:
+#   E4  - import mistakes (E402 exceptions are marked with inline # noqa)
+#   E7  - statement-level footguns (== None, bare except, lambda-assign, ...)
+#   E9  - syntax / IO errors
+#   F   - pyflakes: undefined names, unused imports/vars, f-string bugs,
+#         duplicate dict keys - the highest-value checks here
+#   PLE - pylint's error-level rules only (not its style/convention noise)
+# Line length is NOT enforced: the regex tables in generate_narration.py
+# and the slide/timing data in the video configs run long by design.
+select = ["E4", "E7", "E9", "F", "PLE"]

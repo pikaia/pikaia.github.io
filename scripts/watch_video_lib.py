@@ -440,7 +440,7 @@ def draw_caption(frame, text, out_w, out_h, font_ratio, max_width_frac, y_frac):
     lines = wrap_text(text, font, draw, max_width)
     line_height = font.size * 1.3
     pad_x, pad_y = 16, 12
-    widths = [draw.textlength(l, font=font) for l in lines]
+    widths = [draw.textlength(ln, font=font) for ln in lines]
     box_w = max(widths) + pad_x * 2
     box_h = line_height * len(lines) + pad_y * 2
     box_x = (out_w - box_w) / 2

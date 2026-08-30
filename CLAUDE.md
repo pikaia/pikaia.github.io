@@ -79,6 +79,16 @@ exception to that convention. See
 `docs/superpowers/specs/2026-08-20-route-walk-animation-design.md` for the full design,
 and `scripts/render_route_clip.py` for the matching video-export renderer.
 
+## Python linting
+
+The pipeline scripts (`scripts/`, `scripts/video-configs/`) are linted with **ruff**
+(`pip install ruff`, config in `pyproject.toml`). Run `ruff check .` before committing
+any script change — it must pass clean. The rule set is a bug-catching net only
+(pyflakes, syntax, import and statement footguns); line length and formatting are not
+enforced, so match the surrounding code's style by reading it. Keep the inline
+`# noqa: E402` on the `sys.path.insert(...)`-then-import pattern in the render/config
+helpers.
+
 ## Git
 
 Commit and push directly without asking for confirmation for routine content changes (posts, images, about page). Still check before anything destructive (force-push, history rewrite, deleting content).
