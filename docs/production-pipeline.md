@@ -279,7 +279,11 @@ Example:
   another voice.
 - Output: `audio/<slug>.mp3`, `audio/<slug>.timing.json` (real
   per-sentence `{text, offset_s, duration_s}`, driven off Kokoro's own
-  synthesis — not guessed even splits), and `audio/<slug>.srt`.
+  synthesis — not guessed even splits), and `audio/<slug>.srt` — the
+  YouTube caption track (section 10). `_build_srt()` segments each
+  narration sentence into ~2-line, ~5-6s cues at clause boundaries
+  (checked against timedsubs.com's SRT QA rules), so the `.srt` is not
+  one-sentence-per-cue and does **not** line up 1:1 with `timing.json`.
 - Verify the file is real (not truncated) before moving on:
   ```
   { echo; date; echo "=== 1.3 Verify audio file ==="

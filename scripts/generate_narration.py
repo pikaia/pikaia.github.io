@@ -899,19 +899,96 @@ def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> 
 
 
 def _srt_timestamp(t: float) -> str:
-    h = int(t // 3600)
-    m = int((t % 3600) // 60)
-    s = int(t % 60)
-    ms = round((t - int(t)) * 1000)
+    total_ms = max(0, round(t * 1000))
+    h, rem = divmod(total_ms, 3_600_000)
+    m, rem = divmod(rem, 60_000)
+    s, ms = divmod(rem, 1000)
     return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
 
 
+# .srt is now for YouTube's caption track, not the burned-in video (which
+# no longer has one) or the Watch widget (which chunks timing.json itself
+# in JS). So build it to ordinary subtitle conventions rather than
+# one-whole-sentence-per-cue: <=2 lines of <=~42 chars, <=~6s per cue,
+# a small gap between cues, and word-boundary splits only.
+SRT_MAX_LINE = 42
+SRT_TARGET_CUE_CHARS = 68   # aim ~2 lines of 34
+SRT_TARGET_CUE_SEC = 5.5
+SRT_GAP_SEC = 0.08          # ~2 frames at 25fps - keeps cues from touching
+SRT_MIN_START = 0.08        # don't start the first cue at exactly 0.000
+_CLAUSE_END = (",", ";", ":", "—")
+
+
+def _wrap_srt_lines(text: str) -> str:
+    """Wrap to at most two lines, choosing the space split that makes the
+    longer line as short as possible; one line if it already fits."""
+    if len(text) <= SRT_MAX_LINE or " " not in text:
+        return text
+    spaces = [i for i, c in enumerate(text) if c == " "]
+    best = min(spaces, key=lambda i: max(i, len(text) - i - 1))
+    return text[:best] + "\n" + text[best + 1:]
+
+
+def _segment_sentence(text: str, start: float, dur: float) -> list[tuple[float, float, str]]:
+    """One narration sentence -> a list of (cue_start, cue_end, cue_text).
+    Splits the words into N roughly-equal groups (N chosen so each group
+    is about SRT_TARGET_CUE_CHARS / SRT_TARGET_CUE_SEC), nudging every cut
+    to a nearby clause boundary so cues break at natural pauses and no
+    cue flashes a stray word. Time is shared out by character count."""
+    words = text.split()
+    if not words:
+        return []
+    n = max(1,
+            -(-len(text) // SRT_TARGET_CUE_CHARS),
+            -(-int(dur * 10) // int(SRT_TARGET_CUE_SEC * 10)))
+    n = min(n, len(words))
+
+    # cumulative char position after each word (with the joining space)
+    cum, acc = [], 0
+    for w in words:
+        acc += len(w) + 1
+        cum.append(acc)
+    total_chars = cum[-1]
+
+    cut_after: list[int] = []          # word indices to cut *after*
+    for k in range(1, n):
+        target = total_chars * k / n
+        wi = min(range(len(words) - 1), key=lambda i: abs(cum[i] - target))
+        for cand in sorted(range(max(0, wi - 2), min(len(words) - 1, wi + 3)),
+                           key=lambda i: abs(i - wi)):
+            if words[cand].endswith(_CLAUSE_END):
+                wi = cand
+                break
+        while wi in cut_after and wi < len(words) - 2:
+            wi += 1
+        cut_after.append(wi)
+
+    pieces, prev = [], 0
+    for wi in sorted(set(cut_after)):
+        pieces.append(" ".join(words[prev:wi + 1]))
+        prev = wi + 1
+    pieces.append(" ".join(words[prev:]))
+
+    grand = sum(len(p) for p in pieces) or 1
+    cues: list[tuple[float, float, str]] = []
+    t = start
+    for j, p in enumerate(pieces):
+        share = dur * (len(p) / grand)
+        cue_start = max(t, SRT_MIN_START)
+        cue_end = start + dur if j == len(pieces) - 1 else t + share - SRT_GAP_SEC
+        cues.append((cue_start, max(cue_end, cue_start + 0.3), p))
+        t += share
+    return cues
+
+
 def _build_srt(sentences: list[dict]) -> str:
-    blocks = []
-    for i, s in enumerate(sentences, 1):
-        start = _srt_timestamp(s["offset_s"])
-        end = _srt_timestamp(s["offset_s"] + s["duration_s"])
-        blocks.append(f"{i}\n{start} --> {end}\n{s['text']}\n")
+    cues: list[tuple[float, float, str]] = []
+    for s in sentences:
+        cues.extend(_segment_sentence(s["text"], s["offset_s"], s["duration_s"]))
+    blocks = [
+        f"{i}\n{_srt_timestamp(cs)} --> {_srt_timestamp(ce)}\n{_wrap_srt_lines(txt)}\n"
+        for i, (cs, ce, txt) in enumerate(cues, 1)
+    ]
     return "\n".join(blocks)
 
 
