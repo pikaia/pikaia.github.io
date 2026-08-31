@@ -1212,10 +1212,11 @@ slide 2  |  t=110.3s  (on screen 97.4-149.1s)  |  CHURCH_EXTERIOR (cover)
   narration then: "Montfort School opened on the site in 1916 ..."
 ```
 
-Open that PNG and confirm it's the right image for that narration line
-(captions are no longer burned in — the frame is just the Ken Burns
-image). Pass `--slide 5` (or `--slide 2,5,9` for several, e.g. ones a
-review flagged) to check other slides; a `-short.py` config
+Claude opens that PNG during the pre-upload log review (the Read tool
+renders images) and confirms it's the right image for that narration
+line — the frame is just the Ken Burns image, captions are no longer
+burned in. Pass `--slide 5` (or `--slide 2,5,9` for several, e.g. ones
+a review flagged) to check other slides; a `-short.py` config
 automatically reads `preview-motion/<slug>-short.mp4`.
 
 ---
@@ -1357,12 +1358,14 @@ you're on the right channel, top-left of Studio, before uploading).
   on and move on. Upload `audio/<slug>.srt` as the subtitle track only
   when a post leans on exact wording or a lot of names/foreign terms
   the auto-captioner will mangle: Studio → the video's **Subtitles**
-  tab → Add language (English) → **Upload file** → "With timing" →
-  pick the `.srt`, before Publish or from the edit page afterwards.
-  The `.srt` is UTF-8 with a BOM; if an upload errors out, the video
-  is usually still processing — retry once it finishes. Skip the
-  upload for Shorts either way (YouTube auto-captions those; a `.srt`
-  upload for a Short is unreliable).
+  tab → Add language (English), **let that selection settle** (don't
+  upload into the same click — that has raced YouTube's state and
+  failed), then → **Upload file** → "With timing" → pick the `.srt`,
+  before Publish or from the edit page afterwards. Wait for the
+  "Subtitle published" toast. The `.srt` is UTF-8 with a BOM; if an
+  upload errors out, the video is usually still processing — retry
+  once it finishes. Skip the upload for Shorts either way (YouTube
+  auto-captions those; a `.srt` upload for a Short is unreliable).
 
 **Shorts note:** YouTube auto-detects a Short from aspect ratio +
 duration, no explicit toggle — confirm the upload dialog's link field
