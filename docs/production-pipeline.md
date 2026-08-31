@@ -956,8 +956,8 @@ running the page — static review won't catch it.
 
 ## 5. Check smoothness and review the gap report
 
-Before committing to a full render (which can take 15-25+ minutes),
-run the cheap pre-check:
+Before committing to a full render (a few minutes on a many-core
+machine, longer on fewer cores), run the cheap pre-check:
 
 ```
 { echo; date; echo "=== 5. Check smoothness and review the gap report ==="
@@ -1021,12 +1021,18 @@ their bottom third clear for a burned caption, though a small bottom
 margin is still worth leaving for YouTube's own caption overlay (see
 CLAUDE.md Charts).
 
-A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
-roughly 15-25 minutes for a 5-6 minute video.
+A full render composes frames across CPU cores (a `multiprocessing`
+pool) and pipes raw RGB into a single ffmpeg encode; it takes roughly
+4-6 minutes for a 5-6 minute video on a many-core machine. `--jobs N`
+tunes the worker count (default: CPU count - 2, capped at 10); `--jobs
+1` forces the old single-process path. Output is byte-identical
+regardless of `--jobs`. Lower it if a cover-heavy post (many slides at
+`WORK_SCALE=4`) makes the machine swap — each worker holds its own
+prepared-image cache.
 
 **Running it yourself, in your own terminal** — the normal case — just
-run the plain form and let it tie up that window for the full 15-25+
-minutes; it streams progress live and tees into the log as it goes, so
+run the plain form and let it tie up that window for the few minutes it
+takes; it streams progress live and tees into the log as it goes, so
 there's nothing to poll:
 
 ```
@@ -1049,14 +1055,17 @@ there's nothing to poll:
 } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
-**Detached, via PowerShell `Start-Process`** — needed when Claude is
-running this through its own Bash/PowerShell tool (never as a plain
-foreground call, never via `run_in_background`: both are capped at a
-10-minute tool timeout — `run_in_background` doesn't bypass it, it just
-unblocks Claude's turn — and the render gets silently killed
-mid-flight; a half-dead render has already cost a wasted restart, so
-reach for `Start-Process` from the start, not as a fallback). That cap
-is specific to Claude's own tool invocations — a human-run terminal has
+**Detached, via PowerShell `Start-Process`** — since parallel
+rendering brought a full main video under ~5 minutes on a many-core
+machine, a plain foreground call usually finishes inside Claude's
+10-minute tool timeout; reach for `Start-Process` only when a render
+actually runs long (fewer cores, a Short at 1080x1920, `--jobs 1`).
+When it might: run it detached, never as a plain foreground call and
+never via `run_in_background` (both are capped at that 10-minute tool
+timeout — `run_in_background` doesn't bypass it, it just unblocks
+Claude's turn — and the render gets silently killed mid-flight; a
+half-dead render has already cost a wasted restart). That cap is
+specific to Claude's own tool invocations — a human-run terminal has
 no such limit, and a "stuck at 10 minutes" symptom there points at
 something else (a crash, the window closing, the machine sleeping).
 It's also handy in your own terminal if you'd rather not tie up the

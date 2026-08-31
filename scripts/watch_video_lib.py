@@ -68,6 +68,8 @@ import functools
 import hashlib
 import importlib.util
 import json
+import multiprocessing
+import os
 import re
 import subprocess
 import sys
@@ -111,6 +113,7 @@ def load_config(config_path):
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     module._config_dir = config_path.parent
+    module._config_path = str(config_path)  # render workers reload from this
     return module
 
 
@@ -518,6 +521,25 @@ def slide_for_time(t, schedule, total_duration):
     return idx, start, end
 
 
+def _prepare_slide(cfg, i, out_w, out_h):
+    # The per-slide body of build_prepared_cache, factored out so the
+    # single-process path and each render worker prepare a slide through
+    # identical code. Returns None for a chart slide - compose_frame_at()
+    # never indexes the cache for those.
+    slide = cfg.SLIDES[i]
+    if slide["type"] == "chart":
+        return None
+    src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
+    max_zoom = max(slide["zoom"])
+    is_letterbox = slide["type"] == "letterbox"
+    work_scale = LETTERBOX_WORK_SCALE if is_letterbox else WORK_SCALE
+    prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom, work_scale=work_scale)
+    if is_letterbox:
+        fg, fx, fy = prepare_letterbox_foreground(src, out_w, out_h)
+        return (max_zoom, prepared, work_w, work_h, fg, fx, fy)
+    return (max_zoom, prepared, work_w, work_h)
+
+
 def build_prepared_cache(cfg, out_w, out_h):
     # One supersampled prepare per slide (not per frame) - see
     # prepare_source()'s docstring for why. Letterbox slides get the same
@@ -526,19 +548,10 @@ def build_prepared_cache(cfg, out_w, out_h):
     # be recomputed from scratch every frame, making letterbox ~10x slower
     # to render than cover; see compose_letterbox_frame_from_prepared.
     cache = {}
-    for i, slide in enumerate(cfg.SLIDES):
-        if slide["type"] == "chart":
-            continue
-        src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
-        max_zoom = max(slide["zoom"])
-        is_letterbox = slide["type"] == "letterbox"
-        work_scale = LETTERBOX_WORK_SCALE if is_letterbox else WORK_SCALE
-        prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom, work_scale=work_scale)
-        if is_letterbox:
-            fg, fx, fy = prepare_letterbox_foreground(src, out_w, out_h)
-            cache[i] = (max_zoom, prepared, work_w, work_h, fg, fx, fy)
-        else:
-            cache[i] = (max_zoom, prepared, work_w, work_h)
+    for i in range(len(cfg.SLIDES)):
+        entry = _prepare_slide(cfg, i, out_w, out_h)
+        if entry is not None:
+            cache[i] = entry
     return cache
 
 
@@ -791,13 +804,51 @@ def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
               f"line above (captions are no longer burned in; the .srt goes to YouTube).", file=sys.stderr)
 
 
-def render(cfg, out_path):
+# --- parallel frame rendering (see render()) ------------------------------
+#
+# compose_frame_at() is a pure function of (t, cfg, captions,
+# prepared_cache) with no shared mutable state, so frame N can be built on
+# any core. The workers only compute pixels; the single ffmpeg process
+# still does the x264 encode, so the .mp4 is byte-for-byte identical to
+# the single-process path - only *who* computed each frame changes.
+
+_WORKER = {}
+
+
+def _render_worker_init(config_path, out_w, out_h, fps):
+    # spawn start method: nothing is inherited, so each worker rebuilds the
+    # read-only render state once. The prepared-image cache is the costly
+    # part; amortised over a whole slide's frames it's cheap.
+    cfg = load_config(config_path)
+    _WORKER.update(
+        cfg=cfg, out_w=out_w, out_h=out_h, fps=fps,
+        captions=load_captions(str(REPO_ROOT / cfg.TIMING_JSON)),
+        cache=build_prepared_cache(cfg, out_w, out_h),
+    )
+
+
+def _render_worker_frame(frame_i):
+    frame, _ = compose_frame_at(
+        frame_i / _WORKER["fps"], _WORKER["out_w"], _WORKER["out_h"],
+        _WORKER["cfg"], _WORKER["captions"], _WORKER["cache"])
+    if frame.mode != "RGB":
+        frame = frame.convert("RGB")
+    return frame.tobytes()
+
+
+def render(cfg, out_path, jobs=None):
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
     fps = getattr(cfg, "FPS", 25)
     timing_path = REPO_ROOT / cfg.TIMING_JSON
     captions = load_captions(str(timing_path))
     total_frames = int(cfg.TOTAL_DURATION * fps)
-    prepared_cache = build_prepared_cache(cfg, out_w, out_h)
+
+    if jobs is None:
+        # Leave a couple of cores for ffmpeg + the OS, and cap it: every
+        # worker holds its own prepared-image cache (hundreds of MB, more
+        # on a cover-heavy post at WORK_SCALE=4). Lower --jobs if the
+        # machine starts swapping.
+        jobs = max(1, min((os.cpu_count() or 2) - 2, 10))
 
     # The narration mp3 lives alongside the .timing.json this config already
     # points at (audio/<slug>.mp3, audio/<slug>.timing.json - same base
@@ -829,25 +880,38 @@ def render(cfg, out_path):
     )
 
     expected_nbytes = out_w * out_h * 3
-    for frame_i in range(total_frames):
-        t = frame_i / fps
-        frame, _ = compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache)
 
-        if frame.mode != "RGB":
-            frame = frame.convert("RGB")
-        raw = frame.tobytes()
+    def _write(frame_i, raw):
         if len(raw) != expected_nbytes:
             raise RuntimeError(
-                f"frame {frame_i}: got {len(raw)} bytes for a {frame.size} {frame.mode} "
-                f"frame, expected {expected_nbytes} for {out_w}x{out_h} rgb24 - a raw "
-                f"pipe can't resync from this, fix the compose path")
+                f"frame {frame_i}: got {len(raw)} bytes for a {out_w}x{out_h} frame, "
+                f"expected {expected_nbytes} for rgb24 - a raw pipe can't resync from "
+                f"this, fix the compose path")
         proc.stdin.write(raw)
-
         if frame_i % 250 == 0:
-            print(f"frame {frame_i}/{total_frames} t={t:.1f}s", file=sys.stderr)
+            print(f"frame {frame_i}/{total_frames} t={frame_i / fps:.1f}s", file=sys.stderr)
 
-    proc.stdin.close()
-    proc.wait()
+    try:
+        if jobs <= 1:
+            prepared_cache = build_prepared_cache(cfg, out_w, out_h)
+            for frame_i in range(total_frames):
+                frame, _ = compose_frame_at(frame_i / fps, out_w, out_h, cfg, captions, prepared_cache)
+                if frame.mode != "RGB":
+                    frame = frame.convert("RGB")
+                _write(frame_i, frame.tobytes())
+        else:
+            print(f"rendering {total_frames} frames across {jobs} workers", file=sys.stderr)
+            chunksize = max(8, total_frames // (jobs * 16))
+            ctx = multiprocessing.get_context("spawn")
+            with ctx.Pool(jobs, initializer=_render_worker_init,
+                          initargs=(cfg._config_path, out_w, out_h, fps)) as pool:
+                for frame_i, raw in enumerate(
+                        pool.imap(_render_worker_frame, range(total_frames), chunksize=chunksize)):
+                    _write(frame_i, raw)
+    finally:
+        proc.stdin.close()
+        proc.wait()
+
     if proc.returncode != 0:
         print(f"ffmpeg exited {proc.returncode}", file=sys.stderr)
         sys.exit(1)
@@ -874,6 +938,8 @@ def main():
     ap.add_argument("--slide", default="2",
                     help="Slide index/indices for --spot-frame, e.g. '2' or '2,5,9' (default: 2)")
     ap.add_argument("--video", help="Path to the rendered .mp4 for --spot-frame (default: preview-motion/<config-stem>.mp4)")
+    ap.add_argument("--jobs", type=int, default=None,
+                    help="Parallel frame-render workers (default: CPU count - 2, capped at 10; pass 1 for single process)")
     args = ap.parse_args()
 
     cfg = load_config(args.config)
@@ -900,7 +966,7 @@ def main():
 
     if not args.out:
         ap.error("--out is required unless --check-only is passed")
-    render(cfg, args.out)
+    render(cfg, args.out, jobs=args.jobs)
 
 
 if __name__ == "__main__":
