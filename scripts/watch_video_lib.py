@@ -67,7 +67,6 @@ import argparse
 import functools
 import hashlib
 import importlib.util
-import io
 import json
 import re
 import subprocess
@@ -812,21 +811,37 @@ def render(cfg, out_path):
         audio_args = ["-i", str(audio_path)]
         map_args = ["-map", "0:v", "-map", "1:a", "-c:a", "aac", "-shortest"]
 
+    # Raw RGB frames straight into ffmpeg, not PNG. compose_frame_at()
+    # always returns an RGB image of exactly (out_w, out_h) (every
+    # compose_* path ends in a LANCZOS resize to that size), so
+    # frame.tobytes() is exactly out_w*out_h*3 bytes of rgb24 - what
+    # "-f rawvideo -pix_fmt rgb24" expects. This drops a full PNG
+    # zlib-encode per frame here plus the matching decode in ffmpeg;
+    # x264 sees the identical pixels either way, so the .mp4 is
+    # byte-for-byte the same as the old image2pipe path.
     proc = subprocess.Popen(
-        ["ffmpeg", "-y", "-f", "image2pipe", "-vcodec", "png", "-r", str(fps), "-i", "-",
+        ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{out_w}x{out_h}",
+         "-r", str(fps), "-i", "-",
          *audio_args,
          "-vcodec", "libx264", "-pix_fmt", "yuv420p", "-r", str(fps), "-preset", "medium",
          "-crf", "20", *map_args, out_path],
         stdin=subprocess.PIPE,
     )
 
+    expected_nbytes = out_w * out_h * 3
     for frame_i in range(total_frames):
         t = frame_i / fps
         frame, _ = compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache)
 
-        buf = io.BytesIO()
-        frame.save(buf, format="PNG")
-        proc.stdin.write(buf.getvalue())
+        if frame.mode != "RGB":
+            frame = frame.convert("RGB")
+        raw = frame.tobytes()
+        if len(raw) != expected_nbytes:
+            raise RuntimeError(
+                f"frame {frame_i}: got {len(raw)} bytes for a {frame.size} {frame.mode} "
+                f"frame, expected {expected_nbytes} for {out_w}x{out_h} rgb24 - a raw "
+                f"pipe can't resync from this, fix the compose path")
+        proc.stdin.write(raw)
 
         if frame_i % 250 == 0:
             print(f"frame {frame_i}/{total_frames} t={t:.1f}s", file=sys.stderr)
