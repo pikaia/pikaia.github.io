@@ -7,7 +7,6 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 - **Opium farming funded colonial Singapore** — opium was legal and taxed for decades; opium farm revenue was one of the largest sources of government income before WWII. Bigger, more systemic story than the usual "founding of Singapore" fare. *(Money angle — YouTube stats favor this category.)*
 - **The Malaysian enclave inside Singapore that lasted until 2011** — Tanjong Pagar Railway Station and the KTM railway land stayed under Malaysian administration for decades after independence, a foreign-controlled strip inside Singapore's own downtown, resolved only by a 2010 land-swap deal.
 - **The 1915 Singapore Mutiny** — a WWI-era revolt by sepoys of a Muslim Indian regiment, fueled partly by rumors that the Kaiser had converted to Islam; put down with help from Russian, French, and Japanese troops, with 47 executed by firing squad. Barely discussed compared to WWII history.
-- **POSB, the "People's Bank" almost every Singaporean grew up with** — the Post Office Savings Bank, founded 1877 under the colonial Post Office, ran the school savings campaigns (the squirrel mascot, the little passbooks) that gave a couple of generations their first bank account, before being sold to DBS in 1998. An institutional-memory story about a near-universal childhood object that quietly disappeared as a separate entity. *(Money angle — YouTube stats favor this category.)*
 
 ## People
 
@@ -27,6 +26,7 @@ Candidate topics for future posts, not yet written. Remove an entry once it's tu
 ## Food & culture
 
 - **Change Alley, the money-changers' bazaar that vanished** — a narrow lane between Raffles Place and Collyer Quay, packed for decades with money-changers, touts and stalls, a fixed stop on every 1960s–80s tourist itinerary, cleared in 1989 for the Hitachi Tower / Caltex House redevelopment and reduced to an air-conditioned overhead link bridge that kept the name. A demolished-institution story in the same vein as Bugis Street, with a money angle built in.
+- **Robinsons, the 162-year department store, and the 1972 fire** — founded 1858, Singapore's oldest department store and a fixture of Raffles Place, gutted by a catastrophic fire in November 1972 that killed nine and destroyed the flagship building, rebuilt and carried on, then quietly shut every Singapore store in 2020–21 after more than a century and a half. A money / retail story with a dateable disaster at its centre (worth a Straits Times archive check). *(Money angle — YouTube stats favor this category.)*
 
 ## Present-day / policy
 
