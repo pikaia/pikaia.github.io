@@ -40,7 +40,16 @@ BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
 GALLERY_LINK_RE = re.compile(r"\[See[^\]]*\]\([^)]*\)")
 MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
+# Single-asterisk emphasis in body prose (e.g. an italicised publication
+# name, "*The Straits Times*"). Run AFTER BOLD_RE so "**bold**" is already
+# gone and only lone "*" pairs remain - otherwise the trailing "*" sticks
+# to the word ("Times*") and misaki can't phonemize it.
+EMPHASIS_RE = re.compile(r"\*([^*\n]+)\*")
 ITALIC_CAPTION_RE = re.compile(r"^\*[^*].*[^*]\*$", re.DOTALL)
+# An ATX section heading ("## A counter at the post office"). These are
+# reader navigation, not narration - skipped entirely (the "#" characters
+# would otherwise be spelled out).
+HEADING_RE = re.compile(r"^#{1,6}\s+\S")
 
 # Raw-HTML block tags used in this codebase (floated images, charts, the
 # listen widget). Whitelisted rather than matching any "<tag" generically,
@@ -520,6 +529,16 @@ PRONUNCIATION_OVERRIDES = {
     "banned": "bˈand",        # unknown, though "ban"/"banning" work - same
                               # narrow inflection gap as "dammed"/"expelled"
     "Dilwara": "dɪlwˈɑːrə",   # "dil-WAH-ra" - the troopship HMT Dilwara
+    # Post Office Savings Bank post. Ear-review samples in scratch/posb-samples/.
+    "schoolchildren": "skˈuːltʃˌɪldrən",  # compound gap (cf. paycheck/outgrown)
+    "Kuala": "kwˈɑːlɑː",      # "KWAH-lah" (per Chris) - Kuala Lumpur
+    "Lumpur": "lˈuːmpɔː",     # "LOOM-por" (per Chris) - Kuala Lumpur
+    "non-romanised": "nˌɒnrˈQmənaɪzd",  # "non-ROH-man-ized" scripts
+    "Chok": "tʃˈɒk",          # "chock" - Tan Chok Kian, first POSB chairman
+    "Kian": "kˈiːɛn",         # "KEE-en" - not ear-verified yet
+    "Hu": "hˈuː",             # "hoo" - Finance Minister Richard Hu
+    "POSBank": "pˌiːQˌɛsbˈaŋk",    # "P-O-S-Bank" (per Chris) - the 1990-98 name
+    "POSBank's": "pˌiːQˌɛsbˈaŋks",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -672,6 +691,8 @@ def _process_block(block: str, narrative: list[str]) -> bool:
         return False
     if block.startswith("!["):
         return True  # image
+    if HEADING_RE.match(block):
+        return True  # section heading - reader navigation, not narrated
     if BACK_LINK_RE.match(block):
         return True
     if ITALIC_CAPTION_RE.match(block) and not block.startswith("**"):
@@ -680,6 +701,7 @@ def _process_block(block: str, narrative: list[str]) -> bool:
     cleaned = GALLERY_LINK_RE.sub("", block)
     cleaned = MD_LINK_RE.sub(r"\1", cleaned)
     cleaned = BOLD_RE.sub(r"\1", cleaned)
+    cleaned = EMPHASIS_RE.sub(r"\1", cleaned)
     cleaned = _apply_abbreviation_expansions(cleaned)
     cleaned = cleaned.strip()
     if cleaned:
@@ -935,8 +957,8 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "EDB", "HDB", "IPPT",
-    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "UK", "UN", "US",
+    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "DBS", "EDB", "HDB", "IPPT",
+    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK", "UN", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}

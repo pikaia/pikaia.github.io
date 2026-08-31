@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Historical Photos: The Post Office Savings Bank"
-post_url: /2026/08/30/posb-peoples-bank-nation-of-savers/
+post_url: /2026/08/31/posb-peoples-bank-nation-of-savers/
 post_title: "The Bank That Spent a Century Teaching Singapore to Save"
 ---
 
