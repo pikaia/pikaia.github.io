@@ -1009,9 +1009,10 @@ This does two things, both instantly (no rendering of the real video):
 ## 6. Render the main video
 
 **The main video has no burned-in captions** (changed 2026-09). The
-render engine skips the on-frame caption; YouTube shows the uploaded
-`audio/<slug>.srt` as a toggleable track instead (see section 10). The
-`.srt` is still generated in section 1 and committed in section 12.
+render engine skips the on-frame caption; viewers get YouTube's
+auto-captions, or the uploaded `audio/<slug>.srt` when a post warrants
+it (see section 10). The `.srt` is still generated in section 1 and
+committed in section 12 regardless, so it's there when needed.
 **Shorts keep burned-in captions** — every `-short.py` config sets
 `BURN_CAPTIONS = True` (muted autoplay, and a `.srt` upload to a Short
 is unreliable). The module default in `watch_video_lib.py` is `False`,
@@ -1352,11 +1353,16 @@ you're on the right channel, top-left of Studio, before uploading).
 - Category: **Education**
 - Comments/moderation: leave at YouTube's defaults
 - **Captions (main video):** captions are no longer burned into the
-  file, so upload `audio/<slug>.srt` as the subtitle track — Studio →
-  the video's **Subtitles** tab → Add language (English) → **Upload
-  file** → "With timing" → pick the `.srt`. Do this before Publish, or
-  from the video's edit page afterwards. Skip for Shorts (YouTube
-  auto-captions those; a `.srt` upload for a Short is unreliable).
+  file. YouTube's auto-captions are fine for most posts — leave them
+  on and move on. Upload `audio/<slug>.srt` as the subtitle track only
+  when a post leans on exact wording or a lot of names/foreign terms
+  the auto-captioner will mangle: Studio → the video's **Subtitles**
+  tab → Add language (English) → **Upload file** → "With timing" →
+  pick the `.srt`, before Publish or from the edit page afterwards.
+  The `.srt` is UTF-8 with a BOM; if an upload errors out, the video
+  is usually still processing — retry once it finishes. Skip the
+  upload for Shorts either way (YouTube auto-captions those; a `.srt`
+  upload for a Short is unreliable).
 
 **Shorts note:** YouTube auto-detects a Short from aspect ratio +
 duration, no explicit toggle — confirm the upload dialog's link field
