@@ -26,6 +26,7 @@ SCHEDULE = [(0.0, 0), (12.1, 1), (24.2, 2)]
 TOTAL_DURATION = 36.25
 TIMING_JSON = "audio/what-a-square-foot-of-hdb-flat-has-cost.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

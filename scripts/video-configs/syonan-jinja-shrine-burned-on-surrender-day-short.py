@@ -31,6 +31,7 @@ SCHEDULE = [(0.0, 0), (13.0, 1), (26.0, 2)]
 TOTAL_DURATION = 38.325
 TIMING_JSON = "audio/syonan-jinja-shrine-burned-on-surrender-day.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

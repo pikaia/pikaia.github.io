@@ -31,7 +31,9 @@ SCHEDULE = [(0.0, 0), (24.2, 1)]
 TOTAL_DURATION = 44.075
 TIMING_JSON = "audio/fine-city-fine-print-singapore-rules-still-stick.timing.json"
 
-# Shorts want smaller/higher captions than the landscape default:
+# Shorts keep burned-in narration captions (muted autoplay); main videos do not -
+# they rely on the uploaded .srt. The lines below size the caption box:
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

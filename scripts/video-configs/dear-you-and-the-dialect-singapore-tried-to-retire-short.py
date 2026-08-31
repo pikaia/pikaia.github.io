@@ -30,6 +30,7 @@ SCHEDULE = [(0.0, 0), (15.7, 1), (31.4, 2)]
 TOTAL_DURATION = 47.0
 TIMING_JSON = "audio/dear-you-and-the-dialect-singapore-tried-to-retire.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

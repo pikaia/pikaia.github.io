@@ -32,6 +32,7 @@ SCHEDULE = [(0.0, 0), (18.73, 1), (33.02, 2)]
 TOTAL_DURATION = 43.5  # real sentence-timing boundary for this post's opening hook
 TIMING_JSON = "audio/the-fishball-noodle-that-exposed-singapores-hawker-rent-gap.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

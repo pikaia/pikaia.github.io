@@ -26,6 +26,7 @@ SCHEDULE = [(0.0, 0), (16.2, 1), (32.4, 2)]
 TOTAL_DURATION = 48.65
 TIMING_JSON = "audio/japans-quiet-hand-in-building-jurong.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

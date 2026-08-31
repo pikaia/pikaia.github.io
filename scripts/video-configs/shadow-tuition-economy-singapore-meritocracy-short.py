@@ -37,7 +37,9 @@ SCHEDULE = [(0.0, 0), (22.725, 1)]
 TOTAL_DURATION = 45.95
 TIMING_JSON = "audio/shadow-tuition-economy-singapore-meritocracy.timing.json"
 
-# Shorts want smaller/higher captions than the landscape default:
+# Shorts keep burned-in narration captions (muted autoplay); main videos do not -
+# they rely on the uploaded .srt. The lines below size the caption box:
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80

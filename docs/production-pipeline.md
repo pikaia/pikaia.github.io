@@ -98,7 +98,7 @@ sections never run together:
 
 ```
 # bash
-{ echo; echo "=== <section>.<n> <short name> ==="
+{ echo; date; echo "=== <section>.<n> <short name> ==="
   cmd=(<command> <arg> <arg>)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -108,10 +108,11 @@ sections never run together:
 
 Piece by piece:
 
-- **`echo; echo "=== ... ==="`** — a leading blank line, then the
-  header naming the subsection (e.g. `1.1 Generate narration audio
-  (dry run)`, `1.2 Generate narration audio`, `1.3 Verify audio
-  file`). Within a section that has more than one distinct command,
+- **`echo; date; echo "=== ... ==="`** — a leading blank line, then a
+  timestamp (`date`) marking when this step ran, then the header naming
+  the subsection (e.g. `1.1 Generate narration audio (dry run)`, `1.2
+  Generate narration audio`, `1.3 Verify audio file`). Within a section
+  that has more than one distinct command,
   each gets its own `<section>.<n>` number and a short descriptive
   name, so the log reads as a clear timeline instead of a wall of
   undifferentiated output; a section with only one command purpose
@@ -133,8 +134,11 @@ Piece by piece:
   log file *and* still streams to the console as normal; `2>&1` is
   what makes that work (see below).
 
-Section 1.1, the pipeline's first step, also runs `date` just before
-its header — the single timestamp marking when the run started.
+Every step runs `date` just before its header, so the log reads as a
+timestamped timeline — you can see when each step ran and, from the
+gaps, how long the manual bits in between took. `[Claude]` steps (3 and
+12) get the same treatment: prefix the `=== N. … === [Claude]` header
+with the current `date` output.
 
 The PowerShell equivalent (only section 6's `Start-Process` render
 genuinely needs PowerShell — every other step has a bash form):
@@ -251,7 +255,7 @@ Once the dry-run output looks right, generate for real (same command,
 without `--dry-run`):
 
 ```
-{ echo; echo "=== 1.2 Generate narration audio ==="
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
   cmd=(python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -262,7 +266,7 @@ without `--dry-run`):
 Example:
 
 ```
-{ echo; echo "=== 1.2 Generate narration audio ==="
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
   cmd=(python scripts/generate_narration.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -278,7 +282,7 @@ Example:
   synthesis — not guessed even splits), and `audio/<slug>.srt`.
 - Verify the file is real (not truncated) before moving on:
   ```
-  { echo; echo "=== 1.3 Verify audio file ==="
+  { echo; date; echo "=== 1.3 Verify audio file ==="
     cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/<slug>.mp3)
     echo "\$ ${cmd[*]}"; echo
     time "${cmd[@]}"
@@ -287,7 +291,7 @@ Example:
   ```
   Example:
   ```
-  { echo; echo "=== 1.3 Verify audio file ==="
+  { echo; date; echo "=== 1.3 Verify audio file ==="
     cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
     echo "\$ ${cmd[*]}"; echo
     time "${cmd[@]}"
@@ -306,7 +310,7 @@ Example:
   issue), split the post's paragraphs into 2-8 pieces and synthesize
   each separately, then concatenate:
   ```
-  { echo; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
+  { echo; date; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
     cmd=(ffmpeg -y -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3)
     echo "\$ ${cmd[*]}"; echo
     time "${cmd[@]}"
@@ -318,7 +322,7 @@ Example:
   files that exist for every post; don't just swap in your own slug and
   run this if your synthesis completed normally the first time:
   ```
-  { echo; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
+  { echo; date; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
     cmd=(ffmpeg -y -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
     echo "\$ ${cmd[*]}"; echo
     time "${cmd[@]}"
@@ -331,7 +335,7 @@ Example:
 ## 2. Insert the Listen widget
 
 ```
-{ echo; echo "=== 2. Insert the Listen widget ==="
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
   cmd=(python scripts/insert_listen_widget.py _posts/<file>.md <slug>)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -342,7 +346,7 @@ Example:
 **Example:**
 
 ```
-{ echo; echo "=== 2. Insert the Listen widget ==="
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
   cmd=(python scripts/insert_listen_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md jalan-payoh-lai-kangkar-montfort-nativity-church)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -498,7 +502,9 @@ SCHEDULE = [(0.0, 0), (16.2, 1), (32.4, 2)]
 TOTAL_DURATION = 48.65          # the excerpt's own length, not the full post's
 TIMING_JSON = "audio/<slug>.timing.json"
 
-# Shorts want smaller/higher captions than the landscape default:
+# Shorts keep burned-in captions (main videos don't, section 6); these
+# size the box, smaller/higher than the landscape default:
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80
@@ -529,6 +535,7 @@ SCHEDULE = [(0.0, 0), (12.4, 1)]
 TOTAL_DURATION = 24.775  # real sentence-timing boundary for this post's opening hook
 TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.json"
 
+BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80
@@ -570,7 +577,7 @@ percentage strings, SCHEDULE to imageSchedule, pasting in the real
 sentences from TIMING_JSON) - write that config first if you haven't.
 
 ```
-{ echo; echo "=== 4. Author the Watch widget ==="
+{ echo; date; echo "=== 4. Author the Watch widget ==="
   cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -581,7 +588,7 @@ sentences from TIMING_JSON) - write that config first if you haven't.
 **Example:**
 
 ```
-{ echo; echo "=== 4. Author the Watch widget ==="
+{ echo; date; echo "=== 4. Author the Watch widget ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -949,7 +956,7 @@ Before committing to a full render (which can take 15-25+ minutes),
 run the cheap pre-check:
 
 ```
-{ echo; echo "=== 5. Check smoothness and review the gap report ==="
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --check-only)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -960,7 +967,7 @@ run the cheap pre-check:
 **Example:**
 
 ```
-{ echo; echo "=== 5. Check smoothness and review the gap report ==="
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --check-only)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -997,6 +1004,18 @@ This does two things, both instantly (no rendering of the real video):
 
 ## 6. Render the main video
 
+**The main video has no burned-in captions** (changed 2026-09). The
+render engine skips the on-frame caption; YouTube shows the uploaded
+`audio/<slug>.srt` as a toggleable track instead (see section 10). The
+`.srt` is still generated in section 1 and committed in section 12.
+**Shorts keep burned-in captions** — every `-short.py` config sets
+`BURN_CAPTIONS = True` (muted autoplay, and a `.srt` upload to a Short
+is unreliable). The module default in `watch_video_lib.py` is `False`,
+so a landscape config needs no flag. Chart PNGs no longer have to keep
+their bottom third clear for a burned caption, though a small bottom
+margin is still worth leaving for YouTube's own caption overlay (see
+CLAUDE.md Charts).
+
 A full render (frame-by-frame PIL compositing piped to ffmpeg) takes
 roughly 15-25 minutes for a 5-6 minute video.
 
@@ -1006,7 +1025,7 @@ minutes; it streams progress live and tees into the log as it goes, so
 there's nothing to poll:
 
 ```
-{ echo; echo "=== 6. Render the main video ==="
+{ echo; date; echo "=== 6. Render the main video ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --out preview-motion/<slug>.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1017,7 +1036,7 @@ there's nothing to poll:
 **Example:**
 
 ```
-{ echo; echo "=== 6. Render the main video ==="
+{ echo; date; echo "=== 6. Render the main video ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1084,13 +1103,13 @@ to usually finish within the 10-minute tool timeout, but the
 `Start-Process` pattern is still safe to use):
 
 ```
-{ echo; echo "=== 7.1 Check smoothness (Short) ==="
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/<slug>.log
-{ echo; echo "=== 7.2 Render the Short ==="
+{ echo; date; echo "=== 7.2 Render the Short ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --out preview-motion/<slug>-short.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1104,13 +1123,13 @@ habit from sections 5-6, which silently renders the full-length video
 again instead of the Short):
 
 ```
-{ echo; echo "=== 7.1 Check smoothness (Short) ==="
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ echo; echo "=== 7.2 Render the Short ==="
+{ echo; date; echo "=== 7.2 Render the Short ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1125,7 +1144,7 @@ again instead of the Short):
 Don't trust that a render "looks done" — verify:
 
 ```
-{ echo; echo "=== 8.1 Verify frame count ==="
+{ echo; date; echo "=== 8.1 Verify frame count ==="
   cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1136,7 +1155,7 @@ Don't trust that a render "looks done" — verify:
 Example:
 
 ```
-{ echo; echo "=== 8.1 Verify frame count ==="
+{ echo; date; echo "=== 8.1 Verify frame count ==="
   cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1158,7 +1177,7 @@ and prints the slide's image key plus the exact narration line playing
 at that instant, so there's nothing to construct by hand:
 
 ```
-{ echo; echo "=== 8.2 Verify spot frame ==="
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --spot-frame)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1169,7 +1188,7 @@ at that instant, so there's nothing to construct by hand:
 Example:
 
 ```
-{ echo; echo "=== 8.2 Verify spot frame ==="
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --spot-frame)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1188,9 +1207,10 @@ slide 2  |  t=110.3s  (on screen 97.4-149.1s)  |  CHURCH_EXTERIOR (cover)
   narration then: "Montfort School opened on the site in 1916 ..."
 ```
 
-Open that PNG and confirm the image and burned-in caption match the
-printed line. Pass `--slide 5` (or `--slide 2,5,9` for several, e.g.
-ones a review flagged) to check other slides; a `-short.py` config
+Open that PNG and confirm it's the right image for that narration line
+(captions are no longer burned in — the frame is just the Ken Burns
+image). Pass `--slide 5` (or `--slide 2,5,9` for several, e.g. ones a
+review flagged) to check other slides; a `-short.py` config
 automatically reads `preview-motion/<slug>-short.mp4`.
 
 ---
@@ -1200,7 +1220,7 @@ automatically reads `preview-motion/<slug>-short.mp4`.
 Generate the draft with `scripts/stage_youtube_text.py`:
 
 ```
-{ echo; echo "=== 9. Stage the YouTube upload text file ==="
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
   cmd=(python scripts/stage_youtube_text.py
       _posts/<file>.md
       scripts/video-configs/<slug>.py
@@ -1220,7 +1240,7 @@ build the real per-image credit list and drops in a "no video built
 yet" placeholder instead):
 
 ```
-{ echo; echo "=== 9. Stage the YouTube upload text file ==="
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
   cmd=(python scripts/stage_youtube_text.py
       _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md
       scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
@@ -1327,6 +1347,12 @@ you're on the right channel, top-left of Studio, before uploading).
 - Not made for kids
 - Category: **Education**
 - Comments/moderation: leave at YouTube's defaults
+- **Captions (main video):** captions are no longer burned into the
+  file, so upload `audio/<slug>.srt` as the subtitle track — Studio →
+  the video's **Subtitles** tab → Add language (English) → **Upload
+  file** → "With timing" → pick the `.srt`. Do this before Publish, or
+  from the video's edit page afterwards. Skip for Shorts (YouTube
+  auto-captions those; a `.srt` upload for a Short is unreliable).
 
 **Shorts note:** YouTube auto-detects a Short from aspect ratio +
 duration, no explicit toggle — confirm the upload dialog's link field
@@ -1372,7 +1398,7 @@ way. The exported video isn't affected either way — it renders from the
 Python video config, which carries the full slide definition.
 
 ```
-{ echo; echo "=== 11. Wire the published URLs into the post ==="
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -1384,7 +1410,7 @@ Python video config, which carries the full slide definition.
 both real URLs in hand — same command, re-run in place):
 
 ```
-{ echo; echo "=== 11. Wire the published URLs into the post ==="
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --youtube-url https://youtu.be/GTIpKWDZBNA --shorts-url https://youtube.com/shorts/rVX4caKw0os)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

@@ -1,8 +1,8 @@
 """Shared engine for rendering a post's Watch-widget slideshow to video.
 
 Local dev tool only - not part of the deployed Jekyll site. Renders a Ken
-Burns slideshow (pan/zoom over images, narration audio, burned-in captions)
-frame-by-frame with PIL, piped to ffmpeg - the same technique used for
+Burns slideshow (pan/zoom over images plus narration audio) frame-by-frame
+with PIL, piped to ffmpeg - the same technique used for
 scripts/render_route_clip.py, chosen over ffmpeg's own zoompan filter
 because zoompan's internal integer-position panning produced a "hold a few
 frames then jump" jerky artifact that was hard to debug from the outside
@@ -52,11 +52,16 @@ Config module contract (see scripts/video-configs/ for real examples):
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
                                     relative to the repo root.
     WIDTH, HEIGHT, FPS: int      - optional, default 1280x720x25.
+    BURN_CAPTIONS: bool          - optional, default False (module const).
+                                    Landscape videos leave it off and ship
+                                    the .srt to YouTube; every -short.py
+                                    config sets it True (muted autoplay).
     CAPTION_FONT_RATIO, CAPTION_MAX_WIDTH_FRAC, CAPTION_Y_FRAC: float
                                   - optional caption-box sizing overrides,
-                                    e.g. a vertical Shorts config wants a
-                                    smaller font ratio / higher box position
-                                    than the default landscape values.
+                                    only used when BURN_CAPTIONS is on;
+                                    a vertical Shorts config wants a smaller
+                                    font ratio / higher box position than the
+                                    default landscape values.
 """
 import argparse
 import functools
@@ -92,6 +97,13 @@ USER_AGENT = "pikaia-blog-tool/1.0 (https://pikaia.github.io; chriskslee@gmail.c
 DEFAULT_CAPTION_FONT_RATIO = 0.045
 DEFAULT_CAPTION_MAX_WIDTH_FRAC = 0.82
 DEFAULT_CAPTION_Y_FRAC = 0.82
+
+# Since 2026-09, narration captions are NOT burned into the exported
+# video - YouTube shows the uploaded .srt as a toggleable caption track
+# instead (see docs/production-pipeline.md sections 6 and 10). The .srt
+# is still generated and committed. A per-config `BURN_CAPTIONS = True`
+# re-enables burn-in for a specific video if ever needed.
+BURN_CAPTIONS = False
 
 
 def load_config(config_path):
@@ -539,6 +551,8 @@ def caption_for_time(t, captions):
 
 
 def apply_caption(frame, t, out_w, out_h, cfg, captions):
+    if not getattr(cfg, "BURN_CAPTIONS", BURN_CAPTIONS):
+        return frame
     cap_text = caption_for_time(t, captions)
     if not cap_text:
         return frame
@@ -774,7 +788,8 @@ def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
         print(f"slide {idx}  |  t={t_mid}s  (on screen {start:g}-{end:g}s)  |  {key} ({slide['type']})", file=sys.stderr)
         print(f"  narration then: \"{caption}\"", file=sys.stderr)
         print(f"  {' '.join(cmd)}", file=sys.stderr)
-        print(f"Wrote {out_png} - open it and confirm the image + on-screen caption match the line above.", file=sys.stderr)
+        print(f"Wrote {out_png} - open it and confirm the image is the right one for the narration "
+              f"line above (captions are no longer burned in; the .srt goes to YouTube).", file=sys.stderr)
 
 
 def render(cfg, out_path):
