@@ -1,0 +1,36 @@
+name: Scheduled Pages build
+
+# GitHub Pages only rebuilds on push. Posts are future-dated (e.g.
+# `date: 2026-09-01 09:00:00 +0800`) so they sort correctly, but that
+# means a post sits invisible on the live site until the next push
+# happens to land after its timestamp. This workflow asks Pages to
+# rebuild once a day, so a post goes live on its own on the intended
+# date without an empty commit or a temporary backdate.
+
+on:
+  schedule:
+    # 01:15 UTC ~= 09:15 Singapore time, just after the usual
+    # `09:00 +0800` publish slot. GitHub's scheduler can run a few
+    # minutes late; that is fine here.
+    - cron: "15 1 * * *"
+  workflow_dispatch: {}
+
+# Only ever one rebuild in flight.
+concurrency:
+  group: scheduled-pages-build
+  cancel-in-progress: false
+
+permissions:
+  pages: write
+
+jobs:
+  request-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a GitHub Pages build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
+            "repos/${GITHUB_REPOSITORY}/pages/builds"
