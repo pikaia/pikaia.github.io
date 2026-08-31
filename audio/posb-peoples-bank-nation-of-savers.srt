@@ -1,4 +1,4 @@
-1
+﻿1
 00:00:00,080 --> 00:00:04,350
 The Bank That Spent a Century
 Teaching Singapore to Save
@@ -44,21 +44,21 @@ was to get ordinary people into
 the habit of putting money aside.
 
 10
-00:00:35,325 --> 00:00:39,830
+00:00:35,325 --> 00:00:39,918
 The Post Office Savings Bank
 opened on the 1st of January 1877,
 
 11
-00:00:39,910 --> 00:00:42,741
+00:00:39,998 --> 00:00:42,884
 set up by the colonial government of the
 
 12
-00:00:42,821 --> 00:00:46,890
-Straits Settlements â€”
-Singapore, Penang and Malacca â€”
+00:00:42,964 --> 00:00:46,815
+Straits Settlements —
+Singapore, Penang and Malacca —
 
 13
-00:00:46,970 --> 00:00:50,900
+00:00:46,895 --> 00:00:50,900
 and run across the counter
 of the General Post Office.
 
@@ -184,22 +184,22 @@ on the 1st of January
 "comes into force today."
 
 39
-00:02:42,250 --> 00:02:46,741
+00:02:42,250 --> 00:02:46,963
 From that point there were two
-institutions with a common origin
+institutions with a common origin —
 
 40
-00:02:46,821 --> 00:02:50,813
-â€” the Federation of Malaya's
-and Singapore's â€” linked
+00:02:47,043 --> 00:02:50,158
+the Federation of
+Malaya's and Singapore's —
 
 41
-00:02:50,893 --> 00:02:56,670
-for years by a two-way facility that let
-a depositor withdraw in either territory,
+00:02:50,238 --> 00:02:56,620
+linked for years by a two-way facility that
+let a depositor withdraw in either territory,
 
 42
-00:02:56,750 --> 00:02:59,750
+00:02:56,700 --> 00:02:59,750
 an arrangement that finally ended in 1973.
 
 43
@@ -332,22 +332,22 @@ A relaunch in 1983 added the mascot most
 people now remember, Smiley the Squirrel.
 
 71
-00:04:46,975 --> 00:04:52,111
+00:04:46,975 --> 00:04:52,153
 The institution itself was reconstituted
 on the 1st of January 1972,
 
 72
-00:04:52,191 --> 00:04:56,177
+00:04:52,233 --> 00:04:56,252
 when an Act of Parliament
 turned it from a government
 
 73
-00:04:56,257 --> 00:05:02,390
-department into a statutory board â€”
-first under the Ministry of Communications,
+00:04:56,332 --> 00:05:02,361
+department into a statutory board — first
+under the Ministry of Communications,
 
 74
-00:05:02,470 --> 00:05:06,075
+00:05:02,441 --> 00:05:06,075
 then, from 1974, under
 the Ministry of Finance.
 
@@ -361,18 +361,18 @@ What the bank did with the deposits
 was the point of the exercise.
 
 77
-00:05:14,350 --> 00:05:17,474
+00:05:14,350 --> 00:05:17,519
 A savings bank of this
 kind pools a very large
 
 78
-00:05:17,554 --> 00:05:21,166
+00:05:17,599 --> 00:05:21,262
 number of small balances
 and lends them, at low risk,
 
 79
-00:05:21,246 --> 00:05:24,450
-to a single borrower â€”
+00:05:21,342 --> 00:05:24,450
+to a single borrower —
 here, the government.
 
 80
@@ -425,22 +425,22 @@ was that it was, physically,
 almost everywhere.
 
 90
-00:06:04,350 --> 00:06:08,396
+00:06:04,350 --> 00:06:08,429
 Because savings ran through the
 post office, POSB had a counter
 
 91
-00:06:08,476 --> 00:06:12,063
+00:06:08,509 --> 00:06:11,994
 wherever there was a post
-office â€” in the town centre,
+office — in the town centre,
 
 92
-00:06:12,143 --> 00:06:16,254
+00:06:12,074 --> 00:06:16,220
 in the older shophouse districts,
 and, as public housing spread,
 
 93
-00:06:16,334 --> 00:06:20,525
+00:06:16,300 --> 00:06:20,525
 in the void decks and neighbourhood
 centres of every new estate.
 
@@ -495,19 +495,18 @@ the transfer was completed
 on the 16th of November.
 
 105
-00:07:04,450 --> 00:07:09,730
+00:07:04,450 --> 00:07:09,794
 At that point POSBank held
 about $25.5 billion in deposits
 
 106
-00:07:09,810 --> 00:07:14,812
-and $26.9 billion in assets,
-with more than 3.3 million
+00:07:09,874 --> 00:07:16,061
+and $26.9 billion in assets, with
+more than 3.3 million customers —
 
 107
-00:07:14,892 --> 00:07:19,975
-customers â€” in a country
-of about 3.9 million people.
+00:07:16,141 --> 00:07:19,975
+in a country of about 3.9 million people.
 
 108
 00:07:19,975 --> 00:07:23,713
@@ -569,21 +568,21 @@ Singapore is now known for was
 not purely a matter of culture.
 
 120
-00:08:10,750 --> 00:08:14,943
+00:08:10,750 --> 00:08:14,980
 It was taught, deliberately
 and at scale, by a 121-year-old
 
 121
-00:08:15,023 --> 00:08:19,216
+00:08:15,060 --> 00:08:19,144
 institution that reached into
-classrooms and void decks â€”
+classrooms and void decks —
 
 122
-00:08:19,296 --> 00:08:23,272
+00:08:19,224 --> 00:08:23,235
 and that most people under
 forty have only ever known as
 
 123
-00:08:23,352 --> 00:08:27,625
+00:08:23,315 --> 00:08:27,625
 four letters on a bank branch
 that belongs to someone else.

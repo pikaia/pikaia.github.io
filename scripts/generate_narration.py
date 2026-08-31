@@ -892,7 +892,11 @@ def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> 
     base = os.path.splitext(out_path)[0]
     with open(f"{base}.timing.json", "w", encoding="utf-8") as f:
         json.dump(sentences_out, f, indent=2, ensure_ascii=False)
-    with open(f"{base}.srt", "w", encoding="utf-8") as f:
+    # utf-8-sig (BOM) + CRLF: the em-dashes and curly quotes in the
+    # narration are non-ASCII, and a BOM-less .srt gets misread as
+    # Windows-1252 by Subtitle Edit / Notepad / some upload parsers
+    # (em-dash shows as "â€""). The BOM forces UTF-8 detection.
+    with open(f"{base}.srt", "w", encoding="utf-8-sig", newline="\r\n") as f:
         f.write(_build_srt(sentences_out))
 
     return sentences_out
