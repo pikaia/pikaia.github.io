@@ -155,41 +155,41 @@ It opened its first automated teller machine at its Newton branch in 1981 and, w
 By the late 1990s it operated more than 170 branches and over 950 ATMs, the largest such network in the country.
 
 40
-00:06:42,350 --> 00:06:46,625
+00:06:42,350 --> 00:06:46,325
 The bank was renamed POSBank in 1990.
 
 41
-00:06:46,625 --> 00:06:49,800
+00:06:46,325 --> 00:06:49,500
 Eight years later it was absorbed.
 
 42
-00:06:49,800 --> 00:07:04,925
+00:06:49,500 --> 00:07:04,450
 On the 24th of July 1998 the Finance Minister, Richard Hu, announced that DBS Bank would acquire POSBank for $1.6 billion; the transfer was completed on the 16th of November.
 
 43
-00:07:04,925 --> 00:07:20,750
+00:07:04,450 --> 00:07:19,975
 At that point POSBank held about $25.5 billion in deposits and $26.9 billion in assets, with more than 3.3 million customers — in a country of about 3.9 million people.
 
 44
-00:07:20,750 --> 00:07:35,825
+00:07:19,975 --> 00:07:35,050
 The government's stated reasoning was that a combined bank would be better placed to compete with full commercial banks at home and abroad, part of a wider push to consolidate Singapore's local banks into fewer, larger institutions.
 
 45
-00:07:35,825 --> 00:07:38,750
+00:07:35,050 --> 00:07:37,975
 The POSB name was kept.
 
 46
-00:07:38,750 --> 00:07:53,200
+00:07:37,975 --> 00:07:52,425
 DBS runs it as its retail and heartland brand, still with the line it adopted in the 1990s, "Neighbours first, bankers second," and still with the largest branch and ATM network in Singapore.
 
 47
-00:07:53,200 --> 00:08:03,225
+00:07:52,425 --> 00:08:02,450
 The tax exemption on POSB deposit interest, one of the 1966 reforms, was phased out by the end of 2004.
 
 48
-00:08:03,225 --> 00:08:11,525
+00:08:02,450 --> 00:08:10,750
 Where it fits in the bigger story: the habit of saving that Singapore is now known for was not purely a matter of culture.
 
 49
-00:08:11,525 --> 00:08:28,400
+00:08:10,750 --> 00:08:27,625
 It was taught, deliberately and at scale, by a 121-year-old institution that reached into classrooms and void decks — and that most people under forty have only ever known as four letters on a bank branch that belongs to someone else.

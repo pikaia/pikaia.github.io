@@ -537,8 +537,37 @@ PRONUNCIATION_OVERRIDES = {
     "Chok": "tʃˈɒk",          # "chock" - Tan Chok Kian, first POSB chairman
     "Kian": "kˈiːɛn",         # "KEE-en" - not ear-verified yet
     "Hu": "hˈuː",             # "hoo" - Finance Minister Richard Hu
-    "POSBank": "pˌiːQˌɛsbˈaŋk",    # "P-O-S-Bank" (per Chris) - the 1990-98 name
-    "POSBank's": "pˌiːQˌɛsbˈaŋks",
+    "POSBank": "pˈQsbaŋk",    # "POHSS-bank" (per Chris: rhymes with "Post Bank",
+    "POSBank's": "pˈQsbaŋks",  # not spelled out P-O-S) - the 1990-98 name
+    # Yaohan / Japanese department stores post. Ear-review samples in
+    # scratch/yaohan-samples/. Store and place names Singaporeans say
+    # daily - leads only, flag any that sound off.
+    "Yaohan": "jˈaʊhɑːn",     # "YOW-hahn" (ヤオハン)
+    "Yaohan's": "jˈaʊhɑːnz",
+    "Isetan": "ˌiːsˈeɪtan",   # "ee-SAY-tan" (伊勢丹, per Chris)
+    "Isetan's": "ˌiːsˈeɪtanz",
+    "Daimaru": "dˈaɪmɑːruː",  # "DIE-mah-roo" (大丸)
+    "Sogo": "sˈQɡQ",          # "SOH-goh" (そごう)
+    "Takashimaya": "tˌɑːkəʃiːmˈɑːjə",   # "tah-kah-shee-MAH-ya" (髙島屋)
+    "Takashimaya's": "tˌɑːkəʃiːmˈɑːjəz",
+    "Mitsuwa": "mɪtsˈuːwə",   # "mit-SOO-wa" (ミツワ)
+    "Jusco": "dʒˈʌskQ",       # "JUSS-koh" (ジャスコ)
+    "Donki": "dˈɒŋki",        # "DONG-kee" - the ドンキ of Don Don Donki
+    "Kazuo": "kˈɑːzuːQ",      # "KAH-zoo-oh" - Kazuo Wada
+    "Wada": "wˈɑːdə",         # "WAH-da"
+    "Ryohei": "riˈQheɪ",      # "ree-OH-hay" - Ryohei Wada, founder
+    "Katsu": "kˈatsuː",       # "KAT-soo" - Katsu Wada
+    "Atami": "ɑːtˈɑːmi",      # "ah-TAH-mee" - the town Yaohan started in
+    "Seicho-no-Ie": "sˈeɪtʃQnQˌiːˈeɪ",  # "SAY-cho-no-EE-eh" (生長の家)
+    "depachika": "dˌɛpətʃˈiːkə",   # "deh-puh-CHEE-kuh" (デパ地下) - basement food hall
+    "Katong": "kˈɑːtɒŋ",      # "KAH-tong" - the Singapore district
+    "Thomson": "tˈɒmsən",     # "TOM-sun" - Thomson Road / Thomson Plaza
+    "Timah": "tˈiːmɑː",       # "TEE-mah" - Bukit Timah ("Bukit" already above)
+    "Havelock": "hˈavlɒk",    # "HAV-lock" - Havelock Road
+    "Liang": "liˈaŋ",         # "lee-ANG" - Liang Court
+    "Ngee": "ŋˈiː",           # "ngee" (/ŋ/ onset) - Ngee Ann City
+    "Ann": "ˈɑːn",            # "ahn" - the "Ann" of Ngee Ann (not the name "Ann")
+    "Hong": "hˈɒŋ",           # "hong" - Hong Kong ("Kong" already phonemizes)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

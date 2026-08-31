@@ -21,7 +21,7 @@ positive, pipeline section 5). The deposits chart recurs as the spine of
 a post about a bank's deposits; each instance re-triggers a fresh slow
 zoom, and no slide is held past ~30s (gap report clean).
 
-29 slides, 508.4s.
+29 slides, 507.62s.
 """
 
 _C = "https://upload.wikimedia.org/wikipedia/commons"
@@ -36,7 +36,6 @@ IMAGES = {
     "FULLERTON": f"{_C}/0/0a/The_Fullerton_Hotel%2C_Singapore.jpg",
     "RAFFLES1890": f"{_C}/4/44/Photographic_Views_of_Singapore_Plate_03_Raffles%27_Square.jpg",
     "NEWTON": f"{_C}/a/a4/POSB_Newton_Branch.png",
-    "BUGIS": f"{_C}/f/fb/POSB_Bugis_MRT_Station_ATM.jpg",
     "PASSBOOK2": f"{_C}/1/13/Federation_of_Malaya_Post_Office_Savings_Bank_%28POSB%29_Bankbook%2C_Inner_Front_Cover_%26_First_Page.png",
     "DEPOSITS": "/assets/images/posb-deposits.png",
     "BRANCHMAP": "/assets/images/posb-branch-map.png",
@@ -55,9 +54,11 @@ _CHART = {"type": "letterbox", "zoom": [1, 1.02, 1.04], "pan": [(0.5, 0.5)] * 3,
 _CHART_OUT = {"type": "letterbox", "zoom": [1.04, 1.02, 1], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 
 SLIDES = [
+    # Open on 1890s Singapore, before the passbooks - this bank is the
+    # Singapore one, split from the Federation of Malaya's in 1949.
+    {"img": "RAFFLES1890", "type": "cover", "zoom": [1, 1.05, 1.10], "pan": [(0.2, 0.5), (0.5, 0.5), (0.8, 0.5)], "ease": "ease-in-out"},
     {"img": "PASSBOOK", **_LB_IN},
     {"img": "PASSBOOK2", **_LB_WIDE},
-    {"img": "RAFFLES1890", "type": "cover", "zoom": [1, 1.05, 1.10], "pan": [(0.2, 0.5), (0.5, 0.5), (0.8, 0.5)], "ease": "ease-in-out"},
     {"img": "POSTER1945", **_LB_IN},
     {"img": "DEPOSITS", **_CHART},
     {"img": "FULLERTON", **_LB_IN},
@@ -82,7 +83,7 @@ SLIDES = [
     {"img": "DEPOSITS", **_CHART},
     {"img": "FULLERTON", **_LB_OUT},
     {"img": "WATERWAY", **_LB_IN},
-    {"img": "BUGIS", **_LB_IN},
+    {"img": "NEWTON", **_LB_OUT},
     {"img": "WATERWAY", **_LB_OUT},
 ]
 
@@ -138,8 +139,8 @@ SCHEDULE = [
     (89.75, 5), (97.03, 6), (109.55, 7), (125.4, 8), (154.2, 9),
     (179.75, 10), (194.85, 11), (212.45, 12), (219.9, 13), (244.25, 14),
     (274.05, 15), (286.98, 16), (309.62, 17), (324.45, 18), (345.43, 19),
-    (357.73, 20), (380.52, 21), (402.35, 22), (409.8, 23), (424.93, 24),
-    (440.75, 25), (455.82, 26), (473.2, 27), (483.23, 28),
+    (357.73, 20), (380.52, 21), (402.35, 22), (409.5, 23), (424.45, 24),
+    (439.98, 25), (455.05, 26), (472.43, 27), (482.45, 28),
 ]
-TOTAL_DURATION = 508.4
+TOTAL_DURATION = 507.62
 TIMING_JSON = "audio/posb-peoples-bank-nation-of-savers.timing.json"
