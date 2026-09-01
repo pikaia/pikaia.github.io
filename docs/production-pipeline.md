@@ -277,6 +277,17 @@ Example:
 - Voice defaults to `bm_george` (British male) — this is the sitewide
   standard, don't override it unless explicitly asked to A/B test
   another voice.
+- Synthesis runs sentences across a few worker processes by default
+  (`--jobs`, default CPU count − 2 capped at 4; `--jobs 1` for a
+  single process) and prints a dot per sentence so a long run visibly
+  progresses. Each sentence's audio is cached in `.narration-cache/`
+  keyed by its text + voice + the pronunciation overrides that touch
+  it, so a re-run after a pronunciation fix only re-synthesizes the
+  handful of changed sentences (seconds, not minutes) — the earlier
+  rerun-the-whole-post cost is gone. `timing.json` / `.srt` are
+  identical regardless of `--jobs`; the mp3 audio varies slightly run
+  to run (Kokoro is not seeded), which the cache freezes. `--no-cache`
+  forces a full re-synthesis.
 - Output: `audio/<slug>.mp3`, `audio/<slug>.timing.json` (real
   per-sentence `{text, offset_s, duration_s}`, driven off Kokoro's own
   synthesis — not guessed even splits), and `audio/<slug>.srt` — the

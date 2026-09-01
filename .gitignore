@@ -3,6 +3,7 @@ _site/
 .jekyll-metadata
 __pycache__/
 .video-cache/
+.narration-cache/
 logs/
 preview-motion/
 scratch/

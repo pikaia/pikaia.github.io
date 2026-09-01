@@ -30,7 +30,9 @@ Usage:
     python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 [--voice bm_george]
 """
 import argparse
+import hashlib
 import json
+import multiprocessing
 import os
 import re
 import sys
@@ -839,52 +841,174 @@ def split_sentences(text: str) -> list[str]:
 
 SAMPLE_RATE = 24000
 
+# Per-sentence audio cache. Synthesis (the Kokoro forward pass) is the
+# slow step; on a re-run after a pronunciation-override tweak almost every
+# sentence is byte-for-byte the same as last time, so we key each
+# sentence's audio on its exact text + voice + accent + the pronunciation
+# overrides that actually touch it, and reload the .npy instead of
+# re-synthesizing. Per-machine, gitignored, safe to delete.
+_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".narration-cache")
 
-def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str) -> list[dict]:
-    """Synthesize each sentence separately (see split_sentences() above),
-    concatenating the audio and recording each sentence's exact real
-    duration as its timing - free, no separate alignment step. Writes
-    <out_path>.timing.json (list of {text, offset_s, duration_s}) and
-    <out_path>.srt alongside the audio. Returns the sentence list."""
-    import numpy as np
-    import soundfile as sf
+
+def _lang_code_for(voice: str) -> str:
     # Kokoro's lang_code selects the espeak-ng phonemization backend and
     # must match the voice's accent, not just be a fixed default - an
     # American lang_code on a British voice (bf_*/bm_*) mispronounces
     # accent-dependent phonemes. Voice prefixes: af/am=American,
     # bf/bm=British (the only two accents this project has used so far).
-    lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
+    return "b" if voice.startswith(("bf_", "bm_")) else "a"
+
+
+def _sentence_cache_key(sent: str, voice: str, lang_code: str) -> str:
+    # Only the overrides whose word appears in this sentence can change its
+    # audio, so a change to an unrelated override doesn't bust the cache.
+    lo = sent.lower()
+    relevant = sorted((k, v) for k, v in PRONUNCIATION_OVERRIDES.items() if k.lower() in lo)
+    payload = json.dumps({"s": sent, "v": voice, "l": lang_code, "o": relevant},
+                         ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:32]
+
+
+def _build_pipeline(lang_code: str):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         from kokoro import KPipeline
         pipeline = KPipeline(lang_code=lang_code)
         pipeline.g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+    return pipeline
+
+
+def _synth_one(pipeline, sent: str, voice: str):
+    import numpy as np
+    import torch
+    seg_parts = []
+    with torch.inference_mode():
+        for result in pipeline(sent, voice=voice, split_pattern=None):
+            if result.audio is not None:
+                a = result.audio
+                seg_parts.append(a.numpy() if hasattr(a, "numpy") else a)
+    if not seg_parts:
+        return None
+    return np.concatenate(seg_parts).astype(np.float32)
+
+
+# --- parallel synthesis workers (spawn; one KPipeline per worker) --------
+# Sentences are independent, so they synthesize in parallel. Kokoro's
+# audio is already nondeterministic run to run (a stochastic step in the
+# decoder, no seed) - two plain serial runs of the same text differ by a
+# small, inaudible amount - so --jobs does not make the audio any less
+# reproducible than it already was. The sample count per sentence, and so
+# timing.json and the .srt, is stable regardless of --jobs. The cache is
+# what freezes a specific render for exact re-runs.
+_W = {}
+
+
+def _worker_init(voice: str, lang_code: str, jobs: int, use_cache: bool):
+    import torch
+    torch.set_num_threads(max(1, (os.cpu_count() or 2) // jobs))
+    _W["pipeline"] = _build_pipeline(lang_code)
+    _W["voice"] = voice
+    _W["lang_code"] = lang_code
+    _W["use_cache"] = use_cache
+
+
+def _worker_synth(sent: str):
+    import numpy as np
+    key = _sentence_cache_key(sent, _W["voice"], _W["lang_code"])
+    path = os.path.join(_CACHE_DIR, key + ".npy")
+    if _W["use_cache"] and os.path.exists(path):
+        return np.load(path), True
+    audio = _synth_one(_W["pipeline"], sent, _W["voice"])
+    if audio is not None and _W["use_cache"]:
+        os.makedirs(_CACHE_DIR, exist_ok=True)
+        np.save(path, audio)
+    return audio, False
+
+
+def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str,
+                           jobs: int = 1, use_cache: bool = True) -> list[dict]:
+    """Synthesize each sentence separately (see split_sentences() above),
+    concatenating the audio and recording each sentence's exact real
+    duration as its timing - free, no separate alignment step. Writes
+    <out_path>.timing.json (list of {text, offset_s, duration_s}) and
+    <out_path>.srt alongside the audio. Returns the sentence list.
+
+    jobs > 1 fans the per-sentence synthesis out to a process pool;
+    use_cache reloads unchanged sentences from .narration-cache/ instead
+    of re-synthesizing them. Prints a dot per sentence so a long run
+    visibly progresses."""
+    import numpy as np
+    import soundfile as sf
+
+    lang_code = _lang_code_for(voice)
+    sentences = [s for para in paragraphs for s in split_sentences(para) if s]
+    n = len(sentences)
+    print(f"Synthesizing {n} sentence(s)"
+          + (f" across {jobs} workers" if jobs > 1 else "")
+          + ("" if use_cache else ", cache disabled") + " ...", file=sys.stderr)
+
+    seg_audios: list = [None] * n
+    paths = [os.path.join(_CACHE_DIR, _sentence_cache_key(s, voice, lang_code) + ".npy")
+             for s in sentences]
+    done = 0
+
+    def _tick() -> None:
+        nonlocal done
+        done += 1
+        sys.stderr.write(".")
+        if done % 50 == 0 or done == n:
+            sys.stderr.write(f" {done}/{n}\n")
+        sys.stderr.flush()
+
+    # Pass 1: everything already in the cache, no model load needed.
+    miss = []
+    for i, sent in enumerate(sentences):
+        if use_cache and os.path.exists(paths[i]):
+            seg_audios[i] = np.load(paths[i])
+            _tick()
+        else:
+            miss.append(i)
+    hits = n - len(miss)
+
+    # Pass 2: synthesize the rest - serially for a handful, else in a pool
+    # sized to the work (no point spawning 4 workers for 2 sentences).
+    if miss:
+        pool_jobs = min(jobs, len(miss))
+        if pool_jobs <= 1:
+            pipeline = _build_pipeline(lang_code)
+            for i in miss:
+                audio = _synth_one(pipeline, sentences[i], voice)
+                seg_audios[i] = audio
+                if audio is not None and use_cache:
+                    os.makedirs(_CACHE_DIR, exist_ok=True)
+                    np.save(paths[i], audio)
+                _tick()
+        else:
+            ctx = multiprocessing.get_context("spawn")
+            with ctx.Pool(pool_jobs, initializer=_worker_init,
+                          initargs=(voice, lang_code, pool_jobs, use_cache)) as pool:
+                for i, (audio, _cached) in zip(
+                        miss, pool.imap(_worker_synth, [sentences[j] for j in miss], chunksize=1)):
+                    seg_audios[i] = audio
+                    _tick()
 
     all_audio = []
     sentences_out: list[dict] = []
     cumulative_s = 0.0
+    for sent, seg_audio in zip(sentences, seg_audios):
+        if seg_audio is None:
+            continue
+        dur = len(seg_audio) / SAMPLE_RATE
+        sentences_out.append({
+            "text": sent,
+            "offset_s": round(cumulative_s, 4),
+            "duration_s": round(dur, 4),
+        })
+        all_audio.append(seg_audio)
+        cumulative_s += dur
 
-    for para in paragraphs:
-        for sent in split_sentences(para):
-            if not sent:
-                continue
-            generator = pipeline(sent, voice=voice, split_pattern=None)
-            seg_parts = []
-            for result in generator:
-                if result.audio is not None:
-                    a = result.audio
-                    seg_parts.append(a.numpy() if hasattr(a, "numpy") else a)
-            if not seg_parts:
-                continue
-            seg_audio = np.concatenate(seg_parts)
-            dur = len(seg_audio) / SAMPLE_RATE
-            sentences_out.append({
-                "text": sent,
-                "offset_s": round(cumulative_s, 4),
-                "duration_s": round(dur, 4),
-            })
-            all_audio.append(seg_audio)
-            cumulative_s += dur
+    if use_cache:
+        print(f"  {n - hits} synthesized, {hits} from cache", file=sys.stderr)
 
     full_audio = np.concatenate(all_audio) if all_audio else np.zeros(0, dtype=np.float32)
     sf.write(out_path, full_audio, SAMPLE_RATE)
@@ -1152,6 +1276,12 @@ def main() -> None:
     parser.add_argument("out_path")
     parser.add_argument("--voice", default="bm_george")
     parser.add_argument("--dry-run", action="store_true", help="print extracted text only")
+    parser.add_argument("--jobs", type=int,
+                        default=min(4, max(1, (os.cpu_count() or 2) - 2)),
+                        help="parallel sentence-synthesis workers (default: CPU count - 2, "
+                             "capped at 4; 1 = bit-exact serial)")
+    parser.add_argument("--no-cache", action="store_true",
+                        help="ignore .narration-cache/ and re-synthesize every sentence")
     args = parser.parse_args()
 
     with open(args.post_path, "r", encoding="utf-8") as f:
@@ -1215,7 +1345,8 @@ def main() -> None:
         return
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
-    sentences = synthesize_with_timing(narrative, args.voice, args.out_path)
+    sentences = synthesize_with_timing(narrative, args.voice, args.out_path,
+                                       jobs=args.jobs, use_cache=not args.no_cache)
     base = os.path.splitext(args.out_path)[0]
     print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt ({len(sentences)} sentences)", file=sys.stderr)
 
