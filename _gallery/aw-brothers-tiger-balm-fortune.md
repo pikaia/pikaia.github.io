@@ -43,11 +43,11 @@ Vintage and later photographs of the Tiger Balm business, the Aw brothers and Ha
 
 *One of the Ten Courts of Hell tableaux, the part of Haw Par Villa most Singaporeans remember. (Photo: Jnzl's Photos / Flickr / Wikimedia Commons, CC BY 2.0)*
 
-### Haw Par Villa, 2004
+### The garage that housed the tiger cars
 
-![A view of statues and dioramas at Haw Par Villa in 2004](https://upload.wikimedia.org/wikipedia/commons/0/05/Haw_Par_Villa%2C_Singapore_%283327855083%29.jpg)
+![An interpretive sign at Haw Par Villa about "The Garage" and Aw Boon Haw's Tiger Cars](https://upload.wikimedia.org/wikipedia/commons/0/05/Haw_Par_Villa%2C_Singapore_%283327855083%29.jpg)
 
-*The hillside of painted statues in 2004, a few years after admission was made free again. (Photo: Rudy Herman / Flickr / Wikimedia Commons, CC BY 2.0)*
+*An interpretive sign at Haw Par Villa, 2004, on the garage that once housed Aw Boon Haw's "tiger cars" and how they were built. (Photo: Rudy Herman / Flickr / Wikimedia Commons, CC BY 2.0)*
 
 ### An early view of Haw Par Villa
 
