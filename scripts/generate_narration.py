@@ -890,6 +890,10 @@ def _sentence_cache_key(sent: str, voice: str, lang_code: str) -> str:
 
 
 def _build_pipeline(lang_code: str):
+    # The Kokoro model is already cached on disk; silence huggingface_hub's
+    # per-load "unauthenticated requests to the HF Hub" notice (it fires
+    # once per worker process otherwise, just noise for a cached model).
+    os.environ.setdefault("HF_HUB_VERBOSITY", "error")
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         from kokoro import KPipeline
