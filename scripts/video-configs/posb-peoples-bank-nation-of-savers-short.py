@@ -30,8 +30,6 @@ TOTAL_DURATION = 35.33
 TIMING_JSON = "audio/posb-peoples-bank-nation-of-savers.timing.json"
 
 # Shorts keep burned-in narration captions (muted autoplay); main videos do not -
-# they rely on the uploaded .srt. The lines below size the caption box:
+# they rely on the uploaded .srt. Caption size/position come from the
+# DEFAULT_CAPTION_* module constants (small outlined white text, no box).
 BURN_CAPTIONS = True
-CAPTION_FONT_RATIO = 0.032
-CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80

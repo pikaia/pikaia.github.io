@@ -57,11 +57,14 @@ Config module contract (see scripts/video-configs/ for real examples):
                                     the .srt to YouTube; every -short.py
                                     config sets it True (muted autoplay).
     CAPTION_FONT_RATIO, CAPTION_MAX_WIDTH_FRAC, CAPTION_Y_FRAC: float
-                                  - optional caption-box sizing overrides,
-                                    only used when BURN_CAPTIONS is on;
-                                    a vertical Shorts config wants a smaller
-                                    font ratio / higher box position than the
-                                    default landscape values.
+                                  - optional overrides for burned-caption
+                                    size / wrap width / vertical position,
+                                    only used when BURN_CAPTIONS is on. The
+                                    DEFAULT_CAPTION_* module constants are
+                                    already tuned for a vertical Short, so a
+                                    -short.py config normally sets none of
+                                    these. Captions are small white text
+                                    with a thin dark outline, no box.
 """
 import argparse
 import functools
@@ -95,9 +98,14 @@ WORK_SCALE = 4
 LETTERBOX_WORK_SCALE = 1.5
 USER_AGENT = "pikaia-blog-tool/1.0 (https://pikaia.github.io; chriskslee@gmail.com)"
 
-DEFAULT_CAPTION_FONT_RATIO = 0.045
-DEFAULT_CAPTION_MAX_WIDTH_FRAC = 0.82
-DEFAULT_CAPTION_Y_FRAC = 0.82
+# Burned captions now only appear on Shorts (1080x1920), so these are
+# tuned for that frame: ~38px text, wrapping across most of the width,
+# sitting low. Small white text with a thin dark outline and no box - the
+# old solid rounded-rectangle read as far too heavy (matched against
+# YouTube's own low-key caption overlay).
+DEFAULT_CAPTION_FONT_RATIO = 0.020
+DEFAULT_CAPTION_MAX_WIDTH_FRAC = 0.88
+DEFAULT_CAPTION_Y_FRAC = 0.80
 
 # Since 2026-09, narration captions are NOT burned into the exported
 # video - YouTube shows the uploaded .srt as a toggleable caption track
@@ -448,22 +456,20 @@ def wrap_text(text, font, draw, max_width):
 
 
 def draw_caption(frame, text, out_w, out_h, font_ratio, max_width_frac, y_frac):
+    # White text with a thin dark outline, centred, no background box -
+    # matches the low-key look of YouTube's own caption overlay. (The old
+    # solid rounded-rectangle box read as too heavy, especially on Shorts;
+    # changed 2026-09.)
     draw = ImageDraw.Draw(frame, "RGBA")
     font = load_font(int(out_h * font_ratio))
-    max_width = out_w * max_width_frac
-    lines = wrap_text(text, font, draw, max_width)
-    line_height = font.size * 1.3
-    pad_x, pad_y = 16, 12
-    widths = [draw.textlength(ln, font=font) for ln in lines]
-    box_w = max(widths) + pad_x * 2
-    box_h = line_height * len(lines) + pad_y * 2
-    box_x = (out_w - box_w) / 2
-    box_y = out_h * y_frac - box_h / 2
-    draw.rounded_rectangle([box_x, box_y, box_x + box_w, box_y + box_h], radius=5, fill=(0, 0, 0, 140))
+    lines = wrap_text(text, font, draw, out_w * max_width_frac)
+    line_height = font.size * 1.28
+    stroke = max(2, round(font.size * 0.07))
+    top = out_h * y_frac - line_height * len(lines) / 2
     for i, line in enumerate(lines):
-        tx = box_x + (box_w - widths[i]) / 2
-        ty = box_y + pad_y + i * line_height
-        draw.text((tx, ty), line, font=font, fill=(255, 255, 255, 255))
+        w = draw.textlength(line, font=font)
+        draw.text(((out_w - w) / 2, top + i * line_height), line, font=font,
+                  fill=(255, 255, 255, 255), stroke_width=stroke, stroke_fill=(0, 0, 0, 235))
     return frame
 
 

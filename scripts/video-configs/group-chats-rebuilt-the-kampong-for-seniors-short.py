@@ -33,6 +33,3 @@ TOTAL_DURATION = 38.88  # real sentence-timing boundary for this post's opening 
 TIMING_JSON = "audio/group-chats-rebuilt-the-kampong-for-seniors.timing.json"
 
 BURN_CAPTIONS = True
-CAPTION_FONT_RATIO = 0.032
-CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80

@@ -29,6 +29,3 @@ TOTAL_DURATION = 30.55  # real sentence-timing boundary for this post's opening 
 TIMING_JSON = "audio/a-typical-day-for-singapores-silver-generation.timing.json"
 
 BURN_CAPTIONS = True
-CAPTION_FONT_RATIO = 0.032
-CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
