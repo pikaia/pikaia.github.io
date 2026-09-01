@@ -1384,8 +1384,13 @@ you're on the right channel, top-left of Studio, before uploading).
   before Publish or from the edit page afterwards. Wait for the
   "Subtitle published" toast. The `.srt` is UTF-8 with a BOM; if an
   upload errors out, the video is usually still processing — retry
-  once it finishes. Skip the upload for Shorts either way (YouTube
-  auto-captions those; a `.srt` upload for a Short is unreliable).
+  once it finishes.
+- **Captions (Short):** nothing to do. The Short already carries
+  burned-in captions for the muted-autoplay scroll, and there is no
+  Short-scoped `.srt` (it would need to be just the first few cues,
+  re-timed from zero). Studio *does* accept a subtitle upload on a
+  Short if you ever want one, but it would only show on caption-toggle
+  and would double up with the burned text — so skip it.
 
 **Shorts note:** YouTube auto-detects a Short from aspect ratio +
 duration, no explicit toggle — confirm the upload dialog's link field
