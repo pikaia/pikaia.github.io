@@ -570,6 +570,26 @@ PRONUNCIATION_OVERRIDES = {
     "Ngee": "ŋˈiː",           # "ngee" (/ŋ/ onset) - Ngee Ann City
     "Ann": "ˈɑːn",            # "ahn" - the "Ann" of Ngee Ann (not the name "Ann")
     "Hong": "hˈɒŋ",           # "hong" - Hong Kong ("Kong" already phonemizes)
+
+    # Aw brothers / Tiger Balm post. Ear-review samples in
+    # scratch/aw-brothers-*/. Khiaw and Lianhe picked by Chris (2026-09-01);
+    # the rest are single-obvious-reading proper nouns plus two plain
+    # English words misaki has no lexicon entry for ("rigged", "Disneyland").
+    "Chu": "tʃˈuː",           # "choo" - Aw Chu Kin, the father
+    "Eng": "ˈɛŋ",             # "eng" (as in England) - Eng Aun Tong
+    "Aun": "ˈɑːn",            # "ahn" - Eng Aun Tong (same as "Ann" above)
+    "Neil": "nˈiːl",          # "neel" - Neil Road
+    "Chung": "tʃˈʊŋ",         # "choong" - Chung Khiaw Bank
+    "Khiaw": "kjˈaʊ",         # "kyow" - Chung Khiaw Bank (per Chris)
+    "Panjang": "pandʒˈaŋ",    # "pan-JANG" - Pasir Panjang ("Pasir" already above)
+    "Kwong": "kwˈɒŋ",         # "kwong" - Ho Kwong Yew, the villa's architect
+    "Deco": "dˈɛkəʊ",         # "DECK-oh" - Art Deco
+    "Cheng": "tʃˈɛŋ",         # "cheng" - Aw Cheng Chye ("Chye" already above)
+    "Cho": "tʃˈəʊ",           # "choh" - Wee Cho Yaw
+    "Lianhe": "liˌɛnhˈʌ",     # "lee-en-HUH" - Lianhe Zaobao (per Chris)
+    "Zaobao": "dzaʊbˈaʊ",     # "dzow-BOW" - Lianhe Zaobao
+    "rigged": "ɹˈɪɡd",        # plain English word, no misaki lexicon entry
+    "Disneyland": "dˈɪznilˌand",  # plain English word, no misaki lexicon entry
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1192,7 +1212,8 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
     "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "DBS", "EDB", "HDB", "IPPT",
-    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK", "UN", "US",
+    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK", "UN", "UOB",
+    "UOL", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
