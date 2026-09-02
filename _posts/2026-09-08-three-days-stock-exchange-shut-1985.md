@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "The Three Days Singapore's Stock Market Closed"
-date: 2026-09-08 09:00:00 +0800
+date: 2026-09-02 16:25:35 +0000
+scheduled_date: 2026-09-08 09:00:00 +0800
+permalink: /2026/09/08/three-days-stock-exchange-shut-1985/
 last_modified_at: 2026-09-08 09:00:00 +0800
 categories: [history, economy]
 image: https://upload.wikimedia.org/wikipedia/commons/1/1e/Singapore_Skyline_Raffles_Place.jpg
