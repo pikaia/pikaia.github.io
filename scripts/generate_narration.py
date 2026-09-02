@@ -607,7 +607,7 @@ PRONUNCIATION_OVERRIDES = {
     "Mahathir": "mˌɑːhɑːtˈɪə",    # "mah-hah-TEER" - Mahathir Mohamad
     "Mohamad": "mɔːhˈaməd",       # "moh-HA-mad"
     "Kranji": "krˈandʒi",         # "KRAN-jee"
-    "Hsien": "ʃiˈɛn",             # "shee-EN" - Lee Hsien Loong
+    "Hsien": "sjˈɛn",             # one syllable, "syen", per Chris - Lee Hsien Loong
     "Loong": "lˈɒŋ",              # "long" (rhymes with "song"), per Chris - Lee Hsien Loong
     "Najib": "nɑːdʒˈiːb",         # "nah-JEEB" - Najib Razak
     "Razak": "rɑːzˈɑːk",          # "rah-ZAK"
