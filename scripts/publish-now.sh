@@ -24,6 +24,11 @@
 # it "now" won't move the day in that case (the same-day branch), but do
 # not run this on a post dated far enough ahead to trigger the rename
 # unless you also update those external links.
+#
+# See also scripts/publish-early.sh + scripts/publish-early-reset.sh: that
+# pair shows a far-future post now WITHOUT moving its date or permalink
+# (it pins the permalink and stashes the real date), and can be undone
+# later. Use it when the post should still "belong" to its scheduled date.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
