@@ -1247,9 +1247,9 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "DBS", "EDB", "FMSR", "HDB",
-    "IPPT", "KTM", "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK",
-    "UN", "UOB", "UOL", "US",
+    "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV", "EDB",
+    "FMSR", "GDP", "HDB", "IPPT", "KTM", "MP", "MRT", "NS", "NTUC", "NUS",
+    "NWC", "POSB", "PTSD", "UK", "UN", "UOB", "UOL", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}

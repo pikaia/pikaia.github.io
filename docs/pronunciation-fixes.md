@@ -361,3 +361,6 @@ For a confirmed-correct letter-spelled token (the last category
 above), the fix isn't a phoneme or text change at all - just add the
 token's exact text to `KNOWN_LETTER_SPELLED` in `generate_narration.py`
 (near `scan_for_letter_spelled_words()`) so it stops getting flagged.
+The set holds both Singapore-specific initialisms (HDB, CPF, MRT, KTM,
+UOB, FMSR, …) and everyday English ones (CEO, GDP, PTSD, DMV) that are
+always read as their letters.
