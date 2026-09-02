@@ -590,6 +590,34 @@ PRONUNCIATION_OVERRIDES = {
     "Zaobao": "dzaʊbˈaʊ",     # "dzow-BOW" - Lianhe Zaobao
     "rigged": "ɹˈɪɡd",        # plain English word, no misaki lexicon entry
     "Disneyland": "dˈɪznilˌand",  # plain English word, no misaki lexicon entry
+
+    # Malaysian railway-land post. Singapore/Malaysia place and personal
+    # names plus "initialled" (a plain English word misaki lacks). Malay
+    # words: Keretapi Tanah Melayu, Khazanah Nasional, the ministers' names.
+    "Shenton": "ʃˈɛntən",         # "SHEN-tun" - Shenton Way
+    "Maclaren": "məklˈarən",      # "muh-KLARR-en" - Swan and Maclaren
+    "Cecil": "sˈɛsɪl",            # "SESS-il" - Sir Cecil Clementi
+    "Clementi": "kləmˈɛnti",      # "kluh-MEN-tee" - the Singapore locality
+    "Keretapi": "kˌɛrətˈɑːpi",    # "keh-ruh-TAH-pee" (Malay)
+    "Tanah": "tˈɑːnə",            # "TAH-nah" (Malay)
+    "Melayu": "məlˈɑːjuː",        # "muh-LAH-yoo" (Malay)
+    "initialled": "ɪnˈɪʃəld",     # plain English word, no misaki entry
+    "Daim": "dˈaɪm",              # "dime" - Daim Zainuddin
+    "Zainuddin": "zˌaɪnʊdˈiːn",   # "zai-noo-DEEN"
+    "Mahathir": "mˌɑːhɑːtˈɪə",    # "mah-hah-TEER" - Mahathir Mohamad
+    "Mohamad": "mɔːhˈaməd",       # "moh-HA-mad"
+    "Kranji": "krˈandʒi",         # "KRAN-jee"
+    "Hsien": "ʃiˈɛn",             # "shee-EN" - Lee Hsien Loong
+    "Loong": "lˈuːŋ",             # "loong"
+    "Najib": "nɑːdʒˈiːb",         # "nah-JEEB" - Najib Razak
+    "Razak": "rɑːzˈɑːk",          # "rah-ZAK"
+    "Khazanah": "kˌɑːzɑːnˈɑː",    # "kah-zah-NAH" - Khazanah Nasional
+    "Nasional": "nˌɑːsjɒnˈɑːl",   # "nah-syoh-NAL" (Malay for "national")
+    "Temasek": "tˈɛməsɛk",        # "TEM-uh-sek"
+    "Rochor": "rˈəʊtʃɔː",         # "ROH-chor" - Ophir-Rochor
+    "Ibrahim": "ˈɪbrəhiːm",       # "IB-rah-heem" - Sultan Ibrahim Iskandar
+    "Iskandar": "ɪskˈandɑː",      # "iss-KAN-dar"
+    "Chagar": "tʃˈɑːɡɑː",         # "CHAH-gar" - Bukit Chagar
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -616,6 +644,10 @@ def _ordinal_suffix(n: int) -> str:
 
 ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bFr\.(?=\s)"): "Father",
+    # "Pte Ltd" / "Pte. Ltd." - misaki has no entry for either token and
+    # spells both out. Always "Private Limited" in prose. Caught on the
+    # Malaysian railway-land post ("M+S Pte Ltd").
+    re.compile(r"\bPte\.?\s+Ltd\.?"): "Private Limited",
     # "vs." - misaki drops the abbreviation as a literal "?" ("Say vs.
     # What" -> "Say <unknown> What"). Always reads as "versus" in prose
     # (sport, law, comparisons alike), so a general expansion is safe.
@@ -1215,9 +1247,9 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "DBS", "EDB", "HDB", "IPPT",
-    "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK", "UN", "UOB",
-    "UOL", "US",
+    "BMT", "CBD", "CC", "CHIJ", "CMPB", "CPF", "DBS", "EDB", "FMSR", "HDB",
+    "IPPT", "KTM", "MP", "MRT", "NS", "NTUC", "NUS", "NWC", "POSB", "UK",
+    "UN", "UOB", "UOL", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
