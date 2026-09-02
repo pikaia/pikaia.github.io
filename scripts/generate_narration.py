@@ -626,9 +626,9 @@ PRONUNCIATION_OVERRIDES = {
     "Koon": "kˈuːn",              # "koon" - Tan Koon Swan (recurs 5x in the post)
     "Tham": "tˈɑːm",              # "tarm" - Peter Tham (surname 谭), rhymes with "calm"
     "Frimatic": "frˈɪmatɪk",      # "FRIH-mat-ic" - defunct French fridge brand.
-                                   # Obscure; confirm by ear - 3 candidate samples
-                                   # in scratch/three-days-stock-exchange-shut-1985-frimatic/
-                                   # (this is #1; #2 "FRY-mat-ic" frˈaɪmatɪk,
+                                   # Picked by Chris by ear (2026-09-02) from 3
+                                   # samples in scratch/three-days-stock-exchange-shut-1985-frimatic/
+                                   # (over #2 "FRY-mat-ic" frˈaɪmatɪk and
                                    # #3 "free-MAT-ic" friːmˈatɪk).
     "Kahlenberg": "kˈɑːlənbɜːɡ",  # "KAH-len-berg" - Ernest Kahlenberg, the founder
     "Arang": "ˈɑːraŋ",            # "AH-rang" - Kampong Arang Road (Malay: charcoal)
