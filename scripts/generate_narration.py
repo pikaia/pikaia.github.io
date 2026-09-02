@@ -608,7 +608,7 @@ PRONUNCIATION_OVERRIDES = {
     "Mohamad": "mɔːhˈaməd",       # "moh-HA-mad"
     "Kranji": "krˈandʒi",         # "KRAN-jee"
     "Hsien": "ʃiˈɛn",             # "shee-EN" - Lee Hsien Loong
-    "Loong": "lˈuːŋ",             # "loong"
+    "Loong": "lˈɒŋ",              # "long" (rhymes with "song"), per Chris - Lee Hsien Loong
     "Najib": "nɑːdʒˈiːb",         # "nah-JEEB" - Najib Razak
     "Razak": "rɑːzˈɑːk",          # "rah-ZAK"
     "Khazanah": "kˌɑːzɑːnˈɑː",    # "kah-zah-NAH" - Khazanah Nasional
