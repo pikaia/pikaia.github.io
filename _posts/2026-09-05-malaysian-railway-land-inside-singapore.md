@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "The Strip of Malaysia That Ran Through Singapore Until 2011"
-date: 2026-09-05 09:00:00 +0800
+date: 2026-09-02 19:46:53 +0000
+scheduled_date: 2026-09-05 09:00:00 +0800
+permalink: /2026/09/05/malaysian-railway-land-inside-singapore/
 last_modified_at: 2026-09-05 09:00:00 +0800
 categories: [history, politics]
 image: https://upload.wikimedia.org/wikipedia/commons/0/0c/Tanjong_Pagar_Railway_Station_exterior_view%281_retouched%29.jpg
