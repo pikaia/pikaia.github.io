@@ -34,6 +34,7 @@ The rest maps 1:1 to this doc's own section numbers:
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
 12. Commit and push                               -- section 12  [Claude]
+12a. (Opt.) Publish before the scheduled date     -- section 12a [Manual]
 ```
 
 **`[Manual]` vs `[Claude]`:** every `[Manual]` step is a single mechanical
@@ -1542,6 +1543,63 @@ git push
 
 ---
 
+## 12a. (Optional) Publish before the scheduled date
+
+**[Manual]** — skip this entirely in the normal case.
+
+After section 12 the post is committed with its future `date:` (the
+standard `09:00 +0800` slot on its publish day). A daily GitHub Action
+(`.github/workflows/scheduled-pages-build.yml`, ~09:15 SGT) rebuilds the
+site and the post appears on its own that morning — production's
+`_config.yml` has no `future:` setting, so GitHub Pages simply doesn't
+emit a post whose date is still ahead of the build clock until then.
+Nothing to do; that's the design.
+
+Run one of these only when you want the post live **sooner** than its
+scheduled morning:
+
+| Situation | Use |
+|---|---|
+| A past-dated post is stale / missing on the live site (no content change needed) | `gh workflow run scheduled-pages-build.yml` — just forces a rebuild; publishes anything already past its date, ignores future-dated posts |
+| You've decided the post should simply come out **today**, and it hasn't been through this pipeline yet (no YouTube links baked in) | `scripts/publish-now.sh <slug>` |
+| The post has been through the pipeline (YouTube descriptions point at `/YYYY/MM/DD/slug/` for the scheduled date), **or** you just want to keep the scheduled date and URL | `scripts/publish-early.sh <slug>`, then `scripts/publish-early-reset.sh <slug>` after the scheduled date passes |
+
+Both scripts `cd` to the repo root themselves, edit the front matter,
+commit and push — live in a minute or two. Pass a slug fragment or the
+post path; the slug must match exactly one file under `_posts/`.
+
+**`publish-now.sh`** moves `date:` to now, *permanently*. For a post
+dated two or more days out it also renames the post file to today's date
+and rewrites the companion gallery's `post_url` — so the permalink moves
+to today. There's no reset. This is the right tool when the scheduled
+date was just a placeholder and the post genuinely belongs to today.
+Don't run it on a post whose `/YYYY/MM/DD/` URL is already referenced
+somewhere external (a YouTube description) unless you're also fixing
+those links.
+
+**`publish-early.sh`** shows the post now *without* giving up its
+scheduled date: it moves `date:` to now so Pages will build it, but
+pins `permalink:` to the URL the scheduled date produces (so the address
+never changes) and stashes the real date in a `scheduled_date:`
+front-matter key. Use it when the video is already up and you don't want
+a multi-day gap between the YouTube upload and the blog post, or any
+time you'd rather the post keep "belonging" to its planned day.
+
+**`publish-early-reset.sh`** undoes that: restores the scheduled `date:`,
+drops the `permalink:` / `scheduled_date:` keys, commits and pushes. The
+live URL doesn't move (it was pinned to the scheduled date all along).
+Run it **after** the scheduled date has passed — it refuses without `-f`
+while the date is still in the future, because at that point a prod
+rebuild would drop the post off the live site until its date arrives.
+Once run, the post is back to a normal future/past-dated post and the
+daily build keeps it live.
+
+Typical `publish-early` timeline: upload video (section 10) → wire URLs
+and commit (sections 11–12) → `publish-early.sh <slug>` same day → on or
+after the scheduled date, `publish-early-reset.sh <slug>`.
+
+---
+
 ## 13. Known gotchas (read before debugging from scratch)
 
 - **Watch viewer opens blank/black, console shows `audio is not
@@ -1633,6 +1691,8 @@ git push
 | Per-post video config (Short) | `scripts/video-configs/<slug>-short.py` |
 | Route-walk clip renderer | `scripts/render_route_clip.py` |
 | YouTube upload text stager | `scripts/stage_youtube_text.py` |
+| Publish a post today (permanent; moves the date) | `scripts/publish-now.sh` |
+| Publish a post early, keeping its scheduled date/URL (reversible) | `scripts/publish-early.sh` + `scripts/publish-early-reset.sh` |
 | Narration audio + timing | `audio/<slug>.mp3`, `.timing.json`, `.srt` |
 | Rendered video/Short (untracked scratch) | `preview-motion/<slug>.mp4`, `<slug>-short.mp4` |
 | Per-post step logs, `tee`'d (git-ignored scratch) | `logs/<slug>.log` |
