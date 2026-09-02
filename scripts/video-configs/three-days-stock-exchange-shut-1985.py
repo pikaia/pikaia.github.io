@@ -17,13 +17,19 @@ runs twice. Five recognisable financial-district photos (hero + Clifford
 Centre + 1971 Raffles Place + two skyline shots) carry the rest, reused
 with slow zooms.
 
+The graphics are letterbox + frozen, never cover: cover scales an image
+to fill the frame and clips whatever overflows, which cropped the
+diagram labels off the edges in the Watch widget. Letterbox contains the
+whole PNG (blurred bars fill any aspect gap) so every label stays on
+screen.
+
 Only the hero skyline is wide enough for cover (3840x2400), and it takes
 a centred push-in (_CVZ); a horizontal pan across it reads JERKY on the
 smoothness check. Every other photo is portrait or near-square, so
-letterbox, cycling push-in / pull-out. Letterbox + zero pan and a held
+letterbox, cycling push-in / pull-out. Letterbox + zero pan and a frozen
 graphic both read JERKY in --check-only - the documented false positives
-(pipeline section 5); the cover slides (0, 12, 30, 35, 37) all pass. No
-slide held past ~30s; gap report clean.
+(pipeline section 5); the five cover slides (0, 12, 30, 35, 37) all pass.
+No slide held past ~30s; gap report clean.
 
 38 slides, 537.575s.
 """
@@ -53,7 +59,9 @@ _LBI = {"type": "letterbox", "zoom": [1, 1.05, 1.10], "pan": [(0.5, 0.5)] * 3, "
 _LBO = {"type": "letterbox", "zoom": [1.10, 1.05, 1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
 _LBW = {"type": "letterbox", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
 _CVZ = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_CHART = {"type": "cover", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
+# Graphics are shown whole - letterbox (never cover, which crops labels off
+# the edges) and frozen (no zoom). The blurred bars fill any aspect gap.
+_CHART = {"type": "letterbox", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 
 SLIDES = [
     {"img": "SKYLINE", **_CVZ},     # 0
