@@ -618,6 +618,27 @@ PRONUNCIATION_OVERRIDES = {
     "Ibrahim": "ˈɪbrəhiːm",       # "IB-rah-heem" - Sultan Ibrahim Iskandar
     "Iskandar": "ɪskˈandɑː",      # "iss-KAN-dar"
     "Chagar": "tʃˈɑːɡɑː",         # "CHAH-gar" - Bukit Chagar
+
+    # Pan-Electric 1985 stock-exchange post. Personal/company/place names,
+    # a Malay road name, one financial acronym said as a word, plus a
+    # couple of plain English words misaki has no lexicon entry for
+    # ("diversified"). Caught by the --dry-run scans.
+    "Koon": "kˈuːn",              # "koon" - Tan Koon Swan (recurs 5x in the post)
+    "Tham": "tˈɑːm",              # "tarm" - Peter Tham (surname 谭), rhymes with "calm"
+    "Frimatic": "frˈɪmatɪk",      # "FRIH-mat-ic" - defunct French fridge brand.
+                                   # Obscure; confirm by ear - 3 candidate samples
+                                   # in scratch/three-days-stock-exchange-shut-1985-frimatic/
+                                   # (this is #1; #2 "FRY-mat-ic" frˈaɪmatɪk,
+                                   # #3 "free-MAT-ic" friːmˈatɪk).
+    "Kahlenberg": "kˈɑːlənbɜːɡ",  # "KAH-len-berg" - Ernest Kahlenberg, the founder
+    "Arang": "ˈɑːraŋ",            # "AH-rang" - Kampong Arang Road (Malay: charcoal)
+    "diversified": "daɪvˈɜːsɪfaɪd",  # plain English word, no misaki lexicon entry
+    "Selco": "sˈɛlkəʊ",           # "SEL-koh" - the marine-salvage subsidiary
+    "Acma": "ˈakmə",              # "AK-muh" - the electrical-goods maker it merged with
+    "Sek": "sˈɛk",                # "sek" - Chan Sek Keong (later Chief Justice)
+    "Keong": "kiˈɒŋ",             # "kee-ONG" - Chan Sek Keong
+    "CLOB": "klˈɒb",              # "clob" (rhymes with "job"), per Chris - Central
+                                   # Limit Order Book; said as a word, not spelled out
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1249,7 +1270,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 KNOWN_LETTER_SPELLED = {
     "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV", "EDB",
     "FMSR", "GDP", "HDB", "IPPT", "KTM", "MP", "MRT", "NS", "NTUC", "NUS",
-    "NWC", "POSB", "PTSD", "UK", "UN", "UOB", "UOL", "US",
+    "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN", "UOB", "UOL", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
