@@ -639,6 +639,60 @@ PRONUNCIATION_OVERRIDES = {
     "Keong": "kiˈɒŋ",             # "kee-ONG" - Chan Sek Keong
     "CLOB": "klˈɒb",              # "clob" (rhymes with "job"), per Chris - Central
                                    # Limit Order Book; said as a word, not spelled out
+
+    # Jalan Payoh Lai / Kangkar / Montfort / Nativity Church post. This
+    # post's narration predates the pronunciation-fix process, so its full
+    # --dry-run flagged 27 sentences at once (a large batch, like the
+    # National Service / Tan Tock Seng / Yaohan posts). Teochew and Malay
+    # place names around old Hougang, a French priest's and a French
+    # saint's name, plus two ordinary compound-word gaps ("backlane",
+    # "Neo-Gothic"). Chris grew up in this exact area (born 1960 on Jalan
+    # Payoh Lai); he confirmed every lead below by ear (2026-09-03) from
+    # samples in scratch/jalan-payoh-lai-kangkar-montfort-nativity-church-pronunciation/
+    # ("ur default choices are excellent") - no corrections.
+    "Jalan": "dʒˈalan",           # Malay "road" - "JAH-lan", matches Wiktionary
+                                   # Malay IPA /ˈdʒalan/ (first-syllable stress).
+                                   # Recurs across many Singapore posts.
+    "Payoh": "pɑːjˈəʊ",           # "pah-YOH" (as in Toa Payoh)
+    "Lai": "lˈaɪ",                # "lie" - the surname / third word of Jalan Payoh Lai
+    "Kangkar": "kˈʌŋkɑː",         # Teochew 港脚 "foot of the river" - "KUNG-kah":
+                                   # first syllable rhymes with "Kung", stress on
+                                   # it. Chris picked this by ear (2026-09-03) over
+                                   # the "kang-KAH" / hang-vowel guesses - the
+                                   # English-analogy readings sounded "Western" to
+                                   # him. (Note: he hears "Aukang" with the
+                                   # ordinary "-kang" vowel, so the two aren't
+                                   # forced to match.)
+    "kangkars": "kˈʌŋkɑːz",       # plural - misaki won't derive it from the singular
+    "kangchu": "kˈaŋtʃuː",        # 港主 (the plantation jungle-clearing system) -
+                                   # "KANG-choo". Shares the 港 with Kangkar but
+                                   # Chris deliberately keeps them different: an
+                                   # academic term taken from written Mandarin
+                                   # stays close to Mandarin, whereas a name the
+                                   # local population absorbed (Kangkar) picks up
+                                   # the vernacular shift. "It's ok for less
+                                   # common words to sound different" (2026-09-03).
+    "Hougang": "hˈaʊɡaŋ",         # Mandarin reading of "Au Kang" - "HOW-gang".
+                                   # Recurs across many Singapore posts.
+    "Aukang": "ˈaʊkaŋ",           # Teochew "Au Kang" as one word - "OW-kang"
+    "Au": "aʊ",                   # "ow" - standalone in the quoted "Au Kang"
+    "Montfort": "mˈɒntfət",       # the school (and St Louis de Montfort) - British
+                                   # non-rhotic "MONT-f't". Recurs 9x in this post.
+    "backlane": "bˈaklAn",        # plain English compound, no misaki entry - "back"
+                                   # + "lane" (same gap as "paycheck"/"phrasebook")
+    "Neo-Gothic": "nˌiːəʊɡˈɒθɪk", # hyphenated compound, no misaki entry -
+                                   # "nee-oh-GOTH-ic"
+    "Ambroise": "ˈambrwɑːz",      # French given name (Fr. Ambroise Maistre) -
+                                   # anglicized "AHM-brwahz"
+    "Maistre": "mˈɛstrə",         # French surname - anglicized "MESS-truh" (French /mɛstʁ/)
+    "Marie": "mərˈiː",            # "muh-REE" - in "St Louis Marie Grignion de Montfort"
+    "Grignion": "ɡrˈiːnjɒn",      # French /ɡʁiɲɔ̃/ - anglicized "GREEN-yon"
+    "de": "də",                   # "duh" - the French particle in "de Montfort"
+    "Punggol": "pˈɒŋɡəʊl",        # "PONG-gohl" - matches Wikipedia IPA /ˈpɒŋɡoʊl/
+                                   # (first-syllable stress)
+    "Wak": "wˈɑːk",               # Malay/Javanese term of address - "wahk" (Kampong
+                                   # Wak Sumang)
+    "Sumang": "sˈuːmaŋ",          # "SOO-mang" (Kampong Wak Sumang)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -764,6 +818,16 @@ ABBREVIATION_EXPANSIONS = {
     # "Zubir Saeed", which PRONUNCIATION_OVERRIDES then voices correctly.
     # National-symbols post.
     re.compile(r"\bZubir Said\b"): "Zubir Saeed",
+    # "St" (no period) before a capitalised name - always "Saint" in this
+    # blog's prose ("the Brothers of St Gabriel", "St Louis Marie Grignion
+    # de Montfort"), never "Street" (which is always spelled out in full,
+    # or written "St." with the period). misaki has no entry for bare "St"
+    # and spells it "S, T". Scoped to "St" + whitespace + a Capitalised
+    # word so it can't touch "21st"/"1st" (no word boundary there anyway)
+    # or a sentence-final "St." Caught on the Jalan Payoh Lai / Kangkar
+    # post; kept as a narrow pattern rather than expanding the ambiguous
+    # "St." per the policy note above ABBREVIATION_EXPANSIONS.
+    re.compile(r"\bSt(?=\s+[A-Z][a-z])"): "Saint",
     # A four-digit year range written with an en-dash or hyphen
     # ("2020-2021", "1997-2025") - misaki drops the dash as an audible
     # "?" and mushes the two years together ("twenty twenty? twenty

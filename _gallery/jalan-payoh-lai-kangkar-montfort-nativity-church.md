@@ -5,7 +5,13 @@ post_url: /2026/08/16/jalan-payoh-lai-kangkar-montfort-nativity-church/
 post_title: "The Lane Was Named After My School. Neither Is There Anymore."
 ---
 
-Nine more photographs of the places connected to this post — where Hougang sits on the map, the river the kangkars were named for, the church, the school's parish, the park now sitting where the old Kangkar villages once stood, and the political fact that outlasted all of it.
+More photographs of the places and people connected to this post — where Hougang sits on the map, the river the kangkars were named for, the priest who founded the parish, the church, the school's parish, the park now sitting where the old Kangkar villages once stood, and the political fact that outlasted all of it.
+
+### The priest who founded the parish
+
+![Carte-de-visite portrait of Fr Ambroise Maistre, 19th-century French missionary priest](https://upload.wikimedia.org/wikipedia/commons/c/c0/Ambroise_Maistre%2C_MEP_missionary_%281821-1866%29.jpg)
+
+*Fr. Ambroise Maistre (1821–1866) of the Missions Étrangères de Paris, who founded the Catholic community at Serangoon in 1853 and built its first presbytery, catechumenate and chapel — the origin of the Church of the Nativity of the Blessed Virgin Mary. Undated carte-de-visite portrait. (Archives of the Institut de Recherche France-Asie (IRFA) / Missions Étrangères de Paris; public domain by age)*
 
 ### Where Hougang sits on the island
 

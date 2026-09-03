@@ -1,204 +1,498 @@
-1
-00:00:00,050 --> 00:00:02,612
-The Lane Was Probably Named After My School.
+﻿1
+00:00:00,080 --> 00:00:03,825
+The Lane Was Probably
+Named After My School.
 
 2
-00:00:02,612 --> 00:00:04,487
+00:00:03,825 --> 00:00:06,500
 Neither Is There Anymore.
 
 3
-00:00:04,487 --> 00:00:10,450
-I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Hougang.
+00:00:06,500 --> 00:00:09,819
+I was born in 1960 on Jalan Payoh Lai,
 
 4
-00:00:10,450 --> 00:00:18,425
-Memory that old gets slippery, so I can't be certain of every detail, but I remember walking to school and to church there for years afterward.
+00:00:09,899 --> 00:00:13,925
+in what was then the
+Kangkar area of Hougang.
 
 5
-00:00:18,425 --> 00:00:22,337
-The walk from the Upper Serangoon Road junction took about twenty minutes.
+00:00:13,925 --> 00:00:16,763
+Memory that old gets
+slippery, so I can't be
 
 6
-00:00:22,337 --> 00:00:28,475
-My favourite shortcut ran along a backlane to the left of Montfort School called Holy Innocents' Lane.
+00:00:16,843 --> 00:00:20,078
+certain of every detail,
+but I remember walking to
 
 7
-00:00:28,475 --> 00:00:36,862
-I only learned recently, while researching this post, that the name traces back to a cluster of Catholic schools that once shared that stretch of Upper Serangoon Road.
+00:00:20,158 --> 00:00:23,275
+school and to church
+there for years afterward.
 
 8
-00:00:36,862 --> 00:00:38,612
-Montfort was one of them.
+00:00:23,275 --> 00:00:25,902
+The walk from the Upper Serangoon Road
 
 9
-00:00:38,612 --> 00:00:44,587
-Today, neither the lane nor the cemetery that once stood beside it appears on any map.
+00:00:25,982 --> 00:00:28,475
+junction took about twenty minutes.
 
 10
-00:00:44,587 --> 00:00:49,875
-Sundays meant the same walk in the same direction, except to Mass instead of school.
+00:00:28,475 --> 00:00:31,924
+My favourite shortcut ran
+along a backlane to the
 
 11
-00:00:49,875 --> 00:00:53,675
-I'd cut through whatever backlane shaved the most time off the trip.
+00:00:32,004 --> 00:00:35,750
+left of Montfort School
+called Holy Innocents' Lane.
 
 12
-00:00:53,675 --> 00:01:02,437
-The church at the end of it, Nativity of the Blessed Virgin Mary, was older than anything else I knew as a child, though I had no idea how much older at the time.
+00:00:35,750 --> 00:00:39,276
+I only learned recently,
+while researching this post,
 
 13
-00:01:02,437 --> 00:01:11,950
-A French missionary priest, Fr. Ambroise Maistre, bought the land in 1857 for the Teochew Catholic farmers and fishermen of Aukang.
+00:00:39,356 --> 00:00:43,221
+that the name traces back to
+a cluster of Catholic schools
 
 14
-00:01:11,950 --> 00:01:15,150
-Many of the converts came from Shantou in China.
+00:00:43,301 --> 00:00:46,975
+that once shared that stretch
+of Upper Serangoon Road.
 
 15
-00:01:15,150 --> 00:01:25,587
-The original attap chapel eventually gave way to the Neo-Gothic building that still stands today, blessed in December 1901 and expanded again in 1933.
+00:00:46,975 --> 00:00:49,325
+Montfort was one of them.
 
 16
-00:01:25,587 --> 00:01:29,300
-It has been a national monument since 2005.
+00:00:49,325 --> 00:00:52,233
+Today, neither the lane nor the cemetery
 
 17
-00:01:29,300 --> 00:01:41,125
-It still holds a Teochew-language Mass too, a tradition instituted in 1971 that is, as far as anyone can confirm, the last regular Teochew Catholic Mass left in Singapore.
+00:00:52,313 --> 00:00:55,675
+that once stood beside
+it appears on any map.
 
 18
-00:01:41,125 --> 00:01:45,550
-Montfort School, next door, turned out to be part of that same tangle.
+00:00:55,675 --> 00:00:59,345
+Sundays meant the same
+walk in the same direction,
 
 19
-00:01:45,550 --> 00:01:54,812
-It was founded in 1916, not as Montfort but as Holy Innocents' English School, established beside the church by the parish priest of the time.
+00:00:59,425 --> 00:01:01,900
+except to Mass instead of school.
 
 20
-00:01:54,812 --> 00:01:58,850
-The Brothers of St Gabriel took it over in 1936.
+00:01:01,900 --> 00:01:06,625
+I'd cut through whatever backlane
+shaved the most time off the trip.
 
 21
-00:01:58,850 --> 00:02:03,625
-It wasn't the only "Holy Innocents" on that stretch of Upper Serangoon Road, though.
+00:01:06,625 --> 00:01:10,932
+The church at the end of it,
+Nativity of the Blessed Virgin Mary,
 
 22
-00:02:03,625 --> 00:02:11,700
-Holy Innocents' Boys School grew out of the same church grounds, and so did what's now CHIJ Our Lady of the Nativity.
+00:01:11,012 --> 00:01:14,105
+was older than anything
+else I knew as a child,
 
 23
-00:02:11,700 --> 00:02:18,662
-Holy Innocents' High School traces back further still, to 1892, and remains a separate school today.
+00:01:14,185 --> 00:01:17,425
+though I had no idea how
+much older at the time.
 
 24
-00:02:18,662 --> 00:02:31,575
-The names collided so often that in 1958 Holy Innocents' English School was renamed Montfort, after St Louis Marie Grignion de Montfort, the order's founder, specifically to end the confusion.
+00:01:17,425 --> 00:01:22,611
+A French missionary priest, Father
+Ambroise Maistre, bought the land
 
 25
-00:02:31,575 --> 00:02:36,612
-I can't say for certain which of those schools Holy Innocents' Lane was actually named for.
+00:01:22,691 --> 00:01:27,725
+in 1857 for the Teochew Catholic
+farmers and fishermen of Aukang.
 
 26
-00:02:36,612 --> 00:02:41,387
-Montfort, my own school, was simply one of at least three that could have claimed it.
+00:01:27,725 --> 00:01:31,750
+Many of the converts came
+from Shantou in China.
 
 27
-00:02:41,387 --> 00:02:45,487
-Montfort itself moved to Hougang Avenue 8 in 1992.
+00:01:31,750 --> 00:01:35,700
+The original attap chapel
+eventually gave way to
 
 28
-00:02:45,487 --> 00:02:50,937
-At some point after that, the lane and the cemetery next to it were cleared away entirely.
+00:01:35,780 --> 00:01:39,729
+the Neo-Gothic building
+that still stands today,
 
 29
-00:02:50,937 --> 00:02:57,512
-"Hougang" is the Mandarin reading of the Hokkien and Teochew "Au Kang," meaning the end of the river.
+00:01:39,809 --> 00:01:44,175
+blessed in December 1901
+and expanded again in 1933.
 
 30
-00:02:57,512 --> 00:03:00,225
-Kangkar itself meant "foot of the stream."
+00:01:44,175 --> 00:01:48,400
+It has been a national
+monument since 2005.
 
 31
-00:03:00,225 --> 00:03:09,012
-That's where the settlements clustered, wherever Teochew planters ran their kangchu system of jungle-clearing plantations along Sungei Serangoon.
+00:01:48,400 --> 00:01:51,876
+It still holds a
+Teochew-language Mass too,
 
 32
-00:03:09,012 --> 00:03:14,562
-There were roughly twenty such kangkars across the island by an 1849 newspaper count.
+00:01:51,956 --> 00:01:57,582
+a tradition instituted in 1971 that
+is, as far as anyone can confirm,
 
 33
-00:03:14,562 --> 00:03:22,712
-By 1986, more than nine in ten Kangkar villagers were still Teochew, and the dialect was still the area's everyday language.
+00:01:57,662 --> 00:02:02,375
+the last regular Teochew
+Catholic Mass left in Singapore.
 
 34
-00:03:22,712 --> 00:03:26,750
-The Kangkar I half-remember was cleared in 1984.
+00:02:02,375 --> 00:02:04,271
+Montfort School, next door,
 
 35
-00:03:26,750 --> 00:03:34,512
-Its families were resettled into three- and four-room HDB flats, and its land was folded into what's now Punggol Park.
+00:02:04,351 --> 00:02:07,425
+turned out to be part of that same tangle.
 
 36
-00:03:34,512 --> 00:03:43,912
-Punggol End, further along, was a different kind of village entirely: Kampong Wak Sumang, a Malay fishing settlement at Tanjong Punggol.
+00:02:07,425 --> 00:02:10,926
+It was founded in 1916,
+not as Montfort but as
 
 37
-00:03:43,912 --> 00:03:48,037
-By one descendant's account it was founded before 1819.
+00:02:11,006 --> 00:02:13,340
+Holy Innocents' English School,
 
 38
-00:03:48,037 --> 00:03:57,462
-It only got piped water, electricity and proper roads in the 1960s, and it became briefly well known afterward for its seafood restaurants and boatels.
+00:02:13,420 --> 00:02:18,325
+established beside the church by
+the parish priest of the time.
 
 39
-00:03:57,462 --> 00:04:04,050
-The government announced reclamation in 1983 and told residents to vacate by 1986.
+00:02:18,325 --> 00:02:23,050
+The Brothers of Saint
+Gabriel took it over in 1936.
 
 40
-00:04:04,050 --> 00:04:14,187
-The fishing port and wholesale market outlasted the kampong itself, but even that finally closed in 1997, to make way for Punggol New Town.
+00:02:23,050 --> 00:02:26,065
+It wasn't the only
+"Holy Innocents" on that
 
 41
-00:04:14,306 --> 00:04:23,043
-Hougang New Town itself was announced in 1979, planned for 460 hectares and 120,000 residents.
+00:02:26,145 --> 00:02:29,025
+stretch of Upper Serangoon Road, though.
 
 42
-00:04:23,043 --> 00:04:31,918
-Its first neighbourhoods were finished by 1983, and the rest by 1992, the same year Montfort left its original site for good.
+00:02:29,025 --> 00:02:33,773
+Holy Innocents' Boys School grew
+out of the same church grounds,
 
 43
-00:04:31,918 --> 00:04:36,418
-One thing about the area never got redeveloped along with everything else.
+00:02:33,853 --> 00:02:37,775
+and so did what's now CHIJ
+Our Lady of the Nativity.
 
 44
-00:04:36,418 --> 00:04:43,931
-Hougang has been held by the same opposition party, the Workers' Party, in every general election since 1991.
+00:02:37,775 --> 00:02:41,977
+Holy Innocents' High School
+traces back further still,
 
 45
-00:04:43,931 --> 00:04:55,993
-It's a small, quietly remarkable fact in its own right, less a story about any one politician than a marker of how far Singapore's electoral landscape has matured since the kampong days.
+00:02:42,057 --> 00:02:45,625
+to 1892, and remains a
+separate school today.
 
 46
-00:04:55,993 --> 00:05:00,643
-I can't reconstruct the Kangkar of my childhood in any real detail anymore.
+00:02:45,625 --> 00:02:50,279
+The names collided so often that
+in 1958 Holy Innocents' English
 
 47
-00:05:00,643 --> 00:05:08,481
-The specific smells, the sounds, the neighbours' faces are mostly gone, the same way the lane and the cemetery are gone.
+00:02:50,359 --> 00:02:55,752
+School was renamed Montfort, after
+Saint Louis Marie Grignion de Montfort,
 
 48
-00:05:08,481 --> 00:05:19,393
-What's left is the walk itself: twenty minutes each way, a shortcut past a school that used to have a different name, to a church that has outlasted every version of the neighbourhood around it.
+00:02:55,832 --> 00:02:59,900
+the order's founder, specifically
+to end the confusion.
 
 49
-00:05:19,393 --> 00:05:33,443
-Why it matters today: Most of what made up the Hougang I grew up in — the lane, the cemetery, the kampong itself — exists now only in scattered memories like mine, and in records like the ones that let me write this.
+00:02:59,900 --> 00:03:02,938
+I can't say for certain
+which of those schools
 
 50
-00:05:33,443 --> 00:05:38,443
-Montfort School and Nativity Church are the rare fixed points that survived the clearing.
+00:03:03,018 --> 00:03:06,000
+Holy Innocents' Lane
+was actually named for.
 
 51
-00:05:38,443 --> 00:05:43,006
-That's probably the only reason I can still find my way back to any of it at all.
+00:03:06,000 --> 00:03:08,557
+Montfort, my own school, was simply one of
 
+52
+00:03:08,638 --> 00:03:11,275
+at least three that could have claimed it.
+
+53
+00:03:11,275 --> 00:03:16,675
+Montfort itself moved to
+Hougang Avenue 8 in 1992.
+
+54
+00:03:16,675 --> 00:03:19,497
+At some point after that, the lane and the
+
+55
+00:03:19,577 --> 00:03:22,825
+cemetery next to it were
+cleared away entirely.
+
+56
+00:03:22,825 --> 00:03:25,841
+"Hougang" is the Mandarin
+reading of the Hokkien
+
+57
+00:03:25,921 --> 00:03:29,275
+and Teochew "Au Kang,"
+meaning the end of the river.
+
+58
+00:03:29,275 --> 00:03:32,675
+Kangkar itself meant "foot of the stream."
+
+59
+00:03:32,675 --> 00:03:35,377
+That's where the settlements clustered,
+
+60
+00:03:35,457 --> 00:03:39,157
+wherever Teochew planters
+ran their kangchu system of
+
+61
+00:03:39,237 --> 00:03:42,875
+jungle-clearing plantations
+along Sungei Serangoon.
+
+62
+00:03:42,875 --> 00:03:45,964
+There were roughly twenty such kangkars
+
+63
+00:03:46,044 --> 00:03:49,700
+across the island by an
+1849 newspaper count.
+
+64
+00:03:49,700 --> 00:03:54,872
+By 1986, more than nine in ten
+Kangkar villagers were still Teochew,
+
+65
+00:03:54,952 --> 00:03:59,200
+and the dialect was still
+the area's everyday language.
+
+66
+00:03:59,200 --> 00:04:04,050
+The Kangkar I half-remember
+was cleared in 1984.
+
+67
+00:04:04,050 --> 00:04:08,948
+Its families were resettled into
+three- and four-room HDB flats,
+
+68
+00:04:09,028 --> 00:04:13,150
+and its land was folded into
+what's now Punggol Park.
+
+69
+00:04:13,150 --> 00:04:18,053
+Punggol End, further along, was a
+different kind of village entirely:
+
+70
+00:04:18,133 --> 00:04:22,900
+Kampong Wak Sumang, a Malay fishing
+settlement at Tanjong Punggol.
+
+71
+00:04:22,900 --> 00:04:28,100
+By one descendant's account
+it was founded before 1819.
+
+72
+00:04:28,100 --> 00:04:31,624
+It only got piped water,
+electricity and proper
+
+73
+00:04:31,704 --> 00:04:35,611
+roads in the 1960s, and it
+became briefly well known
+
+74
+00:04:35,691 --> 00:04:39,525
+afterward for its seafood
+restaurants and boatels.
+
+75
+00:04:39,525 --> 00:04:43,176
+The government announced reclamation in
+
+76
+00:04:43,256 --> 00:04:47,275
+1983 and told residents to vacate by 1986.
+
+77
+00:04:47,275 --> 00:04:50,969
+The fishing port and
+wholesale market outlasted
+
+78
+00:04:51,049 --> 00:04:54,261
+the kampong itself, but even that finally
+
+79
+00:04:54,341 --> 00:04:58,275
+closed in 1997, to make
+way for Punggol New Town.
+
+80
+00:04:58,275 --> 00:05:03,203
+Hougang New Town itself
+was announced in 1979,
+
+81
+00:05:03,283 --> 00:05:08,400
+planned for 460 hectares
+and 120,000 residents.
+
+82
+00:05:08,400 --> 00:05:13,787
+Its first neighbourhoods were finished
+by 1983, and the rest by 1992,
+
+83
+00:05:13,867 --> 00:05:18,225
+the same year Montfort left
+its original site for good.
+
+84
+00:05:18,225 --> 00:05:20,777
+One thing about the area never got
+
+85
+00:05:20,857 --> 00:05:23,875
+redeveloped along with everything else.
+
+86
+00:05:23,875 --> 00:05:28,033
+Hougang has been held by
+the same opposition party,
+
+87
+00:05:28,113 --> 00:05:32,850
+the Workers' Party, in every
+general election since 1991.
+
+88
+00:05:32,850 --> 00:05:36,820
+It's a small, quietly remarkable
+fact in its own right,
+
+89
+00:05:36,900 --> 00:05:41,386
+less a story about any one
+politician than a marker of how far
+
+90
+00:05:41,466 --> 00:05:46,400
+Singapore's electoral landscape
+has matured since the kampong days.
+
+91
+00:05:46,400 --> 00:05:49,170
+I can't reconstruct the Kangkar of my
+
+92
+00:05:49,250 --> 00:05:52,100
+childhood in any real detail anymore.
+
+93
+00:05:52,100 --> 00:05:56,972
+The specific smells, the sounds, the
+neighbours' faces are mostly gone,
+
+94
+00:05:57,052 --> 00:06:00,400
+the same way the lane and
+the cemetery are gone.
+
+95
+00:06:00,400 --> 00:06:03,915
+What's left is the walk itself:
+twenty minutes each way,
+
+96
+00:06:03,995 --> 00:06:08,537
+a shortcut past a school that used
+to have a different name, to a church
+
+97
+00:06:08,617 --> 00:06:12,725
+that has outlasted every version
+of the neighbourhood around it.
+
+98
+00:06:12,725 --> 00:06:16,251
+Why it matters today: Most
+of what made up the Hougang
+
+99
+00:06:16,331 --> 00:06:18,789
+I grew up in — the lane, the cemetery,
+
+100
+00:06:18,869 --> 00:06:23,397
+the kampong itself — exists now only
+in scattered memories like mine,
+
+101
+00:06:23,477 --> 00:06:26,950
+and in records like the
+ones that let me write this.
+
+102
+00:06:26,950 --> 00:06:29,851
+Montfort School and
+Nativity Church are the
+
+103
+00:06:29,931 --> 00:06:33,050
+rare fixed points that
+survived the clearing.
+
+104
+00:06:33,050 --> 00:06:35,664
+That's probably the only reason I can
+
+105
+00:06:35,744 --> 00:06:38,800
+still find my way back
+to any of it at all.
