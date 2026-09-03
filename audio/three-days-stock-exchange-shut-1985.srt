@@ -1,0 +1,657 @@
+﻿1
+00:00:00,080 --> 00:00:03,850
+The Three Days Singapore's
+Stock Market Closed
+
+2
+00:00:03,850 --> 00:00:06,789
+On Monday, the 2nd of December 1985,
+
+3
+00:00:06,869 --> 00:00:11,650
+the Stock Exchange of Singapore
+did not open for trading.
+
+4
+00:00:11,650 --> 00:00:15,350
+Neither did the Kuala
+Lumpur Stock Exchange.
+
+5
+00:00:15,350 --> 00:00:18,669
+Both stayed shut for
+three days — the only time
+
+6
+00:00:18,749 --> 00:00:22,075
+Singapore's market has
+ever closed completely.
+
+7
+00:00:22,075 --> 00:00:24,416
+What forced it was a single company,
+
+8
+00:00:24,496 --> 00:00:28,786
+Pan-Electric Industries, a
+refrigerator maker that had grown into
+
+9
+00:00:28,866 --> 00:00:32,148
+a sprawling conglomerate,
+and a web of undisclosed
+
+10
+00:00:32,228 --> 00:00:35,725
+contracts that had been
+propping up its share price.
+
+11
+00:00:35,725 --> 00:00:38,482
+At the centre of it was Tan Koon Swan,
+
+12
+00:00:38,562 --> 00:00:42,513
+a businessman who three weeks
+earlier had been elected
+
+13
+00:00:42,593 --> 00:00:46,325
+leader of Malaysia's main
+Chinese political party.
+
+14
+00:00:46,325 --> 00:00:50,578
+Pan-Electric began in 1956
+as Climate Engineering,
+
+15
+00:00:50,658 --> 00:00:55,425
+importing French Frimatic
+refrigerators into Singapore.
+
+16
+00:00:55,425 --> 00:00:59,229
+Its founder, Ernest
+Kahlenberg, moved into local
+
+17
+00:00:59,309 --> 00:01:03,760
+assembly under the government's
+pioneer-industry scheme,
+
+18
+00:01:03,840 --> 00:01:07,968
+renamed the company
+Pan-Electric Industries in 1961,
+
+19
+00:01:08,048 --> 00:01:12,175
+and opened a factory at
+Kampong Arang Road in 1965.
+
+20
+00:01:12,175 --> 00:01:15,441
+By 1967 it was billed as the largest
+
+21
+00:01:15,521 --> 00:01:18,880
+refrigerator plant in Southeast Asia,
+
+22
+00:01:18,960 --> 00:01:23,700
+and in August 1968 it listed
+on the stock exchange.
+
+23
+00:01:23,700 --> 00:01:28,454
+From the mid-1970s the company
+diversified quickly and widely:
+
+24
+00:01:28,534 --> 00:01:31,807
+marine salvage through
+a firm called Selco,
+
+25
+00:01:31,887 --> 00:01:36,407
+property development through
+Vanguard Realty, a 1981 merger
+
+26
+00:01:36,487 --> 00:01:40,775
+with the electrical-goods
+maker Acma, stakes in hotels.
+
+27
+00:01:40,775 --> 00:01:43,652
+By 1985 Pan-Electric sat at the
+
+28
+00:01:43,732 --> 00:01:46,975
+head of around sixty subsidiaries.
+
+29
+00:01:46,975 --> 00:01:50,692
+Peter Tham joined the board in 1982;
+
+30
+00:01:50,772 --> 00:01:53,725
+Kahlenberg had left by 1983.
+
+31
+00:01:53,725 --> 00:01:59,209
+Tan Koon Swan was a Malaysian who
+had made his fortune in Singapore's
+
+32
+00:01:59,289 --> 00:02:04,450
+stock market in the 1970s, with
+a reputation for a golden touch.
+
+33
+00:02:04,450 --> 00:02:09,784
+He held his interest in Pan-Electric
+through two companies he controlled,
+
+34
+00:02:09,864 --> 00:02:13,275
+Sigma International and
+Grand United Holdings.
+
+35
+00:02:13,275 --> 00:02:16,917
+In November 1985 he was
+elected president of the
+
+36
+00:02:16,997 --> 00:02:20,795
+Malaysian Chinese Association,
+a senior partner in
+
+37
+00:02:20,875 --> 00:02:25,525
+Malaysia's ruling coalition —
+a man with money in Singapore's
+
+38
+00:02:25,605 --> 00:02:29,250
+markets and a hand now
+in Malaysian government.
+
+39
+00:02:29,250 --> 00:02:31,837
+The way Pan-Electric's share price was
+
+40
+00:02:31,917 --> 00:02:34,725
+supported was through forward contracts.
+
+41
+00:02:34,725 --> 00:02:38,582
+A shareholder sells a block of
+shares to a broking firm now,
+
+42
+00:02:38,662 --> 00:02:43,437
+with an agreement to buy them back at
+a fixed price several months later —
+
+43
+00:02:43,517 --> 00:02:47,650
+in effect a bet that the price
+will have risen in the meantime.
+
+44
+00:02:47,650 --> 00:02:52,000
+On its own this was an accepted
+piece of market practice.
+
+45
+00:02:52,000 --> 00:02:56,146
+What made Pan-Electric's version
+dangerous was that the contracts
+
+46
+00:02:56,226 --> 00:03:00,372
+were large and, for the most part,
+undisclosed, and that when the
+
+47
+00:03:00,452 --> 00:03:04,664
+market softened through 1985 and
+the shares fell rather than rose,
+
+48
+00:03:04,744 --> 00:03:09,100
+the parties committed to buying
+them back were facing heavy losses.
+
+49
+00:03:09,100 --> 00:03:12,321
+Tan Koon Swan's own forward commitments
+
+50
+00:03:12,401 --> 00:03:16,125
+came to about 140 million
+Singapore dollars.
+
+51
+00:03:16,125 --> 00:03:19,822
+Across the whole market,
+brokers' forward exposure
+
+52
+00:03:19,902 --> 00:03:23,448
+to Pan-Electric and related
+stocks was estimated
+
+53
+00:03:23,528 --> 00:03:26,700
+at close to 600 million Singapore dollars.
+
+54
+00:03:26,700 --> 00:03:31,456
+As the shares kept sliding, Tan and
+Tham worked to hold the price up,
+
+55
+00:03:31,536 --> 00:03:34,960
+and Tan moved roughly 29
+million Singapore dollars
+
+56
+00:03:35,040 --> 00:03:38,825
+out of company accounts to
+keep the arrangement going.
+
+57
+00:03:38,825 --> 00:03:44,229
+On the 27th of September 1985 the
+company announced a 64 million
+
+58
+00:03:44,309 --> 00:03:49,450
+Singapore dollars rights issue
+meant to steady its finances.
+
+59
+00:03:49,450 --> 00:03:54,100
+On the 18th of November it
+missed a payment on a bank loan.
+
+60
+00:03:54,100 --> 00:03:59,364
+On the 21st of November it
+disclosed borrowings of 453 million
+
+61
+00:03:59,444 --> 00:04:04,875
+Singapore dollars from thirty-five
+banks, most of it unsecured.
+
+62
+00:04:04,875 --> 00:04:07,476
+The banks stopped lending — not only to
+
+63
+00:04:07,556 --> 00:04:10,925
+Pan-Electric but to the
+broking firms tied to it.
+
+64
+00:04:10,925 --> 00:04:15,925
+On the 30th of November the
+company was placed in receivership.
+
+65
+00:04:15,925 --> 00:04:20,069
+With Pan-Electric in receivership
+and its forward contracts
+
+66
+00:04:20,149 --> 00:04:23,800
+about to come due, the
+danger was a chain reaction.
+
+67
+00:04:23,800 --> 00:04:27,373
+Around half a dozen broking
+firms were heavily exposed,
+
+68
+00:04:27,453 --> 00:04:32,089
+and because Singapore's and Malaysia's
+brokers traded with one another,
+
+69
+00:04:32,169 --> 00:04:35,025
+one failure could pull
+others down with it.
+
+70
+00:04:35,025 --> 00:04:37,434
+On Monday, the 2nd of December,
+
+71
+00:04:37,514 --> 00:04:40,725
+the two exchanges suspended all trading.
+
+72
+00:04:40,725 --> 00:04:43,700
+They stayed closed through Wednesday.
+
+73
+00:04:43,700 --> 00:04:47,675
+Behind the closed doors,
+a rescue was put together.
+
+74
+00:04:47,675 --> 00:04:51,741
+On the 3rd of December the Stock
+Exchange of Singapore asked
+
+75
+00:04:51,821 --> 00:04:55,264
+the four big local banks
+— DBS, OCBC, OUB and UOB —
+
+76
+00:04:55,344 --> 00:04:59,824
+for a credit line, first reported
+at 150 million Singapore dollars
+
+77
+00:04:59,904 --> 00:05:02,933
+and settled at 180
+million Singapore dollars,
+
+78
+00:05:03,013 --> 00:05:07,563
+to keep the exposed brokers afloat
+while the forward contracts were
+
+79
+00:05:07,643 --> 00:05:11,650
+unwound in an orderly way
+rather than through a fire sale.
+
+80
+00:05:11,650 --> 00:05:16,142
+A lawyer named Chan Sek Keong,
+later Singapore's Chief Justice,
+
+81
+00:05:16,222 --> 00:05:19,850
+helped the Monetary Authority
+draft the agreement.
+
+82
+00:05:19,850 --> 00:05:23,598
+The Finance Minister, Richard
+Hu, was clear that the fund
+
+83
+00:05:23,678 --> 00:05:27,090
+was not there to save brokers
+who had been reckless,
+
+84
+00:05:27,170 --> 00:05:30,918
+only to see that the exchange's
+own obligations were met,
+
+85
+00:05:30,998 --> 00:05:34,625
+and that anything drawn would
+be repaid with interest.
+
+86
+00:05:34,625 --> 00:05:38,825
+Even so, about six broking
+firms did not survive.
+
+87
+00:05:38,825 --> 00:05:43,275
+The market reopened on
+Friday, the 5th of December.
+
+88
+00:05:43,275 --> 00:05:47,800
+Pan-Electric was wound up in October 1986.
+
+89
+00:05:47,800 --> 00:05:51,249
+Its shares were worthless;
+thousands of shareholders
+
+90
+00:05:51,329 --> 00:05:54,450
+and a long list of
+creditors carried the loss.
+
+91
+00:05:54,450 --> 00:05:59,600
+Tan Koon Swan was
+arrested in January 1986.
+
+92
+00:05:59,600 --> 00:06:03,072
+He pleaded guilty, under
+a bargain that cut fifteen
+
+93
+00:06:03,152 --> 00:06:07,112
+charges down to one, to abetting
+criminal breach of trust,
+
+94
+00:06:07,192 --> 00:06:10,675
+and was sentenced to two
+years in jail and a fine.
+
+95
+00:06:10,675 --> 00:06:14,520
+He resigned the MCA
+presidency, and the conviction
+
+96
+00:06:14,600 --> 00:06:18,525
+ended a political career
+only weeks into its peak.
+
+97
+00:06:18,525 --> 00:06:23,606
+Peter Tham was sentenced to eight
+years on dozens of forgery charges;
+
+98
+00:06:23,686 --> 00:06:27,875
+Pan-Electric's finance director
+received a shorter term.
+
+99
+00:06:27,875 --> 00:06:31,257
+Decades later, some in
+Malaysia — and the case's
+
+100
+00:06:31,337 --> 00:06:36,306
+own lead prosecutor — would argue
+that Tan had been wrongly convicted,
+
+101
+00:06:36,386 --> 00:06:38,550
+a view that remains contested.
+
+102
+00:06:38,550 --> 00:06:41,925
+The lasting change was to the rules.
+
+103
+00:06:41,925 --> 00:06:46,464
+The Securities Industry Act of
+1986 gave the Monetary Authority
+
+104
+00:06:46,544 --> 00:06:50,276
+far greater control over
+the securities business and
+
+105
+00:06:50,356 --> 00:06:54,675
+tightened the requirements on
+forward contracts, on how much
+
+106
+00:06:54,755 --> 00:06:59,300
+capital a broker had to hold,
+and on what had to be disclosed.
+
+107
+00:06:59,300 --> 00:07:02,641
+The crisis also exposed how entangled the
+
+108
+00:07:02,721 --> 00:07:06,725
+Singapore and Kuala Lumpur
+exchanges had become.
+
+109
+00:07:06,725 --> 00:07:09,884
+At the end of 1989 the two of them removed
+
+110
+00:07:09,964 --> 00:07:13,125
+each other's companies from their boards.
+
+111
+00:07:13,125 --> 00:07:17,344
+So that Singaporeans could
+still trade Malaysian shares,
+
+112
+00:07:17,424 --> 00:07:20,108
+Singapore opened an over-the-counter
+
+113
+00:07:20,188 --> 00:07:23,950
+market called CLOB
+International in January 1990.
+
+114
+00:07:23,950 --> 00:07:27,100
+CLOB ran quietly for eight years.
+
+115
+00:07:27,100 --> 00:07:32,488
+Then, in September 1998, in the
+depths of the Asian financial crisis,
+
+116
+00:07:32,568 --> 00:07:36,292
+Malaysia imposed capital
+controls and froze it —
+
+117
+00:07:36,372 --> 00:07:42,791
+around 4 billion Singapore dollars of
+shares belonging to about 172,000 investors,
+
+118
+00:07:42,871 --> 00:07:46,675
+almost all of them
+Singaporean, locked in place.
+
+119
+00:07:46,675 --> 00:07:50,456
+The freeze lasted more than
+a year; the shares were
+
+120
+00:07:50,536 --> 00:07:54,625
+released in stages under a
+deal reached in early 2000.
+
+121
+00:07:54,625 --> 00:07:58,110
+The untangling of the two
+markets that began with
+
+122
+00:07:58,190 --> 00:08:02,700
+Pan-Electric took fifteen years
+and a second crisis to finish.
+
+123
+00:08:02,700 --> 00:08:06,173
+Where it fits in the bigger
+story: the shape of it is
+
+124
+00:08:06,253 --> 00:08:10,275
+familiar to anyone who has
+watched a financial crisis since.
+
+125
+00:08:10,275 --> 00:08:14,047
+It begins with a scheme that
+bends convention without
+
+126
+00:08:14,127 --> 00:08:17,609
+breaking the law — here,
+forward contracts run at
+
+127
+00:08:17,689 --> 00:08:21,250
+a size and secrecy the
+rules had not anticipated.
+
+128
+00:08:21,250 --> 00:08:24,901
+It runs longer than it should
+because the person at the
+
+129
+00:08:24,981 --> 00:08:28,835
+centre is trusted, and large
+positions held in a respected
+
+130
+00:08:28,915 --> 00:08:32,850
+name draw fewer questions than
+they would from a stranger.
+
+131
+00:08:32,850 --> 00:08:36,306
+Then something unforeseen —
+a soft market, this time —
+
+132
+00:08:36,386 --> 00:08:41,741
+turns the bet the wrong way, and what was
+one company's problem becomes everyone's,
+
+133
+00:08:41,821 --> 00:08:44,557
+carried outward along
+the web of people who
+
+134
+00:08:44,637 --> 00:08:48,500
+had lent it money or stood on
+the other side of its trades.
+
+135
+00:08:48,500 --> 00:08:51,208
+Pan-Electric was the first time that
+
+136
+00:08:51,288 --> 00:08:54,075
+pattern closed a Singapore exchange.
+
+137
+00:08:54,075 --> 00:08:57,575
+It was not the last time
+the pattern would run.
