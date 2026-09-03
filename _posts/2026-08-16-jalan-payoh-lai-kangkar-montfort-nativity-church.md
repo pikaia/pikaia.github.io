@@ -512,7 +512,7 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [The Montfort Story — Montfort Secondary School](https://www.montfortsec.moe.edu.sg/montfort-community/The-Montfort-Story/school-history/)
 - [Holy Innocents' High School — Wikipedia](https://en.wikipedia.org/wiki/Holy_Innocents%27_High_School)
 - [Hougang Heritage Trail — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/trails/Hougang-Heritage-Trail)
-- [The Teochew Catholics of Aukang — history.catholic.sg](https://history.catholic.sg/the-teochew-catholics-of-aukang/)
+- [The Teochew Catholics of Aukang](https://history.catholic.sg/the-teochew-catholics-of-aukang/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
 - [Church of the Nativity of the Blessed Virgin Mary — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/Places/national-monuments/church-of-the-nativity-of-the-blessed-virgin-mary)
 - [Hougang — HDB Towns, Your Home](https://www.hdb.gov.sg/cs/infoweb/about-us/history/hdb-towns-your-home/hougang)
 - [Low Thia Khiang — Wikipedia](https://en.wikipedia.org/wiki/Low_Thia_Khiang)
