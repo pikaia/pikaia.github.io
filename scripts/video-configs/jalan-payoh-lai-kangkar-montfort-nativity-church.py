@@ -10,9 +10,14 @@ The three small Maria Lee Ah Kin photos (fisherman, Chng family, Punggol
 girls) are shown frozen (no Ken Burns zoom) since they don't take
 enlargement - _FRZ.
 
-Slide 1 is a route-walk slide, not renderable by watch_video_lib.py
-(see render_route_clip.py and CLAUDE.md's Route animations section);
-build_watch_widget.py flags it MANUAL.
+Slide 1 is a route-walk slide. build_watch_widget.py animates it in the
+in-post widget; watch_video_lib.py renders it as a black segment
+(24.775-49.825s) for the route clip from render_route_clip.py to be
+spliced over. See CLAUDE.md's Route animations section.
+
+Cover slides use _CVZ (centred push-in) except two that pass the
+smoothness check on a horizontal pan (_CVL, slides 12 and 17); the
+_CVL/_CVR wide pan reads JERKY on lower-detail source images.
 
 20 slides, 361.125s.
 """
@@ -89,8 +94,8 @@ SLIDES = [
     {"type": "route-walk"},               # 1  MANUAL - see render_route_clip.py
     {"img": "MARIANSTATUE", **_LBI},      # 2
     {"img": "FISHERMAN", **_FRZ},         # 3
-    {"img": "CHURCHNIGHT", **_CVR},       # 4
-    {"img": "CHURCHINT", **_CVL},         # 5
+    {"img": "CHURCHNIGHT", **_CVZ},       # 4
+    {"img": "CHURCHINT", **_CVZ},         # 5
     {"img": "HIESFACADE", **_LBI},        # 6
     {"img": "HIESGROUP", **_LBW},         # 7
     {"img": "HIESFACADE", **_LBO},        # 8
@@ -100,10 +105,10 @@ SLIDES = [
     {"img": "PUNGGOLPARK", **_CVL},       # 12
     {"img": "PUNGGOLGIRLS", **_FRZ},      # 13
     {"img": "KAMPONGHOUSES", **_LBO},     # 14
-    {"img": "HOUGANGHDB", **_CVR},        # 15
+    {"img": "HOUGANGHDB", **_CVZ},        # 15
     {"img": "AERIAL", **_CVZ},            # 16
     {"img": "WPHOUGANG", **_CVL},         # 17
-    {"img": "CHURCHNIGHT", **_CVR},       # 18
+    {"img": "CHURCHNIGHT", **_CVZ},       # 18
     {"img": "MARIANSTATUE", **_LBW},      # 19
 ]
 
