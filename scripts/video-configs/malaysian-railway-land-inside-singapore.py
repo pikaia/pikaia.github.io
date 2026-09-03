@@ -13,7 +13,8 @@ many times, re-triggering a fresh slow zoom. 9 image assets (3 captioned
 in the post, 4 in the gallery, 2 originals with CREDITS), so
 stage_youtube_text.py resolves every credit.
 
-The timeline slide is cover + zoom [1,1,1] (deliberately frozen); the
+The timeline slide is letterbox + zoom [1,1,1] (deliberately frozen, and
+never cover - cover crops the chart labels in the Watch widget); the
 rest mix cover pans and letterbox zooms. Letterbox + zero pan and a held
 chart both read JERKY in --check-only - the documented false positives
 (pipeline section 5). Longest hold ~25s (a two-sentence merge); gap
@@ -48,7 +49,10 @@ _MAPMOVE = {"type": "letterbox", "zoom": [1, 1.03, 1.05], "pan": [(0.5, 0.5)] * 
 _CVL = {"type": "cover", "zoom": [1.06, 1.06, 1.06], "pan": [(0.15, 0.5), (0.5, 0.5), (0.85, 0.5)], "ease": "ease-in-out"}
 _CVR = {"type": "cover", "zoom": [1.06, 1.06, 1.06], "pan": [(0.85, 0.5), (0.5, 0.5), (0.15, 0.5)], "ease": "ease-in-out"}
 _CVZ = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_CHART = {"type": "cover", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
+# Graphics are letterbox + frozen, never cover: cover fills the frame and
+# clips the overflow, which crops chart labels off the edges in the
+# in-post Watch widget (it runs at the browser window's aspect, not 16:9).
+_CHART = {"type": "letterbox", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 
 SLIDES = [
     {"img": "FACADE", **_LBI},      # 0

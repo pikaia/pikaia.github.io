@@ -434,6 +434,17 @@ height), **not** the `"50% 50%"` CSS strings the Watch widget's JS
 uses for the same slide — same values, different literal syntax, keep
 both in sync when you tune a slide's motion.
 
+**Any slide showing a graphic — a chart/timeline/diagram PNG or an
+OSM map — uses `"type": "letterbox"`, never `"cover"`, and a frozen
+`"zoom": [1, 1, 1]`.** `cover` scales the image to fill the frame and
+clips whatever overflows; that's invisible in the 16:9 rendered MP4
+(a 1280×720 PNG fills a 1280×720 frame exactly) but the in-post Watch
+widget runs at the browser window's aspect ratio, so `cover` there
+crops the chart's title, edge labels and footnote off the sides.
+`letterbox` contains the whole image (blurred bars fill any gap).
+Photos still use `cover` — a slightly cropped photo is fine, a cropped
+label is not.
+
 Write one `SLIDES`/`SCHEDULE` entry per image *appearance* (an image
 can repeat with different zoom/pan for a bookend effect — two separate
 entries pointing at the same `IMAGES` key). Aim for roughly 8-15s+ dwell
