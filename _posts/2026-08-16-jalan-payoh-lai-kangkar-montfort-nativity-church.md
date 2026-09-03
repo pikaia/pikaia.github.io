@@ -2,9 +2,9 @@
 layout: post
 title: "The Lane Was Probably Named After My School. Neither Is There Anymore."
 date: 2026-08-16 00:55:00 +0800
-last_modified_at: 2026-08-21 08:10:00 +0800
+last_modified_at: 2026-09-03 10:30:00 +0800
 categories: [history, present-day]
-image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg
+image: /assets/images/chancery/nativity-old-marian-statue.jpg
 ---
 
 I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Hougang. Memory that old gets slippery, so I can't be certain of every detail, but I remember walking to school and to church there for years afterward. The walk from the Upper Serangoon Road junction took about twenty minutes. My favourite shortcut ran along a backlane to the left of Montfort School called Holy Innocents' Lane. I only learned recently, while researching this post, that the name traces back to a cluster of Catholic schools that once shared that stretch of Upper Serangoon Road. Montfort was one of them. Today, neither the lane nor the cemetery that once stood beside it appears on any map.
@@ -472,30 +472,66 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
 })();
 </script>
 
-![Church of the Nativity of the Blessed Virgin Mary, Hougang, photographed in 2025](https://upload.wikimedia.org/wikipedia/commons/a/a6/Church_of_the_Nativity_of_the_Blessed_Virgin_Mary%2C_October_2025.jpg)
+![The old Church of the Nativity of the Blessed Virgin Mary, with an outdoor statue of the Blessed Virgin Mary in front of the entrance](/assets/images/chancery/nativity-old-marian-statue.jpg)
 
-*Church of the Nativity of the Blessed Virgin Mary at Upper Serangoon Road, photographed in October 2025. (Photo: GoAheadFan95 / Wikimedia Commons, CC BY-SA 4.0)*
+*The outdoor statue of the Blessed Virgin Mary in front of the old Church of the Nativity, Hougang, undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.*
+
+<div style="float: left; max-width: 240px; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/chancery/aukang-fisherman.jpg" alt="A young fisherman mending prawn-trawler nets in the kampong, Aukang, 1930s" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Working life in the kampong &mdash; a young fisherman mending the prawn-trawler nets, c. 1930s. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
+</div>
 
 Sundays meant the same walk in the same direction, except to Mass instead of school. I'd cut through whatever backlane shaved the most time off the trip. The church at the end of it, Nativity of the Blessed Virgin Mary, was older than anything else I knew as a child, though I had no idea how much older at the time. A French missionary priest, Fr. Ambroise Maistre, bought the land in 1857 for the Teochew Catholic farmers and fishermen of Aukang. Many of the converts came from Shantou in China. The original attap chapel eventually gave way to the Neo-Gothic building that still stands today, blessed in December 1901 and expanded again in 1933. It has been a national monument since 2005. It still holds a Teochew-language Mass too, a tradition instituted in 1971 that is, as far as anyone can confirm, the last regular Teochew Catholic Mass left in Singapore.
 
+<div style="clear: both;"></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 1em; margin: 1.5em 0;">
+  <figure style="flex: 1 1 280px; margin: 0;">
+    <img src="/assets/images/chancery/hies-facade-1910s.jpg" alt="The facade of the Holy Innocents' English School building, around the 1910s" style="width: 100%; display: block; border-radius: 4px;">
+    <figcaption style="font-size: 0.8em; font-style: italic; margin-top: 0.4em;">The Holy Innocents' English School building facade, c. 1910s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</figcaption>
+  </figure>
+  <figure style="flex: 1 1 280px; margin: 0;">
+    <img src="/assets/images/chancery/hies-anniversary.jpg" alt="A large group of clergy and laity in front of the old Holy Innocents' English School building at an anniversary gathering" style="width: 100%; display: block; border-radius: 4px;">
+    <figcaption style="font-size: 0.8em; font-style: italic; margin-top: 0.4em;">The old school building when Montfort was known as Holy Innocents' English School, undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</figcaption>
+  </figure>
+</div>
+
 Montfort School, next door, turned out to be part of that same tangle. It was founded in 1916, not as Montfort but as Holy Innocents' English School, established beside the church by the parish priest of the time. The Brothers of St Gabriel took it over in 1936. It wasn't the only "Holy Innocents" on that stretch of Upper Serangoon Road, though. Holy Innocents' Boys School grew out of the same church grounds, and so did what's now CHIJ Our Lady of the Nativity. Holy Innocents' High School traces back further still, to 1892, and remains a separate school today. The names collided so often that in 1958 Holy Innocents' English School was renamed Montfort, after St Louis Marie Grignion de Montfort, the order's founder, specifically to end the confusion. I can't say for certain which of those schools Holy Innocents' Lane was actually named for. Montfort, my own school, was simply one of at least three that could have claimed it. Montfort itself moved to Hougang Avenue 8 in 1992. At some point after that, the lane and the cemetery next to it were cleared away entirely.
 
-<div style="float: left; max-width: 300px; margin: 0.25em 1.5em 1em 0;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Zinc_roofed_house_at_Kampong_Lor_Buangkok.jpg" alt="A zinc-roofed house in Kampong Lorong Buangkok, one of the last surviving kampongs in Singapore" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Not Kangkar itself, but a house in Kampong Lorong Buangkok — one of the last surviving kampongs in Singapore, and the closest thing left to what the old Kangkar villages would have looked like. (Photo: Muhammad Adrian / Wikimedia Commons, CC BY 4.0)</em>
+<div style="display: flex; flex-wrap: wrap; gap: 1em; margin: 1.5em 0;">
+  <figure style="flex: 1 1 280px; margin: 0;">
+    <img src="/assets/images/chancery/aukang-kampong-houses.jpg" alt="Attap kampong houses among coconut palms in old Aukang, 1920s or 1930s" style="width: 100%; display: block; border-radius: 4px;">
+    <figcaption style="font-size: 0.8em; font-style: italic; margin-top: 0.4em;">The parish kampong houses of old Aukang, the Teochew-Catholic enclave, c. 1920s&ndash;1930s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</figcaption>
+  </figure>
+  <figure style="flex: 1 1 280px; margin: 0;">
+    <img src="/assets/images/chancery/aukang-parishioners.jpg" alt="Parishioners gathered outside a kampong building in old Aukang, 1920s or 1930s" style="width: 100%; display: block; border-radius: 4px;">
+    <figcaption style="font-size: 0.8em; font-style: italic; margin-top: 0.4em;">The kampong parishioners of old Aukang, the Teochew-Catholic enclave, c. 1920s&ndash;1930s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</figcaption>
+  </figure>
+</div>
+
+<div style="float: left; max-width: 260px; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/chancery/aukang-chng-family-1932.jpg" alt="The extended Chng family, three generations of Aukang Teochew Catholics, in front of an attap house, 1932" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">The extended Chng family &mdash; three generations of Aukang Teochew Catholics &mdash; in front of an attap house, 1932. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
 </div>
 
 "Hougang" is the Mandarin reading of the Hokkien and Teochew "Au Kang," meaning the end of the river. Kangkar itself meant "foot of the stream." That's where the settlements clustered, wherever Teochew planters ran their kangchu system of jungle-clearing plantations along Sungei Serangoon. There were roughly twenty such kangkars across the island by an 1849 newspaper count. By 1986, more than nine in ten Kangkar villagers were still Teochew, and the dialect was still the area's everyday language. The Kangkar I half-remember was cleared in 1984. Its families were resettled into three- and four-room HDB flats, and its land was folded into what's now Punggol Park.
 
 <div style="clear: both;"></div>
 
+<div style="float: left; max-width: 210px; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/chancery/aukang-punggol-girls.jpg" alt="Two young women riding a motorcycle past an attap house in the Punggol 10th milestone neighbourhood, 1930s" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Kampong girls riding around the Ponggol 10th milestone neighbourhood, c. 1930s &mdash; a place located, as everywhere was then, by road and milestone. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
+</div>
+
 Punggol End, further along, was a different kind of village entirely: Kampong Wak Sumang, a Malay fishing settlement at Tanjong Punggol. By one descendant's account it was founded before 1819. It only got piped water, electricity and proper roads in the 1960s, and it became briefly well known afterward for its seafood restaurants and boatels. The government announced reclamation in 1983 and told residents to vacate by 1986. The fishing port and wholesale market outlasted the kampong itself, but even that finally closed in 1997, to make way for Punggol New Town.
 
-![HDB flats in Hougang, photographed in 2007](https://upload.wikimedia.org/wikipedia/commons/1/14/Hougang_HDB.JPG)
+<div style="clear: both;"></div>
 
-*HDB flats in Hougang, photographed in 2007 — the kind of housing that replaced the Kangkar villages after 1984. (Photo: Terence Ong / Wikimedia Commons, CC BY-SA 3.0)*
+![Aerial view of the Church of the Nativity of the Blessed Virgin Mary and its parish complex, ringed by HDB blocks](/assets/images/chancery/nativity-aerial.jpg)
 
-Hougang New Town itself was announced in 1979, planned for 460 hectares and 120,000 residents. Its first neighbourhoods were finished by 1983, and the rest by 1992, the same year Montfort left its original site for good. [See five more historical photos related to this post →](/gallery/jalan-payoh-lai-kangkar-montfort-nativity-church/) One thing about the area never got redeveloped along with everything else. Hougang has been held by the same opposition party, the Workers' Party, in every general election since 1991. It's a small, quietly remarkable fact in its own right, less a story about any one politician than a marker of how far Singapore's electoral landscape has matured since the kampong days.
+*Aerial shot of the Church of the Nativity of the Blessed Virgin Mary, Hougang, and its surrounding complex, hemmed in by the HDB blocks of Hougang New Town; the gabled building at left carries the same Alpha-and-Omega mark as the old Holy Innocents' English School. Undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.*
+
+Hougang New Town itself was announced in 1979, planned for 460 hectares and 120,000 residents. Its first neighbourhoods were finished by 1983, and the rest by 1992, the same year Montfort left its original site for good. [See more historical photos related to this post →](/gallery/jalan-payoh-lai-kangkar-montfort-nativity-church/) One thing about the area never got redeveloped along with everything else. Hougang has been held by the same opposition party, the Workers' Party, in every general election since 1991. It's a small, quietly remarkable fact in its own right, less a story about any one politician than a marker of how far Singapore's electoral landscape has matured since the kampong days.
 
 I can't reconstruct the Kangkar of my childhood in any real detail anymore. The specific smells, the sounds, the neighbours' faces are mostly gone, the same way the lane and the cemetery are gone. What's left is the walk itself: twenty minutes each way, a shortcut past a school that used to have a different name, to a church that has outlasted every version of the neighbourhood around it.
 
@@ -513,12 +549,13 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [Holy Innocents' High School — Wikipedia](https://en.wikipedia.org/wiki/Holy_Innocents%27_High_School)
 - [Hougang Heritage Trail — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/trails/Hougang-Heritage-Trail)
 - [The Teochew Catholics of Aukang](https://history.catholic.sg/the-teochew-catholics-of-aukang/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
+- [The Parish Schools](https://history.catholic.sg/the-parish-schools/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
+- [The "Holy Land" of Aukang](https://history.catholic.sg/the-holy-land-of-aukang/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
+- [Church of the Nativity of the Blessed Virgin Mary](https://history.catholic.sg/church-of-the-nativity-of-the-blessed-virgin-mary/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
+- Nine archival photographs reproduced by permission of the Chancery Archives, Roman Catholic Archdiocese of Singapore, solely for this post and its video (Rev. Fr. Rene Nicolas Collection and Maria Lee Ah Kin Collection); full credit lines appear in the individual captions.
 - [Church of the Nativity of the Blessed Virgin Mary — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/Places/national-monuments/church-of-the-nativity-of-the-blessed-virgin-mary)
 - [Hougang — HDB Towns, Your Home](https://www.hdb.gov.sg/cs/infoweb/about-us/history/hdb-towns-your-home/hougang)
 - [Low Thia Khiang — Wikipedia](https://en.wikipedia.org/wiki/Low_Thia_Khiang)
-- [File:Church of the Nativity of the Blessed Virgin Mary, October 2025.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity_of_the_Blessed_Virgin_Mary,_October_2025.jpg)
-- [File:Zinc roofed house at Kampong Lor Buangkok.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Zinc_roofed_house_at_Kampong_Lor_Buangkok.jpg)
-- [File:Hougang HDB.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_HDB.JPG)
 - [File:Punggol Park, Nov 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Punggol_Park,_Nov_06.JPG)
 - [File:Church of the Nativity of the Blessed Virgin Mary 5, Nov 06.JPG — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity_of_the_Blessed_Virgin_Mary_5,_Nov_06.JPG)
 - [File:Church of the Nativity of the Blessed Virgin Mary, night, July 2017.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Church_of_the_Nativity_of_the_Blessed_Virgin_Mary,_night,_July_2017.jpg)

@@ -533,7 +533,7 @@ def _prepare_slide(cfg, i, out_w, out_h):
     # identical code. Returns None for a chart slide - compose_frame_at()
     # never indexes the cache for those.
     slide = cfg.SLIDES[i]
-    if slide["type"] == "chart":
+    if slide["type"] in ("chart", "route-walk"):
         return None
     src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
     max_zoom = max(slide["zoom"])
@@ -588,6 +588,12 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
         frame = compose_chart_frame(slide, out_w, out_h, t, progress)
         frame = apply_caption(frame, t, out_w, out_h, cfg, captions)
         return frame, slide_idx
+    if slide["type"] == "route-walk":
+        # watch_video_lib.py can't animate a route-walk slide (the live
+        # widget / render_route_clip.py own that). Emit a black segment
+        # here so render() produces a full-length file; the matching
+        # route clip is spliced over this stretch afterwards.
+        return Image.new("RGB", (out_w, out_h), (0, 0, 0)), slide_idx
     zoom = interp3(*slide["zoom"], progress)
     pan_x = interp3(slide["pan"][0][0], slide["pan"][1][0], slide["pan"][2][0], progress)
     pan_y = interp3(slide["pan"][0][1], slide["pan"][1][1], slide["pan"][2][1], progress)
