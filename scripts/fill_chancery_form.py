@@ -10,22 +10,39 @@ request per post/video, per the Chancery's terms.
     python scripts/fill_chancery_form.py \
         --template docs/copyright/ArchivalHoldingsSearchRequestForm_v3-1Jun2018.pdf \
         --data     docs/copyright/chancery-request-2026-08-jalan-payoh-lai.json \
-        --out      docs/copyright/chancery-request-2026-08-jalan-payoh-lai-FILLED.pdf
+        --out      docs/copyright/chancery-request-2026-08-jalan-payoh-lai-FILLED.pdf \
+        --sign
 
-Chris reviews the output and signs the PDPA box on page 2 himself; the
-script never submits anything.
+With --sign, the requestor's name is rendered in a script font in the
+"Signature of requestor" box on page 2 (the same thing DocuSign / Google
+do when you type your name) - it is Chris's own name on his own request,
+at his direction. The script never submits anything.
 """
 import argparse
 import json
+import os
 import textwrap
 from io import BytesIO
 
 from pypdf import PdfReader, PdfWriter
 from reportlab.lib.colors import Color
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 PAGE_W, PAGE_H = 595.2, 841.8
 FONT = "Helvetica"
+
+# Script font for the typed signature. Segoe Script ships with Windows;
+# fall back to Ink Free, then to Helvetica-Oblique if neither is present.
+_SCRIPT_CANDIDATES = [
+    ("SegoeScript", r"C:\Windows\Fonts\segoesc.ttf"),
+    ("InkFree", r"C:\Windows\Fonts\Inkfree.ttf"),
+]
+
+# Page-2 "Signature of requestor" box, PDF points (origin bottom-left).
+SIGNATURE_POS = (398, 690)
+SIGNATURE_SIZE = 22
 
 # (x, y) baselines in PDF points, origin bottom-left. Tuned against the
 # blank v.3 form; see the --debug crosshair overlay when adjusting.
@@ -111,6 +128,32 @@ def _overlay_page1(data):
     return PdfReader(buf).pages[0]
 
 
+def _register_script_font():
+    for name, path in _SCRIPT_CANDIDATES:
+        if os.path.exists(path):
+            try:
+                pdfmetrics.registerFont(TTFont(name, path))
+                return name
+            except Exception:  # noqa: BLE001
+                continue
+    return "Helvetica-Oblique"
+
+
+def _signature_overlay(data):
+    """A page-2-sized overlay with the requestor's name in the signature box."""
+    name = data.get("signature_name") or data["full_name"].title()
+    font = _register_script_font()
+    buf = BytesIO()
+    c = canvas.Canvas(buf, pagesize=(PAGE_W, PAGE_H))
+    c.setFillColor(Color(0, 0, 0.55))
+    c.setFont(font, SIGNATURE_SIZE)
+    c.drawString(*SIGNATURE_POS, name)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    return PdfReader(buf).pages[0]
+
+
 def _attachment_page(data):
     buf = BytesIO()
     c = canvas.Canvas(buf, pagesize=(PAGE_W, PAGE_H))
@@ -138,6 +181,8 @@ def main():
     ap.add_argument("--data", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--debug", action="store_true", help="draw crosshairs at every anchor")
+    ap.add_argument("--sign", action="store_true",
+                    help="render the requestor's name in the page-2 signature box (script font)")
     args = ap.parse_args()
 
     with open(args.data, encoding="utf-8") as f:
@@ -150,7 +195,13 @@ def main():
     p1 = base.pages[0]
     p1.merge_page(_overlay_page1(data))
     w.add_page(p1)
-    for pg in base.pages[1:]:
+
+    p2 = base.pages[1]
+    if args.sign:
+        p2.merge_page(_signature_overlay(data))
+    w.add_page(p2)
+
+    for pg in base.pages[2:]:
         w.add_page(pg)
     for pg in _attachment_page(data):
         w.add_page(pg)
