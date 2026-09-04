@@ -725,6 +725,17 @@ PRONUNCIATION_OVERRIDES = {
                                    # call, "ken" over the more phonetically
                                    # faithful "kem"
     "Kempeitai's": "kˌɛnpeɪtˈaɪz",  # misaki won't derive the possessive here
+    "Xiamen": "ʃjˈɑːmˌɛːn",       # "SHYAH-mehn" - Xiamen University, Tan Kah
+                                   # Kee's second institution. Closer to
+                                   # Mandarin Xiamen/厦门 than the default
+                                   # reading, which came out as "char-men"/
+                                   # "shaa-muhn". Two rounds of samples: round
+                                   # 1 (plain "ɛn") had the second syllable
+                                   # rushed regardless of stress placement;
+                                   # adding a length mark on that vowel fixed
+                                   # it. Confirmed by Chris by ear (2026-09-04)
+                                   # from scratch/singapore-canned-pineapple-
+                                   # kings-pronunciation/
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -998,7 +1009,13 @@ def split_sentences(text: str) -> list[str]:
         before = text[:m.start()]
         word_match = re.search(r"(\w+)$", before)
         word = word_match.group(1).lower() if word_match else ""
-        if word in ABBREVIATIONS:
+        # A lone letter before the period ("J.", "P.") is an initial, not a
+        # sentence end - matters most for back-to-back initials ("J. P.
+        # Bastiani"), where without this each initial got synthesized as
+        # its own Kokoro sentence, producing an audible stutter/pause at
+        # every initial instead of one flowing name. Caught on the
+        # pineapple-kings post.
+        if word in ABBREVIATIONS or len(word) == 1:
             continue
         sentences.append(text[start:end].strip())
         start = end

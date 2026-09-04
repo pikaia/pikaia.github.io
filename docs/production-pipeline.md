@@ -1193,7 +1193,7 @@ Don't trust that a render "looks done" — verify:
 
 ```
 { echo; date; echo "=== 8.1 Verify frame count ==="
-  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
+  cmd=(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -1214,7 +1214,14 @@ Example:
 Compare against the expected frame count, `TOTAL_DURATION * FPS`
 (e.g. `322.625 * 25 = 8065.625` → expect `8066`, off-by-one from
 rounding is fine; for this post, `361.125 * 25 = 9028.125` → expect
-`9028` or `9029`). This is a **full decode**, not a spot-check — if the
+`9028` or `9029`). The `-select_streams v:0` flag matters: without it,
+`nb_read_frames` is reported per stream, and the .mp4's audio (AAC)
+track prints a second, much-lower number right after the real one -
+e.g. `13293` (video, correct) then `12462` (audio frames at ~24kHz/1024
+samples each, nothing to do with video at all). A past run misread that
+second number as a bad/stale frame count and treated it as a data-loss
+scare; it never was one - `-select_streams v:0` removes the ambiguity
+at the source. This is a **full decode**, not a spot-check — if the
 video ever needs trimming/concatenation with ffmpeg's `-c copy` path, a
 full-decode verify is mandatory (a real past bug: non-monotonic source
 DTS silently truncated the video track during a trim+concat, completely
@@ -1405,9 +1412,13 @@ you're on the right channel, top-left of Studio, before uploading).
   upload into the same click — that has raced YouTube's state and
   failed), then → **Upload file** → "With timing" → pick the `.srt`,
   before Publish or from the edit page afterwards. Wait for the
-  "Subtitle published" toast. The `.srt` is UTF-8 with a BOM; if an
-  upload errors out, the video is usually still processing — retry
-  once it finishes.
+  "Subtitle published" toast. The `.srt` is UTF-8 with a BOM. The
+  subtitle upload does **not** need to wait for YouTube's video
+  processing to finish — confirmed on the pineapple-kings post: the
+  video was still visibly processing when the `.srt` upload completed
+  cleanly, so the subtitle track rides along with the upload itself
+  rather than depending on transcoding. If an upload does error out,
+  look at the "Add language" race above first, not processing status.
 - **Captions (Short):** nothing to do. The Short already carries
   burned-in captions for the muted-autoplay scroll, and there is no
   Short-scoped `.srt` (it would need to be just the first few cues,

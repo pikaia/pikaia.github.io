@@ -59,6 +59,8 @@ IMG_ALT_RE = re.compile(r'\balt="([^"]*)"')
 # Garden post's hero.
 MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\(((?:[^()\s]|\([^()]*\))+)\)$')
 EM_TAG_RE = re.compile(r'<em\b[^>]*>(.*?)</em>', re.DOTALL)
+FIGURE_RE = re.compile(r'<figure\b[^>]*>(.*?)</figure>', re.DOTALL)
+FIGCAPTION_RE = re.compile(r'<figcaption\b[^>]*>(.*?)</figcaption>', re.DOTALL)
 ITALIC_RE = re.compile(r'\*([^*]+)\*')
 PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
 PHOTO_BY_RE = re.compile(r'Photo by\s+([^,]+),\s*licensed under\s+(.+?)\.?\s*$')
@@ -197,6 +199,25 @@ def _pair_from_block(block: str) -> tuple[str, str, str] | None:
     return url, alt, em_m.group(1)
 
 
+def _pairs_from_figures(block: str) -> list[tuple[str, str, str]]:
+    """A third caption layout alongside the two above: one or more
+    self-contained <figure><img>...<figcaption>...</figcaption></figure>
+    elements sharing a single block with no blank line between them - the
+    flex side-by-side image-pair pattern (e.g. the bullock-cart/tinning
+    pair on the pineapple-kings post). Each <figure> carries its own
+    image and caption, so this returns every pair found rather than a
+    single (url, alt, caption) like _pair_from_block."""
+    pairs = []
+    for fig_m in FIGURE_RE.finditer(block):
+        fig = fig_m.group(1)
+        img_m = IMG_TAG_RE.search(fig)
+        cap_m = FIGCAPTION_RE.search(fig)
+        if img_m and cap_m:
+            alt_m = IMG_ALT_RE.search(fig)
+            pairs.append((img_m.group(1), alt_m.group(1) if alt_m else "", cap_m.group(1)))
+    return pairs
+
+
 def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
     """Walks a post/gallery's markdown blocks, pairing each image (markdown
     ![]() or raw HTML <img src=...>) with its caption. Handles two layouts
@@ -209,6 +230,13 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
     pending_url = None
     pending_alt = None
     for block in blocks:
+        fig_pairs = _pairs_from_figures(block)
+        if fig_pairs:
+            for url, alt, raw_caption in fig_pairs:
+                result[normalize_commons_url(url)] = {"alt": alt, "credit": extract_image_credit(raw_caption)}
+            pending_url = None
+            continue
+
         combined = _pair_from_block(block)
         if combined:
             url, alt, raw_caption = combined

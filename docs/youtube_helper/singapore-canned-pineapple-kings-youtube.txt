@@ -13,12 +13,17 @@ Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice
 Images (Wikimedia Commons, credited individually):
 - Tan Kah Kee, Lee Kong Chian and Tan Lark Sye photographed together in 1946 — Tan Kah Kee Memorial Museum, via the National Archives of Singapore, public domain
 - Portrait of Tan Kah Kee, around the 1930s to 1940s — National Archives of Singapore, public domain
-- The clock tower building of The Chinese High School, now Hwa Chong Institution, Singapore — Gisling, CC BY 3.0
-- A classroom building at The Chinese High School photographed in 1952 — Gisling, CC BY 3.0
-- Nee Soon Road, Singapore, photographed in the 1980s — daves_archive, CC BY 2.0
-- Portrait of a young Tan Kah Kee, taken by Lee Brothers Studio, around the 1910s–1920s — National Archives of Singapore, public domain
+- A pineapple plantation on Buona Vista Road, Singapore, around 1910 — KITLV, public domain
+- A bullock cart loaded with pineapples outside a Singapore cannery, published 1902 — Internet Archive Book Images, via Wikimedia Commons; no known copyright restrictions
+- A large pile of pineapples ready for canning, Singapore, published 1902 — Internet Archive Book Images, via Wikimedia Commons; no known copyright restrictions
+- Inside a Chinese-run pineapple cannery in Singapore, published 1904 — Agricultural Bulletin of the Straits and Federated Malay States, 1904; Biodiversity Heritage Library, public domain
 - Portrait of Lee Kong Chian, businessman and philanthropist, around 1946 — Tan Kah Kee Memorial Museum, via the National Archives of Singapore, public domain
 - Portrait of Lim Nee Soon, Singapore planter and merchant, early 20th century — National Library Board / World Scientific, CC BY-SA 4.0; the portrait itself is long out of copyright
+- Nee Soon Road, Singapore, photographed in the 1980s — daves_archive, CC BY 2.0
+- The clock tower building of The Chinese High School, now Hwa Chong Institution, Singapore — Gisling, CC BY 3.0
+- Portrait of a young Tan Kah Kee, taken by Lee Brothers Studio, around the 1910s–1920s — National Archives of Singapore, public domain
+- A classroom building at The Chinese High School photographed in 1952 — Gisling, CC BY 3.0
+- Map of Singapore and southern Johor showing where the pineapple industry's canneries, estates and one still-running factory in Skudai were located — Map data © OpenStreetMap contributors
 
 Sources:
 - Lim Nee Soon — Singapore Infopedia, National Library Board
@@ -39,6 +44,11 @@ Sources:
 - File:Lim Nee Soon.png — Wikimedia Commons
 - File:年轻的陈嘉庚.jpg — Wikimedia Commons
 - File:Lee Kong Chian, 1946.png — Wikimedia Commons
+- File:KITLV - 79906 - Kleingrothe, C.J. - Medan - Pineapple plantation in the Buona Vista Road, Singapore - circa 1910.tif — Wikimedia Commons
+- File:Agricultural bulletin of the Straits and Federated Malay States. New series (1902) (17944867551).jpg — Wikimedia Commons
+- File:Agricultural bulletin of the Straits and Federated Malay States. New series (1902) (17756609000).jpg — Wikimedia Commons
+- File:Agricultural bulletin of the Straits and Federated Malay States. New series BHL43583042.jpg — Wikimedia Commons
+- Map data © OpenStreetMap contributors
 
 ----------------------------------------------------------------------
 
@@ -51,7 +61,7 @@ Description:
 In 1912, ships leaving Singapore carried more than half a million cases of canned pineapple, and for the first decades of the twentieth century the island was the largest producer and exporter of canned pineapple in the world. The fruit is almost absent from the way Singapore tells its own economic story now, which tends to start with rubber, tin and the port. Yet pineapple came first. It filled some of the island's earliest factories, and it seeded at least three of the largest Chinese business fortunes in the region — fortunes whose names are still attached to a town, a run of schools and universities, and a charitable foundation that is still giving money away today. #Shorts
 
 Full story: https://da.gd/st74ZI
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/Wqso0-bGKLc
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 

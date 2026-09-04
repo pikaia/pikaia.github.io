@@ -4,8 +4,8 @@ Title:
 A Typical Day for Singapore's Silver Generation
 
 Description:
-For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win.
 
+For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win.
 Full story: https://da.gd/bJo1W
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
@@ -47,7 +47,7 @@ Description:
 For many Singaporeans now in their 80s, the day starts early — not out of habit, but because that's when the shuttle to the nearest Active Ageing Centre picks up. A quick blood-pressure check, a subsidised breakfast, maybe a round of Rummy-O or a stretching class before the heat sets in. Some still work a few hours a day, clearing tables or wiping counters at the neighbourhood hawker centre. It's an unremarkable morning, and that's rather the point: for a generation that spent decades without much of a safety net, an unremarkable morning is a small daily win. #Shorts
 
 Full story: https://da.gd/bJo1W
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/Oq5Osn3TaYU
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
