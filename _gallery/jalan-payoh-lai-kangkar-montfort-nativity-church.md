@@ -11,7 +11,7 @@ More photographs of the places and people connected to this post — where Houga
 
 ![Carte-de-visite portrait of Fr Ambroise Maistre, 19th-century French missionary priest](https://upload.wikimedia.org/wikipedia/commons/c/c0/Ambroise_Maistre%2C_MEP_missionary_%281821-1866%29.jpg)
 
-*Fr. Ambroise Maistre (1821–1866) of the Missions Étrangères de Paris, who founded the Catholic community at Serangoon in 1853 and built its first presbytery, catechumenate and chapel — the origin of the Church of the Nativity of the Blessed Virgin Mary. Undated carte-de-visite portrait. (Archives of the Institut de Recherche France-Asie (IRFA) / Missions Étrangères de Paris; public domain by age)*
+*Fr. Ambroise Maistre (1821–1866) of the Missions Étrangères de Paris, who founded the Catholic community at Serangoon in 1853 and built its first presbytery, catechumenate and chapel — the origin of the Church of the Nativity of the Blessed Virgin Mary. Undated carte-de-visite portrait. (Institut de recherche France-Asie / MEP)*
 
 ### Where Hougang sits on the island
 

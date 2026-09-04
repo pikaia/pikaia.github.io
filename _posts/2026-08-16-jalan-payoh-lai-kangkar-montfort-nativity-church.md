@@ -500,7 +500,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
 
 <div style="float: right; max-width: 230px; margin: 0.25em 0 1em 1.5em;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Ambroise_Maistre%2C_MEP_missionary_%281821-1866%29.jpg" alt="Carte-de-visite portrait of Fr Ambroise Maistre, 19th-century French missionary priest" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Fr. Ambroise Maistre (1821&ndash;1866), the Missions &Eacute;trang&egrave;res de Paris priest behind the first Aukang chapel. Undated carte-de-visite portrait, from the archives of the Institut de Recherche France-Asie (IRFA) / Missions &Eacute;trang&egrave;res de Paris; in the public domain by age.</em>
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Fr. Ambroise Maistre (1821&ndash;1866), the Missions &Eacute;trang&egrave;res de Paris priest behind the first Aukang chapel. Undated carte-de-visite portrait. Institut de recherche France-Asie / MEP.</em>
 </div>
 
 Sundays meant the same walk in the same direction, except to Mass instead of school. I'd cut through whatever backlane shaved the most time off the trip. The church at the end of it, Nativity of the Blessed Virgin Mary, was older than anything else I knew as a child, though I had no idea how much older at the time. A French missionary priest, Fr. Ambroise Maistre, bought the land in 1857 for the Teochew Catholic farmers and fishermen of Aukang. Many of the converts came from Shantou in China. The original attap chapel eventually gave way to the Neo-Gothic building that still stands today, blessed in December 1901 and expanded again in 1933. It has been a national monument since 2005. It still holds a Teochew-language Mass too, a tradition instituted in 1971 that is, as far as anyone can confirm, the last regular Teochew Catholic Mass left in Singapore.
@@ -574,7 +574,7 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [The Parish Schools](https://history.catholic.sg/the-parish-schools/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
 - [The "Holy Land" of Aukang](https://history.catholic.sg/the-holy-land-of-aukang/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
 - [Church of the Nativity of the Blessed Virgin Mary](https://history.catholic.sg/church-of-the-nativity-of-the-blessed-virgin-mary/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
-- [MAISTRE Ambroise (1821–1866)](https://irfa.paris/fr/missionnaire/0576-maistre-ambroise/) — Institut de Recherche France-Asie (IRFA) / Missions Étrangères de Paris
+- [MAISTRE Ambroise (1821–1866)](https://irfa.paris/fr/missionnaire/0576-maistre-ambroise/) — Institut de recherche France-Asie / MEP
 - Nine archival photographs reproduced by permission of the Chancery Archives, Roman Catholic Archdiocese of Singapore, solely for this post and its video (Rev. Fr. Rene Nicolas Collection and Maria Lee Ah Kin Collection); full credit lines appear in the individual captions.
 - [Church of the Nativity of the Blessed Virgin Mary — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/Places/national-monuments/church-of-the-nativity-of-the-blessed-virgin-mary)
 - [Hougang — HDB Towns, Your Home](https://www.hdb.gov.sg/cs/infoweb/about-us/history/hdb-towns-your-home/hougang)
@@ -588,7 +588,7 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [File:Sungei Serangoon, panorama, Nov 06.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sungei_Serangoon,_panorama,_Nov_06.jpg)
 - [File:Hougang Single Member Constituency, 2025.svg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hougang_Single_Member_Constituency,_2025.svg)
 - [File:WorkersPartyHougangSupporters.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WorkersPartyHougangSupporters.jpg)
-- [File:Ambroise Maistre, MEP missionary (1821-1866).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ambroise_Maistre,_MEP_missionary_(1821-1866).jpg) (public domain; portrait sourced from IRFA / Missions Étrangères de Paris)
+- [File:Ambroise Maistre, MEP missionary (1821-1866).jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ambroise_Maistre,_MEP_missionary_(1821-1866).jpg) (public domain by age; credit: Institut de recherche France-Asie / MEP, use confirmed by IRFA 4 Sep 2026)
 - [OpenStreetMap](https://www.openstreetmap.org/copyright) — map data © OpenStreetMap contributors, ODbL
 
 [← Back to all posts](/)

@@ -1,0 +1,33 @@
+Draft reply to IRFA — reply on the thread "Utilisation portrait P.
+Ambroise Maistre.eml".
+
+IRFA (Ghislaine Olive, Iconothèque, 4 Sep 2026) confirmed the portrait
+is open-access and may be used, and asked for the credit:
+  "Institut de recherche France-Asie/MEP"
+That exact wording has been applied in the post caption, the gallery, the
+video config CREDITS, the youtube_helper draft, and the post Sources list
+(commit follows).
+
+Send from: chriskslee@gmail.com
+To:        iconotheque@irfa.paris
+Subject:   Re: Utilisation portrait P. Ambroise Maistre
+
+---
+
+Bonjour Madame Olive,
+
+Je vous remercie pour votre réponse et pour votre autorisation.
+
+Le portrait est déjà en ligne dans l'article et dans la courte vidéo qui
+l'accompagne. J'ai mis à jour le crédit pour qu'il apparaisse partout
+sous la forme que vous m'avez indiquée : « Institut de recherche
+France-Asie / MEP ».
+
+Article : https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/
+Vidéo : https://youtu.be/Fh7IT4cBG_A
+
+Encore merci pour votre aide.
+
+Cordialement,
+Chris Lee
+Lesser Known Singapore — https://pikaia.github.io

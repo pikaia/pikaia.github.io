@@ -1,0 +1,206 @@
+Delivered-To: chriskslee@gmail.com
+Received: by 2002:a05:7000:cc1b:b0:892:21ff:5b9 with SMTP id mc27csp3077117mab;
+        Fri, 4 Sep 2026 05:25:32 -0700 (PDT)
+X-Received: by 2002:a05:6102:2d03:b0:786:77e2:d8fa with SMTP id ada2fe7eead31-78a4a943a32mr1426622137.5.1788524732506;
+        Fri, 04 Sep 2026 05:25:32 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1788524732; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=sHqR9ojG7O4hmk5o5+8hrvw60p2zBV6rHvOrbqAkgFrLT4L2cqXvtq4p5z4oZPp4Pd
+         7SSF+q1zCnOzfS+VFPd3yo+9YToyLED3NcnDlZTK4tFO0LH4IUN/dmgG0iGa0y1UCmeb
+         lhoLrUa/P4W8p/sJRGuZdtxg0AlfV7XQ87E8oysUKE0mh9fPv5gbTWlt4EgT2/CBGgEw
+         61xsMYDTOtLrxC07cJ5icnh6DTSSQIS517n4wBMYcyHi/eAxn9LnRlW46eQgaJmdrPka
+         5QGVQ/bNVkIQq4cbXJRWPouQwyYqBiD9pZ3M3UpDSsPYK76zFZ+iLjGF6VnuuEEashwZ
+         Bs/A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=EY8z4nn95sMWZD1PZfkjFJpmCI39FGxy1tyh/bXIpcs=;
+        fh=0St26G+rLZmhmXheooChkTBZVpTlpSuVzMUy+0ty7iw=;
+        b=aEWoxnQjumQprmGy9cWSqeNzaST31HkzRlEkhBGjlPxMlmGiK1aqPYIpjwUDCjaQDS
+         VkIHcUgw03vBEkTgFH0Oe+ByYpWloMQg6or8bSgytE5P5LQSngiGjkb6CGQz25dNwTr5
+         mTFsxjZwsk4bCLwER5H1M1eI3uUzWiSCJKtmhcIKwYovKNG8DG8ptNp5Cag3V+vs59J/
+         QhIBV/nZ3cKl41yRbO924ACHeIcS/gc2BshYHQTpm5lrQ3oGyCHqYzffBdKWX0gYHDP6
+         d9WiNeZA+ACbmyvAjDqM/rqoukHLv6Fhnq2qJin0tlWYoIs63q3c+w29RBjKH7POWQao
+         n9ZQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@irfa.paris header.s=google header.b=Qf2btxjw;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of iconotheque@irfa.paris designates 209.85.220.41 as permitted sender) smtp.mailfrom=iconotheque@irfa.paris;
+       dara=pass header.i=@gmail.com
+Return-Path: <iconotheque@irfa.paris>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a1e0cc1a2514c-9808ed1a7d7sor160290241.6.2026.09.04.05.25.32
+        for <chriskslee@gmail.com>
+        (Google Transport Security);
+        Fri, 04 Sep 2026 05:25:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of iconotheque@irfa.paris designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@irfa.paris header.s=google header.b=Qf2btxjw;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of iconotheque@irfa.paris designates 209.85.220.41 as permitted sender) smtp.mailfrom=iconotheque@irfa.paris;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1788524732; cv=none;
+        d=google.com; s=arc-20260327;
+        b=iWRJ3DioDMPXor7i8szvzGde6IFSI+DKVXOP/Vm/36p9cgNtYdlPfy0vGQysh9h1/b
+         qsObMZhYZ/kmheKcRyeqEtuBnNVxf80WfkAnw3AkEf+nZe0ozKAm0kWA3toH3pLtegdd
+         tPOwVjeKr6QdFPZd0WmPof+SfpbobdCfeY7VLWDIHi4AmhxeNAqRCI54cFBbLPZGgBx9
+         43avyoI0BMNB+E2kenFbd1fI7abOu2jUg5+FpZShWkZJyIdOjMrt5JdkkORV4RLODqu1
+         f5RyyJ2GZpcfFS/wZkU94oJpWaytbMX3xfYJne6qPf8s0tyQpgR+GT8GqKyo8Zuds9Jj
+         J+Tw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=EY8z4nn95sMWZD1PZfkjFJpmCI39FGxy1tyh/bXIpcs=;
+        fh=0St26G+rLZmhmXheooChkTBZVpTlpSuVzMUy+0ty7iw=;
+        b=b4M31B1Zvfv7qZ4ER16dHzIH1/kTGsI1LE6O88vqe7OE3oOQArkwZKOsh6fgkQzED5
+         QFBTAK3kYuOM0HB11nYNuF9V4ZZWca/Z16b7y1wNf8USrqADaW6mjw5Gt38/K45RehGP
+         x5DNJ3a1oc/YseQBcAatEfgmo2ERHi2P7iyv/okn2OQnB4awoCwwObB1l6NtUMeFNyP3
+         suYlQjnuMkgZ6uNoHxuiQCBZxJKc7lizrWqVpQmrQb/ylhv4+fi1fPJvSy3yQOi0CGII
+         bsqbGi3xJSGNjTEJFIQVcwGtBx3Rq2S4miQAh+wzq+WtWm5fqWQd7cESR2p4Ge3axu//
+         BsLw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=irfa.paris; s=google; t=1788524732; x=1789129532; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=EY8z4nn95sMWZD1PZfkjFJpmCI39FGxy1tyh/bXIpcs=;
+        b=Qf2btxjwLNF6oyZZAqR0A8P2qIEzQM/NapOVNfqgOyW8NyILesXpTAGb6iP4fDeMcl
+         w8lF8lOottg3O1IxDWVv8yMxoAXAujsB5VAF9W7uEmkBA5Js1zu62XKeL1X7p1JgB2bB
+         Sc66PTbEZSAt3FDbGWhbGYnl/psELh1x+8Rlw=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1788524732; x=1789129532;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=EY8z4nn95sMWZD1PZfkjFJpmCI39FGxy1tyh/bXIpcs=;
+        b=HYVxiusuL9GQT09gLZO0ktITM8vSsHl+AwLe9iSMqDRLRAEgNM+rk3mTijrtd/neH0
+         NChZHEnhJ/pF9+P9yk3v1AREUWAjM/tvtGUZA7lsJvEEhONH/5USPmqLNuka4DLH1Hf7
+         XREE8vZV7c6IbPN9NN3zLEeyVlqMkLJfdpsyHslBWippZ5RX3t8qTn3D+5nDScIgQyhk
+         QDhuHXBnZJnKHypuaCLRWH4vrDvXHV7OU79oaWX3R1TCtjMTmvzJZU530rbHcohvgp41
+         rYQmg44NwPzCq/aqfUYKGVCdItiymHxXVdaDdYXVhoIojyWF+e4bNO7k62nr/O9bGNBT
+         49Zg==
+X-Gm-Message-State: AFuF++kPg+gMA8P4U3f/uFOh2l7nHSoRjFVf4f2BhljSbxJTMr5Ffljk
+	bDQNHhHlroa8dsHsUyJ3wEGZHwjavJbHQLo45cwTeHxxFXMhCDETdLBV72pXwWNVacRXmh3oy+e
+	JuL6++60ytR66I9b9Vokwp7aIUvXFVb45KvgM8hrFgLZInXx7tx1RJaE=
+X-Gm-Gg: AYBFou2wd1zflmvJK9oQuMM6ZCapO12xXiamGYhKwjdjY6Iifl6iEbS/jlM8EC+DEUr
+	FFKq2ZDF1yeH+kUkGYr0BjJ8De74xI/P4NcRSq+4yDXk9Dh4Tq5+MD4ivnU2XYN9EKhk1UCc+i4
+	6yAgPgPc2pYwIUXaT24fIVheNLPmK4gkACM7Lnb586k/2jaOdDzVNu8M4gKoZVYec6kaOGgFul5
+	wrTL4phIzJzUvLXNYUUvUq0vBO+CFEoSNTJeYCNGgFZ9vJYF3ld4i5iuJBwApO9seY3PlPHrAOO
+	UNzqXxecCjF+EMeTI/6f3CtihZ1YVxIrCZcvcei3x4tLTTJ5rpdv
+X-Received: by 2002:a05:6102:441b:b0:784:d83f:2a59 with SMTP id
+ ada2fe7eead31-78a4aa99295mr1529077137.9.1788524731896; Fri, 04 Sep 2026
+ 05:25:31 -0700 (PDT)
+MIME-Version: 1.0
+From: Ghislaine Olive <iconotheque@irfa.paris>
+Date: Fri, 4 Sep 2026 14:28:16 +0200
+X-Gm-Features: AcwNN1X_s_vR7s8rUBvihGb4OmMjP3HuQwmrnFQNytix4nT1BqHJNKGVEPNmY-g
+Message-ID: <CAMBPASUaLC6GFxJZkfKGQ=fQeg7+=5ar1JN=FU0gNNHP2Q631Q@mail.gmail.com>
+Subject: Utilisation portrait P. Ambroise Maistre
+To: Chris Lee <chriskslee@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000051258c065aa75d21"
+
+--00000000000051258c065aa75d21
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour Chris Lee,
+
+Ce portrait est en acc=C3=A8s libre sur le site de l'IRFA. Vous pouvez
+l'utiliser pour votre article.
+Voici le copyright : Institut de recherche France-Asie/MEP
+
+Bien cordialement,
+--=20
+--
+
+
+
+
+*Ghislaine Olive**Iconoth=C3=A8que*
+
+
+28 rue de Babylone
+75007 Paris
+
+
+
++33 1 44 39 91 38
+
++33 6 20 33 31 27
+
+iconotheque@irfa.paris
+
+
+
+--
+
+--00000000000051258c065aa75d21
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div>Bonjour Chris Lee,</div>=
+<div><br></div><div>Ce portrait est en acc=C3=A8s libre sur le site de l&#3=
+9;IRFA. Vous pouvez l&#39;utiliser pour votre article.</div><div>Voici le c=
+opyright : Institut de recherche France-Asie/MEP</div><div><br></div><div>B=
+ien cordialement,</div><span class=3D"gmail_signature_prefix">-- </span><br=
+><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signatu=
+re"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div =
+dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"lt=
+r"><span style=3D"font-family:Optima-Regular;font-size:12px;color:rgb(0,0,0=
+)"><span></span><span></span><span></span><span></span>--</span><br style=
+=3D"font-family:Optima-Regular;font-size:12px;color:rgb(0,0,0)"><table styl=
+e=3D"font-family:Optima-Regular;color:rgb(0,0,0);font-size:12.8px;letter-sp=
+acing:0.2px;width:469pt;border-collapse:collapse;border:none" width=3D"625"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr style=3D"heigh=
+t:56.45pt"><td style=3D"text-align:center;width:109.65pt;border-style:none =
+solid none none;border-right-width:1pt;border-right-color:windowtext;paddin=
+g:0cm 5.4pt;height:56.45pt" width=3D"146" valign=3D"top"><br><img src=3D"ht=
+tps://drive.google.com/a/missionsetrangeres.com/uc?id=3D1FBy-jPMI0WdDX9ygxN=
+de7pBlpzDVfMPQ&amp;export=3Ddownload" width=3D"96" height=3D"54"><br><br></=
+td><td style=3D"width:187.8pt;border-style:none solid none none;border-righ=
+t-width:1pt;border-right-color:windowtext;padding:0cm 5.4pt;height:56.45pt"=
+ width=3D"250"><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.1=
+5pt;line-height:normal"><b><span style=3D"font-family:&#39;Source Sans Pro&=
+#39;,sans-serif;color:rgb(120,120,120)"><font size=3D"2">Ghislaine Olive</f=
+ont><br></span></b><font size=3D"2"><i><span style=3D"font-family:&#39;Sour=
+ce Sans Pro&#39;,sans-serif;color:rgb(120,120,120)">Iconoth=C3=A8que</span>=
+</i></font></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.1=
+5pt;line-height:normal"><font size=3D"2"><i><span style=3D"font-family:&#39=
+;Source Sans Pro&#39;,sans-serif;color:rgb(120,120,120)"><br></span></i></f=
+ont></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.15pt;lin=
+e-height:normal"><span style=3D"font-family:&#39;Source Sans Pro&#39;,sans-=
+serif;color:rgb(120,120,120)"><font size=3D"2">28 rue de Babylone<br>75007 =
+Paris=C2=A0</font></span><span style=3D"font-size:9pt;font-family:&#39;Sour=
+ce Sans Pro&#39;,sans-serif;color:rgb(120,120,120)"></span></p></td><td sty=
+le=3D"width:171.55pt;border:none;padding:0cm 5.4pt;height:56.45pt" width=3D=
+"229"><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.15pt;line-=
+height:normal"><span style=3D"font-family:&#39;Source Sans Pro&#39;,sans-se=
+rif;color:rgb(120,120,120)"><font size=3D"2"><br></font></span></p><p class=
+=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.15pt;line-height:normal"=
+><span style=3D"font-family:&#39;Source Sans Pro&#39;,sans-serif;color:rgb(=
+120,120,120)"><font size=3D"2"><br></font></span></p><p class=3D"MsoNormal"=
+ style=3D"margin:0cm 0cm 0.0001pt 14.15pt;line-height:normal"><span style=
+=3D"font-family:&#39;Source Sans Pro&#39;,sans-serif;color:rgb(120,120,120)=
+"><font size=3D"2">+33</font></span><span style=3D"color:rgb(34,34,34);font=
+-family:Arial,Helvetica,sans-serif;font-size:small;letter-spacing:normal">=
+=C2=A0</span><span style=3D"color:rgb(120,120,120);font-family:&#39;Source =
+Sans Pro&#39;,sans-serif;font-size:small;letter-spacing:0.2px">1 44 39 91 3=
+8</span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.15pt=
+;line-height:normal"><span style=3D"font-size:small;color:rgb(120,120,120);=
+font-family:&#39;Source Sans Pro&#39;,sans-serif;letter-spacing:0.2px">+33 =
+6 20 33 31 27</span></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.00=
+01pt 14.15pt;line-height:normal"><a href=3D"mailto:iconotheque@irfa.paris" =
+style=3D"color:rgb(17,85,204);font-family:&#39;Source Sans Pro&#39;,sans-se=
+rif;letter-spacing:0.2px" target=3D"_blank">iconotheque@irfa.paris</a><br><=
+/p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.15pt;line-hei=
+ght:normal"><font size=3D"2"><span style=3D"font-family:&#39;Source Sans Pr=
+o&#39;,sans-serif;color:rgb(120,120,120)"><br></span><b><span style=3D"font=
+-family:&#39;Source Sans Pro&#39;,sans-serif;color:rgb(127,127,127)"></span=
+></b></font></p><p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt 14.=
+15pt;line-height:normal"><b><span style=3D"font-family:&#39;Source Sans Pro=
+&#39;,sans-serif;color:rgb(108,0,27)"><br></span></b></p></td></tr></tbody>=
+</table><span style=3D"font-family:Optima-Regular;font-size:12px;color:rgb(=
+0,0,0)">--</span><br></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div>
+
+--00000000000051258c065aa75d21--

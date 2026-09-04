@@ -13,7 +13,7 @@ Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice
 Images (Chancery Archives, Wikimedia Commons, and IRFA — credited individually):
 - Aerial shot of the Church of the Nativity of the Blessed Virgin Mary, Hougang, and its surrounding complex, undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.
 - Black and white photograph of the outdoor statue of the Blessed Virgin Mary, Church of the Nativity of the Blessed Virgin Mary, Hougang, Singapore, undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.
-- Portrait of Fr Ambroise Maistre (1821-1866), Missions Etrangeres de Paris; archives of the Institut de Recherche France-Asie (IRFA) / Missions Etrangeres de Paris, via Wikimedia Commons, public domain.
+- Portrait of Fr Ambroise Maistre (1821-1866). Institut de recherche France-Asie / MEP.
 - Church of the Nativity of the Blessed Virgin Mary at night, 2017 — Banej / Wikimedia Commons, CC BY-SA 3.0
 - Interior of the Church of the Nativity of the Blessed Virgin Mary, 2006 — User:Sengkang / Wikimedia Commons, copyrighted free use
 - Black and white photograph of the Holy Innocents' English School building facade, c. 1910s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.
@@ -32,7 +32,7 @@ Sources (full list, with links, in the post above):
 - Hougang; Kampong Wak Sumang, Punggol — National Library Board (Infopedia, BiblioAsia)
 - Hougang Heritage Trail; History of Punggol; Church of the Nativity (national monument) — Roots.gov.sg
 - The Montfort Story — Montfort Secondary School; Holy Innocents' High School — Wikipedia
-- MAISTRE Ambroise (1821-1866) — Institut de Recherche France-Asie (IRFA) / Missions Etrangeres de Paris
+- MAISTRE Ambroise (1821-1866) — Institut de recherche France-Asie / MEP
 - Map data (c) OpenStreetMap contributors, ODbL
 
 ----------------------------------------------------------------------

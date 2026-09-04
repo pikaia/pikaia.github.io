@@ -56,9 +56,8 @@ IMAGES = {
 # captions; MAISTRE (also a Wikimedia Commons file now) gets an explicit
 # line so the YouTube description reads cleanly.
 CREDITS = {
-    "MAISTRE": ("Portrait of Fr Ambroise Maistre (1821-1866), Missions Etrangeres de Paris; "
-                "archives of the Institut de Recherche France-Asie (IRFA) / Missions Etrangeres "
-                "de Paris, via Wikimedia Commons, public domain."),
+    "MAISTRE": ("Portrait of Fr Ambroise Maistre (1821-1866). "
+                "Institut de recherche France-Asie / MEP."),
     "MARIANSTATUE": ("Black and white photograph of the outdoor statue of the Blessed Virgin Mary, "
                      "Church of the Nativity of the Blessed Virgin Mary, Hougang, Singapore, undated. "
                      "Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives, Roman Catholic "
