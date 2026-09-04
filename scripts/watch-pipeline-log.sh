@@ -21,6 +21,10 @@ if [ ! -f "$log" ]; then
 fi
 
 tail -n0 -f "$log" | awk '
+  /^\$ /             { next }  # the echoed command line itself can legitimately
+                                # contain "error" as a flag value (ffprobe -v error,
+                                # ffmpeg -loglevel error mean "log at error severity",
+                                # not "an error occurred") - skip it before matching
   /^=== /            { hdr = $0 }
   /^real[[:space:]]/ { print hdr " -> done (" $0 ")"; fflush() }
   tolower($0) ~ /error|traceback|exception|failed/ {
