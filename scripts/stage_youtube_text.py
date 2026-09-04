@@ -436,9 +436,16 @@ def main() -> None:
     out_lines.append("")
     out_lines.append(narration_line)
     out_lines.append("")
+    main_credit_lines = build_credit_lines(main_images, captions, main_credits, existing_main_url)
     if main_images is not None:
-        out_lines.append("Images (Wikimedia Commons and NewspaperSG, credited individually):")
-    out_lines.extend(build_credit_lines(main_images, captions, main_credits, existing_main_url))
+        # Only mention NewspaperSG if a credit line actually names it -
+        # this used to be hardcoded regardless of what sources a post
+        # actually used, caught on the Jalan Payoh Lai and pineapple-kings
+        # posts (neither has any NewspaperSG images).
+        image_sources = ("Wikimedia Commons and NewspaperSG" if any("NewspaperSG" in line for line in main_credit_lines)
+                          else "Wikimedia Commons")
+        out_lines.append(f"Images ({image_sources}, credited individually):")
+    out_lines.extend(main_credit_lines)
     if sources:
         out_lines.append("")
         out_lines.append("Sources:")
@@ -459,9 +466,12 @@ def main() -> None:
     out_lines.append("")
     out_lines.append(narration_line)
     out_lines.append("")
+    short_credit_lines = build_credit_lines(short_images, captions, short_credits, existing_short_url)
     if short_images is not None:
-        out_lines.append("Images (Wikimedia Commons):")
-    out_lines.extend(build_credit_lines(short_images, captions, short_credits, existing_short_url))
+        image_sources = ("Wikimedia Commons and NewspaperSG" if any("NewspaperSG" in line for line in short_credit_lines)
+                          else "Wikimedia Commons")
+        out_lines.append(f"Images ({image_sources}):")
+    out_lines.extend(short_credit_lines)
 
     out_text = "\n".join(out_lines) + "\n"
 
