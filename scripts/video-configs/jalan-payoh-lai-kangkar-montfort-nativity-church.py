@@ -4,9 +4,9 @@ main video.
 Re-cut (2026-09-03) to fold in nine photographs from the Chancery
 Archives, Roman Catholic Archdiocese of Singapore, reproduced by
 permission for this post and video only (Rev. Fr. Rene Nicolas
-Collection; Maria Lee Ah Kin Collection). Each has a mandatory credit
+Collection; Mary and Joseph Lee Collection). Each has a mandatory credit
 line - see CREDITS; stage_youtube_text.py puts them in the description.
-The three small Maria Lee Ah Kin photos (fisherman, Chng family, Punggol
+The three small Mary and Joseph Lee photos (fisherman, Chng family, Punggol
 girls) plus the Maistre carte-de-visite are shown frozen (no Ken Burns
 zoom) since they don't take enlargement - _FRZ.
 
@@ -80,13 +80,13 @@ CREDITS = {
                      "Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of "
                      "Singapore."),
     "FISHERMAN": ("Working life in the kampong - a young fisherman mending the prawn trawler nets, "
-                  "c. 1930s. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman "
+                  "c. 1930s. Mary and Joseph Lee Collection, courtesy of the Chancery Archives, Roman "
                   "Catholic Archdiocese of Singapore."),
     "PUNGGOLGIRLS": ("Kampong girls riding around the Ponggol 10th milestone neighbourhood, c. 1930s. "
-                     "Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic "
+                     "Mary and Joseph Lee Collection, courtesy of the Chancery Archives, Roman Catholic "
                      "Archdiocese of Singapore."),
     "CHNGFAMILY": ("The extended Chng Family comprising three generations of Aukang Teochew Catholics "
-                   "in front of an attap house, 1932. Maria Lee Ah Kin Collection, courtesy of the "
+                   "in front of an attap house, 1932. Mary and Joseph Lee Collection, courtesy of the "
                    "Chancery Archives, Roman Catholic Archdiocese of Singapore."),
 }
 

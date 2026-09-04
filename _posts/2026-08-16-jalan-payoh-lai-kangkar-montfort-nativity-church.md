@@ -495,7 +495,7 @@ I was born in 1960 on Jalan Payoh Lai, in what was then the Kangkar area of Houg
 
 <div style="float: left; max-width: 240px; margin: 0.25em 1.5em 1em 0;">
 <img src="/assets/images/chancery/aukang-fisherman.jpg" alt="A young fisherman mending prawn-trawler nets in the kampong, Aukang, 1930s" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Working life in the kampong &mdash; a young fisherman mending the prawn-trawler nets, c. 1930s. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Working life in the kampong &mdash; a young fisherman mending the prawn-trawler nets, c. 1930s. Mary and Joseph Lee Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
 </div>
 
 <div style="float: right; max-width: 230px; margin: 0.25em 0 1em 1.5em;">
@@ -533,7 +533,7 @@ Montfort School, next door, turned out to be part of that same tangle. It was fo
 
 <div style="float: left; max-width: 260px; margin: 0.25em 1.5em 1em 0;">
 <img src="/assets/images/chancery/aukang-chng-family-1932.jpg" alt="The extended Chng family, three generations of Aukang Teochew Catholics, in front of an attap house, 1932" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">The extended Chng family &mdash; three generations of Aukang Teochew Catholics &mdash; in front of an attap house, 1932. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">The extended Chng family &mdash; three generations of Aukang Teochew Catholics &mdash; in front of an attap house, 1932. Mary and Joseph Lee Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
 </div>
 
 "Hougang" is the Mandarin reading of the Hokkien and Teochew "Au Kang," meaning the end of the river. Kangkar itself meant "foot of the stream." That's where the settlements clustered, wherever Teochew planters ran their kangchu system of jungle-clearing plantations along Sungei Serangoon. There were roughly twenty such kangkars across the island by an 1849 newspaper count. By 1986, more than nine in ten Kangkar villagers were still Teochew, and the dialect was still the area's everyday language. The Kangkar I half-remember was cleared in 1984. Its families were resettled into three- and four-room HDB flats, and its land was folded into what's now Punggol Park.
@@ -542,7 +542,7 @@ Montfort School, next door, turned out to be part of that same tangle. It was fo
 
 <div style="float: left; max-width: 210px; margin: 0.25em 1.5em 1em 0;">
 <img src="/assets/images/chancery/aukang-punggol-girls.jpg" alt="Two young women riding a motorcycle past an attap house in the Punggol 10th milestone neighbourhood, 1930s" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Kampong girls riding around the Ponggol 10th milestone neighbourhood, c. 1930s &mdash; a place located, as everywhere was then, by road and milestone. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Kampong girls riding around the Ponggol 10th milestone neighbourhood, c. 1930s &mdash; a place located, as everywhere was then, by road and milestone. Mary and Joseph Lee Collection, courtesy of the Chancery Archives, Roman Catholic Archdiocese of Singapore.</em>
 </div>
 
 Punggol End, further along, was a different kind of village entirely: Kampong Wak Sumang, a Malay fishing settlement at Tanjong Punggol. By one descendant's account it was founded before 1819. It only got piped water, electricity and proper roads in the 1960s, and it became briefly well known afterward for its seafood restaurants and boatels. The government announced reclamation in 1983 and told residents to vacate by 1986. The fishing port and wholesale market outlasted the kampong itself, but even that finally closed in 1997, to make way for Punggol New Town.
@@ -575,7 +575,7 @@ I can't reconstruct the Kangkar of my childhood in any real detail anymore. The 
 - [The "Holy Land" of Aukang](https://history.catholic.sg/the-holy-land-of-aukang/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
 - [Church of the Nativity of the Blessed Virgin Mary](https://history.catholic.sg/church-of-the-nativity-of-the-blessed-virgin-mary/) — Chancery Archives, Roman Catholic Archdiocese of Singapore ©
 - [MAISTRE Ambroise (1821–1866)](https://irfa.paris/fr/missionnaire/0576-maistre-ambroise/) — Institut de recherche France-Asie / MEP
-- Nine archival photographs reproduced by permission of the Chancery Archives, Roman Catholic Archdiocese of Singapore, solely for this post and its video (Rev. Fr. Rene Nicolas Collection and Maria Lee Ah Kin Collection); full credit lines appear in the individual captions.
+- Nine archival photographs reproduced by permission of the Chancery Archives, Roman Catholic Archdiocese of Singapore, solely for this post and its video (Rev. Fr. Rene Nicolas Collection and Mary and Joseph Lee Collection); full credit lines appear in the individual captions.
 - [Church of the Nativity of the Blessed Virgin Mary — Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/Places/national-monuments/church-of-the-nativity-of-the-blessed-virgin-mary)
 - [Hougang — HDB Towns, Your Home](https://www.hdb.gov.sg/cs/infoweb/about-us/history/hdb-towns-your-home/hougang)
 - [Low Thia Khiang — Wikipedia](https://en.wikipedia.org/wiki/Low_Thia_Khiang)
