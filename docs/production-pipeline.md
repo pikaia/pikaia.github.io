@@ -174,6 +174,17 @@ Claude "done with steps 1-3 of `<slug>`" and point at `logs/<slug>.log`
 instead of pasting the console output directly — Claude can read the
 file itself and pick up from there.
 
+**Optional: have Claude watch the log instead of announcing each step.**
+`scripts/watch-pipeline-log.sh <slug>` tails `logs/<slug>.log` and emits
+one line per completed step (pairing the last `=== N. ... ===` header
+with the `real ...` timing line every step ends on) plus a separate line
+for anything containing error/traceback/exception/failed. Ask Claude to
+"arm the pipeline monitor for `<slug>`" and it runs this script as a
+Claude Code `Monitor` watch — Claude then gets notified as each step you
+run finishes, without you needing to say "done" after every one. Only
+Claude can arm it (it's a Claude Code tool, not something run from your
+own terminal); the script itself is just the reusable watching logic.
+
 ---
 
 ## 1. Generate narration audio
