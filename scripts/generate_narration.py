@@ -703,17 +703,28 @@ PRONUNCIATION_OVERRIDES = {
     "Kah": "kˈɑː",                # "kah" (rhymes with "spa") - Tan Kah Kee
     "Tye": "tˈaɪ",                # "tie" - Tan Tye, the earliest pineapple king
     "Sembawang": "sɛmbˈawaŋ",     # "sem-BAH-wang" - Malay, full vowels (not
-                                   # schwa'd). NOT ear-verified yet
+                                   # schwa'd). Confirmed by Chris by ear (2026-09-04)
     "Yishun": "jˈiːʃʊn",          # "YEE-shun" - Mandarin reading of Nee Soon.
-                                   # NOT ear-verified yet
-    "Skudai": "skˈuːdaɪ",         # "SKOO-dye" - the Johor town. NOT ear-verified yet
+                                   # Confirmed by Chris by ear (2026-09-04)
+    "Skudai": "skˈuːdaɪ",         # "SKOO-dye" - the Johor town. Confirmed by
+                                   # Chris by ear (2026-09-04)
     "Bastiani": "bˌastiˈɑːni",    # "bas-tee-AH-nee" - J. P. Bastiani, the
                                    # Corsican-Italian cannery owner
     "Yat-sen": "jˌatsˈɛn",        # "yaht-SEN" - Sun Yat-sen (misaki appends
                                    # the "'s" possessive itself)
-    "Kempeitai": "kˌɛmpeɪtˈaɪ",   # "kem-pay-TIE" - the wartime Japanese
-                                   # military police. NOT ear-verified yet
-    "Kempeitai's": "kˌɛmpeɪtˈaɪz",  # misaki won't derive the possessive here
+    "Kempeitai": "kˌɛnpeɪtˈaɪ",   # "ken-pay-TIE" - the wartime Japanese
+                                   # military police. Chris corrected the
+                                   # consonant by ear from all three samples'
+                                   # "m": "sounds more accurate that way"
+                                   # (2026-09-04) - kept even after finding
+                                   # that Japanese ん actually assimilates to
+                                   # [m] before a bilabial (p/b/m), which is
+                                   # why the older English military-history
+                                   # spelling is "Kempeitai" and not modern
+                                   # Hepburn's "Kenpeitai"; Chris's explicit
+                                   # call, "ken" over the more phonetically
+                                   # faithful "kem"
+    "Kempeitai's": "kˌɛnpeɪtˈaɪz",  # misaki won't derive the possessive here
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
