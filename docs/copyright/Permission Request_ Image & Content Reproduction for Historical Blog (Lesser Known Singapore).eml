@@ -1,759 +1,699 @@
-Delivered-To: chriskslee@gmail.com
-Received: by 2002:a05:7000:cc1b:b0:892:21ff:5b9 with SMTP id mc27csp2814034mab;
-        Fri, 4 Sep 2026 00:46:17 -0700 (PDT)
-X-Received: by 2002:a05:6830:230c:b0:7dc:e37b:b5d3 with SMTP id 46e09a7af769-7fa1eafae63mr3964290a34.7.1788507976820;
-        Fri, 04 Sep 2026 00:46:16 -0700 (PDT)
-ARC-Seal: i=2; a=rsa-sha256; t=1788507976; cv=pass;
-        d=google.com; s=arc-20260327;
-        b=WVqmzdIQGUnXndVikMqE996gkBJhaNA7zhvwLing3GaJ7gGHIq8JGmJRAB/vMnxBSo
-         bImMer+0vKvVAsomv+6L+18wAgryhTRRzVqnqpyn5WS4jcvEozoMSJtXbReoPRyySNUs
-         uo7pyoTZ2WGtzmj57P7ZvAR2tQR1I/a0rPHpuBLR8Eiq6hrUYVMfjFK4q4tWQ1FBi656
-         9+y/Bs2su0JH5E6ibxXuarSBXYZyMclP2XvQq6HplTPAgMpjfbgIUUl3HBj7caA+8WIY
-         7saCzkCd8bMZrun8ikAXCFXr7wv63rJQUxG4eyJf/X5yZih+bGlhi3e68mzySQ8gXUlE
-         WPww==
-ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
-        h=to:subject:message-id:date:from:sender:in-reply-to:references
-         :mime-version:dkim-signature;
-        bh=i4FhoP1V8nOCyj+NRARXSebwwiGfGhz6tXQDQGRWCxg=;
-        fh=0St26G+rLZmhmXheooChkTBZVpTlpSuVzMUy+0ty7iw=;
-        b=bfPirDCfde+IbMusTgAJiXGe7XpynAf0raYJbNEst/zhFafo/E5qeylf33IEdW3nxi
-         OHQQn6b7QocC63NsDTu0i7xqeMNfGYAM/zlfmQNH0wjElZYIvOJlkjd0lx2pqC1T+pXp
-         9sb8lUwpHgCnbwevXu2iMdicYX1XvrLDSoNMVN/pTdBqctCq7oOYTkTbHEg/P7yRQrHE
-         7mJlABBd1r7NE7szQUuyXx1R+4auaRkPMWXWHMRDmtSLPf+QQQbm4Q3dOSjQZzMhkt4S
-         s5Ef++8/ZMguwPdsIpctu+EMiaOpDM8+YDljBbv8dB0MNY26Oe3KF9nLbCre0h4BpbEc
-         2yxQ==;
-        dara=google.com
-ARC-Authentication-Results: i=2; mx.google.com;
-       dkim=pass header.i=@catholic.org.sg header.s=google header.b=aDxyKyG1;
-       arc=pass (i=1);
-       spf=pass (google.com: domain of chanceryrecords@catholic.org.sg designates 209.85.220.41 as permitted sender) smtp.mailfrom=chanceryrecords@catholic.org.sg;
-       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=catholic.org.sg;
-       dara=pass header.i=@gmail.com
-Return-Path: <chanceryrecords@catholic.org.sg>
-Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
-        by mx.google.com with SMTPS id 46e09a7af769-7f9f77dd4ddsor1346186a34.9.2026.09.04.00.46.16
-        for <chriskslee@gmail.com>
-        (Google Transport Security);
-        Fri, 04 Sep 2026 00:46:16 -0700 (PDT)
-Received-SPF: pass (google.com: domain of chanceryrecords@catholic.org.sg designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@catholic.org.sg header.s=google header.b=aDxyKyG1;
-       arc=pass (i=1);
-       spf=pass (google.com: domain of chanceryrecords@catholic.org.sg designates 209.85.220.41 as permitted sender) smtp.mailfrom=chanceryrecords@catholic.org.sg;
-       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=catholic.org.sg;
-       dara=pass header.i=@gmail.com
-ARC-Seal: i=1; a=rsa-sha256; t=1788507976; cv=none;
-        d=google.com; s=arc-20260327;
-        b=T3UvqCHQrPI5Cc+nyEyuXiCQ53bdloqFppYoP+x5q/W8MezPHZvcb+hkoKC6Tj2FjI
-         8eDu/YzlNM+zKexmW6aTJdS77yzT25kWHbLqu9W4pUrtQ2llZ4e9KWHl0yxddGm/GVpP
-         PfI2zRHXNIFTqv8F9hlOsBatk9AgDfilYKyOyYyT0dO3qmIBZbAADKzJXEnEKLm0AD2B
-         MUOfwvDK60sv0h3HtWEGoec2w5seiNJ7Rv5VNO0CuBlKkiEdAqwlWFHhUPfp8ztUCzQK
-         ZFxzX3iU/BcNC7vsqKACbZlkppjCqOTimPNCdj2U2o6cIlxQ4Cu9AqPy7EEx0bw3AD+j
-         2Mlw==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
-        h=to:subject:message-id:date:from:sender:in-reply-to:references
-         :mime-version:dkim-signature;
-        bh=i4FhoP1V8nOCyj+NRARXSebwwiGfGhz6tXQDQGRWCxg=;
-        fh=0St26G+rLZmhmXheooChkTBZVpTlpSuVzMUy+0ty7iw=;
-        b=RzXX9tDINJRpcEO/50NiIMn8hIPwFldqvX5j6jHFR2n1UFa1GpELbIR1TuhVuWpQ/+
-         NM6p3mXhlbgrZ0vCVMdo68DLVJRhBRQquheCXKDPZ1anBzXcoMhY/9I1eD44QyvAzf+d
-         q/a5tBeYxEgfJQJMEluYA+s96cQDU2QBClzaZGaHHQ0wav21eOFpLL5qEFdMcpy9bHL+
-         YfEWITK8IXUC/Lq4ZMFlPMLm8ZFDm/gMoEvmd3LMzSGdNkiYbcuVotBSjepoT/HBnkfj
-         yAziimOt+BhLl7oTSstm8RaO91E+68yGHgp5dw6eDMLBKrWx++f42UmaOKlkm3rCJEt8
-         VggA==;
-        dara=google.com
-ARC-Authentication-Results: i=1; mx.google.com; arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=catholic.org.sg; s=google; t=1788507976; x=1789112776; dara=google.com;
-        h=content-type:to:subject:message-id:date:from:sender:in-reply-to
-         :references:mime-version:from:to:cc:subject:date:message-id:reply-to
-         :content-type;
-        bh=i4FhoP1V8nOCyj+NRARXSebwwiGfGhz6tXQDQGRWCxg=;
-        b=aDxyKyG1ZMTJoorHJYvSXid984j+6cuY42SkUJgLb8XU9hdh9Ukzg2xSjozWOBBM2l
-         SSrtSBLngaXmFJh7I1r5er3fDRdurBfeo0f5vURze4F4FyMLrIlp1NvvXdSZV9JLoXzf
-         KjikmNw9Xb4Dbm8jGzbA5gdeB6//ssJqho2x4=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20251104; t=1788507976; x=1789112776;
-        h=content-type:to:subject:message-id:date:from
-         :x-google-sender-delegation:sender:in-reply-to:references
-         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
-         :message-id:reply-to:content-type;
-        bh=i4FhoP1V8nOCyj+NRARXSebwwiGfGhz6tXQDQGRWCxg=;
-        b=ZDtljfmpTTA8cYGUxz0JJD8ulYxW6OynB0C7hd+M0kppnpeRu/v+sG4wUBSn1RWuJN
-         yNNo2Bel1+GhRKWEGpoLKQozUyxVVhoMBvSFwSeBA0RhVto2rcZll7heDHqZfQ5GQdOc
-         AhyP363zpADoLr2eIvW3uTLFNYuiSISYC+GmAu7997aR7J/Pjjhpe+qXFv8O7BoK6N2A
-         NHbeee59k8AP2N4BV7lIO3m2UCt+QTp/ufGkAKJpQdtv1dM08KDIZSOFJTpYk35wW6iH
-         78xwu1XVeb57k/FLIT5W/W7V3uTHSh/MVIa2zybh0p4JHeRjrqdsurLyV1AlS/lN5GNi
-         NGng==
-X-Gm-Message-State: AFuF++kfL8EQDMJ6esWjcn/6pTJZdhcObIT5zyAJAUIkTPmTKp6uSX1f
-	ErKN23sR4Mi7O7kxiGzbOVpje1s5UT9dmA0oGxEU11nykIh/sGkMGpuvOjtRC2/ONJPKEMEKkR2
-	nTl0t/VDSVOrt59vBQiHeg6Z6v8Qyg76FcpR1GdWWyLVMzRNGiutrzKdscs/JUW8nKfwKGeU1ug
-	39AC9lQVTr4QCBp9Sit0Kh8edNj43RUuY0
-X-Gm-Gg: AYBFou1MUkKCWtFS5QAgrzDi2ODbcshaDgNRCwee9HFKMe2PCJkFzDO3JxnDBJZxpqU
-	pIR+nyzwFvAQ88C7/nVtSM9baBTCLiPJb/kRGCAHW536Y+bLoEQ0jvNo8ZRLiV8w69Nqx055g22
-	GRhZeL4o5thES/BQ6QdnRMfKoFE+4Sef+Mx3RsjcP5X9o3GX5M7vqajQfXwJg6PNL8v8R6afczA
-	o+3HHFs+92bducz9XImWyTCTDimjsY5wLjxphhXae6cmXHcbyQV+MQ37Wlf9u1wOEYiL8FYSYBm
-	ZSCID0Q9VNy9IXazGFGvFk4sLm3fsWaJW0qtm2AUDZpGOUdExqMy8feg
-X-Received: by 2002:a05:6830:82fc:b0:7ee:41ca:e7b0 with SMTP id
- 46e09a7af769-7fa20ac3d0bmr4055262a34.14.1788507976032; Fri, 04 Sep 2026
- 00:46:16 -0700 (PDT)
 MIME-Version: 1.0
+Date: Fri, 4 Sep 2026 09:44:59 -0400
 References: <CAPGAv9TnxYmLqfk_7QyZsX-802GTQunZAOwpfbHPpHAzx4L8CQ@mail.gmail.com>
- <CAG1W6sCxkFT7gcrjLJO7z=ypd6tXdjUAny_iikFVPU+nX8YrVw@mail.gmail.com>
- <CAPGAv9TifLwRQ_ecVDVR2ntdkPTLc4x=vR5b1qfUAr+6qiVKcA@mail.gmail.com>
- <CAPGAv9T8BN_Nmk4O0RfXicMpCesLhtY9Ez5_R3YCYZJO6doJ-g@mail.gmail.com>
- <CAG1W6sAxF9-jqvx9vjmhzJqw2qsEKhVWBkAG=BXZUYn2PVpebw@mail.gmail.com>
- <CAPGAv9RFeoismqJ+An4_2EgRJfTPzZ+FDM1Mmg6TUj-rv8UqDQ@mail.gmail.com> <CAPGAv9Tfd2Opmfio-sLKzwTGn3HTp5O--Y7UUPnNDneoHYckHA@mail.gmail.com>
-In-Reply-To: <CAPGAv9Tfd2Opmfio-sLKzwTGn3HTp5O--Y7UUPnNDneoHYckHA@mail.gmail.com>
-Sender: amanda.lim@catholic.org.sg
-X-Google-Sender-Delegation: amanda.lim@catholic.org.sg; h=ASQkhkb/bIKdb+Pt0EV2LmF3JPMqCjdpL9bfwG+kFmWF4D1Dig==
-From: "Chancery Records (Chancery)" <chanceryrecords@catholic.org.sg>
-Date: Fri, 4 Sep 2026 15:46:03 +0800
-X-Google-Sender-Auth: uEKimH6CW462LLpTm0rHBwkZwv0
-X-Gm-Features: AcwNN1WQwngkIBb-CmcStia7dO9UOtCLttccZ6SxNxu5ImlCIW5FAeprbapYyWo
-Message-ID: <CAG1W6sBwKKoAFhNVR4taHk5kVP5pbBiqAW2OC90f=N+zayFLWA@mail.gmail.com>
+	<CAG1W6sCxkFT7gcrjLJO7z=ypd6tXdjUAny_iikFVPU+nX8YrVw@mail.gmail.com>
+	<CAPGAv9TifLwRQ_ecVDVR2ntdkPTLc4x=vR5b1qfUAr+6qiVKcA@mail.gmail.com>
+	<CAPGAv9T8BN_Nmk4O0RfXicMpCesLhtY9Ez5_R3YCYZJO6doJ-g@mail.gmail.com>
+	<CAG1W6sAxF9-jqvx9vjmhzJqw2qsEKhVWBkAG=BXZUYn2PVpebw@mail.gmail.com>
+	<CAPGAv9RFeoismqJ+An4_2EgRJfTPzZ+FDM1Mmg6TUj-rv8UqDQ@mail.gmail.com>
+	<CAPGAv9Tfd2Opmfio-sLKzwTGn3HTp5O--Y7UUPnNDneoHYckHA@mail.gmail.com>
+	<CAG1W6sBwKKoAFhNVR4taHk5kVP5pbBiqAW2OC90f=N+zayFLWA@mail.gmail.com>
+In-Reply-To: <CAG1W6sBwKKoAFhNVR4taHk5kVP5pbBiqAW2OC90f=N+zayFLWA@mail.gmail.com>
+Message-ID: <CAPGAv9T4P8C5T6vMq7CiEMWKLeLvw0VQjFuSW531axiU-U=spw@mail.gmail.com>
 Subject: Re: Permission Request: Image & Content Reproduction for Historical
  Blog (Lesser Known Singapore)
-To: Chris Lee <chriskslee@gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000096f9ff065aa3768b"
+From: Chris Lee <chriskslee@gmail.com>
+To: "Chancery Records (Chancery)" <chanceryrecords@catholic.org.sg>
+Content-Type: multipart/alternative; boundary="0000000000007d1692065aa87975"
 
---00000000000096f9ff065aa3768b
+--0000000000007d1692065aa87975
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-Dear Chris
+Dear Amanda,
 
-Thank you so much for the update and for following up so quickly. It is
-great to hear that you were able to use the photos from our website.
+Thank you for letting me know, and no problem at all on the resolution -
+I understand the constraint, and the website copies work well for the
+article and video as they are.
 
-Regarding your request, unfortunately, the photos posted on our website are
-the highest resolution files we have available. The physical photos
-themselves still belong to the original donor families and institutions, so
-we are unable to rescan these with higher resolution. We hope you
-understand our constraints.
+I've corrected the three credit lines for the Aukang photos (the
+fisherman, the Punggol girls, and the Chng family) to read "Mary and
+Joseph Lee Collection" throughout the post, the video, and the YouTube
+description.
 
-I would also like to correct my earlier email for some of the credit lines,
-particularly for the ones taken in Aukang. I sincerely apologise for the
-oversight.
+Thank you again for all your help with this one - it's meant a lot to be
+able to tell this story properly.
 
-Please amend the following crediting lines for photos 7-9 in my previous
-email. These should be attributed to the *Mary and Joseph Lee Collection*:
+God bless,
+Chris
 
-   1. Working life in the kampong =E2=80=93 a young fisherman mending the p=
-rawn
-   trawler nets, c. 1930s. Mary and Joseph Lee Collection, courtesy of the
-   Chancery Archives.
-   2. Kampong girls riding around the Ponggol 10th milestone neighbourhood,
-   c. 1930s. Mary and Joseph Lee Collection, courtesy of the Chancery
-   Archives.
-   3. The extended Chng Family comprising three generations of Aukang
-   Teochew Catholics in front of an attap house, 1932. Mary and Joseph Lee
-   Collection, courtesy of the Chancery Archives.
+On Fri, Sep 4, 2026 at 3:46=E2=80=AFAM Chancery Records (Chancery) <
+chanceryrecords@catholic.org.sg> wrote:
 
-Thank you and we wish you all the best in the continuation of your website
-and Youtube channel.
-
-God Bless,
-Amanda Lim
-*Records & Archives Executive*
-Chancery of the Roman Catholic Archdiocese of Singapore
-
-*Chancery Archives - By Appointment Only*
-T: (65) 6341-9778 | W: https://history.catholic.sg/
-*Discover our latest archival research and artefact showcase online.*
-
-This email contains information intended for the perusal, and/or use, by
-the stated addressee(s) only. Information is confidential and privileged,
-and may not be published elsewhere. If you are not an intended recipient do
-not peruse, use, disseminate, copy or in any manner rely upon the
-information contained in this message (directly or indirectly). If you
-receive this message in error, kindly notify the sender immediately by
-email, fax or telephone, and delete this e-mail from your system. For the
-recipient's own protection, we recommend that you scan this email and any
-attached files for viruses and the like. The Organization accepts no
-liability of whatever nature for any loss, damage or expense resulting
-directly or indirectly from the access of any files which are attached to
-this message.
-
-
-On Fri, Sep 4, 2026 at 5:40=E2=80=AFAM Chris Lee <chriskslee@gmail.com> wro=
-te:
-
-> Dear Amanda,
+> Dear Chris
 >
-> Thank you again for approving the reproduction of the nine photographs,
-> and for the credit lines =E2=80=94 they have all been applied exactly as =
-you
-> provided them.
+> Thank you so much for the update and for following up so quickly. It is
+> great to hear that you were able to use the photos from our website.
 >
-> The article is now published, with the nine images placed through the
-> post and its photo gallery:
+> Regarding your request, unfortunately, the photos posted on our website
+> are the highest resolution files we have available. The physical photos
+> themselves still belong to the original donor families and institutions, =
+so
+> we are unable to rescan these with higher resolution. We hope you
+> understand our constraints.
 >
-> https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nati=
-vity-church/
+> I would also like to correct my earlier email for some of the credit
+> lines, particularly for the ones taken in Aukang. I sincerely apologise f=
+or
+> the oversight.
 >
-> It also has a narrated video version, and a short vertical excerpt, both
-> on YouTube:
->   Full video:  https://youtu.be/Fh7IT4cBG_A
->   Short:       https://www.youtube.com/shorts/tIQnVfHDszg
+> Please amend the following crediting lines for photos 7-9 in my previous
+> email. These should be attributed to the *Mary and Joseph Lee Collection*
+> :
 >
-> One request, if it is possible. The copies I am currently using are the
-> display images from history.catholic.sg, which are a few hundred pixels
-> on the longest side. They look fine in the article, but they soften
-> noticeably when enlarged for the video =E2=80=94 particularly in the vert=
-ical
-> short, where a wide photo can only fill part of the frame. Would
-> higher-resolution scans of any of the nine be available? I would be
-> grateful for whichever are easily to hand; there is no rush, and I would
-> of course keep the same credit lines and the same non-commercial use
-> (this post and its video only).
+>    1. Working life in the kampong =E2=80=93 a young fisherman mending the=
+ prawn
+>    trawler nets, c. 1930s. Mary and Joseph Lee Collection, courtesy of th=
+e
+>    Chancery Archives.
+>    2. Kampong girls riding around the Ponggol 10th milestone
+>    neighbourhood, c. 1930s. Mary and Joseph Lee Collection, courtesy of t=
+he
+>    Chancery Archives.
+>    3. The extended Chng Family comprising three generations of Aukang
+>    Teochew Catholics in front of an attap house, 1932. Mary and Joseph Le=
+e
+>    Collection, courtesy of the Chancery Archives.
 >
-> Thank you once more for making these archives accessible.
+> Thank you and we wish you all the best in the continuation of your websit=
+e
+> and Youtube channel.
 >
-> Kind regards,
-> Chris Lee
-> Lesser Known Singapore =E2=80=94 https://pikaia.github.io
+> God Bless,
+> Amanda Lim
+> *Records & Archives Executive*
+> Chancery of the Roman Catholic Archdiocese of Singapore
 >
-> On Thu, Sep 3, 2026 at 9:02=E2=80=AFAM Chris Lee <chriskslee@gmail.com> w=
+> *Chancery Archives - By Appointment Only*
+> T: (65) 6341-9778 | W: https://history.catholic.sg/
+> *Discover our latest archival research and artefact showcase online.*
+>
+> This email contains information intended for the perusal, and/or use, by
+> the stated addressee(s) only. Information is confidential and privileged,
+> and may not be published elsewhere. If you are not an intended recipient =
+do
+> not peruse, use, disseminate, copy or in any manner rely upon the
+> information contained in this message (directly or indirectly). If you
+> receive this message in error, kindly notify the sender immediately by
+> email, fax or telephone, and delete this e-mail from your system. For the
+> recipient's own protection, we recommend that you scan this email and any
+> attached files for viruses and the like. The Organization accepts no
+> liability of whatever nature for any loss, damage or expense resulting
+> directly or indirectly from the access of any files which are attached to
+> this message.
+>
+>
+> On Fri, Sep 4, 2026 at 5:40=E2=80=AFAM Chris Lee <chriskslee@gmail.com> w=
 rote:
 >
->> Hello Amanda,
+>> Dear Amanda,
 >>
->> Thanks so much for the timely approval. I will update the blog and the
->> youtube channel. If I need to reuse these images for a different post, I=
->> will submit another request as needed.
+>> Thank you again for approving the reproduction of the nine photographs,
+>> and for the credit lines =E2=80=94 they have all been applied exactly as=
+ you
+>> provided them.
 >>
->> God bless you!
->> Chris
+>> The article is now published, with the nine images placed through the
+>> post and its photo gallery:
 >>
->> On Thu, Sep 3, 2026 at 4:26=E2=80=AFAM Chancery Records (Chancery) <
->> chanceryrecords@catholic.org.sg> wrote:
+>> https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nat=
+ivity-church/
 >>
->>> Dear Chris
+>> It also has a narrated video version, and a short vertical excerpt, both
+>> on YouTube:
+>>   Full video:  https://youtu.be/Fh7IT4cBG_A
+>>   Short:       https://www.youtube.com/shorts/tIQnVfHDszg
+>>
+>> One request, if it is possible. The copies I am currently using are the
+>> display images from history.catholic.sg, which are a few hundred pixels
+>> on the longest side. They look fine in the article, but they soften
+>> noticeably when enlarged for the video =E2=80=94 particularly in the ver=
+tical
+>> short, where a wide photo can only fill part of the frame. Would
+>> higher-resolution scans of any of the nine be available? I would be
+>> grateful for whichever are easily to hand; there is no rush, and I would
+>> of course keep the same credit lines and the same non-commercial use
+>> (this post and its video only).
+>>
+>> Thank you once more for making these archives accessible.
+>>
+>> Kind regards,
+>> Chris Lee
+>> Lesser Known Singapore =E2=80=94 https://pikaia.github.io
+>>
+>> On Thu, Sep 3, 2026 at 9:02=E2=80=AFAM Chris Lee <chriskslee@gmail.com> =
+wrote:
+>>
+>>> Hello Amanda,
 >>>
->>> Thank you for completing the form in detail.
+>>> Thanks so much for the timely approval. I will update the blog and the
+>>> youtube channel. If I need to reuse these images for a different post,=
+>>> I will submit another request as needed.
 >>>
->>> The Chancery Archives approves your use of the selected photographs
->>> specifically and *only *for the stated purpose(s) of: "For an
->>> already-published post and video on old Kangkar / Aukang, Montfort Scho=
-ol
->>> and the Church of the Nativity: =E2=80=9CThe Lane Was Probably Named Af=
-ter My
->>> School. Neither Is There Anymore.=E2=80=9D (
->>> pikaia.github.io/2026/08/16/jalan-payoh-lai-kangkar-montfortnativity-ch=
-urch/
->>> ; youtu.be/GTIpKWDZBNA)."
+>>> God bless you!
+>>> Chris
 >>>
->>> As you have completed the request form, you confirm that all accessed
->>> material will be used solely for non-profit purposes, will not be
->>> reproduced beyond the stated scope and purpose without resubmission of =
-this
->>> form, and will not be sold or otherwise distributed to third parties. Y=
-ou
->>> also agree to provide proper citation and credit to the source in all
->>> published material, in any form. Failure to adhere to these terms and
->>> conditions may constitute a violation of copyright law.
+>>> On Thu, Sep 3, 2026 at 4:26=E2=80=AFAM Chancery Records (Chancery) <
+>>> chanceryrecords@catholic.org.sg> wrote:
 >>>
->>> You may use the following crediting format for these photos:
->>>
->>>    1. The old school building when Montfort was known as Holy
->>>    Innocents=E2=80=99 English School, undated. Rev. Fr. Rene Nicolas Co=
-llection,
->>>    courtesy of the Chancery Archives.
->>>    2. Black and white photograph of the outdoor statue of the Blessed
->>>    Virgin Mary, Church of the Nativity of the Blessed Virgin Mary, Houg=
-ang,
->>>    Singapore, undated. Rev. Fr. Rene Nicolas Collection, courtesy of th=
-e
->>>    Chancery Archives.
->>>    3. Aerial shot of the Church of the Nativity of the Blessed Virgin
->>>    Mary, Hougang, and its surrounding complex, undated. Rev. Fr. Rene N=
-icolas
->>>    Collection, courtesy of the Chancery Archives.
->>>    4. Black and white photograph of the Holy Innocents=E2=80=99 English=
- School
->>>    building facade, c. 1910s. Rev. Fr. Rene Nicolas Collection, courtes=
-y of
->>>    the Chancery Archives.
->>>    5. Black and white photograph of the parish kampong houses of old
->>>    Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s. Rev. Fr.=
- Rene
->>>    Nicolas Collection, courtesy of the Chancery Archives.
->>>    6. Black and white photograph of the =E2=80=98=E2=80=99kampong=E2=80=
-=99=E2=80=99 parishioners of old
->>>    Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s. Rev. Fr.=
- Rene
->>>    Nicolas Collection, courtesy of the Chancery Archives.
->>>    7. Working life in the kampong =E2=80=93 a young fisherman mending t=
-he prawn
->>>    trawler nets, c. 1930s. Maria Lee Ah Kin Collection, courtesy of the
->>>    Chancery Archives.
->>>    8. Kampong girls riding around the Ponggol 10th milestone
->>>    neighbourhood, c. 1930s. Maria Lee Ah Kin Collection, courtesy of th=
-e
->>>    Chancery Archives.
->>>    9. The extended Chng Family comprising three generations of Aukang
->>>    Teochew Catholics in front of an attap house, 1932. Maria Lee Ah Kin
->>>    Collection, courtesy of the Chancery Archives.
->>>
->>> Thank you and we wish you all the best in your Youtube channel and
->>> website.
->>>
->>> God Bless,
->>> Amanda Lim
->>> *Records & Archives Executive*
->>> Chancery of the Roman Catholic Archdiocese of Singapore
->>>
->>> *Chancery Archives - By Appointment Only*
->>> T: (65) 6341-9778 | W: https://history.catholic.sg/
->>> *Discover our latest archival research and artefact showcase online.*
->>>
->>> This email contains information intended for the perusal, and/or use, b=
-y
->>> the stated addressee(s) only. Information is confidential and privilege=
-d,
->>> and may not be published elsewhere. If you are not an intended recipien=
-t do
->>> not peruse, use, disseminate, copy or in any manner rely upon the
->>> information contained in this message (directly or indirectly). If you
->>> receive this message in error, kindly notify the sender immediately by
->>> email, fax or telephone, and delete this e-mail from your system. For t=
+>>>> Dear Chris
+>>>>
+>>>> Thank you for completing the form in detail.
+>>>>
+>>>> The Chancery Archives approves your use of the selected photographs
+>>>> specifically and *only *for the stated purpose(s) of: "For an
+>>>> already-published post and video on old Kangkar / Aukang, Montfort Sch=
+ool
+>>>> and the Church of the Nativity: =E2=80=9CThe Lane Was Probably Named A=
+fter My
+>>>> School. Neither Is There Anymore.=E2=80=9D (
+>>>> pikaia.github.io/2026/08/16/jalan-payoh-lai-kangkar-montfortnativity-c=
+hurch/
+>>>> ; youtu.be/GTIpKWDZBNA)."
+>>>>
+>>>> As you have completed the request form, you confirm that all accessed
+>>>> material will be used solely for non-profit purposes, will not be
+>>>> reproduced beyond the stated scope and purpose without resubmission of=
+ this
+>>>> form, and will not be sold or otherwise distributed to third parties. =
+You
+>>>> also agree to provide proper citation and credit to the source in all
+>>>> published material, in any form. Failure to adhere to these terms and
+>>>> conditions may constitute a violation of copyright law.
+>>>>
+>>>> You may use the following crediting format for these photos:
+>>>>
+>>>>    1. The old school building when Montfort was known as Holy
+>>>>    Innocents=E2=80=99 English School, undated. Rev. Fr. Rene Nicolas C=
+ollection,
+>>>>    courtesy of the Chancery Archives.
+>>>>    2. Black and white photograph of the outdoor statue of the Blessed
+>>>>    Virgin Mary, Church of the Nativity of the Blessed Virgin Mary, Hou=
+gang,
+>>>>    Singapore, undated. Rev. Fr. Rene Nicolas Collection, courtesy of t=
 he
->>> recipient's own protection, we recommend that you scan this email and a=
-ny
->>> attached files for viruses and the like. The Organization accepts no
->>> liability of whatever nature for any loss, damage or expense resulting
->>> directly or indirectly from the access of any files which are attached =
-to
->>> this message.
->>>
->>>
->>> On Thu, Sep 3, 2026 at 10:36=E2=80=AFAM Chris Lee <chriskslee@gmail.com=
-> wrote:
->>>
->>>> Hello Amanda,
+>>>>    Chancery Archives.
+>>>>    3. Aerial shot of the Church of the Nativity of the Blessed Virgin
+>>>>    Mary, Hougang, and its surrounding complex, undated. Rev. Fr. Rene =
+Nicolas
+>>>>    Collection, courtesy of the Chancery Archives.
+>>>>    4. Black and white photograph of the Holy Innocents=E2=80=99 Englis=
+h School
+>>>>    building facade, c. 1910s. Rev. Fr. Rene Nicolas Collection, courte=
+sy of
+>>>>    the Chancery Archives.
+>>>>    5. Black and white photograph of the parish kampong houses of old
+>>>>    Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s. Rev. Fr=
+. Rene
+>>>>    Nicolas Collection, courtesy of the Chancery Archives.
+>>>>    6. Black and white photograph of the =E2=80=98=E2=80=99kampong=E2=
+=80=99=E2=80=99 parishioners of
+>>>>    old Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s. Rev=
+. Fr.
+>>>>    Rene Nicolas Collection, courtesy of the Chancery Archives.
+>>>>    7. Working life in the kampong =E2=80=93 a young fisherman mending =
+the
+>>>>    prawn trawler nets, c. 1930s. Maria Lee Ah Kin Collection, courtesy=
+ of the
+>>>>    Chancery Archives.
+>>>>    8. Kampong girls riding around the Ponggol 10th milestone
+>>>>    neighbourhood, c. 1930s. Maria Lee Ah Kin Collection, courtesy of t=
+he
+>>>>    Chancery Archives.
+>>>>    9. The extended Chng Family comprising three generations of Aukang
+>>>>    Teochew Catholics in front of an attap house, 1932. Maria Lee Ah Ki=
+n
+>>>>    Collection, courtesy of the Chancery Archives.
 >>>>
->>>> The form with an addendum for the list of images is attached.
+>>>> Thank you and we wish you all the best in your Youtube channel and
+>>>> website.
 >>>>
->>>> Thank you very much for your service in making this website available.
+>>>> God Bless,
+>>>> Amanda Lim
+>>>> *Records & Archives Executive*
+>>>> Chancery of the Roman Catholic Archdiocese of Singapore
 >>>>
->>>> Sincerely,
->>>> Chris Lee
+>>>> *Chancery Archives - By Appointment Only*
+>>>> T: (65) 6341-9778 | W: https://history.catholic.sg/
+>>>> *Discover our latest archival research and artefact showcase online.*
 >>>>
->>>> On Wed, Sep 2, 2026 at 9:36=E2=80=AFAM Chris Lee <chriskslee@gmail.com=
-> wrote:
+>>>> This email contains information intended for the perusal, and/or use,
+>>>> by the stated addressee(s) only. Information is confidential and
+>>>> privileged, and may not be published elsewhere. If you are not an inte=
+nded
+>>>> recipient do not peruse, use, disseminate, copy or in any manner rely =
+upon
+>>>> the information contained in this message (directly or indirectly). If=
+ you
+>>>> receive this message in error, kindly notify the sender immediately by
+>>>> email, fax or telephone, and delete this e-mail from your system. For =
+the
+>>>> recipient's own protection, we recommend that you scan this email and =
+any
+>>>> attached files for viruses and the like. The Organization accepts no
+>>>> liability of whatever nature for any loss, damage or expense resulting
+>>>> directly or indirectly from the access of any files which are attached=
+ to
+>>>> this message.
+>>>>
+>>>>
+>>>> On Thu, Sep 3, 2026 at 10:36=E2=80=AFAM Chris Lee <chriskslee@gmail.co=
+m> wrote:
 >>>>
 >>>>> Hello Amanda,
 >>>>>
->>>>> I will submit the form as soon as possible. I will address future
->>>>> emails to this address. Thank you vm for your time and the positive r=
-eply.
->>>>> My viewership has taken off and many people ask why I don't display i=
-mages
->>>>> commonly found on the internet. But the AI that assist me in organizi=
-ng
->>>>> content repeatedly reminds me to  obtain permission before doing so.
+>>>>> The form with an addendum for the list of images is attached.
 >>>>>
->>>>> Thank you again
+>>>>> Thank you very much for your service in making this website available=
+.
+>>>>>
+>>>>> Sincerely,
 >>>>> Chris Lee
 >>>>>
->>>>> On Wed, Sep 2, 2026, 1:28=E2=80=AFAM Chancery Records (Chancery) <
->>>>> chanceryrecords@catholic.org.sg> wrote:
+>>>>> On Wed, Sep 2, 2026 at 9:36=E2=80=AFAM Chris Lee <chriskslee@gmail.co=
+m> wrote:
 >>>>>
->>>>>> Dear Chris
+>>>>>> Hello Amanda,
 >>>>>>
->>>>>> Peace be with you and apologies for our delayed response as your
->>>>>> email was sent to our spam folder.
+>>>>>> I will submit the form as soon as possible. I will address future
+>>>>>> emails to this address. Thank you vm for your time and the positive =
+reply.
+>>>>>> My viewership has taken off and many people ask why I don't display =
+images
+>>>>>> commonly found on the internet. But the AI that assist me in organiz=
+ing
+>>>>>> content repeatedly reminds me to  obtain permission before doing so.
 >>>>>>
->>>>>> In order for us to proceed with granting you permission to access an=
-d
->>>>>> reproduce these images for only non-commercial purposes on your
->>>>>> website/YouTube channel, kindly fill in the form and state clearly t=
-he
->>>>>> photos that you would like to use.
+>>>>>> Thank you again
+>>>>>> Chris Lee
 >>>>>>
->>>>>> Please note that you have to submit a new request form every time yo=
-u
->>>>>> re-use the images for a different video and/or post, or if you inten=
-d to
->>>>>> use it for non-commercial purposes, to adhere to copyright guideline=
-s.
+>>>>>> On Wed, Sep 2, 2026, 1:28=E2=80=AFAM Chancery Records (Chancery) <
+>>>>>> chanceryrecords@catholic.org.sg> wrote:
 >>>>>>
->>>>>> As for citing/referencing our written work on your posts, you may
->>>>>> credit according to the following format: [Author/Creator if known],
->>>>>> Chancery Archives, Roman Catholic Archdiocese of Singapore =C2=A9 [Y=
-ear]". For
->>>>>> example, if you are referencing the page on The Parish Schools, you =
-may
->>>>>> indicate "Chancery Archives, Roman Catholic Archdiocese of Singapore
->>>>>> =C2=A9" since no individual author or date is stated.
->>>>>>
->>>>>> We will advise you on how to credit images sourced from us at a late=
-r
->>>>>> stage, subject to the approval of your completed request form.
->>>>>>
->>>>>> Thank you.
->>>>>>
->>>>>> God Bless,
->>>>>> Amanda Lim
->>>>>> *Records & Archives Executive*
->>>>>> Chancery of the Roman Catholic Archdiocese of Singapore
->>>>>>
->>>>>> *Chancery Archives - By Appointment Only*
->>>>>> T: (65) 6341-9778 | W: https://history.catholic.sg/
->>>>>> *Discover our latest archival research and artefact showcase online.=
-*
->>>>>>
->>>>>> This email contains information intended for the perusal, and/or use=
+>>>>>>> Dear Chris
+>>>>>>>
+>>>>>>> Peace be with you and apologies for our delayed response as your
+>>>>>>> email was sent to our spam folder.
+>>>>>>>
+>>>>>>> In order for us to proceed with granting you permission to access
+>>>>>>> and reproduce these images for only non-commercial purposes on your
+>>>>>>> website/YouTube channel, kindly fill in the form and state clearly =
+the
+>>>>>>> photos that you would like to use.
+>>>>>>>
+>>>>>>> Please note that you have to submit a new request form every time
+>>>>>>> you re-use the images for a different video and/or post, or if you =
+intend
+>>>>>>> to use it for non-commercial purposes, to adhere to copyright guide=
+lines.
+>>>>>>>
+>>>>>>> As for citing/referencing our written work on your posts, you may
+>>>>>>> credit according to the following format: [Author/Creator if known]=
 ,
->>>>>> by the stated addressee(s) only. Information is confidential and
->>>>>> privileged, and may not be published elsewhere. If you are not an in=
-tended
->>>>>> recipient do not peruse, use, disseminate, copy or in any manner rel=
-y upon
->>>>>> the information contained in this message (directly or indirectly). =
-If you
->>>>>> receive this message in error, kindly notify the sender immediately =
-by
->>>>>> email, fax or telephone, and delete this e-mail from your system. Fo=
-r the
->>>>>> recipient's own protection, we recommend that you scan this email an=
-d any
->>>>>> attached files for viruses and the like. The Organization accepts no
->>>>>> liability of whatever nature for any loss, damage or expense resulti=
-ng
->>>>>> directly or indirectly from the access of any files which are attach=
-ed to
->>>>>> this message.
->>>>>>
->>>>>>
->>>>>> On Tue, Aug 25, 2026 at 5:27=E2=80=AFAM Chris Lee <chriskslee@gmail.=
-com>
->>>>>> wrote:
->>>>>>
->>>>>>> Dear Catholic Heritage Centre Team,
+>>>>>>> Chancery Archives, Roman Catholic Archdiocese of Singapore =C2=A9 [=
+Year]". For
+>>>>>>> example, if you are referencing the page on The Parish Schools, you=
+ may
+>>>>>>> indicate "Chancery Archives, Roman Catholic Archdiocese of
+>>>>>>> Singapore =C2=A9" since no individual author or date is stated.
 >>>>>>>
->>>>>>> I run *Lesser Known Singapore* (pikaia.github.io / YouTube
->>>>>>> <https://www.youtube.com/@LesserKnownSingapore>), a non-commercial,
->>>>>>> educational project dedicated to documenting overlooked history, lo=
-cal
->>>>>>> heritage, and historical sites in Singapore.
->>>>>>>
->>>>>>> I am writing to request permission to reproduce images from your
->>>>>>> website, specifically from the page *The Parish Schools* (
->>>>>>> https://history.catholic.sg/the-parish-schools/) for a post
->>>>>>> recounting my early childhood memories at Montfort School.
->>>>>>>
->>>>>>> Additionally, as my blog frequently covers Singaporean historical
->>>>>>> events and as the Catholic Church played a significant role in Sing=
-apore=E2=80=99s
->>>>>>> development, I may wish to reference or cite other pages on your si=
-te in
->>>>>>> future posts. To ensure I comply with your copyright and usage guid=
-elines
->>>>>>> without troubling your team for every individual instance, could yo=
-u please
->>>>>>> share your general terms for non-commercial reproduction? Specifica=
-lly, I
->>>>>>> would appreciate details on:
->>>>>>>
->>>>>>>    -
->>>>>>>
->>>>>>>    Standard credit line or attribution requirements
->>>>>>>    -
->>>>>>>
->>>>>>>    Image resolution or watermarking conditions
->>>>>>>    -
->>>>>>>
->>>>>>>    Any applicable non-commercial licensing guidelines or fees
->>>>>>>
->>>>>>> Thank you very much for your time, assistance, and work in
->>>>>>> preserving Singapore=E2=80=99s heritage.
->>>>>>>
->>>>>>> Warm regards,
->>>>>>>
->>>>>>> Chris Lee chriskslee@gmail.com
->>>>>>>
->>>>>>> pikaia.github.io
->>>>>>>
->>>>>>> youtube.com/@LesserKnownSingapore
->>>>>>> <https://www.youtube.com/@LesserKnownSingapore>
->>>>>>>
->>>>>>
->>>>>> Roman Catholic Archdiocese of Singapore  | <https://www.catholic.sg/=
->
->>>>>> "A Vibrant, Evangelising, Missionary Church"
->>>>>> Privileged/Confidential information may be contained in this message=
+>>>>>>> We will advise you on how to credit images sourced from us at a
+>>>>>>> later stage, subject to the approval of your completed request form=
 .
->>>>>> If you are not the intended recipient, please delete this email and =
-notify
->>>>>> the sender.
+>>>>>>>
+>>>>>>> Thank you.
+>>>>>>>
+>>>>>>> God Bless,
+>>>>>>> Amanda Lim
+>>>>>>> *Records & Archives Executive*
+>>>>>>> Chancery of the Roman Catholic Archdiocese of Singapore
+>>>>>>>
+>>>>>>> *Chancery Archives - By Appointment Only*
+>>>>>>> T: (65) 6341-9778 | W: https://history.catholic.sg/
+>>>>>>> *Discover our latest archival research and artefact showcase online=
+.*
+>>>>>>>
+>>>>>>> This email contains information intended for the perusal, and/or
+>>>>>>> use, by the stated addressee(s) only. Information is confidential a=
+nd
+>>>>>>> privileged, and may not be published elsewhere. If you are not an i=
+ntended
+>>>>>>> recipient do not peruse, use, disseminate, copy or in any manner re=
+ly upon
+>>>>>>> the information contained in this message (directly or indirectly).=
+ If you
+>>>>>>> receive this message in error, kindly notify the sender immediately=
+ by
+>>>>>>> email, fax or telephone, and delete this e-mail from your system. F=
+or the
+>>>>>>> recipient's own protection, we recommend that you scan this email a=
+nd any
+>>>>>>> attached files for viruses and the like. The Organization accepts n=
+o
+>>>>>>> liability of whatever nature for any loss, damage or expense result=
+ing
+>>>>>>> directly or indirectly from the access of any files which are attac=
+hed to
+>>>>>>> this message.
+>>>>>>>
+>>>>>>>
+>>>>>>> On Tue, Aug 25, 2026 at 5:27=E2=80=AFAM Chris Lee <chriskslee@gmail=
+.com>
+>>>>>>> wrote:
+>>>>>>>
+>>>>>>>> Dear Catholic Heritage Centre Team,
+>>>>>>>>
+>>>>>>>> I run *Lesser Known Singapore* (pikaia.github.io / YouTube
+>>>>>>>> <https://www.youtube.com/@LesserKnownSingapore>), a
+>>>>>>>> non-commercial, educational project dedicated to documenting overl=
+ooked
+>>>>>>>> history, local heritage, and historical sites in Singapore.
+>>>>>>>>
+>>>>>>>> I am writing to request permission to reproduce images from your
+>>>>>>>> website, specifically from the page *The Parish Schools* (
+>>>>>>>> https://history.catholic.sg/the-parish-schools/) for a post
+>>>>>>>> recounting my early childhood memories at Montfort School.
+>>>>>>>>
+>>>>>>>> Additionally, as my blog frequently covers Singaporean historical
+>>>>>>>> events and as the Catholic Church played a significant role in Sin=
+gapore=E2=80=99s
+>>>>>>>> development, I may wish to reference or cite other pages on your s=
+ite in
+>>>>>>>> future posts. To ensure I comply with your copyright and usage gui=
+delines
+>>>>>>>> without troubling your team for every individual instance, could y=
+ou please
+>>>>>>>> share your general terms for non-commercial reproduction? Specific=
+ally, I
+>>>>>>>> would appreciate details on:
+>>>>>>>>
+>>>>>>>>    -
+>>>>>>>>
+>>>>>>>>    Standard credit line or attribution requirements
+>>>>>>>>    -
+>>>>>>>>
+>>>>>>>>    Image resolution or watermarking conditions
+>>>>>>>>    -
+>>>>>>>>
+>>>>>>>>    Any applicable non-commercial licensing guidelines or fees
+>>>>>>>>
+>>>>>>>> Thank you very much for your time, assistance, and work in
+>>>>>>>> preserving Singapore=E2=80=99s heritage.
+>>>>>>>>
+>>>>>>>> Warm regards,
+>>>>>>>>
+>>>>>>>> Chris Lee chriskslee@gmail.com
+>>>>>>>>
+>>>>>>>> pikaia.github.io
+>>>>>>>>
+>>>>>>>> youtube.com/@LesserKnownSingapore
+>>>>>>>> <https://www.youtube.com/@LesserKnownSingapore>
+>>>>>>>>
+>>>>>>>
+>>>>>>> Roman Catholic Archdiocese of Singapore  |
+>>>>>>> <https://www.catholic.sg/>
+>>>>>>> "A Vibrant, Evangelising, Missionary Church"
+>>>>>>> Privileged/Confidential information may be contained in this
+>>>>>>> message. If you are not the intended recipient, please delete this =
+email
+>>>>>>> and notify the sender.
+>>>>>>>
 >>>>>>
->>>>>
->>> Roman Catholic Archdiocese of Singapore  | <https://www.catholic.sg/>
->>> "A Vibrant, Evangelising, Missionary Church"
->>> Privileged/Confidential information may be contained in this message. I=
-f
->>> you are not the intended recipient, please delete this email and notify=
- the
->>> sender.
+>>>> Roman Catholic Archdiocese of Singapore  | <https://www.catholic.sg/>
+>>>> "A Vibrant, Evangelising, Missionary Church"
+>>>> Privileged/Confidential information may be contained in this message.
+>>>> If you are not the intended recipient, please delete this email and no=
+tify
+>>>> the sender.
+>>>>
 >>>
->>
+> Roman Catholic Archdiocese of Singapore  | <https://www.catholic.sg/>
+> "A Vibrant, Evangelising, Missionary Church"
+> Privileged/Confidential information may be contained in this message. If
+> you are not the intended recipient, please delete this email and notify t=
+he
+> sender.
+>
 
---=20
-Roman Catholic Archdiocese of Singapore =C2=A0|  <https://www.catholic.sg/>
-
-"A=20
-Vibrant, Evangelising, Missionary Church"
-Privileged/Confidential=20
-information may be contained in this message. If you are not the intended=
-=20
-recipient, please delete this email and notify the sender.
-
---00000000000096f9ff065aa3768b
+--0000000000007d1692065aa87975
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div>Dear Chris</div><div><br></div><div>Thank you so much=
- for the update and for following up so quickly. It is great to hear that y=
-ou were able to use the photos from our website.</div><div><br></div><div>Regarding your request, unfortunately, the=
- photos posted on our website are the highest resolution files we have avai=
-lable. The physical photos themselves still belong to the original donor fa=
-milies and institutions, so we are unable to rescan these with higher resol=
-ution. We hope you understand our constraints.</div><div><br></div><div>I w=
-ould also like to correct my earlier email for some of the credit lines, pa=
-rticularly for the ones taken in Aukang. I sincerely apologise for the over=
-sight.=C2=A0</div><div><br></div><div>Please amend<span style=3D"background=
--color:transparent">=C2=A0the following crediting lines for photos 7-9 in m=
-y previous email. These should be attributed to the <b>Mary and Joseph Lee =
-Collection</b>:=C2=A0</span></div><div><ol><li style=3D"margin-left:15px">W=
-orking life in the kampong =E2=80=93 a young fisherman mending the prawn tr=
-awler nets, c. 1930s. Mary and Joseph Lee Collection, courtesy of the Chanc=
-ery Archives.=C2=A0 =C2=A0</li><li style=3D"margin-left:15px">Kampong girls=
- riding around the Ponggol 10th milestone neighbourhood, c. 1930s. Mary and=
- Joseph Lee Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li=
-><li style=3D"margin-left:15px">The extended Chng Family comprising three g=
-enerations of Aukang Teochew Catholics in front of an attap house, 1932. Ma=
-ry and Joseph Lee Collection, courtesy of the Chancery Archives.=C2=A0 =C2=
-=A0</li></ol><div>Thank you and we wish you all the best in the continuatio=
-n of your website and Youtube channel.</div></div><div><br></div><div><div =
-dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><d=
-iv dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34,34)"><div sty=
-le=3D"color:rgb(32,33,36)"><font color=3D"#000000">God Bless,<br>Amanda Lim=
-<br><i>Records &amp; Archives Executive</i></font></div><div style=3D"color=
-:rgb(32,33,36)"><font color=3D"#000000">Chancery of the Roman Catholic Arch=
-diocese of Singapore</font></div><div style=3D"color:rgb(32,33,36)"><font c=
-olor=3D"#000000"><br></font></div><div style=3D"color:rgb(32,33,36)"><i>Cha=
-ncery Archives - By Appointment Only</i></div><div style=3D"color:rgb(32,33=
-,36)"><font color=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0<a href=3D=
-"https://history.catholic.sg/" target=3D"_blank"><font color=3D"#3d85c6">ht=
-tps://history.catholic.sg/</font></a></div><div style=3D"color:rgb(32,33,36=
-)"><i><font color=3D"#000000">Discover our latest archival research and art=
-efact showcase online.</font></i></div></div><div style=3D"color:rgb(136,13=
-6,136);font-size:12.8000001907349px"><br></div><div style=3D"color:rgb(136,=
-136,136);font-size:12.8000001907349px"><font size=3D"1">This email contains=
- information intended for the perusal, and/or use, by the stated addressee(=
-s) only. Information is confidential and privileged, and may not be publish=
-ed elsewhere. If you are not an intended recipient do not peruse, use, diss=
-eminate, copy or in any manner rely upon the information contained in this =
-message (directly or indirectly). If you receive this message in error, kin=
-dly notify the sender immediately by email, fax or telephone, and delete th=
-is e-mail from your system. For the recipient&#39;s own protection, we reco=
-mmend that you scan this email and any attached files for viruses and the l=
-ike. The Organization accepts no liability of whatever nature for any loss,=
- damage or expense resulting directly or indirectly from the access of any =
-files which are attached to this message.<br></font></div></div></div></div=
-></div><br></div><br><div class=3D"gmail_quote gmail_quote_container"><div =
-dir=3D"ltr" class=3D"gmail_attr">On Fri, Sep 4, 2026 at 5:40=E2=80=AFAM Chr=
-is Lee &lt;<a href=3D"mailto:chriskslee@gmail.com">chriskslee@gmail.com</a>=
-&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px =
-0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div=
- dir=3D"ltr"><div dir=3D"ltr">Dear Amanda,<br><br>Thank you again for appro=
-ving the reproduction of the nine photographs,<br>and for the credit lines =
-=E2=80=94 they have all been applied exactly as you<br>provided them.<br><b=
-r>The article is now published, with the nine images placed through the<br>=
-post and its photo gallery:<br><a href=3D"https://pikaia.github.io/2026/08/=
-15/jalan-payoh-lai-kangkar-montfort-nativity-church/" target=3D"_blank">htt=
-ps://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-=
-church/</a><br><br>It also has a narrated video version, and a short vertic=
-al excerpt, both on YouTube:<br>=C2=A0 Full video: =C2=A0<a href=3D"https:/=
-/youtu.be/Fh7IT4cBG_A" target=3D"_blank">https://youtu.be/Fh7IT4cBG_A</a><b=
-r>=C2=A0 Short: =C2=A0 =C2=A0 =C2=A0 <a href=3D"https://www.youtube.com/sho=
-rts/tIQnVfHDszg" target=3D"_blank">https://www.youtube.com/shorts/tIQnVfHDs=
-zg</a><br><br>One request, if it is possible. The copies I am currently usi=
-ng are the<br>display images from <a href=3D"http://history.catholic.sg" ta=
-rget=3D"_blank">history.catholic.sg</a>, which are a few hundred pixels<br>=
-on the longest side. They look fine in the article, but they soften<br>noti=
-ceably when enlarged for the video =E2=80=94 particularly in the vertical<b=
-r>short, where a wide photo can only fill part of the frame. Would<br>highe=
-r-resolution scans of any of the nine be available? I would be<br>grateful =
-for whichever are easily to hand; there is no rush, and I would<br>of cours=
-e keep the same credit lines and the same non-commercial use<br>(this post =
-and its video only).<br><br>Thank you once more for making these archives a=
-ccessible.<br><br>Kind regards,<br>Chris Lee<br>Lesser Known Singapore =E2=
-=80=94 <a href=3D"https://pikaia.github.io" target=3D"_blank">https://pikai=
-a.github.io</a><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" cl=
-ass=3D"gmail_attr">On Thu, Sep 3, 2026 at 9:02=E2=80=AFAM Chris Lee &lt;<a =
-href=3D"mailto:chriskslee@gmail.com" target=3D"_blank">chriskslee@gmail.com=
-</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:=
-0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">=
-<div dir=3D"ltr">Hello Amanda,<div><br></div><div>Thanks so much for the ti=
-mely approval. I will update the blog and the youtube channel. If I need to reuse these i=
-mages for a different post, I will submit another request as needed.</div>=
-<div><br></div><div>God bless you!</div><div>Chris</div></div><br><div class=3D"g=
-mail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Thu, Sep 3, 2026 at 4:=
-26=E2=80=AFAM Chancery Records (Chancery) &lt;<a href=3D"mailto:chanceryrec=
-ords@catholic.org.sg" target=3D"_blank">chanceryrecords@catholic.org.sg</a>=
-&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px =
-0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div=
- dir=3D"ltr"><div>Dear Chris</div><div><br></div><div>Thank you for complet=
-ing the form in detail.=C2=A0</div><div><br></div><div>The Chancery Archive=
-s approves your use of the selected photographs specifically and <b>only </=
-b>for the stated purpose(s) of: &quot;For an already-published post and vid=
-eo on old Kangkar / Aukang, Montfort School and the Church of the Nativity:=
- =E2=80=9CThe Lane Was Probably Named After My School. Neither Is There Any=
-more.=E2=80=9D (<a href=3D"http://pikaia.github.io/2026/08/16/jalan-payoh-l=
-ai-kangkar-montfortnativity-church/" target=3D"_blank">pikaia.github.io/202=
-6/08/16/jalan-payoh-lai-kangkar-montfortnativity-church/</a> ; <a href=3D"h=
-ttp://youtu.be/GTIpKWDZBNA)" target=3D"_blank">youtu.be/GTIpKWDZBNA)</a>.&q=
-uot;=C2=A0</div><div><br></div><div>As you have completed the request form,=
- you confirm that all accessed material will be used solely for non-profit =
-purposes, will not be reproduced beyond the stated scope and purpose withou=
-t resubmission of this form, and will not be sold or otherwise distributed =
-to third parties. You also agree to provide proper citation and credit to t=
-he source in all published material, in any form. Failure to adhere to thes=
-e terms and conditions may constitute a violation of copyright law.</div><d=
-iv><br></div><div>You may use the following crediting format for these phot=
-os:=C2=A0</div><div><ol><li>The old school building when Montfort was known=
- as Holy Innocents=E2=80=99 English School, undated. Rev. Fr. Rene Nicolas =
-Collection, courtesy of the Chancery Archives.</li><li>Black and white phot=
-ograph of the outdoor statue of the Blessed Virgin Mary, Church of the Nati=
-vity of the Blessed Virgin Mary, Hougang, Singapore, undated. Rev. Fr. Rene=
- Nicolas Collection, courtesy of the Chancery Archives.</li><li>Aerial shot=
- of the Church of the Nativity of the Blessed Virgin Mary, Hougang, and its=
- surrounding complex, undated. Rev. Fr. Rene Nicolas Collection, courtesy o=
-f the Chancery Archives.=C2=A0=C2=A0=C2=A0=C2=A0</li><li>Black and white ph=
-otograph of the Holy Innocents=E2=80=99 English School building facade, c. =
-1910s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives.=
-=C2=A0 =C2=A0=C2=A0</li><li>Black and white photograph of the parish kampon=
-g houses of old Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s.=
- Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archives.=C2=A0=
- =C2=A0</li><li>Black and white photograph of the =E2=80=98=E2=80=99kampong=
-=E2=80=99=E2=80=99 parishioners of old Aukang, Teochew-Catholic Enclave, Si=
-ngapore, c.1920s-1930s. Rev. Fr. Rene Nicolas Collection, courtesy of the C=
-hancery Archives.=C2=A0 =C2=A0</li><li>Working life in the kampong =E2=80=
-=93 a young fisherman mending the prawn trawler nets, c. 1930s. Maria Lee A=
-h Kin Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li><li>K=
-ampong girls riding around the Ponggol 10th milestone neighbourhood, c. 193=
-0s. Maria Lee Ah Kin Collection, courtesy of the Chancery Archives.=C2=A0 =
-=C2=A0</li><li>The extended Chng Family comprising three generations of Auk=
-ang Teochew Catholics in front of an attap house, 1932. Maria Lee Ah Kin Co=
-llection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li></ol></div><d=
-iv>Thank you and we wish you all the best in your Youtube channel and websi=
-te.</div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature"><di=
-v dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34,34)"><div styl=
-e=3D"color:rgb(32,33,36)"><font color=3D"#000000">God Bless,<br>Amanda Lim<=
-br><i>Records &amp; Archives Executive</i></font></div><div style=3D"color:=
-rgb(32,33,36)"><font color=3D"#000000">Chancery of the Roman Catholic Archd=
-iocese of Singapore</font></div><div style=3D"color:rgb(32,33,36)"><font co=
-lor=3D"#000000"><br></font></div><div style=3D"color:rgb(32,33,36)"><i>Chan=
-cery Archives - By Appointment Only</i></div><div style=3D"color:rgb(32,33,=
-36)"><font color=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0<a href=3D"=
-https://history.catholic.sg/" target=3D"_blank"><font color=3D"#3d85c6">htt=
-ps://history.catholic.sg/</font></a></div><div style=3D"color:rgb(32,33,36)=
-"><i><font color=3D"#000000">Discover our latest archival research and arte=
-fact showcase online.</font></i></div></div><div style=3D"color:rgb(136,136=
-,136);font-size:12.8px"><br></div><div style=3D"color:rgb(136,136,136);font=
--size:12.8px"><font size=3D"1">This email contains information intended for=
- the perusal, and/or use, by the stated addressee(s) only. Information is c=
-onfidential and privileged, and may not be published elsewhere. If you are =
-not an intended recipient do not peruse, use, disseminate, copy or in any m=
-anner rely upon the information contained in this message (directly or indi=
-rectly). If you receive this message in error, kindly notify the sender imm=
-ediately by email, fax or telephone, and delete this e-mail from your syste=
-m. For the recipient&#39;s own protection, we recommend that you scan this =
-email and any attached files for viruses and the like. The Organization acc=
-epts no liability of whatever nature for any loss, damage or expense result=
-ing directly or indirectly from the access of any files which are attached =
-to this message.<br></font></div></div></div></div></div><br></div><br><div=
- class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Thu, Sep 3,=
- 2026 at 10:36=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:chriskslee@gmail.=
-com" target=3D"_blank">chriskslee@gmail.com</a>&gt; wrote:<br></div><blockq=
-uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1p=
-x solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hello Amanda,<d=
-iv><br></div><div>The form with an addendum for the list of images is attac=
-hed.</div><div><br></div><div>Thank you very much for your service in making this website avail=
-able.</div><div><br></div><div>Sincerely,</div><di=
-v>Chris Lee</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" clas=
-s=3D"gmail_attr">On Wed, Sep 2, 2026 at 9:36=E2=80=AFAM Chris Lee &lt;<a hr=
-ef=3D"mailto:chriskslee@gmail.com" target=3D"_blank">chriskslee@gmail.com</=
-a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0p=
-x 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><d=
-iv dir=3D"auto">Hello Amanda,=C2=A0<div dir=3D"auto"><br></div><div dir=3D"=
-auto">I will submit the form=C2=A0as soon as possible. I will address futur=
-e emails to this address. Thank you vm for your time and the positive reply=
-. My viewership has taken off and many people ask why I don&#39;t display i=
-mages commonly found on the internet. But the AI that assist me in organizi=
-ng content repeatedly reminds me to=C2=A0 obtain permission before doing so=
-.=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">Thank=C2=A0you a=
-gain</div><div dir=3D"auto">Chris Lee</div></div><br><div class=3D"gmail_qu=
-ote"><div dir=3D"ltr" class=3D"gmail_attr">On Wed, Sep 2, 2026, 1:28=E2=80=
-=AFAM Chancery Records (Chancery) &lt;<a href=3D"mailto:chanceryrecords@cat=
-holic.org.sg" target=3D"_blank">chanceryrecords@catholic.org.sg</a>&gt; wro=
-te:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px =
-0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"=
-ltr"><div>Dear Chris</div><div><br></div><div>Peace be with you and apologi=
-es for our delayed response as your email was sent to our spam folder.</div=
-><div><br></div><div>In order for us to proceed with granting you permissio=
-n to access and reproduce these images for only non-commercial purposes on =
-your website/YouTube channel, kindly fill in the form and state clearly the=
- photos that you would like to use.</div><div><br></div><div>Please note th=
-at you have to submit a new request form every time you re-use the images f=
-or a different video and/or post, or if you intend to use it for non-commer=
-cial purposes, to adhere to copyright guidelines.<br><br></div><div>As for =
-citing/referencing our written work on your posts, you may credit=C2=A0acco=
-rding to the following format: [Author/Creator if known], Chancery Archives=
-, Roman Catholic Archdiocese of Singapore =C2=A9 [Year]&quot;. For example,=
- if you are referencing the page on The Parish Schools, you may indicate &q=
-uot;<span style=3D"background-color:transparent">Chancery Archives, Roman C=
-atholic Archdiocese of Singapore =C2=A9&quot; since no individual author or=
- date is stated.</span></div><div><span style=3D"background-color:transpare=
-nt"><br></span></div><div><span style=3D"background-color:transparent">We w=
-ill advise you on how to credit images sourced from us at a later stage, su=
-bject to the approval of your completed request form.</span></div><div><br>=
-</div><div>Thank you.</div><div><br></div><div><div dir=3D"ltr" class=3D"gm=
-ail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34=
-,34,34)"><div style=3D"color:rgb(32,33,36)"><font color=3D"#000000">God Ble=
-ss,</font></div><div style=3D"color:rgb(32,33,36)"><font color=3D"#000000">=
-Amanda Lim<br><i>Records &amp; Archives Executive</i></font></div><div styl=
-e=3D"color:rgb(32,33,36)"><font color=3D"#000000">Chancery of the Roman Cat=
-holic Archdiocese of Singapore</font></div><div style=3D"color:rgb(32,33,36=
-)"><font color=3D"#000000"><br></font></div><div style=3D"color:rgb(32,33,3=
-6)"><i>Chancery Archives - By Appointment Only</i></div><div style=3D"color=
-:rgb(32,33,36)"><font color=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0=
-<a href=3D"https://history.catholic.sg/" rel=3D"noreferrer" target=3D"_blan=
-k"><font color=3D"#3d85c6">https://history.catholic.sg/</font></a></div><di=
-v style=3D"color:rgb(32,33,36)"><i><font color=3D"#000000">Discover our lat=
-est archival research and artefact showcase online.</font></i></div></div><=
-div style=3D"color:rgb(136,136,136);font-size:12.8px"><br></div><div style=
-=3D"color:rgb(136,136,136);font-size:12.8px"><font size=3D"1">This email co=
-ntains information intended for the perusal, and/or use, by the stated addr=
-essee(s) only. Information is confidential and privileged, and may not be p=
-ublished elsewhere. If you are not an intended recipient do not peruse, use=
-, disseminate, copy or in any manner rely upon the information contained in=
- this message (directly or indirectly). If you receive this message in erro=
-r, kindly notify the sender immediately by email, fax or telephone, and del=
-ete this e-mail from your system. For the recipient&#39;s own protection, w=
-e recommend that you scan this email and any attached files for viruses and=
- the like. The Organization accepts no liability of whatever nature for any=
- loss, damage or expense resulting directly or indirectly from the access o=
-f any files which are attached to this message.<br></font></div></div></div=
-></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" clas=
-s=3D"gmail_attr">On Tue, Aug 25, 2026 at 5:27=E2=80=AFAM Chris Lee &lt;<a h=
-ref=3D"mailto:chriskslee@gmail.com" rel=3D"noreferrer" target=3D"_blank">ch=
-riskslee@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote=
-" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);=
-padding-left:1ex"><div dir=3D"ltr">
+<div dir=3D"ltr">Dear Amanda,<br><br>Thank you for letting me know, and no =
+problem at all on the resolution -<br>I understand the constraint, and the =
+website copies work well for the<br>article and video as they are.<br><br>I=
+&#39;ve corrected the three credit lines for the Aukang photos (the<br>fish=
+erman, the Punggol girls, and the Chng family) to read &quot;Mary and<br>Jo=
+seph Lee Collection&quot; throughout the post, the video, and the YouTube<b=
+r>description.<br><br>Thank you again for all your help with this one - it&=
+#39;s meant a lot to be<br>able to tell this story properly.<br><br>God ble=
+ss,<br>Chris<br></div><br><div class=3D"gmail_quote gmail_quote_container">=
+<div dir=3D"ltr" class=3D"gmail_attr">On Fri, Sep 4, 2026 at 3:46=E2=80=AFA=
+M Chancery Records (Chancery) &lt;<a href=3D"mailto:chanceryrecords@catholi=
+c.org.sg">chanceryrecords@catholic.org.sg</a>&gt; wrote:<br></div><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px =
+solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Dear Chris</=
+div><div><br></div><div>Thank you so much for the update and for following =
+up so quickly. It is great to hear that you were able to use the photos fro=
+m our website.</div><div><br></div><div>R=
+egarding your request, unfortunately, the photos posted on our website are =
+the highest resolution files we have available. The physical photos themsel=
+ves still belong to the original donor families and institutions, so we are=
+ unable to rescan these with higher resolution. We hope you understand our =
+constraints.</div><div><br></div><div>I would also like to correct my earli=
+er email for some of the credit lines, particularly for the ones taken in A=
+ukang. I sincerely apologise for the oversight.=C2=A0</div><div><br></div><=
+div>Please amend<span style=3D"background-color:transparent">=C2=A0the foll=
+owing crediting lines for photos 7-9 in my previous email. These should be =
+attributed to the <b>Mary and Joseph Lee Collection</b>:=C2=A0</span></div>=
+<div><ol><li style=3D"margin-left:15px">Working life in the kampong =E2=80=
+=93 a young fisherman mending the prawn trawler nets, c. 1930s. Mary and Jo=
+seph Lee Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li><l=
+i style=3D"margin-left:15px">Kampong girls riding around the Ponggol 10th m=
+ilestone neighbourhood, c. 1930s. Mary and Joseph Lee Collection, courtesy =
+of the Chancery Archives.=C2=A0 =C2=A0</li><li style=3D"margin-left:15px">T=
+he extended Chng Family comprising three generations of Aukang Teochew Cath=
+olics in front of an attap house, 1932. Mary and Joseph Lee Collection, cou=
+rtesy of the Chancery Archives.=C2=A0 =C2=A0</li></ol><div>Thank you and we=
+ wish you all the best in the continuation of your website and Youtube chan=
+nel.</div></div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signatu=
+re"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34,34)"><d=
+iv style=3D"color:rgb(32,33,36)"><font color=3D"#000000">God Bless,<br>Aman=
+da Lim<br><i>Records &amp; Archives Executive</i></font></div><div style=3D=
+"color:rgb(32,33,36)"><font color=3D"#000000">Chancery of the Roman Catholi=
+c Archdiocese of Singapore</font></div><div style=3D"color:rgb(32,33,36)"><=
+font color=3D"#000000"><br></font></div><div style=3D"color:rgb(32,33,36)">=
+<i>Chancery Archives - By Appointment Only</i></div><div style=3D"color:rgb=
+(32,33,36)"><font color=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0<a h=
+ref=3D"https://history.catholic.sg/" target=3D"_blank"><font color=3D"#3d85=
+c6">https://history.catholic.sg/</font></a></div><div style=3D"color:rgb(32=
+,33,36)"><i><font color=3D"#000000">Discover our latest archival research a=
+nd artefact showcase online.</font></i></div></div><div style=3D"color:rgb(=
+136,136,136);font-size:12.8px"><br></div><div style=3D"color:rgb(136,136,13=
+6);font-size:12.8px"><font size=3D"1">This email contains information inten=
+ded for the perusal, and/or use, by the stated addressee(s) only. Informati=
+on is confidential and privileged, and may not be published elsewhere. If y=
+ou are not an intended recipient do not peruse, use, disseminate, copy or i=
+n any manner rely upon the information contained in this message (directly =
+or indirectly). If you receive this message in error, kindly notify the sen=
+der immediately by email, fax or telephone, and delete this e-mail from you=
+r system. For the recipient&#39;s own protection, we recommend that you sca=
+n this email and any attached files for viruses and the like. The Organizat=
+ion accepts no liability of whatever nature for any loss, damage or expense=
+ resulting directly or indirectly from the access of any files which are at=
+tached to this message.<br></font></div></div></div></div></div><br></div><=
+br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fri,=
+ Sep 4, 2026 at 5:40=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:chriskslee@=
+gmail.com" target=3D"_blank">chriskslee@gmail.com</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-l=
+eft:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div dir=
+=3D"ltr">Dear Amanda,<br><br>Thank you again for approving the reproduction=
+ of the nine photographs,<br>and for the credit lines =E2=80=94 they have a=
+ll been applied exactly as you<br>provided them.<br><br>The article is now =
+published, with the nine images placed through the<br>post and its photo ga=
+llery:<br><a href=3D"https://pikaia.github.io/2026/08/15/jalan-payoh-lai-ka=
+ngkar-montfort-nativity-church/" target=3D"_blank">https://pikaia.github.io=
+/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/</a><br><br>It=
+ also has a narrated video version, and a short vertical excerpt, both on Y=
+ouTube:<br>=C2=A0 Full video: =C2=A0<a href=3D"https://youtu.be/Fh7IT4cBG_A=
+" target=3D"_blank">https://youtu.be/Fh7IT4cBG_A</a><br>=C2=A0 Short: =C2=
+=A0 =C2=A0 =C2=A0 <a href=3D"https://www.youtube.com/shorts/tIQnVfHDszg" ta=
+rget=3D"_blank">https://www.youtube.com/shorts/tIQnVfHDszg</a><br><br>One r=
+equest, if it is possible. The copies I am currently using are the<br>displ=
+ay images from <a href=3D"http://history.catholic.sg" target=3D"_blank">his=
+tory.catholic.sg</a>, which are a few hundred pixels<br>on the longest side=
+. They look fine in the article, but they soften<br>noticeably when enlarge=
+d for the video =E2=80=94 particularly in the vertical<br>short, where a wi=
+de photo can only fill part of the frame. Would<br>higher-resolution scans =
+of any of the nine be available? I would be<br>grateful for whichever are e=
+asily to hand; there is no rush, and I would<br>of course keep the same cre=
+dit lines and the same non-commercial use<br>(this post and its video only)=
+.<br><br>Thank you once more for making these archives accessible.<br><br>K=
+ind regards,<br>Chris Lee<br>Lesser Known Singapore =E2=80=94 <a href=3D"ht=
+tps://pikaia.github.io" target=3D"_blank">https://pikaia.github.io</a><br><=
+/div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">O=
+n Thu, Sep 3, 2026 at 9:02=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:chris=
+kslee@gmail.com" target=3D"_blank">chriskslee@gmail.com</a>&gt; wrote:<br><=
+/div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bo=
+rder-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hel=
+lo Amanda,<div><br></div><div>Thanks so much for the timely approval. I wil=
+l update the blog and the youtube channel. If I need to reuse these image=
+s for a different post, I will submit another request as needed.</div><div=
+><br></div><div>God bl=
+ess you!</div><div>Chris</div></div><br><div class=3D"gmail_quote"><div dir=
+=3D"ltr" class=3D"gmail_attr">On Thu, Sep 3, 2026 at 4:26=E2=80=AFAM Chance=
+ry Records (Chancery) &lt;<a href=3D"mailto:chanceryrecords@catholic.org.sg=
+" target=3D"_blank">chanceryrecords@catholic.org.sg</a>&gt; wrote:<br></div=
+><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border=
+-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>De=
+ar Chris</div><div><br></div><div>Thank you for completing the form in deta=
+il.=C2=A0</div><div><br></div><div>The Chancery Archives approves your use =
+of the selected photographs specifically and <b>only </b>for the stated pur=
+pose(s) of: &quot;For an already-published post and video on old Kangkar / =
+Aukang, Montfort School and the Church of the Nativity: =E2=80=9CThe Lane W=
+as Probably Named After My School. Neither Is There Anymore.=E2=80=9D (<a h=
+ref=3D"http://pikaia.github.io/2026/08/16/jalan-payoh-lai-kangkar-montfortn=
+ativity-church/" target=3D"_blank">pikaia.github.io/2026/08/16/jalan-payoh-=
+lai-kangkar-montfortnativity-church/</a> ; <a href=3D"http://youtu.be/GTIpK=
+WDZBNA)" target=3D"_blank">youtu.be/GTIpKWDZBNA)</a>.&quot;=C2=A0</div><div=
+><br></div><div>As you have completed the request form, you confirm that al=
+l accessed material will be used solely for non-profit purposes, will not b=
+e reproduced beyond the stated scope and purpose without resubmission of th=
+is form, and will not be sold or otherwise distributed to third parties. Yo=
+u also agree to provide proper citation and credit to the source in all pub=
+lished material, in any form. Failure to adhere to these terms and conditio=
+ns may constitute a violation of copyright law.</div><div><br></div><div>Yo=
+u may use the following crediting format for these photos:=C2=A0</div><div>=
+<ol><li>The old school building when Montfort was known as Holy Innocents=
+=E2=80=99 English School, undated. Rev. Fr. Rene Nicolas Collection, courte=
+sy of the Chancery Archives.</li><li>Black and white photograph of the outd=
+oor statue of the Blessed Virgin Mary, Church of the Nativity of the Blesse=
+d Virgin Mary, Hougang, Singapore, undated. Rev. Fr. Rene Nicolas Collectio=
+n, courtesy of the Chancery Archives.</li><li>Aerial shot of the Church of =
+the Nativity of the Blessed Virgin Mary, Hougang, and its surrounding compl=
+ex, undated. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Arc=
+hives.=C2=A0=C2=A0=C2=A0=C2=A0</li><li>Black and white photograph of the Ho=
+ly Innocents=E2=80=99 English School building facade, c. 1910s. Rev. Fr. Re=
+ne Nicolas Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0=C2=
+=A0</li><li>Black and white photograph of the parish kampong houses of old =
+Aukang, Teochew-Catholic Enclave, Singapore, c.1920s-1930s. Rev. Fr. Rene N=
+icolas Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li><li>=
+Black and white photograph of the =E2=80=98=E2=80=99kampong=E2=80=99=E2=80=
+=99 parishioners of old Aukang, Teochew-Catholic Enclave, Singapore, c.1920=
+s-1930s. Rev. Fr. Rene Nicolas Collection, courtesy of the Chancery Archive=
+s.=C2=A0 =C2=A0</li><li>Working life in the kampong =E2=80=93 a young fishe=
+rman mending the prawn trawler nets, c. 1930s. Maria Lee Ah Kin Collection,=
+ courtesy of the Chancery Archives.=C2=A0 =C2=A0</li><li>Kampong girls ridi=
+ng around the Ponggol 10th milestone neighbourhood, c. 1930s. Maria Lee Ah =
+Kin Collection, courtesy of the Chancery Archives.=C2=A0 =C2=A0</li><li>The=
+ extended Chng Family comprising three generations of Aukang Teochew Cathol=
+ics in front of an attap house, 1932. Maria Lee Ah Kin Collection, courtesy=
+ of the Chancery Archives.=C2=A0 =C2=A0</li></ol></div><div>Thank you and w=
+e wish you all the best in your Youtube channel and website.</div><div><br>=
+</div><div><div dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div=
+ dir=3D"ltr"><div style=3D"color:rgb(34,34,34)"><div style=3D"color:rgb(32,=
+33,36)"><font color=3D"#000000">God Bless,<br>Amanda Lim<br><i>Records &amp=
+; Archives Executive</i></font></div><div style=3D"color:rgb(32,33,36)"><fo=
+nt color=3D"#000000">Chancery of the Roman Catholic Archdiocese of Singapor=
+e</font></div><div style=3D"color:rgb(32,33,36)"><font color=3D"#000000"><b=
+r></font></div><div style=3D"color:rgb(32,33,36)"><i>Chancery Archives - By=
+ Appointment Only</i></div><div style=3D"color:rgb(32,33,36)"><font color=
+=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0<a href=3D"https://history.=
+catholic.sg/" target=3D"_blank"><font color=3D"#3d85c6">https://history.cat=
+holic.sg/</font></a></div><div style=3D"color:rgb(32,33,36)"><i><font color=
+=3D"#000000">Discover our latest archival research and artefact showcase on=
+line.</font></i></div></div><div style=3D"color:rgb(136,136,136);font-size:=
+12.8px"><br></div><div style=3D"color:rgb(136,136,136);font-size:12.8px"><f=
+ont size=3D"1">This email contains information intended for the perusal, an=
+d/or use, by the stated addressee(s) only. Information is confidential and =
+privileged, and may not be published elsewhere. If you are not an intended =
+recipient do not peruse, use, disseminate, copy or in any manner rely upon =
+the information contained in this message (directly or indirectly). If you =
+receive this message in error, kindly notify the sender immediately by emai=
+l, fax or telephone, and delete this e-mail from your system. For the recip=
+ient&#39;s own protection, we recommend that you scan this email and any at=
+tached files for viruses and the like. The Organization accepts no liabilit=
+y of whatever nature for any loss, damage or expense resulting directly or =
+indirectly from the access of any files which are attached to this message.=
+<br></font></div></div></div></div></div><br></div><br><div class=3D"gmail_=
+quote"><div dir=3D"ltr" class=3D"gmail_attr">On Thu, Sep 3, 2026 at 10:36=
+=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:chriskslee@gmail.com" target=3D=
+"_blank">chriskslee@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"=
+gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(20=
+4,204,204);padding-left:1ex"><div dir=3D"ltr">Hello Amanda,<div><br></div><=
+div>The form with an addendum for the list of images is attached.</div><div><br></div><div>Than=
+k you very much for your service in making this website available.</div><di=
+v><br></div><div>Sincerely,</div><div>Chris Lee</d=
+iv></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_att=
+r">On Wed, Sep 2, 2026 at 9:36=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:c=
+hriskslee@gmail.com" target=3D"_blank">chriskslee@gmail.com</a>&gt; wrote:<=
+br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8e=
+x;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto=
+">Hello Amanda,=C2=A0<div dir=3D"auto"><br></div><div dir=3D"auto">I will s=
+ubmit the form=C2=A0as soon as possible. I will address future emails to th=
+is address. Thank you vm for your time and the positive reply. My viewershi=
+p has taken off and many people ask why I don&#39;t display images commonly=
+ found on the internet. But the AI that assist me in organizing content rep=
+eatedly reminds me to=C2=A0 obtain permission before doing so.=C2=A0</div><=
+div dir=3D"auto"><br></div><div dir=3D"auto">Thank=C2=A0you again</div><div=
+ dir=3D"auto">Chris Lee</div></div><br><div class=3D"gmail_quote"><div dir=
+=3D"ltr" class=3D"gmail_attr">On Wed, Sep 2, 2026, 1:28=E2=80=AFAM Chancery=
+ Records (Chancery) &lt;<a href=3D"mailto:chanceryrecords@catholic.org.sg" =
+target=3D"_blank">chanceryrecords@catholic.org.sg</a>&gt; wrote:<br></div><=
+blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-l=
+eft:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Dear=
+ Chris</div><div><br></div><div>Peace be with you and apologies for our del=
+ayed response as your email was sent to our spam folder.</div><div><br></di=
+v><div>In order for us to proceed with granting you permission to access an=
+d reproduce these images for only non-commercial purposes on your website/Y=
+ouTube channel, kindly fill in the form and state clearly the photos that y=
+ou would like to use.</div><div><br></div><div>Please note that you have to=
+ submit a new request form every time you re-use the images for a different=
+ video and/or post, or if you intend to use it for non-commercial purposes,=
+ to adhere to copyright guidelines.<br><br></div><div>As for citing/referen=
+cing our written work on your posts, you may credit=C2=A0according to the f=
+ollowing format: [Author/Creator if known], Chancery Archives, Roman Cathol=
+ic Archdiocese of Singapore =C2=A9 [Year]&quot;. For example, if you are re=
+ferencing the page on The Parish Schools, you may indicate &quot;<span styl=
+e=3D"background-color:transparent">Chancery Archives, Roman Catholic Archdi=
+ocese of Singapore =C2=A9&quot; since no individual author or date is state=
+d.</span></div><div><span style=3D"background-color:transparent"><br></span=
+></div><div><span style=3D"background-color:transparent">We will advise you=
+ on how to credit images sourced from us at a later stage, subject to the a=
+pproval of your completed request form.</span></div><div><br></div><div>Tha=
+nk you.</div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature"=
+><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34,34)"><div =
+style=3D"color:rgb(32,33,36)"><font color=3D"#000000">God Bless,</font></di=
+v><div style=3D"color:rgb(32,33,36)"><font color=3D"#000000">Amanda Lim<br>=
+<i>Records &amp; Archives Executive</i></font></div><div style=3D"color:rgb=
+(32,33,36)"><font color=3D"#000000">Chancery of the Roman Catholic Archdioc=
+ese of Singapore</font></div><div style=3D"color:rgb(32,33,36)"><font color=
+=3D"#000000"><br></font></div><div style=3D"color:rgb(32,33,36)"><i>Chancer=
+y Archives - By Appointment Only</i></div><div style=3D"color:rgb(32,33,36)=
+"><font color=3D"#000000">T: (65) 6341-9778 | W</font>:=C2=A0<a href=3D"htt=
+ps://history.catholic.sg/" rel=3D"noreferrer" target=3D"_blank"><font color=
+=3D"#3d85c6">https://history.catholic.sg/</font></a></div><div style=3D"col=
+or:rgb(32,33,36)"><i><font color=3D"#000000">Discover our latest archival r=
+esearch and artefact showcase online.</font></i></div></div><div style=3D"c=
+olor:rgb(136,136,136);font-size:12.8px"><br></div><div style=3D"color:rgb(1=
+36,136,136);font-size:12.8px"><font size=3D"1">This email contains informat=
+ion intended for the perusal, and/or use, by the stated addressee(s) only. =
+Information is confidential and privileged, and may not be published elsewh=
+ere. If you are not an intended recipient do not peruse, use, disseminate, =
+copy or in any manner rely upon the information contained in this message (=
+directly or indirectly). If you receive this message in error, kindly notif=
+y the sender immediately by email, fax or telephone, and delete this e-mail=
+ from your system. For the recipient&#39;s own protection, we recommend tha=
+t you scan this email and any attached files for viruses and the like. The =
+Organization accepts no liability of whatever nature for any loss, damage o=
+r expense resulting directly or indirectly from the access of any files whi=
+ch are attached to this message.<br></font></div></div></div></div></div><b=
+r></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr=
+">On Tue, Aug 25, 2026 at 5:27=E2=80=AFAM Chris Lee &lt;<a href=3D"mailto:c=
+hriskslee@gmail.com" rel=3D"noreferrer" target=3D"_blank">chriskslee@gmail.=
+com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"marg=
+in:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1e=
+x"><div dir=3D"ltr">
 
 Dear Catholic Heritage Centre Team,
 
@@ -853,5 +793,6 @@ nary Church&quot;</span></span></div><div><span style=3D"background-color:t=
 ransparent;color:rgb(153,153,153);font-family:Arial;font-size:8pt">Privileg=
 ed/Confidential information may be contained in this message. If you are no=
 t the intended recipient, please delete this email and notify the sender.</=
-span></div>
---00000000000096f9ff065aa3768b--
+span></div></blockquote></div>
+
+--0000000000007d1692065aa87975--
