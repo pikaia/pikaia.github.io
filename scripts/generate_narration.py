@@ -693,6 +693,27 @@ PRONUNCIATION_OVERRIDES = {
     "Wak": "wˈɑːk",               # Malay/Javanese term of address - "wahk" (Kampong
                                    # Wak Sumang)
     "Sumang": "sˈuːmaŋ",          # "SOO-mang" (Kampong Wak Sumang)
+
+    # Pineapple-kings post ("When Singapore Led the World in Canned
+    # Pineapple"). The three towkays plus place / person names misaki
+    # spells out. "Kong" / "Kee" / "Nee" / "Soon" / "Rochor" already have
+    # entries or phonemize fine; these are the gaps. Ear-check samples for
+    # the local names (Sembawang, Yishun, Skudai) and Kempeitai in
+    # scratch/singapore-canned-pineapple-kings-pronunciation/.
+    "Kah": "kˈɑː",                # "kah" (rhymes with "spa") - Tan Kah Kee
+    "Tye": "tˈaɪ",                # "tie" - Tan Tye, the earliest pineapple king
+    "Sembawang": "sɛmbˈawaŋ",     # "sem-BAH-wang" - Malay, full vowels (not
+                                   # schwa'd). NOT ear-verified yet
+    "Yishun": "jˈiːʃʊn",          # "YEE-shun" - Mandarin reading of Nee Soon.
+                                   # NOT ear-verified yet
+    "Skudai": "skˈuːdaɪ",         # "SKOO-dye" - the Johor town. NOT ear-verified yet
+    "Bastiani": "bˌastiˈɑːni",    # "bas-tee-AH-nee" - J. P. Bastiani, the
+                                   # Corsican-Italian cannery owner
+    "Yat-sen": "jˌatsˈɛn",        # "yaht-SEN" - Sun Yat-sen (misaki appends
+                                   # the "'s" possessive itself)
+    "Kempeitai": "kˌɛmpeɪtˈaɪ",   # "kem-pay-TIE" - the wartime Japanese
+                                   # military police. NOT ear-verified yet
+    "Kempeitai's": "kˌɛmpeɪtˈaɪz",  # misaki won't derive the possessive here
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
