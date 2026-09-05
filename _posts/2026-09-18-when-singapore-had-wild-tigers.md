@@ -31,9 +31,11 @@ The government's answer was money. A reward of twenty dollars a tiger climbed to
 
 The bounty and the shrinking jungle did their work. A man was killed by a tiger on Thomson Road in 1890, and two more tigers were shot at Bukit Timah in 1896, but sightings after that grew rare. In 1902 a tiger did turn up in the middle of town, hiding under the elevated Bar & Billiard Room of the Raffles Hotel — but it was not one of the wild survivors. It had escaped from a travelling circus on Beach Road and was shot by Charles McGowan Phillips, the principal of nearby Raffles Institution. It's the story most people know; the wild tiger it's usually mistaken for had, by then, almost nowhere left to hide.
 
-The real last tiger was killed on 26 October 1930, at eleven in the morning, on the fringe of Choa Chu Kang village. It weighed 127.8 kilograms. The hunter credited with the shot was Ong Kim Hong; Tan Tian Quee and Low Peng Hoe of the Straits Hunting Party were there too, and a photograph of the wider hunting party — several dozen men and dogs gathered under the village's roadside sign — survives in the National Library's collection.
+By the 1920s a wild tiger in Singapore was rare enough to be an event. My wife's family has a thread in this story of its own. One of her maternal relatives, by family account, was part of the hunting party on 12 August 1928 that tracked down a Malayan tiger off West Coast in the Pasir Panjang district — though he never claimed to have fired the shot himself, only to have been there.
 
-My wife's family has a thread in this story of its own. One of her maternal relatives, by family account, was part of the hunting party on 12 August 1928 that tracked down a Malayan tiger off West Coast in the Pasir Panjang district — though he never claimed to have fired the shot himself, only to have been there.
+That hunt is on the record. A group photograph held by the National Archives names sixteen of the party — Tan Tian Quee as leader, Tan Ah Mui credited with the shot, a tracker recorded only as Mahally — with a row of beaters left unnamed. The tiger was killed in the jungle at the tenth milestone of West Coast Road, and measured eight feet three inches from nose to tail.
+
+The same party finished the job two years later. On 26 October 1930, at eleven in the morning, on the fringe of Choa Chu Kang village, Ong Kim Hong — one of the 1928 group — shot a tiger of eight feet six inches. It was the last wild tiger anyone recorded in Singapore. A photograph of the party under the village's roadside sign, several dozen men and their dogs, survives in the National Library's collection.
 
 ## From tiger to otter
 
@@ -69,6 +71,7 @@ The clearest sign of how far the management philosophy has shifted sits over the
 
 **Sources:**
 - [Tigers in Singapore — Singapore Infopedia, National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=baa5413b-941d-4540-8640-d8606b539b04)
+- ["This tiger was shot by Tan Ah Mui (Chan Ah Mui)…" (12 August 1928, off West Coast Road, Pasir Panjang) — Tan Tuan Khoon Collection, National Archives of Singapore](https://www.nas.gov.sg/archivesonline/photographs/record-details/2261b262-1162-11e3-83d5-0050568939ad)
 - [Nearly 40% of Pasir Ris residents would prefer to remove or relocate wild boars & stray dogs from estate — Mothership.SG](https://mothership.sg/2020/12/pasir-ris-wildlife-survey-results/)
 - [Singapore wild boar caught, euthanized after dramatic chase — Inquirer.net](https://newsinfo.inquirer.net/1401525/singapore-wild-boar-caught-euthanized-after-dramatic-chase)
 - [NParks to put down 3m-long crocodile found at East Coast Park for 'public safety' — Mothership.SG](https://mothership.sg/2023/10/nparks-put-down-crocodile/)

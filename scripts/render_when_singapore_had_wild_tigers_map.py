@@ -30,9 +30,9 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "images",
 TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
 UA = "LesserKnownSingapore-map-render/1.0 (one-off static map for a blog post)"
 
-ATTACK_C = (176, 42, 42, 255)   # a recorded attack/death
+ATTACK_C = (176, 42, 42, 255)   # a recorded attack on a person
 AREA_C = (196, 130, 31, 255)    # general menace / patrol area
-LAST_C = (44, 90, 168, 255)     # the last wild tiger, 1930
+HUNT_C = (44, 90, 168, 255)     # a documented tiger hunt
 
 # label, colour, lat, lon, anchor side ("l"/"r"), vertical box offset (px),
 # horizontal gap from marker to box (px, default 22)
@@ -42,7 +42,8 @@ PINS = [
     ("Bukit Timah\nA village nearby was abandoned\nin 1859; 2 tigers shot 1896", AREA_C, 1.3550, 103.7770, "r", -170, 22),
     ("Tampines\nSightings recorded\ninto the 1890s", AREA_C, 1.3530, 103.9450, "r", 0, 22),
     ("Changi\nPatrolled by convict\nlabourers from 1859", AREA_C, 1.3890, 103.9880, "l", 40, 22),
-    ("Choa Chu Kang\nThe last wild tiger, shot here\n26 October 1930", LAST_C, 1.3850, 103.7450, "l", 0, 22),
+    ("West Coast Road (Pasir Panjang)\n12 August 1928: a hunting party\nshot a tiger here", HUNT_C, 1.2900, 103.7570, "l", 120, 22),
+    ("Choa Chu Kang\nThe same party shot the last\nwild tiger here, 26 October 1930", HUNT_C, 1.3850, 103.7450, "l", 0, 22),
 ]
 
 TITLE = "Where Singapore's tigers were"
@@ -126,7 +127,7 @@ def main():
         for i, ln in enumerate(lines):
             draw.text((bx2 + 10, by2 + 8 + i * 26), ln, font=fonts[i], fill=(28, 28, 26, 255))
 
-        r = 13 if col == LAST_C else 11
+        r = 13 if col == HUNT_C else 11
         draw.ellipse([cx - r - 4, cy - r - 4, cx + r + 4, cy + r + 4], fill=(255, 255, 255, 245))
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=col)
 
@@ -140,9 +141,9 @@ def main():
 
     legend_font = load_font(19)
     legend = [
-        ("Recorded attack", ATTACK_C),
+        ("Recorded attack on a person", ATTACK_C),
         ("General menace / patrol area", AREA_C),
-        ("The last tiger, 1930", LAST_C),
+        ("Documented tiger hunt (1928, 1930)", HUNT_C),
     ]
     lx, ly = 24, H - 190
     lw = 300
