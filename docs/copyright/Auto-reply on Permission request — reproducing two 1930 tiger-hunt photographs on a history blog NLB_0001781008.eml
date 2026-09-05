@@ -1,0 +1,114 @@
+Delivered-To: chriskslee@gmail.com
+Received: by 2002:a05:7000:cc1b:b0:892:21ff:5b9 with SMTP id mc27csp3743566mab;
+        Fri, 4 Sep 2026 14:43:23 -0700 (PDT)
+X-Received: by 2002:a05:6a20:e607:b0:3d3:ae50:97c6 with SMTP id adf61e73a8af0-3da3a154de6mr12920932637.19.1788558203099;
+        Fri, 04 Sep 2026 14:43:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1788558203; cv=none;
+        d=google.com; s=arc-20260327;
+        b=S6I6RUC43quZLtmdhBYOVcYX26ClV6EqAL47OjYOJ+xbU0fpSk9NN8B8bMGb/H7f0V
+         kNY7nxHTuhIOCrTAiBdflry+O0LqSXM6kn1L+soQw3MR6gXTBKno/SUI3tv88kny0I9p
+         c3sg7CIWB3yYhfeeKAGWKy9lfEEBtqDieskcydgHiV/aWPQXcsnSZIRVMxMmVFKmnSi1
+         B0YSZjyR9QdlaeROykfhMCHkXL1D3+hn+AHd6Z1r2ZPktbklbKV6e5+7XH99flUu8itX
+         ACXnVzN7pLu1znYmw3D46elbWHZr625z5m8YWVzJAb+5UbOydAlqv5x5QlOzBuQGl9/L
+         BNIA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=content-transfer-encoding:subject:date:to:from:mime-version
+         :thread-index:thread-topic:message-id:dkim-signature;
+        bh=y7ttpntmmUMYVXhJ3wxQCMtNFHqhzoKUWX4YSmXfXmA=;
+        fh=Uawuw/OI0ouDDtm7Sh0q720bDiVxYN5qpwptteeVXnY=;
+        b=HJ8Y4/Wefu9wVa7TV7C+6w5uZL+WCMbxVjbqN3V2P0ZIOSbsuJpDy3ek5CaWPBcWZq
+         RRkBWOC/lxu8ey5BEEy0wwVEqq48xopmKF7UB2IACq0jdzKY/x5Wtim+y3C7A9sAMXos
+         S2j1Fp3MsuC4DSROBjhmKV9SzhP85EOU9b1v+a+uP53goxTX39On6S52flRJb+X5BMB9
+         xAh4BWDFnPAC3vgNRKIVFYAKjvNjgC8Y8/2vyemzJiJXiu4aANi9S5ws8EB/EMhmfjei
+         ybbpfBb1TAq7R/PfLSAdXRZVCa2wrPOpnp3ug6X+Fqj98QI3eTuvdDTishr8BlXmP+vl
+         I61w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nlb.gov.sg header.s=Singapore header.b=aC+LBEgk;
+       spf=pass (google.com: domain of acknowledgement@nlb.gov.sg designates 160.96.212.238 as permitted sender) smtp.mailfrom=acknowledgement@nlb.gov.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nlb.gov.sg
+Return-Path: <acknowledgement@nlb.gov.sg>
+Received: from smtp31.sgict.gov.sg (smtp31.sgict.gov.sg. [160.96.212.238])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-cc4555b6dccsi6837490a12.218.2026.09.04.14.43.22
+        for <chriskslee@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 04 Sep 2026 14:43:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of acknowledgement@nlb.gov.sg designates 160.96.212.238 as permitted sender) client-ip=160.96.212.238;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nlb.gov.sg header.s=Singapore header.b=aC+LBEgk;
+       spf=pass (google.com: domain of acknowledgement@nlb.gov.sg designates 160.96.212.238 as permitted sender) smtp.mailfrom=acknowledgement@nlb.gov.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nlb.gov.sg
+X-DKIMREPLACE:1
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=nlb.gov.sg;
+	s=Singapore; t=1788558201;
+	bh=y7ttpntmmUMYVXhJ3wxQCMtNFHqhzoKUWX4YSmXfXmA=;
+	h=From:To:Date:Subject;
+	b=aC+LBEgkScHaKXCObNACLWSph/wVcvlrswKtFWGDEfnkWZMcnaDzNx8oNvB9f34zy
+	 H5/dg1xVvA6IwkyfYI/19yl3P+AuSiMn2pU8Ad8mniba/HAmsXvEgMCYAcW9kB1f+z
+	 BOSe+v6PBky0xwuvS+IqrnbQ5rotmMHyROJflKm+Cd2MHBdOcr61hT9auo1ezID2Gj
+	 cEPGIICmc7PN2+UOCz0Cn0sOrat2o4CnKrYiMosBP2U8xT3q5jQRycZ4cXCkzyrzzF
+	 g9jPgol+Ujjx6IWeUA+FAiwjwjtqW313ixnX/7zLrxXk5z96ynu3jS5opPoSl3LkXm
+	 ijwgxy/b0teeQ==
+X-DKIMREPLACE:1
+X-DKIMREPLACE:1
+X-DKIMREPLACE:1
+X-DKIMREPLACE:1
+X-DKIMREPLACE:1
+Message-ID: <86C5ACAF62E94AA98DA82EB78905A4231DD3CB6661A0@ACKNOWLEDGEMENT.NLB.GOV.SG>
+Thread-Topic: =?utf-8?B?QXV0by1yZXBseSBvbiBQZXJtaXNzaW9uIHJlcXVlc3Qg?=
+ =?utf-8?B?4oCUIHJlcHJvZHVjaW5nIHR3byAxOTMwIHRpZ2VyLWh1bnQgcGhvdG9n?=
+ =?utf-8?B?cmFwaHMgb24gYSBoaXN0b3J5IGJsb2cgTkxCOjAwMDE3ODEwMDg=?=
+Thread-Index: AY9AkFmHaUwEvrqz1vD7mDndPLZmGg==
+MIME-Version: 1.0
+From: "enquiry@nlb.gov.sg" <acknowledgement@nlb.gov.sg>
+To: "Chris Lee" <chriskslee@gmail.com>
+Date: 5 Sep 2026 05:43:20 +0800
+Subject: =?utf-8?B?QXV0by1yZXBseSBvbiBQZXJtaXNzaW9uIHJlcXVlc3Qg4oCUIHJlcHJvZHVjaW5nIHR3byAxOTMwIHRpZ2VyLWh1bnQgcGhvdG9ncmFwaHMgb24gYSBoaXN0b3J5IGJsb2cgTkxCOjAwMDE3ODEwMDg=?=
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+X-TM-AS-GCONF: 00
+
+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNw
+YW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+
+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNwYW4+PHNw
+YW4+PHNwYW4+PHNwYW4+PHAgY2xhc3M9Ik1zb05vcm1hbCIgc3R5bGU9Im1hcmdpbi1i
+b3R0b206IDAuMDAwMXB0OyBsaW5lLWhlaWdodDogbm9ybWFsOyI+PC9wPjxwIGNsYXNz
+PSJNc29Ob3JtYWwiPjwvcD48cCBjbGFzcz0iTXNvTm9ybWFsIj48c3BhbiBzdHlsZT0i
+Zm9udC1mYW1pbHk6JnF1b3Q7U2Vnb2UgVUkmcXVvdDssc2Fucy1zZXJpZiI+RGVhciBT
+aXIvTWFkYW0sPG86cD48L286cD48L3NwYW4+PC9wPjxwIGNsYXNzPSJNc29Ob3JtYWwi
+PjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNh
+bnMtc2VyaWY7Ij5UaGFuayB5b3UgZm9yIHdyaXRpbmcgdG8gdGhlIE5hdGlvbmFsIExp
+YnJhcnkgU2luZ2Fwb3JlLCBMZWUgS29uZyBDaGlhbiBSZWZlcmVuY2UgTGlicmFyeS48
+L3NwYW4+PC9wPjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LWZh
+bWlseTogJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Ij5XZSBhcmUgbG9v
+a2luZyBpbnRvIHlvdXIgZW5xdWlyeS9mZWVkYmFjay4gRm9yIGVucXVpcmllcy9mZWVk
+YmFjayByZWNlaXZlZCBvbiBTYXR1cmRheXMsIFN1bmRheXMsIFB1YmxpYyBIb2xpZGF5
+cyBhbmQgYWZ0ZXIgb2ZmaWNlIGhvdXJzLCBpdCB3aWxsIGJlIGxvb2tlZCBpbnRvIG9u
+IHRoZSBmb2xsb3dpbmcgd29ya2luZyBkYXkuPC9zcGFuPjwvcD48cCBjbGFzcz0iTXNv
+Tm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6JnF1b3Q7U2Vnb2UgVUkmcXVv
+dDssc2Fucy1zZXJpZiI+V2Ugd2lzaCB5b3UgYSBwbGVhc2FudCBkYXkgYW5kIGxvb2sg
+Zm9yd2FyZCB0byB5b3VyIGNvbnRpbnVlZCBzdXBwb3J0LjxvOnA+PC9vOnA+PC9zcGFu
+PjwvcD48cCBjbGFzcz0iTXNvTm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6
+JnF1b3Q7U2Vnb2UgVUkmcXVvdDssc2Fucy1zZXJpZiI+PG86cD4mbmJzcDs8L286cD48
+L3NwYW4+PC9wPjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LWZh
+bWlseTomcXVvdDtTZWdvZSBVSSZxdW90OyxzYW5zLXNlcmlmIj5SZWdhcmRzLCA8bzpw
+PjwvbzpwPjwvc3Bhbj48L3A+PHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9
+ImZvbnQtZmFtaWx5OiZxdW90O1NlZ29lIFVJJnF1b3Q7LHNhbnMtc2VyaWYiPk5hdGlv
+bmFsIExpYnJhcnkgU2luZ2Fwb3JlPC9zcGFuPjwvcD48cCBjbGFzcz0iTXNvTm9ybWFs
+Ij48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6JnF1b3Q7U2Vnb2UgVUkmcXVvdDssc2Fu
+cy1zZXJpZiI+PGJyPjwvc3Bhbj48L3A+PHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4g
+c3R5bGU9ImZvbnQtZmFtaWx5OiZxdW90O1NlZ29lIFVJJnF1b3Q7LHNhbnMtc2VyaWYi
+PlBsZWFzZSBkbyBub3QgcmVwbHkgdG8gdGhpcyBlbWFpbCBhcyBpdCBpcyBzeXN0ZW0t
+Z2VuZXJhdGVkLjxvOnA+PC9vOnA+PC9zcGFuPjwvcD48cCBjbGFzcz0iTXNvTm9ybWFs
+Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOjExLjBwdDtmb250LWZhbWlseTomcXVvdDtT
+ZWdvZSBVSSZxdW90OyxzYW5zLXNlcmlmO21zby1mYXJlYXN0LWZvbnQtZmFtaWx5OkNh
+bGlicmk7bXNvLWZhcmVhc3QtdGhlbWUtZm9udDptaW5vci1sYXRpbjttc28tYW5zaS1s
+YW5ndWFnZTpFTi1TRzttc28tZmFyZWFzdC1sYW5ndWFnZTpFTi1VUzttc28tYmlkaS1s
+YW5ndWFnZTpBUi1TQSI+SWYgeW91IHdpc2ggdG8gY29udGFjdCB1cyBhZ2FpbiwgcGxl
+YXNlIGVtYWlsIHVzIGF0IDxhIGhyZWY9Im1haWx0bzpyZWZAbmxiLmdvdi5zZyI+cmVm
+QG5sYi5nb3Yuc2c8L2E+PC9zcGFuPjwvcD48cD48L3A+PHA+PC9wPjwvc3Bhbj48L3Nw
+YW4+PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9zcGFu
+Pjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvc3Bhbj48
+L3NwYW4+PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvc3Bhbj48L3NwYW4+PC9z
+cGFuPjwvc3Bhbj48L3NwYW4+PC9zcGFuPjwvc3Bhbj4=
+
