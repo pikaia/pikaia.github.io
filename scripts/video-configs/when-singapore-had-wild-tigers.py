@@ -46,6 +46,9 @@ _CVZ = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ea
 _CVZO = {"type": "cover", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
 _MAPMOVE = {"type": "letterbox", "zoom": [1.0, 1.03, 1.05], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 _CHART = {"type": "letterbox", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
+# The hornbill photo is 3:2 and the bird runs top (raised beak) to bottom
+# (long tail) - cover-cropping to 16:9 clips both ends, so it stays letterbox.
+_LBN = {"type": "letterbox", "zoom": [1.0, 1.03, 1.06], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in"}
 
 SLIDES = [
     {"img": "GAMBIER", **_CVZ},      # 0  s0-1   title; "rumoured a death a day"
@@ -69,14 +72,14 @@ SLIDES = [
     {"img": "MAP", **_MAPMOVE},      # 18 s35-36 the last wild tiger; the photo survives
     {"img": "OTTERFAMILY", **_CVZ},  # 19 s37    "a century later, wild animals again"
     {"img": "OTTERSIGN", **_LBW},    # 20 s38    otters colonised the waterways
-    {"img": "HORNBILL", **_CVZ},     # 21 s39    the Oriental Pied Hornbill's comeback
+    {"img": "HORNBILL", **_LBI},     # 21 s39    the Oriental Pied Hornbill's comeback
     {"img": "BOAR", **_CVZ},         # 22 s40-41 not every comeback welcome; Pulau Ubin
     {"img": "BOAR", **_CVZO},        # 23 s42    relocate vs cull; the Punggol boar
     {"img": "MAP", **_MAPMOVE},      # 24 s43-44 crocodiles case-by-case; Marina East 2023
     {"img": "ECOLINK", **_CVZ},      # 25 s45    the Sentosa crocodiles
     {"img": "ECOLINK", **_CVZO},     # 26 s46-47 the Eco-Link@BKE bridge
     {"img": "MAP", **_MAPMOVE},      # 27 s48    "a century clearing the jungle"
-    {"img": "HORNBILL", **_CVZ},     # 28 s49    the forest patches; seniors' hikes
+    {"img": "HORNBILL", **_LBN},     # 28 s49    the forest patches; seniors' hikes
 ]
 
 SCHEDULE = [
