@@ -43,6 +43,12 @@ Vintage and later photographs of the Tiger Balm business, the Aw brothers and Ha
 
 *One of the Ten Courts of Hell tableaux, the part of Haw Par Villa most Singaporeans remember. (Photo: Jnzl's Photos / Flickr / Wikimedia Commons, CC BY 2.0)*
 
+### Armed monkey statues at Haw Par Villa
+
+![Statues of armed monkeys at Haw Par Villa, Singapore](https://upload.wikimedia.org/wikipedia/commons/3/3e/Armed_monkeys%2C_Haw_Par_Villa_%28Tiger_Balm_Theme_Park%29%2C_Singapore_%2841102156%29.jpg)
+
+*One of the garden's folklore tableaux &mdash; armed monkey statues at Haw Par Villa, 2005. (Photo: Cory Doctorow / Flickr / Wikimedia Commons, CC BY-SA 2.0)*
+
 ### The garage that housed the tiger cars
 
 ![An interpretive sign at Haw Par Villa about "The Garage" and Aw Boon Haw's Tiger Cars](https://upload.wikimedia.org/wikipedia/commons/0/05/Haw_Par_Villa%2C_Singapore_%283327855083%29.jpg)
