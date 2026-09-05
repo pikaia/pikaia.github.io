@@ -41,6 +41,78 @@ That hunt is on the record. A group photograph held by the National Archives nam
 
 The same party finished the job two years later. On 26 October 1930, at eleven in the morning, on the fringe of Choa Chu Kang village, Ong Kim Hong — one of the 1928 group — shot a tiger of eight feet six inches. It was the last wild tiger anyone recorded in Singapore. A photograph of the party under the village's roadside sign, several dozen men and their dogs, survives in the National Library's collection.
 
+<div style="max-width: 720px; margin: 2em auto; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;">
+<svg viewBox="0 0 720 300" role="img" aria-label="Timeline of recorded tiger encounters in Singapore, 1831 to 1930" style="width: 100%; height: auto; overflow: visible;">
+  <title>A century of tigers, 1831–1930</title>
+  <line x1="20" y1="150" x2="700" y2="150" stroke="currentColor" stroke-width="2" opacity="0.35"/>
+  <g font-size="11" fill="currentColor">
+    <!-- 1831 -->
+    <line x1="58" y1="150" x2="58" y2="168" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="58" cy="150" r="4" fill="#b0622a"/>
+    <text x="58" y="184" text-anchor="middle" font-weight="600">1831</text>
+    <text x="58" y="198" text-anchor="middle" opacity="0.75">First recorded</text>
+    <text x="58" y="210" text-anchor="middle" opacity="0.75">tiger attack</text>
+    <!-- 1839 -->
+    <line x1="105" y1="150" x2="105" y2="132" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="105" cy="150" r="4" fill="#b0622a"/>
+    <text x="105" y="126" text-anchor="middle" font-weight="600">1839</text>
+    <text x="105" y="112" text-anchor="middle" opacity="0.75">Two labourers taken</text>
+    <text x="105" y="100" text-anchor="middle" opacity="0.75">near Rangong Road</text>
+    <!-- 1857 -->
+    <line x1="211" y1="150" x2="211" y2="196" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="211" cy="150" r="4" fill="#b0622a"/>
+    <text x="211" y="212" text-anchor="middle" font-weight="600">1857</text>
+    <text x="211" y="226" text-anchor="middle" opacity="0.75">~300 deaths believed;</text>
+    <text x="211" y="238" text-anchor="middle" opacity="0.75">7 reported to police</text>
+    <!-- 1859 -->
+    <line x1="223" y1="150" x2="223" y2="104" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="223" cy="150" r="4" fill="#b0622a"/>
+    <text x="223" y="98" text-anchor="middle" font-weight="600">1859</text>
+    <text x="223" y="84" text-anchor="middle" opacity="0.75">Village near Bukit Timah</text>
+    <text x="223" y="72" text-anchor="middle" opacity="0.75">abandoned; patrols begin</text>
+    <!-- 1890 -->
+    <line x1="406" y1="150" x2="406" y2="168" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="406" cy="150" r="4" fill="#b0622a"/>
+    <text x="406" y="184" text-anchor="middle" font-weight="600">1890</text>
+    <text x="406" y="198" text-anchor="middle" opacity="0.75">A man killed on</text>
+    <text x="406" y="210" text-anchor="middle" opacity="0.75">Thomson Road</text>
+    <!-- 1902 -->
+    <line x1="477" y1="150" x2="477" y2="132" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="477" cy="150" r="4" fill="#b0622a"/>
+    <text x="477" y="126" text-anchor="middle" font-weight="600">1902</text>
+    <text x="477" y="112" text-anchor="middle" opacity="0.75">Escaped circus tiger shot</text>
+    <text x="477" y="100" text-anchor="middle" opacity="0.75">at the Raffles Hotel</text>
+    <!-- 1928 -->
+    <line x1="631" y1="150" x2="631" y2="196" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="631" cy="150" r="4" fill="#2c5aa8"/>
+    <text x="631" y="212" text-anchor="middle" font-weight="600">1928</text>
+    <text x="631" y="226" text-anchor="middle" opacity="0.75">A hunting party shoots</text>
+    <text x="631" y="238" text-anchor="middle" opacity="0.75">a tiger, West Coast Road</text>
+    <!-- 1930 -->
+    <line x1="643" y1="150" x2="643" y2="104" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+    <circle cx="643" cy="150" r="5" fill="#2c5aa8"/>
+    <text x="643" y="98" text-anchor="middle" font-weight="600">1930</text>
+    <text x="643" y="84" text-anchor="middle" opacity="0.75">The last wild tiger,</text>
+    <text x="643" y="72" text-anchor="middle" opacity="0.75">Choa Chu Kang</text>
+  </g>
+</svg>
+<div style="font-size: 0.8em; opacity: 0.7; text-align: center; margin-top: 0.5em;">A century of recorded encounters, 1831&ndash;1930. Positions are approximate; the two blue markers are the documented hunts. Not every encounter is shown.</div>
+<details style="font-size: 0.85em; margin-top: 0.75em;">
+<summary>Timeline as a table</summary>
+<table>
+<tr><th>Year</th><th>Event</th></tr>
+<tr><td>1831</td><td>First newspaper report of a tiger attack (Singapore Chronicle, 8 September)</td></tr>
+<tr><td>1839</td><td>Two labourers carried off near Rangong Road (today's Serangoon Road)</td></tr>
+<tr><td>1857</td><td>A believed 300 deaths from tiger attacks; only seven reported to the police</td></tr>
+<tr><td>1859</td><td>A village near Bukit Timah abandoned after repeated attacks; convict patrols begin</td></tr>
+<tr><td>1890</td><td>A man killed by a tiger on Thomson Road</td></tr>
+<tr><td>1902</td><td>An escaped circus tiger shot under the Raffles Hotel (not a wild tiger)</td></tr>
+<tr><td>1928</td><td>A Straits Chinese hunting party shoots a tiger off West Coast Road, Pasir Panjang (12 August)</td></tr>
+<tr><td>1930</td><td>The same party shoots the last wild tiger, at Choa Chu Kang (26 October)</td></tr>
+</table>
+</details>
+</div>
+
 ## From tiger to otter
 
 A century later, Singapore has wild animals again, just not the kind that used to kill a person a day. Smooth-coated otters, extinct here for decades, began turning up in the 1990s and have since colonised the island's waterways so thoroughly that a family swimming past Robertson Quay or Sungei Serangoon is now closer to routine than remarkable — routine enough that the road sign pictured above shares a signpost with an ordinary traffic-slowing notice, not a special warning of its own.
