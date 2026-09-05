@@ -33,7 +33,7 @@ The bounty and the shrinking jungle did their work. A man was killed by a tiger 
 
 The real last tiger was killed on 26 October 1930, at eleven in the morning, on the fringe of Choa Chu Kang village. It weighed 127.8 kilograms. The hunter credited with the shot was Ong Kim Hong; Tan Tian Quee and Low Peng Hoe of the Straits Hunting Party were there too, and a photograph of the wider hunting party — several dozen men and dogs gathered under the village's roadside sign — survives in the National Library's collection.
 
-My wife's family has a thread in this story of its own. One of her relatives, by family account, was part of the hunting party that tracked down that last tiger — though he never claimed to have fired the shot himself, only to have been there.
+My wife's family has a thread in this story of its own. One of her maternal relatives, by family account, was part of the hunting party on 12 August 1928 that tracked down a Malayan tiger off West Coast in the Pasir Panjang district — though he never claimed to have fired the shot himself, only to have been there.
 
 ## From tiger to otter
 
