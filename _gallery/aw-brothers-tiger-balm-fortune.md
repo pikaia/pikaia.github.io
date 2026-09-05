@@ -66,3 +66,9 @@ Vintage and later photographs of the Tiger Balm business, the Aw brothers and Ha
 ![An early photograph of Haw Par Villa, Singapore](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/D_100_View_of_Haw_Par_Villa._S_%27pore.%2C_KITLV_1404806.tiff/lossy-page1-1280px-D_100_View_of_Haw_Par_Villa._S_%27pore.%2C_KITLV_1404806.tiff.jpg)
 
 *An undated early photograph of the garden from the KITLV Southeast Asian image collection. (KITLV / Leiden University Libraries / Wikimedia Commons, CC BY 4.0)*
+
+### A Tiger Balm advertisement, 1930
+
+![A full-page Tiger Balm advertisement from Bintang Pranakan, a Malay/Peranakan newspaper, 22 November 1930](/assets/images/aw-brothers-tiger-balm-bintang-pranakan-1930-ad.png)
+
+*A full-page Tiger Balm advertisement in Malay, from* Bintang Pranakan*, a newspaper serving Singapore's Peranakan community, 22 November 1930 &mdash; the leaping-tiger trademark and the Eng Aun Tong name, rendered here as "Eng Ann Tong." (Digitised newspaper page, NewspaperSG / National Library Board Singapore; pre-1987 edition, public domain under Singapore's Copyright Act Cap. 63 &sect;96)*
