@@ -736,6 +736,40 @@ PRONUNCIATION_OVERRIDES = {
                                    # it. Confirmed by Chris by ear (2026-09-04)
                                    # from scratch/singapore-canned-pineapple-
                                    # kings-pronunciation/
+
+    # Wild-tigers post ("When Singapore Had Wild Tigers"). Old place
+    # names, the 1928/1930 hunting party's names, and a batch of plain
+    # English / anglicised words misaki has no lexicon entry for.
+    # "Kang" / "Chu" / "Bukit" / "Timah" / "Serangoon" / "Sungei" /
+    # "Pulau" / "Sembawang" already covered above.
+    "Choa": "tʃwˈɑː",             # "chwah" (one syllable) - Choa Chu Kang.
+                                   # Confirmed by Chris by ear (2026-09-05)
+    "Rangong": "raŋɡˈɒŋ",         # "rang-GONG" - Rangong Road, the old name
+                                   # for Serangoon Road; the etymological root
+                                   # of "Serangoon" (sˌɛrəŋɡˈuːn) above
+    "Tian": "tjˈɛn",              # "tyen" (one syllable) - Tan Tian Quee, the
+                                   # 1928 hunt's leader. Chris by ear (2026-09-05)
+    "Quee": "kwˈiː",              # "kwee" (rhymes with "wee") - Tan Tian Quee.
+                                   # Chris by ear (2026-09-05)
+    "Mui": "mˈuːi",               # "MOO-ee" - Tan Ah Mui, the 1928 shooter.
+                                   # Chris by ear (2026-09-05)
+    "Mahally": "məhˈɑːli",        # "muh-HAH-lee" - the tracker named in the
+                                   # NAS record of both hunts. Chris by ear
+                                   # (2026-09-05); origin unclear, this is a
+                                   # best-guess reading
+    "Ong": "ˈɒŋ",                 # "ong" (rhymes with "song") - Ong Kim Hong,
+                                   # who shot the last tiger in 1930
+    "Buloh": "bˈuːloʊ",           # "BOO-loh" - Sungei Buloh (Malay, "bamboo"),
+                                   # stress on the first syllable. Chris by ear
+                                   # (2026-09-05)
+    "Ubin": "ˈuːbɪn",             # "OO-bin" - Pulau Ubin (Malay, "tile")
+    "Billiard": "bˈɪljəd",        # plain English, no misaki entry - "BIL-yəd"
+    "McGowan": "məɡˈaʊən",        # "mə-GOW-ən" - Charles McGowan Phillips
+    "McNair": "məknˈɛə",          # "mək-NAIR" - J. F. A. McNair
+    "Robertson": "rˈɒbətsən",     # "ROB-ət-sən" - Robertson Quay
+    "recolonised": "rˌiːkˈɒlənaɪzd",  # plain English, no misaki entry
+    "Saltwater": "sˈɔːltwɔːtə",   # compound, no misaki entry - "SALT-waw-tə"
+    "euthanised": "jˈuːθənaɪzd",  # plain English, no misaki entry - "YOO-thə-nized"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
