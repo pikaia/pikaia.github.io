@@ -601,5 +601,6 @@ Haw Par Corporation today is a quiet company listed in Singapore. Tiger Balm and
 - [File:Haw Par Villa, Singapore (3327855083).jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Haw_Par_Villa,_Singapore_(3327855083).jpg) (gallery)
 - [File:D 100 View of Haw Par Villa. S 'pore., KITLV 1404806.tiff &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:D_100_View_of_Haw_Par_Villa._S_%27pore.,_KITLV_1404806.tiff) (gallery)
 - [File:Armed monkeys, Haw Par Villa (Tiger Balm Theme Park), Singapore (41102156).jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Armed_monkeys,_Haw_Par_Villa_(Tiger_Balm_Theme_Park),_Singapore_(41102156).jpg) (gallery)
+- [File:Acrobatics and chained monkey (Virtues and Vices display) Haw Par Villa (14813757583).jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Acrobatics_and_chained_monkey_(Virtues_and_Vices_display)_Haw_Par_Villa_(14813757583).jpg) (gallery)
 
 [← Back to all posts](/)

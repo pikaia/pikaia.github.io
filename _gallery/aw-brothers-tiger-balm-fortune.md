@@ -49,6 +49,12 @@ Vintage and later photographs of the Tiger Balm business, the Aw brothers and Ha
 
 *One of the garden's folklore tableaux &mdash; armed monkey statues at Haw Par Villa, 2005. (Photo: Cory Doctorow / Flickr / Wikimedia Commons, CC BY-SA 2.0)*
 
+### Acrobatics and a chained monkey, Haw Par Villa
+
+![An acrobatics and chained monkey display in the Virtues and Vices section of Haw Par Villa](https://upload.wikimedia.org/wikipedia/commons/c/cf/Acrobatics_and_chained_monkey_%28Virtues_and_Vices_display%29_Haw_Par_Villa_%2814813757583%29.jpg)
+
+*Part of the garden's "Virtues and Vices" display, 2014. (Photo: Jnzl's Photos / Flickr / Wikimedia Commons, CC BY 2.0)*
+
 ### The garage that housed the tiger cars
 
 ![An interpretive sign at Haw Par Villa about "The Garage" and Aw Boon Haw's Tiger Cars](https://upload.wikimedia.org/wikipedia/commons/0/05/Haw_Par_Villa%2C_Singapore_%283327855083%29.jpg)
