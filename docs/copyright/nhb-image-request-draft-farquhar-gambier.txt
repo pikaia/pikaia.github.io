@@ -1,0 +1,43 @@
+NOTE: The National Museum of Singapore does NOT take these by email. Use the
+NMS Image Use Request Form: https://form.gov.sg/5ee71aa4b775c800116e5eae
+Processing ~14 working days; NHB may attach licence fees or decline without
+reason. The text below is what to paste into the form's free-text fields.
+
+Also note: a low-resolution public-domain copy exists on Wikimedia Commons —
+"Four drawings of plants from Malacca (William Farquhar Collection, 1819–1823)"
+— but it is a 500 x 522 px composite of four plants (gambier, black pepper,
+durian, wild nutmeg), too small and too crowded to use as a standalone gambier
+image. This request is for the single-plant gambier drawing as reproduced in
+BiblioAsia (see below).
+
+--- FORM CONTENT ---
+
+Image requested:
+"Gambier" (Nauclea gambir / Uncaria gambir; "Pokok Gambir"), a watercolour
+from the William Farquhar Collection of Natural History Drawings, National
+Museum of Singapore (collection commissioned by William Farquhar, Malay
+Peninsula, 1803–1818). As reproduced in the BiblioAsia article "When Tigers
+Used to Roam" (National Library Board, Vol. 13 Issue 4, Jan–Mar 2018),
+https://biblioasia.nlb.gov.sg/all-sections/vol-13-issue-4-jan-mar-2018-when-tigers-used-to-roam/
+— credited there "Courtesy of National Museum of Singapore, National Heritage
+Board." If a catalogue/accession number is needed, please advise which record
+this corresponds to.
+
+Requestor / project:
+Chris Lee, chriskslee@gmail.com. Lesser Known Singapore
+(https://pikaia.github.io, https://www.youtube.com/@LesserKnownSingapore), a
+small non-commercial blog on overlooked Singapore history.
+
+Purpose of use:
+A single inline illustration in a blog post about the history of wild tigers
+in Singapore. The post discusses the 19th-century gambier and pepper
+plantations whose spread into the forest drove the tiger attacks of that
+period; the drawing would illustrate the gambier plant itself. Non-commercial,
+web only, with full credit exactly as NHB specifies and a link back.
+
+Resolution:
+Web resolution is sufficient; a 300 dpi file is not required.
+
+Questions:
+Please advise the permitted use, the exact credit line, any conditions, and
+any licence fee for this non-commercial use.
