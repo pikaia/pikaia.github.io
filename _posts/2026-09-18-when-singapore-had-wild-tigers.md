@@ -21,9 +21,13 @@ Singapore's tigers were never native in the sense of having nowhere else to go. 
 
 The real danger began with gambier and pepper. When cultivation of the two crops took off from the 1840s, plantations pushed out of the town and into the jungle tigers hunted in; by the late 1840s there were some six hundred of them. Chinese plantation coolies made easy, isolated targets, and reports of encounters rose through the 1830s and 1840s. By the middle of the century tigers were rumoured to kill someone every day. William Butterworth, the Governor of the Straits Settlements, questioned on the subject in the House of Commons, gave a still-alarming estimate of two hundred deaths a year. A village near Bukit Timah was abandoned altogether in 1859 after repeated attacks. Officially, only seven deaths were reported to the police in 1857, against a believed toll of three hundred; plantation owners often kept quiet about the deaths, unwilling to scare off the next batch of workers.
 
+![Chinese workers at the landing point of a gambier and pepper plantation in Singapore, around 1900](https://upload.wikimedia.org/wikipedia/commons/0/0d/ChineseGambierSingapore.jpg)
+
+*The landing point of a gambier and pepper plantation in Singapore, around 1900 — a man carries in a bundle of gambier leaves. Isolated plantation labourers were the tigers' most frequent victims. (National Archives of Singapore, via Wikimedia Commons, public domain)*
+
 ![Map of Singapore showing documented tiger attack and sighting locations, from Serangoon in 1839 to Choa Chu Kang in 1930](/assets/images/when-singapore-had-wild-tigers-map.png)
 
-*Where the tigers were: two recorded attacks, the general menace/patrol areas, and the last one, at Choa Chu Kang in 1930. (Map data © OpenStreetMap contributors)*
+*Where the tigers were: two recorded attacks on people, the general menace and patrol areas, and the two documented hunts — Pasir Panjang in 1928 and Choa Chu Kang in 1930. (Map data © OpenStreetMap contributors)*
 
 The government's answer was money. A reward of twenty dollars a tiger climbed to fifty, then a hundred, then a hundred and fifty as the toll grew, and hunters could earn more again selling the skin and other parts. Pits four to four and a half metres deep were dug and camouflaged; a tiger caught alive went into a rattan basket too strong to bite through, and one caught in a pit was often simply shot where it lay. Hunting tigers became something between a public service and a sport, lucrative enough that at least two Europeans made a living at it. In 1859 the Superintendent of Convicts, J. F. A. McNair, put convict labourers on regular patrol through Bukit Timah, Serangoon, Changi and Choa Chu Kang; within a year the patrols had killed half a dozen tigers.
 
@@ -72,6 +76,8 @@ The clearest sign of how far the management philosophy has shifted sits over the
 **Sources:**
 - [Tigers in Singapore — Singapore Infopedia, National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=baa5413b-941d-4540-8640-d8606b539b04)
 - ["This tiger was shot by Tan Ah Mui (Chan Ah Mui)…" (12 August 1928, off West Coast Road, Pasir Panjang) — Tan Tuan Khoon Collection, National Archives of Singapore](https://www.nas.gov.sg/archivesonline/photographs/record-details/2261b262-1162-11e3-83d5-0050568939ad)
+- [When Tigers Used to Roam — BiblioAsia, National Library Board](https://biblioasia.nlb.gov.sg/all-sections/vol-13-issue-4-jan-mar-2018-when-tigers-used-to-roam/)
+- [File:ChineseGambierSingapore.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ChineseGambierSingapore.jpg)
 - [Nearly 40% of Pasir Ris residents would prefer to remove or relocate wild boars & stray dogs from estate — Mothership.SG](https://mothership.sg/2020/12/pasir-ris-wildlife-survey-results/)
 - [Singapore wild boar caught, euthanized after dramatic chase — Inquirer.net](https://newsinfo.inquirer.net/1401525/singapore-wild-boar-caught-euthanized-after-dramatic-chase)
 - [NParks to put down 3m-long crocodile found at East Coast Park for 'public safety' — Mothership.SG](https://mothership.sg/2023/10/nparks-put-down-crocodile/)
