@@ -138,6 +138,21 @@ def main():
     draw.rectangle([0, H - (fb[3] - fb[1]) - 20, (fb[2] - fb[0]) + 30, H], fill=(255, 255, 255, 210))
     draw.text((14, H - (fb[3] - fb[1]) - 12), FOOT, font=sub_font, fill=(80, 80, 78, 255))
 
+    legend_font = load_font(19)
+    legend = [
+        ("Recorded attack", ATTACK_C),
+        ("General menace / patrol area", AREA_C),
+        ("The last tiger, 1930", LAST_C),
+    ]
+    lx, ly = 24, H - 190
+    lw = 300
+    lh = 30 * len(legend) + 16
+    draw.rectangle([lx, ly, lx + lw, ly + lh], fill=(255, 255, 255, 234))
+    for i, (lab, col) in enumerate(legend):
+        ry = ly + 14 + i * 30
+        draw.ellipse([lx + 14, ry - 8, lx + 30, ry + 8], fill=col)
+        draw.text((lx + 42, ry - 11), lab, font=legend_font, fill=(28, 28, 26, 255))
+
     txt = "Map data (c) OpenStreetMap contributors"
     tb = draw.textbbox((0, 0), txt, font=cred_font)
     cw, ch = tb[2] - tb[0], tb[3] - tb[1]
