@@ -33,7 +33,11 @@ The buyer, in 1950, was a local businessman named Ghulam Mahmood. He paid around
 
 It did not take. Within about three years the island was up for auction. A succession of owners followed, none of whom found a way to make the resort idea work, and by the early 1970s the island belonged to a businessman from Thailand who was trying, without success, to sell it for a million dollars.
 
-A group of us went out to the island once, in our junior-college years, well before it was a park or a name most people knew. It was overgrown and completely quiet, with a low building coming apart among the trees and a beach full of driftwood. Nobody stopped us, because there was nobody there to stop us.
+A group of us went out to the island once during our national service, around 1979. It was well before any of this was a park, or even a name most people knew. The place was overgrown and completely quiet, with a low building coming apart among the trees and a beach full of driftwood. Nobody stopped us, because there was nobody there to stop us.
+
+![A group of young men on a beach, four standing and three kneeling, with the word "UNITY" set out vertically in the sand beside them; a sepia print from 1979](/assets/images/coney-island-1979.jpg)
+
+*Group of friends on the island, 1979. From Paul Kang's collection.*
 
 ## The state takes over
 
@@ -73,6 +77,7 @@ The irony is not hidden. For sixty years people tried to sell this island as som
 - [Punggol reclamation](https://eresources.nlb.gov.sg/infopedia/articles/SIP_1011_2008-10-28.html), Singapore Infopedia, National Library Board
 - [Death of Coney Island Cow](https://www.nparks.gov.sg/nparks-corporate/news/2016/10/death-of-coney-island-cow), media release, National Parks Board, October 2016
 - "Coney Island: The life and death of a lonely Singapore cow", BBC News, October 2016
+- Photograph of a group of friends on the island, 1979, from Paul Kang's collection
 - Photograph of the Coney Island gate by Jnzl, [CC BY 2.0](https://commons.wikimedia.org/wiki/File:Coney_Island_Gate.jpg), via Wikimedia Commons
 - Photograph of Coney Island from the Punggol Promenade by Jianhui67, [CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Pulau_Serangoon_from_Punggol_Promenade.jpg), via Wikimedia Commons
 - Photograph of smooth-coated otters at the west causeway by Jnzl's Photos, [CC BY 2.0](https://commons.wikimedia.org/wiki/File:Pair_of_Smooth-coated_otters.jpg), via Wikimedia Commons
