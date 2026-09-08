@@ -13,6 +13,45 @@ Coney Island in New York had a switchback railway, a Ferris wheel and a million 
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/coney-island-before-it-was-a-nature-park.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![The green mesh gate at the western entrance to Coney Island Park, with the words "Coney Island" cut from the fencing](https://upload.wikimedia.org/wikipedia/commons/8/87/Coney_Island_Gate.jpg)
 
 *The western entrance to Coney Island Park. Photo by Jnzl, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Coney_Island_Gate.jpg).*
@@ -45,9 +84,9 @@ The government acquired Coney Island in 1972. Two years later the Port of Singap
 
 For most of these decades the island was simply shut. It was fenced off, absent from the bus map, used for grazing cattle and for little else.
 
-![Casuarina trees along the shore of Coney Island, seen across the water from the Punggol Promenade](https://upload.wikimedia.org/wikipedia/commons/3/3c/Pulau_Serangoon_from_Punggol_Promenade.jpg)
+![A wide view of tree-covered Coney Island across the Serangoon Reservoir under a storm sky, the reservoir embankment running along the island's near shore](/assets/images/coney-island-2022.jpg)
 
-*Coney Island's casuarina shore, seen from the Punggol Promenade in 2015. Photo by Jianhui67, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pulau_Serangoon_from_Punggol_Promenade.jpg).*
+*Coney Island across Serangoon Reservoir, from the Punggol Promenade, 2022. Author's photograph.*
 
 ## A park that refuses to be a resort
 
@@ -79,7 +118,7 @@ The irony is not hidden. For sixty years people tried to sell this island as som
 - "Coney Island: The life and death of a lonely Singapore cow", BBC News, October 2016
 - Photograph of a group of friends on the island, 1979, from Paul Kang's collection
 - Photograph of the Coney Island gate by Jnzl, [CC BY 2.0](https://commons.wikimedia.org/wiki/File:Coney_Island_Gate.jpg), via Wikimedia Commons
-- Photograph of Coney Island from the Punggol Promenade by Jianhui67, [CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Pulau_Serangoon_from_Punggol_Promenade.jpg), via Wikimedia Commons
+- Panorama of Coney Island from the Punggol Promenade, 2022, photograph by the author
 - Photograph of smooth-coated otters at the west causeway by Jnzl's Photos, [CC BY 2.0](https://commons.wikimedia.org/wiki/File:Pair_of_Smooth-coated_otters.jpg), via Wikimedia Commons
 - Base map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
 
