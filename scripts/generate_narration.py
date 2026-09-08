@@ -770,6 +770,22 @@ PRONUNCIATION_OVERRIDES = {
     "recolonised": "rˌiːkˈɒlənaɪzd",  # plain English, no misaki entry
     "Saltwater": "sˈɔːltwɔːtə",   # compound, no misaki entry - "SALT-waw-tə"
     "euthanised": "jˈuːθənaɪzd",  # plain English, no misaki entry - "YOO-thə-nized"
+    # Coney Island post batch (2026-09-08):
+    "Ghulam": "ɡuˈlɑːm",          # "ghu-LAHM" - Ghulam Mahmood, the 1950 buyer
+                                   # of Coney Island. Urdu/Arabic origin; he
+                                   # was a local Indian/Muslim businessman, so
+                                   # the origin-language reading (hard g,
+                                   # stress 2nd, long aa) is closest. Chris by
+                                   # ear (2026-09-08)
+    "Mahmood": "mɑːˈmuːd",        # "mah-MOOD" - Ghulam Mahmood; Arabic origin,
+                                   # stress 2nd syllable. Chris by ear
+                                   # (2026-09-08)
+    "Ferris": "fˈɛrɪs",           # plain English, no misaki entry - "FERR-iss"
+                                   # (Ferris wheel)
+    "verandah": "vərˈandə",       # plain English, no misaki entry -
+                                   # "vuh-RAN-duh"
+    "wetter": "wˈɛtər",           # plain English comparative, no misaki entry -
+                                   # "WET-ter"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1415,9 +1431,10 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV", "EDB",
-    "FMSR", "GDP", "HDB", "IPPT", "KTM", "MP", "MRT", "NS", "NTUC", "NUS",
-    "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN", "UOB", "UOL", "US",
+    "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV",
+    "EDB", "FMSR", "GDP", "HDB", "IPPT", "KTM", "MP", "MRT", "NS", "NTUC",
+    "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN", "UOB", "UOL",
+    "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
