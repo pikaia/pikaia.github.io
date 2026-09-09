@@ -45,7 +45,7 @@ Description:
 At the corner of Neil Road and Tanjong Pagar Road stands a small, ornate building of exposed brick and white plaster, with an arched five-foot-way and a square corner tower capped by an octagonal dome. It is a wine bar, a restaurant and some offices now, and for a while the deed carried Jackie Chan's name. It was built in 1903 for a single purpose: to register every rickshaw in Singapore and license the men who pulled them. At the peak there were close to thirty thousand rickshaws on the streets and perhaps fifty thousand men working the shafts in shifts, most of them used up within a few years. The building was preserved. The men left almost nothing. #Shorts
 
 Full story: https://da.gd/A68Jq
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/_SETWUrfHNQ
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
