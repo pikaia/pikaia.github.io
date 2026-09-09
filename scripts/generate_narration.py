@@ -786,6 +786,27 @@ PRONUNCIATION_OVERRIDES = {
                                    # "vuh-RAN-duh"
     "wetter": "wˈɛtər",           # plain English comparative, no misaki entry -
                                    # "WET-ter"
+    # Rickshaw men / Jinricksha Station post batch (2026-09-09):
+    "capped": "kˈapt",            # plain English past tense, no misaki entry -
+                                   # same gap as "tapped"/"mapped" above
+    "Tomlinson": "tˈɒmlɪnsən",    # "TOM-lin-sun" - Samuel Tomlinson, the
+                                   # station's municipal engineer
+    "McLeod": "məklˈaʊd",         # "muh-CLOUD" - David McLeod Craik. The
+                                   # Scottish name is /məˈklaʊd/, NOT
+                                   # "mac-LEE-odd"
+    "Craik": "krˈeɪk",            # "krayk" (rhymes with "cake") - David
+                                   # McLeod Craik, the municipal architect
+    "brickwork": "brˈɪkwɜːk",     # plain English compound, no misaki entry -
+                                   # same gap as "phrasebook"/"topline"
+    "signage": "sˈaɪnɪdʒ",        # plain English, no misaki entry
+    "tableau": "tˈabləʊ",         # "TAB-loh" - as in a street tableau
+    "Hokchew": "hˈɒktʃuː",        # "HOK-choo" - Fuzhou dialect group.
+                                   # NOT ear-verified yet (samples in
+                                   # scratch/the-rickshaw-men-...-pronunciation/)
+    "Henghua": "hˈɛŋhwɑː",        # "HENG-hwah" - Xinghua/Putian dialect group.
+                                   # NOT ear-verified yet
+    "keng": "kˈɛŋ",              # "keng" (rhymes with "ten"+ng) - Hokkien 間,
+                                   # in "coolie keng". NOT ear-verified yet
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

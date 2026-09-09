@@ -445,6 +445,17 @@ height), **not** the `"50% 50%"` CSS strings the Watch widget's JS
 uses for the same slide — same values, different literal syntax, keep
 both in sync when you tune a slide's motion.
 
+**Aim the crop at where the meaning is, not the geometric centre.** A
+`cover` crop clips whatever falls outside the frame, and `(0.5, 0.5)`
+assumes the subject is dead centre — often wrong. Group portraits put
+faces near the *top*; a conserved building's identifying feature is
+usually its *tower*. For those, drop the pan `y` (e.g. `(0.5, 0.15)`
+for heads-at-the-very-top group photos, `(0.5, 0.33)` for a single
+standing figure or a tower/cupola) so the top stays in view; raise it
+for a subject low in the frame. Keep all three keyframes identical
+(a static off-centre crop, not a vertical pan — pans read jerky). The
+rickshaw-men config's `_TOP` / `_TOPM` presets are the worked example.
+
 **Any slide showing a graphic — a chart/timeline/diagram PNG or an
 OSM map — uses `"type": "letterbox"`, never `"cover"`, and a frozen
 `"zoom": [1, 1, 1]`.** `cover` scales the image to fill the frame and
