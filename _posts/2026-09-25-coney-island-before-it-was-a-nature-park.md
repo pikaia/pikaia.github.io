@@ -363,8 +363,8 @@ The irony is not hidden. For sixty years people tried to sell this island as som
 - [Coney Island and the Forgotten Haw Par Beach Villa](https://remembersingapore.org/2015/11/01/coney-island-haw-par-beach-villa/), Remember Singapore
 - [Coney Island, Singapore](https://en.wikipedia.org/wiki/Coney_Island,_Singapore), Wikipedia
 - [Punggol reclamation](https://eresources.nlb.gov.sg/infopedia/articles/SIP_1011_2008-10-28.html), Singapore Infopedia, National Library Board
-- [Death of Coney Island Cow](https://www.nparks.gov.sg/nparks-corporate/news/2016/10/death-of-coney-island-cow), media release, National Parks Board, October 2016
-- "Coney Island: The life and death of a lonely Singapore cow", BBC News, October 2016
+- Death of Coney Island Cow, media release, National Parks Board, October 2016
+- ["Coney Island: The life and death of a lonely Singapore cow"](https://www.bbc.com/news/world-asia-37640549), BBC News, October 2016
 - Photograph of a group of friends on the island, 1979, from Paul Kang's collection
 - "Night in Luna Park, Coney Island" by the Detroit Publishing Co. (c. 1905), Library of Congress, public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Night_in_Luna_Park,_Coney_Island_(1905).jpg)
 - Portrait of Aw Boon Haw from Who's Who in China (1931), public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hu_Wenhu2.jpg)
