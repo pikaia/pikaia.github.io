@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "The Rickshaw Men and the Jinricksha Station"
-date: 2026-10-02 09:00:00 +0800
+date: 2026-09-09 18:53:04 +0000
+scheduled_date: 2026-10-02 09:00:00 +0800
+permalink: /2026/10/02/the-rickshaw-men-and-the-jinricksha-station/
 last_modified_at: 2026-10-02 09:00:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/KITLV_-_377462_-_Bengal_man_in_a_Chinese_rickshaw_at_Singapore_-_circa_1890.tif/lossy-page1-1280px-KITLV_-_377462_-_Bengal_man_in_a_Chinese_rickshaw_at_Singapore_-_circa_1890.tif.jpg
