@@ -807,6 +807,29 @@ PRONUNCIATION_OVERRIDES = {
                                    # NOT ear-verified yet
     "keng": "kˈɛŋ",              # "keng" (rhymes with "ten"+ng) - Hokkien 間,
                                    # in "coolie keng". NOT ear-verified yet
+    # Kallang Airport post batch (2026-09-09):
+    "Kallang": "kˈɑːlaŋ",         # "KAH-lang", first-syllable stress. Chris
+                                   # ear-picked candidate 2 of 3 (2026-09-09).
+    "Amelia": "ɐmˈiːliɐ",         # "uh-MEE-lee-uh" - Amelia Earhart. Plain
+                                   # name, no misaki entry.
+    "Earhart": "ˈɛəhɑːt",         # "AIR-hart" - the aviator. Also covers
+                                   # "Earhart's". Chris ear-picked candidate 1
+                                   # of 2 (2026-09-09).
+    "Wearne's": "wˈɜːnz",         # "WERNZ" - Wearne's Air Service, the first
+                                   # local airline. Chris ear-picked candidate 1
+                                   # of 2 (2026-09-09).
+    "Dorrington": "dˈɒɹɪŋtən",    # "DOR-ing-tun" - Frank Dorrington Ward, the
+                                   # PWD architect. Plain name, no misaki entry.
+    "hemmed": "hˈɛmd",            # plain English past tense, no misaki entry
+    "seawall": "sˈiːwɔːl",        # plain English compound, no misaki entry
+    "Lockheed": "lˈɒkhiːd",       # "LOCK-heed" - the aircraft maker
+    "façade": "fəsˈɑːd",          # "fuh-SAHD" - the c-cedilla blocks misaki
+    "merdeka": "mɜːdˈeɪkə",       # Malay "mer-DAY-ka" (independence). Chris
+                                   # ear-picked candidate 1 of 3 (2026-09-09).
+    "Paya": "pˈɑːjɑː",            # "PAH-yah" - Paya Lebar. Chris ear-picked
+                                   # candidate A of 3 (2026-09-09).
+    "Lebar": "lˈɛbɑː",            # "LEH-bar" - Paya Lebar. Chris ear-picked
+                                   # candidate A of 3 (2026-09-09).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1453,9 +1476,9 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV",
-    "EDB", "FMSR", "GDP", "HDB", "IPPT", "KTM", "MP", "MRT", "NS", "NTUC",
-    "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN", "UOB", "UOL",
-    "US",
+    "EDB", "FMSR", "GDP", "HDB", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
+    "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
+    "UOB", "UOL", "US",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
