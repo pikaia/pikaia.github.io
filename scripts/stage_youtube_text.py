@@ -380,8 +380,11 @@ def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str
     for url in urls:
         info = captions.get(normalize_commons_url(url))
         if info:
-            desc = info["alt"] or Path(urllib.parse.urlparse(url).path).stem
-            lines.append(f"- {desc} — {info['credit']}")
+            # Just the credit - the image's alt text is a screen-reader
+            # description, redundant in a YouTube credit list and (on
+            # image-heavy posts) enough to blow the 5,000-char description
+            # limit on its own.
+            lines.append(f"- {info['credit']}")
         elif url in config_credits:
             lines.append(f"- {config_credits[url]}")
         else:
@@ -512,6 +515,21 @@ def main() -> None:
     if review_count:
         print(f"NOTE: {review_count} image credit(s) need manual review (marked [REVIEW CREDIT]).",
               file=sys.stderr)
+
+    # YouTube caps a video description at 5,000 characters. What gets pasted
+    # is everything in the FULL VIDEO section below "Description:" down to
+    # the divider - warn if that runs over (hit twice in practice, both on
+    # image-heavy posts with long Images + Sources blocks).
+    full_section = out_text.split("-" * 70, 1)[0]
+    di = full_section.find("Description:")
+    if di >= 0:
+        desc_len = len(full_section[di + len("Description:"):].strip())
+        if desc_len > 5000:
+            print(f"WARNING: the FULL VIDEO description is {desc_len} chars - over YouTube's "
+                  f"5,000 limit. Shorten the Images / Sources lines before pasting.", file=sys.stderr)
+        elif desc_len > 4700:
+            print(f"NOTE: the FULL VIDEO description is {desc_len} chars (YouTube limit 5,000) - "
+                  f"close to the cap.", file=sys.stderr)
 
 
 if __name__ == "__main__":

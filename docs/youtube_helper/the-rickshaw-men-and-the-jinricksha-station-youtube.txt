@@ -11,17 +11,17 @@ Full story: https://da.gd/A68Jq
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
 Images (credited individually):
-- The two-storey Jinrikisha Station building today, exposed brick with white arches and a corner tower topped by a green octagonal dome, at a Tanjong Pagar road junction with modern towers behind — The Jinrikisha Station today, at Neil Road and Tanjong Pagar Road. Photo by KimonBerlin, CC BY-SA 2.0, via Wikimedia Commons.
-- The corner of the Jinrikisha Station building, a brick tower with an octagonal cupola above a curved white pediment reading "one Neil Road", with construction cranes behind — The Jinrikisha Station's corner tower and cupola, trading now as "1 Neil Road". Photo by Philip Nalangan, CC BY 4.0, via Wikimedia Commons.
-- A Chinatown street lined with shophouses and dozens of rickshaws parked and being repaired along both sides, pullers resting on the shafts, around 1930 — A rickshaw stand near the Jinrikisha Station, Chinatown, around 1930. Photographer unknown; Leiden University Library (KITLV collection), CC BY 4.0.
-- A gaunt, barefoot Chinese rickshaw puller in a conical hat stands between the shafts of a rickshaw carrying a seated passenger, outside a bungalow, around 1890 — A rickshaw puller and his passenger, Singapore, around 1890. Photographer unknown; Leiden University Library (KITLV collection), public domain.
-- A wide view across Finlayson Green, a triangular ornamental garden at the junction of Robinson Road, Cecil Street and Collyer Quay, with rickshaws, bullock carts and an electric tram passing around it, around 1910 — Finlayson Green, at the junction of Robinson Road, Cecil Street and Collyer Quay, around 1910 — a triangular garden laid out on 1890s reclaimed land, its site now deep in the financial district. The tram ran on the line towards Anderson Bridge. Photograph by C.J. Kleingrothe; Leiden University Library (KITLV collection), public domain.
-- A rickshaw puller in a straw hat and worn clothes sits resting on the shaft of his empty rickshaw, around 1900 — "Rikisha puller", photographed by G.R. Lambert & Co., Singapore, around 1900. Leiden University Library (KITLV collection), public domain.
-- A bare-chested rickshaw puller with a shaven head holds the shafts of a rickshaw carrying two European children in white dresses and straw hats, in front of a bungalow — Two children in a rickshaw, Singapore, probably 1910–1920. Leiden University Library (KITLV collection), CC BY 4.0.
-- A group of Europeans in white tropical suits and dresses posed around a rickshaw in a photography studio, with the barefoot puller bent over the shaft at the edge of the frame — A European group posed with a hired rickshaw in a Singapore photo studio, around 1909. The puller is at the left of the frame, demonstrating the pose. Leiden University Library (KITLV collection), CC BY 4.0.
-- A modern tourist trishaw with a red canopy and seat parked on a Chinatown street, a young rider standing beside it — A tourist trishaw on Trengganu Street, Chinatown, 2013 — the pedal descendant of the rickshaw, kept alive for sightseers. Photo by 玄史生, CC BY-SA 3.0, via Wikimedia Commons.
+- The Jinrikisha Station today, at Neil Road and Tanjong Pagar Road. Photo by KimonBerlin, CC BY-SA 2.0, via Wikimedia Commons.
+- The Jinrikisha Station's corner tower and cupola, trading now as "1 Neil Road". Photo by Philip Nalangan, CC BY 4.0, via Wikimedia Commons.
+- A rickshaw stand near the Jinrikisha Station, Chinatown, around 1930. Photographer unknown; Leiden University Library (KITLV collection), CC BY 4.0.
+- A rickshaw puller and his passenger, Singapore, around 1890. Photographer unknown; Leiden University Library (KITLV collection), public domain.
+- Finlayson Green, at the junction of Robinson Road, Cecil Street and Collyer Quay, around 1910 — a triangular garden laid out on 1890s reclaimed land, its site now deep in the financial district. The tram ran on the line towards Anderson Bridge. Photograph by C.J. Kleingrothe; Leiden University Library (KITLV collection), public domain.
+- "Rikisha puller", photographed by G.R. Lambert & Co., Singapore, around 1900. Leiden University Library (KITLV collection), public domain.
+- Two children in a rickshaw, Singapore, probably 1910–1920. Leiden University Library (KITLV collection), CC BY 4.0.
+- A European group posed with a hired rickshaw in a Singapore photo studio, around 1909. The puller is at the left of the frame, demonstrating the pose. Leiden University Library (KITLV collection), CC BY 4.0.
+- A tourist trishaw on Trengganu Street, Chinatown, 2013 — the pedal descendant of the rickshaw, kept alive for sightseers. Photo by 玄史生, CC BY-SA 3.0, via Wikimedia Commons.
 - Chart by Lesser Known Singapore; data from municipal reports and J.F. Warren
-- A single rickshaw and its puller cross the driveway in front of the grand Teutonia Club building, framed by trees — A rickshaw at the Teutonia Club (later the Goodwood Park Hotel), around 1910. Photograph by C.J. Kleingrothe; Leiden University Library (KITLV collection), public domain.
+- A rickshaw at the Teutonia Club (later the Goodwood Park Hotel), around 1910. Photograph by C.J. Kleingrothe; Leiden University Library (KITLV collection), public domain.
 
 Sources:
 - Rickshaw, Singapore Infopedia, National Library Board
@@ -50,7 +50,7 @@ Full-length video: <paste the main video's URL here after uploading it>
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
 Images (credited individually):
-- The corner of the Jinrikisha Station building, a brick tower with an octagonal cupola above a curved white pediment reading "one Neil Road", with construction cranes behind — The Jinrikisha Station's corner tower and cupola, trading now as "1 Neil Road". Photo by Philip Nalangan, CC BY 4.0, via Wikimedia Commons.
-- The two-storey Jinrikisha Station building today, exposed brick with white arches and a corner tower topped by a green octagonal dome, at a Tanjong Pagar road junction with modern towers behind — The Jinrikisha Station today, at Neil Road and Tanjong Pagar Road. Photo by KimonBerlin, CC BY-SA 2.0, via Wikimedia Commons.
-- A Chinatown street lined with shophouses and dozens of rickshaws parked and being repaired along both sides, pullers resting on the shafts, around 1930 — A rickshaw stand near the Jinrikisha Station, Chinatown, around 1930. Photographer unknown; Leiden University Library (KITLV collection), CC BY 4.0.
-- A gaunt, barefoot Chinese rickshaw puller in a conical hat stands between the shafts of a rickshaw carrying a seated passenger, outside a bungalow, around 1890 — A rickshaw puller and his passenger, Singapore, around 1890. Photographer unknown; Leiden University Library (KITLV collection), public domain.
+- The Jinrikisha Station's corner tower and cupola, trading now as "1 Neil Road". Photo by Philip Nalangan, CC BY 4.0, via Wikimedia Commons.
+- The Jinrikisha Station today, at Neil Road and Tanjong Pagar Road. Photo by KimonBerlin, CC BY-SA 2.0, via Wikimedia Commons.
+- A rickshaw stand near the Jinrikisha Station, Chinatown, around 1930. Photographer unknown; Leiden University Library (KITLV collection), CC BY 4.0.
+- A rickshaw puller and his passenger, Singapore, around 1890. Photographer unknown; Leiden University Library (KITLV collection), public domain.
