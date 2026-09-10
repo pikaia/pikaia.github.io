@@ -830,6 +830,29 @@ PRONUNCIATION_OVERRIDES = {
                                    # candidate A of 3 (2026-09-09).
     "Lebar": "lˈɛbɑː",            # "LEH-bar" - Paya Lebar. Chris ear-picked
                                    # candidate A of 3 (2026-09-09).
+    # "Assembled in Singapore" car-plants post batch (2026-09-10):
+    "Hyundai": "hˈʌndeɪ",         # "HUN-day" (like Sunday). Chris ear-picked
+                                   # candidate 1 of 3 (2026-09-10).
+    "Hyundai's": "hˈʌndeɪz",      # possessive - flagged separately by the scan
+    "Ioniq": "aɪˈɒnɪk",           # "eye-ON-ik" (like "ionic") - Hyundai model.
+                                   # Chris ear-picked candidate 1 of 3 (2026-09-10).
+    "robotaxi": "rˈəʊbəʊtˌaksi",  # "ROH-boh-tak-see" - robo + taxi compound
+    "Enggor": "ˈɛŋɡɔː",           # "ENG-gor" - Enggor Street
+    "Émile": "eɪmˈiːl",           # "ay-MEEL" - the accent blocks misaki
+    "Brizay": "brɪzˈeɪ",          # "bri-ZAY" - Émile Brizay, the Ford plant architect
+    "Percival": "pˈɜːsɪvəl",      # "PUR-si-vuhl" - Lt-Gen Arthur Percival
+    "Nissan": "nˈɪsan",           # "NISS-an"
+    "industrialisation": "ɪndˌʌstriəlaɪzˈeɪʃən",  # plain English, no misaki entry
+    "Mitsubishi": "mˌɪtsʊbˈiːʃi",  # "mit-soo-BEE-shee"
+    "Hillview": "hˈɪlvjuː",       # "HILL-vyoo" - Hillview Avenue
+    "Mercedes": "məsˈeɪdiːz",     # "mur-SAY-deez"
+    "Mercedes-Benz": "məsˌeɪdiːzbˈɛnz",
+    "Daihatsu": "daɪhˈatsuː",     # "dye-HAT-soo"
+    "Isuzu": "ɪsˈuːzuː",          # "ih-SOO-zoo"
+    "Volvo": "vˈɒlvəʊ",           # "VOL-voh"
+    "Wearne": "wˈɜːn",            # "WERN" - Wearne Brothers; matches "Wearne's" above
+    "Studebaker": "stˈuːdəbeɪkə",  # "STOO-duh-bay-kuh"
+    "café": "kˈafeɪ",             # "KAF-ay" - the accent blocks misaki
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
