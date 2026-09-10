@@ -1,0 +1,3 @@
+Long-hold report for johor-singapore-causeway-short
+
+No slide held longer than 30s.
