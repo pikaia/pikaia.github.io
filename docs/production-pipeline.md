@@ -1069,11 +1069,24 @@ CLAUDE.md Charts).
 A full render composes frames across CPU cores (a `multiprocessing`
 pool) and pipes raw RGB into a single ffmpeg encode; it takes roughly
 4-6 minutes for a 5-6 minute video on a many-core machine. `--jobs N`
-tunes the worker count (default: CPU count - 2, capped at 10); `--jobs
-1` forces the old single-process path. Output is byte-identical
-regardless of `--jobs`. Lower it if a cover-heavy post (many slides at
-`WORK_SCALE=4`) makes the machine swap — each worker holds its own
-prepared-image cache.
+tunes the worker count. Output is byte-identical regardless of
+`--jobs`; `--jobs 1` forces the old single-process path.
+
+The **default worker count is memory-aware** (added 2026-09-10 after a
+`MemoryError` mid-render on the car-plants post — an all-`cover`,
+41-slide config on a 16 GB machine that was already ~85% full). Each
+`spawn` worker rebuilds its own prepared-image cache — hundreds of MB,
+and more on a cover-heavy post at `WORK_SCALE=4` — so the real ceiling
+is RAM, not cores. The default is now
+`min(CPU count - 2 capped at 10, (free_GB - 2) / 1.3)`: it reads free
+physical memory (stdlib only, no psutil) and, if that forces fewer
+workers than the core cap, prints `note: rendering with N worker(s) - X
+GB free ...` so you can see why. If a render still dies with
+`MemoryError`, or you want it deterministic regardless of machine load,
+pass `--jobs 4` (or `6`) explicitly — that bypasses the auto-cap. If
+the auto-cap drops to 1-2 on a machine that should have headroom,
+something big is resident (a browser, Docker, the Kokoro model still
+loaded from section 1) — close it rather than forcing `--jobs` high.
 
 **Running it yourself, in your own terminal** — the normal case — just
 run the plain form and let it tie up that window for the few minutes it

@@ -115,6 +115,39 @@ DEFAULT_CAPTION_Y_FRAC = 0.80
 BURN_CAPTIONS = False
 
 
+def _available_memory_gb():
+    """Best-effort free physical memory in GB, or None if it can't be read.
+
+    stdlib only (psutil isn't a dependency): POSIX via os.sysconf, Windows
+    via GlobalMemoryStatusEx. Used to cap the default render-worker count -
+    each spawn worker rebuilds its own prepared-image cache, so a
+    cover-heavy post at WORK_SCALE=4 on a loaded 16 GB machine can
+    MemoryError mid-render at the flat 10-worker cap (car-plants post,
+    2026-09-10).
+    """
+    try:
+        return os.sysconf("SC_AVPHYS_PAGES") * os.sysconf("SC_PAGE_SIZE") / 1e9
+    except (ValueError, AttributeError, OSError):
+        pass
+    try:
+        import ctypes
+
+        class _MEMSTAT(ctypes.Structure):
+            _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong),
+                        ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
+                        ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
+                        ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
+                        ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
+
+        m = _MEMSTAT()
+        m.dwLength = ctypes.sizeof(_MEMSTAT)
+        if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(m)):
+            return m.ullAvailPhys / 1e9
+    except (AttributeError, OSError):
+        pass
+    return None
+
+
 def load_config(config_path):
     config_path = Path(config_path).resolve()
     spec = importlib.util.spec_from_file_location(config_path.stem, config_path)
@@ -857,10 +890,21 @@ def render(cfg, out_path, jobs=None):
 
     if jobs is None:
         # Leave a couple of cores for ffmpeg + the OS, and cap it: every
-        # worker holds its own prepared-image cache (hundreds of MB, more
-        # on a cover-heavy post at WORK_SCALE=4). Lower --jobs if the
-        # machine starts swapping.
-        jobs = max(1, min((os.cpu_count() or 2) - 2, 10))
+        # spawn worker rebuilds its own prepared-image cache (hundreds of
+        # MB, more on a cover-heavy post at WORK_SCALE=4), so the ceiling
+        # is memory, not cores. Budget ~1.3 GB/worker and keep ~2 GB clear
+        # for ffmpeg + the OS; fall back to the core-count cap if free
+        # memory can't be read. Pass --jobs to override either way.
+        cpu_cap = max(1, min((os.cpu_count() or 2) - 2, 10))
+        avail_gb = _available_memory_gb()
+        if avail_gb is not None:
+            mem_cap = max(1, int((avail_gb - 2.0) / 1.3))
+            jobs = min(cpu_cap, mem_cap)
+            if jobs < cpu_cap:
+                print(f"note: rendering with {jobs} worker(s) - {avail_gb:.1f} GB free "
+                      f"(core-count cap is {cpu_cap}); pass --jobs to override", file=sys.stderr)
+        else:
+            jobs = cpu_cap
 
     # The narration mp3 lives alongside the .timing.json this config already
     # points at (audio/<slug>.mp3, audio/<slug>.timing.json - same base
