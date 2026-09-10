@@ -853,6 +853,22 @@ PRONUNCIATION_OVERRIDES = {
     "Wearne": "wˈɜːn",            # "WERN" - Wearne Brothers; matches "Wearne's" above
     "Studebaker": "stˈuːdəbeɪkə",  # "STOO-duh-bay-kuh"
     "café": "kˈafeɪ",             # "KAF-ay" - the accent blocks misaki
+    # Johor-Singapore Causeway post batch (2026-09-11):
+    "Tuas": "twˈɑːs",             # "twahs" (one syllable) - the Singapore
+                                   # district / Second Link. Chris ear-picked
+                                   # candidate 3 of 3 (2026-09-11).
+    "Coode": "kˈuːd",             # "cood" (rhymes with "food") - Coode,
+                                   # Fitzmaurice, Wilson & Mitchell, the engineers
+    "Fitzmaurice": "fɪtsmˈɒrɪs",  # "fits-MORR-iss"
+    "Wilson": "wˈɪlsən",          # plain surname, no misaki entry
+    "Topham": "tˈɒpəm",           # "TOP-um" - Topham, Jones & Railton
+    "Railton": "rˈeɪltən",        # "RAIL-tun"
+    "Argyll": "ɑːɡˈaɪl",          # "ar-GILE" (rhymes with "mile"), stress 2nd -
+                                   # the Argyll and Sutherland Highlanders. NOT
+                                   # "AR-gill".
+    "Gelang": "ɡəlˈaŋ",           # "guh-LANG" - Gelang Patah, Johor (a different
+                                   # place from Singapore's Geylang above)
+    "Patah": "pˈatɑː",            # "PAH-tah" - Malay "broken"; Gelang Patah
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
