@@ -24,7 +24,7 @@ The rest maps 1:1 to this doc's own section numbers:
 ```
 1. Generate narration audio (Kokoro TTS)         -- section 1   [Manual]
 2. Insert the Listen widget                      -- section 2   [Manual]
-3. Write the video configs (main + Short)        -- section 3   [Claude]
+3. Write video configs; push + publish early     -- section 3   [Claude]
 4. Generate the Watch widget from that config     -- section 4   [Manual]
 5. Check smoothness + review the gap report      -- section 5   [Manual]
 6. Render the main video                         -- section 6   [Manual]
@@ -615,6 +615,33 @@ too — or just run `ruff check .` from the repo root to cover everything
 at once. The rule set is a bug-catching net only (pyflakes, syntax,
 import/statement footguns); it does not enforce formatting, so match the
 surrounding style by reading it.
+
+**Then push everything so far, and publish the post early (standard,
+as of 2026-09-11).** Right after the configs lint clean, commit and
+push the post `.md`, its gallery, the `audio/` files, and both video
+configs — same rough shape as section 12's "post's commit" below, just
+done now instead of deferred — then run:
+
+```
+scripts/publish-early.sh <slug>
+```
+
+This is the mechanism documented in full in section 12a: it moves the
+post's `date:` to now (so GitHub Pages actually emits it) while pinning
+`permalink:` to the URL its *scheduled* date would have produced, so
+the address never moves. The point of doing this here, right after
+section 3, rather than waiting until section 12a as the docs used to
+suggest, is that **the live URL is then available for the rest of the
+pipeline** — Chris can check the link, the da.gd shortener, etc. while
+sections 4-11 (Watch widget, renders, YouTube) are still in progress,
+instead of only at the very end.
+
+This does incur one piece of standing follow-up: once the post's
+*real* scheduled date has actually passed, someone needs to run
+`scripts/publish-early-reset.sh <slug>` to drop the `scheduled_date:`/
+`permalink:` stash (harmless to leave a little late, but it's a
+loose end worth tracking, e.g. in `docs/post-ideas.md` or wherever
+outstanding pipeline housekeeping gets noted).
 
 ---
 
@@ -1600,20 +1627,25 @@ git push
 
 ---
 
-## 12a. (Optional) Publish before the scheduled date
+## 12a. Publish before the scheduled date
 
-**[Manual]** — skip this entirely in the normal case.
+**[Manual]** — as of 2026-09-11, `scripts/publish-early.sh` is run as
+standard practice right after section 3 (see that section), not
+deferred to here. This section is the mechanism's full reference plus
+the two things that still genuinely belong at the end of the
+pipeline: **resetting** it once the real date has passed, and the two
+alternative scripts for a post that skipped the early-publish step.
 
-After section 12 the post is committed with its future `date:` (the
-standard `09:00 +0800` slot on its publish day). A daily GitHub Action
+If a post's `date:` was left untouched (no `scheduled_date:` key), the
+default applies: a daily GitHub Action
 (`.github/workflows/scheduled-pages-build.yml`, ~09:15 SGT) rebuilds the
 site and the post appears on its own that morning — production's
 `_config.yml` has no `future:` setting, so GitHub Pages simply doesn't
 emit a post whose date is still ahead of the build clock until then.
 Nothing to do; that's the design.
 
-Run one of these only when you want the post live **sooner** than its
-scheduled morning:
+Run one of these when you want the post live **sooner** than its
+scheduled morning (or, per section 3, as the new standard timing):
 
 | Situation | Use |
 |---|---|
