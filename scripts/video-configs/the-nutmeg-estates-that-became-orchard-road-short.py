@@ -20,7 +20,7 @@ _C = f"{_U}/thumb"
 IMAGES = {
     "HERO_NIGHT": f"{_C}/a/a0/Orchard_Road_at_night%2C_2011.jpg/1280px-Orchard_Road_at_night%2C_2011.jpg",
     "FARQUHAR": f"{_U}/5/5d/Booa_Palla%3B_Nutmeg%3B_Myristica_moschata_%28William_Farquhar_Collection%2C_1819%E2%80%931823%29.jpg",
-    "NUTMEG_ROAD": f"{_C}/3/34/Nutmeg_Road_2.JPG/1280px-Nutmeg_Road_2.JPG",
+    "NUTMEG_ROAD": f"{_C}/d/d7/Nutmeg_Road%2C_Oct_06.JPG/1280px-Nutmeg_Road%2C_Oct_06.JPG",
     "ION_ORCHARD": f"{_C}/8/8d/ION_Orchard.jpg/1280px-ION_Orchard.jpg",
 }
 

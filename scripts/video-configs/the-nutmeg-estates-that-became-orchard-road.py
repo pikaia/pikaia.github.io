@@ -19,7 +19,7 @@ shots that are the post's own "fossil record" payoff.
   EMERALD_TERRACE - Emerald Hill Road terrace houses, 2012
   ION_ORCHARD     - ION Orchard at dusk (the Nutmeg and Mace sculpture
                     is faintly visible at street level)
-  NUTMEG_ROAD     - Nutmeg Road street sign, Novena
+  NUTMEG_ROAD     - Nutmeg Road street sign, off Orchard Rd
   CUPPAGE_ROAD    - Cuppage Road street sign
   KILLINEY_ROAD   - Killiney Road street sign
   CLAYMORE_ROAD   - Claymore Road street sign
@@ -43,7 +43,7 @@ IMAGES = {
     "EMERALD_1973": f"{_C}/7/75/Singapore-Emerald_Hill_Road-1973-74-WUS08237.jpg/1280px-Singapore-Emerald_Hill_Road-1973-74-WUS08237.jpg",
     "EMERALD_TERRACE": f"{_C}/a/a6/Terraced_houses_along_Emerald_Hill_Road%2C_Singapore_-_20121028.jpg/1280px-Terraced_houses_along_Emerald_Hill_Road%2C_Singapore_-_20121028.jpg",
     "ION_ORCHARD": f"{_C}/8/8d/ION_Orchard.jpg/1280px-ION_Orchard.jpg",
-    "NUTMEG_ROAD": f"{_C}/3/34/Nutmeg_Road_2.JPG/1280px-Nutmeg_Road_2.JPG",
+    "NUTMEG_ROAD": f"{_C}/d/d7/Nutmeg_Road%2C_Oct_06.JPG/1280px-Nutmeg_Road%2C_Oct_06.JPG",
     "CUPPAGE_ROAD": f"{_C}/2/2d/Cuppage_Road%2C_Singapore_-_20061029.jpg/1280px-Cuppage_Road%2C_Singapore_-_20061029.jpg",
     "KILLINEY_ROAD": f"{_C}/a/a9/Killiney_Road.JPG/1280px-Killiney_Road.JPG",
     "CLAYMORE_ROAD": f"{_C}/a/ad/Claymore_Road.JPG/1280px-Claymore_Road.JPG",

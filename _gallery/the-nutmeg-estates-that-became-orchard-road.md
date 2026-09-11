@@ -39,9 +39,9 @@ More on the plantations, the planters and the street names they left behind.
 
 ### The street signs that remember
 
-![A green Singapore street sign reading "Nutmeg Road"](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Nutmeg_Road_2.JPG/1280px-Nutmeg_Road_2.JPG)
+![A green Singapore street sign reading "Nutmeg Rd"](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Nutmeg_Road%2C_Oct_06.JPG/1280px-Nutmeg_Road%2C_Oct_06.JPG)
 
-*Nutmeg Road, in Novena — one of a handful of Singapore streets still named directly for the spice itself, rather than for a planter. (Photo: Terence Ong, CC BY 2.5, via Wikimedia Commons.)*
+*Nutmeg Road, off Orchard Road near Mount Elizabeth — one of a handful of Singapore streets still named directly for the spice itself, rather than for a planter. (Photo: Sengkang, copyrighted free use, via Wikimedia Commons.)*
 
 ![A green Singapore street sign reading "Cuppage Road"](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Cuppage_Road%2C_Singapore_-_20061029.jpg/1280px-Cuppage_Road%2C_Singapore_-_20061029.jpg)
 
