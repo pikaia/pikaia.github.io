@@ -906,6 +906,38 @@ PRONUNCIATION_OVERRIDES = {
     "Kiat": "kjˈæt",              # "kyat" (one syllable), candidate 2 of 2
     "Peranakan": "pəˈrɑːnəkən",   # "puh-RAH-nuh-kan", candidate 2 of 2
     "Geok": "ɡjˈɒk",              # "gyock" (one syllable), candidate 2 of 2
+
+    # Elizabeth Choy post batch (2026-09-13): single-obvious readings,
+    # verified clean by feeding each back through misaki.en.G2P().
+    "Choy": "ʧˈY",                # "choy", rhymes with "boy"/"joy" -
+                                   # standard Cantonese/Hakka surname reading
+    "Choys": "ʧˈYz",
+    "testified": "tˈɛstɪfId",     # misaki has "testify"/"testifies" but not
+                                   # this past-tense form
+    "Mountbatten": "mˈWntbatᵊn",  # "MOUNT-batten"
+    "Baden-Powell": "bˈAdᵊnpˌWᵊl",  # "BAY-dn POW-el" (misaki's own partial
+                                   # entry reads "Baden" as "BAH-dn", wrong -
+                                   # confirmed correct via dictionary source)
+    "MacKenzie": "məkˈɛnzi",      # "muh-KEN-zee"
+    "Queenstown": "kwˈiːntWn",    # compositional, "Queen's" + "town"
+    "qipaos": "ʧiːpˈWz",          # "chee-POWZ" - Mandarin "qi" = "chee" sound
+    "Su-Moi": "sˈuːmˌY",          # her birth name, Yong Su-Moi - "SOO-moy"
+    "Kudat": "kˈuːdat",           # "KOO-dat", her birthplace in Sabah
+    "Kadazan": "kɑːdˈɑːzan",      # "kah-DAH-zan", the ethnic group/language
+    "Sandakan": "sandˈɑːkan",     # "san-DAH-kan", the Sabah town
+    "Selegie": "səlˈɛɡi",         # "suh-LEH-gee" (Selegie Road) - per a
+                                   # web search summarising local usage as
+                                   # "sə-lə-gi"
+    "Margaret's": "mˈɑːɡərəts",   # misaki lacks even plain "Margaret"
+    "Khun": "kˈuːn",              # "koon" - Choy Khun Heng, her husband
+    "Heng": "hˈɛŋ",                # rhymes with "length" minus the "l"
+    "Miyako": "miːjˈɑːkQ",        # "mee-YAH-koh", the Occupation-era
+                                   # renaming of the Mental Hospital
+    "Jaywick": "ʤˈAwɪk",          # "JAY-wick", Operation Jaywick
+    "Gordine": "ɡɔːdˈiːn",        # "gor-DEEN" (like "sardine") - candidate
+                                   # 1 of 2, no definitive source found;
+                                   # Chris ear-picked from samples in
+                                   # scratch/elizabeth-choy-canteen-operator-who-wouldnt-break-pronunciation/
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1015,6 +1047,10 @@ ABBREVIATION_EXPANSIONS = {
     # literal entry here if a different regnal number is ever caught
     # mispronounced, rather than generalizing early.
     re.compile(r"\bKing Edward VII\b"): "King Edward the Seventh",
+    # "King George VI" / "Elizabeth II" (the Elizabeth Choy post) - same
+    # root cause and fix pattern as "King Edward VII" above.
+    re.compile(r"\bKing George VI\b"): "King George the Sixth",
+    re.compile(r"\bElizabeth II\b"): "Elizabeth the Second",
     # "Shock Therapy II" (the 1979 wage policy's own nickname, as used on
     # the Lim Chong Yah post) - same root cause as "King Edward VII"
     # above, but the *other* reading direction: a Roman numeral after a
