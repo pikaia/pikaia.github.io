@@ -869,6 +869,43 @@ PRONUNCIATION_OVERRIDES = {
     "Gelang": "ɡəlˈaŋ",           # "guh-LANG" - Gelang Patah, Johor (a different
                                    # place from Singapore's Geylang above)
     "Patah": "pˈatɑː",            # "PAH-tah" - Malay "broken"; Gelang Patah
+
+    # Nutmeg / Orchard Road post batch (2026-09-12): straightforward English
+    # readings with no realistic alternate pronunciation - added directly
+    # without an ear-pick round, unlike the ambiguous batch below. Verified
+    # by feeding each string back through misaki.en.G2P() and confirming a
+    # clean phoneme string comes back (no "?" marker).
+    "Oxley": "ˈɒksli",            # "OX-lee" - Oxley Road / Dr Thomas Oxley
+    "Cairnhill": "kˈɛːnhɪl",      # "CAIRN-hill", compositional
+    "Bencoolen": "bɛnˈkuːlən",    # "ben-COOL-un" - already a Singapore
+                                   # place name (Bencoolen St/MRT)
+    "Tanglin": "tˈaŋlɪn",         # "TANG-lin"
+    "Lawrence": "ˈlɒrəns",        # plain English name, no misaki entry
+    "Niven": "nˈɪvən",            # "NIV-un" - Lawrence Niven, Botanic Gardens
+    "Burkill": "bˈɜːkɪl",         # "BUR-kil" - Burkill Hall
+    "Edwin": "ˈɛdwɪn",            # plain English name, no misaki entry
+    "businessmen": "bˈɪznɪsmɛn",  # misaki has "businessman" but not the
+                                   # plural
+    "Choo": "ʧˈuː",               # "choo", rhymes with "shoe" - Kwa Geok Choo
+    "Balik": "bˈɑːlɪk",           # "BAH-lik" - Malay; Balik Pulau, Penang
+    "Kumari": "kuːmˈɑːri",        # "koo-MAH-ree" - artist Kumari Nahappan
+    "Nahappan": "nəhˈæpən",       # "nuh-HAP-un"
+    "Rajoo": "rəʤˈuː",            # "ruh-JOO" - architect R. T. Rajoo
+    "Agri-Horticultural": "ˌaɡɹɪhˌɔːtɪkˈʌlʧəɹəl",  # misaki has
+                                   # "agriculture"/"Horticultural" alone but
+                                   # not this hyphenated compound as one token
+
+    # The rest of this batch had real alternate readings and were
+    # ear-picked by Chris (2026-09-10) from
+    # scratch/the-nutmeg-estates-that-became-orchard-road-pronunciation/ -
+    # each comment names which candidate of how many he picked.
+    "Cuppage": "kˈʌpɪdʒ",         # "CUP-ij" (like cabbage), candidate 1 of 2
+    "Killiney": "kˈɪlɪni",        # "KILL-in-ee", candidate 1 of 2
+    "Koek": "kˈuːk",              # "kook" (Dutch reading), candidate 1 of 2
+    "Seah": "sˈiːə",              # "SEE-ah", candidate 3 of 3
+    "Kiat": "kjˈæt",              # "kyat" (one syllable), candidate 2 of 2
+    "Peranakan": "pəˈrɑːnəkən",   # "puh-RAH-nuh-kan", candidate 2 of 2
+    "Geok": "ɡjˈɒk",              # "gyock" (one syllable), candidate 2 of 2
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
