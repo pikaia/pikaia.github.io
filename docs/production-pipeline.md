@@ -503,6 +503,23 @@ entries pointing at the same `IMAGES` key). Aim for roughly 8-15s+ dwell
 time per slide for an engaging pace; shorter bursts are fine for a
 quick enumeration-style sentence.
 
+**Don't reuse an image just because it's convenient, when the subject
+is well-photographed (confirmed 2026-09-11, the Orchard Road post —
+its night-skyline hero got reused verbatim as a later slide when
+Orchard Road is one of the most heavily CC-photographed subjects in
+Singapore; an easy second shot was available and went unsourced).**
+Repeating a file is the right call when the image pool for that
+subject is genuinely thin and there aren't enough distinct photos to
+fill the runtime — that's what the bookend technique above is for. But
+when sourcing (CLAUDE.md's *Photo galleries* step) already turned up
+several candidates for a heavily-photographed subject, treat a repeat
+as a gap to go back and fill, not a shortcut: pull a second, different
+angle/date/crop of the same subject into `IMAGES` instead of pointing
+two `SLIDES` entries at one key. A quick way to check before finalizing
+`SLIDES`: count how many times each `IMAGES` key appears, and for any
+key used more than once, confirm by name (not just from memory) that
+no better-covered alternative went unsourced for that subject.
+
 Copy an existing config (e.g.
 `scripts/video-configs/japans-quiet-hand-in-building-jurong.py`) as a
 starting template rather than writing one from scratch.
