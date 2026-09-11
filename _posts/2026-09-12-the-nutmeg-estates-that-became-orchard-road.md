@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "The Nutmeg Estates That Became Orchard Road"
-date: 2026-09-12 09:00:00 +0800
+date: 2026-09-11 10:12:56 +0000
+scheduled_date: 2026-09-12 09:00:00 +0800
+permalink: /2026/09/12/the-nutmeg-estates-that-became-orchard-road/
 last_modified_at: 2026-09-12 09:00:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Orchard_Road_at_night%2C_2011.jpg/1280px-Orchard_Road_at_night%2C_2011.jpg
