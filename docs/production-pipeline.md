@@ -24,7 +24,7 @@ The rest maps 1:1 to this doc's own section numbers:
 ```
 1. Generate narration audio (Kokoro TTS)         -- section 1   [Manual]
 2. Insert the Listen widget                      -- section 2   [Manual]
-3. Write video configs; push + publish early     -- section 3   [Claude]
+3. Push + publish early, then video configs      -- section 3   [Claude]
 4. Generate the Watch widget from that config     -- section 4   [Manual]
 5. Check smoothness + review the gap report      -- section 5   [Manual]
 6. Render the main video                         -- section 6   [Manual]
@@ -398,7 +398,37 @@ queued rather than attempt solo. Both the main video's config and the
 Short's config get written here, in the same sitting — see section 0's
 legend for why that matters.
 
-Video rendering is driven by a **shared engine**,
+**First — before writing either config — push and publish the post
+early (standard, as of 2026-09-11).** By this point the post itself
+(text, gallery, narration audio, Listen widget) is already finished
+from section 1-2, and doesn't depend on the video configs at all, so
+there's no reason to make the live URL wait on them. Commit and push
+the post `.md`, its gallery, and the `audio/` files — same rough shape
+as section 12's "post's commit" below, minus the video configs, which
+don't exist yet — then run:
+
+```
+scripts/publish-early.sh <slug>
+```
+
+This is the mechanism documented in full in section 12a: it moves the
+post's `date:` to now (so GitHub Pages actually emits it) while pinning
+`permalink:` to the URL its *scheduled* date would have produced, so
+the address never moves. Doing this **first**, before the (potentially
+slower, judgment-heavy) config-writing work below, means **the live
+URL is available as early as possible** — Chris can check the link,
+the da.gd shortener, etc. while the configs are still being written
+and while sections 4-11 (Watch widget, renders, YouTube) are still in
+progress, instead of only at the very end.
+
+This does incur one piece of standing follow-up: once the post's
+*real* scheduled date has actually passed, someone needs to run
+`scripts/publish-early-reset.sh <slug>` to drop the `scheduled_date:`/
+`permalink:` stash (harmless to leave a little late, but it's a
+loose end worth tracking, e.g. in `docs/post-ideas.md` or wherever
+outstanding pipeline housekeeping gets noted).
+
+**Then write the configs.** Video rendering is driven by a **shared engine**,
 `scripts/watch_video_lib.py`, with per-post data in
 `scripts/video-configs/<slug>.py` (main video) and
 `scripts/video-configs/<slug>-short.py` (Shorts). Never copy the engine
@@ -616,32 +646,12 @@ at once. The rule set is a bug-catching net only (pyflakes, syntax,
 import/statement footguns); it does not enforce formatting, so match the
 surrounding style by reading it.
 
-**Then push everything so far, and publish the post early (standard,
-as of 2026-09-11).** Right after the configs lint clean, commit and
-push the post `.md`, its gallery, the `audio/` files, and both video
-configs — same rough shape as section 12's "post's commit" below, just
-done now instead of deferred — then run:
-
-```
-scripts/publish-early.sh <slug>
-```
-
-This is the mechanism documented in full in section 12a: it moves the
-post's `date:` to now (so GitHub Pages actually emits it) while pinning
-`permalink:` to the URL its *scheduled* date would have produced, so
-the address never moves. The point of doing this here, right after
-section 3, rather than waiting until section 12a as the docs used to
-suggest, is that **the live URL is then available for the rest of the
-pipeline** — Chris can check the link, the da.gd shortener, etc. while
-sections 4-11 (Watch widget, renders, YouTube) are still in progress,
-instead of only at the very end.
-
-This does incur one piece of standing follow-up: once the post's
-*real* scheduled date has actually passed, someone needs to run
-`scripts/publish-early-reset.sh <slug>` to drop the `scheduled_date:`/
-`permalink:` stash (harmless to leave a little late, but it's a
-loose end worth tracking, e.g. in `docs/post-ideas.md` or wherever
-outstanding pipeline housekeeping gets noted).
+**Finally, commit and push the two config files** (and any
+`render_<slug>_*.py` / `generate_narration.py` / `docs/pronunciation-fixes.md`
+changes that rode along) as a second, small commit on top of the
+publish-early push from the start of this section — the post itself is
+already live from that first push, this just lands the video configs
+in the repo for section 4 onward.
 
 ---
 
