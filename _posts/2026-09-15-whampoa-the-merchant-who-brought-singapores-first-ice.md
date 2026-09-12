@@ -48,6 +48,10 @@ Whampoa's public career outgrew his balance sheet. In 1869 he became the first A
 
 Whampoa's other legacy was more private: a sprawling garden estate on Serangoon Road, decades in the making, with an orange plantation, rockeries, artificial ponds, a small menagerie and an aviary. It became a genuine gathering place for Singapore's Chinese community and drew a stream of distinguished visitors over the years, including Admiral Keppel himself. After Whampoa's death in 1880 the estate passed to the merchant Seah Liang Seah, who renamed it Bendemeer House at the governor's suggestion and kept the tradition of lavish entertaining going into the early 1900s. By the 1950s the mansion had fallen into disrepair; the government acquired the site in 1964 and demolished it for redevelopment. Nothing of the garden survives today — only the road names, Bendemeer and Whampoa, sitting a short walk apart.
 
+![A hand-tinted 1886 engraving of a tree-lined avenue leading to Whampoa's garden estate, with a small figure walking down the path](https://upload.wikimedia.org/wikipedia/commons/f/fb/Avenue_to_Whampoa%27s_Gardens_%281886%29.png)
+
+*"Avenue to Whampoa's Gardens" — an American visitor's own illustration of the estate, published a few years after Whampoa's death. (Public domain, via Wikimedia Commons.)*
+
 ![A self-made map of central Singapore marking Boat Quay, Serangoon Road, Tanglin and Keppel Harbour, the four places tied to Hoo Ah Kay's story](/assets/images/whampoa-the-merchant-who-brought-singapores-first-ice-map.png)
 
 *The places behind the name — none of them still connected to Whampoa in most people's minds. (Map data © OpenStreetMap contributors.)*
@@ -75,10 +79,12 @@ Whampoa's other legacy was more private: a sprawling garden estate on Serangoon 
 - [Landmarks of Yesteryears – Whampoa Ice House](https://remembersingapore.org/2025/03/29/whampoa-ice-house-history/), Remember Singapore
 - [1859: Establishment of the Gardens at Tanglin](https://www.nparks.gov.sg/sbg/about/our-history/1859-establishment-of-the-gardens-at-tanglin), National Parks Board
 - On the Whampoa neighbourhood name and Hoo Ah Kay's Legislative/Executive Council roles: [Whampoa](https://www.sg101.gov.sg/resources/archives/ourneighbourhood-whampoa/), SG101
+- On the garden itself, as an eyewitness visitor described it a few years after Whampoa's death: *[A Tour Around the World in 1884, or Sketches of Travel in the Eastern and Western Hemispheres](https://archive.org/details/atouraroundworl00gormgoog/page/n474)*, John B. Gorman (1886), Internet Archive
 - Hero portrait: [The Hon. Hoh-Ah-Kay Whampoa, C.M.G., M.L.C., and Consul](https://commons.wikimedia.org/wiki/File:The_Hon._Hoh-Ah-Kay_Whampoa,_C.M.G.,_M.L.C.,_and_Consul_for_Wellcome_V0037527.jpg), Wellcome Collection, CC BY 4.0, via Wikimedia Commons
 - [Admiral of the Fleet Sir Henry Keppel](https://commons.wikimedia.org/wiki/File:Admiral_of_the_Fleet_Sir_Henry_Keppel.jpg), public domain, via Wikimedia Commons
 - [Singapore, Boat Quay, ca. 1900](https://commons.wikimedia.org/wiki/File:Singapore_Boat_Quay_ca._1900.jpg), public domain, via Wikimedia Commons
 - [Bendemeer Rd bef Whampoa South, 2006](https://commons.wikimedia.org/wiki/File:Bendemeer_Rd_bef_Whampoa_South_20060409.jpg), CC BY-SA 3.0, via Wikimedia Commons
+- [Avenue to Whampoa's Gardens (1886)](https://commons.wikimedia.org/wiki/File:Avenue_to_Whampoa%27s_Gardens_(1886).png), public domain, via Wikimedia Commons
 - Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
 
 Gallery images:
