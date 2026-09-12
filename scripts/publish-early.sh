@@ -15,6 +15,11 @@
 #   * pins `permalink:` to the URL the scheduled date would have produced,
 #     so the post's address does NOT move
 #   * stashes the original date in a `scheduled_date:` front-matter key
+#   * also moves `last_modified_at:` to that same current time (the
+#     homepage sorts by this field, so leaving it at the original
+#     far-future scheduled date made posts publish-early'd out of
+#     scheduled-date order float to the top ahead of genuinely newer
+#     posts - fixed 2026-09-12 after this hit 7 posts at once)
 #   * commits + pushes, which triggers a Pages build within a minute or two
 #
 # Undo it with:
@@ -109,6 +114,10 @@ awk -v now="$now" -v sched="$cur" -v url="$url" '
     print "date: " now
     print "scheduled_date: " sched
     print "permalink: " url
+    next
+  }
+  infm && /^last_modified_at:/ {
+    print "last_modified_at: " now
     next
   }
   { print }
