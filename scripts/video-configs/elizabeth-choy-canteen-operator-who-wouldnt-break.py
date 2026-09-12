@@ -41,21 +41,27 @@ _CVZ = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ea
 _CVZO = {"type": "cover", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
 
 # WEDDING1941 (351x522) and CHOY1953 (532x813) are small, portrait-oriented
-# scans - covering a landscape frame already crops in hard on just a
-# vertical strip, so the normal _CVZ/_CVZO zoom range pushes past her face
-# into a tight, pixelated close-up by the end of the animation (caught by
-# Chris watching the rendered video, 2026-09-11). Same pan, much flatter
-# zoom for these two images only.
-_CVZ_FLAT = {"type": "cover", "zoom": [1.0, 1.015, 1.03], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_CVZO_FLAT = {"type": "cover", "zoom": [1.03, 1.015, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
+# scans. First fix attempt (flattening the zoom range) wasn't enough:
+# `cover`-fitting a portrait image into a landscape frame scales it up to
+# match the frame's *width* (1280/351 = 3.65x here), which crops away all
+# but a ~200px-tall sliver of the original 522px-tall photo before any
+# zoom animation is even applied - so even a frozen zoom still showed
+# almost nothing but her face (caught by Chris watching the rendered
+# video, 2026-09-11, on a second look after the first fix). Switched to
+# `letterbox` instead so the whole portrait is visible (contained, with a
+# blurred cover-scaled copy filling the frame behind it) - same modest
+# zoom as the rickshaw post's `PORTRAIT1900` letterbox slides, the
+# established precedent for a portrait photo in a landscape frame.
+_LTB = {"type": "letterbox", "zoom": [1.0, 1.04, 1.08], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
+_LTBO = {"type": "letterbox", "zoom": [1.08, 1.04, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
 
 SLIDES = [
     {"img": "HERO_YMCA", **_CVZ},        # 0  s0-1   title; the YMCA, Orchard/Stamford junction
     {"img": "HERO_YMCA", **_CVZO},       # 1  s2     nobody knows; Kempeitai East District Branch, 200 days
-    {"img": "WEDDING1941", **_CVZ_FLAT}, # 2  s3-4   born Yong Su-Moi, Kudat; father, Kadazan nanny
-    {"img": "WEDDING1941", **_CVZO_FLAT},# 3  s5-6   grandfather's school, St Monica's; Singapore, CHIJ, Selegie Road
-    {"img": "WEDDING1941", **_CVZ_FLAT}, # 4  s7-8   mother died, Depression; teaching career begins
-    {"img": "WEDDING1941", **_CVZO_FLAT},# 5  s9     married Choy Khun Heng, 16 August 1941
+    {"img": "WEDDING1941", **_LTB},      # 2  s3-4   born Yong Su-Moi, Kudat; father, Kadazan nanny
+    {"img": "WEDDING1941", **_LTBO},     # 3  s5-6   grandfather's school, St Monica's; Singapore, CHIJ, Selegie Road
+    {"img": "WEDDING1941", **_LTB},      # 4  s7-8   mother died, Depression; teaching career begins
+    {"img": "WEDDING1941", **_LTBO},     # 5  s9     married Choy Khun Heng, 16 August 1941
     {"img": "CHANGI1936", **_CVZ},       # 6  s10-11 Singapore falls; the canteen at Miyako Hospital
     {"img": "CHANGI1936", **_CVZO},      # 7  s12    smuggling food, medicine, money, radio parts to Changi
     {"img": "CHANGI1936", **_CVZ},       # 8  s13    Operation Jaywick
@@ -72,13 +78,13 @@ SLIDES = [
     {"img": "SURRENDER1945", **_CVZO},   # 19 s26    the Girl Guides' Bronze Cross, the Star of Sarawak
     {"img": "SURRENDER1945", **_CVZ},    # 20 s27    OBE, the private audience with Queen Elizabeth
     {"img": "SERENEJADE", **_CVZ},       # 21 s28    modelling for Dora Gordine's sculptures
-    {"img": "CHOY1953", **_CVZ_FLAT},    # 22 s29-30 back in Singapore, 1949; the 1950 City Council election
-    {"img": "CHOY1953", **_CVZO_FLAT},   # 23 s31    nominated to the Legislative Council
-    {"img": "CHOY1953", **_CVZ_FLAT},    # 24 s32    the coronation of Elizabeth the Second, 1953
-    {"img": "CHOY1953", **_CVZO_FLAT},   # 25 s33    Queenstown, then leaving politics
-    {"img": "CHOY1953", **_CVZ_FLAT},    # 26 s34    back to teaching; the Singapore School for the Blind
-    {"img": "CHOY1953", **_CVZO_FLAT},   # 27 s35    qipaos and bangles; "Gunner Choy"
-    {"img": "WEDDING1941", **_CVZ_FLAT}, # 28 s36    Elizabeth Choy dies, 2006, aged 95
+    {"img": "CHOY1953", **_LTB},         # 22 s29-30 back in Singapore, 1949; the 1950 City Council election
+    {"img": "CHOY1953", **_LTBO},        # 23 s31    nominated to the Legislative Council
+    {"img": "CHOY1953", **_LTB},         # 24 s32    the coronation of Elizabeth the Second, 1953
+    {"img": "CHOY1953", **_LTBO},        # 25 s33    Queenstown, then leaving politics
+    {"img": "CHOY1953", **_LTB},         # 26 s34    back to teaching; the Singapore School for the Blind
+    {"img": "CHOY1953", **_LTBO},        # 27 s35    qipaos and bangles; "Gunner Choy"
+    {"img": "WEDDING1941", **_LTB},      # 28 s36    Elizabeth Choy dies, 2006, aged 95
     {"img": "HERO_YMCA", **_CVZO},       # 29 s37    why it matters: the building still stands
     {"img": "MUSEUM", **_CVZ},           # 30 s38    her name survives in institutions, not a street sign
 ]

@@ -486,23 +486,29 @@ for a subject low in the frame. Keep all three keyframes identical
 (a static off-centre crop, not a vertical pan — pans read jerky). The
 rickshaw-men config's `_TOP` / `_TOPM` presets are the worked example.
 
-**Don't zoom into a small or grainy source image — flatten the zoom
-range instead of using the normal 1.0→1.12 (confirmed 2026-09-11, the
-Elizabeth Choy post: a 351×522 portrait scan, already cropped hard by
-`cover` just to fill a landscape frame, pushed past her face into a
-pixelated close-up by the end of its normal zoom range).** The `cover`
-crop on a small or low-resolution source is already tight before any
-zoom is added; escalating to 1.12 on top of that both crops in further
-than intended and visibly upscales/pixelates a source that had little
-resolution to spare. For any image whose native size is noticeably
-below the 1280px working width, or that's a poor-quality scan, use a
-much flatter zoom (e.g. `[1.0, 1.015, 1.03]` instead of `[1.0, 1.06,
-1.12]`) rather than the standard range — same pan, same `cover` type,
-just less motion. This is a per-image judgment call at config-writing
-time, not a fixed threshold: check each source's actual pixel
-dimensions (already part of the sourcing pass) and flatten the zoom for
-anything small or soft before it ships, rather than waiting to catch it
-by eye in the rendered video.
+**A strongly portrait image in a landscape frame needs `letterbox`, not
+`cover` — flattening the zoom isn't enough (confirmed 2026-09-11, the
+Elizabeth Choy post).** A 351×522 portrait scan, `cover`-fit into a
+landscape frame, crops to match the frame's *width*: here that's a
+1280/351 = 3.65x scale-up, which shows only the middle ~200px of the
+original 522px-tall photo — a sliver that's already just her face —
+*before any zoom animation is even applied*. The first fix attempt
+(flattening the zoom range to `[1.0, 1.015, 1.03]`, same `cover` type)
+looked slightly better but didn't actually fix anything, because the
+problem was the baseline crop, not the zoom escalation on top of it;
+Chris caught this on a second look at the rendered video. The real fix:
+switch that image's slides to `"type": "letterbox"` (contains the
+whole image, blurred cover-scaled copy filling the frame behind it),
+with a modest zoom like `[1.0, 1.04, 1.08]` — the same pattern already
+used for the rickshaw post's `PORTRAIT1900` slides, which is the
+established precedent for this exact case. Work out which type a photo
+needs from its actual aspect ratio versus the frame's, not from "it's a
+photo, so cover" — a photo whose aspect ratio is far from the frame's
+(a strong portrait, in particular) is the case `letterbox` exists for,
+same as a chart or map; only a roughly landscape-or-square photo is the
+safe default for `cover`. A small or genuinely grainy image (low
+resolution, but *not* egregiously mismatched in aspect ratio) is a
+different problem and the flattened-zoom fix still applies there.
 
 **Any slide showing a graphic — a chart/timeline/diagram PNG or an
 OSM map — uses `"type": "letterbox"`, never `"cover"`, and a frozen
