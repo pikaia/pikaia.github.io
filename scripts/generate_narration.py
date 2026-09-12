@@ -957,6 +957,9 @@ PRONUNCIATION_OVERRIDES = {
                                    # anglicized Hokkien-glide reading, which
                                    # a web summary of local usage had
                                    # suggested) and "tee-ong" (fully spelled)
+
+    "buyback": "bˈIbak",
+    "non-resettable": "nˌɒnɹiːsˈɛtəbᵊl",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
