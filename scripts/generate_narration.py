@@ -979,6 +979,24 @@ PRONUNCIATION_OVERRIDES = {
 
     "buyback": "bˈIbak",
     "non-resettable": "nˌɒnɹiːsˈɛtəbᵊl",
+
+    # Whampoa post ("Whampoa: The Merchant Who Brought Singapore Its
+    # First Ice"): single-obvious readings. "Whampoa" itself - the
+    # post's own subject name, used dozens of times - is deliberately
+    # NOT here yet; it's a genuine ear-pick, samples in
+    # scratch/whampoa-the-merchant-who-brought-singapores-first-ice-pronunciation/.
+    "Hoo": "hˈuː",                 # "hoo", rhymes with "who"/"zoo"
+    "Huangpu": "hwˈɑːŋpuː",        # "hwahng-poo" - best guess, low
+                                    # stakes (single mention, glossing
+                                    # the modern place name)
+    "shipchandler": "ʃˈɪpʧɑːndlə",  # misaki knows "ship" and "chandler"
+                                    # separately but not the closed
+                                    # compound as one token
+    "Albemarle": "ˈalbəmɑːl",      # "AL-buh-marl", standard English
+                                    # place/title name
+    "Gilbert": "ɡˈɪlbət",          # "GIL-bət"
+    "Frederick": "fɹˈɛdɹɪk",       # "FRED-rick"
+    "Bendemeer": "bˈɛndəmˈɪə",     # "BEN-duh-MEER"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
