@@ -981,10 +981,23 @@ PRONUNCIATION_OVERRIDES = {
     "non-resettable": "nˌɒnɹiːsˈɛtəbᵊl",
 
     # Whampoa post ("Whampoa: The Merchant Who Brought Singapore Its
-    # First Ice"): single-obvious readings. "Whampoa" itself - the
-    # post's own subject name, used dozens of times - is deliberately
-    # NOT here yet; it's a genuine ear-pick, samples in
-    # scratch/whampoa-the-merchant-who-brought-singapores-first-ice-pronunciation/.
+    # First Ice"): single-obvious readings, plus the post's own subject
+    # name "Whampoa" itself.
+    "Whampoa": "wˈampQ",           # "WHAM-poh" - stress on first
+                                    # syllable, clean "-poh" ending, no
+                                    # trailing schwa. Chris ear-picked
+                                    # this (2026-09-12) after flagging
+                                    # that the first two candidates
+                                    # both added an extra "-ah" ("the
+                                    # rhyme correctly but... include the
+                                    # a in the sound... what is
+                                    # typically spoken is WHAMpoh not
+                                    # WHAMpoah") - fixed by dropping the
+                                    # trailing schwa from "poa" entirely
+                                    # rather than just re-picking among
+                                    # the original 3 candidates, from
+                                    # samples in
+                                    # scratch/whampoa-the-merchant-who-brought-singapores-first-ice-pronunciation/.
     "Hoo": "hˈuː",                 # "hoo", rhymes with "who"/"zoo"
     "Huangpu": "hwˈɑːŋpuː",        # "hwahng-poo" - best guess, low
                                     # stakes (single mention, glossing
@@ -1656,7 +1669,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMPB", "CPF", "DBS", "DMV",
+    "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "DBS", "DMV",
     "EDB", "FMSR", "GDP", "HDB", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
     "UOB", "UOL", "US",
