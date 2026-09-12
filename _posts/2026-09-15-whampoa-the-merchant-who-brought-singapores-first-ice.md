@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Whampoa: The Merchant Who Brought Singapore Its First Ice"
-date: 2026-09-15 09:00:00 +0800
-last_modified_at: 2026-09-15 09:00:00 +0800
+date: 2026-09-12 23:29:23 +0000
+scheduled_date: 2026-09-15 09:00:00 +0800
+permalink: /2026/09/15/whampoa-the-merchant-who-brought-singapores-first-ice/
+last_modified_at: 2026-09-12 23:29:23 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Hon._Hoh-Ah-Kay_Whampoa%2C_C.M.G.%2C_M.L.C.%2C_and_Consul_for_Wellcome_V0037527.jpg/1280px-The_Hon._Hoh-Ah-Kay_Whampoa%2C_C.M.G.%2C_M.L.C.%2C_and_Consul_for_Wellcome_V0037527.jpg
 ---
