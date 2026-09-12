@@ -4,7 +4,7 @@ title: "When Singapore Led the World in Canned Pineapple"
 date: 2026-09-04 16:52:10 +0000
 scheduled_date: 2026-09-11 09:00:00 +0800
 permalink: /2026/09/11/singapore-canned-pineapple-kings/
-last_modified_at: 2026-09-11 09:00:00 +0800
+last_modified_at: 2026-09-04 16:52:10 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/a6/Tan_Kah_Kee%2C_Lee_Kong_Chian%2C_and_Tan_Lark_Sye%2C_1946.png
 ---

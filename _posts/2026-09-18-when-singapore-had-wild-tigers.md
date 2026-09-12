@@ -4,7 +4,7 @@ title: "When Singapore Had Wild Tigers"
 date: 2026-09-08 13:03:01 +0000
 scheduled_date: 2026-09-18 09:00:00 +0800
 permalink: /2026/09/18/when-singapore-had-wild-tigers/
-last_modified_at: 2026-09-18 09:00:00 +0800
+last_modified_at: 2026-09-08 13:03:01 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/5/52/%27Watch_out_for_otters_crossing%27_sign_on_Robertson_Quay_near_Kim_Seng_Park%2C_Singapore.jpg
 ---

@@ -4,7 +4,7 @@ title: "Before HDB: The Singapore Improvement Trust and Tiong Bahru"
 date: 2026-09-12 14:16:22 +0000
 scheduled_date: 2026-09-14 09:00:00 +0800
 permalink: /2026/09/14/before-hdb-singapore-improvement-trust-tiong-bahru/
-last_modified_at: 2026-09-14 09:00:00 +0800
+last_modified_at: 2026-09-12 14:16:22 +0000
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tiong_Bahru_8%2C_Jul_06.JPG/1280px-Tiong_Bahru_8%2C_Jul_06.JPG
 ---

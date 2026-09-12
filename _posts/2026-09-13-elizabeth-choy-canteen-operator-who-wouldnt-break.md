@@ -4,7 +4,7 @@ title: "Elizabeth Choy, the Canteen Operator Who Wouldn't Break"
 date: 2026-09-11 18:29:39 +0000
 scheduled_date: 2026-09-13 09:00:00 +0800
 permalink: /2026/09/13/elizabeth-choy-canteen-operator-who-wouldnt-break/
-last_modified_at: 2026-09-13 09:00:00 +0800
+last_modified_at: 2026-09-11 18:29:39 +0000
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YMCA_Building_2.JPG/1280px-YMCA_Building_2.JPG
 ---

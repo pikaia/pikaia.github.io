@@ -4,7 +4,7 @@ title: "Coney Island, Before It Was a Nature Park"
 date: 2026-09-08 22:52:59 +0000
 scheduled_date: 2026-09-25 09:00:00 +0800
 permalink: /2026/09/25/coney-island-before-it-was-a-nature-park/
-last_modified_at: 2026-09-25 09:00:00 +0800
+last_modified_at: 2026-09-08 22:52:59 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/8/87/Coney_Island_Gate.jpg
 ---
