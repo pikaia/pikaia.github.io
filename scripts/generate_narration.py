@@ -951,9 +951,12 @@ PRONUNCIATION_OVERRIDES = {
     "mei": "mˈA",                 # "may" - "mei ren wo", "den of beauties"
     "dockworkers": "dˈɒkwˈɜːkəz",
 
-    # "Tiong" (as in Tiong Bahru, the post's own subject - used 12+ times)
-    # has a real reading tension: still ear-picked below, samples in
-    # scratch/before-hdb-singapore-improvement-trust-tiong-bahru-pronunciation/.
+    "Tiong": "tjˈɒŋ",              # "tyong" (literal spelling, y-glide) -
+                                   # candidate 2 of 3, Chris ear-picked
+                                   # (2026-09-12) over "chong" (the
+                                   # anglicized Hokkien-glide reading, which
+                                   # a web summary of local usage had
+                                   # suggested) and "tee-ong" (fully spelled)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
