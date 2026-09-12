@@ -943,12 +943,31 @@ PRONUNCIATION_OVERRIDES = {
     "hoc": "hˈɒk",                # "hock" - "ad hoc"
     "Kan": "kˈɑːn",               # "kahn" - architect Robert F. N. Kan
     "prewar": "pɹˈiːwɔː",         # "PREE-wor"
-    "puay": "pwˈA",               # "pway" - best-guess Hokkien reading,
-                                   # NOT ear-verified yet (a single-mention
-                                   # colloquial nickname, low stakes)
+    # "puay kee" fused into one override key (paired with the ABBREVIATION_
+    # EXPANSIONS text-rewrite below that joins "puay kee" -> "puay-kee"
+    # before phonemization) rather than separate "puay"/"kee" entries -
+    # Chris confirmed the "pway" reading for "puay" itself (2026-09-12) but
+    # said the two words came out sounding wrong regardless: "puay kee" is
+    # one word (airplane) and "chu" is a separate word (house), a 2+1
+    # grouping, but as three plain space-separated tokens misaki/Kokoro
+    # gave all three equal stress and gaps, so it read as three words
+    # instead of two. Fusing the text into a single hyphenated token before
+    # phonemization gives it one combined prosodic contour instead.
+    "puay-kee": "pwˈAkiː",        # "PWAY-kee", one stress
     "chu": "ʧˈuː",                # "choo" - matches "Choo" already in this
-                                   # dict; "puay kee chu", "aeroplane house"
-    "mei": "mˈA",                 # "may" - "mei ren wo", "den of beauties"
+                                   # dict; "puay-kee chu", "aeroplane house"
+    # "mei ren" fused the same way as "puay-kee" above (same
+    # ABBREVIATION_EXPANSIONS text-rewrite mechanism, below) - Chris
+    # (2026-09-12): "Mei-Ren is Beautiful, one word, Wo is a separate
+    # word", the same 2+1 grouping problem as puay-kee/chu. He also
+    # flagged "wo" itself: its misaki-default reading ("woe", rhyming
+    # with "go") "came off as foreign" against the Mandarin word he
+    # actually knows - picked candidate 2, "waw" (rhymes with "war", no
+    # r), from the 2-candidate ear-pick in
+    # scratch/before-hdb-singapore-improvement-trust-tiong-bahru-redo/.
+    "mei-ren": "mˈAɹɛn",          # "MAY-ren", one stress
+    "wo": "wˈɔː",                 # "waw" - Chris's pick over the
+                                   # misaki-default "woe"
     "dockworkers": "dˈɒkwˈɜːkəz",
 
     "Tiong": "tjˈɒŋ",              # "tyong" (literal spelling, y-glide) -
@@ -1115,6 +1134,16 @@ ABBREVIATION_EXPANSIONS = {
     # form). National-symbols... no, the JSP post ("the 1941-42
     # campaign").
     re.compile(r"\b(\d{2})(\d{2})[–-](\d{2})\b"): r"\g<1>\g<2> to \g<1>\g<3>",
+    # "puay kee chu" (Tiong Bahru/SIT post) - "puay kee" is one word
+    # (Hokkien for "airplane"), "chu" a separate word ("house"), a 2+1
+    # grouping that three plain space-separated tokens don't convey (see
+    # the "puay-kee" PRONUNCIATION_OVERRIDES entry above). Text rewrite
+    # rather than a phoneme override alone, since the fix is joining two
+    # tokens into one, not just picking a phoneme for either.
+    re.compile(r"\bpuay kee\b"): "puay-kee",
+    # "mei ren wo" - same 2+1 grouping problem, same fix (see the
+    # "mei-ren" PRONUNCIATION_OVERRIDES entry above).
+    re.compile(r"\bmei ren\b"): "mei-ren",
 }
 
 
