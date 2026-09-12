@@ -9,7 +9,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Hon._Hoh-Ah
 
 Most Singaporeans know Whampoa as a place — a housing estate near Novena and Balestier, a hawker centre whose sign spells the name out in giant letters — not a person. Almost nobody connects it to Hoo Ah Kay, the 19th-century merchant behind it, who at various points supplied the Royal Navy, imported Singapore's first ice, sat on the colonial Legislative Council, and served as honorary consul for three different empires at once.
 
-I've lived around the Whampoa name my whole life — the estate, the hawker centre, the road signs — without ever once wondering who it actually belonged to. Only when I went looking did I learn about Hoo Ah Kay.
+I never lived in Whampoa myself, but I've known the name my whole life — it's right next to Hougang, where I grew up. I never once wondered who it actually belonged to, until I went looking.
 
 [← Back to all posts](/)
 
