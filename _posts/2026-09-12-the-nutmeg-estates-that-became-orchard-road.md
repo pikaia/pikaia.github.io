@@ -4,7 +4,7 @@ title: "The Nutmeg Estates That Became Orchard Road"
 date: 2026-09-11 10:12:56 +0000
 scheduled_date: 2026-09-12 09:00:00 +0800
 permalink: /2026/09/12/the-nutmeg-estates-that-became-orchard-road/
-last_modified_at: 2026-09-11 10:12:56 +0000
+last_modified_at: 2026-09-12 21:31:32 +0000
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Orchard_Road_at_night%2C_2011.jpg/1280px-Orchard_Road_at_night%2C_2011.jpg
 ---
@@ -342,7 +342,7 @@ The nutmeg mania collapsed almost as fast as it had begun. Sometime in the 1840s
 
 *Nutmeg trees in Singapore, photographed for Artemas Ward's* The Encyclopedia of Food *(1923) — a rare late photograph of the kind of grove that once covered the Orchard Road area. (Public domain, via Wikimedia Commons.)*
 
-The scale of the wipeout is easy to underestimate at this distance. Even Singapore's own Botanic Gardens began on the wreckage of it: when the Agri-Horticultural Society acquired 23 hectares of land at Tanglin in November 1859 to found the gardens, what it bought was an abandoned nutmeg plantation. The Scottish planter Lawrence Niven was hired the following year to develop the site, and the bungalow built for him there, completed in 1868 and known today as Burkill Hall, is described on its own heritage marker as the last Anglo-Malay plantation house left in Singapore — built on ground that had been nutmeg orchard.
+The scale of the wipeout is easy to underestimate at this distance. Even Singapore's own Botanic Gardens began on the wreckage of it: when the Agri-Horticultural Society acquired 23 hectares of land at Tanglin in November 1859 to found the gardens, what it bought was an abandoned nutmeg plantation — land the colonial government had taken a few years earlier from the Cantonese merchant Hoo Ah Kay, better known as [Whampoa](/2026/09/15/whampoa-the-merchant-who-brought-singapores-first-ice/), in exchange for a riverside plot at Boat Quay where he wanted to build an ice house. Whampoa himself was a founding member of the society that turned his old plantation into the Gardens. The Scottish planter Lawrence Niven was hired the following year to develop the site, and the bungalow built for him there, completed in 1868 and known today as Burkill Hall, is described on its own heritage marker as the last Anglo-Malay plantation house left in Singapore — built on ground that had been nutmeg orchard.
 
 ## From plantation to Peranakan terrace
 
@@ -382,6 +382,7 @@ One actual nutmeg tree still stands in Singapore today, a few kilometres from Or
 - [Nutmeg and Mace](https://www.nac.gov.sg/singapore-arts-scene/art-forms/visual-arts/public-art-trust/public-artworks/nutmeg-and-mace/), National Arts Council Singapore; [Kumari Nahappan](https://www.kumarinahappan.com/public-works/nutmeg-and-mace), artist's website
 - On nutmeg in Penang today: [Ghee Hup Nutmeg Factory, Balik Pulau](https://www.buletinmutiara.com/the-man-behind-balik-pulaus-nutmeg-legacy/), Buletin Mutiara
 - On the nutmeg Heritage Tree at the Singapore Botanic Gardens: [Heritage Trees](https://www.nparks.gov.sg/sbg/our-gardens/heritage-trees), National Parks Board
+- On the Botanic Gardens' founding land having been Whampoa's own former nutmeg plantation, and Whampoa's role in the Agri-Horticultural Society: [1859: Establishment of the Gardens at Tanglin](https://www.nparks.gov.sg/sbg/about/our-history/1859-establishment-of-the-gardens-at-tanglin), National Parks Board
 - Nutmeg branch, watercolour, William Farquhar Collection, 1819–1823, public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Booa_Palla;_Nutmeg;_Myristica_moschata_(William_Farquhar_Collection,_1819%E2%80%931823).jpg)
 - Nutmeg trees, Singapore, 1923, from Artemas Ward's *The Encyclopedia of Food*, public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Nutmeg-trees,_Singapore,_photo_from_The_Encyclopedia_of_Food_by_Artemas_Ward.jpg)
 - Terrace houses, Emerald Hill Road, 2012, CC BY-SA 2.0, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Terraced_houses_along_Emerald_Hill_Road,_Singapore_-_20121028.jpg)
