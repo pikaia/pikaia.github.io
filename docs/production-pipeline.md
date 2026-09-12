@@ -486,6 +486,24 @@ for a subject low in the frame. Keep all three keyframes identical
 (a static off-centre crop, not a vertical pan — pans read jerky). The
 rickshaw-men config's `_TOP` / `_TOPM` presets are the worked example.
 
+**Don't zoom into a small or grainy source image — flatten the zoom
+range instead of using the normal 1.0→1.12 (confirmed 2026-09-11, the
+Elizabeth Choy post: a 351×522 portrait scan, already cropped hard by
+`cover` just to fill a landscape frame, pushed past her face into a
+pixelated close-up by the end of its normal zoom range).** The `cover`
+crop on a small or low-resolution source is already tight before any
+zoom is added; escalating to 1.12 on top of that both crops in further
+than intended and visibly upscales/pixelates a source that had little
+resolution to spare. For any image whose native size is noticeably
+below the 1280px working width, or that's a poor-quality scan, use a
+much flatter zoom (e.g. `[1.0, 1.015, 1.03]` instead of `[1.0, 1.06,
+1.12]`) rather than the standard range — same pan, same `cover` type,
+just less motion. This is a per-image judgment call at config-writing
+time, not a fixed threshold: check each source's actual pixel
+dimensions (already part of the sourcing pass) and flatten the zoom for
+anything small or soft before it ships, rather than waiting to catch it
+by eye in the rendered video.
+
 **Any slide showing a graphic — a chart/timeline/diagram PNG or an
 OSM map — uses `"type": "letterbox"`, never `"cover"`, and a frozen
 `"zoom": [1, 1, 1]`.** `cover` scales the image to fill the frame and
