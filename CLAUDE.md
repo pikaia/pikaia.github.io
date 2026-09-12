@@ -13,6 +13,8 @@ Always brainstorm before drafting. Do not generate post content until the topic,
 
 Keep this lightweight — a few chat questions, not a formal spec doc. Only write the post file once the outline is approved.
 
+**As soon as a draft is written, run the pronunciation dry-run check yourself** (`python scripts/generate_narration.py _posts/<file>.md audio/<slug>.mp3 --dry-run`, see `docs/production-pipeline.md` §1) — don't wait to be asked, and don't wait for the user to say the draft looks good first. It's read-only (no synthesis, no audio written) and near-instant, so there's no cost to running it early and re-running it again later if the draft changes. Apply the single-obvious-reading overrides directly; prepare ear-pick samples in `scratch/` for anything genuinely ambiguous, per the standard process.
+
 Keep the tone of posts objective and balanced — temper subjective commentary, since it could unnecessarily provoke reactions.
 
 ## Post conventions
