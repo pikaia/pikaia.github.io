@@ -938,6 +938,22 @@ PRONUNCIATION_OVERRIDES = {
                                    # 1 of 2, no definitive source found;
                                    # Chris ear-picked from samples in
                                    # scratch/elizabeth-choy-canteen-operator-who-wouldnt-break-pronunciation/
+
+    # Tiong Bahru / SIT post batch (2026-09-12): single-obvious readings.
+    "hoc": "hˈɒk",                # "hock" - "ad hoc"
+    "Kan": "kˈɑːn",               # "kahn" - architect Robert F. N. Kan
+    "prewar": "pɹˈiːwɔː",         # "PREE-wor"
+    "puay": "pwˈA",               # "pway" - best-guess Hokkien reading,
+                                   # NOT ear-verified yet (a single-mention
+                                   # colloquial nickname, low stakes)
+    "chu": "ʧˈuː",                # "choo" - matches "Choo" already in this
+                                   # dict; "puay kee chu", "aeroplane house"
+    "mei": "mˈA",                 # "may" - "mei ren wo", "den of beauties"
+    "dockworkers": "dˈɒkwˈɜːkəz",
+
+    # "Tiong" (as in Tiong Bahru, the post's own subject - used 12+ times)
+    # has a real reading tension: still ear-picked below, samples in
+    # scratch/before-hdb-singapore-improvement-trust-tiong-bahru-pronunciation/.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
