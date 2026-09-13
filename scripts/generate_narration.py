@@ -1010,6 +1010,31 @@ PRONUNCIATION_OVERRIDES = {
     "Gilbert": "ɡˈɪlbət",          # "GIL-bət"
     "Frederick": "fɹˈɛdɹɪk",       # "FRED-rick"
     "Bendemeer": "bˈɛndəmˈɪə",     # "BEN-duh-MEER"
+
+    # Bumboats post ("The Bumboats and the River That Was Scrubbed
+    # Clean"): single-obvious readings for the boat-trade vocabulary and
+    # a few plain-English compound gaps.
+    "twakow": "twˈɑːkW",           # "TWAH-kow"
+    "twakows": "twˈɑːkWz",
+    "tongkang": "tˈɒŋkaŋ",         # "TONG-kang"
+    "tongkangs": "tˈɒŋkaŋz",
+    "ferried": "fˈɛɹid",           # "FERR-eed", rhymes with "buried"
+    "Chulia": "ʧˈuːliə",           # "CHOO-lee-uh"
+    "hometown": "hˈQmtWn",         # misaki has "home" and "town"
+                                    # separately, not the closed compound
+    "towkay": "tˈWkA",             # "TOW-kay"
+    "towkays": "tˈWkAz",
+    "secondhand": "sˈɛkəndhand",   # misaki has "second" and "hand"
+                                    # separately, not the closed compound
+    "nightsoil": "nˈItsYl",        # misaki has "night" and "soil"
+                                    # separately, not the closed compound
+    "Peirce": "pˈɪəs",             # "peers/pierce" - Upper Peirce
+                                    # Reservoir
+    "Lorong": "lɔːɹˈɒŋ",           # "loh-RONG", Malay "lane" - recurs
+                                    # across many Singapore place names
+    "Halus": "hˈɑːluːs",           # "HAH-loose" (Lorong Halus)
+    "pok": "pˈɒk",                 # "mee pok" - rhymes with "rock", not
+                                    # "poke"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1670,7 +1695,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "DBS", "DMV",
-    "EDB", "FMSR", "GDP", "HDB", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
+    "EDB", "FMSR", "FX", "GDP", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
     "UOB", "UOL", "US",
 }
