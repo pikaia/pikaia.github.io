@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "The Bumboats and the River That Was Scrubbed Clean"
-date: 2026-09-16 09:00:00 +0800
-last_modified_at: 2026-09-16 09:00:00 +0800
+date: 2026-09-13 03:08:56 +0000
+scheduled_date: 2026-09-16 09:00:00 +0800
+permalink: /2026/09/16/the-bumboats-and-the-river-that-was-scrubbed-clean/
+last_modified_at: 2026-09-13 03:08:56 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/f/f6/SingaporeRiver-bumboats-196009.jpg
 ---
