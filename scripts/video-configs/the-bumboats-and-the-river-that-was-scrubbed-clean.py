@@ -18,7 +18,11 @@ Landscape photos use centred cover zoom; BOATQUAY_NIGHT is portrait and
 uses letterbox instead (cover would crop it to a narrow sliver - see
 docs/production-pipeline.md §3).
 
-45 slides, 471.425s.
+Sentence 16 (the pollution-source numbers list, 35.2s alone) is split
+across two slides mid-sentence - a plain single slide there tripped the
+30s long-hold check.
+
+46 slides, 471.425s.
 """
 
 _U = "https://upload.wikimedia.org/wikipedia/commons"
@@ -56,47 +60,49 @@ SLIDES = [
     {"img": "MOONSTONE", **_CVZ},       # 13 s13  couldn't say for certain, riverside godowns
     {"img": "MOONSTONE", **_CVZO},      # 14 s14  shown to me, the bank's roots
     {"img": "HERO", **_CVZ},            # 15 s15  1970s, river and Kallang Basin, the runoff
-    {"img": "HERO", **_CVZO},           # 16 s16  government count of pollution sources
-    {"img": "HERO", **_CVZ},            # 17 s17  800 bumboats, 64 boatyards
-    {"img": "HERO", **_CVZO},           # 18 s18  the river was an open drain
-    {"img": "CBD_NIGHT", **_CVZ},       # 19 s19  27 February 1977, Upper Peirce Reservoir
-    {"img": "HERO", **_CVZ},            # 20 s20  in ten years let us have fishing
-    {"img": "HERO", **_CVZO},           # 21 s21  it can be done
-    {"img": "BOATQUAY_NIGHT", **_LTB},  # 22 s22  the Straits Times covered the same speech
-    {"img": "MOONSTONE", **_CVZ},       # 23 s23  a genuinely multi-agency campaign
-    {"img": "MOONSTONE", **_CVZO},      # 24 s24  squatters, backyard trades, farmers resettled
-    {"img": "RIVER_MERCH", **_CVZ},     # 25 s25  street hawkers moved to food centres
-    {"img": "RIVER_SCULPT", **_CVZO},   # 26 s26  vegetable wholesalers to Pasir Panjang
-    {"img": "RIVER_SCULPT", **_CVZ},    # 27 s27  boatyards, charcoal trade, Lorong Halus
-    {"img": "HERO", **_CVZ},            # 28 s28  the bumboats, all 800, moved to Pasir Panjang
-    {"img": "BUMBOAT_TODAY", **_CVZO},  # 29 s29  September 1983, lighterage ceased
-    {"img": "MOONSTONE", **_CVZ},       # 30 s30  nightsoil bucket phased out, January 1987
-    {"img": "CBD_NIGHT", **_CVZO},      # 31 s31  1987, Lee marked the campaign's completion
-    {"img": "CBD_NIGHT", **_CVZ},       # 32 s32  a triumph, diverted sewers, resettled
-    {"img": "CBD_NIGHT", **_CVZO},      # 33 s33  we now have pleasant riverscapes
-    {"img": "BUMBOAT_TODAY", **_CVZ},   # 34 s34  walk the river, fish or boat, ski and swim
-    {"img": "BOATQUAY_NIGHT", **_LTBO}, # 35 s35  fish returned, regattas, dragon boats, bars
-    {"img": "BOATQUAY_NIGHT", **_LTB},  # 36 s36  I worked in one of those towers, HSBC
-    {"img": "BOATQUAY_NIGHT", **_LTBO}, # 37 s37  mee pok from a food centre on lunch break
-    {"img": "BUMBOAT_TODAY", **_CVZO},  # 38 s38  an expat trader's bet to swim across
-    {"img": "CBD_NIGHT", **_CVZ},       # 39 s39  everyone knew, still felt revulsion
-    {"img": "BUMBOAT_TODAY", **_CVZ},   # 40 s40  he made it across unharmed
-    {"img": "CBD_NIGHT", **_CVZO},      # 41 s41  succeeded on paper before in anyone's head
-    {"img": "BOATQUAY_NIGHT", **_LTB},  # 42 s42  why it matters today
-    {"img": "HERO", **_CVZ},            # 43 s43  a hard, unglamorous, decade-long effort
-    {"img": "BUMBOAT_TODAY", **_CVZO},  # 44 s44  the bumboats are gone, only the name survives
+    {"img": "HERO", **_CVZO},           # 16 s16a government count of pollution sources (1st half)
+    {"img": "MOONSTONE", **_CVZ},       # 17 s16b government count of pollution sources (2nd half)
+    {"img": "HERO", **_CVZ},            # 18 s17  800 bumboats, 64 boatyards
+    {"img": "HERO", **_CVZO},           # 19 s18  the river was an open drain
+    {"img": "CBD_NIGHT", **_CVZ},       # 20 s19  27 February 1977, Upper Peirce Reservoir
+    {"img": "HERO", **_CVZ},            # 21 s20  in ten years let us have fishing
+    {"img": "HERO", **_CVZO},           # 22 s21  it can be done
+    {"img": "BOATQUAY_NIGHT", **_LTB},  # 23 s22  the Straits Times covered the same speech
+    {"img": "MOONSTONE", **_CVZ},       # 24 s23  a genuinely multi-agency campaign
+    {"img": "MOONSTONE", **_CVZO},      # 25 s24  squatters, backyard trades, farmers resettled
+    {"img": "RIVER_MERCH", **_CVZ},     # 26 s25  street hawkers moved to food centres
+    {"img": "RIVER_SCULPT", **_CVZO},   # 27 s26  vegetable wholesalers to Pasir Panjang
+    {"img": "RIVER_SCULPT", **_CVZ},    # 28 s27  boatyards, charcoal trade, Lorong Halus
+    {"img": "HERO", **_CVZ},            # 29 s28  the bumboats, all 800, moved to Pasir Panjang
+    {"img": "BUMBOAT_TODAY", **_CVZO},  # 30 s29  September 1983, lighterage ceased
+    {"img": "MOONSTONE", **_CVZ},       # 31 s30  nightsoil bucket phased out, January 1987
+    {"img": "CBD_NIGHT", **_CVZO},      # 32 s31  1987, Lee marked the campaign's completion
+    {"img": "CBD_NIGHT", **_CVZ},       # 33 s32  a triumph, diverted sewers, resettled
+    {"img": "CBD_NIGHT", **_CVZO},      # 34 s33  we now have pleasant riverscapes
+    {"img": "BUMBOAT_TODAY", **_CVZ},   # 35 s34  walk the river, fish or boat, ski and swim
+    {"img": "BOATQUAY_NIGHT", **_LTBO}, # 36 s35  fish returned, regattas, dragon boats, bars
+    {"img": "BOATQUAY_NIGHT", **_LTB},  # 37 s36  I worked in one of those towers, HSBC
+    {"img": "BOATQUAY_NIGHT", **_LTBO}, # 38 s37  mee pok from a food centre on lunch break
+    {"img": "BUMBOAT_TODAY", **_CVZO},  # 39 s38  an expat trader's bet to swim across
+    {"img": "CBD_NIGHT", **_CVZ},       # 40 s39  everyone knew, still felt revulsion
+    {"img": "BUMBOAT_TODAY", **_CVZ},   # 41 s40  he made it across unharmed
+    {"img": "CBD_NIGHT", **_CVZO},      # 42 s41  succeeded on paper before in anyone's head
+    {"img": "BOATQUAY_NIGHT", **_LTB},  # 43 s42  why it matters today
+    {"img": "HERO", **_CVZ},            # 44 s43  a hard, unglamorous, decade-long effort
+    {"img": "BUMBOAT_TODAY", **_CVZO},  # 45 s44  the bumboats are gone, only the name survives
 ]
 
 SCHEDULE = [
     (0.0, 0), (3.800, 1), (11.450, 2), (25.700, 3), (36.600, 4),
     (46.475, 5), (55.025, 6), (71.950, 7), (85.725, 8), (98.975, 9),
     (107.500, 10), (122.350, 11), (128.700, 12), (145.600, 13), (155.550, 14),
-    (164.750, 15), (177.975, 16), (213.200, 17), (224.350, 18), (230.450, 19),
-    (249.775, 20), (256.100, 21), (257.900, 22), (268.975, 23), (276.575, 24),
-    (288.650, 25), (295.650, 26), (300.500, 27), (306.475, 28), (321.775, 29),
-    (328.725, 30), (335.800, 31), (351.950, 32), (361.700, 33), (364.425, 34),
-    (372.100, 35), (382.475, 36), (391.300, 37), (397.300, 38), (403.150, 39),
-    (414.825, 40), (417.475, 41), (423.775, 42), (439.950, 43), (454.900, 44),
+    (164.750, 15), (177.975, 16), (195.575, 17), (213.200, 18), (224.350, 19),
+    (230.450, 20), (249.775, 21), (256.100, 22), (257.900, 23), (268.975, 24),
+    (276.575, 25), (288.650, 26), (295.650, 27), (300.500, 28), (306.475, 29),
+    (321.775, 30), (328.725, 31), (335.800, 32), (351.950, 33), (361.700, 34),
+    (364.425, 35), (372.100, 36), (382.475, 37), (391.300, 38), (397.300, 39),
+    (403.150, 40), (414.825, 41), (417.475, 42), (423.775, 43), (439.950, 44),
+    (454.900, 45),
 ]
 TOTAL_DURATION = 471.425
 TIMING_JSON = "audio/the-bumboats-and-the-river-that-was-scrubbed-clean.timing.json"
