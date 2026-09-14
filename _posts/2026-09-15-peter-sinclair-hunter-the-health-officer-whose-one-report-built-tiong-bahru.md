@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Peter Sinclair Hunter: The Health Officer Whose One Report Built Tiong Bahru"
-date: 2026-09-19 09:00:00 +0800
-last_modified_at: 2026-09-19 09:00:00 +0800
+date: 2026-09-15 01:07:55 +0800
+last_modified_at: 2026-09-15 01:07:55 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/8/8d/Tiong_Bahru_11%2C_Jul_06.JPG
 ---
