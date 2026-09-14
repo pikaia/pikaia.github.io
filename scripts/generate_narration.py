@@ -1064,6 +1064,18 @@ PRONUNCIATION_OVERRIDES = {
                                     # biographer Demetrius Boulger)
     "Bastin": "bˈastɪn",           # "BAS-tin" - historian John Bastin
     "Turnbull": "tˈɜːnbʊl",        # "TURN-bull" - historian Mary Turnbull
+
+    # Marina Barrage post ("Marina Barrage and the End of Singapore's
+    # Water-Dependency Anxiety"): single-obvious readings for the water-
+    # agreement vocabulary and a couple of plain-English compound gaps.
+    "freshwater": "fɹˈɛʃwɔːtə",    # misaki has "fresh" and "water"
+                                    # separately, not the closed compound
+    "NEWater": "njˈuːwɔːtə",       # "NEW-water" - PUB's reclaimed-water
+                                    # brand name, styled as one word
+    "Tebrau": "təbɹˈW",            # "tuh-BROW" - the Tebrau River, Johor
+    "Scudai": "skuːdˈaɪ",          # "skoo-DYE" - the Scudai River, Johor
+    "Tunku": "tˈʊŋkuː",            # "TOONG-koo" - Malay honorific title
+    "Rahman": "ɹɑːmˈɑːn",          # "rah-MAHN" - Tunku Abdul Rahman
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
