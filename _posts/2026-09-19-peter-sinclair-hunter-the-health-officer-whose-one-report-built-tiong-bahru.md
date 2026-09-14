@@ -17,7 +17,7 @@ Tiong Bahru's Art Deco corner shophouses and curved balconies are one of the mos
 
 ## Arrival
 
-Hunter joined Singapore's colonial health service in May 1913, a young doctor with an M.B., Ch.B. and a Diploma in Public Health behind his name. He didn't stay purely a civilian administrator for long: in May 1914 the Governor commissioned him Surgeon-Lieutenant in the Medical Company of the Singapore Volunteer Corps, the colony's part-time defence force. The following year, on 7 June 1915, a son was born to Dr. and Mrs. Hunter at their home on Leonie Hill Road — a son who, decades later, would make his own small appearance in the Singapore papers.
+Hunter joined Singapore's colonial health service in May 1913, a young doctor with an M.B., Ch.B. and a Diploma in Public Health behind his name. His earliest work in the colony was hands-on rather than administrative: in those early days he served as a bacteriologist, called in to Middleton Hospital to attend post-mortem examinations. He didn't stay purely a civilian doctor for long, either: in May 1914 the Governor commissioned him Surgeon-Lieutenant in the Medical Company of the Singapore Volunteer Corps, the colony's part-time defence force. The following year, on 7 June 1915, a son was born to Dr. and Mrs. Hunter at their home on Leonie Hill Road — a son who, decades later, would make his own small appearance in the Singapore papers.
 
 ## The report
 
@@ -35,7 +35,13 @@ It got genuinely serious in December 1935, when a mosquito known locally as the 
 
 Hunter was named in the 1937 Coronation Honours list, alongside Municipal Commission president William Bartley, who received the C.M.G. that same list. By 1948, when Hunter resurfaces in the papers as acting chairman of the Singapore Turf Club, he's already styled C.B.E.
 
-He retired on Friday, 10 March 1939, twenty-six years after he'd arrived. The send-off was substantial. Days before, he visited the Middleton Hospital, where — the Straits Times reported — he'd known every member of staff since the date of their appointment, and a group photograph was taken to mark it. Colleagues also gave him a farewell dinner at the home of a Mr. N. A. Sen. In his own farewell interview with the Straits Times, Hunter chose to talk about the problems still ahead rather than look back at what he'd already done — enough to prompt the paper's own editorial page to gently push back and remind readers what Singapore's health record had actually looked like before men like him got to work on it.
+He retired on Friday, 10 March 1939, twenty-six years after he'd arrived. The send-off was substantial. Days before, he visited the Middleton Hospital — the same hospital he'd once attended as a young bacteriologist — where, the Straits Times reported, he'd known every member of staff since the date of their employment, except the steward, who'd joined before Hunter himself arrived in the colony. A group photograph was taken to mark it.
+
+![Newspaper clipping: "Middleton Hospital Farewell To Dr. Hunter," The Straits Times, 8 March 1939, with a group photograph of Hunter and the hospital's staff](/assets/images/middleton-hospital-farewell-hunter-1939.jpg)
+
+*"Middleton Hospital Farewell To Dr. Hunter" — The Straits Times, 8 March 1939. Front row includes gatekeeper S. Pereira, steward F. W. Nunis, nurses Joyce Dexter and Ena Reid, acting superintendent Dr. A. Thurai, Hunter himself, matron R. Auten, and watchman Nebar Messier; the middle and back rows are the hospital's amahs, "boys" and cook. (The Straits Times, public domain by age)*
+
+Colleagues also gave him a farewell dinner at the home of a Mr. N. A. Sen. In his own farewell interview with the Straits Times, Hunter chose to talk about the problems still ahead rather than look back at what he'd already done — enough to prompt the paper's own editorial page to gently push back and remind readers what Singapore's health record had actually looked like before men like him got to work on it.
 
 ## The long coda
 
