@@ -25,6 +25,12 @@ More from the William Farquhar Collection of Natural History Drawings, and a loo
 
 *Garcinia mangostana, the mangosteen — another of the plants Farquhar had recorded during his Malacca years. (Public domain, via Wikimedia Commons)*
 
+### The other man in this story
+
+![Portrait of Sir Thomas Stamford Raffles, seated, by George Francis Joseph](https://upload.wikimedia.org/wikipedia/commons/a/a0/George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg)
+
+*Sir Thomas Stamford Raffles. (George Francis Joseph, public domain, via Wikimedia Commons)*
+
 ### Raffles' landing site today
 
 ![Close-up of the English-language plaque at Raffles' Landing Site on the Singapore River](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/RafflesStatue-EnglishPlaque-RafflesLandingSite-Singapore-20100803.jpg/1280px-RafflesStatue-EnglishPlaque-RafflesLandingSite-Singapore-20100803.jpg)

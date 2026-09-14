@@ -40,7 +40,15 @@ import warnings
 
 BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
 GALLERY_LINK_RE = re.compile(r"\[See[^\]]*\]\([^)]*\)")
-MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+# URL part balances one level of parens (same fix as MD_IMG_RE below) so a
+# Sources-list link whose URL contains a literal "(...)" - e.g. a Commons
+# filename like "File:Portrait_of_William_Farquhar_(c._1830).jpg" or
+# "..._(1822)_by_Lieutenant_Philip_Jackson.jpg" - doesn't get truncated at
+# the first ")" and leak the rest of the URL as stray trailing text. Caught
+# via stage_youtube_text.py's staged Sources list on the Whampoa post
+# (single stray ")") and again, worse, on the Farquhar post (truncated mid-
+# URL, duplicating text after the swallowed match).
+MD_LINK_RE = re.compile(r"\[([^\]]+)\]\((?:[^()]|\([^()]*\))+\)")
 BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
 # Single-asterisk emphasis in body prose (e.g. an italicised publication
 # name, "*The Straits Times*"). Run AFTER BOLD_RE so "**bold**" is already
