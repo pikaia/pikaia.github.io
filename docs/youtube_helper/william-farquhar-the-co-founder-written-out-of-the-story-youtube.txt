@@ -47,7 +47,7 @@ Description:
 At the foot of Fort Canning Green sits a small garden planted with gambier, guava, wild nutmeg and rattan, each one framed like a picture — a deliberate echo of a set of watercolour drawings commissioned two centuries ago by the man the garden is named after. Almost nobody who walks through it could tell you who William Farquhar actually was. #Shorts
 
 Full story: https://da.gd/9UillX
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/8AYxsk238Yk
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
