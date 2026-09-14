@@ -1076,6 +1076,20 @@ PRONUNCIATION_OVERRIDES = {
     "Scudai": "skuːdˈaɪ",          # "skoo-DYE" - the Scudai River, Johor
     "Tunku": "tˈʊŋkuː",            # "TOONG-koo" - Malay honorific title
     "Rahman": "ɹɑːmˈɑːn",          # "rah-MAHN" - Tunku Abdul Rahman
+
+    # P.S. Hunter post ("Peter Sinclair Hunter: The Health Officer Whose
+    # One Report Built Tiong Bahru"): the subject's own middle name, plain
+    # English/place-name gaps, and a Latin mosquito-species name.
+    "Sinclair": "sˈɪŋkleə",        # "SIN-klair" - the subject's own
+                                    # middle name
+    "Leonie": "liˈQni",            # "lee-OH-nee" - Leonie Hill Road
+    "Swettenham": "swˈɛtənəm",     # "SWET-n-um" - Port Swettenham
+    "ludlowi": "lˈʌdlQaɪ",         # "LUD-loh-eye" - Anopheles ludlowi,
+                                    # Latin binomial, "-i" genitive read
+                                    # as "-eye" per scientific-Latin
+                                    # convention
+    "Bartley": "bˈɑːtli",          # "BART-lee"
+    "Middleton": "mˈɪdltən",       # "MID-l-tun"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

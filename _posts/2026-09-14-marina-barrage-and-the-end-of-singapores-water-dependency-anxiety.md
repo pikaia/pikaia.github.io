@@ -28,7 +28,7 @@ A 350-metre dam sits across the mouth of the Marina Channel, nine steel gates an
     </span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">YouTube</span>
   </a>
-  <a href="https://youtube.com/shorts/PYHyri3OWU4" target="_blank" rel="noopener" aria-label="Watch a short version of this story on YouTube Shorts" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
+  <a href="https://youtube.com/shorts/0bcAcju-56A" target="_blank" rel="noopener" aria-label="Watch a short version of this story on YouTube Shorts" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
     <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">
       <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true">
         <defs>
