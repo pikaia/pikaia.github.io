@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Photos: Marina Barrage"
-post_url: /2026/09/19/marina-barrage-and-the-end-of-singapores-water-dependency-anxiety/
+post_url: /2026/09/14/marina-barrage-and-the-end-of-singapores-water-dependency-anxiety/
 post_title: "Marina Barrage and the End of Singapore's Water-Dependency Anxiety"
 ---
 
