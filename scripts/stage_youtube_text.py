@@ -365,6 +365,29 @@ def find_existing_youtube_urls(text: str) -> tuple[str | None, str | None]:
     return main_url, short_url
 
 
+def describe_image_sources(credit_lines: list[str]) -> str:
+    """Human-readable label for the "Images (...)" heading, derived from
+    what the actual credit lines contain rather than assuming Commons -
+    a post can mix Commons images with personal (non-Commons) photography,
+    whose credit lines are just a name ("- Chris Lee"), no "Wikimedia
+    Commons"/"NewspaperSG" substring. Caught on the Marina Barrage post,
+    whose video is mostly Chris's own photos plus one Commons image - the
+    old hardcoded "Wikimedia Commons" label was wrong for it. Same fix
+    shape as the earlier NewspaperSG-only-when-present correction below."""
+    has_commons = any("Wikimedia Commons" in line for line in credit_lines)
+    has_newspapersg = any("NewspaperSG" in line for line in credit_lines)
+    has_other = any("Wikimedia Commons" not in line and "NewspaperSG" not in line
+                     and not line.endswith("]") for line in credit_lines)
+    parts = []
+    if has_other:
+        parts.append("personal photography")
+    if has_commons:
+        parts.append("Wikimedia Commons")
+    if has_newspapersg:
+        parts.append("NewspaperSG")
+    return " and ".join(parts) if parts else "Wikimedia Commons"
+
+
 def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str]],
                         config_credits: dict[str, str] | None = None,
                         existing_video_url: str | None = None) -> list[str]:
@@ -469,12 +492,13 @@ def main() -> None:
     out_lines.append("")
     main_credit_lines = build_credit_lines(main_images, captions, main_credits, existing_main_url)
     if main_images is not None:
-        # Only mention NewspaperSG if a credit line actually names it -
-        # this used to be hardcoded regardless of what sources a post
-        # actually used, caught on the Jalan Payoh Lai and pineapple-kings
-        # posts (neither has any NewspaperSG images).
-        image_sources = ("Wikimedia Commons and NewspaperSG" if any("NewspaperSG" in line for line in main_credit_lines)
-                          else "Wikimedia Commons")
+        # Label reflects what's actually in the credit lines - Commons,
+        # NewspaperSG, personal photography, or some mix - rather than
+        # assuming Commons regardless of what a post actually used. This
+        # used to be hardcoded, caught on the Jalan Payoh Lai and
+        # pineapple-kings posts (no NewspaperSG images) and again on the
+        # Marina Barrage post (mostly personal photography, not Commons).
+        image_sources = describe_image_sources(main_credit_lines)
         out_lines.append(f"Images ({image_sources}, credited individually):")
     out_lines.extend(main_credit_lines)
     if sources:
@@ -499,8 +523,7 @@ def main() -> None:
     out_lines.append("")
     short_credit_lines = build_credit_lines(short_images, captions, short_credits, existing_short_url)
     if short_images is not None:
-        image_sources = ("Wikimedia Commons and NewspaperSG" if any("NewspaperSG" in line for line in short_credit_lines)
-                          else "Wikimedia Commons")
+        image_sources = describe_image_sources(short_credit_lines)
         out_lines.append(f"Images ({image_sources}):")
     out_lines.extend(short_credit_lines)
 

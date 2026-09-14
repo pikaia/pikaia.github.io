@@ -1,0 +1,592 @@
+﻿1
+00:00:00,080 --> 00:00:05,550
+Marina Barrage and the End of
+Singapore's Water-Dependency Anxiety
+
+2
+00:00:05,550 --> 00:00:10,161
+A 350-metre dam sits across the
+mouth of the Marina Channel,
+
+3
+00:00:10,241 --> 00:00:13,367
+nine steel gates and seven pumps standing
+
+4
+00:00:13,447 --> 00:00:17,200
+between a freshwater
+reservoir and the open sea.
+
+5
+00:00:17,200 --> 00:00:21,821
+It was finished in 2008, it
+created Singapore's 15th reservoir,
+
+6
+00:00:21,901 --> 00:00:26,970
+and today it is also the largest
+one on the island — built not on the
+
+7
+00:00:27,050 --> 00:00:32,050
+fringes of the city but directly
+across the water from its skyline.
+
+8
+00:00:32,050 --> 00:00:35,196
+Nine 30-metre, 5-metre-high crest gates
+
+9
+00:00:35,276 --> 00:00:38,750
+span the channel, each weighing 70 tonnes.
+
+10
+00:00:38,750 --> 00:00:42,178
+Seven drainage pumps, 28 tonnes apiece,
+
+11
+00:00:42,258 --> 00:00:47,025
+can together move 280 cubic
+metres of water a second.
+
+12
+00:00:47,025 --> 00:00:50,204
+Under normal conditions
+the gates stay shut,
+
+13
+00:00:50,284 --> 00:00:53,025
+holding the reservoir level constant.
+
+14
+00:00:53,025 --> 00:00:56,589
+When it rains hard at low
+tide, the gates open and
+
+15
+00:00:56,669 --> 00:01:00,750
+gravity does the work, flushing
+storm runoff out to sea.
+
+16
+00:01:00,750 --> 00:01:04,801
+When it rains hard at high tide,
+the gates stay shut and the
+
+17
+00:01:04,881 --> 00:01:09,425
+pumps take over, forcing the runoff
+out against the incoming tide.
+
+18
+00:01:09,425 --> 00:01:13,866
+The same mechanism that keeps the
+reservoir fresh also functions
+
+19
+00:01:13,946 --> 00:01:18,175
+as flood relief for low-lying
+downtown districts — Chinatown,
+
+20
+00:01:18,255 --> 00:01:23,200
+Jalan Besar, Geylang — that used to
+flood regularly before it existed.
+
+21
+00:01:23,200 --> 00:01:27,448
+It is a dam, a floodgate and a
+pumping station, built to look,
+
+22
+00:01:27,528 --> 00:01:31,925
+from the top, like nothing more
+than a long concrete promenade.
+
+23
+00:01:31,925 --> 00:01:35,845
+For most of Singapore's history
+as an independent state,
+
+24
+00:01:35,925 --> 00:01:39,425
+its fresh water has crossed
+a border to get here.
+
+25
+00:01:39,425 --> 00:01:42,627
+During the Japanese
+invasion in February 1942,
+
+26
+00:01:42,707 --> 00:01:47,192
+retreating British forces demolished
+the pipeline carrying water
+
+27
+00:01:47,272 --> 00:01:51,330
+across the Causeway from Johor,
+and Singapore's supply ran
+
+28
+00:01:51,410 --> 00:01:54,754
+desperately short within
+days — a demonstration,
+
+29
+00:01:54,834 --> 00:01:59,400
+unplanned but total, of exactly
+how exposed the arrangement was.
+
+30
+00:01:59,400 --> 00:02:03,481
+Water kept crossing that same
+Causeway for decades afterward
+
+31
+00:02:03,561 --> 00:02:07,711
+under two agreements: the Tebrau
+and Scudai Rivers Agreement,
+
+32
+00:02:07,791 --> 00:02:12,219
+signed the 2nd of October 1961,
+entitling Singapore to draw water
+
+33
+00:02:12,299 --> 00:02:16,796
+from those rivers in exchange for
+returning a share of it treated;
+
+34
+00:02:16,876 --> 00:02:21,026
+and the Johor River Agreement
+of 1962, entitling Singapore to
+
+35
+00:02:21,106 --> 00:02:25,475
+up to 250 million gallons of raw
+water a day, on similar terms.
+
+36
+00:02:25,475 --> 00:02:28,473
+The 1961 agreement expired in
+
+37
+00:02:28,553 --> 00:02:31,950
+August 2011 and was not renewed.
+
+38
+00:02:31,950 --> 00:02:36,950
+The 1962 agreement runs until 2061.
+
+39
+00:02:36,950 --> 00:02:41,650
+The dependency was never
+just a matter of engineering.
+
+40
+00:02:41,650 --> 00:02:46,026
+Days after Singapore's separation
+from Malaysia in August 1965,
+
+41
+00:02:46,106 --> 00:02:50,129
+Malaysian Prime Minister Tunku
+Abdul Rahman told reporters
+
+42
+00:02:50,209 --> 00:02:55,646
+that if Singapore's foreign policy proved
+prejudicial to Malaysia's interests,
+
+43
+00:02:55,726 --> 00:02:58,051
+"we could always bring pressure to
+
+44
+00:02:58,131 --> 00:03:02,375
+bear on them by threatening to
+turn off the water in Johor."
+
+45
+00:03:02,375 --> 00:03:05,644
+The threat was never carried
+out, but Lee Kuan Yew
+
+46
+00:03:05,724 --> 00:03:09,195
+later said it convinced him
+that as long as Singapore
+
+47
+00:03:09,275 --> 00:03:12,946
+depended entirely on Malaysia
+for water, it would always
+
+48
+00:03:13,026 --> 00:03:16,375
+be a satellite state, not
+a fully independent one.
+
+49
+00:03:16,375 --> 00:03:20,578
+Water security stopped being a
+utilities question and became,
+
+50
+00:03:20,658 --> 00:03:24,800
+in the government's own framing,
+a question of sovereignty.
+
+51
+00:03:24,800 --> 00:03:28,715
+Lee Kuan Yew is credited with
+first conceiving a barrage
+
+52
+00:03:28,795 --> 00:03:32,780
+across the Marina and Kallang
+basins as far back as 1987,
+
+53
+00:03:32,860 --> 00:03:37,203
+two decades before it was built
+— a sign of how long "engineer
+
+54
+00:03:37,283 --> 00:03:41,340
+the dependency away" had been
+sitting on the drawing board
+
+55
+00:03:41,420 --> 00:03:45,700
+rather than arriving as a sudden
+response to any one crisis.
+
+56
+00:03:45,700 --> 00:03:49,810
+By 2008, at a public water
+event, he put the underlying
+
+57
+00:03:49,890 --> 00:03:53,238
+priority as plainly as
+he ever did in office:
+
+58
+00:03:53,318 --> 00:03:58,575
+"Every other policy has to bend at
+the knees for our water survival."
+
+59
+00:03:58,575 --> 00:04:04,249
+That priority took the eventual shape
+of PUB's "Four National Taps" strategy:
+
+60
+00:04:04,329 --> 00:04:08,583
+local catchment, imported
+water, reclaimed water (NEWater,
+
+61
+00:04:08,663 --> 00:04:12,325
+launched commercially in
+2003), and desalination.
+
+62
+00:04:12,325 --> 00:04:15,747
+Each tap could be expanded
+or shrunk independently
+
+63
+00:04:15,827 --> 00:04:19,108
+of the others, so no
+single failure — technical,
+
+64
+00:04:19,188 --> 00:04:22,900
+political or otherwise —
+could leave the country dry.
+
+65
+00:04:22,900 --> 00:04:26,222
+Marina Barrage's contribution
+was to the first tap:
+
+66
+00:04:26,302 --> 00:04:30,624
+by damming off the mouth of the
+Kallang Basin and Singapore River,
+
+67
+00:04:30,704 --> 00:04:34,559
+it converted a stretch of the
+city's own stormwater runoff,
+
+68
+00:04:34,639 --> 00:04:39,975
+previously discharged straight into the
+sea, into a stable freshwater catchment.
+
+69
+00:04:39,975 --> 00:04:44,108
+Combined with the smaller
+Punggol and Serangoon reservoirs,
+
+70
+00:04:44,188 --> 00:04:46,893
+it added roughly a sixth of Singapore's
+
+71
+00:04:46,973 --> 00:04:50,400
+total land area to the
+island's water catchment.
+
+72
+00:04:50,400 --> 00:04:54,980
+Construction ran from March 2005
+to October 2008, at a cost of
+
+73
+00:04:55,060 --> 00:05:00,467
+226 million Singapore dollars for the
+barrage structure itself (a larger,
+
+74
+00:05:00,547 --> 00:05:04,225
+roughly 3 billion Singapore
+dollars transformation
+
+75
+00:05:04,305 --> 00:05:08,735
+of the wider Marina Bay and
+Kallang Basin area was under way
+
+76
+00:05:08,815 --> 00:05:13,475
+around it at the same time, and
+is often quoted alongside it).
+
+77
+00:05:13,475 --> 00:05:16,584
+Once the gates closed for good, the tidal,
+
+78
+00:05:16,664 --> 00:05:20,912
+brackish river mouth behind
+them became Marina Reservoir:
+
+79
+00:05:20,992 --> 00:05:25,619
+a 240-hectare freshwater body
+with a 10,000-hectare catchment,
+
+80
+00:05:25,699 --> 00:05:29,875
+its level held constant
+regardless of the tide outside.
+
+81
+00:05:29,875 --> 00:05:33,618
+A level reservoir also meant
+the water could be used
+
+82
+00:05:33,698 --> 00:05:37,735
+in ways a tidal river never
+allowed: dragon boat racing,
+
+83
+00:05:37,815 --> 00:05:40,896
+kayaking, the National
+Day Parade fireworks
+
+84
+00:05:40,976 --> 00:05:44,725
+reflected on flat water
+instead of mud at low tide.
+
+85
+00:05:44,725 --> 00:05:48,029
+None of that was the reason
+the barrage was built,
+
+86
+00:05:48,109 --> 00:05:52,575
+but it turned out to be one of the
+more visible things it enabled.
+
+87
+00:05:52,575 --> 00:05:56,254
+Ask most Singaporeans what
+Marina Barrage is, and a fair
+
+88
+00:05:56,334 --> 00:06:00,214
+number will describe a rooftop
+lawn: a wide-open stretch of
+
+89
+00:06:00,294 --> 00:06:04,308
+grass where families picnic,
+kids fly kites, and couples come
+
+90
+00:06:04,388 --> 00:06:08,402
+for the skyline view, all sitting
+more or less directly above
+
+91
+00:06:08,482 --> 00:06:12,375
+the gates and pump rooms doing
+the actual work underneath.
+
+92
+00:06:12,375 --> 00:06:16,747
+That's not a coincidence — the
+rooftop lawn is landscaped over the
+
+93
+00:06:16,827 --> 00:06:21,266
+pumping station on purpose, part
+of the same brief that asked for a
+
+94
+00:06:21,346 --> 00:06:26,000
+piece of water infrastructure that
+would also double as public space.
+
+95
+00:06:26,000 --> 00:06:29,611
+Most people standing on it
+are enjoying exactly what
+
+96
+00:06:29,691 --> 00:06:33,159
+they think they're enjoying;
+very few are thinking
+
+97
+00:06:33,239 --> 00:06:36,575
+about crest gates or the
+1962 agreement at all.
+
+98
+00:06:36,575 --> 00:06:39,868
+I remember the first
+time I actually saw it,
+
+99
+00:06:39,948 --> 00:06:43,475
+on a visit back to
+Singapore after years away.
+
+100
+00:06:43,475 --> 00:06:47,623
+What struck me wasn't the lawn or
+the view — it was a real sense of
+
+101
+00:06:47,703 --> 00:06:51,157
+pride in the accomplishment
+itself, and underneath that,
+
+102
+00:06:51,237 --> 00:06:56,079
+something closer to reassurance: that
+the government had both the will and the
+
+103
+00:06:56,159 --> 00:07:00,450
+ability to end a decades-long
+dependency, whatever it cost to do it.
+
+104
+00:07:00,450 --> 00:07:02,553
+That's not a small thing to feel
+
+105
+00:07:02,633 --> 00:07:05,225
+about a piece of civil infrastructure.
+
+106
+00:07:05,225 --> 00:07:08,340
+It's also, quite
+separately, one of the most
+
+107
+00:07:08,420 --> 00:07:11,325
+beautiful spots in Singapore after dark.
+
+108
+00:07:11,325 --> 00:07:15,050
+The crest gates and pump housings
+light up along the water,
+
+109
+00:07:15,130 --> 00:07:18,145
+the reservoir goes still
+and black, and out past
+
+110
+00:07:18,225 --> 00:07:21,305
+the barrage the anchorage
+lights of ships waiting
+
+111
+00:07:21,385 --> 00:07:25,125
+offshore sit on the horizon
+like a second, dimmer skyline.
+
+112
+00:07:25,125 --> 00:07:28,329
+I've been back a few times
+since that first visit,
+
+113
+00:07:28,409 --> 00:07:31,825
+and the night view is the
+one that's stayed with me.
+
+114
+00:07:31,825 --> 00:07:35,754
+Why it matters today: the
+anxiety this post is named
+
+115
+00:07:35,834 --> 00:07:39,995
+for hasn't fully disappeared
+— the 1962 agreement still
+
+116
+00:07:40,075 --> 00:07:44,004
+has 35 years left to run,
+and the Four Taps strategy
+
+117
+00:07:44,084 --> 00:07:48,325
+is itself an ongoing balancing
+act, not a finished one.
+
+118
+00:07:48,325 --> 00:07:50,923
+But the barrage is the moment that
+
+119
+00:07:51,003 --> 00:07:54,075
+anxiety stopped being purely defensive.
+
+120
+00:07:54,075 --> 00:07:59,478
+It's a rare case of a government's most
+existential worry getting converted,
+
+121
+00:07:59,558 --> 00:08:01,858
+in full public view, into a place
+
+122
+00:08:01,938 --> 00:08:06,050
+people go on a Sunday afternoon
+without a second thought.
