@@ -1090,6 +1090,8 @@ PRONUNCIATION_OVERRIDES = {
                                     # convention
     "Bartley": "bˈɑːtli",          # "BART-lee"
     "Middleton": "mˈɪdltən",       # "MID-l-tun"
+    "Wolbachia": "wɒlbˈækiə",      # "wol-BACK-ee-uh" - the bacterium
+                                    # genus behind NEA's Project Wolbachia
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

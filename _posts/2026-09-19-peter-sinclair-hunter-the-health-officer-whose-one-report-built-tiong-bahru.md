@@ -57,7 +57,7 @@ Retirement didn't mean leaving. Hunter stayed on in Singapore, and by 1948 was a
 
 Dr. Peter Sinclair Hunter died in Singapore General Hospital on 28 March 1954, aged 70. His obituary in the Straits Budget was headlined "Death of Colony Housing Pioneer," and it credited him with exactly the two things that had defined his career: he had "played a major role in overcoming malaria in Singapore," and he "was a champion of better housing."
 
-**Why it matters today:** it would be a stretch to draw a straight line from one Municipal Health Officer's 1925 memo to the hawker centre grading cards or the mosquito-control patrols Singapore runs today — too many agencies, reorganisations and decades sit in between. But the direction was set here. Hunter's own office — the municipal health inspectorate responsible in one breath for housing, sanitation and vector control — is the direct institutional ancestor of the public-health apparatus modern Singapore takes for granted. Tiong Bahru still stands as the one piece of that legacy anyone can point to. The rest of it is harder to see, which is exactly why it's easy to forget there was ever a person behind it at all.
+**Why it matters today:** it would be a stretch to draw a straight line from one Municipal Health Officer's 1925 memo to the hawker centre grading cards or the mosquito-control patrols Singapore runs today — too many agencies, reorganisations and decades sit in between. But the direction was set here. Hunter's own office — the municipal health inspectorate responsible in one breath for housing, sanitation and vector control — is the direct institutional ancestor of the public-health apparatus modern Singapore takes for granted. The mosquito fight itself never actually stopped, either, even after its original target was beaten: Singapore was declared free of indigenous malaria in 1982, but the same vigilance simply turned to dengue, still fought with annual public clean-up campaigns and, since 2016, a tool Hunter couldn't have imagined — the National Environment Agency's Project Wolbachia, which releases male mosquitoes carrying a bacterium that makes their offspring non-viable, suppressing the population by sterilising it rather than draining the swamp it breeds in. Tiong Bahru still stands as the one piece of Hunter's own legacy anyone can point to; the rest of it is harder to see, which is exactly why it's easy to forget there was ever a person behind it at all.
 
 ---
 
@@ -83,6 +83,7 @@ Dr. Peter Sinclair Hunter died in Singapore General Hospital on 28 March 1954, a
 - "MR. P. S. HUNTER, a Surrey solicitor...," The Straits Budget, 13 March 1952 (photo credited to The Straits Times)
 - "FATHER AND SON MEET," The Singapore Free Press, 10 March 1952
 - "DEATH OF COLONY HOUSING PIONEER," The Straits Budget, 1 April 1954
+- [Wolbachia-Aedes Mosquito Suppression Strategy](https://www.nea.gov.sg/corporate-functions/resources/research/environmental_health_institute/wolbachia-aedes-mosquito-suppression-strategy), National Environment Agency
 - All newspaper articles accessed via [NewspaperSG](https://eresources.nlb.gov.sg/newspapers/), National Library Board
 
 [← Back to all posts](/)
