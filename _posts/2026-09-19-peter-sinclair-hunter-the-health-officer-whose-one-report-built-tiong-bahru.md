@@ -7,7 +7,7 @@ categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/8/8d/Tiong_Bahru_11%2C_Jul_06.JPG
 ---
 
-Tiong Bahru's Art Deco corner shophouses and curved balconies are one of the most photographed pockets of old Singapore, and almost nobody who photographs them could name the man whose single 1925 recommendation set the whole estate in motion. His name barely survives even in the record: for decades, the only trace most researchers could find was "Dr. P. S. Hunter, Municipal Health Officer." His actual name was Dr. Peter Sinclair Hunter, and the newspapers he spent a career quoted in turn out to hold a genuinely full life.
+Tiong Bahru's Art Deco corner shophouses and curved balconies are one of the most photographed pockets of old Singapore, and almost nobody who photographs them could name the man whose single 1925 recommendation set the whole estate in motion. His name barely survives even in the record: for decades, the only trace most researchers could find was "Dr. P. S. Hunter, Municipal Health Officer." His actual name was Dr. Peter Sinclair Hunter, and the newspapers that quoted him constantly throughout his career turn out to hold a genuinely full life story.
 
 [← Back to all posts](/)
 
