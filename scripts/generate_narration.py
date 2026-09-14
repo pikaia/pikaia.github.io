@@ -1035,6 +1035,27 @@ PRONUNCIATION_OVERRIDES = {
     "Halus": "hˈɑːluːs",           # "HAH-loose" (Lorong Halus)
     "pok": "pˈɒk",                 # "mee pok" - rhymes with "rock", not
                                     # "poke"
+
+    # William Farquhar post ("William Farquhar: The Co-Founder Singapore
+    # Wrote Out of Its Own Story"): the subject's own surname recurs
+    # constantly, so it got an ear-pick rather than a guess - 3 candidates
+    # synthesized to scratch/william-farquhar-the-co-founder-written-out-of-
+    # the-story-Farquhar/. Chris picked the traditional Scottish reading
+    # ("FAR-kwuh"), confirmed by ear 2026-09-13.
+    "Farquhar": "fˈɑːkwə",         # "FAR-kwuh", ear-verified
+    "Carimon": "kˈaɹɪmɒn",         # "KAR-i-mon" - the Carimon (Karimun)
+                                    # Islands
+    "Hussein": "hʊsˈAn",           # "hoo-SAYN"
+    "Belawa": "bəlˈɑːwə",          # "buh-LAH-wuh" - Prince Belawa
+    "Bugis": "bˈuːɡɪs",            # "BOO-gis", standard Singapore usage
+    "Rhio": "ɹˈiːQ",               # "REE-oh" - historical spelling of Riau
+    "Crawfurd": "kɹˈɔːfəd",        # "KRAW-fəd", like "Crawford"
+    "Demetrius": "dəmˈiːtɹiəs",    # "duh-MEE-tree-us"
+    "Boulger": "bˈuːldʒə",         # "BOOL-jer" - best guess, low stakes
+                                    # (single mention, Raffles' 1897
+                                    # biographer Demetrius Boulger)
+    "Bastin": "bˈastɪn",           # "BAS-tin" - historian John Bastin
+    "Turnbull": "tˈɜːnbʊl",        # "TURN-bull" - historian Mary Turnbull
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
