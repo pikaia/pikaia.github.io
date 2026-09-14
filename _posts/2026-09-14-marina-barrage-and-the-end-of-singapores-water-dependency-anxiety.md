@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Marina Barrage and the End of Singapore's Water-Dependency Anxiety"
-date: 2026-09-14 04:58:44 +0800
-last_modified_at: 2026-09-14 04:58:44 +0800
+date: 2026-09-14 12:58:44 +0800
+last_modified_at: 2026-09-14 12:58:44 +0800
 categories: [history, present-day]
 image: /assets/images/marina-barrage-crest-gates.jpg
 ---

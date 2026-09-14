@@ -105,7 +105,12 @@ else
     echo "re-run with -f if you have updated those links." >&2
     exit 1
   fi
-  new="$(date -u '+%Y-%m-%d %H:%M:%S') +0800"
+  # Must actually shift the clock forward 8h before formatting, not just
+  # label the raw UTC reading "+0800" - that mislabeling was a real bug
+  # (caught on the Marina Barrage post, 2026-09-14): Jekyll un-shifts a
+  # "+0800" timestamp by 8h to get true UTC, so a mislabeled raw-UTC value
+  # lands a full calendar day early whenever the true UTC hour is 00-07.
+  new="$(date -u -d '+8 hours' '+%Y-%m-%d %H:%M:%S') +0800"
   new_date="${new:0:10}"
   echo "new date:  $new   (moves to today, $old_date -> $new_date)"
 fi
