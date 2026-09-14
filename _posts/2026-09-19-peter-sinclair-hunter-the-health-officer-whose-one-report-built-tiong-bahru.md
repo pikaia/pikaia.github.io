@@ -45,7 +45,11 @@ Colleagues also gave him a farewell dinner at the home of a Mr. N. A. Sen. In hi
 
 ## The long coda
 
-Retirement didn't mean leaving. Hunter stayed on in Singapore, and by 1948 was active enough in civic life to chair the Singapore Turf Club, telling its annual general meeting that the club's finances didn't currently stretch to charitable donations, whatever the regret. He was still there in March 1952, thirteen years after his retirement, when his son — by then a solicitor in Surrey, and confusingly also styled "Mr. P. S. Hunter" — flew out from London on a Qantas-BOAC flight to spend three weeks visiting his parents. Three separate Singapore papers ran the reunion with a photograph.
+Retirement didn't mean leaving. Hunter stayed on in Singapore, and by 1948 was active enough in civic life to chair the Singapore Turf Club, telling its annual general meeting that the club's finances didn't currently stretch to charitable donations, whatever the regret. He was still there in March 1952, thirteen years after his retirement, when his son — by then a solicitor in Surrey, and confusingly also styled "Mr. P. S. Hunter" — flew out from London on a Qantas-BOAC flight to spend three weeks visiting his parents, his wife alongside him. Three separate Singapore papers ran the reunion with a photograph — the clearest surviving likeness of Hunter himself found for this post.
+
+![Newspaper clipping: "Mr. P. S. Hunter, a Surrey solicitor, meets his father, Dr. P. S. Hunter, former Municipal Health Officer, on his arrival in Singapore," The Straits Budget, 13 March 1952, with a photograph of the two men shaking hands](/assets/images/ps-hunter-father-son-1952.jpg)
+
+*Dr. Peter Sinclair Hunter (left) greets his son, also styled Mr. P. S. Hunter, on the younger Hunter's arrival from London with his wife, March 1952. (The Straits Budget, 13 March 1952, photo credited to The Straits Times; public domain by age)*
 
 ![Singapore General Hospital, circa 1900](https://upload.wikimedia.org/wikipedia/commons/6/6b/KITLV_-_50201_-_Lambert_%26_Co.%2C_G.R._-_Singapore_-_General_Hospital_in_Singapore_-_circa_1900.jpg)
 
@@ -76,6 +80,8 @@ Dr. Peter Sinclair Hunter died in Singapore General Hospital on 28 March 1954, a
 - "Singapore Fever," The Straits Budget, 16 March 1939
 - "S'pore Turf Club To Resume Donations," The Straits Budget, 5 February 1948
 - "Dr. Hunter's son here," The Straits Times, 9 March 1952
+- "MR. P. S. HUNTER, a Surrey solicitor...," The Straits Budget, 13 March 1952 (photo credited to The Straits Times)
+- "FATHER AND SON MEET," The Singapore Free Press, 10 March 1952
 - "DEATH OF COLONY HOUSING PIONEER," The Straits Budget, 1 April 1954
 - All newspaper articles accessed via [NewspaperSG](https://eresources.nlb.gov.sg/newspapers/), National Library Board
 
