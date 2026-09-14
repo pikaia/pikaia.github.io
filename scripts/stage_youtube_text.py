@@ -412,7 +412,25 @@ def build_credit_lines(urls: list[str] | None, captions: dict[str, dict[str, str
             lines.append(f"- {config_credits[url]}")
         else:
             lines.append(f"- {url} [REVIEW CREDIT - not found in post/gallery captions]")
-    return lines
+    return consolidate_credit_lines(lines)
+
+
+def consolidate_credit_lines(lines: list[str]) -> list[str]:
+    """Merge repeated identical credit lines into one, with a count - e.g.
+    ten separate "- Chris Lee" lines (one per personal photo used in the
+    video) become a single "- Chris Lee (10 photos)" rather than repeating
+    the same name ten times in a public YouTube description. Order-
+    preserving: each distinct credit keeps its first-occurrence position.
+    Added after Chris asked for this on the Marina Barrage post
+    (2026-09-14), whose video credits were almost all his own photography."""
+    counts: dict[str, int] = {}
+    order: list[str] = []
+    for line in lines:
+        if line not in counts:
+            counts[line] = 0
+            order.append(line)
+        counts[line] += 1
+    return [line if counts[line] == 1 else f"{line} ({counts[line]} photos)" for line in order]
 
 
 def shorten_url(url: str, method: str) -> str:
