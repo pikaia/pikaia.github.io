@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Linggiu Reservoir: The Dam Singapore Built Inside Another Country to Secure Its Own Water"
-date: 2026-09-16 10:00:00 +0800
-last_modified_at: 2026-09-16 10:00:00 +0800
+date: 2026-09-15 19:19:15 +0000
+scheduled_date: 2026-09-16 10:00:00 +0800
+permalink: /2026/09/16/linggiu-reservoir-the-dam-singapore-built-inside-another-country-to-secure-its-own-water/
+last_modified_at: 2026-09-15 19:19:15 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/a/ac/Johor_River.jpg
 ---
