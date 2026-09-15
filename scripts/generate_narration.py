@@ -1141,6 +1141,17 @@ PRONUNCIATION_OVERRIDES = {
                                     # standard "mawl" (rhymes with
                                     # "ball"/"hall"). Caught by ear by
                                     # Chris on this post's opening line.
+    "reliably": "ɹɪlˈIəbli",       # wrong entry - misaki gives "reliable"
+                                    # ("ɹɪlˈIəbᵊl", correct "ry" /aɪ/
+                                    # vowel via the ˈI shorthand) and
+                                    # "reliability" the right vowel, but
+                                    # "reliably" specifically gets a
+                                    # short-ɪ instead ("ɹɪlˈɪəbli"),
+                                    # dropping the "-LY-" sound - heard by
+                                    # Chris as the word coming out
+                                    # garbled/"tongue tied". Fixed by
+                                    # reusing "reliable"'s own correct
+                                    # vowel with the "-ly" ending.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
