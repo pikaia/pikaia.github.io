@@ -17,7 +17,7 @@ QUARRY is a landscape/nature photo but reads better letterboxed here
 (it's specifically illustrating a place, not just decorative); HERO and
 FAIRPRICE are ordinary landscape photos and use cover.
 
-28 slides, 341.600s.
+28 slides, 341.100s.
 """
 
 _U = "https://upload.wikimedia.org/wikipedia/commons"
@@ -66,11 +66,11 @@ SLIDES = [
 
 SCHEDULE = [
     (0.0, 0), (3.375, 1), (19.05, 2), (30.25, 3), (43.375, 4),
-    (52.775, 5), (70.75, 6), (75.875, 7), (83.6, 8), (91.55, 9),
-    (112.775, 10), (126.4, 11), (140.4, 12), (148.125, 13), (159.875, 14),
-    (169.375, 15), (179.8, 16), (192.475, 17), (200.675, 18), (217.875, 19),
-    (222.125, 20), (234.575, 21), (257.925, 22), (268.1, 23), (286.35, 24),
-    (305.575, 25), (309.9, 26), (323.525, 27),
+    (52.775, 5), (70.75, 6), (75.875, 7), (83.05, 8), (91.0, 9),
+    (112.225, 10), (125.85, 11), (139.85, 12), (147.575, 13), (159.35, 14),
+    (168.85, 15), (179.275, 16), (191.95, 17), (200.15, 18), (217.35, 19),
+    (221.6, 20), (234.05, 21), (257.4, 22), (267.575, 23), (285.825, 24),
+    (305.05, 25), (309.375, 26), (323.0, 27),
 ]
-TOTAL_DURATION = 341.600
+TOTAL_DURATION = 341.100
 TIMING_JSON = "audio/cold-storage-and-the-frozen-meat-trade.timing.json"
