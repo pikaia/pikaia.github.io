@@ -1114,6 +1114,27 @@ PRONUNCIATION_OVERRIDES = {
     "homegrown": "ˌhQmɡɹˈQn",      # unknown word (no lexicon entry) -
                                     # built the same way as "outgrown"
                                     # above (home=hQm, grown=ɡɹˈQn)
+
+    # Cold Storage post: the mall "Centrepoint" (compound gap, British
+    # spelling), corporate names "Jardine Matheson" and "Macrovalue",
+    # and Hokkien/Malay place+brand names "Sheng Siong" and "Joo Chiat".
+    "Centrepoint": "sˈɛntəpɔɪnt",  # "SEN-tuh-point" - compound gap, plain
+                                    # English ("centre" + "point" both
+                                    # phonemize fine alone)
+    "Jardine": "dʒˈɑːdɪn",         # "JAR-din" - Jardine Matheson
+    "Matheson": "mˈæθɪsən",        # "MATH-ih-sun"
+    "Macrovalue": "mˈækroʊvæljuː", # "MAK-roh-val-yoo" - compound gap
+    "Siong": "sjˈɒŋ",              # "syong" - Sheng Siong. Built by the
+                                    # same "-iong" analogy already
+                                    # confirmed by ear for "Tiong" (see
+                                    # the SIT/Tiong Bahru post above) -
+                                    # not itself ear-verified, but low
+                                    # stakes (single mention, well-known
+                                    # brand most listeners already know
+                                    # how to say)
+    "Joo": "dʒˈuː",                # "joo" - Joo Chiat
+    "Chiat": "tʃˈiːət",            # "chee-ət" - Joo Chiat, confirmed
+                                    # reading (/dʒuː tʃiːət/)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1773,7 +1794,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # misaki has no lexicon entry for at all - a different root cause, same
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
-    "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "DBS", "DMV",
+    "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
     "UOB", "UOL", "US",
