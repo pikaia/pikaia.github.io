@@ -1135,6 +1135,12 @@ PRONUNCIATION_OVERRIDES = {
     "Joo": "dʒˈuː",                # "joo" - Joo Chiat
     "Chiat": "tʃˈiːət",            # "chee-ət" - Joo Chiat, confirmed
                                     # reading (/dʒuː tʃiːət/)
+    "mall": "mˈɔːl",               # wrong entry - misaki's own lexicon
+                                    # gives ordinary "shopping mall" a
+                                    # short-u vowel ("mull"), not the
+                                    # standard "mawl" (rhymes with
+                                    # "ball"/"hall"). Caught by ear by
+                                    # Chris on this post's opening line.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
