@@ -1092,6 +1092,24 @@ PRONUNCIATION_OVERRIDES = {
     "Middleton": "mˈɪdltən",       # "MID-l-tun"
     "Wolbachia": "wɒlbˈækiə",      # "wol-BACK-ee-uh" - the bacterium
                                     # genus behind NEA's Project Wolbachia
+
+    # Linggiu Reservoir post: Malay words/names confirmed via Wiktionary
+    # IPA (Tinggi, Sungai) or best-effort renderings for names without a
+    # confirmed source (Muhyiddin, Yassin, Mentri). "Linggiu" itself -
+    # the post's own repeated subject name - is being ear-picked
+    # separately (scratch/linggiu-reservoir-pron-samples.py), not set
+    # here yet.
+    "Tinggi": "tˈiŋɡi",            # Wiktionary IPA /ˈtiŋɡi/ - "Kota Tinggi"
+    "Sungai": "sˈuŋaɪ",            # Wiktionary IPA /ˈsuŋaj/ - "river"
+    "Muhyiddin": "mˌuːhiːjˈɪdɪn",  # "moo-hee-YID-in" - no confirmed IPA
+                                    # source found; best-effort Arabic-
+                                    # origin-name rendering
+    "Yassin": "jˈɑːsɪn",           # "YAH-sin" - Arabic Yasin/Yaseen name
+    "Mentri": "mˈɛntri",           # "MEN-tree" - "Mentri Besar" (Chief
+                                    # Minister)
+    "homegrown": "ˌhQmɡɹˈQn",      # unknown word (no lexicon entry) -
+                                    # built the same way as "outgrown"
+                                    # above (home=hQm, grown=ɡɹˈQn)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
