@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Cold Storage and the Frozen-Meat Trade"
-date: 2026-09-17 10:00:00 +0800
-last_modified_at: 2026-09-17 10:00:00 +0800
+date: 2026-09-16 03:25:09 +0800
+last_modified_at: 2026-09-16 03:25:09 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/2/29/Centrepoint_Shopping_Centre%2C_Singapore_-_20060212.jpg
 ---
