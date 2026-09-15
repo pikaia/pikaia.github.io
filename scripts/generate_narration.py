@@ -1095,10 +1095,14 @@ PRONUNCIATION_OVERRIDES = {
 
     # Linggiu Reservoir post: Malay words/names confirmed via Wiktionary
     # IPA (Tinggi, Sungai) or best-effort renderings for names without a
-    # confirmed source (Muhyiddin, Yassin, Mentri). "Linggiu" itself -
-    # the post's own repeated subject name - is being ear-picked
-    # separately (scratch/linggiu-reservoir-pron-samples.py), not set
-    # here yet.
+    # confirmed source (Muhyiddin, Yassin, Mentri).
+    "Linggiu": "lˈɪŋɡi",           # "LING-ghee" - the post's own repeated
+                                    # subject name. Picked by Chris by ear
+                                    # from three samples
+                                    # (scratch/linggiu-reservoir-
+                                    # pronunciation/): candidate 1
+                                    # ("LING-ghee-oo", lˈɪŋɡiu) minus its
+                                    # trailing "u" sound
     "Tinggi": "tˈiŋɡi",            # Wiktionary IPA /ˈtiŋɡi/ - "Kota Tinggi"
     "Sungai": "sˈuŋaɪ",            # Wiktionary IPA /ˈsuŋaj/ - "river"
     "Muhyiddin": "mˌuːhiːjˈɪdɪn",  # "moo-hee-YID-in" - no confirmed IPA
