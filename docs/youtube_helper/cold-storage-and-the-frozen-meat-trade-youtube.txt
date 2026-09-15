@@ -37,7 +37,7 @@ Description:
 On 8 June 1903, a company called Cold Storage was registered in Singapore to solve one very specific problem: there was no reliable way, in the tropics, to keep a piece of meat cold long enough to eat it safely. Everything the company became afterwards — the supermarkets, the ice cream, the dairy farm, even a shopping mall on Orchard Road — grew out of that one narrow need. #Shorts
 
 Full story: https://da.gd/F6LfcP
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/26LOHIA2vc4
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
