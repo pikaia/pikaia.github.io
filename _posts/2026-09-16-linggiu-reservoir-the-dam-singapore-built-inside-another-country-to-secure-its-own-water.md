@@ -97,7 +97,7 @@ Singapore's real answer to that vulnerability, in the end, wasn't a bigger dam. 
 </details>
 </div>
 
-**Why it matters today:** most people who know anything about Singapore's water story know Marina Barrage or NEWater — visible, homegrown, built entirely on Singapore's own soil. Almost nobody remembers that decades earlier, the country's answer to the same anxiety was to reach across a border and build a dam inside someone else's country, just to keep a treaty promise it already had.
+**Why it matters today:** most people who know anything about Singapore's water story know Marina Barrage or NEWater — visible, homegrown, built entirely on Singapore's own soil. Almost nobody remembers that decades earlier, the country's answer to the same anxiety was to reach across a border and build a dam inside someone else's country, just to keep a treaty promise it already had. Malaysia still supplies roughly half of Singapore's water demand today. PUB's own target is to close that gap entirely by around 2060, when NEWater and desalination together are projected to meet some 80 per cent of demand, with local catchment covering the rest — a year before the 1962 agreement itself even expires. Linggiu Reservoir was never meant to be the permanent answer, only a very expensive way of buying time until the rest of the country's own taps could catch up; on the timeline Singapore has set for itself, that time is almost gone.
 
 ---
 
@@ -118,6 +118,7 @@ Singapore's real answer to that vulnerability, in the end, wasn't a bigger dam. 
 - "JB downpour fails to raise reservoir level," The Straits Times, 18 November 2015
 - "Johor water level hits record low," The New Paper, 13 April 2016
 - All newspaper articles accessed via [NewspaperSG](https://eresources.nlb.gov.sg/newspapers/), National Library Board
+- [Water Source Contributions in Singapore](https://www.bestinsingapore.co/water-consumption-statistics-singapore/), current and projected Four National Taps figures
 - [File:Johor River.jpg](https://commons.wikimedia.org/wiki/File:Johor_River.jpg), Wikimedia Commons
 - Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
 
