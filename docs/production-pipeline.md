@@ -1300,11 +1300,29 @@ again instead of the Short):
 
 ## 8. Verify both files
 
+**Both files means both files** — the main video and the Short each get
+their own 8.1 and 8.2 pass, four command runs total, not two. It's easy
+to run this section once against the main config out of habit (the same
+way section 7's warning calls out reusing the main config instead of
+`-short.py`) and skip the Short entirely; that's exactly how the Short's
+`WIDTH`/`HEIGHT` bug on the Tan Kim Seng post (2026-09-16) went
+unverified — `validate_short_config()` (section 3) now catches that
+*specific* bug automatically, but a spot-check still catches anything
+that isn't that one bug (wrong image, stale timing, off-by-one), and
+only running it against the main config every time means the Short
+never actually gets looked at.
+
 Don't trust that a render "looks done" — verify:
 
 ```
 { echo; date; echo "=== 8.1 Verify frame count ==="
   cmd=(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+{ echo; date; echo "=== 8.1 Verify frame count (Short) ==="
+  cmd=(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>-short.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -1316,6 +1334,12 @@ Example:
 ```
 { echo; date; echo "=== 8.1 Verify frame count ==="
   cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; date; echo "=== 8.1 Verify frame count (Short) ==="
+  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -1349,6 +1373,12 @@ at that instant, so there's nothing to construct by hand:
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/<slug>.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
 ```
 
 Example:
@@ -1356,6 +1386,12 @@ Example:
 ```
 { echo; date; echo "=== 8.2 Verify spot frame ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py --spot-frame)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
