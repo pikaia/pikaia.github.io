@@ -630,6 +630,15 @@ CAPTION_MAX_WIDTH_FRAC = 0.86
 CAPTION_Y_FRAC = 0.80
 ```
 
+`watch_video_lib.py` checks this automatically now (`validate_short_config()`,
+added 2026-09-16 after this exact gap slipped through on the Tan Kim Seng
+post - a `-short.py` config missing `WIDTH, HEIGHT = 1080, 1920` rendered a
+full landscape video with no error, caught only on playback): any config
+file whose name ends in `-short` gets checked, on every `--check-only`,
+`--spot-frame`, and real render invocation, for `WIDTH`/`HEIGHT` set to a
+vertical frame and `BURN_CAPTIONS = True`, and refuses to proceed with a
+clear error if either is missing.
+
 **Example** (`scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py`
 — again illustrative, since this post's real, already-published Short
 at `youtube.com/shorts/rVX4caKw0os` predates this config system; the

@@ -148,6 +148,37 @@ def _available_memory_gb():
     return None
 
 
+def validate_short_config(cfg, config_path):
+    """Fail fast on the exact silent-failure class caught 2026-09-16 (Tan
+    Kim Seng post): a `-short.py` config missing `WIDTH, HEIGHT = 1080,
+    1920` (and `BURN_CAPTIONS = True`) renders fine - no exception, no
+    --check-only warning - it just silently produces a landscape
+    1280x720 video at the Short's excerpt duration instead of a vertical
+    Short. Only visible on playback, after a full render cycle was
+    already spent. Runs once per CLI invocation (called from main(), not
+    load_config() itself, so parallel render workers don't repeat it)."""
+    stem = Path(config_path).stem
+    if not (stem.endswith("-short") or stem.endswith("_short")):
+        return
+    width = getattr(cfg, "WIDTH", None)
+    height = getattr(cfg, "HEIGHT", None)
+    problems = []
+    if width is None or height is None:
+        problems.append("WIDTH/HEIGHT not set (defaults to 1280x720 landscape)")
+    elif not (height > width):
+        problems.append(f"WIDTH={width}, HEIGHT={height} is not a vertical frame (expected 1080x1920)")
+    if not getattr(cfg, "BURN_CAPTIONS", False):
+        problems.append("BURN_CAPTIONS not set to True (Shorts are watched muted/autoplay, main videos rely on the uploaded .srt instead)")
+    if problems:
+        print(f"ERROR: {config_path} looks like a Shorts config (filename ends in '-short') but:", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        print("Add `WIDTH, HEIGHT = 1080, 1920` and `BURN_CAPTIONS = True` "
+              "(see docs/production-pipeline.md section 3, the Short config "
+              "subsection). Refusing to proceed.", file=sys.stderr)
+        sys.exit(1)
+
+
 def load_config(config_path):
     config_path = Path(config_path).resolve()
     spec = importlib.util.spec_from_file_location(config_path.stem, config_path)
@@ -999,6 +1030,7 @@ def main():
     args = ap.parse_args()
 
     cfg = load_config(args.config)
+    validate_short_config(cfg, args.config)
 
     # Gap report needs only SCHEDULE/TIMING_JSON, both known before any
     # frame is rendered - generate it immediately so --check-only gets one
