@@ -1171,6 +1171,49 @@ PRONUNCIATION_OVERRIDES = {
                                     # by Chris by ear (2026-09-16),
                                     # candidate 1 of 3, from samples in
                                     # the same folder
+
+    # Cathay Building post - the Loke family, and the building's WWII
+    # occupants.
+    "Dato": "dˈɑːtoʊ",             # "DAH-toh" - the Malay honorific, single
+                                    # obvious reading
+    "Tho": "tˈoʊ",                 # "toh" (hard T, not the "th" of
+                                    # "though") - Loke Wan Tho, same
+                                    # Chinese-surname-romanization pattern
+                                    # as "Tock"/"Seng" in the Tan Tock Seng
+                                    # post
+    "arthouse": "ˈɑːthaʊs",        # plain English compound gap, single
+                                    # obvious reading
+    "Picturehouse": "pˈɪktʃəhaʊs", # "The Picturehouse" cinema brand,
+                                    # single obvious reading
+    "Subhas": "səbˈɑːs",           # "suh-BAHSS" - Subhas Chandra Bose.
+                                    # Best-guess candidate, NOT yet
+                                    # ear-verified - samples awaiting
+                                    # Chris's pick in scratch/the-cathay-
+                                    # building-singapores-first-skyscraper-
+                                    # pronunciation/ (bose-1/bose-2, each
+                                    # covering all three names at once)
+    "Chandra": "tʃˈʌndrə",         # "CHUN-druh". Same best-guess status
+                                    # as "Subhas" above
+    "Bose": "bˈoʊs",               # "bohss", rhymes with "dose" - the
+                                    # standard English broadcast reading
+                                    # (not "bohz"). Same best-guess status
+                                    # as "Subhas" above
+    "Daitoa": "daɪtˈoʊə",          # "dye-TOH-uh" - Japanese 大東亜
+                                    # ("Greater East Asia"), romaji
+                                    # approximation. Best-guess candidate,
+                                    # NOT yet ear-verified - samples in the
+                                    # same folder (japanese-1/japanese-2)
+    "Gekijo": "ɡˈɛkidʒˌoʊ",        # "GEH-ki-joh" - Japanese 劇場
+                                    # ("theatre"), romaji approximation.
+                                    # Same best-guess status as "Daitoa"
+    "Syonan": "ʃˈoʊnæn",           # "SHOH-nan" - NOT "sigh-oh-nan": this
+                                    # is the Kunrei-shiki romanization of
+                                    # Shōnan (昭南), the wartime name for
+                                    # occupied Singapore, where "Sy"
+                                    # represents the "Sh" sound, not an
+                                    # English "s". Best-guess candidate,
+                                    # NOT yet ear-verified - samples in the
+                                    # same folder (syonan-1/syonan-2)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
