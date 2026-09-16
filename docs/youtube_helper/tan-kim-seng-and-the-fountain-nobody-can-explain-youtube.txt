@@ -42,7 +42,7 @@ Description:
 At Esplanade Park, an ornate Victorian iron fountain has stood for well over a century, its three tiers ringed with classical figures and its basin fed by four spouts shaped like Poseidon's face — or it would be fed, except several of those spouts had been sealed shut for years, quietly turning a monument to a water donation into a fountain that couldn't actually run water. Thousands of joggers and tourists pass it every week. Almost none stop to read the inscription that explains why it's there, or who Tan Kim Seng was. #Shorts
 
 Full story: https://da.gd/0SbwKi
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/HeB7e8kt9dc
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
