@@ -69,32 +69,35 @@ At the corner of Handy Road and Dhoby Ghaut, a cream Art Deco tower with the wor
 <script>
 (function () {
   var HERO = "https://upload.wikimedia.org/wikipedia/commons/5/57/The_Cathay_Building_in_Singapore_1945.jpg";
+  var THEATRE1945 = "https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Cathay_Theatre_in_Singapore_1945.jpg";
+  var HARBOUR1945 = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Geallieerde_schepen_in_de_haven_van_Singapore%2C_gefotografeerd_vanaf_de_Cathay%2C_een_van_Singapore_%27s_modernste_gebouwen%2C_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt%2C_KITLV_25399.tiff/lossy-page1-1280px-Geallieerde_schepen_in_de_haven_van_Singapore%2C_gefotografeerd_vanaf_de_Cathay%2C_een_van_Singapore_%27s_modernste_gebouwen%2C_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt%2C_KITLV_25399.tiff.jpg";
   var NIGHT = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Cathay_Cinema_and_Hotel_by_night%2C_Singapore%2C_1954_%284435981577%29.jpg";
   var DAY = "https://upload.wikimedia.org/wikipedia/commons/9/96/Cathay_Cinema_and_Hotel_by_day%2C_Singapore%2C_1954_%284435980883%29.jpg";
   var AERIAL = "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bird%27s_eye_of_Bras_Basah_Road_from_Cathay_Building%2C_Shaw_Tower_in_the_background.jpg";
   var MODERN = "https://upload.wikimedia.org/wikipedia/commons/c/cf/The_Cathay%2C_October_2025.jpg";
+  var NIGHT2013 = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/The_Luxe%2C_Cathay_and_SOTA%2C_2013.jpg/1280px-The_Luxe%2C_Cathay_and_SOTA%2C_2013.jpg";
 
   var slides = [
     { src: HERO, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: MODERN, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: MODERN, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: HERO, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
-    { src: HERO, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
+    { src: THEATRE1945, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: NIGHT, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: DAY, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: HERO, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: HERO, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
-    { src: HERO, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
+    { src: HARBOUR1945, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: HERO, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
-    { src: HERO, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
-    { src: HERO, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
+    { src: THEATRE1945, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
+    { src: HARBOUR1945, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: DAY, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: NIGHT, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: DAY, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: DAY, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: AERIAL, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: MODERN, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
-    { src: MODERN, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
+    { src: NIGHT2013, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: MODERN, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
   ];
 
