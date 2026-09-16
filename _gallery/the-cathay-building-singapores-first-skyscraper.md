@@ -7,6 +7,12 @@ post_title: "The Cathay Building: Singapore's First Skyscraper"
 
 A few more images of the building across its life, and the view it once offered as the tallest thing in Singapore.
 
+### The Cathay Theatre, 1945
+
+![The Cathay Theatre in Singapore, 1945](https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Cathay_Theatre_in_Singapore_1945.jpg)
+
+*The Cathay Theatre's entrance, photographed in 1945. (Photo: Australian War Memorial, public domain, via Wikimedia Commons)*
+
 ### The Cathay Cinema and Hotel by day, 1954
 
 ![The Cathay Cinema and Hotel by day, Singapore, 1954](https://upload.wikimedia.org/wikipedia/commons/9/96/Cathay_Cinema_and_Hotel_by_day%2C_Singapore%2C_1954_%284435980883%29.jpg)

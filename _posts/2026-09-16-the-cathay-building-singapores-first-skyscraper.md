@@ -302,5 +302,6 @@ Civilian life came back slowly. The Cathay Restaurant reopened in 1948, the comp
 - [File:Cathay Cinema and Hotel by day, Singapore, 1954 — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cathay_Cinema_and_Hotel_by_day,_Singapore,_1954_(4435980883).jpg)
 - [File:Bird's eye of Bras Basah Road from Cathay Building — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Bird's_eye_of_Bras_Basah_Road_from_Cathay_Building,_Shaw_Tower_in_the_background.jpg>)
 - [File:Geallieerde schepen in de haven van Singapore, gefotografeerd vanaf de Cathay, KITLV 25399 — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Geallieerde_schepen_in_de_haven_van_Singapore,_gefotografeerd_vanaf_de_Cathay,_een_van_Singapore_%27s_modernste_gebouwen,_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt,_KITLV_25399.tiff>)
+- [File:The Cathay Theatre in Singapore 1945.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Cathay_Theatre_in_Singapore_1945.jpg)
 
 [← Back to all posts](/)
