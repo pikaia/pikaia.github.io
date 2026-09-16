@@ -266,7 +266,7 @@ At Esplanade Park, an ornate Victorian iron fountain has stood for well over a c
 
 ![Ancestor portrait of Tan Kim Seng, mid-19th century](https://upload.wikimedia.org/wikipedia/commons/a/a1/Qu_Chiqing%2C_Ancestor_portrait_of_Tan_Kim_Seng%2C_Mid_19th_century%2C_Oil_on_canvas%2C_98_x_78_cm%2C_Asian_Civilisations_Museum.png)
 
-*Ancestor portrait of Tan Kim Seng, by Qu Chiqing, mid-19th century, oil on canvas. Collection of the Asian Civilisations Museum. (Public domain, via Wikimedia Commons)*
+*Ancestor portrait of Tan Kim Seng, mid-19th century, oil on canvas. Collection of the Asian Civilisations Museum. (Photo: Qu Chiqing, public domain, via Wikimedia Commons)*
 
 Tan Kim Seng was born in 1805 in Dutch Malacca, a Straits-born Peranakan of Hokkien descent. He founded the trading house Kim Seng & Company in 1840 and built one of the largest fortunes in early Singapore — by the time he died he was estimated to hold roughly half the island's private land. His standing in both the Chinese and colonial worlds made him one of the few merchants the government actually listened to: he was appointed a Justice of the Peace in 1850, and in 1857 became the first Asian member of Singapore's Municipal Commission. Three years earlier, in May 1854, he'd used exactly that standing to help end the Hokkien-Teochew riots — ten days of fighting between rival secret societies, sparked by a dispute so small it's remembered as the "Five Catties of Rice Riots," that killed an estimated 500 people and destroyed some 300 homes before it burned out. He also founded Chong Wen Ge, one of Singapore's earliest Chinese schools, in 1849, and gave generously to Tan Tock Seng Hospital, a cause the philanthropist Tan Tock Seng had championed a decade before him.
 
