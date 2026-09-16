@@ -1150,6 +1150,27 @@ PRONUNCIATION_OVERRIDES = {
     # override doesn't reliably fix this class. Worked around by
     # rewording the Cold Storage post instead ("reliable, controlled
     # cold" in place of "controlled cold, delivered reliably").
+
+    # Tan Kim Seng post - the philanthropist, his English backers, and
+    # his descendants.
+    "Ge": "ɡˈʌ",                   # "guh" - Chong Wen Ge, a Mandarin
+                                    # institution name; single low-stakes
+                                    # mention, no sample needed
+    "Handyside": "hˈandisaɪd",     # "HAN-dee-side" - the English firm
+                                    # that built the fountain, single
+                                    # obvious reading
+    "Fullerton": "fˈʊlətən",       # "FULL-uh-tun" - Fullerton Square,
+                                    # single obvious reading (matches the
+                                    # standard British placename stress)
+    "Beng": "bˈɛŋ",                # "beng" - Tan Beng Swee. Confirmed by
+                                    # Chris by ear (2026-09-16), candidate
+                                    # 1 of 2, from samples in scratch/
+                                    # tan-kim-seng-and-the-fountain-
+                                    # nobody-can-explain-pronunciation/
+    "Jiak": "dʒiˈɑk",              # "jee-ahk" - Tan Jiak Kim. Confirmed
+                                    # by Chris by ear (2026-09-16),
+                                    # candidate 1 of 3, from samples in
+                                    # the same folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
