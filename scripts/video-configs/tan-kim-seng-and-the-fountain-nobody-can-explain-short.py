@@ -3,6 +3,8 @@
 before the reveal of who Tan Kim Seng was. 4 slides, 39.15s.
 """
 
+WIDTH, HEIGHT = 1080, 1920
+
 _U = "https://upload.wikimedia.org/wikipedia/commons"
 
 IMAGES = {
@@ -26,3 +28,10 @@ SCHEDULE = [
 ]
 TOTAL_DURATION = 39.15
 TIMING_JSON = "audio/tan-kim-seng-and-the-fountain-nobody-can-explain.timing.json"
+
+# Shorts keep burned-in narration captions (muted autoplay); main videos do not -
+# they rely on the uploaded .srt.
+BURN_CAPTIONS = True
+CAPTION_FONT_RATIO = 0.032
+CAPTION_MAX_WIDTH_FRAC = 0.86
+CAPTION_Y_FRAC = 0.80
