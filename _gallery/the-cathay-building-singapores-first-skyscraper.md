@@ -15,6 +15,10 @@ A few more images of the building across its life, and the view it once offered 
 
 ### The view from the tower
 
+![Allied ships in Singapore harbour, photographed from the Cathay Building, 1945](https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Geallieerde_schepen_in_de_haven_van_Singapore%2C_gefotografeerd_vanaf_de_Cathay%2C_een_van_Singapore_%27s_modernste_gebouwen%2C_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt%2C_KITLV_25399.tiff/lossy-page1-1280px-Geallieerde_schepen_in_de_haven_van_Singapore%2C_gefotografeerd_vanaf_de_Cathay%2C_een_van_Singapore_%27s_modernste_gebouwen%2C_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt%2C_KITLV_25399.tiff.jpg)
+
+*Allied ships anchored in Singapore harbour, photographed from the Cathay Building in 1945, not long after the Japanese surrender. (Photo: Netherlands Indies Government Information Service, CC BY 4.0, via Wikimedia Commons)*
+
 ![Bird's eye view of Bras Basah Road from the Cathay Building, 1976](https://upload.wikimedia.org/wikipedia/commons/f/f0/Bird%27s_eye_of_Bras_Basah_Road_from_Cathay_Building%2C_Shaw_Tower_in_the_background.jpg)
 
-*A bird's-eye view of Bras Basah Road, taken from the Cathay Building itself in 1976, with Shaw Tower in the background. (Photo: Ministry of Information and the Arts, CC BY-SA 4.0, via Wikimedia Commons)*
+*The same view, three decades later: Bras Basah Road from the Cathay Building in 1976, with Shaw Tower now in the background. (Photo: Ministry of Information and the Arts, CC BY-SA 4.0, via Wikimedia Commons)*
