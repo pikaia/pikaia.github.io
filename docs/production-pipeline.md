@@ -1301,28 +1301,27 @@ again instead of the Short):
 ## 8. Verify both files
 
 **Both files means both files** — the main video and the Short each get
-their own 8.1 and 8.2 pass, four command runs total, not two. It's easy
-to run this section once against the main config out of habit (the same
-way section 7's warning calls out reusing the main config instead of
-`-short.py`) and skip the Short entirely; that's exactly how the Short's
-`WIDTH`/`HEIGHT` bug on the Tan Kim Seng post (2026-09-16) went
-unverified — `validate_short_config()` (section 3) now catches that
-*specific* bug automatically, but a spot-check still catches anything
-that isn't that one bug (wrong image, stale timing, off-by-one), and
-only running it against the main config every time means the Short
-never actually gets looked at.
+their own 8.1 and 8.2 pass. It's easy to run this section once against
+the main config out of habit (the same way section 7's warning calls
+out reusing the main config instead of `-short.py`) and skip the Short
+entirely; that's exactly how the Short's `WIDTH`/`HEIGHT` bug on the
+Tan Kim Seng post (2026-09-16) went unverified — `validate_short_config()`
+(section 3) now catches that *specific* bug automatically, but a
+spot-check still catches anything that isn't that one bug (wrong image,
+stale timing, off-by-one), and only running it against the main config
+every time means the Short never actually gets looked at.
 
-Don't trust that a render "looks done" — verify:
+Don't trust that a render "looks done" — verify. `--verify-frames`
+(added 2026-09-16, same day as the bug above, so 8.1 stops depending on
+remembering a second command) does a full-decode frame-count check
+against the config's rendered `.mp4`; pointed at a main config, it
+**automatically finds and checks the sibling `-short.py`'s video too**,
+right after the main one, in the same invocation — one command covers
+both files:
 
 ```
-{ echo; date; echo "=== 8.1 Verify frame count ==="
-  cmd=(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>.mp4)
-  echo "\$ ${cmd[*]}"; echo
-  time "${cmd[@]}"
-  echo
-} 2>&1 | tee -a logs/<slug>.log
-{ echo; date; echo "=== 8.1 Verify frame count (Short) ==="
-  cmd=(ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/<slug>-short.mp4)
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --verify-frames)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -1332,31 +1331,23 @@ Don't trust that a render "looks done" — verify:
 Example:
 
 ```
-{ echo; date; echo "=== 8.1 Verify frame count ==="
-  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4)
-  echo "\$ ${cmd[*]}"; echo
-  time "${cmd[@]}"
-  echo
-} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
-{ echo; date; echo "=== 8.1 Verify frame count (Short) ==="
-  cmd=(ffprobe -v error -count_frames -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-short.mp4)
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --verify-frames)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
-Compare against the expected frame count, `TOTAL_DURATION * FPS`
-(e.g. `322.625 * 25 = 8065.625` → expect `8066`, off-by-one from
-rounding is fine; for this post, `361.125 * 25 = 9028.125` → expect
-`9028` or `9029`). The `-select_streams v:0` flag matters: without it,
-`nb_read_frames` is reported per stream, and the .mp4's audio (AAC)
-track prints a second, much-lower number right after the real one -
-e.g. `13293` (video, correct) then `12462` (audio frames at ~24kHz/1024
-samples each, nothing to do with video at all). A past run misread that
-second number as a bad/stale frame count and treated it as a data-loss
-scare; it never was one - `-select_streams v:0` removes the ambiguity
-at the source. This is a **full decode**, not a spot-check — if the
+It prints each file's actual frame count against the expected
+`TOTAL_DURATION * FPS` (off-by-one from rounding is fine) and exits
+non-zero on a real mismatch — nothing to compute by hand. It always
+uses `-select_streams v:0` internally, so the once-common trap of
+misreading `nb_read_frames`'s *second* number (the .mp4's audio/AAC
+track, reported right after the real video count when that flag is
+left off — a past run mistook it for a bad/stale frame count and
+treated it as a data-loss scare; it never was one) can't happen here.
+This is a **full decode**, not a spot-check — if the
 video ever needs trimming/concatenation with ffmpeg's `-c copy` path, a
 full-decode verify is mandatory (a real past bug: non-monotonic source
 DTS silently truncated the video track during a trim+concat, completely

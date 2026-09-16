@@ -880,6 +880,63 @@ def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
               f"line above (captions are no longer burned in; the .srt goes to YouTube).", file=sys.stderr)
 
 
+def _verify_one_frame_count(cfg, config_stem):
+    video = REPO_ROOT / "preview-motion" / f"{config_stem}.mp4"
+    if not video.exists():
+        print(f"{video} not found - render it first (section 6/7)", file=sys.stderr)
+        sys.exit(1)
+    fps = getattr(cfg, "FPS", 25)
+    expected = round(cfg.TOTAL_DURATION * fps)
+    # -select_streams v:0 matters: without it, nb_read_frames is reported
+    # per stream, and the .mp4's audio (AAC) track prints a second,
+    # much-lower number right after the real one - a past run misread
+    # that second number as a bad/stale frame count (see
+    # docs/production-pipeline.md section 8.1). Baking the flag in here
+    # removes the ambiguity at the source rather than relying on Chris to
+    # remember it on a hand-typed command.
+    cmd = ["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames",
+           "-show_entries", "stream=nb_read_frames",
+           "-of", "default=nokey=1:noprint_wrappers=1", str(video)]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    actual = result.stdout.strip()
+    try:
+        actual_n = int(actual)
+    except ValueError:
+        print(f"{video}: ffprobe returned {actual!r} (stderr: {result.stderr.strip()})", file=sys.stderr)
+        sys.exit(1)
+    off = actual_n - expected
+    status = "OK" if abs(off) <= 1 else "MISMATCH"
+    print(f"{video.name}: {actual_n} frames (expected {expected} = {cfg.TOTAL_DURATION}s x {fps}fps) - {status}", file=sys.stderr)
+    if status == "MISMATCH":
+        print(f"  off by {off} frames - see docs/production-pipeline.md section 8.1", file=sys.stderr)
+        sys.exit(1)
+
+
+def verify_frame_count(cfg, config_stem, config_path):
+    """Step 8.1, made mechanical and auto-cascading to the Short: verify
+    this config's rendered video, then - unless this config is itself a
+    -short.py config - look for a sibling <stem>-short.py next to it and
+    automatically verify that video too, so a single invocation against
+    the main config covers both files. Mirrors --spot-frame already
+    auto-detecting a -short.py config pointed at directly (section 8.2);
+    this runs the same idea the other way, cascading from main to Short
+    instead of requiring a second, separate invocation - added 2026-09-16
+    after Chris asked for exactly this (the Short's 8.1/8.2 had gone
+    unverified on a prior post as a result of always needing a second,
+    easy-to-forget command)."""
+    _verify_one_frame_count(cfg, config_stem)
+
+    if config_stem.endswith("-short") or config_stem.endswith("_short"):
+        return
+    short_path = Path(config_path).with_name(f"{config_stem}-short.py")
+    if not short_path.exists():
+        return
+    print(f"\n--- Short: {short_path.name} ---", file=sys.stderr)
+    short_cfg = load_config(short_path)
+    validate_short_config(short_cfg, short_path)
+    _verify_one_frame_count(short_cfg, f"{config_stem}-short")
+
+
 # --- parallel frame rendering (see render()) ------------------------------
 #
 # compose_frame_at() is a pure function of (t, cfg, captions,
@@ -1020,6 +1077,8 @@ def main():
     ap.add_argument("--out", help="Output .mp4 path (required unless --check-only)")
     ap.add_argument("--check-only", action="store_true", help="Run the smoothness pre-check and exit, no render")
     ap.add_argument("--check-duration", type=float, default=4.0, help="Seconds of test frames per slide for --check-only")
+    ap.add_argument("--verify-frames", action="store_true",
+                    help="Full-decode frame-count verify against the rendered .mp4 (step 8.1, made mechanical); pointed at a main config, also auto-verifies the sibling -short.py's video if one exists; no render")
     ap.add_argument("--spot-frame", action="store_true",
                     help="Pull one frame from the rendered .mp4 for a slide and print what should be on screen (step 8.2, made mechanical); no render")
     ap.add_argument("--slide", default="2",
@@ -1039,6 +1098,10 @@ def main():
     # filename (not --out) since the live Watch widget the video mirrors
     # is presumed a close copy - see Chris, 2026-08-22.
     slug = Path(args.config).stem
+
+    if args.verify_frames:
+        verify_frame_count(cfg, slug, args.config)
+        return
 
     if args.spot_frame:
         spot_check_frames(cfg, slug, args.slide, args.video)
