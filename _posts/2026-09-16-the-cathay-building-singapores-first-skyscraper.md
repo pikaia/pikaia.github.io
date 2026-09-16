@@ -282,6 +282,10 @@ Civilian life came back slowly. The Cathay Restaurant reopened in 1948, the comp
 
 <div style="clear: both;"></div>
 
+![The Luxe, The Cathay, and SOTA at night, 2013](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/The_Luxe%2C_Cathay_and_SOTA%2C_2013.jpg/1280px-The_Luxe%2C_Cathay_and_SOTA%2C_2013.jpg)
+
+*The Cathay at night in 2013, amid the mix of buildings — The Luxe hotel and the School of the Arts — that has grown up around it. (Photo: Erwin Soo, CC BY 2.0, via Wikimedia Commons)*
+
 [See more historical photos related to this post →](/gallery/the-cathay-building-singapores-first-skyscraper/)
 
 **Why it matters today:** most Singaporeans have walked past that CATHAY sign without knowing it once flew a surrender flag, broadcast Japanese propaganda, and hosted the birth of a foreign independence movement — all a decade before it even became a hotel. The tower's monument status is itself an admission of how thin the line got: Singapore didn't save the building, only its face, and decided that was worth protecting anyway.
@@ -303,5 +307,6 @@ Civilian life came back slowly. The Cathay Restaurant reopened in 1948, the comp
 - [File:Bird's eye of Bras Basah Road from Cathay Building — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Bird's_eye_of_Bras_Basah_Road_from_Cathay_Building,_Shaw_Tower_in_the_background.jpg>)
 - [File:Geallieerde schepen in de haven van Singapore, gefotografeerd vanaf de Cathay, KITLV 25399 — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Geallieerde_schepen_in_de_haven_van_Singapore,_gefotografeerd_vanaf_de_Cathay,_een_van_Singapore_%27s_modernste_gebouwen,_dat_door_de_Japanners_als_hoofdkwartier_werd_gebruikt,_KITLV_25399.tiff>)
 - [File:The Cathay Theatre in Singapore 1945.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Cathay_Theatre_in_Singapore_1945.jpg)
+- [File:The Luxe, Cathay and SOTA, 2013.jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:The_Luxe,_Cathay_and_SOTA,_2013.jpg>)
 
 [← Back to all posts](/)
