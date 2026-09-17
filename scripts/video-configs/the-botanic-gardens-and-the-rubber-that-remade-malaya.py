@@ -8,8 +8,10 @@ slide is letterbox; no cover slides needed for this post.
                  circa 1900 (Commons, Singapore MND) - shows the man,
                  the herringbone cut, and a live tree all at once
   WICKHAM      - Henry Wickham beside an old rubber tree (Commons,
-                 Biblioteca Nacional Digital Brasil) - the 1876
-                 seed-smuggling origin story
+                 Biblioteca Nacional Digital Brasil; cropped locally to
+                 remove ~300px of dead white margin at the bottom of
+                 the scan, which was breaking the post's float layout)
+                 - the 1876 seed-smuggling origin story
   TANCHAYYAN   - Portrait of Tan Chay Yan (Commons, from Song Ong
                  Siang's 1923 history) - the planter whose 1896 estate
                  proved rubber could make money
@@ -29,7 +31,7 @@ _U = "https://upload.wikimedia.org/wikipedia/commons"
 
 IMAGES = {
     "HERO": f"{_U}/2/21/Henry_Nicholas_Ridley%2C_Botanist_%281855-1956%29.jpg",
-    "WICKHAM": f"{_U}/0/03/%E2%80%9CHenry_Wickham%2C_who_in_1876_directed_an_operation_smuggling_70%2C000_rubber_tree_seeds%E2%80%9D.jpg",
+    "WICKHAM": "/assets/images/botanic-gardens-wickham-cropped.jpg",
     "TANCHAYYAN": f"{_U}/7/70/Tan_Chay_Yan.png",
     "STATUE": f"{_U}/c/ce/Statue_of_Sir_Henry_Nicholas_Ridley_%28DSCF0927%29.jpg",
     "MODERN": f"{_U}/9/93/UNESCO_HERITAGE_AT_BOTANIC_GARDEN_1859.jpg",

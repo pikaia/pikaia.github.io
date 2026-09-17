@@ -69,7 +69,7 @@ Joggers, wedding photographers and picnicking families fill the Singapore Botani
 <script>
 (function () {
   var HERO = "https://upload.wikimedia.org/wikipedia/commons/2/21/Henry_Nicholas_Ridley%2C_Botanist_%281855-1956%29.jpg";
-  var WICKHAM = "https://upload.wikimedia.org/wikipedia/commons/0/03/%E2%80%9CHenry_Wickham%2C_who_in_1876_directed_an_operation_smuggling_70%2C000_rubber_tree_seeds%E2%80%9D.jpg";
+  var WICKHAM = "/assets/images/botanic-gardens-wickham-cropped.jpg";
   var TANCHAYYAN = "https://upload.wikimedia.org/wikipedia/commons/7/70/Tan_Chay_Yan.png";
   var STATUE = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Statue_of_Sir_Henry_Nicholas_Ridley_%28DSCF0927%29.jpg";
   var MODERN = "https://upload.wikimedia.org/wikipedia/commons/9/93/UNESCO_HERITAGE_AT_BOTANIC_GARDEN_1859.jpg";
