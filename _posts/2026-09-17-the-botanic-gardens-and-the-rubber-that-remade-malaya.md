@@ -274,7 +274,14 @@ Joggers, wedding photographers and picnicking families fill the Singapore Botani
 
 *Henry Nicholas Ridley beside a Para rubber tree, its bark cut in his herringbone tapping pattern, around 1900. (Photo: Singapore Ministry of National Development, public domain, via Wikimedia Commons)*
 
+<div style="float: left; max-width: 280px; width: 40%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Hevea_semillas2.jpg" alt="Seeds of the Hevea brasiliensis rubber tree" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Seeds of Hevea brasiliensis, the Para rubber tree — the same kind Wickham smuggled out of Brazil in 1876. (Photo: Luis Fernández García, CC BY-SA 2.5, via Wikimedia Commons)</em>
+</div>
+
 The rubber itself came from a theft. In 1876, an Englishman named Henry Wickham smuggled around 70,000 Para rubber (*Hevea brasiliensis*) seeds out of Brazil, breaking the country's wild monopoly on the world's only reliable source of natural rubber. Most of the roughly 2,700 seeds that germinated at Kew Gardens in London went to Ceylon. A smaller batch — 22 seedlings, sent from Kew on 11 June 1877 — went to Singapore, and eleven of them were planted at the Botanic Gardens itself.
+
+<div style="clear: both;"></div>
 
 For over a decade, that was the end of the story. Nobody wanted to grow rubber. Malaya's planters were making their money from coffee and gambier, and a slow-growing tree with no proven market held no appeal. When Henry Nicholas Ridley arrived in 1888 as the Gardens' new director, he inherited a stand of mature, healthy, entirely uneconomic trees — and became obsessed with them anyway.
 
@@ -285,7 +292,14 @@ For over a decade, that was the end of the story. Nobody wanted to grow rubber. 
 
 Ridley spent the next several years pestering anyone who would listen, and plenty who wouldn't — he carried rubber seeds in his own pockets and pressed them on visiting planters uninvited, earning himself the nickname "Mad Ridley." His actual scientific contribution was solving the one real problem holding rubber back: the wild-rubber tapping method used in Brazil hacked deep into the bark and killed the tree within a few seasons. Around 1895, Ridley worked out a shallow, diagonal herringbone cut that let a tree be tapped for latex again and again without dying. It's essentially the same method used on rubber trees today.
 
+<div style="float: left; max-width: 280px; width: 40%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/1961tappingrubber.png" alt="A 1961 Federation of Malaya postage stamp depicting a rubber tapper at work" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A 1961 Federation of Malaya postage stamp, "Tapping Rubber" — by then a mature national industry built on estates like Tan Chay Yan's. (Photo: Government of Malaya, public domain, via Wikimedia Commons)</em>
+</div>
+
 The planters only started listening once they had no choice. A coffee-leaf disease tore through Malaya's coffee estates in the 1890s, wiping out the crop those planters had been counting on. In 1896, a Malacca-born Straits Chinese planter named Tan Chay Yan — grandson of the philanthropist Tan Tock Seng — used Gardens seedlings to plant a 22-acre rubber estate at Bukit Lintang. It worked. By 1898 he'd expanded into a 3,000-acre estate at Bukit Asahan; by 1906 that single plantation was the largest stand of Hevea rubber anywhere in the world, and other planters were finally following his lead.
+
+<div style="clear: both;"></div>
 
 Then the automobile arrived. Demand for tyres sent rubber prices climbing through the 1900s into the speculative "rubber boom" of 1910, and Malaya's planters had exactly what the market wanted. Within twenty years of Tan Chay Yan's first planting, Malaya's rubber acreage went from around 345 acres to more than 2.3 million. By the 1920s, the country alone supplied roughly half the world's natural rubber.
 
@@ -343,5 +357,7 @@ I've visited the Gardens myself, most memorably to see this orchid — *Dendrobi
 - [File:Chopin at Singapore Botanical Gardens.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chopin_at_Singapore_Botanical_Gardens.jpg)
 - [File:Singapore Botanic Gardens, Jul 06.JPG — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Singapore_Botanic_Gardens,_Jul_06.JPG>)
 - [File:Singapore Botanic Gardens, Evolution Garden 25, Sep 06.JPG — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Singapore_Botanic_Gardens,_Evolution_Garden_25,_Sep_06.JPG>)
+- [File:1961tappingrubber.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1961tappingrubber.png)
+- [File:Hevea semillas2.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hevea_semillas2.jpg)
 
 [← Back to all posts](/)
