@@ -80,3 +80,21 @@ A couple more faces from this story, and a look at the Gardens as they are today
 ![Evolution Garden, Singapore Botanic Gardens](https://upload.wikimedia.org/wikipedia/commons/2/2d/Singapore_Botanic_Gardens%2C_Evolution_Garden_25%2C_Sep_06.JPG)
 
 *The Evolution Garden, which traces plant life through the ages. (Photo: Sengkang, copyrighted free use, via Wikimedia Commons)*
+
+### From my own visits
+
+![A swan sculpture rising from Symphony Lake, Singapore Botanic Gardens](/assets/images/botanic-gardens-swan-sculpture.jpg)
+
+*A swan sculpture rising from Symphony Lake. (Photo: Chris Lee)*
+
+![A cascade of orchids in the National Orchid Garden, Singapore Botanic Gardens](/assets/images/botanic-gardens-orchid-cascade.jpg)
+
+*A cascade of orchids in the National Orchid Garden. (Photo: Chris Lee)*
+
+![Yellow orchids beside a waterfall, Singapore Botanic Gardens](/assets/images/botanic-gardens-yellow-orchids-waterfall.jpg)
+
+*Yellow orchids beside one of the Gardens' waterfalls. (Photo: Chris Lee)*
+
+![A hillside view of the orchid garden, Singapore Botanic Gardens](/assets/images/botanic-gardens-orchid-garden-hillside.jpg)
+
+*A hillside view across the orchid garden. (Photo: Chris Lee)*

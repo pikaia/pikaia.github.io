@@ -1239,6 +1239,11 @@ PRONUNCIATION_OVERRIDES = {
                                     # pronunciation/
     "Yan": "jˈɑːn",                # "yahn". Same confirmation as "Chay"
                                     # above
+    "Dendrobium": "dɛndrˈoʊbiəm",  # "den-DROH-bee-um" - the orchid
+                                    # genus, standard botanical Latin
+                                    # reading, single obvious reading
+    "Barack": "bərˈɑːk",           # "buh-RAHK" - single obvious reading
+    "Michelle": "mɪʃˈɛl",          # "mih-SHEL" - single obvious reading
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

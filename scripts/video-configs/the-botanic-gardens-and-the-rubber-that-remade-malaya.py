@@ -1,8 +1,8 @@
 """Video config for the Botanic Gardens/rubber post.
 
-Five images - all portrait-oriented scans/photos (old portraits, a
-vertical garden shot, a tall museum bust), so every slide is letterbox;
-no cover slides needed for this post.
+Six images - all portrait-oriented scans/photos (old portraits, a
+vertical garden shot, a tall museum bust, a personal photo), so every
+slide is letterbox; no cover slides needed for this post.
 
   HERO         - Henry Nicholas Ridley beside a tapped rubber tree,
                  circa 1900 (Commons, Singapore MND) - shows the man,
@@ -18,8 +18,11 @@ no cover slides needed for this post.
                  "never made a cent"/legacy beat
   MODERN       - The Botanic Gardens bandstand today (Commons) -
                  present-day UNESCO payoff
+  ORCHID       - Dendrobium Barack and Michelle Obama, photographed by
+                 Chris on a visit of his own in 2018 - the personal
+                 aside paragraph added 2026-09-17
 
-30 slides, 288.425s.
+32 slides, 319.725s.
 """
 
 _U = "https://upload.wikimedia.org/wikipedia/commons"
@@ -30,6 +33,7 @@ IMAGES = {
     "TANCHAYYAN": f"{_U}/7/70/Tan_Chay_Yan.png",
     "STATUE": f"{_U}/c/ce/Statue_of_Sir_Henry_Nicholas_Ridley_%28DSCF0927%29.jpg",
     "MODERN": f"{_U}/9/93/UNESCO_HERITAGE_AT_BOTANIC_GARDEN_1859.jpg",
+    "ORCHID": "/assets/images/botanic-gardens-named-orchid.jpg",
 }
 
 _LTB = {"type": "letterbox", "zoom": [1.0, 1.04, 1.08], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
@@ -64,8 +68,10 @@ SLIDES = [
     {"img": "STATUE", **_LTBO},       # 25 s25  Ridley never made a cent
     {"img": "STATUE", **_LTB},        # 26 s26  left 1911, died 1956 at 101
     {"img": "HERO", **_LTBO},         # 27 s27  made millions, never a penny
-    {"img": "MODERN", **_LTB},        # 28 s28  why it matters today
-    {"img": "MODERN", **_LTBO},       # 29 s29  trees gone, tapping method still used
+    {"img": "ORCHID", **_LTB},        # 28 s28  I've visited the Gardens myself
+    {"img": "ORCHID", **_LTBO},       # 29 s29  one of dozens of orchids named for heads of state
+    {"img": "MODERN", **_LTB},        # 30 s30  why it matters today
+    {"img": "MODERN", **_LTBO},       # 31 s31  trees gone, tapping method still used
 ]
 
 SCHEDULE = [
@@ -74,7 +80,8 @@ SCHEDULE = [
     (86.6, 10), (95.8, 11), (109.5, 12), (124.425, 13), (138.4, 14),
     (148.425, 15), (153.225, 16), (157.825, 17), (167.35, 18), (182.125, 19),
     (183.575, 20), (200.7, 21), (203.35, 22), (216.15, 23), (227.075, 24),
-    (233.5, 25), (237.525, 26), (252.45, 27), (259.625, 28), (278.25, 29),
+    (233.5, 25), (237.525, 26), (252.45, 27), (259.625, 28), (277.1, 29),
+    (290.925, 30), (309.55, 31),
 ]
-TOTAL_DURATION = 288.425
+TOTAL_DURATION = 319.725
 TIMING_JSON = "audio/the-botanic-gardens-and-the-rubber-that-remade-malaya.timing.json"
