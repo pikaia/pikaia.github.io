@@ -286,16 +286,13 @@ The rubber itself came from a theft. In 1876, an Englishman named Henry Wickham 
 For over a decade, that was the end of the story. Nobody wanted to grow rubber. Malaya's planters were making their money from coffee and gambier, and a slow-growing tree with no proven market held no appeal. When Henry Nicholas Ridley arrived in 1888 as the Gardens' new director, he inherited a stand of mature, healthy, entirely uneconomic trees — and became obsessed with them anyway.
 
 <div style="float: left; max-width: 320px; width: 45%; margin: 0.25em 1.5em 1em 0;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/03/%E2%80%9CHenry_Wickham%2C_who_in_1876_directed_an_operation_smuggling_70%2C000_rubber_tree_seeds%E2%80%9D.jpg" alt="Henry Wickham beside an old rubber tree" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Henry Wickham, whose 1876 seed-smuggling operation out of Brazil started the whole story. (Photo: Biblioteca Nacional Digital Brasil, CC BY-SA 4.0, via Wikimedia Commons)</em>
+<img src="/assets/images/botanic-gardens-wickham-cropped.jpg" alt="Henry Wickham beside an old rubber tree" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Henry Wickham, whose 1876 seed-smuggling operation out of Brazil started the whole story. (Photo: Biblioteca Nacional Digital Brasil, CC BY-SA 4.0, via Wikimedia Commons; cropped)</em>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/1961tappingrubber.png" alt="A 1961 Federation of Malaya postage stamp depicting a rubber tapper at work" style="width: 100%; display: block; border-radius: 4px; margin-top: 1em;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A 1961 Federation of Malaya postage stamp, "Tapping Rubber" — by then a mature national industry built on estates like Tan Chay Yan's. (Photo: Government of Malaya, public domain, via Wikimedia Commons)</em>
 </div>
 
 Ridley spent the next several years pestering anyone who would listen, and plenty who wouldn't — he carried rubber seeds in his own pockets and pressed them on visiting planters uninvited, earning himself the nickname "Mad Ridley." His actual scientific contribution was solving the one real problem holding rubber back: the wild-rubber tapping method used in Brazil hacked deep into the bark and killed the tree within a few seasons. Around 1895, Ridley worked out a shallow, diagonal herringbone cut that let a tree be tapped for latex again and again without dying. It's essentially the same method used on rubber trees today.
-
-<div style="float: left; max-width: 280px; width: 40%; margin: 0.25em 1.5em 1em 0;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/1961tappingrubber.png" alt="A 1961 Federation of Malaya postage stamp depicting a rubber tapper at work" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A 1961 Federation of Malaya postage stamp, "Tapping Rubber" — by then a mature national industry built on estates like Tan Chay Yan's. (Photo: Government of Malaya, public domain, via Wikimedia Commons)</em>
-</div>
 
 The planters only started listening once they had no choice. A coffee-leaf disease tore through Malaya's coffee estates in the 1890s, wiping out the crop those planters had been counting on. In 1896, a Malacca-born Straits Chinese planter named Tan Chay Yan — grandson of the philanthropist Tan Tock Seng — used Gardens seedlings to plant a 22-acre rubber estate at Bukit Lintang. It worked. By 1898 he'd expanded into a 3,000-acre estate at Bukit Asahan; by 1906 that single plantation was the largest stand of Hevea rubber anywhere in the world, and other planters were finally following his lead.
 
