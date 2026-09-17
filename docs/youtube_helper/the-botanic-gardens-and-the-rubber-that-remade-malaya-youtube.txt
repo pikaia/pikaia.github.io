@@ -60,7 +60,7 @@ Description:
 Joggers, wedding photographers and picnicking families fill the Singapore Botanic Gardens most weekends, and few of them know they're walking through the origin point of one of the twentieth century's biggest economic transformations. A UNESCO World Heritage Site since 2015 — the only tropical botanic garden on the list — it looks like exactly what it is: a beautifully kept research garden. It doesn't look like the place that decided, more or less single-handedly, that Malaya would become the world's rubber supplier. #Shorts
 
 Full story: https://da.gd/M3LeD
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/34ysSioQYE0
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
