@@ -1232,14 +1232,13 @@ PRONUNCIATION_OVERRIDES = {
     "Asahan": "ˌɑːsəhˈɑːn",        # "ah-suh-HAHN" - Bukit Asahan,
                                     # same Malay-reading approach
     "Chay": "tʃˈeɪ",               # "chay" (rhymes with "day") - Tan
-                                    # Chay Yan. Best-guess candidate, NOT
-                                    # yet ear-verified - samples awaiting
-                                    # Chris's pick in scratch/the-botanic-
-                                    # gardens-and-the-rubber-that-remade-
-                                    # malaya-pronunciation/ (chayyan-1/
-                                    # chayyan-2/chayyan-3)
-    "Yan": "jˈɑːn",                # "yahn". Same best-guess status as
-                                    # "Chay" above
+                                    # Chay Yan. Confirmed by Chris by ear
+                                    # (2026-09-17), candidate 1 of 3, from
+                                    # scratch/the-botanic-gardens-and-the-
+                                    # rubber-that-remade-malaya-
+                                    # pronunciation/
+    "Yan": "jˈɑːn",                # "yahn". Same confirmation as "Chay"
+                                    # above
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
