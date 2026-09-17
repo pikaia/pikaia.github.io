@@ -1216,6 +1216,30 @@ PRONUNCIATION_OVERRIDES = {
                                     # ear (2026-09-16), candidate 1 of 2,
                                     # from the same folder
                                     # (syonan-1/syonan-2)
+
+    # Botanic Gardens / rubber post - Wickham, Ridley, and Tan Chay Yan.
+    "Wickham": "wˈɪkəm",           # "WICK-um" - Henry Wickham, single
+                                    # obvious reading (English surname)
+    "brasiliensis": "brəzˌɪliˈɛnsɪs",  # "bruh-zil-ee-EN-sis" - Hevea
+                                    # brasiliensis, standard botanical
+                                    # Latin reading, single mention
+    "Kew": "kjˈuː",                # "kyoo" - Kew Gardens, single
+                                    # obvious reading
+    "Lintang": "lɪntˈɑːŋ",         # "lin-TAHNG" - Bukit Lintang, Malay
+                                    # place name, full unstressed vowel
+                                    # kept per the standard Malay-name
+                                    # approach (cf. Punggol/Tanglin)
+    "Asahan": "ˌɑːsəhˈɑːn",        # "ah-suh-HAHN" - Bukit Asahan,
+                                    # same Malay-reading approach
+    "Chay": "tʃˈeɪ",               # "chay" (rhymes with "day") - Tan
+                                    # Chay Yan. Best-guess candidate, NOT
+                                    # yet ear-verified - samples awaiting
+                                    # Chris's pick in scratch/the-botanic-
+                                    # gardens-and-the-rubber-that-remade-
+                                    # malaya-pronunciation/ (chayyan-1/
+                                    # chayyan-2/chayyan-3)
+    "Yan": "jˈɑːn",                # "yahn". Same best-guess status as
+                                    # "Chay" above
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
