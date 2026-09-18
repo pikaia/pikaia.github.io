@@ -1244,6 +1244,16 @@ PRONUNCIATION_OVERRIDES = {
                                     # reading, single obvious reading
     "Barack": "bərˈɑːk",           # "buh-RAHK" - single obvious reading
     "Michelle": "mɪʃˈɛl",          # "mih-SHEL" - single obvious reading
+
+    # Banana money post - plain English gaps.
+    "kg": "kˈɪləɡɹæmz",            # "kilograms" - the unit abbreviation,
+                                    # single obvious reading
+    "repulped": "ɹiːpˈʌlpt",       # "ree-PULPT" - misaki has "pulp" but
+                                    # not this inflected form, single
+                                    # obvious reading
+    "demonetisation": "dɪmˌɒnɪtaɪzˈeɪʃən",  # "dee-mon-it-eye-ZAY-shun" -
+                                    # British spelling (house style),
+                                    # single obvious reading
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
