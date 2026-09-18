@@ -313,5 +313,9 @@ What happened to the actual paper afterwards is its own small irony. Banks and b
 - [File:One thousand dollar note issued by the Japanese Government during the occupation of Malaya, North Borneo, Sarawak and Brunei (1944, obverse) - 02.jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:One_thousand_dollar_note_issued_by_the_Japanese_Government_during_the_occupation_of_Malaya,_North_Borneo,_Sarawak_and_Brunei_(1944,_obverse)_-_02.jpg>)
 - [File:MAL-M1b-Malaya-Japanese Occupation-One Cent ND (1942).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:MAL-M1b-Malaya-Japanese_Occupation-One_Cent_ND_(1942).jpg>)
 - [File:One hundred dollar note issued by the Japanese Government during the occupation of Malaya, North Borneo, Sarawak and Brunei (1944, obverse).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:One_hundred_dollar_note_issued_by_the_Japanese_Government_during_the_occupation_of_Malaya,_North_Borneo,_Sarawak_and_Brunei_(1944,_obverse).jpg>)
+- [File:PHI-108-Japanese Government (Philippines)-10 Pesos (1942).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:PHI-108-Japanese_Government_(Philippines)-10_Pesos_(1942).jpg>)
+- [File:BUR-16-Japanese occupation Burma-10 rupees (1942-44).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:BUR-16-Japanese_occupation_Burma-10_rupees_(1942-44).jpg>)
+- [File:NI-131-Imperial Japanese Government-10 Roepiah (1944).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:NI-131-Imperial_Japanese_Government-10_Roepiah_(1944).jpg>)
+- [File:OCE-4a-Oceania-Japanese Occupation-One Pound ND (1942).jpg — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:OCE-4a-Oceania-Japanese_Occupation-One_Pound_ND_(1942).jpg>)
 
 [← Back to all posts](/)
