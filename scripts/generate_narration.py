@@ -1254,6 +1254,41 @@ PRONUNCIATION_OVERRIDES = {
     "demonetisation": "dɪmˌɒnɪtaɪzˈeɪʃən",  # "dee-mon-it-eye-ZAY-shun" -
                                     # British spelling (house style),
                                     # single obvious reading
+
+    # John Crawfurd post.
+    "Cochinchina": "kˌoʊtʃɪntʃˈaɪnə",  # "koh-chin-CHY-nuh" - the old
+                                    # colonial name for southern Vietnam,
+                                    # single obvious reading (matches
+                                    # "China"'s own vowel)
+    "Amherst": "ˈæmərst",          # "AM-erst" - silent h, standard
+                                    # English surname/place-name reading,
+                                    # single obvious reading
+    "ratified": "rˈætɪfaɪd",       # unknown word (no lexicon entry) even
+                                    # though "ratify" alone presumably
+                                    # works - same narrow inflected-form
+                                    # gap as "rallied"/"tapped" above.
+                                    # Built by direct analogy with
+                                    # "verified"/"clarified"'s working
+                                    # "-ified" ending, single obvious
+                                    # reading
+    "Crawford": "krˈɔːfərd",       # "KRAW-ford" - unknown word (no
+                                    # lexicon entry), surprising for such
+                                    # a common surname; built from
+                                    # "Oxford"'s working "-ford" ending,
+                                    # single obvious reading. Distinct
+                                    # from "Crawfurd" (the man's actual,
+                                    # unflagged spelling) - this entry is
+                                    # only for the misspelled street names
+    "Temenggong": "təmˈɛŋɡɒŋ",     # NOT ear-verified yet - "tuh-MENG-gong",
+                                    # penultimate-stress guess matching
+                                    # standard Malay stress patterns; no
+                                    # authoritative IPA source found
+                                    # (Wiktionary/OED both lacking).
+                                    # 3 candidates synthesized to
+                                    # scratch/john-crawfurd-the-diplomat-
+                                    # scholar-who-secured-singapores-
+                                    # ground-pronunciation/ for Chris to
+                                    # ear-pick
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
