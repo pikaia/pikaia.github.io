@@ -75,6 +75,7 @@ Raffles Place, Raffles Hotel, Raffles Institution, a university, an MRT intercha
   var BRIDGE = "https://upload.wikimedia.org/wikipedia/commons/c/c9/Crawford_Bridge_-_2022-08-13.jpg";
   var ISTANA = "https://upload.wikimedia.org/wikipedia/commons/f/fe/Istana_kampong_glam_malay_heritage_centre_june_2009.jpg";
   var SETTLEMENT1828 = "https://upload.wikimedia.org/wikipedia/commons/4/44/Plan_of_the_British_settlement_of_Singapore_published_1828.jpg";
+  var CHRONICLE = "https://upload.wikimedia.org/wikipedia/commons/4/40/Singapore_Chronicle_and_Commercial_Register%2C_30_September_1837.png";
 
   var slides = [
     { src: HERO, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
@@ -106,7 +107,7 @@ Raffles Place, Raffles Hotel, Raffles Institution, a university, an MRT intercha
     { src: SETTLEMENT1828, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: MAP1825, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: HERO, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
-    { src: HERO, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
+    { src: CHRONICLE, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: ISTANA, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: HERO, type: "cover", zoom: [1.0, 1.06, 1.12], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: CRAWFURD, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
@@ -321,6 +322,11 @@ It's a dry legal document next to Raffles's landing, but it's the one that would
 
 ## Running what he'd just secured
 
+<div style="float: left; max-width: 260px; width: 42%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Singapore_Chronicle_and_Commercial_Register%2C_30_September_1837.png" alt="Front page of the Singapore Chronicle and Commercial Register, 30 September 1837" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A later issue of the Singapore Chronicle, 30 September 1837 — the paper Crawfurd edited and part-financed still running more than a decade after his own departure. (National Library Board Singapore, public domain, via Wikimedia Commons)</em>
+</div>
+
 Crawfurd's instructions were to cut spending, but he spent anyway, on reclamation work along the Singapore River that the settlement's traders had been asking for. He edited and part-financed the *Singapore Chronicle*, the island's first newspaper, whose first issue appeared on 1 January 1824 — seven months before his own treaty. He also moved against slavery within the settlement: the following month, in September 1824, he freed a group of enslaved women who had fled the Sultan's compound complaining of mistreatment, part of a broader push that left Singapore, unusually for a colonial free port of the era, without slavery in any form the local chiefs tried to maintain it under. Trade and population kept climbing through his three years in the post, building on the momentum Farquhar had already established. He left Singapore on 14 August 1826, closing out a tenure of just over three years, brief even by the standards of the men who preceded and followed him.
 
 <div style="clear: both;"></div>
@@ -349,5 +355,6 @@ Crawford Street, Crawford Lane, Crawford Bridge and Crawford Park are all that's
 - [File:Crawford Bridge - 2022-08-13](https://commons.wikimedia.org/wiki/File:Crawford_Bridge_-_2022-08-13.jpg), Wikimedia Commons
 - [File:Istana kampong glam malay heritage centre june 2009](https://commons.wikimedia.org/wiki/File:Istana_kampong_glam_malay_heritage_centre_june_2009.jpg), Wikimedia Commons
 - [File:Plan of the British settlement of Singapore published 1828](https://commons.wikimedia.org/wiki/File:Plan_of_the_British_settlement_of_Singapore_published_1828.jpg), Wikimedia Commons
+- [File:Singapore Chronicle and Commercial Register, 30 September 1837](https://commons.wikimedia.org/wiki/File:Singapore_Chronicle_and_Commercial_Register,_30_September_1837.png), Wikimedia Commons
 
 [← Back to all posts](/)

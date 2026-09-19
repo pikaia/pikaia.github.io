@@ -1,10 +1,11 @@
 """Video config for the John Crawfurd post.
 
-Seven images. HERO/BRIDGE/ISTANA are ordinary landscape photos and use
+Eight images. HERO/BRIDGE/ISTANA are ordinary landscape photos and use
 cover; FARQUHAR/CRAWFURD are portrait-oriented scans and use letterbox;
-MAP1825/SETTLEMENT1828 are period maps/plans with small text labels
-that cover would clip in the Watch widget's variable-aspect display,
-so both use letterbox too (same rule as charts/OSM maps).
+MAP1825/SETTLEMENT1828/CHRONICLE are period maps/plans/a newspaper
+page with small text labels that cover would clip in the Watch
+widget's variable-aspect display, so all three use letterbox too
+(same rule as charts/OSM maps).
 
   HERO         - "View of the Town and Roads of Singapore from the
                  Government Hill," published 1828 in Crawfurd's own
@@ -24,6 +25,12 @@ so both use letterbox too (same rule as charts/OSM maps).
   SETTLEMENT1828 - "Plan of the British Settlement of Singapore,"
                  published 1828 in Crawfurd's own book (Commons) -
                  the whole island plus the town plan
+  CHRONICLE    - Front page of the Singapore Chronicle and Commercial
+                 Register, 30 September 1837 (Commons, NLB) - a later
+                 issue of the paper Crawfurd edited and part-financed,
+                 added 2026-09-19 at Chris's request; swapped in for
+                 slide 29 (was HERO), no re-sync needed (image-only
+                 change, no narration/timing change)
 
 40 slides, 475.325s.
 """
@@ -38,6 +45,7 @@ IMAGES = {
     "BRIDGE": f"{_U}/c/c9/Crawford_Bridge_-_2022-08-13.jpg",
     "ISTANA": f"{_U}/f/fe/Istana_kampong_glam_malay_heritage_centre_june_2009.jpg",
     "SETTLEMENT1828": f"{_U}/4/44/Plan_of_the_British_settlement_of_Singapore_published_1828.jpg",
+    "CHRONICLE": f"{_U}/4/40/Singapore_Chronicle_and_Commercial_Register%2C_30_September_1837.png",
 }
 
 _CVZ = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
@@ -75,7 +83,7 @@ SLIDES = [
     {"img": "SETTLEMENT1828", **_LTBO}, # 26 s26  Lord Amherst ratified it that November
     {"img": "MAP1825", **_LTB},         # 27 s27  a dry legal document next to Raffles's landing
     {"img": "HERO", **_CVZ},            # 28 s28  Crawfurd's instructions, reclamation work
-    {"img": "HERO", **_CVZO},           # 29 s29  Singapore Chronicle, the first newspaper
+    {"img": "CHRONICLE", **_LTB},       # 29 s29  Singapore Chronicle, the first newspaper
     {"img": "ISTANA", **_CVZ},          # 30 s30  moved against slavery, freed the women
     {"img": "HERO", **_CVZ},            # 31 s31  trade and population kept climbing
     {"img": "CRAWFURD", **_LTBO},       # 32 s32  left Singapore, 14 August 1826
