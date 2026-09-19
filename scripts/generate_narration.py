@@ -1279,16 +1279,15 @@ PRONUNCIATION_OVERRIDES = {
                                     # from "Crawfurd" (the man's actual,
                                     # unflagged spelling) - this entry is
                                     # only for the misspelled street names
-    "Temenggong": "təmˈɛŋɡɒŋ",     # NOT ear-verified yet - "tuh-MENG-gong",
-                                    # penultimate-stress guess matching
-                                    # standard Malay stress patterns; no
-                                    # authoritative IPA source found
-                                    # (Wiktionary/OED both lacking).
-                                    # 3 candidates synthesized to
+    "Temenggong": "təmˈɛŋɡɒŋ",     # "tuh-MENG-gong", penultimate stress
+                                    # (standard Malay pattern) - confirmed
+                                    # by Chris by ear (2026-09-19),
+                                    # candidate 2 of 3, from
                                     # scratch/john-crawfurd-the-diplomat-
                                     # scholar-who-secured-singapores-
-                                    # ground-pronunciation/ for Chris to
-                                    # ear-pick
+                                    # ground-pronunciation/ (no
+                                    # authoritative IPA source found;
+                                    # Wiktionary/OED both lacking)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
