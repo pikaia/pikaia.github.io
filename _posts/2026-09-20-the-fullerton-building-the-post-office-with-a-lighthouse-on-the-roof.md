@@ -289,7 +289,7 @@ For about twenty years, a revolving beacon of 540,000 candelas swept the harbour
 
 ![A 1920s–30s postcard of the Fullerton Building across the harbour, with sampans in the foreground](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Singapore%2C_KITLV_1404891.tiff/lossy-page1-1280px-Singapore%2C_KITLV_1404891.tiff.jpg)
 
-*The Fullerton Building across the harbour, on a postcard published between 1920 and 1940. (Photo: anonymous, KITLV / Leiden University Library, CC BY 4.0, via Wikimedia Commons)*
+*The Fullerton Building across the harbour, on a postcard published between 1920 and 1940. (Photo: anonymous, KITLV, Leiden University Library, CC BY 4.0, via Wikimedia Commons)*
 
 ## The square before the building
 
@@ -304,7 +304,7 @@ The site was named for Robert Fullerton, the first Governor of the Straits Settl
 
 ![The Post Office and Exchange Building on Fullerton Square, circa 1890, with the Tan Kim Seng fountain at left](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/KITLV_-_103747_-_Post_and_exchange_office_in_Singapore_-_circa_1890.tif/lossy-page1-1280px-KITLV_-_103747_-_Post_and_exchange_office_in_Singapore_-_circa_1890.tif.jpg)
 
-*The Post Office and Exchange Building on Fullerton Square around 1890, with the Tan Kim Seng fountain at left. (Photo: unknown, KITLV / Leiden University Library, public domain, via Wikimedia Commons)*
+*The Post Office and Exchange Building on Fullerton Square around 1890, with the Tan Kim Seng fountain at left. (Photo: unknown, KITLV, Leiden University Library, public domain, via Wikimedia Commons)*
 
 By the 1920s the General Post Office was still working from older premises on Collyer Quay, and the government had bigger plans for the waterfront site. The buildings then on it, among them the old Singapore Club and government offices, were cleared to make way for something on a different scale.
 
