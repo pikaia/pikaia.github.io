@@ -1299,10 +1299,11 @@ PRONUNCIATION_OVERRIDES = {
                                     # class as "rallied"/"tapped"
     "Mapletree": "mˈeɪpəltɹiː",    # "MAY-pul-tree"
     "Sino": "sˈaɪnoʊ",             # "SY-noh" (Sino Land, the developer)
-    "Bedok": "bədˈɒk",             # NOT ear-verified yet - "buh-DOK",
-                                    # local Singapore reading; 3 candidates
-                                    # in scratch/the-fullerton-building-
-                                    # the-post-office-with-a-lighthouse-on-
+    "Bedok": "bədˈɒk",             # "buh-DOK", local Singapore reading -
+                                    # confirmed by Chris by ear
+                                    # (2026-09-20), candidate 1 of 3, from
+                                    # scratch/the-fullerton-building-the-
+                                    # post-office-with-a-lighthouse-on-
                                     # the-roof-pronunciation/
 }
 
