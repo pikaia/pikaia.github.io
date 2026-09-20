@@ -1305,6 +1305,24 @@ PRONUNCIATION_OVERRIDES = {
                                     # scratch/the-fullerton-building-the-
                                     # post-office-with-a-lighthouse-on-
                                     # the-roof-pronunciation/
+
+    # 1915 Singapore Mutiny post - single-obvious-reading unless noted.
+    "Alexandra": "ˌalɪɡzˈɑːndɹə",  # "al-ig-ZAHN-druh" (Alexandra Barracks)
+    "Elliott": "ˈɛliət",           # "EL-ee-ut"
+    "Montcalm": "mɒntkˈɑːm",       # "mont-KAHM" (French cruiser)
+    "Otowa": "ˌoʊtˈoʊwɑː",         # "oh-TOH-wah" (Japanese cruiser)
+    "court-martialled": "kˈɔːtmˈɑːʃəld",  # "COURT-MAR-shuld"
+    "Outram": "ˈuːtɹəm",           # "OOT-rum" (Outram Road)
+    "Walton": "wˈɔːltən",          # "WAWL-tun"
+    "Ghadar": "ɡədˈɑː",            # NOT ear-verified yet - "guh-DAH"
+                                    # (Punjabi/Hindi "revolt"); 3
+                                    # candidates in scratch/the-1915-
+                                    # singapore-mutiny-the-week-a-
+                                    # regiment-rose-on-chinese-new-year-
+                                    # pronunciation/
+    "Bidadari": "bɪdɑːdˈɑːri",     # NOT ear-verified yet - "bi-dah-
+                                    # DAH-ri" (Malay, Bidadari Cemetery);
+                                    # candidates in the same folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
