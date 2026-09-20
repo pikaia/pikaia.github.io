@@ -1288,6 +1288,22 @@ PRONUNCIATION_OVERRIDES = {
                                     # ground-pronunciation/ (no
                                     # authoritative IPA source found;
                                     # Wiktionary/OED both lacking)
+
+    # Fullerton Building post - all single-obvious-reading unless noted.
+    "Collyer": "kˈɒljə",           # "COL-yer" (Collyer Quay)
+    "Percy": "pˈɜːsi",             # "PUR-see"
+    "Dowdeswell": "dˈaʊdzwɛl",     # "DOWDZ-wel" (the architect's surname)
+    "BiblioAsia": "bˈɪblioʊˌeɪʒə", # "BIB-lee-oh-AY-zhuh" (NLB's magazine)
+    "Hugh": "hjˈuː",               # "hyoo" - misaki has no entry
+    "copied": "kˈɒpid",            # "COP-eed" - inflected-form gap, same
+                                    # class as "rallied"/"tapped"
+    "Mapletree": "mˈeɪpəltɹiː",    # "MAY-pul-tree"
+    "Sino": "sˈaɪnoʊ",             # "SY-noh" (Sino Land, the developer)
+    "Bedok": "bədˈɒk",             # NOT ear-verified yet - "buh-DOK",
+                                    # local Singapore reading; 3 candidates
+                                    # in scratch/the-fullerton-building-
+                                    # the-post-office-with-a-lighthouse-on-
+                                    # the-roof-pronunciation/
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1948,7 +1964,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 # "catch it before it ships instead of by ear" idea.
 KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
-    "EDB", "FMSR", "FX", "GDP", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "MP", "MRT",
+    "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
     "UOB", "UOL", "US",
 }
