@@ -54,7 +54,7 @@ Description:
 For about twenty years, a revolving beacon of 540,000 candelas swept the harbour from the roof of Singapore's General Post Office, visible from ships some 29 kilometres away. Many people who walk past the building today, now a luxury hotel, have never heard that it ever guided anyone anywhere. #Shorts
 
 Full story: https://da.gd/dmPGf
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/cMBLeSPzsg8
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
