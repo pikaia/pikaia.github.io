@@ -11,7 +11,7 @@ Three more items from the mutiny and its aftermath. Photographs of the event its
 
 ![The French armoured cruiser Montcalm at sea, 1902](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cruiser_Montcalm_-_Page%27s_Magazine_1902.png/1280px-Cruiser_Montcalm_-_Page%27s_Magazine_1902.png)
 
-*The French armoured cruiser Montcalm, one of the ships that landed men in Singapore in February 1915, in an illustration from Page's Magazine, 1902. (Public domain, via Wikimedia Commons)*
+*The French armoured cruiser Montcalm, one of the ships that landed men in Singapore in February 1915, in an illustration from Page's Magazine, 1902. (Page's Magazine, public domain, via Wikimedia Commons)*
 
 ### The report of the executions
 

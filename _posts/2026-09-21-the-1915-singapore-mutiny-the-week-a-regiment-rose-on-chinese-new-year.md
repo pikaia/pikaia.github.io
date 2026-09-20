@@ -294,7 +294,7 @@ On the afternoon of 15 February 1915, which was Chinese New Year, about 800 Indi
 
 ![A 1915 photograph of Japanese sailors drawn up in line after the mutiny at Singapore](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/REVIEW_OF_JAPANESE_SAILORS_ALTER_THE_MUTINY_AT_SINGAPORE%2C_1915.png/1280px-REVIEW_OF_JAPANESE_SAILORS_ALTER_THE_MUTINY_AT_SINGAPORE%2C_1915.png)
 
-*"Review of Japanese sailors after the mutiny at Singapore," from H. W. Wilson's "The Great War," 1916. (Public domain, via Wikimedia Commons)*
+*"Review of Japanese sailors after the mutiny at Singapore," from H. W. Wilson's "The Great War," 1916. (H. W. Wilson, public domain, via Wikimedia Commons)*
 
 ## A regiment with a grievance
 
@@ -328,7 +328,7 @@ Help came from outside the island. On 17 February, ships arrived: the French cru
 
 ![The Japanese cruiser Otowa, before the First World War](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Japanese_cruiser_Otowa.jpg/1280px-Japanese_cruiser_Otowa.jpg)
 
-*The Japanese cruiser Otowa, one of the two Japanese warships sent to Singapore, in a pre-war photograph. (Public domain, via Wikimedia Commons)*
+*The Japanese cruiser Otowa, one of the two Japanese warships sent to Singapore, in a pre-war photograph. (Unknown photographer, public domain, via Wikimedia Commons)*
 
 By the evening of 17 February, 432 mutineers had been captured. The Shropshire Light Infantry arrived from Rangoon on 20 February. Some of the mutineers had fled into Johor, where a group was picked up the same day. The fighting was largely over within a week, though a last skirmish was reported on 25 February.
 
