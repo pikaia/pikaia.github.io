@@ -50,7 +50,7 @@ Description:
 On the afternoon of 15 February 1915, which was Chinese New Year, about 800 Indian soldiers of the 5th Light Infantry were stationed at Alexandra Barracks, some of them guarding German prisoners of war in the middle of a world war. By evening, some of them had turned their rifles on their own officers and on civilians. It took the better part of a week, and warships from Japan, France and Russia, to put it down. #Shorts
 
 Full story: https://da.gd/nEBxnK
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/9T-Yf3F4dJ0
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
