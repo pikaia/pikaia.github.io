@@ -1314,15 +1314,16 @@ PRONUNCIATION_OVERRIDES = {
     "court-martialled": "kˈɔːtmˈɑːʃəld",  # "COURT-MAR-shuld"
     "Outram": "ˈuːtɹəm",           # "OOT-rum" (Outram Road)
     "Walton": "wˈɔːltən",          # "WAWL-tun"
-    "Ghadar": "ɡədˈɑː",            # NOT ear-verified yet - "guh-DAH"
-                                    # (Punjabi/Hindi "revolt"); 3
-                                    # candidates in scratch/the-1915-
-                                    # singapore-mutiny-the-week-a-
-                                    # regiment-rose-on-chinese-new-year-
-                                    # pronunciation/
-    "Bidadari": "bɪdɑːdˈɑːri",     # NOT ear-verified yet - "bi-dah-
-                                    # DAH-ri" (Malay, Bidadari Cemetery);
-                                    # candidates in the same folder
+    "Ghadar": "ɡədˈɑː",            # "guh-DAH" (Punjabi/Hindi "revolt") -
+                                    # confirmed by Chris by ear
+                                    # (2026-09-21), candidate 1 of 3, from
+                                    # scratch/the-1915-singapore-mutiny-
+                                    # the-week-a-regiment-rose-on-chinese-
+                                    # new-year-pronunciation/
+    "Bidadari": "bɪdɑːdˈɑːri",     # "bi-dah-DAH-ri" (Malay, Bidadari
+                                    # Cemetery) - confirmed by Chris by ear
+                                    # (2026-09-21), candidate 1 of 3, same
+                                    # folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
