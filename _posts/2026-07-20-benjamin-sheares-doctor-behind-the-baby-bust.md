@@ -426,7 +426,14 @@ In 1969, Singapore's Parliament passed the Voluntary Sterilisation Act without a
 
 *Benjamin Sheares in 1951, the year after he became the first local professor of obstetrics and gynaecology in Singapore. (Photo: Singapore Press Holdings / Wikimedia Commons, public domain)*
 
+<div style="float: left; max-width: 280px; width: 46%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/66/King_Edward_VII_College_of_Medicine%2C_opened_on_15_February_1926_by_Governor_of_the_Straits_Settlements%2C_Sir_Laurence_Nunns_Guillemard.jpg" alt="The King Edward VII College of Medicine, Singapore, 1926" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">The King Edward VII College of Medicine, whose building was opened on 15 February 1926, three years before Sheares graduated. (Photo: National Archives of Singapore, public domain, via Wikimedia Commons)</em>
+</div>
+
 Sheares' rise inside medicine came first, and it was itself a quiet barrier-breaker. Born in 1907 to a Chinese mother and Eurasian father — a marriage the colonial press liked to hold up as a model of multiracial harmony — he graduated from the King Edward VII College of Medicine in 1929 and built his career at Kandang Kerbau Hospital and Singapore General Hospital. In 1950 he became professor of obstetrics and gynaecology at the University of Malaya in Singapore, the first local doctor to hold the post in a system that had, until then, reserved it for colonial appointees. He'd go on to be remembered as the father of obstetrics and gynaecology in Singapore, credited with standardising the lower Caesarean section locally and developing a technique for constructing an artificial vagina.
+
+<div style="clear: both;"></div>
 
 <div style="float: left; max-width: 320px; width: 48%; margin: 0.25em 1.5em 1em 0;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Kandang_Kerbau_Hospital_group_photo.jpg" alt="Group photo of nurses at Kandang Kerbau Hospital, 1950, with Benjamin Sheares seated among them" style="width: 100%; display: block; border-radius: 4px;">
@@ -648,6 +655,7 @@ The government has spent the years since trying to undo exactly what Sheares' ge
 - [Population planning in Singapore — Wikipedia](https://en.wikipedia.org/wiki/Population_planning_in_Singapore)
 - [Demographics of Singapore — Wikipedia](https://en.wikipedia.org/wiki/Demographics_of_Singapore)
 - [File:Benjamin Sheares, 1951.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares,_1951.jpg)
+- [File:King Edward VII College of Medicine, opened on 15 February 1926 by Governor of the Straits Settlements, Sir Laurence Nunns Guillemard.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:King_Edward_VII_College_of_Medicine,_opened_on_15_February_1926_by_Governor_of_the_Straits_Settlements,_Sir_Laurence_Nunns_Guillemard.jpg)
 - [File:Kandang Kerbau Hospital group photo.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kandang_Kerbau_Hospital_group_photo.jpg)
 - [File:Benjamin Sheares at the University of Malaya in Singapore, 1951.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_at_the_University_of_Malaya_in_Singapore,_1951.jpg)
 - [File:Benjamin Sheares and Yeo Seh Geok, 1939.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Benjamin_Sheares_and_Yeo_Seh_Geok,_1939.jpg)
