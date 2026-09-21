@@ -1345,6 +1345,47 @@ PRONUNCIATION_OVERRIDES = {
                                     # confirmed by Chris by ear
                                     # (2026-09-21), candidate 2 of 2, same
                                     # folder
+
+    # Japanese fishermen post batch (2026-09-21). Japanese / Okinawan names
+    # and terms, single-obvious readings (vowels "ɑː"/"iː"/"uː", "Q"=oh, per
+    # the existing "Miyako" entry); "Taichong"/"Matos" ear-picked.
+    "Prewar": "pɹˈiːwɔː",         # capitalised twin of "prewar" above
+    "Hiroshi": "hiːɹˈQʃiː",       # "hee-ROH-shee"
+    "Shimizu": "ʃiːmˈiːzuː",      # "shee-MEE-zoo"
+    "Takayama": "tɑːkɑːjˈɑːmɑː",  # "tah-kah-YAH-mah"
+    "Itarō": "iːtˈɑːɹQ",          # "ee-TAH-roh"
+    "Ishizu": "iːʃˈiːzuː",        # "ee-SHEE-zoo"
+    "Gyogyō": "ɡjˈQɡjQ",          # "GYOH-gyoh" ("fishery")
+    "Kōshi": "kˈQʃiː",            # "KOH-shee" (limited partnership)
+    "Kongsi": "kˈɒŋsiː",          # "KONG-see" (Hokkien/Malay "company")
+    "Itoman": "iːtˈQmɑːn",        # "ee-TOH-mahn", Okinawa
+    "Okinawan": "ˌɒkɪnˈɑːwən",    # "ok-in-AH-wun"
+    "muro-ami": "mˌuːɹQˈɑːmiː",   # "moo-roh-AH-mee"
+    "Muro-ami": "mˌuːɹQˈɑːmiː",
+    "sabani": "sɑːbˈɑːniː",       # "sah-BAH-nee", Okinawan boat
+    "Caesio": "sˈiːziQ",          # "SEE-zee-oh", the fusilier genus
+    "kelongs": "kəlˈɒŋz",         # "kuh-LONGZ" (Malay kelong, stake trap)
+    "katti": "kˈætiː",            # "KAT-ee"
+    "katties": "kˈætiːz",
+    "Birtwistle": "bˈɜːtwɪsəl",   # "BURT-wiss-ul"
+    "Eifuku": "ˈAfuːkuː",         # "AY-foo-koo"
+    "Eifuku's": "ˈAfuːkuːz",
+    "Rhu": "ɹˈuː",                # "roo" - Tanjong Rhu ("Tanjong" above)
+    "karayuki-san": "kˌɑːɹɑːjˈuːkiːsˌɑːn",  # "kah-rah-YOO-kee-sahn"
+    "Ōshiro": "ˌQʃˈiːɹQ",         # "oh-SHEE-roh"
+    "Gumi": "ɡˈuːmiː",            # "GOO-mee" ("group", firm suffix)
+    "Kaneshiro": "kɑːnˈeʃiːɹQ",   # "kah-NEH-shee-roh"
+    "Besi": "bˈɛsiː",             # "BEH-see" - Bukit Besi ("Bukit" above)
+    "Dungun": "dˈʊŋʊn",           # "DOONG-oon"
+    "Kōgyō": "kˈQɡjQ",            # "KOH-gyoh" (Nippon Kōgyō)
+    "Rowena": "ɹQˈiːnə",          # "roh-EE-nuh"
+    "Kofuku": "kˈQfuːkuː",        # "KOH-foo-koo"
+    "Edsall": "ˈɛdsɔːl",          # "ED-sawl" (USS Edsall)
+    "Taichong": "tˈIʧɒŋ",         # "TIE-chong" - Chris ear-picked (2026-09-21),
+                                   # candidate 1 of 3, from scratch/the-
+                                   # japanese-fishermen-pronunciation/
+    "Matos": "mˈɑːtɒs",           # "MAH-tos" (de Matos) - Chris ear-picked
+                                   # (2026-09-21), candidate 1 of 3, same folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2007,7 +2048,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US",
+    "UOB", "UOL", "US", "USS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
