@@ -1324,6 +1324,25 @@ PRONUNCIATION_OVERRIDES = {
                                     # Cemetery) - confirmed by Chris by ear
                                     # (2026-09-21), candidate 1 of 3, same
                                     # folder
+
+    # Song Ong Siang post - single-obvious-reading unless noted.
+    "Guthrie": "ɡˈʌθɹi",           # "GUTH-ree" (Guthrie Scholarship)
+    "Aitken": "ˈeɪtkən",           # "AYT-kin" (James Aitken)
+    "Aitken's": "ˈeɪtkənz",        # possessive, needs its own entry
+    "Romanised": "ɹˈoʊmənaɪzd",    # "ROH-muh-nized" (British spelling)
+    "Bintang": "bɪntˈaŋ",          # "bin-TANG" (Malay "star")
+    "Murray": "mˈʌɹi",             # "MUR-ee"
+    "Paul": "pˈɔːl",               # "pawl" - misaki has no entry
+    "Wheatley": "wˈiːtli",         # "WHEET-lee" (the scholar Paul Wheatley)
+    "poorer": "pˈɔːɹə",            # "PAW-ruh" - comparative-form gap
+    "Siang": "sjˈaŋ",              # NOT ear-verified yet - "syang", the
+                                    # Hokkien given name (Ong Siang);
+                                    # candidates in scratch/song-ong-siang-
+                                    # the-chronicler-who-became-singapores-
+                                    # first-chinese-knight-pronunciation/
+    "Kiam": "kjˈam",               # NOT ear-verified yet - "kyam" (Song
+                                    # Hoot Kiam, the father); low stakes,
+                                    # single mention, same folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
