@@ -361,9 +361,16 @@ More than 200 men were court-martialled. Forty-seven were executed, about 64 wer
 
 *Outram Prison, then called Pearl's Hill Prison, in the 1850s. Its walls were the setting for the 1915 executions. (Unknown photographer, public domain, via Wikimedia Commons)*
 
+<div style="float: left; max-width: 300px; width: 44%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/1915_Singapore_Mutiny.jpg" alt="A line of men in white against the wall of Outram Road Prison, captioned as the convicted mutineers before their execution" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A line of men against the prison wall at Outram Road, captioned in a 1995 collection of documents as the convicted mutineers before their execution. The print is grainy and its exact date is not established. (Tilak Raj Sareen, Secret Documents on Singapore Mutiny 1915, public domain, via Wikimedia Commons)</em>
+</div>
+
 The Straits Times described the largest batch. On 25 March, the sentences of 45 mutineers were read out in public outside the prison walls, and the 22 who had been condemned to death were executed on the spot. The paper estimated a crowd of 15,000 watching from the slopes of Sepoy Lines. The firing party was 110 men of the Singapore Volunteer Corps, and the sentences were translated into Malay, Chinese and Hindustani for the audience. Other accounts name a different firing party, and which men fired on which day is still disputed.
 
 The full trial records were sealed for about fifty years.
+
+<div style="clear: both;"></div>
 
 ## What changed, and what is remembered
 
