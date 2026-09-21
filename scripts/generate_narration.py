@@ -1335,14 +1335,16 @@ PRONUNCIATION_OVERRIDES = {
     "Paul": "pˈɔːl",               # "pawl" - misaki has no entry
     "Wheatley": "wˈiːtli",         # "WHEET-lee" (the scholar Paul Wheatley)
     "poorer": "pˈɔːɹə",            # "PAW-ruh" - comparative-form gap
-    "Siang": "sjˈaŋ",              # NOT ear-verified yet - "syang", the
-                                    # Hokkien given name (Ong Siang);
-                                    # candidates in scratch/song-ong-siang-
-                                    # the-chronicler-who-became-singapores-
+    "Siang": "sjˈɑːŋ",             # "syahng", the Hokkien given name
+                                    # (Ong Siang) - confirmed by Chris by
+                                    # ear (2026-09-21), candidate 2 of 3,
+                                    # from scratch/song-ong-siang-the-
+                                    # chronicler-who-became-singapores-
                                     # first-chinese-knight-pronunciation/
-    "Kiam": "kjˈam",               # NOT ear-verified yet - "kyam" (Song
-                                    # Hoot Kiam, the father); low stakes,
-                                    # single mention, same folder
+    "Kiam": "kjˈɑːm",              # "kyahm" (Song Hoot Kiam, the father) -
+                                    # confirmed by Chris by ear
+                                    # (2026-09-21), candidate 2 of 2, same
+                                    # folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
