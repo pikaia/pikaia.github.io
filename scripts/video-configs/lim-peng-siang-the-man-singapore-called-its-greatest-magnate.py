@@ -18,8 +18,17 @@ portrait-oriented scans repeat with different pans/variants throughout.
               used here for variety
   WEEBIN    - Wee Bin, Lim's maternal grandfather, from the same 1923
               book (Commons, CC BY-SA 4.0) - letterbox, small
+  HOHONGBANK - Ho Hong Bank's own building, its name visible over the
+              door, in the background of a 1929 street-paving photo in
+              Batavia (Commons, public domain, Chris's own find) -
+              letterbox, the sign is small in frame
+  CCBANK    - The Singapore Free Press, 1 July 1929, page 4 (whole
+              page, local scan, NewspaperSG / SPH, public domain by
+              age), reporting the Chinese Commercial Bank's Chulia
+              Street rebuild alongside the Oversea-Chinese Bank -
+              letterbox
 
-42 slides, 453.825s.
+44 slides, 488.75s.
 """
 
 _U = "https://upload.wikimedia.org/wikipedia/commons"
@@ -31,6 +40,8 @@ IMAGES = {
     "SHIPYARD": f"{_U}/8/85/Tanjong_Rhu_shipyard_in_1932.png",
     "AMOY": f"{_U}/thumb/e/e8/Amoy_town_and_harbour_seen_from_Kalangsu_Wellcome_L0034288.jpg/1920px-Amoy_town_and_harbour_seen_from_Kalangsu_Wellcome_L0034288.jpg",
     "WEEBIN": f"{_U}/e/ee/Wee_Bin.jpg",
+    "HOHONGBANK": f"{_U}/8/85/Collectie_NMvWereldculturen%2C_TM-60032202%2C_Foto%2C_%27Asfaltering_van_het_stationsplein_bij_het_in_aanbouw_zijnde_spoorwegstation_Kota%2C_Batavia%27%2C_fotograaf_onbekend%2C_1929.jpg",
+    "CCBANK": "/assets/images/singapore-free-press-1929-07-01-page-4.jpg",
 }
 
 _LTBA = {"type": "letterbox", "zoom": [1.0, 1.04, 1.08], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
@@ -39,6 +50,18 @@ _LTBB = {"type": "letterbox", "zoom": [1.08, 1.04, 1.0], "pan": [(0.5, 0.5)] * 3
 _CVA = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.42)] * 3, "ease": "ease-in-out"}
 _CVB = {"type": "cover", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.45)] * 3, "ease": "ease-out"}
 _CVC = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.45)] * 3, "ease": "ease-in-out"}
+
+# CCBANK is the one whole-page ST/SFP scan in this post. A whole page shown
+# via letterbox (the usual choice for a portrait scan) is too small to read
+# at all, and the point of a whole-page image is compliance for the hosted
+# asset, not that every part of the page must stay visible on screen - so
+# these two slides use "cover" instead, with a real pan/zoom that reveals
+# the actual "New Bank Building" article over the two slides' combined
+# dwell time (checked by rendering test frames with cover_crop() directly,
+# not guessed from pixel math). The source file in assets/images/ is still
+# the untouched whole page.
+_CCBANK1 = {"type": "cover", "zoom": [1.15, 1.9, 2.4], "pan": [(0.65, 0.15), (0.85, 0.08), (0.95, 0.05)], "ease": "ease-in-out"}
+_CCBANK2 = {"type": "cover", "zoom": [2.4, 2.5, 2.6], "pan": [(0.95, 0.05), (0.92, 0.18), (0.9, 0.3)], "ease": "ease-in-out"}
 
 SLIDES = [
     {"img": "BOATQUAY", **_CVA}, # s0  title
@@ -59,8 +82,8 @@ SLIDES = [
     {"img": "BOATQUAY", **_CVB}, # s15 buying a bankrupt rival's ships
     {"img": "WEEBIN", **_LTBB},  # s16 founded by his own grandfather
     {"img": "BOATQUAY", **_CVC}, # s17 Ho Hong kept adding pieces
-    {"img": "PORTRAIT", **_LTBB}, # s18 Chinese Commercial Bank, Ho Hong Bank
-    {"img": "COVER", **_LTBA},   # s19 Ho Hong Bank paid-up capital
+    {"img": "HOHONGBANK", **_LTBA}, # s18 Chinese Commercial Bank, Ho Hong Bank
+    {"img": "HOHONGBANK", **_LTBB}, # s19 Ho Hong Bank paid-up capital, Batavia/Palembang
     {"img": "AMOY", **_CVB},     # s20 cement works Ulu Pandan
     {"img": "BOATQUAY", **_CVA}, # s21 unusual combination
     {"img": "COVER", **_LTBB},   # s22 2023 study, industrialisation
@@ -73,16 +96,18 @@ SLIDES = [
     {"img": "BOATQUAY", **_CVC}, # s29 Depression broke the momentum
     {"img": "SHIPYARD", **_LTBA}, # s30 shipping sold, mills, cement closed
     {"img": "COVER", **_LTBB},   # s31 heavier blow came from banking
-    {"img": "COVER", **_LTBA},   # s32 31 Oct 1932, merger into OCBC
-    {"img": "AMOY", **_CVB},     # s33 remembered as Tan Ean Kiam, Lee Kong Chian
-    {"img": "PORTRAIT", **_LTBB}, # s34 Lim not part of that story
-    {"img": "COVER", **_LTBA},   # s35 profiled in 1923 book
-    {"img": "COVER", **_LTBB},   # s36 record + 1936 profile
-    {"img": "PORTRAIT", **_LTBA}, # s37 less scholarly attention
-    {"img": "BOATQUAY", **_CVA}, # s38 died 21 March 1944
-    {"img": "SHIPYARD", **_LTBB}, # s39 Peng Siang Quay
-    {"img": "BOATQUAY", **_CVB}, # s40 why it matters today
-    {"img": "PORTRAIT", **_LTBA}, # s41 nobody today could tell you his name
+    {"img": "CCBANK", **_CCBANK1}, # s32 1929 Chulia Street rebuild
+    {"img": "CCBANK", **_CCBANK2}, # s33 modernising for the same future
+    {"img": "COVER", **_LTBA},   # s34 31 Oct 1932, merger into OCBC
+    {"img": "AMOY", **_CVB},     # s35 remembered as Tan Ean Kiam, Lee Kong Chian
+    {"img": "PORTRAIT", **_LTBB}, # s36 Lim not part of that story
+    {"img": "COVER", **_LTBA},   # s37 profiled in 1923 book
+    {"img": "COVER", **_LTBB},   # s38 record + 1936 profile
+    {"img": "PORTRAIT", **_LTBA}, # s39 less scholarly attention
+    {"img": "BOATQUAY", **_CVA}, # s40 died 21 March 1944
+    {"img": "SHIPYARD", **_LTBB}, # s41 Peng Siang Quay
+    {"img": "BOATQUAY", **_CVB}, # s42 why it matters today
+    {"img": "PORTRAIT", **_LTBA}, # s43 nobody today could tell you his name
 ]
 
 SCHEDULE = [
@@ -90,11 +115,11 @@ SCHEDULE = [
     (44.85, 5), (58.675, 6), (67.65, 7), (70.975, 8), (82.25, 9),
     (96.7, 10), (105.85, 11), (110.0, 12), (118.3, 13), (131.075, 14),
     (148.25, 15), (158.475, 16), (163.65, 17), (168.1, 18), (187.6, 19),
-    (194.5, 20), (206.75, 21), (221.5, 22), (239.225, 23), (243.2, 24),
-    (263.975, 25), (272.85, 26), (281.625, 27), (293.475, 28), (304.625, 29),
-    (307.6, 30), (326.925, 31), (329.925, 32), (347.35, 33), (359.4, 34),
-    (368.375, 35), (380.775, 36), (389.35, 37), (407.025, 38), (415.55, 39),
-    (425.55, 40), (443.15, 41),
+    (203.45, 20), (215.7, 21), (230.45, 22), (248.175, 23), (252.15, 24),
+    (272.925, 25), (281.8, 26), (290.575, 27), (302.425, 28), (313.575, 29),
+    (316.55, 30), (335.875, 31), (338.875, 32), (356.275, 33), (364.85, 34),
+    (382.275, 35), (394.325, 36), (403.3, 37), (415.7, 38), (424.275, 39),
+    (441.95, 40), (450.475, 41), (460.475, 42), (478.075, 43),
 ]
-TOTAL_DURATION = 453.825
+TOTAL_DURATION = 488.75
 TIMING_JSON = "audio/lim-peng-siang-the-man-singapore-called-its-greatest-magnate.timing.json"

@@ -521,6 +521,27 @@ crops the chart's title, edge labels and footnote off the sides.
 Photos still use `cover` — a slightly cropped photo is fine, a cropped
 label is not.
 
+**A whole-page newspaper scan (the ST/SFP whole-page convention in
+CLAUDE.md) is the one exception to "portrait scan -> letterbox" above
+— use `cover` with a real pan/zoom instead (confirmed 2026-09-22, the
+Lim Peng Siang post, Chris's suggestion).** The whole-page requirement
+is about what image file gets hosted in `assets/images/` — the
+compliance basis needs the *asset* to be the untouched full page, not
+that every part of the page must stay on screen throughout the slide.
+Shown via `letterbox` at 16:9, a full page is shrunk so small nothing
+on it is legible anyway, which defeats the point of using a real photo
+of the article at all. Use `cover` instead, with a `zoom`/`pan` that
+starts wide enough to read as "a newspaper page" and moves in on the
+actual headline/article by the end of the slide's dwell time (chain
+two slide entries of the same image for a longer reveal — pan from the
+headline down to a photo/illustration on the second one, as in the Lim
+Peng Siang config's `_CCBANK1`/`_CCBANK2`). Work out the pan/zoom
+values by rendering real test frames, not by guessing pixel fractions
+blind: load the page with PIL, call `cover_crop()` from
+`watch_video_lib.py` directly with candidate `zoom`/`pan_x`/`pan_y`
+values, and look at the saved frame before committing — see that
+config's own comment for the worked example.
+
 Write one `SLIDES`/`SCHEDULE` entry per image *appearance* (an image
 can repeat with different zoom/pan for a bookend effect — two separate
 entries pointing at the same `IMAGES` key). Aim for roughly 8-15s+ dwell
