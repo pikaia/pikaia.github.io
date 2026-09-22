@@ -61,7 +61,7 @@ _CVC = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.45)] * 3, "
 # not guessed from pixel math). The source file in assets/images/ is still
 # the untouched whole page.
 _CCBANK1 = {"type": "cover", "zoom": [1.15, 1.9, 2.4], "pan": [(0.65, 0.15), (0.85, 0.08), (0.95, 0.05)], "ease": "ease-in-out"}
-_CCBANK2 = {"type": "cover", "zoom": [2.4, 2.5, 2.6], "pan": [(0.95, 0.05), (0.92, 0.18), (0.9, 0.3)], "ease": "ease-in-out"}
+_CCBANK2 = {"type": "cover", "zoom": [2.4, 2.45, 2.5], "pan": [(0.95, 0.05), (0.97, 0.12), (1.0, 0.18)], "ease": "ease-in-out"}
 
 SLIDES = [
     {"img": "BOATQUAY", **_CVA}, # s0  title
