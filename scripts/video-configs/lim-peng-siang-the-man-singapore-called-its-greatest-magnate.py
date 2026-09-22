@@ -60,8 +60,15 @@ _CVC = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.45)] * 3, "
 # dwell time (checked by rendering test frames with cover_crop() directly,
 # not guessed from pixel math). The source file in assets/images/ is still
 # the untouched whole page.
-_CCBANK1 = {"type": "cover", "zoom": [1.15, 1.9, 2.4], "pan": [(0.65, 0.15), (0.85, 0.08), (0.95, 0.05)], "ease": "ease-in-out"}
-_CCBANK2 = {"type": "cover", "zoom": [2.4, 2.1, 1.8], "pan": [(0.95, 0.05), (0.98, 0.10), (1.0, 0.15)], "ease": "ease-in-out"}
+#
+# zoom=1.4, pan=(1.0, 0.08) is the target framing (Chris, 2026-09-22): the
+# headline text and the full building illustration both fit in frame
+# together at that zoom/pan, with the masthead's blank margin above the
+# headline cropped off. Tighter zoom (~2.4) can show either the headline
+# or the illustration well but not both - the article's own proportions
+# (tall and narrow) don't fit a 16:9 frame at a legible tight crop.
+_CCBANK1 = {"type": "cover", "zoom": [1.15, 1.3, 1.4], "pan": [(0.65, 0.15), (0.9, 0.1), (1.0, 0.08)], "ease": "ease-in-out"}
+_CCBANK2 = {"type": "cover", "zoom": [1.4, 1.45, 1.5], "pan": [(1.0, 0.08), (1.0, 0.15), (1.0, 0.22)], "ease": "ease-in-out"}
 
 SLIDES = [
     {"img": "BOATQUAY", **_CVA}, # s0  title
