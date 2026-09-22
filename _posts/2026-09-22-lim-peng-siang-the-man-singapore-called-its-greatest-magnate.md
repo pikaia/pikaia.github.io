@@ -198,7 +198,7 @@ In July 1936, a reporter for a Singapore Sunday paper called Lim Peng Siang one 
       el._chartUpdate = chart.update;
     } else if (s.type === 'letterbox') {
       var bg = document.createElement('div');
-      bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
+      bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');transform-origin:' + s.pan[0] + ';';
       bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
       var fg = document.createElement('div');
       fg.style.cssText = 'position:absolute;inset:6%;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:url(\'' + s.src + '\');';
@@ -206,13 +206,26 @@ In July 1936, a reporter for a Singapore Sunday paper called Lim Peng Siang one 
       el._animTargets = [bg];
     } else {
       var layer = document.createElement('div');
-      layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');';
+      layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');transform-origin:' + s.pan[0] + ';';
       layer.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
       el.appendChild(layer);
       el._animTargets = [layer];
     }
     if (s.type !== 'chart') {
-      styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\n';
+      // transform-origin is keyframed alongside transform/background-position,
+      // always matching that keyframe's own pan value - not left at CSS's
+      // default 50% 50% (center). scale() magnifies around transform-origin,
+      // so a default center origin makes zoom drift away from wherever pan
+      // moved the crop, worse the further pan sits from center and the
+      // higher the zoom - for an aggressive pan (e.g. a newspaper-page
+      // "cover" slide targeting one corner) this made the live widget end
+      // up centered on the opposite side of the image from the Python
+      // renderer's own crop, a real bug, not a stale-cache issue (caught by
+      // Chris on the Lim Peng Siang post, 2026-09-22, isolated with a
+      // static-keyframe CSS-only reproduction before this fix). The Python
+      // renderer (watch_video_lib.py) is unaffected - it does its own pixel
+      // crop, no CSS transform-origin concept applies there.
+      styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; transform-origin: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; transform-origin: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; transform-origin: ' + s.pan[2] + '; } }\n';
     }
     stage.appendChild(el);
     return el;
