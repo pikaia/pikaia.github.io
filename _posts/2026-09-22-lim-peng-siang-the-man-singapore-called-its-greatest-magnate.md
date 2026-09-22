@@ -111,7 +111,7 @@ In July 1936, a reporter for a Singapore Sunday paper called Lim Peng Siang one 
     { src: SHIPYARD, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: COVER, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
     { src: CCBANK, type: "cover", zoom: [1.15, 1.9, 2.4], pan: ["65% 15%", "85% 8%", "95% 5%"], ease: "ease-in-out" },
-    { src: CCBANK, type: "cover", zoom: [2.4, 2.45, 2.5], pan: ["95% 5%", "97% 12%", "100% 18%"], ease: "ease-in-out" },
+    { src: CCBANK, type: "cover", zoom: [2.4, 2.1, 1.8], pan: ["95% 5%", "98% 10%", "100% 15%"], ease: "ease-in-out" },
     { src: COVER, type: "letterbox", zoom: [1.0, 1.04, 1.08], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-in-out" },
     { src: AMOY, type: "cover", zoom: [1.12, 1.06, 1.0], pan: ["35% 45%", "35% 45%", "35% 45%"], ease: "ease-out" },
     { src: PORTRAIT, type: "letterbox", zoom: [1.08, 1.04, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "ease-out" },
