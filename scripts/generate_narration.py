@@ -1386,6 +1386,22 @@ PRONUNCIATION_OVERRIDES = {
                                    # japanese-fishermen-pronunciation/
     "Matos": "mˈɑːtɒs",           # "MAH-tos" (de Matos) - Chris ear-picked
                                    # (2026-09-21), candidate 1 of 3, same folder
+
+    # Lim Peng Siang post batch (2026-09-22).
+    "heavier": "hˈɛviːə",         # "HEV-ee-uh" - comparative-form gap, same
+                                   # failure mode as "poorer" above
+    "Puah": "pˈuːɑː",             # "POO-ah" (Lim Ho Puah), single-obvious
+                                   # Hokkien-surname reading
+    "Oversea": "ˌQvəsˈiː",        # "oh-vuh-SEE" - misaki has plain
+                                   # "overseas" but not this variant
+                                   # (Oversea-Chinese Bank/OCBC's own name)
+    "Mau": "mˈaʊ",                 # "mow" (Lim Peng Mau, the brother) -
+                                   # Chris ear-picked (2026-09-22),
+                                   # candidate 1 of 3, from scratch/lim-
+                                   # peng-siang-pronunciation/
+    "Ean": "ˈiːən",                # "EE-un" (Tan Ean Kiam) - Chris
+                                   # ear-picked (2026-09-22), candidate 1
+                                   # of 3, same folder
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1416,6 +1432,10 @@ ABBREVIATION_EXPANSIONS = {
     # spells both out. Always "Private Limited" in prose. Caught on the
     # Malaysian railway-land post ("M+S Pte Ltd").
     re.compile(r"\bPte\.?\s+Ltd\.?"): "Private Limited",
+    # Standalone "Ltd." (no preceding "Pte") - same "?" failure as above.
+    # "Co. Ltd." -> "Co. Limited"; "Co." itself already phonemizes fine.
+    # Caught on the Lim Peng Siang post ("Ho Hong Steamship Co. Ltd.").
+    re.compile(r"\bLtd\.(?=[\s,.]|$)"): "Limited",
     # "vs." - misaki drops the abbreviation as a literal "?" ("Say vs.
     # What" -> "Say <unknown> What"). Always reads as "versus" in prose
     # (sport, law, comparisons alike), so a general expansion is safe.
