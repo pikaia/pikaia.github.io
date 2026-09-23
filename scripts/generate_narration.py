@@ -1445,24 +1445,17 @@ PRONUNCIATION_OVERRIDES = {
                                         # phonemizes it fine standalone -
                                         # copied verbatim from its own
                                         # standalone output.
-    "Cheang": "ʧˈʌŋ",              # provisional (NOT yet ear-confirmed) -
-                                   # Cheang Hong Lim, the Great Syndicate
-                                   # opium farmer. Genuinely ambiguous
-                                   # Teochew/Hokkien surname romanization
-                                   # (one syllable vs two; "-ang" vs
-                                   # "-ung"). Defaulted here to the
-                                   # one-syllable "-ung" reading by analogy
-                                   # with "Kang" above, which Chris
-                                   # corrected by ear from a guessed
-                                   # "-ang" to "-ung" for the same
-                                   # romanization pattern - but this is a
-                                   # different name, not verified.
-                                   # 4 candidates in
-                                   # scratch/opium/cheang/: chang1syl
-                                   # (ʧˈaŋ), cheeang2syl (ʧiˈaŋ), cheeyang
-                                   # (ʧiːjˈaŋ), chung1syl_like_kang (this
-                                   # entry, ʧˈʌŋ). Update this override
-                                   # once Chris picks.
+    "Cheang": "ʧiˈaŋ",             # "chee-ANG" - Cheang Hong Lim, the
+                                   # Great Syndicate opium farmer. Chris
+                                   # ear-picked (2026-09-23), candidate
+                                   # "cheeang2syl" of 4, from
+                                   # scratch/opium/cheang/ (over
+                                   # chang1syl, cheeyang and
+                                   # chung1syl_like_kang, the last of
+                                   # which had followed "Kang"'s own
+                                   # "-ang"->"-ung" correction above - that
+                                   # pattern didn't carry over to this
+                                   # name).
     "Hiok": "hjˈOk",               # provisional (NOT yet ear-confirmed) -
                                    # half of "Tan Hiok Nee", one of the
                                    # Great Syndicate's partners. Genuinely
