@@ -1456,12 +1456,14 @@ PRONUNCIATION_OVERRIDES = {
                                    # "-ang"->"-ung" correction above - that
                                    # pattern didn't carry over to this
                                    # name).
-    "Hiok": "hjˈOk",               # "HYOKE" (one syllable) - half of "Tan
-                                   # Hiok Nee", one of the Great
-                                   # Syndicate's partners. Chris ear-picked
-                                   # (2026-09-23), candidate "hyok" of 3,
-                                   # from scratch/opium/hiok/ (over
-                                   # heeok2syl/heeoke).
+    "Hiok": "hiˈɒk",               # "hee-OK" (two syllables) - half of
+                                   # "Tan Hiok Nee", one of the Great
+                                   # Syndicate's partners. Chris
+                                   # ear-picked (2026-09-23), candidate
+                                   # "heeok2syl" of 3, from
+                                   # scratch/opium/hiok/ (revised from an
+                                   # initial "hyok" pick, same day, after
+                                   # a second listen).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
