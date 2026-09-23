@@ -1464,6 +1464,70 @@ PRONUNCIATION_OVERRIDES = {
                                    # scratch/opium/hiok/ (revised from an
                                    # initial "hyok" pick, same day, after
                                    # a second listen).
+    # Straits Trading Company post batch (2026-09-24).
+    "Brani": "bɹˈɑni",            # "BRAH-nee" - Pulau Brani, the island.
+                                   # "-ani" ending from "Rani"'s own
+                                   # working phonemes (ɹˈɑni), "br" onset
+                                   # from "bring"/"brown" - single obvious
+                                   # Malay-place-name reading, not
+                                   # ear-picked.
+    "Brani's": "bɹˈɑniz",         # possessive of "Brani" above - the
+                                   # override dict doesn't derive this
+                                   # automatically.
+    "Muhlinghaus": "mˈulɪŋhˌaʊs", # "MOO-ling-house" - Herman Muhlinghaus,
+                                   # the company's German co-founder. Built
+                                   # from "moo" (mˈu) + "ling" (lˈɪŋ) +
+                                   # "house" (Mau/Kerbau's own "aʊ"
+                                   # diphthong) - not verified by ear yet,
+                                   # flag if it sounds off.
+    "Gilfillan": "ɡɪlfˈɪlən",     # "gil-FIL-uhn" - the Scottish merchant
+                                   # house James Sword came from (Gilfillan,
+                                   # Wood & Co). Built from "gill" (ɡˈɪl) +
+                                   # "fill" (fˈɪl) + "-an" as an unstressed
+                                   # "-ən" (matching "human"'s own "-mən"
+                                   # ending) - not verified by ear yet.
+    "Wellesley": "wˈɛlzli",       # misaki phonemizes this fine standalone
+                                   # but not in this post's actual sentence
+                                   # - copied verbatim from its own
+                                   # standalone output (Province Wellesley,
+                                   # opposite Penang).
+    "underway": "ˌʌndəɹwˈA",      # unknown word in this sentence's
+                                   # context, even though "under" and "way"
+                                   # both phonemize fine standalone -
+                                   # built from their working phonemes.
+    "Bagnall": "bˈæɡnᵊl",         # "BAG-nuhl" - Sir John Bagnall, the
+                                   # company's WWII-era chairman. "bag"
+                                   # (bˈæɡ) + the syllabic "-nᵊl" ending
+                                   # from "final"'s own working phonemes -
+                                   # not verified by ear yet.
+    "Berhad": "bəɹhˈæd",          # "buh-RAD" - the Malay/Malaysian
+                                   # corporate suffix ("Ltd" equivalent, as
+                                   # in Malaysia Smelting Corporation
+                                   # Berhad), stress on the second syllable
+                                   # matching Malay stress-final place
+                                   # names elsewhere in this file (e.g.
+                                   # "Kandang") - not verified by ear yet.
+    "entrepot": "ˈɑntɹəpO",       # "ON-truh-poh" - the French loanword for
+                                   # a trading port, likely to recur across
+                                   # this blog's other money-angle posts.
+                                   # "O" = the "oh" of "toe"/"logo" already
+                                   # used elsewhere in this file - not
+                                   # verified by ear yet.
+    "Khim": "kˈɪm",                # rhymes with "him"/"Kim" (misaki can't
+                                   # phonemize "Kim" either) - half of
+                                   # "Chew Gek Khim", the company's current
+                                   # Executive Chairman, single obvious
+                                   # anglicized reading.
+    "Gek": "ɡˈɛk",                 # rhymes with "deck"/"heck" - the other
+                                   # half of "Chew Gek Khim", single
+                                   # obvious anglicized reading.
+    "Tecity": "tˈisɪTi",          # "TEE-sit-ee" - the Tecity Group,
+                                   # Straits Trading's current majority
+                                   # shareholder. "tea" (tˈi) + "city"'s
+                                   # own working phonemes (sˈɪTi), stress
+                                   # on the first syllable - single
+                                   # obvious reading for a brand name used
+                                   # only once, not ear-picked.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
