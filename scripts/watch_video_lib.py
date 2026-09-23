@@ -79,7 +79,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = REPO_ROOT / ".video-cache"
@@ -206,7 +206,15 @@ def load_source(img_ref, config_dir):
         path = REPO_ROOT / img_ref.lstrip("/")
     else:
         path = Path(config_dir) / img_ref
-    return Image.open(path).convert("RGB")
+    # exif_transpose() applies the file's EXIF orientation tag before
+    # anything else touches the pixels - without it, a phone photo shot in
+    # portrait (rotation baked into EXIF, not the stored pixel grid) loads
+    # sideways here even though browsers render it upright correctly (they
+    # apply EXIF orientation automatically for <img> tags; PIL does not).
+    # Found 2026-09-23 on the opium post's tomb photo (an iPhone JPEG),
+    # via a direct compose_frame_at() spot-check - the live post itself was
+    # never affected, only this Python rendering path.
+    return ImageOps.exif_transpose(Image.open(path)).convert("RGB")
 
 
 @functools.lru_cache(maxsize=None)
