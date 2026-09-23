@@ -7,6 +7,12 @@ post_title: "The Strip of Malaysia That Ran Through Singapore Until 2011"
 
 The former Malayan Railway terminus at Tanjong Pagar, its platforms, and the green corridor that replaced the tracks.
 
+### Woodlands Station, circa 1910
+
+![Woodlands Station in Singapore, circa 1910, with a steam train at the platform beside the Johor Strait](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/KITLV_-_79913_-_Kleingrothe%2C_C.J._-_Medan_-_Woodlands_Station_in_Singapore_-_circa_1910.tif/lossy-page1-1280px-KITLV_-_79913_-_Kleingrothe%2C_C.J._-_Medan_-_Woodlands_Station_in_Singapore_-_circa_1910.tif.jpg)
+
+*Woodlands Station, the line's northern terminus before the Causeway existed, photographed around 1910 with a ferry waiting on the strait behind it. (Photo: Charles J. Kleingrothe, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
+
 ### The main hall
 
 ![The interior public hall of the former Tanjong Pagar Railway Station](https://upload.wikimedia.org/wikipedia/commons/8/8e/Tanjong_Pagar_Railway_Station_interior_-_public_hall_%281%29.jpg)

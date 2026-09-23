@@ -483,5 +483,6 @@ The smaller one is nearly here. The Johor Bahru–Singapore Rapid Transit System
 - [File:Disused train, Tanjong Pagar Railway Station, Singapore - 20090822.jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Disused_train,_Tanjong_Pagar_Railway_Station,_Singapore_-_20090822.jpg) (gallery)
 - [File:Rail Corridor running on a former railway bridge over Hindhede Drive.jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rail_Corridor_running_on_a_former_railway_bridge_over_Hindhede_Drive.jpg) (gallery)
 - [File:Rail Corridor, Singapore in 2024-09-27 3.jpg &mdash; Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rail_Corridor,_Singapore_in_2024-09-27_3.jpg) (gallery)
+- [File:KITLV - 79913 - Kleingrothe, C.J. - Medan - Woodlands Station in Singapore - circa 1910.tif &mdash; Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79913_-_Kleingrothe,_C.J._-_Medan_-_Woodlands_Station_in_Singapore_-_circa_1910.tif>) (gallery)
 
 [← Back to all posts](/)
