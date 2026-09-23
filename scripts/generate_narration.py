@@ -1402,6 +1402,76 @@ PRONUNCIATION_OVERRIDES = {
     "Ean": "ˈiːən",                # "EE-un" (Tan Ean Kiam) - Chris
                                    # ear-picked (2026-09-22), candidate 1
                                    # of 3, same folder
+    # Opium post batch (2026-09-23).
+    "chandu": "ʧˈændu",           # "CHAN-doo" - prepared/boiled smokable
+                                   # opium, the Malay/Hokkien loanword used
+                                   # throughout the Straits Settlements'
+                                   # own ordinances (the "Chandu Revenue
+                                   # Ordinance"). Built from "trans"'s "æn"
+                                   # (tɹˈænz) plus "Hindu"'s working "-ndu"
+                                   # ending (hˈɪndu) - single obvious
+                                   # reading, not ear-picked.
+    "Riau": "ɹiˈaʊ",              # "ree-OW" - the Riau Islands/Riau
+                                   # province, Indonesia, the standard
+                                   # English geographic reading. "ri" from
+                                   # "read"'s onset (ɹˈid) plus "-au" as
+                                   # "Mau"/"Kerbau"'s own "aʊ" diphthong
+                                   # above - single obvious reading, not
+                                   # ear-picked.
+    "Chen": "ʧˈɛn",                # rhymes with "then"/"when"/"hen" (ɛn),
+                                   # "ch" onset from "cheer"'s working
+                                   # ʧˈɪɹ - the common Mandarin surname
+                                   # (Chen Su Lan), single obvious
+                                   # anglicized reading.
+    "Su": "sˈu",                   # rhymes with "Sue"/"shoe"/"stew" (misaki
+                                   # phonemizes "Sue" itself fine, sˈu) -
+                                   # half of "Chen Su Lan", single obvious
+                                   # anglicized reading.
+    "Chandu": "ʧˈændu",           # capitalised variant of "chandu" above
+                                   # (the "Chandu Revenue Ordinance") - the
+                                   # override dict is case-sensitive, so
+                                   # both forms need their own entry.
+    "smokable": "smˈOkəbəl",      # unknown word (no lexicon entry), even
+                                   # though "smoke" (smˈOk) phonemizes fine
+                                   # on its own - same narrow compound/
+                                   # inflection gap as "paycheck"/"tapped"
+                                   # above. Copied verbatim from misaki's
+                                   # own standalone output for this word
+                                   # (confirmed working in isolation, just
+                                   # not reliably applied in this sentence's
+                                   # context).
+    "transshipment": "tɹænzʃˈɪpmənt",  # unknown word in this sentence's
+                                        # context, even though misaki
+                                        # phonemizes it fine standalone -
+                                        # copied verbatim from its own
+                                        # standalone output.
+    "Cheang": "ʧˈʌŋ",              # provisional (NOT yet ear-confirmed) -
+                                   # Cheang Hong Lim, the Great Syndicate
+                                   # opium farmer. Genuinely ambiguous
+                                   # Teochew/Hokkien surname romanization
+                                   # (one syllable vs two; "-ang" vs
+                                   # "-ung"). Defaulted here to the
+                                   # one-syllable "-ung" reading by analogy
+                                   # with "Kang" above, which Chris
+                                   # corrected by ear from a guessed
+                                   # "-ang" to "-ung" for the same
+                                   # romanization pattern - but this is a
+                                   # different name, not verified.
+                                   # 4 candidates in
+                                   # scratch/opium/cheang/: chang1syl
+                                   # (ʧˈaŋ), cheeang2syl (ʧiˈaŋ), cheeyang
+                                   # (ʧiːjˈaŋ), chung1syl_like_kang (this
+                                   # entry, ʧˈʌŋ). Update this override
+                                   # once Chris picks.
+    "Hiok": "hjˈOk",               # provisional (NOT yet ear-confirmed) -
+                                   # half of "Tan Hiok Nee", one of the
+                                   # Great Syndicate's partners. Genuinely
+                                   # ambiguous Teochew/Hokkien romanization
+                                   # (one syllable "HYOKE" vs two "hee-OK").
+                                   # 3 candidates in scratch/opium/hiok/:
+                                   # hyok (this entry, hjˈOk), heeok2syl
+                                   # (hiˈɒk), heeoke (hiˈOk). Update this
+                                   # override once Chris picks.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
