@@ -354,6 +354,7 @@ The building was gazetted a national monument in 1992, then closed again in 2010
 - [File:KITLV - 33196 - Victoria Theatre and Memorial Hall in Singapore - circa 1900.tif — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_-_33196_-_Victoria_Theatre_and_Memorial_Hall_in_Singapore_-_circa_1900.tif)
 - [File:KITLV A740 - Stadhuis te Singapore, KITLV 90268.tiff — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:KITLV_A740_-_Stadhuis_te_Singapore,_KITLV_90268.tiff)
 - [File:Victoria Theatre and Concert Hall - Stamford Raffles Statue 2004.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Victoria_Theatre_and_Concert_Hall_-_Stamford_Raffles_Statue_2004.jpg)
+- [File:KITLV - 79896 - Kleingrothe, C.J. - Medan - Empress Place in Singapore - circa 1910.tif — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79896_-_Kleingrothe,_C.J._-_Medan_-_Empress_Place_in_Singapore_-_circa_1910.tif>)
 - [Victoria Theatre and Concert Hall (relation) — OpenStreetMap](https://www.openstreetmap.org/relation/3899820)
 
 [← Back to all posts](/)

@@ -5,7 +5,13 @@ post_url: /2026/08/15/victoria-memorial-hall-culture-war-crimes-trials/
 post_title: "The Concert Hall That Was Once a Courtroom for Hanging Men"
 ---
 
-Six more photographs of Victoria Theatre and Concert Hall, spanning its civic life from the early 1900s to today.
+Seven more photographs of Victoria Theatre and Concert Hall, spanning its civic life from the early 1900s to today.
+
+### Empress Place, circa 1910
+
+![Empress Place, Singapore, circa 1910, with Victoria Memorial Hall, the Singapore Cricket Club pavilion and the Dalhousie Obelisk](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/KITLV_-_79896_-_Kleingrothe%2C_C.J._-_Medan_-_Empress_Place_in_Singapore_-_circa_1910.tif/lossy-page1-1280px-KITLV_-_79896_-_Kleingrothe%2C_C.J._-_Medan_-_Empress_Place_in_Singapore_-_circa_1910.tif.jpg)
+
+*A wider view across Empress Place around 1910: the Singapore Cricket Club pavilion at left, Victoria Memorial Hall at centre, and the Dalhousie Obelisk at right. (Photo: Charles J. Kleingrothe, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
 
 ### The Town Hall, early 1900s
 
