@@ -2,7 +2,7 @@
 layout: post
 title: "Lim Peng Siang, the Man Singapore Called Its Greatest Magnate"
 date: 2026-09-22 09:20:00 +0800
-last_modified_at: 2026-09-22 09:20:00 +0800
+last_modified_at: 2026-09-22 20:40:00 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Binnenhaven_van_Singapore_The_boat_quay_Singapore_%28titel_op_object%29%2C_RP-F-00-5018-39.jpg/1280px-Binnenhaven_van_Singapore_The_boat_quay_Singapore_%28titel_op_object%29%2C_RP-F-00-5018-39.jpg
 ---
@@ -500,7 +500,14 @@ Rice, oil, shipping, banking and cement under one roof was an unusual combinatio
 
 Lim's standing outside Ho Hong grew alongside it. He served as president of the Singapore Chinese Chamber of Commerce from 1913 to 1916, sat on the Chinese Advisory Board from 1921 until the Japanese invasion in 1941, and chaired the Hong Kong Fujian Chamber of Commerce with his brother from 1930. He was made a Justice of the Peace and was offered a seat on the Legislative Council more than once, which he turned down each time.
 
+<div style="float: left; max-width: 280px; width: 42%; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/malaya-no-6-biplane-1923-book.png" alt="The biplane Malaya No. 6, a First World War aircraft bought by public subscription in Malaya" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Malaya No. 6, the biplane Lim Peng Siang and Lee Choon Guan helped fund. (Photo: Song Ong Siang, One Hundred Years' History of the Chinese in Singapore, 1923, public domain)</em>
+</div>
+
 During the First World War, he and the businessman Lee Choon Guan jointly donated a fighter aircraft to the British Air Force. The plane, one of several bought by public subscription in Malaya, was named Malaya No. 6 and carried the donors' own names, Choon Guan Peng Siang, painted on its side. It was this kind of standing, decades in the building, that the Sunday paper was pointing to in 1936 when it called him one of Singapore's greatest magnates.
+
+<div style="clear: both;"></div>
 
 ## The fall, and the merger that erased two of his banks
 
