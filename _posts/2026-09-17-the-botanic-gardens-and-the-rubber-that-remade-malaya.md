@@ -377,5 +377,6 @@ I've visited the Gardens myself, most memorably to see this orchid — *Dendrobi
 - [File:Singapore Botanic Gardens, Evolution Garden 25, Sep 06.JPG — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Singapore_Botanic_Gardens,_Evolution_Garden_25,_Sep_06.JPG>)
 - [File:1961tappingrubber.png — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1961tappingrubber.png)
 - [File:Hevea semillas2.jpg — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hevea_semillas2.jpg)
+- [File:KITLV - 79909 - Kleingrothe, C.J. - Medan - Botanical Gardens, Singapore - circa 1910.tif — Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79909_-_Kleingrothe,_C.J._-_Medan_-_Botanical_Gardens,_Singapore_-_circa_1910.tif>)
 
 [← Back to all posts](/)

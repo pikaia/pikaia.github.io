@@ -7,6 +7,12 @@ post_title: "The Botanic Gardens and the Rubber That Remade Malaya"
 
 A couple more faces from this story, and a look at the Gardens as they are today.
 
+### The Gardens, circa 1910
+
+![Large fig trees beside a lake, Singapore Botanic Gardens, circa 1910](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/KITLV_-_79909_-_Kleingrothe%2C_C.J._-_Medan_-_Botanical_Gardens%2C_Singapore_-_circa_1910.tif/lossy-page1-1280px-KITLV_-_79909_-_Kleingrothe%2C_C.J._-_Medan_-_Botanical_Gardens%2C_Singapore_-_circa_1910.tif.jpg)
+
+*Large fig trees beside a lake in the Botanic Gardens, photographed around 1910, not long after Ridley's rubber-seed campaign had made the Gardens' name. (Photo: Charles J. Kleingrothe, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
+
 ### Tan Chay Yan, Malaya's first rubber planter
 
 ![Portrait of Tan Chay Yan](https://upload.wikimedia.org/wikipedia/commons/7/70/Tan_Chay_Yan.png)
