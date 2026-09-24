@@ -17,7 +17,7 @@ The coin at the centre of the story, where it circulated, and what replaced it.
 
 ![Map of the historical area of influence of the Spanish real de a ocho and other Spanish and Portuguese coins](https://upload.wikimedia.org/wikipedia/commons/3/33/Espacio_de_influencia_del_real_de_a_ocho_y_otras_monedas_espa%C3%B1olas_y_portuguesas.svg)
 
-*The historical area of influence of the eight-real coin and other Spanish and Portuguese currencies, across the Americas, Africa, Asia and Europe. (Map: Nagihuin, CC BY-SA 4.0, via Wikimedia Commons)*
+*The historical area of influence of the eight-real coin and other Spanish and Portuguese currencies, across the Americas, Africa, Asia and Europe. (Photo: Nagihuin, CC BY-SA 4.0, via Wikimedia Commons)*
 
 ### The other side of the 1904 dollar
 
@@ -29,6 +29,6 @@ The coin at the centre of the story, where it circulated, and what replaced it.
 
 ![The obverse of a 1935 Straits Settlements one dollar banknote showing King George V](https://upload.wikimedia.org/wikipedia/commons/a/aa/Straits_Settlements_-_1935_-_%241_banknote_%28obverse%29.jpg)
 
-*A Straits Settlements one-dollar note of 1935, printed in English, Chinese and Malay, by which time the Straits dollar had long been tied to sterling. (Note: Bradbury, Wilkinson & Co., public domain, via Wikimedia Commons)*
+*A Straits Settlements one-dollar note of 1935, printed in English, Chinese and Malay, by which time the Straits dollar had long been tied to sterling. (Photo: Bradbury, Wilkinson & Co., public domain, via Wikimedia Commons)*
 
 [← Back to all posts](/)
