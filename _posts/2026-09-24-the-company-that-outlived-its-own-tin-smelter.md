@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "The Company That Outlived Its Own Tin Smelter"
-date: 2026-09-23 23:27:20 +0000
-scheduled_date: 2026-09-24 09:00:00 +0800
-permalink: /2026/09/24/the-company-that-outlived-its-own-tin-smelter/
+date: 2026-09-24 09:00:00 +0800
 last_modified_at: 2026-09-23 23:27:20 +0000
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/5/56/Gezicht_op_de_tinsmelterijen_op_het_eiland_Pulau_Brani_bij_Singapore_View_of_Pulo_Brani_tin_smelting_works_%28titel_op_object%29%2C_RP-F-F01140-AH.jpg
