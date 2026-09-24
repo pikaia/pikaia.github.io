@@ -1,9 +1,10 @@
 """Video config for the Spanish dollar post.
 
-Coin and banknote photos plus two self-rendered chart PNGs. Every slide is a
-letterbox: the coins are square-ish or very wide against a 16:9 frame, and the
-two small banknote scans (500px and 900px wide) are frozen so a slow zoom
-can't show held-frame jerkiness on them (same lesson as the opium post).
+Coin and banknote photos plus two self-rendered chart PNGs. The coins are square-ish
+or very wide against a 16:9 frame; a slow zoom on a *letterboxed* foreground
+showed real held-frame jerkiness (checked with --check-only), so the coin slides
+use cover with slow pans across the coin instead (cover is supersampled and
+smooth). The two small banknote scans and the charts are frozen letterbox.
 
   COINSG   - 1789 Charles IV dollar countermarked "Singapore" (Commons, CC BY 2.5 ES)
   PILLAR   - 1771 Mexican pillar dollar, both faces (Commons, Heritage Auctions)
@@ -34,14 +35,16 @@ CREDITS = {
     "RESCHART": "Chart by Lesser Known Singapore, data: Wikipedia (Reserve currency, Spanish dollar)",
 }
 
-_CNA = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_CNB = {"type": "letterbox", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
-_PLA = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_PLB = {"type": "letterbox", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
-_S4A = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_S4B = {"type": "letterbox", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
-_S4C = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_S4D = {"type": "letterbox", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "ease-out"}
+_CNA = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.35), (0.5, 0.5), (0.5, 0.62)], "ease": "ease-in-out"}
+_CNB = {"type": "cover", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.62), (0.5, 0.5), (0.5, 0.38)], "ease": "ease-in-out"}
+# PILLAR is two coin faces side by side (aspect ~2:1): zoom in so one face fills the
+# frame, and pan across from one face to the other.
+_PLA = {"type": "cover", "zoom": [1.55, 1.55, 1.55], "pan": [(0.12, 0.5), (0.5, 0.5), (0.88, 0.5)], "ease": "ease-in-out"}
+_PLB = {"type": "cover", "zoom": [1.55, 1.55, 1.55], "pan": [(0.88, 0.5), (0.5, 0.5), (0.12, 0.5)], "ease": "ease-in-out"}
+_S4A = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.35), (0.5, 0.5), (0.5, 0.62)], "ease": "ease-in-out"}
+_S4B = {"type": "cover", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.62), (0.5, 0.5), (0.5, 0.38)], "ease": "ease-in-out"}
+_S4C = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.35), (0.5, 0.5), (0.5, 0.62)], "ease": "ease-in-out"}
+_S4D = {"type": "cover", "zoom": [1.1, 1.05, 1.0], "pan": [(0.5, 0.62), (0.5, 0.5), (0.5, 0.38)], "ease": "ease-in-out"}
 _NOTE = {"type": "letterbox", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 _CHART = {"type": "letterbox", "zoom": [1.0, 1.0, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": "linear"}
 

@@ -14,8 +14,8 @@ IMAGES = {
     "PILLAR": f"{_U}/f/f9/Mexico_Carlos_III_Pillar_Dollar_of_8_Reales_1771.jpg",
 }
 
-_CNA = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
-_PLA = {"type": "letterbox", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.5)] * 3, "ease": "ease-in-out"}
+_CNA = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.5, 0.35), (0.5, 0.5), (0.5, 0.62)], "ease": "ease-in-out"}
+_PLA = {"type": "cover", "zoom": [1.55, 1.55, 1.55], "pan": [(0.12, 0.5), (0.5, 0.5), (0.88, 0.5)], "ease": "ease-in-out"}
 
 SLIDES = [
     {"img": "COINSG", **_CNA},  # s0-1 title + 1824, the bill written in a foreign coin
