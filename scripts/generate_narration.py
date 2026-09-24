@@ -1552,18 +1552,12 @@ PRONUNCIATION_OVERRIDES = {
     "Mediacorp": "mˈidiəkɔɹp",    # "MEE-dee-uh-corp" - "media" + "corp",
                                    # single obvious reading.
     "Mediacorp's": "mˈidiəkɔɹps", # possessive of the above.
-    # PROVISIONAL (not yet ear-confirmed) - four genuinely ambiguous names;
-    # candidate samples in scratch/newspapers/<word>/. Defaults are candidate
-    # 1 of each; update once Chris picks.
-    "Catchick": "kˈaʧɪk",         # Armenian merchant Catchick Moses.
-                                   # c1 KATCH-ick, c2 KAY-chick, c3 kuh-CHEEK.
-    "Teo": "tˈiO",                 # Josephine Teo (Hokkien/Teochew
-                                   # surname). c1 TEE-oh, c2 TAY-oh, c3
-                                   # TEE-yo.
-    "Apcar": "ˈapkɑɹ",            # Marterus Thaddeus Apcar (Armenian).
-                                   # c1 AP-kar, c2 AYP-kar, c3 ap-KAR.
-    "Marterus": "mɑɹtˈiəɹəs",     # c1 mar-TEER-us, c2 MAR-ter-us, c3
-                                   # mar-TAIR-us.
+    # Four genuinely ambiguous names, ear-picked by Chris (2026-09-25) from
+    # samples in scratch/newspapers/<word>/ - candidate 1 of each.
+    "Catchick": "kˈaʧɪk",         # KATCH-ick - Armenian merchant Catchick Moses.
+    "Teo": "tˈiO",                 # TEE-oh - Josephine Teo.
+    "Apcar": "ˈapkɑɹ",            # AP-kar - Marterus Thaddeus Apcar (Armenian).
+    "Marterus": "mɑɹtˈiəɹəs",     # mar-TEER-us.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
