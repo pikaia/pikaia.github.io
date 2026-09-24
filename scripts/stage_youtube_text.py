@@ -37,6 +37,7 @@ not the filename - a pre-08:00 SGT post date can build one calendar day
 earlier than the filename implies, per docs/production-pipeline.md).
 """
 import argparse
+import html
 import importlib.util
 import re
 import sys
@@ -96,6 +97,9 @@ def clean_text(text: str) -> str:
     # *Showa History Vol. 10*, public domain") - strip those too, after
     # BOLD_RE so **already-consumed** double-asterisks don't confuse this.
     text = ITALIC_RE.sub(r"\1", text)
+    # Captions inside raw-HTML floats need &amp; for the browser, but the
+    # YouTube description is plain text - a literal "&amp;" would show.
+    text = html.unescape(text)
     return text.strip()
 
 
@@ -143,11 +147,21 @@ def extract_image_credit(raw_caption: str) -> str:
     m = PHOTO_PAREN_RE.search(caption)
     if m:
         inner = m.group(1)
+        # A trailing ", via Wikimedia Commons" is a suffix, not the licence:
+        # peel it off first so the split below sees the real licence as the
+        # last field. Without this, an institution written "KITLV/Leiden
+        # University Library" (a "/") made the "/" cut also drop the CC
+        # licence sitting after it (the opium post's Chinese Protectorate
+        # credit lost its "CC BY 4.0" this way).
+        suffix = ""
+        if inner.endswith(", via Wikimedia Commons"):
+            inner = inner[: -len(", via Wikimedia Commons")]
+            suffix = ", via Wikimedia Commons"
         if "," in inner:
             source, license_ = inner.rsplit(",", 1)
             author = source.split("/")[0].strip()
-            return f"{author}, {license_.strip()}"
-        return inner.strip()
+            return f"{author}, {license_.strip()}{suffix}"
+        return inner.strip() + suffix
     m = PHOTO_BY_RE.search(caption)
     if m:
         return f"{m.group(1).strip()}, {m.group(2).strip()}"

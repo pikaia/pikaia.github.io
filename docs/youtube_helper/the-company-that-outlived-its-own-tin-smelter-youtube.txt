@@ -10,7 +10,12 @@ Full story: https://da.gd/jKivn7
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (personal photography and Wikimedia Commons, credited individually):
+- G.R. Lambert & Co., attributed, Rijksmuseum Amsterdam, CC0, via Wikimedia Commons
+- G.R. Lambert & Co., KITLV, public domain, via Wikimedia Commons
+- Charles J. Kleingrothe, KITLV, public domain, via Wikimedia Commons
+- Chart by Lesser Known Singapore, dates per the post's own Sources list
+- Erwin Soo, CC BY 2.0, via Wikimedia Commons
 
 Sources:
 - The Straits Trading Company Limited, Wikipedia
@@ -22,6 +27,8 @@ Sources:
 - Pulau Brani, Wikipedia
 - File:Gezicht op de tinsmelterijen op het eiland Pulau Brani bij Singapore..., Wikimedia Commons
 - File:Rendezvous Grand Hotel (8645381320).jpg, Wikimedia Commons
+- File:KITLV - 105809 - Lambert & Co., G.R. - Singapore - Malay village on the island of Pulau Brani near Singapore - circa 1900.tif, Wikimedia Commons
+- File:KITLV - 79928 - Kleingrothe, C.J. - Medan - Tin industry at the island of Pulau Brani, Singapore - circa 1910.tif, Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -38,4 +45,6 @@ Full-length video: <paste the main video's URL here after uploading it>
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
-[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+Images (Wikimedia Commons):
+- G.R. Lambert & Co., attributed, Rijksmuseum Amsterdam, CC0, via Wikimedia Commons
+- Charles J. Kleingrothe, KITLV, public domain, via Wikimedia Commons
