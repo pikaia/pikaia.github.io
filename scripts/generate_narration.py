@@ -1536,6 +1536,34 @@ PRONUNCIATION_OVERRIDES = {
     "Bretton": "bɹˈɛtᵊn",          # "BRET-un" - Bretton Woods. "Britain"'s
                                    # working syllabic "-tᵊn" ending with a
                                    # short-e onset; single obvious reading.
+    # Newspapers post batch (2026-09-25).
+    "Boustead": "bˈuːstɛd",       # "BOO-sted" - Edward Boustead, Free Press
+                                   # co-founder. Single obvious English-
+                                   # surname reading, not ear-picked.
+    "Thaddeus": "θˈædiəs",        # "THAD-ee-us" - Marterus Thaddeus Apcar.
+                                   # Single obvious reading.
+    "Berita": "bəɹˈitɑ",          # "buh-REE-tah" - Berita Harian (Malay
+                                   # "news"). Single obvious Malay reading.
+    "Harian": "hɑɹiˈɑn",          # "hah-ree-AHN" - Berita Harian (Malay
+                                   # "daily"). Single obvious Malay reading.
+    "Murasu": "mˈuɹəsu",          # "MOO-ruh-soo" - Tamil Murasu (Tamil
+                                   # "drum"). Single obvious anglicized
+                                   # reading of the Tamil word.
+    "Mediacorp": "mˈidiəkɔɹp",    # "MEE-dee-uh-corp" - "media" + "corp",
+                                   # single obvious reading.
+    "Mediacorp's": "mˈidiəkɔɹps", # possessive of the above.
+    # PROVISIONAL (not yet ear-confirmed) - four genuinely ambiguous names;
+    # candidate samples in scratch/newspapers/<word>/. Defaults are candidate
+    # 1 of each; update once Chris picks.
+    "Catchick": "kˈaʧɪk",         # Armenian merchant Catchick Moses.
+                                   # c1 KATCH-ick, c2 KAY-chick, c3 kuh-CHEEK.
+    "Teo": "tˈiO",                 # Josephine Teo (Hokkien/Teochew
+                                   # surname). c1 TEE-oh, c2 TAY-oh, c3
+                                   # TEE-yo.
+    "Apcar": "ˈapkɑɹ",            # Marterus Thaddeus Apcar (Armenian).
+                                   # c1 AP-kar, c2 AYP-kar, c3 ap-KAR.
+    "Marterus": "mɑɹtˈiəɹəs",     # c1 mar-TEER-us, c2 MAR-ter-us, c3
+                                   # mar-TAIR-us.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2202,7 +2230,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US", "USS",
+    "UOB", "UOL", "US", "USS", "SPH",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
