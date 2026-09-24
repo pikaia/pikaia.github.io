@@ -2,7 +2,7 @@
 layout: post
 title: "The Spanish Dollar That Ruled Singapore's Early Economy"
 date: 2026-09-24 21:45:00 +0800
-last_modified_at: 2026-09-24 21:45:00 +0800
+last_modified_at: 2026-09-25 00:46:32 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/3/33/1789_Charles_IV_Spanish_dollar_countermarked_with_Chinese_words_meaning_%22Singapore%22.jpg
 ---
@@ -10,6 +10,45 @@ image: https://upload.wikimedia.org/wikipedia/commons/3/33/1789_Charles_IV_Spani
 When the East India Company finished buying Singapore in 1824, the bill was written in a coin that belonged to neither Britain nor Singapore. Sultan Hussein received 33,200 Spanish dollars and a monthly allowance of 1,300 for life, and the Temenggong received 26,800 and 700 a month. The money that priced the island's cession had been struck in Mexico and Peru in the name of the King of Spain, and it stayed Singapore's everyday money for another eighty years.
 
 [← Back to all posts](/)
+
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-spanish-dollar-that-ruled-singapores-early-economy.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
 
 <div style="float: left; max-width: 320px; width: 44%; margin: 0.25em 1.5em 1em 0;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/1789_Charles_IV_Spanish_dollar_countermarked_with_Chinese_words_meaning_%22Singapore%22.jpg" alt="A 1789 silver Spanish dollar of Charles IV, cut across by a stamped band of Chinese characters reading Singapore" style="width: 100%; display: block; border-radius: 4px;">
@@ -42,8 +81,8 @@ That worked as long as the supply of good silver dollars held up. As it dwindled
 <div style="clear: both;"></div>
 
 <div style="float: left; max-width: 300px; width: 42%; margin: 0.25em 1.5em 1em 0;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Straits_Setlements_-_1911_-_%2450_banknote.jpg" alt="A Straits Settlements fifty dollar banknote from 1911 showing King George V, a tiger and a crown" style="width: 100%; display: block; border-radius: 4px;">
-<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A Straits Settlements fifty-dollar note of 1911, with King George V and a tiger. (Note: De La Rue, public domain, via Wikimedia Commons)</em>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Straits_Setlements_-_1911_-_%2450_banknote.jpg" alt="A Straits Settlements fifty dollar banknote dated 24 September 1925, showing King George V, a tiger and a crown" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A Straits Settlements fifty-dollar note with King George V and a tiger; this specimen is dated 24 September 1925. (Note: De La Rue, public domain, via Wikimedia Commons)</em>
 </div>
 
 A coin whose value was its silver could not be steadier than the silver price, and the colony's exchange rate with sterling moved with it. In 1906 the Straits dollar was therefore tied to gold instead, fixed at two shillings and four pence, with the British gold sovereign made legal tender for the first time. The peg answered silver's instability, but silver itself kept moving: as its price rose, the coin risked becoming worth more melted than spent, and a new, smaller dollar with less silver in it was issued in 1907. The Straits dollar moved onto a sterling exchange standard when Britain left the gold standard in 1931, and in 1939 it was replaced at par by the Malayan dollar.
