@@ -1528,6 +1528,14 @@ PRONUNCIATION_OVERRIDES = {
                                    # on the first syllable - single
                                    # obvious reading for a brand name used
                                    # only once, not ear-picked.
+    # Spanish dollar post batch (2026-09-24).
+    "chopmarks": "ʧˈɑpmˌɑɹks",    # "CHOP-marks" - stamps merchants punched
+                                   # into coins. "chop" (ʧˈɑp) + "marks"
+                                   # (mˈɑɹks), both working standalone;
+                                   # single obvious reading.
+    "Bretton": "bɹˈɛtᵊn",          # "BRET-un" - Bretton Woods. "Britain"'s
+                                   # working syllabic "-tᵊn" ending with a
+                                   # short-e onset; single obvious reading.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
