@@ -1737,6 +1737,8 @@ git push
 
 ## 12a. Publish before the scheduled date
 
+> **Superseded for new posts (2026-09-24).** New posts are created with `date:` = now and pushed as soon as the draft exists, so they are live immediately and there is no scheduled date to publish ahead of, and no `publish-early-reset.sh` follow-up. Section 3's "publish early first" step is therefore a no-op for them: just push. Everything below is reference for the older future-dated posts that still carry a `scheduled_date:` stash (`grep -l '^scheduled_date:' _posts/*.md`); reset each once its date has passed.
+
 **[Manual]** — as of 2026-09-11, `scripts/publish-early.sh` is run as
 standard practice right after section 3 (see that section), not
 deferred to here. This section is the mechanism's full reference plus
