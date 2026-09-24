@@ -1,0 +1,41 @@
+=== FULL VIDEO ===
+
+Title:
+The Company That Outlived Its Own Tin Smelter
+
+Description:
+By 1912, a company most Singaporeans today have never heard of was smelting roughly a third of the world's tin, on a small island just off the harbour. Its ingots, stamped "Straits Tin," were internationally recognised as the purest grade money could buy. The smelter that made that possible is gone, the island it stood on is a naval base, and the company itself doesn't smelt anything in Singapore anymore. It is, remarkably, still around, still listed, still making money, more than a century after the furnaces on Pulau Brani first lit.
+
+Full story: https://da.gd/jKivn7
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]
+
+Sources:
+- The Straits Trading Company Limited, Wikipedia
+- Straits Trading Company, Reading Asia (Substack)
+- Corporate History, The Straits Trading Company Limited
+- Straits Trading Company Limited is established, Singapore History, National Library Board
+- The Straits Trading Company Limited, Infopedia, National Library Board
+- Pulau Brani, Infopedia, National Library Board
+- Pulau Brani, Wikipedia
+- File:Gezicht op de tinsmelterijen op het eiland Pulau Brani bij Singapore..., Wikimedia Commons
+- File:Rendezvous Grand Hotel (8645381320).jpg, Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Company That Outlived Its Own Tin Smelter #Shorts
+
+Description:
+By 1912, a company most Singaporeans today have never heard of was smelting roughly a third of the world's tin, on a small island just off the harbour. Its ingots, stamped "Straits Tin," were internationally recognised as the purest grade money could buy. The smelter that made that possible is gone, the island it stood on is a naval base, and the company itself doesn't smelt anything in Singapore anymore. It is, remarkably, still around, still listed, still making money, more than a century after the furnaces on Pulau Brani first lit. #Shorts
+
+Full story: https://da.gd/jKivn7
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+[PLACEHOLDER - no video built yet for this post; run the production pipeline first (docs/production-pipeline.md), then re-run this script with the resulting scripts/video-configs/<slug>.py]

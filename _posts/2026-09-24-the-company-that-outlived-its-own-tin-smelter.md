@@ -13,6 +13,45 @@ By 1912, a company most Singaporeans today have never heard of was smelting roug
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-company-that-outlived-its-own-tin-smelter.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![View of Pulo Brani tin smelting works, Singapore, photographed around 1890 to 1905, showing four tall factory chimneys, dockside warehouses and a moored boat](https://upload.wikimedia.org/wikipedia/commons/5/56/Gezicht_op_de_tinsmelterijen_op_het_eiland_Pulau_Brani_bij_Singapore_View_of_Pulo_Brani_tin_smelting_works_%28titel_op_object%29%2C_RP-F-F01140-AH.jpg)
 
 *"View of Pulo Brani Tin Smelting Works," Singapore, photographed sometime between about 1890 and 1905. (Photo: G.R. Lambert &amp; Co. (attributed), Rijksmuseum Amsterdam, CC0, via Wikimedia Commons)*
@@ -130,14 +169,14 @@ What replaced tin, gradually, was everything else. Through the late twentieth ce
       <line x1="60" y1="214" x2="1100" y2="214" stroke="var(--axis)" stroke-width="1"/>
       <g class="om-axis-year" text-anchor="middle">
         <text x="97" y="237">1887</text>
-        <text x="332" y="237">1920</text>
-        <text x="567" y="237">1955</text>
-        <text x="802" y="237">1990</text>
+        <text x="328" y="237">1920</text>
+        <text x="573" y="237">1955</text>
+        <text x="819" y="237">1990</text>
         <text x="1071" y="237">Today</text>
       </g>
 
-      <rect x="97" y="200" width="562" height="14" fill="var(--series-1)"/>
-      <rect x="659" y="200" width="441" height="14" fill="var(--series-2)"/>
+      <rect x="97" y="200" width="666" height="14" fill="var(--series-1)"/>
+      <rect x="763" y="200" width="337" height="14" fill="var(--series-2)"/>
 
       <g class="om-hit" tabindex="0" data-label="1887" data-val="Herman Muhlinghaus and James Sword incorporate the Straits Trading Company in Singapore, with $150,000 in capital.">
         <line x1="97" y1="200" x2="97" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
@@ -148,59 +187,59 @@ What replaced tin, gradually, was everything else. Through the late twentieth ce
       </g>
 
       <g class="om-hit" tabindex="0" data-label="1890" data-val="The first tin smelting plant opens on Pulau Brani, a small island off Singapore's harbour.">
-        <line x1="167" y1="214" x2="167" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="167" cy="255" r="4" fill="var(--series-1)"/>
-        <text class="om-event-year" x="167" y="271" text-anchor="middle">1890</text>
-        <text class="om-event-label" x="167" y="286" text-anchor="middle">Pulau Brani</text>
-        <text class="om-event-label" x="167" y="300" text-anchor="middle">smelter opens</text>
+        <line x1="118" y1="214" x2="118" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="118" cy="255" r="4" fill="var(--series-1)"/>
+        <text class="om-event-year" x="118" y="271" text-anchor="middle">1890</text>
+        <text class="om-event-label" x="118" y="286" text-anchor="middle">Pulau Brani</text>
+        <text class="om-event-label" x="118" y="300" text-anchor="middle">smelter opens</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="1912" data-val="Malaya produces about half the world's tin; the Straits Trading Company refines two-thirds of that output.">
-        <line x1="309" y1="200" x2="309" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="309" cy="170" r="4" fill="var(--series-1)"/>
-        <text class="om-event-year" x="309" y="160" text-anchor="middle">1912</text>
-        <text class="om-event-label" x="309" y="146" text-anchor="middle">world's tin</text>
-        <text class="om-event-label" x="309" y="132" text-anchor="middle">Two-thirds of Malaya's</text>
+        <line x1="272" y1="200" x2="272" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="272" cy="170" r="4" fill="var(--series-1)"/>
+        <text class="om-event-year" x="272" y="160" text-anchor="middle">1912</text>
+        <text class="om-event-label" x="272" y="146" text-anchor="middle">world's tin</text>
+        <text class="om-event-label" x="272" y="132" text-anchor="middle">Two-thirds of Malaya's</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="1941&ndash;46" data-val="The British destroy the Pulau Brani smelter in 1941 to deny it to the Japanese; staff return in December 1945 and rebuilding begins.">
-        <line x1="420" y1="214" x2="420" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="420" cy="255" r="4" fill="var(--series-1)"/>
-        <text class="om-event-year" x="420" y="271" text-anchor="middle">1941&ndash;46</text>
-        <text class="om-event-label" x="420" y="286" text-anchor="middle">rebuilt after</text>
-        <text class="om-event-label" x="420" y="300" text-anchor="middle">Destroyed, then</text>
+        <line x1="489" y1="214" x2="489" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="489" cy="255" r="4" fill="var(--series-1)"/>
+        <text class="om-event-year" x="489" y="271" text-anchor="middle">1941&ndash;46</text>
+        <text class="om-event-label" x="489" y="286" text-anchor="middle">Destroyed, then</text>
+        <text class="om-event-label" x="489" y="300" text-anchor="middle">rebuilt after</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="Late 1960s" data-val="The smelter moves off Pulau Brani entirely, making way for Singapore's first naval base, officially opened on the island in 1974.">
-        <line x1="588" y1="200" x2="588" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="588" cy="170" r="4" fill="var(--series-1)"/>
-        <text class="om-event-year" x="588" y="160" text-anchor="middle">late 1960s</text>
-        <text class="om-event-label" x="588" y="146" text-anchor="middle">for naval base</text>
-        <text class="om-event-label" x="588" y="132" text-anchor="middle">Leaves Pulau Brani</text>
+        <line x1="665" y1="200" x2="665" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="665" cy="170" r="4" fill="var(--series-1)"/>
+        <text class="om-event-year" x="665" y="160" text-anchor="middle">late 1960s</text>
+        <text class="om-event-label" x="665" y="146" text-anchor="middle">for naval base</text>
+        <text class="om-event-label" x="665" y="132" text-anchor="middle">Leaves Pulau Brani</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="1982" data-val="The Butterworth plant is folded into the separately listed Malaysia Smelting Corporation Berhad.">
-        <line x1="659" y1="214" x2="659" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="659" cy="255" r="4" fill="var(--series-2)"/>
-        <text class="om-event-year" x="659" y="271" text-anchor="middle">1982</text>
-        <text class="om-event-label" x="659" y="286" text-anchor="middle">Smelting Corp</text>
-        <text class="om-event-label" x="659" y="300" text-anchor="middle">Spun into Malaysia</text>
+        <line x1="763" y1="214" x2="763" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="763" cy="255" r="4" fill="var(--series-2)"/>
+        <text class="om-event-year" x="763" y="271" text-anchor="middle">1982</text>
+        <text class="om-event-label" x="763" y="286" text-anchor="middle">Spun into Malaysia</text>
+        <text class="om-event-label" x="763" y="300" text-anchor="middle">Smelting Corp</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="1997" data-val="The Rendezvous Hotels hospitality arm launches.">
-        <line x1="833" y1="200" x2="833" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="833" cy="170" r="4" fill="var(--series-2)"/>
-        <text class="om-event-year" x="833" y="160" text-anchor="middle">1997</text>
-        <text class="om-event-label" x="833" y="146" text-anchor="middle">hotels launch</text>
-        <text class="om-event-label" x="833" y="132" text-anchor="middle">Rendezvous</text>
+        <line x1="868" y1="200" x2="868" y2="170" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="868" cy="170" r="4" fill="var(--series-2)"/>
+        <text class="om-event-year" x="868" y="160" text-anchor="middle">1997</text>
+        <text class="om-event-label" x="868" y="146" text-anchor="middle">hotels launch</text>
+        <text class="om-event-label" x="868" y="132" text-anchor="middle">Rendezvous</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="2008" data-val="The Tecity Group acquires a majority stake in the company.">
-        <line x1="931" y1="214" x2="931" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
-        <circle cx="931" cy="255" r="4" fill="var(--series-2)"/>
-        <text class="om-event-year" x="931" y="271" text-anchor="middle">2008</text>
-        <text class="om-event-label" x="931" y="286" text-anchor="middle">majority stake</text>
-        <text class="om-event-label" x="931" y="300" text-anchor="middle">Tecity Group takes</text>
+        <line x1="945" y1="214" x2="945" y2="255" stroke="var(--text-secondary)" stroke-width="1.5"/>
+        <circle cx="945" cy="255" r="4" fill="var(--series-2)"/>
+        <text class="om-event-year" x="945" y="271" text-anchor="middle">2008</text>
+        <text class="om-event-label" x="945" y="286" text-anchor="middle">Tecity Group takes</text>
+        <text class="om-event-label" x="945" y="300" text-anchor="middle">majority stake</text>
       </g>
 
       <g class="om-hit" tabindex="0" data-label="Today" data-val="A three-division conglomerate - Resources, Property, Hospitality - still listed on the Singapore Exchange, reporting S$218.4 million in net income in 2025.">
@@ -267,6 +306,8 @@ What replaced tin, gradually, was everything else. Through the late twentieth ce
 </script>
 </div>
 
+[See more historical photos of Pulau Brani →](/gallery/the-company-that-outlived-its-own-tin-smelter/)
+
 **Where it fits in the bigger story:** Singapore's founding fortunes are usually told through trade and entrepot commerce, not heavy industry, but for a few decades the Straits Trading Company ran one of the most important industrial monopolies of the colonial world from a small island most Singaporeans today couldn't place on a map. It survived a self-inflicted wartime demolition, lost the island itself to the navy, spun its own core business off into a separate company, and turned into something almost unrecognisable, a property-and-hotels conglomerate that happens to still hold a stake in tin. Few nineteenth-century Singapore firms can say they're still trading in 2026 at all, let alone after changing this completely.
 
 ---
@@ -282,5 +323,7 @@ What replaced tin, gradually, was everything else. Through the late twentieth ce
 - [Pulau Brani, Wikipedia](https://en.wikipedia.org/wiki/Pulau_Brani)
 - [File:Gezicht op de tinsmelterijen op het eiland Pulau Brani bij Singapore..., Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Gezicht_op_de_tinsmelterijen_op_het_eiland_Pulau_Brani_bij_Singapore_View_of_Pulo_Brani_tin_smelting_works_(titel_op_object),_RP-F-F01140-AH.jpg>)
 - [File:Rendezvous Grand Hotel (8645381320).jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rendezvous_Grand_Hotel_(8645381320).jpg)
+- [File:KITLV - 105809 - Lambert & Co., G.R. - Singapore - Malay village on the island of Pulau Brani near Singapore - circa 1900.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_105809_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Malay_village_on_the_island_of_Pulau_Brani_near_Singapore_-_circa_1900.tif>) (gallery)
+- [File:KITLV - 79928 - Kleingrothe, C.J. - Medan - Tin industry at the island of Pulau Brani, Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79928_-_Kleingrothe,_C.J._-_Medan_-_Tin_industry_at_the_island_of_Pulau_Brani,_Singapore_-_circa_1910.tif>) (gallery)
 
 [← Back to all posts](/)
