@@ -11,6 +11,45 @@ Singapore's first newspaper was printed on rough Chinese-made paper, folded into
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/who-pays-for-the-news-singapore-has-been-asking-since-1824.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![Raffles Square, Singapore, around 1885, a quiet street of shophouses lined with shade trees, with rickshaws waiting under the trees and a few men standing in the road](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/KITLV_-_103746_-_Lambert_%26_Co._-_Raffles_Place_in_Singapore_-_circa_1885.tif/lossy-page1-1280px-KITLV_-_103746_-_Lambert_%26_Co._-_Raffles_Place_in_Singapore_-_circa_1885.tif.jpg)
 
 *"Raffles Square," Singapore, photographed around 1885. Two of the three early newspapers were printed on Commercial Square, the earlier name of what became Raffles Place. (Photo: G.R. Lambert & Co., KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
@@ -291,5 +330,7 @@ The stated rationale for that support is about trust and reach rather than contr
 - [File:KITLV - 103753 - Raffles Place, Singapore - circa 1890.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_103753_-_Raffles_Place,_Singapore_-_circa_1890.tif>) (gallery)
 - [File:KITLV - 79893 - Kleingrothe, C.J. - Medan - Raffles Place and King Street in Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79893_-_Kleingrothe,_C.J._-_Medan_-_Raffles_Place_and_King_Street_in_Singapore_-_circa_1910.tif>) (gallery)
 - [File:Photographic Views of Singapore Plate 03 Raffles' Square.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Photographic_Views_of_Singapore_Plate_03_Raffles'_Square.jpg>) (gallery)
+- [File:KITLV - 50209 - Lambert & Co., G.R. - Singapore - Finlayson Green with the office of the Dutch East India Commercial Bank, the Straits Times and the Royal Packet Company in Singapore - circa 1900.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_50209_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Finlayson_Green_with_the_office_of_the_Dutch_East_India_Commercial_Bank,_the_Straits_Times_and_the_Royal_Packet_Company_in_Singapore_-_circa_1900.jpg>) (gallery)
+- [File:224 Mediacorp Campus Building.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:224_Mediacorp_Campus_Building.jpg>) (gallery)
 
 [← Back to all posts](/)
