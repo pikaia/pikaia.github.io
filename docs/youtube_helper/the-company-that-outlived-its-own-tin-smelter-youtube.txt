@@ -41,7 +41,7 @@ Description:
 By 1912, a company most Singaporeans today have never heard of was smelting roughly a third of the world's tin, on a small island just off the harbour. Its ingots, stamped "Straits Tin," were internationally recognised as the purest grade money could buy. The smelter that made that possible is gone, the island it stood on is a naval base, and the company itself doesn't smelt anything in Singapore anymore. It is, remarkably, still around, still listed, still making money, more than a century after the furnaces on Pulau Brani first lit. #Shorts
 
 Full story: https://da.gd/jKivn7
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/8AcH35qU2CQ
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
