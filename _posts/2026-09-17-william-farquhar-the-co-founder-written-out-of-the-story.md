@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "William Farquhar: The Co-Founder Singapore Wrote Out of Its Own Story"
-date: 2026-09-14 02:24:34 +0000
-scheduled_date: 2026-09-17 09:00:00 +0800
-permalink: /2026/09/17/william-farquhar-the-co-founder-written-out-of-the-story/
+date: 2026-09-17 09:00:00 +0800
 last_modified_at: 2026-09-14 02:24:34 +0000
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/f/f9/Portrait_of_William_Farquhar_%28c._1830%29.jpg
