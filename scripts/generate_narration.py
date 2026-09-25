@@ -1563,6 +1563,10 @@ PRONUNCIATION_OVERRIDES = {
     "Aldwyn": "ˈɔldwɪn",          # "AWLD-win" - Lord St Aldwyn (umpire).
     "Winston": "wˈɪnstən",        # Winston Churchill.
     "Josiah": "ʤOsˈIə",           # "joh-SIGH-uh" - Josiah Wedgwood.
+    # Two ambiguous names, ear-picked by Chris (2026-09-25) from samples in
+    # scratch/tp/samples/<word>/ - candidate 1 of 3 each.
+    "Cloughton": "klˈaʊtən",      # KLOW-ton - Captain William Cloughton.
+    "Kheam": "kiˈam",             # kee-AM - Tan Kheam Hock (Hokkien Khiam).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
