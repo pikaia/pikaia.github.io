@@ -11,10 +11,10 @@ Full story: https://da.gd/OToqPI
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
 Images (personal photography and Wikimedia Commons, credited individually):
-- unknown photographer, KITLV, via Wikimedia Commons
+- unknown photographer, KITLV/Leiden University Library, CC BY 4.0, via Wikimedia Commons
 - Song Ong Siang, One Hundred Years' History of the Chinese in Singapore, 1923, CC BY-SA 4.0, via Wikimedia Commons
 - Chart by Lesser Known Singapore; map data © OpenStreetMap contributors (2 photos)
-- G.R. Lambert &amp; Co., c.1900, public domain, via Wikimedia Commons
+- G.R. Lambert & Co., c.1900, public domain, via Wikimedia Commons
 - Chart by Lesser Known Singapore, dates per the post's own Sources list
 - Gavin Kia Wee Koh, CC BY-SA 4.0, via Wikimedia Commons
 
@@ -47,4 +47,4 @@ Full-length video: https://youtu.be/-z_YuPi3sho
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
 Images (Wikimedia Commons):
-- unknown photographer, KITLV, via Wikimedia Commons
+- unknown photographer, KITLV/Leiden University Library, CC BY 4.0, via Wikimedia Commons
