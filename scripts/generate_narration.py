@@ -1558,6 +1558,11 @@ PRONUNCIATION_OVERRIDES = {
     "Teo": "tˈiO",                 # TEE-oh - Josephine Teo.
     "Apcar": "ˈapkɑɹ",            # AP-kar - Marterus Thaddeus Apcar (Armenian).
     "Marterus": "mɑɹtˈiəɹəs",     # mar-TEER-us.
+    # Tanjong Pagar Dock Company post batch (2026-09-25). Single obvious readings:
+    "Ord": "ˈɔɹd",                 # Governor Harry St George Ord.
+    "Aldwyn": "ˈɔldwɪn",          # "AWLD-win" - Lord St Aldwyn (umpire).
+    "Winston": "wˈɪnstən",        # Winston Churchill.
+    "Josiah": "ʤOsˈIə",           # "joh-SIGH-uh" - Josiah Wedgwood.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2224,7 +2229,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
