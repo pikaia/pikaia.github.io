@@ -599,6 +599,24 @@ def slide_for_time(t, schedule, total_duration):
     return idx, start, end
 
 
+# A slide's prepared image is the source cover-scaled to (out * work_scale *
+# max_zoom); a portrait page or a high-zoom slide can reach hundreds of MB
+# (a 1600px-wide newspaper page at zoom 3 is ~900 MB at WORK_SCALE=4) while
+# adding nothing, since the source itself has far fewer pixels than that.
+# Cap each prepared image at this many pixels (~300 MB of RGB) by scaling
+# work_scale down for just those slides. Typical slides (photos at zoom
+# <= ~1.75, ~65 Mpx) are below the cap, so their output is unchanged.
+MAX_PREPARED_PIXELS = 100_000_000
+
+
+def _capped_work_scale(img, out_w, out_h, max_zoom, work_scale):
+    scale = max(out_w * work_scale / img.width, out_h * work_scale / img.height) * max_zoom
+    pixels = (img.width * scale) * (img.height * scale)
+    if pixels > MAX_PREPARED_PIXELS:
+        work_scale = work_scale * (MAX_PREPARED_PIXELS / pixels) ** 0.5
+    return work_scale
+
+
 def _prepare_slide(cfg, i, out_w, out_h):
     # The per-slide body of build_prepared_cache, factored out so the
     # single-process path and each render worker prepare a slide through
@@ -611,6 +629,7 @@ def _prepare_slide(cfg, i, out_w, out_h):
     max_zoom = max(slide["zoom"])
     is_letterbox = slide["type"] == "letterbox"
     work_scale = LETTERBOX_WORK_SCALE if is_letterbox else WORK_SCALE
+    work_scale = _capped_work_scale(src, out_w, out_h, max_zoom, work_scale)
     prepared, work_w, work_h = prepare_source(src, out_w, out_h, max_zoom, work_scale=work_scale)
     if is_letterbox:
         fg, fx, fy = prepare_letterbox_foreground(src, out_w, out_h)
@@ -631,6 +650,31 @@ def build_prepared_cache(cfg, out_w, out_h):
         if entry is not None:
             cache[i] = entry
     return cache
+
+
+class LazyPreparedCache:
+    """dict-like drop-in for build_prepared_cache(): prepares a slide the first
+    time it is indexed and keeps only the `keep` most recently used ones.
+
+    Render workers used to prepare *every* slide up front, so a worker's memory
+    grew with the slide count (65 zoomed slides was tens of GB per worker and
+    every worker did it). Frames are rendered in increasing time order, so a
+    worker only ever needs the current slide (and the previous one, for a
+    chunk boundary); `keep=2` bounds memory to about two slides."""
+
+    def __init__(self, cfg, out_w, out_h, keep=2):
+        self._cfg, self._out_w, self._out_h, self._keep = cfg, out_w, out_h, keep
+        self._entries = {}
+
+    def __getitem__(self, i):
+        if i in self._entries:
+            entry = self._entries.pop(i)  # re-insert as most recent
+        else:
+            entry = _prepare_slide(self._cfg, i, self._out_w, self._out_h)
+        self._entries[i] = entry
+        while len(self._entries) > self._keep:
+            self._entries.pop(next(iter(self._entries)))
+        return entry
 
 
 def caption_for_time(t, captions):
@@ -964,7 +1008,7 @@ def _render_worker_init(config_path, out_w, out_h, fps):
     _WORKER.update(
         cfg=cfg, out_w=out_w, out_h=out_h, fps=fps,
         captions=load_captions(str(REPO_ROOT / cfg.TIMING_JSON)),
-        cache=build_prepared_cache(cfg, out_w, out_h),
+        cache=LazyPreparedCache(cfg, out_w, out_h),
     )
 
 
@@ -988,13 +1032,13 @@ def render(cfg, out_path, jobs=None):
         # Leave a couple of cores for ffmpeg + the OS, and cap it: every
         # spawn worker rebuilds its own prepared-image cache (hundreds of
         # MB, more on a cover-heavy post at WORK_SCALE=4), so the ceiling
-        # is memory, not cores. Budget ~1.3 GB/worker and keep ~2 GB clear
+        # is memory, not cores. Budget ~1.7 GB/worker and keep ~2 GB clear
         # for ffmpeg + the OS; fall back to the core-count cap if free
         # memory can't be read. Pass --jobs to override either way.
         cpu_cap = max(1, min((os.cpu_count() or 2) - 2, 10))
         avail_gb = _available_memory_gb()
         if avail_gb is not None:
-            mem_cap = max(1, int((avail_gb - 2.0) / 1.3))
+            mem_cap = max(1, int((avail_gb - 2.0) / 1.7))
             jobs = min(cpu_cap, mem_cap)
             if jobs < cpu_cap:
                 print(f"note: rendering with {jobs} worker(s) - {avail_gb:.1f} GB free "
@@ -1045,7 +1089,7 @@ def render(cfg, out_path, jobs=None):
 
     try:
         if jobs <= 1:
-            prepared_cache = build_prepared_cache(cfg, out_w, out_h)
+            prepared_cache = LazyPreparedCache(cfg, out_w, out_h)
             for frame_i in range(total_frames):
                 frame, _ = compose_frame_at(frame_i / fps, out_w, out_h, cfg, captions, prepared_cache)
                 if frame.mode != "RGB":
