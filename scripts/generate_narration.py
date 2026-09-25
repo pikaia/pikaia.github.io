@@ -1567,6 +1567,8 @@ PRONUNCIATION_OVERRIDES = {
     # scratch/tp/samples/<word>/ - candidate 1 of 3 each.
     "Cloughton": "klˈaʊtən",      # KLOW-ton - Captain William Cloughton.
     "Kheam": "kiˈam",             # kee-AM - Tan Kheam Hock (Hokkien Khiam).
+    "Rumney": "rˈʌmni",           # "RUM-nee" - J. Rumney Nicholson. Single obvious reading.
+    "Nicholson": "nˈɪkəlsən",     # "NICK-ul-sun". Single obvious reading.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

@@ -103,4 +103,10 @@ More photographs of the company's docks, wharves, workshops and ships from the a
 
 *Admiralty Chart No. 2023, Keppel Harbour, Singapore, published in 1893. (Photo: United Kingdom Hydrographic Office, CC BY-SA 4.0, via Wikimedia Commons)*
 
+### The Legislative Council report, 30 June 1905
+
+![Page 5 of The Straits Times, 1 July 1905, with the report headed T.P.D. New Board and Old Employees in the second column](/assets/images/straits-times-1905-07-01-page-5.jpg)
+
+*Page 5 of The Straits Times, 1 July 1905. The report of the Legislative Council meeting of 30 June, headed "T.P.D. New Board and Old Employees," names the members of the new Tanjong Pagar Dock Board: John Anderson, A. G. Faber, C. McArthur, J. Rumney Nicholson, J. E. Romenij, W. H. Shelford, J. Somerville, C. Sugden and W. P. Waddell, with J. O. Anthonisz and E. L. Brockman as official members. (Photo: Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)*
+
 [← Back to all posts](/)

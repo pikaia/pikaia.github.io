@@ -2,7 +2,7 @@
 layout: post
 title: "The Private Company That Ran Singapore's Harbour, 1864–1905"
 date: 2026-09-25 23:54:02 +0800
-last_modified_at: 2026-09-25 23:54:02 +0800
+last_modified_at: 2026-09-26 01:00:53 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Schepen_in_een_dok_van_de_Tanjong_Pagar_Dock_Co._Ltd._in_Singapore_met_eromheen_personeel_Meal_hour%2C_Tanjong_Pagar_Dock%2C_men_leaving_off_work_%28titel_op_object%29%2C_RP-F-F01140-A.jpg/1280px-thumbnail.jpg
 ---
@@ -55,6 +55,17 @@ Behind the docks was a large workforce. Song Ong Siang's history describes Chine
 By 1904 Singapore was the seventh-largest port in the world, but it faced strong competition from Hong Kong, and the company's wharf system was under strain because no major improvements had been carried out since 1885. The Singapore board and the London Consulting Committee disagreed about capital spending. In March 1904 the company submitted a $12-million plan to upgrade and expand its facilities, and it was rejected by its Europe-based shareholders, who feared the cost would "endanger a dividend of 12 per cent." The company then asked the Straits Settlements government for financial support. The government decided instead to take over the company. The London committee, for its part, had said it would not agree to cede control unless the dividend was assured at the existing rate.
 
 The Tanjong Pagar Dock Bill was introduced in the Legislative Council on 20 January 1905, and its second reading was on 3 March. The Governor's stated ground, as recorded by Song Ong Siang, was that the company had obtained a practical monopoly of the port's shipping facilities, and that it was undesirable for commerce that they should all be under one company's control. The Hon. Mr Napier, supporting the bill, said that public opinion outside those interested in the company was practically unanimous in favour. He recalled that the first chairman, Thomas Scott, had said the company's motto should be "Live and let live," and argued that the company had since taken over the Slipway, the Borneo Wharf, Jardine's Wharf and finally the New Harbour Dock. The Hon. Tan Jiak Kim added that the company was not popular with the Chinese, and that for some years Chinese shipping firms had been trying to avoid sending their steamers and cargoes to Tanjong Pagar because of its "enormous charges." The bill passed on 13 April 1905, and on 1 July the government took over the management as the Tanjong Pagar Dock Board.
+
+<div style="float: left; max-width: 280px; width: 42%; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/straits-times-1905-07-01-page-4.jpg" alt="Page 4 of The Straits Times, 1 July 1905, with the Tanjong Pagar Dock Company notice and the Tanjong Pagar Dock Board notice in the second column" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Page 4 of The Straits Times, 1 July 1905. The second column carries the company's notice and the Tanjong Pagar Dock Board's notice that the undertaking had passed to the government. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+The Straits Times of Saturday 1 July 1905 printed two notices signed by the company's secretary, W. G. Niven. They said that the company's undertaking had, under the Tanjong Pagar Dock Ordinance 1905, become vested in the Government of the Straits Settlements on that day, that it would be managed by the Tanjong Pagar Dock Board, and that the Board would discharge the company's debts and liabilities. A short item on the same page recorded that the new "T.P.D.B." flag had been hoisted for the first time on the office flagstaff at Tanjong Pagar.
+
+The Governor had told the Legislative Council the day before that the Board would hold its first meeting on 1 July, and that a large number of its members already had very long experience of working the undertaking. The Board had nine appointed members and two official members. One of the appointed members was J. Rumney Nicholson, who had come to Singapore in 1902 as the company's general manager and later became chairman of the Singapore Harbour Board.
+
+<div style="clear: both;"></div>
 
 ## What a share was worth
 
@@ -241,6 +252,7 @@ The Tanjong Pagar Dock Board was reconstituted in 1913 as a statutory body, the 
 - [Tanjong Pagar Dock Company Limited is established, Singapore History (National Library Board)](https://eresources.nlb.gov.sg/history/events/2aeba080-ec67-4a62-ba93-407840b26d10)
 - [British government gains control of Tanjong Pagar Dock Co., Singapore History (National Library Board)](https://eresources.nlb.gov.sg/history/events/2f11c4ad-c1bd-49ee-b915-0f37ac3bc685)
 - [Tanjong Pagar Dock Award, House of Commons, 28 November 1906, Hansard](https://api.parliament.uk/historic-hansard/commons/1906/nov/28/tanjong-pagar-dock-award)
+- "Tanjong Pagar Dock Co., Ltd." and "Tanjong Pagar Dock Board" notices (page 4) and "T.P.D. New Board and Old Employees" in the Legislative Council report (page 5), The Straits Times, 1 July 1905, [NewspaperSG issue index](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19050701-1)
 - Song Ong Siang, *One Hundred Years' History of the Chinese in Singapore* (1923; annotated edition, National Library Board and World Scientific, 2020), on Tan Kim Ching (pp. 134–136), the 1871 railway meeting and Ong Kew Ho (p. 223), labour contractors, and the 1905 expropriation debate (p. 539)
 - [Tanjong Pagar Dock Company, Wikipedia](https://en.wikipedia.org/wiki/Tanjong_Pagar_Dock_Company)
 - [Tan Kim Ching, Wikipedia](https://en.wikipedia.org/wiki/Tan_Kim_Ching)
