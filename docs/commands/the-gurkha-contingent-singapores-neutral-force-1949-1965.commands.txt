@@ -96,12 +96,14 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
-===========================================================================================================================================
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py 
-  --youtube-url https://youtu.be/eN2ZH-Yiq0Q
-  --shorts-url https://youtube.com/shorts/r0nhMbOpb38
+  --youtube-url https://youtu.be/pcYBqIyad60
+  --shorts-url https://youtube.com/shorts/MB0o12D9DZs
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
