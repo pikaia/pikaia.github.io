@@ -1,0 +1,111 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md audio/the-gurkha-contingent-singapores-neutral-force-1949-1965.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md audio/the-gurkha-contingent-singapores-neutral-force-1949-1965.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-gurkha-contingent-singapores-neutral-force-1949-1965.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md the-gurkha-contingent-singapores-neutral-force-1949-1965)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py --out preview-motion/the-gurkha-contingent-singapores-neutral-force-1949-1965.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965-short.py --out preview-motion/the-gurkha-contingent-singapores-neutral-force-1949-1965-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md
+      scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py
+      scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965-short.py
+      --post-url https://pikaia.github.io/2026/09/26/the-gurkha-contingent-singapores-neutral-force-1949-1965/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-the-gurkha-contingent-singapores-neutral-force-1949-1965.md scripts/video-configs/the-gurkha-contingent-singapores-neutral-force-1949-1965.py 
+  --youtube-url https://youtu.be/eN2ZH-Yiq0Q
+  --shorts-url https://youtube.com/shorts/r0nhMbOpb38
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-gurkha-contingent-singapores-neutral-force-1949-1965.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
