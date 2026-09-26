@@ -1601,6 +1601,11 @@ PRONUNCIATION_OVERRIDES = {
     "Laycock": "lˈAkɒk",          # "LAY-cock" - John Laycock.
     "Sardon": "sˈɑɹdɒn",          # "SAR-don" - Sardon bin Haji Zubir.
     "Goho": "ɡˈOhO",              # "GOH-hoh" - S. C. Goho.
+    # Three ambiguous names, ear-picked by Chris (2026-09-27) from samples in
+    # scratch/el/samples/<word>/ - candidate 1 of 3 each.
+    "Thio": "tˈiO",               # TEE-oh - Thio Chan Bee.
+    "Mallal": "məlˈɑl",           # muh-LAHL - N. A. Mallal.
+    "Namazie": "nəmˈɑzi",         # nuh-MAH-zee - M. J. Namazie.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
