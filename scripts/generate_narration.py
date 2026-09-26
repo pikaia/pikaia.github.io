@@ -1580,6 +1580,13 @@ PRONUNCIATION_OVERRIDES = {
     # scratch/dm/samples/<word>/ - candidate 1 of 3 each.
     "Suan": "swˈɑn",              # SWAHN - Fong Swee Suan.
     "Chuan": "ʧwˈɑn",             # CHWAHN - Seah Peng Chuan.
+    # Sikh police post batch (2026-09-26). Single obvious readings:
+    "policemen": "pəlˈismən",     # plural of "policeman" (no lexicon entry).
+    "enquiry": "ɪnkwˈIəɹi",       # British "in-KWIRE-ee".
+    "Maharaj": "məhˈɑɹɑʤ",        # "muh-HAH-raj" - Bhai Maharaj Singh.
+    "Sambu": "sˈɑmbu",            # "SAHM-boo" - Pulau Sambu.
+    "Assomull": "ˈɑsOmʌl",        # "AH-soh-mull" - Wassiamull Assomull Mahtani.
+    "Mahtani": "mɑtˈɑni",         # "mah-TAH-nee".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
