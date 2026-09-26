@@ -1593,6 +1593,10 @@ PRONUNCIATION_OVERRIDES = {
     "Wassiamull": "wˈɑsiəmʌl",    # WAH-see-uh-mull - Wassiamull Assomull Mahtani.
     # Gurkha Contingent post batch (2026-09-27). Single obvious reading:
     "Duxton": "dˈʌkstən",         # "DUCKS-tun" - Duxton Plain.
+    # Two ambiguous names, ear-picked by Chris (2026-09-27) from samples in
+    # scratch/gk/samples/<word>/ - candidate 1 of 3 each.
+    "Leathart": "lˈiθɑɹt",        # LEE-thart - Major Scott Leathart.
+    "Hertogh": "hˈɜːtɒɡ",         # HER-tog - Maria Hertogh (usual Singapore reading).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
