@@ -100,8 +100,8 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py 
-  --youtube-url https://youtu.be/--HDISzPz_I
-  --shorts-url https://youtube.com/shorts/B-dasvAZkSA
+  --youtube-url https://youtu.be/eN2ZH-Yiq0Q
+  --shorts-url https://youtube.com/shorts/r0nhMbOpb38
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
