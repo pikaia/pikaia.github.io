@@ -1,0 +1,112 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md audio/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md audio/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py --out preview-motion/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py --out preview-motion/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md
+      scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py
+      scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py
+      --post-url https://pikaia.github.io/2026/09/25/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py 
+  --youtube-url https://youtu.be/S6ZH-kZsrJw
+  --shorts-url https://youtube.com/shorts/lowEEOnF-6A
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
