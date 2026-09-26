@@ -1587,6 +1587,10 @@ PRONUNCIATION_OVERRIDES = {
     "Sambu": "sˈɑmbu",            # "SAHM-boo" - Pulau Sambu.
     "Assomull": "ˈɑsOmʌl",        # "AH-soh-mull" - Wassiamull Assomull Mahtani.
     "Mahtani": "mɑtˈɑni",         # "mah-TAH-nee".
+    # Two ambiguous names, ear-picked by Chris (2026-09-26) from samples in
+    # scratch/sk/samples/<word>/ - candidate 1 of 3 each.
+    "Khurruck": "kˈʌɹək",         # KUH-ruck - Khurruck Singh (1850 prisoner).
+    "Wassiamull": "wˈɑsiəmʌl",    # WAH-see-uh-mull - Wassiamull Assomull Mahtani.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
