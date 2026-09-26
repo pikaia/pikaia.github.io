@@ -1591,6 +1591,8 @@ PRONUNCIATION_OVERRIDES = {
     # scratch/sk/samples/<word>/ - candidate 1 of 3 each.
     "Khurruck": "kˈʌɹək",         # KUH-ruck - Khurruck Singh (1850 prisoner).
     "Wassiamull": "wˈɑsiəmʌl",    # WAH-see-uh-mull - Wassiamull Assomull Mahtani.
+    # Gurkha Contingent post batch (2026-09-27). Single obvious reading:
+    "Duxton": "dˈʌkstən",         # "DUCKS-tun" - Duxton Plain.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
