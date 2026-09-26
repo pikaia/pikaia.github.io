@@ -88,7 +88,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
       _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md
       scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py
       scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.py
-      --post-url https://pikaia.github.io/2026/09/25/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind/)
+      --post-url https://pikaia.github.io/2026/09/26/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind/)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
