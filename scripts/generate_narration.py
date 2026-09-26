@@ -1597,6 +1597,10 @@ PRONUNCIATION_OVERRIDES = {
     # scratch/gk/samples/<word>/ - candidate 1 of 3 each.
     "Leathart": "lˈiθɑɹt",        # LEE-thart - Major Scott Leathart.
     "Hertogh": "hˈɜːtɒɡ",         # HER-tog - Maria Hertogh (usual Singapore reading).
+    # 1948 election post batch (2026-09-27). Single obvious readings:
+    "Laycock": "lˈAkɒk",          # "LAY-cock" - John Laycock.
+    "Sardon": "sˈɑɹdɒn",          # "SAR-don" - Sardon bin Haji Zubir.
+    "Goho": "ɡˈOhO",              # "GOH-hoh" - S. C. Goho.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
