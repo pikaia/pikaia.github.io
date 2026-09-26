@@ -89,7 +89,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
       _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md
       scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py
       scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py
-      --post-url https://pikaia.github.io/2026/09/25/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do/)
+      --post-url https://pikaia.github.io/2026/09/26/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do/)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
