@@ -1575,6 +1575,11 @@ PRONUNCIATION_OVERRIDES = {
     "Lennox-Boyd": "lˈɛnəks bˈɔɪd",  # "LEN-nucks BOYD" - Alan Lennox-Boyd.
     "Malayanisation": "məlˈeɪənaɪzˈeɪʃən",  # "muh-LAY-uh-ny-ZAY-shun".
     "Anson": "ˈænsən",            # "AN-sun" - Anson by-election.
+    "Fong": "fˈɒŋ",               # "FONG" - Fong Swee Suan. Single obvious reading.
+    # Two ambiguous names, ear-picked by Chris (2026-09-26) from samples in
+    # scratch/dm/samples/<word>/ - candidate 1 of 3 each.
+    "Suan": "swˈɑn",              # SWAHN - Fong Swee Suan.
+    "Chuan": "ʧwˈɑn",             # CHWAHN - Seah Peng Chuan.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
