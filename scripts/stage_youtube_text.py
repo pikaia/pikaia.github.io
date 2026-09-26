@@ -32,11 +32,17 @@ section is a placeholder too when only the main config is given (or a
 placeholder Images list, same as the main section, when both are given
 but a particular one is missing/doesn't exist yet).
 
---post-url must be the post's real LIVE permalink (check sitemap.xml,
-not the filename - a pre-08:00 SGT post date can build one calendar day
-earlier than the filename implies, per docs/production-pipeline.md).
+--post-url is optional. By default the script derives the post's permalink
+from its front-matter date (Jekyll builds in UTC, so a post timestamped
+before 08:00 SGT lands on the previous calendar day's URL, whatever the
+filename says), tries that and the SGT-date variant against the live site,
+and uses whichever answers 200. If you pass --post-url it is checked the
+same way: it must match a derived candidate and return 200 from the live
+site, or the script stops before creating a dead short link. Use
+--no-verify to skip the live check (e.g. before the post is pushed).
 """
 import argparse
+import datetime
 import html
 import importlib.util
 import re
@@ -67,7 +73,7 @@ PHOTO_PAREN_RE = re.compile(r'\(Photo:\s*([^)]+)\)')
 PHOTO_BY_RE = re.compile(r'Photo by\s+([^,]+),\s*licensed under\s+(.+?)\.?\s*$')
 TRAILING_PAREN_RE = re.compile(r'\(([^()]+)\)\s*$')
 BACK_LINK_RE = re.compile(r"^\[←\s*Back to all posts\]\(/\)$")
-COMMONS_THUMB_RE = re.compile(r'^(https://upload\.wikimedia\.org/wikipedia/commons)/thumb(/.+?)/(?:lossy-page\d+-)?\d+px-[^/]+$')
+COMMONS_THUMB_RE = re.compile(r'^https://(?:upload|thumb)\.wikimedia\.org/wikipedia/commons/thumb(/.+?)/(?:lossy-page\d+-)?\d+px-[^/]+$')
 
 
 def normalize_commons_url(url: str) -> str:
@@ -80,7 +86,7 @@ def normalize_commons_url(url: str) -> str:
     - a chart/video config often requests a wider thumb than the gallery,
     so those two must still resolve to the same file."""
     m = COMMONS_THUMB_RE.match(url)
-    canonical = m.group(1) + m.group(2) if m else url
+    canonical = "https://upload.wikimedia.org/wikipedia/commons" + m.group(1) if m else url
     # Decode percent-encoding so a video config's "Redbridge_%288166305323%29.jpg"
     # matches the post markdown's literal "Redbridge_(8166305323).jpg" (and
     # vice versa). Both sides pass through here, so the comparison is
@@ -469,6 +475,79 @@ def shorten_url(url: str, method: str) -> str:
 
 
 POST_DATE_PREFIX_RE = re.compile(r'^\d{4}-\d{2}-\d{2}-')
+SITE_BASE = "https://pikaia.github.io"
+
+
+def candidate_permalinks(fm: dict, slug: str) -> list[str]:
+    """Permalinks the post could live at, most likely first.
+
+    _config.yml uses /:year/:month/:day/:title/ and GitHub Pages builds in
+    UTC, so the URL date is the front-matter datetime converted to UTC. The
+    date as written (SGT) is included as a fallback."""
+    raw = str(fm.get("date", "")).strip()
+    dates: list[datetime.date] = []
+    for fmt in ("%Y-%m-%d %H:%M:%S %z", "%Y-%m-%d %H:%M %z"):
+        try:
+            dt = datetime.datetime.strptime(raw, fmt)
+        except ValueError:
+            continue
+        dates = [dt.astimezone(datetime.timezone.utc).date(), dt.date()]
+        break
+    if not dates:
+        m = re.match(r"(\d{4})-(\d{2})-(\d{2})", raw)
+        if m:
+            dates = [datetime.date(int(m.group(1)), int(m.group(2)), int(m.group(3)))]
+    urls: list[str] = []
+    for d in dates:
+        u = f"{SITE_BASE}/{d:%Y/%m/%d}/{slug}/"
+        if u not in urls:
+            urls.append(u)
+    return urls
+
+
+def url_is_live(url: str) -> bool:
+    for attempt in range(2):
+        try:
+            req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "pikaia-stage/1.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                if resp.status == 200:
+                    return True
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return False
+        except (urllib.error.URLError, TimeoutError):
+            pass
+    return False
+
+
+def resolve_post_url(given: str | None, fm: dict, post_slug: str, verify: bool) -> str:
+    """Pick the permalink to shorten, validating it against the front-matter
+    date and (unless verify is False) the live site. Exits on a bad URL rather
+    than creating a dead short link."""
+    candidates = candidate_permalinks(fm, post_slug)
+    if given:
+        given_norm = given if given.endswith("/") else given + "/"
+        if candidates and given_norm not in candidates:
+            print(f"WARNING: --post-url {given} does not match the permalink derived from the post's "
+                  f"front-matter date ({', '.join(candidates)}).", file=sys.stderr)
+        chosen = given_norm
+        if verify and not url_is_live(chosen):
+            live = [c for c in candidates if url_is_live(c)]
+            hint = f" The live page appears to be {live[0]}" if live else " None of the derived permalinks answer 200 either (has the post been pushed and built?)"
+            sys.exit(f"ERROR: {chosen} does not return 200 from the live site.{hint} "
+                     f"Fix --post-url or pass --no-verify to skip this check.")
+        return chosen
+    if not candidates:
+        sys.exit("ERROR: no --post-url given and the post has no parseable front-matter date to derive one from.")
+    if not verify:
+        print(f"Using derived post URL (not verified live): {candidates[0]}", file=sys.stderr)
+        return candidates[0]
+    for c in candidates:
+        if url_is_live(c):
+            print(f"Post URL (derived from front matter, verified live): {c}", file=sys.stderr)
+            return c
+    sys.exit("ERROR: none of the permalinks derived from the front-matter date return 200 from the live site: "
+             + ", ".join(candidates) + ". Push the post and wait for the Pages build, pass --post-url, or use --no-verify.")
 
 
 def main() -> None:
@@ -478,7 +557,11 @@ def main() -> None:
                      help="scripts/video-configs/<slug>.py - omit if no video's been built yet")
     ap.add_argument("short_config_path", nargs="?", default=None,
                      help="scripts/video-configs/<slug>-short.py - omit if no Short's been built yet")
-    ap.add_argument("--post-url", required=True, help="The post's real live permalink (check sitemap.xml first)")
+    ap.add_argument("--post-url", default=None,
+                     help="The post's live permalink. Optional: derived from the front-matter date if omitted; "
+                          "either way it is checked against the live site.")
+    ap.add_argument("--no-verify", action="store_true",
+                     help="Skip the live-site check of the post URL (e.g. before the post is pushed).")
     ap.add_argument("--voice", default="bm_george")
     ap.add_argument("--shortener", choices=["dagd", "tinyurl", "none"], default="dagd")
     ap.add_argument("--out", help="Defaults to docs/youtube_helper/<slug>-youtube.txt")
@@ -505,7 +588,8 @@ def main() -> None:
     short_images, short_credits = images_used_in_order(short_config_path)
     existing_main_url, existing_short_url = find_existing_youtube_urls(post_text)
 
-    short_url = shorten_url(args.post_url, args.shortener)
+    post_url = resolve_post_url(args.post_url, fm, POST_DATE_PREFIX_RE.sub("", post_path.stem), not args.no_verify)
+    short_url = shorten_url(post_url, args.shortener)
     narration_line = (f"Narration: synthesized voice (Kokoro TTS, open-source, "
                        f"Apache 2.0 license, voice {args.voice})")
 

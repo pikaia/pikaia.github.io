@@ -1439,8 +1439,7 @@ Generate the draft with `scripts/stage_youtube_text.py`:
   cmd=(python scripts/stage_youtube_text.py
       _posts/<file>.md
       scripts/video-configs/<slug>.py
-      scripts/video-configs/<slug>-short.py
-      --post-url https://pikaia.github.io/YYYY/MM/DD/<slug>/)
+      scripts/video-configs/<slug>-short.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -1513,12 +1512,18 @@ extraction is best-effort regex, not a guarantee — a flagged line just
 means the script fell back to a looser extraction and wants a human
 glance, not that anything is necessarily wrong.
 
-**Before shortening, double-check the post's actual live permalink**
-via `sitemap.xml` (`http://127.0.0.1:4000/sitemap.xml` locally, or the
-real production sitemap) and pass that as `--post-url` — don't assume
-it from the filename. A post timestamped before 08:00 SGT can build one
-calendar day earlier than the filename date, on both local preview and
-the real GitHub Pages UTC build.
+**The post's permalink is derived and verified for you (2026-09-26).**
+`--post-url` is now optional. The script converts the post's front-matter
+`date` to UTC (GitHub Pages builds in UTC, so a post timestamped before
+08:00 SGT lands on the previous calendar day's URL, whatever the filename
+says), tries that and the SGT-date variant against the live site, and
+shortens whichever answers 200. If you do pass `--post-url` it must match
+a derived candidate and return 200, or the script stops with the live URL
+it found instead of creating a dead short link. Never use the local
+preview URL (its clock is UTC-4 and shows a different date). The post must
+already be pushed and built; use `--no-verify` to skip the live check
+before that. (This replaced a manual "check sitemap.xml" step after the
+Marshall post's short link pointed at a 404.)
 
 **Shortening** happens automatically via da.gd inside the script
 (`--shortener dagd`, the default) — a raw `pikaia.github.io` URL has
