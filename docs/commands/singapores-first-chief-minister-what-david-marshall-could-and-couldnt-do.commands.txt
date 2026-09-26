@@ -29,7 +29,6 @@
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 ===========================================================================================================================================
-
 { echo; date; echo "=== 4. Author the Watch widget ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py)
   echo "\$ ${cmd[*]}"; echo
@@ -89,7 +88,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
       _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md
       scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py
       scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do-short.py
-      --post-url https://pikaia.github.io/2026/09/26/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do/)
+      --post-url https://pikaia.github.io/2026/09/25/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do/)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
@@ -101,8 +100,8 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.md scripts/video-configs/singapores-first-chief-minister-what-david-marshall-could-and-couldnt-do.py 
-  --youtube-url https://youtu.be/S6ZH-kZsrJw
-  --shorts-url https://youtube.com/shorts/lowEEOnF-6A
+  --youtube-url https://youtu.be/--HDISzPz_I
+  --shorts-url https://youtube.com/shorts/B-dasvAZkSA
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
