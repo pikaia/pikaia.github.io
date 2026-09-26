@@ -1569,6 +1569,12 @@ PRONUNCIATION_OVERRIDES = {
     "Kheam": "kiˈam",             # kee-AM - Tan Kheam Hock (Hokkien Khiam).
     "Rumney": "rˈʌmni",           # "RUM-nee" - J. Rumney Nicholson. Single obvious reading.
     "Nicholson": "nˈɪkəlsən",     # "NICK-ul-sun". Single obvious reading.
+    # David Marshall post batch (2026-09-26). Single obvious readings:
+    "Baghdadi": "bɑɡdˈɑdi",       # "bag-DAH-dee" - Baghdadi Jewish.
+    "Rendel": "ɹˈɛndᵊl",          # "REN-dl" - Rendel constitution.
+    "Lennox-Boyd": "lˈɛnəks bˈɔɪd",  # "LEN-nucks BOYD" - Alan Lennox-Boyd.
+    "Malayanisation": "məlˈeɪənaɪzˈeɪʃən",  # "muh-LAY-uh-ny-ZAY-shun".
+    "Anson": "ˈænsən",            # "AN-sun" - Anson by-election.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
