@@ -1,0 +1,111 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md audio/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md audio/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md the-sikh-police-who-came-in-1881-and-the-community-they-left-behind)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py --out preview-motion/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.py --out preview-motion/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md
+      scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py
+      scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind-short.py
+      --post-url https://pikaia.github.io/2026/09/25/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+===========================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-26-the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.md scripts/video-configs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.py 
+  --youtube-url https://youtu.be/--HDISzPz_I
+  --shorts-url https://youtube.com/shorts/B-dasvAZkSA
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-police-who-came-in-1881-and-the-community-they-left-behind.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
