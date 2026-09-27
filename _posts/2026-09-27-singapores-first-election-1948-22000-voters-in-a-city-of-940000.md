@@ -11,6 +11,45 @@ On 20 March 1948 Singapore held its first election. Six seats on a Legislative C
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/singapores-first-election-1948-22000-voters-in-a-city-of-940000.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![The Victoria Theatre and Memorial Hall in Singapore, with its clock tower, seen across an open square with rickshaws and carriages](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/KITLV_A887_-_Victoria_Theatre_en_Memorial_Hall_te_Singapore%2C_KITLV_107516.tiff/lossy-page1-1280px-KITLV_A887_-_Victoria_Theatre_en_Memorial_Hall_te_Singapore%2C_KITLV_107516.tiff.jpg)
 
 *The Victoria Theatre and Memorial Hall, where the votes of Singapore's first election were counted on the night of 20 March 1948. (Photo: Kelly & Walsh Ltd., KITLV/Leiden University Library, CC BY 4.0, via Wikimedia Commons)*
