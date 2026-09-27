@@ -5,7 +5,7 @@ post_url: /2026/09/27/before-the-banks-how-singapores-merchants-kept-their-money
 post_title: "Before the Banks: How Singapore's Merchants Kept Their Money"
 ---
 
-More views of the bank buildings that stood around Raffles Place and the waterfront by the turn of the 20th century.
+More views of the bank buildings that stood around Raffles Place and the waterfront by the turn of the 20th century, and the silver dollars the port's trade ran on before the banks came.
 
 ### The Chartered Bank, Raffles Place
 
@@ -24,5 +24,17 @@ More views of the bank buildings that stood around Raffles Place and the waterfr
 ![A postcard of Johnston's Pier with boats moored in front and the Hongkong and Shanghai Bank building behind](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/KITLV_-_1404900_-_Johnston%27s_Pier_and_H._M._Bank._Singapore_-_1895-1906.tif/lossy-page1-1280px-KITLV_-_1404900_-_Johnston%27s_Pier_and_H._M._Bank._Singapore_-_1895-1906.tif.jpg)
 
 *A postcard of Johnston's Pier and the Hongkong and Shanghai Bank building, between 1895 and 1906. (Photo: G.R. Lambert & Co., KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
+
+### A Spanish dollar stamped "Singapore"
+
+![A 1789 silver Spanish dollar of Charles IV, cut across by a stamped band of Chinese characters reading Singapore](https://upload.wikimedia.org/wikipedia/commons/3/33/1789_Charles_IV_Spanish_dollar_countermarked_with_Chinese_words_meaning_%22Singapore%22.jpg)
+
+*A 1789 Spanish dollar of Charles IV countermarked with the Chinese characters 新加坡, "Singapore". Silver dollars like this were the port's main currency before the banks. (Photo: Alejo Maria, CC BY 2.5 Spain, via Wikimedia Commons)*
+
+### A pillar dollar of Charles III, 1771
+
+![Both sides of a 1771 Mexican-minted 8 reales pillar dollar of Charles III](https://upload.wikimedia.org/wikipedia/commons/f/f9/Mexico_Carlos_III_Pillar_Dollar_of_8_Reales_1771.jpg)
+
+*Both faces of a Mexican-minted eight-real "pillar dollar," 1771. (Photo: Heritage Auctions, via Wikimedia Commons, CC BY 4.0 / public domain mark)*
 
 [← Back to all posts](/)

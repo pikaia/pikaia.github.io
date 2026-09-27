@@ -322,5 +322,7 @@ The foreign banks gave Singapore's trade access to large amounts of capital and 
 - [File:The Chartered Bank aan Raffles Place te Singapore, KITLV 104795.tiff, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:The_Chartered_Bank_aan_Raffles_Place_te_Singapore,_KITLV_104795.tiff>) (gallery)
 - [File:Photographic Views of Singapore Plate 05 Hongkong and Shanghai Bank.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Photographic_Views_of_Singapore_Plate_05_Hongkong_and_Shanghai_Bank.jpg>) (gallery)
 - [File:KITLV - 1404900 - Johnston's Pier and H. M. Bank. Singapore - 1895-1906.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_1404900_-_Johnston's_Pier_and_H._M._Bank._Singapore_-_1895-1906.tif>) (gallery)
+- [File:1789 Charles IV Spanish dollar countermarked with Chinese words meaning "Singapore".jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:1789_Charles_IV_Spanish_dollar_countermarked_with_Chinese_words_meaning_"Singapore".jpg>) (gallery)
+- [File:Mexico Carlos III Pillar Dollar of 8 Reales 1771.jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mexico_Carlos_III_Pillar_Dollar_of_8_Reales_1771.jpg) (gallery)
 
 [← Back to all posts](/)
