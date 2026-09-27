@@ -11,6 +11,7 @@ photo (small, grainy) is frozen. The Straits Times pages of 18 June 1850 and
 """
 
 IMAGES = {
+    "DALHOUSIE": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Maharaja_Duleep_Singh_and_Governor-General_Lord_Dalhousie%2C_Lahore%2C_Punjab%2C_ca.1849%E2%80%9350.jpg",
     "CELL": "https://upload.wikimedia.org/wikipedia/commons/8/83/Bhai_Maharaj_Singh_and_Companion_%28Khurruck_Singh%29_in_a_Prison_Cell.jpg",
     "DARBAR": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Painting_of_the_Sikh_warrior%2C_Bhai_Maharaj_Singh%2C_holding_court_in_his_darbar.jpg/1920px-Painting_of_the_Sikh_warrior%2C_Bhai_Maharaj_Singh%2C_holding_court_in_his_darbar.jpg",
     "POL1931": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Photograph_of_members_of_the_Sikh_Police_Contingent_in-front_of_Gurdwara_Sahib_Silat_Road_in_1931.jpg",
@@ -44,10 +45,10 @@ SLIDES = [
     {"img": "PRISON", **_P4},  # s5 After the death of Maharaja Ranjit Singh in 
     {"img": "DARBAR", **_P5},  # s6 Sikh accounts describe Maharaj Singh as a le
     {"img": "PRISON", **_P5},  # s7 He was arrested near Adampur on the 28th of 
-    {"img": "ST50", **_P6},  # s8 The Governor-General, Lord Dalhousie, decide
+    {"img": "DALHOUSIE", **_P2},  # s8 The Governor-General, Lord Dalhousie, decide
     {"img": "ST50", **_P7},  # s9 The Straits Times of the 18th of June 1850 r
     {"img": "ST50", **_P8},  # s10 The paper described them as the instigators 
-    {"img": "PRISON", **_P0},  # s11 According to the Central Sikh Gurdwara Board
+    {"img": "DALHOUSIE", **_P2},  # s11 According to the Central Sikh Gurdwara Board
     {"img": "CELL", **_P2},  # s12 He was nevertheless kept in a cell on the up
     {"img": "CELL", **_P2},  # s13 His health failed.
     {"img": "PRISON", **_P4},  # s14 He was almost blind within three years, suff

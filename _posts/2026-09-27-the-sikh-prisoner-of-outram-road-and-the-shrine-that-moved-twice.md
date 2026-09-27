@@ -56,7 +56,14 @@ In June 1850 the Straits Times reported, in a few lines, that a ship from Calcut
 
 ## Who he was
 
+<div style="float: left; max-width: 240px; width: 38%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Maharaja_Duleep_Singh_and_Governor-General_Lord_Dalhousie%2C_Lahore%2C_Punjab%2C_ca.1849%E2%80%9350.jpg" alt="A painting of the young Maharaja Duleep Singh in a jewelled turban seated beside Lord Dalhousie in a dark coat, on chairs under an arch" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Maharaja Duleep Singh, the last ruler of the Sikh kingdom, and the Governor-General, Lord Dalhousie, in a painting from Lahore of about 1849&ndash;50, inscribed in Persian with both their names. (Image: unknown artist, Toor Collection, public domain, via Wikimedia Commons)</em>
+</div>
+
 Bhai Maharaj Singh was the head of a Sikh religious order at Naurangabad, in Punjab. After the death of Maharaja Ranjit Singh in 1839, the Sikh kingdom was weakened by disputes over the succession, and in the 1840s it fought two wars against the British East India Company. Sikh accounts describe Maharaj Singh as a leader of the resistance to British rule; the British treated him as an outlaw and put a reward of 10,000 rupees on him. He was arrested near Adampur on 28 December 1849, soon after Punjab was annexed. The Governor-General, Lord Dalhousie, decided that he should be held far from Punjab, and he was sent to Singapore.
+
+<div style="clear: both;"></div>
 
 ## Six years at Outram Road
 
@@ -301,6 +308,7 @@ A memorial building dedicated to Bhai Maharaj Singh was opened there on 23 Octob
 - [Untitled report of the arrival of two State prisoners, The Straits Times, 18 June 1850, page 4, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes18500618-1)
 - ["Death of the Seikh Gooroo," The Straits Times, 8 July 1856, page 4, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes18560708-1)
 - [File:Photograph of Outram Prison (Pearl’s Hill Prison) in the 1850's.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Photograph_of_Outram_Prison_(Pearl’s_Hill_Prison)_in_the_1850's.jpg>)
+- [File:Maharaja Duleep Singh and Governor-General Lord Dalhousie, Lahore, Punjab, ca.1849–50.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Maharaja_Duleep_Singh_and_Governor-General_Lord_Dalhousie,_Lahore,_Punjab,_ca.1849%E2%80%9350.jpg>)
 - [File:Bhai Maharaj Singh and Companion (Khurruck Singh) in a Prison Cell.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Bhai_Maharaj_Singh_and_Companion_(Khurruck_Singh)_in_a_Prison_Cell.jpg>)
 - [File:Silat Road Sikh Temple, Singapore.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Silat_Road_Sikh_Temple,_Singapore.jpg>)
 - [File:Painting of the Sikh warrior, Bhai Maharaj Singh, holding court in his darbar.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Painting_of_the_Sikh_warrior,_Bhai_Maharaj_Singh,_holding_court_in_his_darbar.jpg>) (gallery)
