@@ -1,6 +1,6 @@
 """Short config for the early banks post.
 
-Excerpt: the opening hook (sentences 0-3, 0.0-32.05 s): twenty-one years with no
+Excerpt: the opening hook (sentences 0-3, 0.0-32.12 s): twenty-one years with no
 bank, the agency houses and moneylenders, and the first bank in 1840. Ends
 exactly where sentence 4 begins in the main config's own timing. Vertical
 1080x1920.
@@ -27,8 +27,8 @@ SLIDES = [
     {"img": "HSBC", **_VH},  # s3 first bank 1840
 ]
 
-SCHEDULE = [(0.0, 0), (4.325, 1), (11.85, 2), (24.35, 3)]
-TOTAL_DURATION = 32.05
+SCHEDULE = [(0.0, 0), (4.325, 1), (11.85, 2), (24.425, 3)]
+TOTAL_DURATION = 32.125
 TIMING_JSON = "audio/before-the-banks-how-singapores-merchants-kept-their-money.timing.json"
 
 BURN_CAPTIONS = True

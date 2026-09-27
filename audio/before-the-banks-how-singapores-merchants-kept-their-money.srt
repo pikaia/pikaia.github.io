@@ -14,381 +14,381 @@ the busiest free ports in
 Asia and had no bank at all.
 
 4
-00:00:11,850 --> 00:00:15,871
+00:00:11,850 --> 00:00:15,895
 Its merchants still borrowed,
 lent, paid and kept their money,
 
 5
-00:00:15,951 --> 00:00:19,111
+00:00:15,975 --> 00:00:19,155
 through the trading firms
 known as agency houses,
 
 6
-00:00:19,191 --> 00:00:24,350
+00:00:19,235 --> 00:00:24,425
 through moneylenders, and through credit
 extended from one trader to the next.
 
 7
-00:00:24,350 --> 00:00:28,314
+00:00:24,425 --> 00:00:28,389
 When the first bank finally
 opened a branch in 1840,
 
 8
-00:00:28,394 --> 00:00:32,050
+00:00:28,469 --> 00:00:32,125
 it joined that system
 rather than replacing it.
 
 9
-00:00:32,050 --> 00:00:36,439
+00:00:32,125 --> 00:00:36,514
 In the port's early years, the
 work that a bank would do was done
 
 10
-00:00:36,519 --> 00:00:40,976
+00:00:36,594 --> 00:00:41,051
 by the agency houses, European
 trading firms such as Guthrie & Co.
 
 11
-00:00:41,056 --> 00:00:45,525
+00:00:41,131 --> 00:00:45,600
 that bought and sold goods on
 commission for merchants elsewhere.
 
 12
-00:00:45,525 --> 00:00:49,945
+00:00:45,600 --> 00:00:50,020
 They held money for their clients,
 advanced credit against goods,
 
 13
-00:00:50,025 --> 00:00:53,625
+00:00:50,100 --> 00:00:53,700
 and moved funds between
 Singapore, India and Europe.
 
 14
-00:00:53,625 --> 00:00:58,392
+00:00:53,700 --> 00:00:58,467
 According to the National Library
 Board's history of money lending,
 
 15
-00:00:58,472 --> 00:01:00,779
+00:00:58,547 --> 00:01:00,854
 agency houses later went further,
 
 16
-00:01:00,859 --> 00:01:05,200
+00:01:00,934 --> 00:01:05,275
 financing factories, sawmills,
 tin mines and rubber estates.
 
 17
-00:01:05,200 --> 00:01:07,622
+00:01:05,275 --> 00:01:07,698
 Trade itself ran on silver coins,
 
 18
-00:01:07,702 --> 00:01:12,025
+00:01:07,778 --> 00:01:12,100
 mostly the Spanish dollar,
 and on credit between traders.
 
 19
-00:01:12,025 --> 00:01:15,037
+00:01:12,100 --> 00:01:15,112
 Goods changed hands on
 the promise of payment
 
 20
-00:01:15,117 --> 00:01:18,128
+00:01:15,192 --> 00:01:18,203
 after the next voyage,
 and much of the port's
 
 21
-00:01:18,208 --> 00:01:21,575
+00:01:18,283 --> 00:01:21,650
 business depended on who
 could be trusted to pay.
 
 22
-00:01:21,575 --> 00:01:25,232
+00:01:21,650 --> 00:01:25,308
 The first bank in
 Singapore was a branch of
 
 23
-00:01:25,312 --> 00:01:29,050
+00:01:25,388 --> 00:01:29,125
 the Union Bank of
 Calcutta, opened in 1840.
 
 24
-00:01:29,050 --> 00:01:33,036
+00:01:29,125 --> 00:01:33,111
 It offered merchants advances
 on goods to be imported,
 
 25
-00:01:33,116 --> 00:01:37,477
+00:01:33,191 --> 00:01:37,552
 up to three-quarters of their
 value at 9 per cent interest,
 
 26
-00:01:37,557 --> 00:01:42,150
+00:01:37,632 --> 00:01:42,225
 and loans against bullion of up
 to 90 per cent at 7 per cent.
 
 27
-00:01:42,150 --> 00:01:44,892
+00:01:42,225 --> 00:01:44,967
 It also issued the first banknotes with
 
 28
-00:01:44,972 --> 00:01:47,650
+00:01:45,047 --> 00:01:47,725
 the word "Singapore" printed on them.
 
 29
-00:01:47,650 --> 00:01:52,550
+00:01:47,725 --> 00:01:52,625
 Its parent bank in
 Calcutta collapsed in 1848.
 
 30
-00:01:52,550 --> 00:01:55,441
+00:01:52,625 --> 00:01:55,516
 A year before the Oriental Bank opened,
 
 31
-00:01:55,521 --> 00:02:00,698
+00:01:55,596 --> 00:02:00,773
 The Straits Times of the 5th of
 August 1845 reported that a Singapore
 
 32
-00:02:00,778 --> 00:02:04,660
+00:02:00,853 --> 00:02:04,735
 branch was "in contemplation",
 to complete the chain
 
 33
-00:02:04,740 --> 00:02:08,625
+00:02:04,815 --> 00:02:08,700
 of banking establishments
 between Bombay and China.
 
 34
-00:02:08,625 --> 00:02:12,490
+00:02:08,700 --> 00:02:12,565
 Other banks followed, each based
 elsewhere and each opening a
 
 35
-00:02:12,570 --> 00:02:16,450
+00:02:12,645 --> 00:02:16,525
 Singapore branch for the trade
 that passed through the port.
 
 36
-00:02:16,450 --> 00:02:20,905
+00:02:16,525 --> 00:02:20,980
 The Oriental Bank came in
 1846, the Mercantile Bank
 
 37
-00:02:20,985 --> 00:02:25,085
+00:02:21,060 --> 00:02:25,160
 of India in 1855, the
 Dutch trading company the
 
 38
-00:02:25,165 --> 00:02:28,820
+00:02:25,240 --> 00:02:28,895
 Nederlandsche Handel-Maatschappij in 1857,
 
 39
-00:02:28,900 --> 00:02:34,325
+00:02:28,975 --> 00:02:34,400
 and the Chartered Bank of India,
 Australia and China in 1859.
 
 40
-00:02:34,325 --> 00:02:38,668
+00:02:34,400 --> 00:02:38,743
 The Hongkong and Shanghai
 Bank did business in Singapore
 
 41
-00:02:38,748 --> 00:02:43,248
+00:02:38,823 --> 00:02:43,323
 through an agency from the
 mid-1860s and, according to the
 
 42
-00:02:43,328 --> 00:02:48,225
+00:02:43,403 --> 00:02:48,300
 bank's own history, opened its
 first Singapore office in 1877.
 
 43
-00:02:48,225 --> 00:02:52,317
+00:02:48,300 --> 00:02:52,392
 These were European banks, and
 most of their Chinese customers
 
 44
-00:02:52,397 --> 00:02:56,287
+00:02:52,472 --> 00:02:56,362
 reached them through a comprador,
 a local intermediary who,
 
 45
-00:02:56,367 --> 00:03:01,198
+00:02:56,442 --> 00:03:01,273
 in the National Library Board's words,
 "was responsible for every Chinese
 
 46
-00:03:01,278 --> 00:03:05,450
+00:03:01,353 --> 00:03:05,525
 account opened" and who also
 recruited the bank's local staff.
 
 47
-00:03:05,450 --> 00:03:08,845
+00:03:05,525 --> 00:03:08,920
 The comprador vouched for
 the customers he brought in,
 
 48
-00:03:08,925 --> 00:03:12,850
+00:03:09,000 --> 00:03:12,925
 and the bank relied on his
 judgement of who could be trusted.
 
 49
-00:03:12,850 --> 00:03:17,236
+00:03:12,925 --> 00:03:17,335
 Alongside the banks, many borrowers
 who could not get a bank loan
 
 50
-00:03:17,316 --> 00:03:21,850
+00:03:17,415 --> 00:03:21,975
 went to the Chettiars, professional
 moneylenders from South India.
 
 51
-00:03:21,850 --> 00:03:26,439
+00:03:21,975 --> 00:03:26,564
 The National Library Board's account
 describes how they drew capital
 
 52
-00:03:26,519 --> 00:03:30,764
+00:03:26,644 --> 00:03:30,889
 from wealthy investors in India,
 from local depositors and from
 
 53
-00:03:30,844 --> 00:03:35,375
+00:03:30,969 --> 00:03:35,500
 the European banks themselves,
 which lent to them on demand notes.
 
 54
-00:03:35,375 --> 00:03:38,163
+00:03:35,500 --> 00:03:38,288
 The banks found the
 arrangement safe enough,
 
 55
-00:03:38,243 --> 00:03:43,000
+00:03:38,368 --> 00:03:43,125
 because their losses in dealing with
 the Chettiars were relatively small.
 
 56
-00:03:43,000 --> 00:03:46,375
+00:03:43,125 --> 00:03:46,500
 The Chettiars' terms could
 be expensive for borrowers:
 
 57
-00:03:46,455 --> 00:03:51,045
+00:03:46,580 --> 00:03:51,170
 according to the same account, interest
 was charged on the full amount of
 
 58
-00:03:51,125 --> 00:03:54,756
+00:03:51,250 --> 00:03:54,881
 the promissory note rather
 than the sum actually received,
 
 59
-00:03:54,836 --> 00:03:59,250
+00:03:54,961 --> 00:03:59,375
 and unpaid amounts were rolled over
 into a new note at a higher rate.
 
 60
-00:03:59,250 --> 00:04:04,100
+00:03:59,375 --> 00:04:04,225
 The community's standing in the
 town shows in the temple it built.
 
 61
-00:04:04,100 --> 00:04:07,378
+00:04:04,225 --> 00:04:07,503
 The Sri Thendayuthapani
 Temple on Tank Road,
 
 62
-00:04:07,458 --> 00:04:11,728
+00:04:07,583 --> 00:04:11,853
 better known as the Chettiars'
 Temple, was built in 1859,
 
 63
-00:04:11,808 --> 00:04:15,700
+00:04:11,933 --> 00:04:15,825
 the same year the Chartered
 Bank opened its branch.
 
 64
-00:04:15,700 --> 00:04:19,248
+00:04:15,825 --> 00:04:19,373
 The foreign banks gave
 Singapore's trade access to large
 
 65
-00:04:19,328 --> 00:04:23,458
+00:04:19,453 --> 00:04:23,583
 amounts of capital and to London
 and the other ports of the East,
 
 66
-00:04:23,538 --> 00:04:26,373
+00:04:23,663 --> 00:04:26,498
 and by the end of the
 century their buildings
 
 67
-00:04:26,453 --> 00:04:30,275
+00:04:26,578 --> 00:04:30,400
 stood along Raffles Place,
 Battery Road and the waterfront.
 
 68
-00:04:30,275 --> 00:04:32,708
+00:04:30,400 --> 00:04:32,832
 But they did not replace the older
 
 69
-00:04:32,787 --> 00:04:35,300
+00:04:32,912 --> 00:04:35,425
 ways of keeping and lending money.
 
 70
-00:04:35,300 --> 00:04:39,708
+00:04:35,425 --> 00:04:39,833
 The agency houses, the compradors
 and the Chettiars all went on
 
 71
-00:04:39,788 --> 00:04:43,840
+00:04:39,913 --> 00:04:43,965
 working alongside the banks,
 and in the early 20th century
 
 72
-00:04:43,920 --> 00:04:48,550
+00:04:44,045 --> 00:04:48,675
 Singapore's own Chinese-owned
 banks began to open alongside them.
 
 73
-00:04:48,550 --> 00:04:50,846
+00:04:48,675 --> 00:04:50,971
 Where it fits in the bigger story:
 
 74
-00:04:50,926 --> 00:04:54,970
+00:04:51,051 --> 00:04:55,095
 Singapore's financial history
 is usually told from the bank
 
 75
-00:04:55,050 --> 00:04:58,125
+00:04:55,175 --> 00:04:58,250
 buildings of Raffles
 Place and Battery Road.
 
 76
-00:04:58,125 --> 00:05:03,130
+00:04:58,250 --> 00:05:03,298
 For the first two decades there were
 none, and the port still ran on trust,
 
 77
-00:05:03,210 --> 00:05:07,075
+00:05:03,378 --> 00:05:07,275
 credit and silver through
 agency houses and moneylenders.
 
 78
-00:05:07,075 --> 00:05:11,139
+00:05:07,275 --> 00:05:11,339
 When the banks came, from 1840,
 they settled into that system,
 
 79
-00:05:11,219 --> 00:05:14,681
+00:05:11,419 --> 00:05:14,881
 and the people who connected
 them to their customers,
 
 80
-00:05:14,761 --> 00:05:16,886
+00:05:14,961 --> 00:05:17,086
 the compradors and the Chettiars,
 
 81
-00:05:16,966 --> 00:05:20,575
+00:05:17,166 --> 00:05:20,775
 are the part of the story
 that is easiest to overlook.
