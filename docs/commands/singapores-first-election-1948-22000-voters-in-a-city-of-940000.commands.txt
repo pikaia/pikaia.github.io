@@ -106,8 +106,8 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-singapores-first-election-1948-22000-voters-in-a-city-of-940000.md scripts/video-configs/singapores-first-election-1948-22000-voters-in-a-city-of-940000.py 
-  --youtube-url https://youtu.be/pcYBqIyad60
-  --shorts-url https://youtube.com/shorts/MB0o12D9DZs
+  --youtube-url https://youtu.be/CSNnYTkkVKo
+  --shorts-url https://youtube.com/shorts/Nli7mr-YnCA
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
@@ -115,3 +115,6 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 } 2>&1 | tee -a logs/singapores-first-election-1948-22000-voters-in-a-city-of-940000.log
 
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done, commit

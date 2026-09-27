@@ -43,7 +43,7 @@ Description:
 On 20 March 1948 Singapore held its first election. Six seats on a Legislative Council of twenty-two were open to the vote, and 22,334 people were registered to cast one, in a colony of about 940,000. The Sunday Times the next morning reported that 63 per cent of them had gone to the polls. Eleven years later, at the 1959 election, 586,098 people were registered and voting was compulsory. #Shorts
 
 Full story: https://da.gd/I1ruXd
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/CSNnYTkkVKo
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
