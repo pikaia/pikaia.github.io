@@ -25,4 +25,10 @@ A painting of Bhai Maharaj Singh from Punjab, the shrine on the grounds of Singa
 
 *The Silat Road gurdwara soon after it was completed in 1924. The shrine was moved to its grounds in 1966. (Photo: unknown photographer, public domain, via Wikimedia Commons)*
 
+### The Sikh Police Contingent at Silat Road, 1931
+
+![Members of the Sikh Police Contingent seated and standing in rows in front of the domed Silat Road gurdwara, 1931](https://upload.wikimedia.org/wikipedia/commons/0/0a/Photograph_of_members_of_the_Sikh_Police_Contingent_in-front_of_Gurdwara_Sahib_Silat_Road_in_1931.jpg)
+
+*Members of the Sikh Police Contingent in front of the Silat Road gurdwara in 1931, the temple where the shrine was moved in 1966. (Photo: unknown photographer, public domain, via Wikimedia Commons)*
+
 [← Back to all posts](/)
