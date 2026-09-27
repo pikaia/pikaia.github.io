@@ -17,6 +17,7 @@ Images (Wikimedia Commons and NewspaperSG, credited individually):
 - unknown photographer, public domain, via Wikimedia Commons
 - Mike Gorrie, public domain, via Wikimedia Commons
 - Ministry of Information and the Arts Collection, public domain, via Wikimedia Commons
+- Central Office of Information, London, public domain, via Wikimedia Commons
 
 Sources:
 - 1948 Singaporean general election, Wikipedia
@@ -28,6 +29,7 @@ Sources:
 - File:KITLV A887 - Victoria Theatre en Memorial Hall te Singapore, KITLV 107516.tiff, Wikimedia Commons
 - File:Victoria Theatre and Victoria Memorial Hall - c 1930.jpg, Wikimedia Commons
 - File:Tan Chye Cheng.png, Wikimedia Commons
+- File:David Marshall, 1956 (cropped).png, Wikimedia Commons
 - File:Sir Franklin Gimson in 1951.png, Wikimedia Commons
 - File:1948 Singapore General Elections Result Map.svg, Wikimedia Commons
 - File:Gravestone of John Laycock, Bidadari Garden, Singapore - 20121008.jpg, Wikimedia Commons
@@ -43,7 +45,7 @@ Description:
 On 20 March 1948 Singapore held its first election. Six seats on a Legislative Council of twenty-two were open to the vote, and 22,334 people were registered to cast one, in a colony of about 940,000. The Sunday Times the next morning reported that 63 per cent of them had gone to the polls. Eleven years later, at the 1959 election, 586,098 people were registered and voting was compulsory. #Shorts
 
 Full story: https://da.gd/I1ruXd
-Full-length video: https://youtu.be/CSNnYTkkVKo
+Full-length video: https://youtu.be/5VL-bciHnp8
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
