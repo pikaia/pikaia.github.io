@@ -1,0 +1,120 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md audio/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md audio/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py --out preview-motion/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice-short.py --out preview-motion/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md
+      scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py
+      scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice-short.py
+      --post-url https://pikaia.github.io/2026/09/27/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice/)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-27-the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.md scripts/video-configs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.py 
+  --youtube-url https://youtu.be/5VL-bciHnp8
+  --shorts-url https://youtube.com/shorts/Nli7mr-YnCA
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done, commit

@@ -11,6 +11,45 @@ In June 1850 the Straits Times reported, in a few lines, that a ship from Calcut
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-sikh-prisoner-of-outram-road-and-the-shrine-that-moved-twice.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A low walled prison building with a central octagonal block and a small cupola, in open ground with a few trees, in the 1850s](https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Photograph_of_Outram_Prison_%28Pearl%E2%80%99s_Hill_Prison%29_in_the_1850%27s.jpg/1280px-Photograph_of_Outram_Prison_%28Pearl%E2%80%99s_Hill_Prison%29_in_the_1850%27s.jpg)
 
 *The prison at Outram Road, also known as the Pearl's Hill prison, in the 1850s. (Photo: unknown photographer, public domain, via Wikimedia Commons)*
