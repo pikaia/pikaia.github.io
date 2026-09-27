@@ -19,6 +19,10 @@ IMAGES = {
     "VT30": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Victoria_Theatre_and_Victoria_Memorial_Hall_-_c_1930.jpg",
 }
 
+CREDITS = {
+    "CHART": "Chart by Lesser Known Singapore, figures per the post's own Sources list",
+}
+
 _P0 = {"type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.35, 0.5), (0.5, 0.5), (0.65, 0.5)], "ease": "ease-in-out"}
 _P1 = {"type": "cover", "zoom": [1.30, 1.33, 1.37], "pan": [(0.067, 0.0), (0.099, 0.0), (0.126, 0.0)], "ease": "ease-in-out"}
 _P2 = {"type": "cover", "zoom": [2.20, 2.25, 2.31], "pan": [(0.372, 0.139), (0.374, 0.154), (0.377, 0.168)], "ease": "ease-in-out"}
