@@ -2,7 +2,7 @@
 layout: post
 title: "Before the Banks: How Singapore's Merchants Kept Their Money"
 date: 2026-09-28 00:29:57 +0800
-last_modified_at: 2026-09-28 00:29:57 +0800
+last_modified_at: 2026-09-27 16:57:11 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/KITLV_-_79890_-_Kleingrothe%2C_C.J._-_Medan_-_Battery_Road_at_Singapore_-_circa_1910.tif/lossy-page1-1280px-KITLV_-_79890_-_Kleingrothe%2C_C.J._-_Medan_-_Battery_Road_at_Singapore_-_circa_1910.tif.jpg
 ---
@@ -34,9 +34,18 @@ The first bank in Singapore was a branch of the Union Bank of Calcutta, opened i
 
 ## The foreign banks arrive
 
+<div style="float: left; max-width: 280px; width: 42%; margin: 0.25em 1.5em 1em 0;">
+<img src="/assets/images/straits-times-1845-08-05-page-7.jpg" alt="Page 7 of The Straits Times, 5 August 1845, a page of dense columns of small type" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Page 7 of The Straits Times, 5 August 1845, which carried the short note that a Singapore branch of the Oriental Bank was planned. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+A year before the Oriental Bank opened, The Straits Times of 5 August 1845 reported that a Singapore branch was "in contemplation", to complete the chain of banking establishments between Bombay and China.
+
 Other banks followed, each based elsewhere and each opening a Singapore branch for the trade that passed through the port. The Oriental Bank came in 1846, the Mercantile Bank of India in 1855, the Dutch trading company the Nederlandsche Handel-Maatschappij in 1857, and the Chartered Bank of India, Australia and China in 1859. The Hongkong and Shanghai Bank did business in Singapore through an agency from the mid-1860s and, according to the bank's own history, opened its first Singapore office in 1877.
 
 These were European banks, and most of their Chinese customers reached them through a comprador, a local intermediary who, in the National Library Board's words, "was responsible for every Chinese account opened" and who also recruited the bank's local staff. The comprador vouched for the customers he brought in, and the bank relied on his judgement of who could be trusted.
+
+<div style="clear: both;"></div>
 
 ![The Hongkong and Shanghai Bank building in Singapore around 1900, a grand white building with arched verandas, turrets and a tiled roof](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/KITLV_-_50198_-_Lambert_%26_Co.%2C_G.R._-_Singapore_-_Building_of_the_Hong_Kong_and_Shanghai_Bank_in_Singapore_-_circa_1900.tif/lossy-page1-1280px-KITLV_-_50198_-_Lambert_%26_Co.%2C_G.R._-_Singapore_-_Building_of_the_Hong_Kong_and_Shanghai_Bank_in_Singapore_-_circa_1900.tif.jpg)
 
@@ -264,6 +273,7 @@ The foreign banks gave Singapore's trade access to large amounts of capital and 
 - [History of Currency in Singapore, Monetary Authority of Singapore](https://www.mas.gov.sg/currency/history-of-currency-in-singapore)
 - [The Union Bank (1828), Wikipedia](https://en.wikipedia.org/wiki/The_Union_Bank_(1828))
 - [Oriental Bank Corporation, Wikipedia](https://en.wikipedia.org/wiki/Oriental_Bank_Corporation)
+- [Untitled report of the planned Oriental Bank branch, The Straits Times, 5 August 1845, page 7, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes18450805-1)
 - [About HSBC, HSBC Singapore](https://www.about.hsbc.com.sg/)
 - [Sri Thendayuthapani Temple, Wikipedia](https://en.wikipedia.org/wiki/Sri_Thendayuthapani_Temple)
 - [File:KITLV - 79890 - Kleingrothe, C.J. - Medan - Battery Road at Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79890_-_Kleingrothe,_C.J._-_Medan_-_Battery_Road_at_Singapore_-_circa_1910.tif>)
