@@ -1619,7 +1619,8 @@ PRONUNCIATION_OVERRIDES = {
     "Hongkong": "hˌɒŋkˈɒŋ",       # old one-word spelling of Hong Kong.
     "Chettiars": "ʧˈɛtiəɹz",      # "CHET-ee-ars" - Tamil Chettiar moneylenders.
     "Chettiars'": "ʧˈɛtiəɹz",     # possessive, same sound.
-    # Provisional, awaiting Chris's ear-pick (samples in scratch/bk/samples/):
+    # Chris left these to Claude (2026-09-28); candidate 1 chosen, closest to the
+    # Dutch and Tamil originals (samples in scratch/bk/samples/):
     "Nederlandsche": "nˈAdəɹlˌɑntsə",  # Dutch "NAY-der-lahnt-suh".
     "Handel-Maatschappij": "hˈɑndᵊl mˈɑtskəpˌI",  # Dutch "HAHN-dl MAHT-skuh-pie".
     "Thendayuthapani": "tˌɛndəjˈuθəpˌɑni",  # Tamil "then-duh-YOO-thuh-pah-nee".
