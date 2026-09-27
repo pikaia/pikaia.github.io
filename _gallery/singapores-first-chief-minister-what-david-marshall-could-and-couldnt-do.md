@@ -31,6 +31,18 @@ Photographs of David Marshall from his student days to the Chief Minister's offi
 
 *David Marshall with Sir John Nicoll at the Victoria Memorial Hall in 1952. (Photo: David Ng, National Archives of Singapore, public domain, via Wikimedia Commons)*
 
+### Lim Yew Hock and David Marshall in London, 1956
+
+![Lim Yew Hock in a pinstriped suit and glasses seated at the conference table, with David Marshall beside him in a light suit, at the 1956 constitutional talks in London](https://upload.wikimedia.org/wikipedia/commons/e/ed/Lim_Yew_Hock_and_David_Marshall%2C_1956_%28cropped%29.png)
+
+*Lim Yew Hock (front) and David Marshall at the constitutional talks in London in 1956. (Photo: Central Office of Information, London, public domain, via Wikimedia Commons)*
+
+### Lim Yew Hock, 1956
+
+![Lim Yew Hock in a pinstriped suit and glasses, seated at the conference table in London, 1956](https://upload.wikimedia.org/wikipedia/commons/3/33/Lim_Yew_Hock%2C_1956_%28cropped%29.png)
+
+*Lim Yew Hock, who succeeded Marshall as Chief Minister on 8 June 1956, at the London talks. (Photo: Central Office of Information, London, public domain, via Wikimedia Commons)*
+
 ### The morning after the election, 4 April 1955
 
 ![Front page of The Straits Times, 4 April 1955, headed All say, no coalition, with a photograph of David Marshall](/assets/images/straits-times-1955-04-04-page-1.jpg)

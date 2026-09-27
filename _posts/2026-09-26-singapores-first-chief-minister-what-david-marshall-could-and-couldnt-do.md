@@ -606,6 +606,8 @@ Marshall stayed in the Assembly as a backbencher and founded the Workers' Party 
 - [File:Singaporean delegation at the 1956 constitutional talks.png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Singaporean_delegation_at_the_1956_constitutional_talks.png>)
 - [File:David Marshall as a prisoner-of-war, 1944.png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Marshall_as_a_prisoner-of-war,_1944.png>)
 - [File:David Marshall, 1956 (cropped).png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Marshall,_1956_(cropped).png>)
+- [File:Lim Yew Hock and David Marshall, 1956 (cropped).png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Lim_Yew_Hock_and_David_Marshall,_1956_(cropped).png>) (gallery)
+- [File:Lim Yew Hock, 1956 (cropped).png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Lim_Yew_Hock,_1956_(cropped).png>) (gallery)
 - [File:David Saul Marshall, 1930s (cropped).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Saul_Marshall,_1930s_(cropped).jpg>) (gallery)
 - [File:David Marshall with "B" Company during WWII.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Marshall_with_"B"_Company_during_WWII.jpg>) (gallery)
 - [File:David Marshall, 1952.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Marshall,_1952.jpg>) (gallery)
