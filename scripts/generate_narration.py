@@ -1624,6 +1624,10 @@ PRONUNCIATION_OVERRIDES = {
     "Nederlandsche": "nˈAdəɹlˌɑntsə",  # Dutch "NAY-der-lahnt-suh".
     "Handel-Maatschappij": "hˈɑndᵊl mˈɑtskəpˌI",  # Dutch "HAHN-dl MAHT-skuh-pie".
     "Thendayuthapani": "tˌɛndəjˈuθəpˌɑni",  # Tamil "then-duh-YOO-thuh-pah-nee".
+    # misaki's British lexicon reduces the middle vowel ("MUN-ih-lenders", heard
+    # as "monalenders"); Chris picked the two-stress "money lenders" reading
+    # (2026-09-28, samples in scratch/bk/samples/moneylenders/).
+    "moneylenders": "mˈʌni lˈɛndəz",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
