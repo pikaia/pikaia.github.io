@@ -396,7 +396,11 @@ def describe_image_sources(credit_lines: list[str]) -> str:
     shape as the earlier NewspaperSG-only-when-present correction below."""
     has_commons = any("Wikimedia Commons" in line for line in credit_lines)
     has_newspapersg = any("NewspaperSG" in line for line in credit_lines)
+    # Our own charts/maps/timelines ("Chart by Lesser Known Singapore...",
+    # from a config's CREDITS dict) are neither Commons nor personal
+    # photography - don't let them trip the "personal photography" label.
     has_other = any("Wikimedia Commons" not in line and "NewspaperSG" not in line
+                     and "Lesser Known Singapore" not in line
                      and not line.endswith("]") for line in credit_lines)
     parts = []
     if has_other:
