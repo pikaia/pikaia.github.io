@@ -1606,6 +1606,15 @@ PRONUNCIATION_OVERRIDES = {
     "Thio": "tˈiO",               # TEE-oh - Thio Chan Bee.
     "Mallal": "məlˈɑl",           # muh-LAHL - N. A. Mallal.
     "Namazie": "nəmˈɑzi",         # nuh-MAH-zee - M. J. Namazie.
+    # Bhai Maharaj Singh post batch (2026-09-27). Standard / origin-language readings:
+    "Dalhousie": "dælhˈaʊzi",     # "dal-HOW-zee" - Lord Dalhousie (standard).
+    "Ranjit": "ɹˈʌnʤɪt",          # "RUN-jit" - Maharaja Ranjit Singh (Punjabi ਰਣਜੀਤ).
+    "Adampur": "ˈɑdəmpʊɹ",        # "AH-dum-poor" - town in Jalandhar district.
+    "Mahomed": "məhˈɒməd",        # "muh-HOM-ud" - the ship Mahomed Shaw (period spelling).
+    "Gooroo": "ɡˈuɹu",            # "GOO-roo" - the paper's 1850s spelling of "guru".
+    "keramat": "kəɹˈɑmæt",        # "kuh-RAH-mat" - Malay keramat, a holy grave.
+    "Naurangabad": "naʊɹˌʌŋɡəbˈɑd",  # "now-RUNG-uh-BAHD" - Naurangabad, Punjab.
+    "Karam": "kˈʌɹəm",            # "KUH-rum" - "Baba Karam Singh" (Punjabi ਕਰਮ).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
