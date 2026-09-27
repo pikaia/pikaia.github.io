@@ -1615,6 +1615,14 @@ PRONUNCIATION_OVERRIDES = {
     "keramat": "kəɹˈɑmæt",        # "kuh-RAH-mat" - Malay keramat, a holy grave.
     "Naurangabad": "naʊɹˌʌŋɡəbˈɑd",  # "now-RUNG-uh-BAHD" - Naurangabad, Punjab.
     "Karam": "kˈʌɹəm",            # "KUH-rum" - "Baba Karam Singh" (Punjabi ਕਰਮ).
+    # Early banks post batch (2026-09-28). Standard / origin-language readings:
+    "Hongkong": "hˌɒŋkˈɒŋ",       # old one-word spelling of Hong Kong.
+    "Chettiars": "ʧˈɛtiəɹz",      # "CHET-ee-ars" - Tamil Chettiar moneylenders.
+    "Chettiars'": "ʧˈɛtiəɹz",     # possessive, same sound.
+    # Provisional, awaiting Chris's ear-pick (samples in scratch/bk/samples/):
+    "Nederlandsche": "nˈAdəɹlˌɑntsə",  # Dutch "NAY-der-lahnt-suh".
+    "Handel-Maatschappij": "hˈɑndᵊl mˈɑtskəpˌI",  # Dutch "HAHN-dl MAHT-skuh-pie".
+    "Thendayuthapani": "tˌɛndəjˈuθəpˌɑni",  # Tamil "then-duh-YOO-thuh-pah-nee".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
