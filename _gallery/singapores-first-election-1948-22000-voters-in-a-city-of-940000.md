@@ -19,6 +19,12 @@ More images connected with Singapore's first election, from the building where t
 
 *C. C. Tan (Tan Chye Cheng), president of the Progressive Party, who topped the poll in 1948, speaking during the 1951 election campaign. (Photo: Ministry of Information and the Arts Collection, public domain, via Wikimedia Commons)*
 
+### David Marshall, 1956
+
+![David Marshall in profile at the conference table at the constitutional talks in London, 1956](https://upload.wikimedia.org/wikipedia/commons/0/09/David_Marshall%2C_1956_%28cropped%29.png)
+
+*David Marshall at the constitutional talks in London in 1956. The 1955 election, with its far larger electorate, made him Singapore's first Chief Minister. (Photo: Central Office of Information, London, public domain, via Wikimedia Commons)*
+
 ### Sir Franklin Gimson
 
 ![Sir Franklin Gimson in academic robes and cap](https://upload.wikimedia.org/wikipedia/commons/d/dd/Sir_Franklin_Gimson_in_1951.png)

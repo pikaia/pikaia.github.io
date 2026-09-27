@@ -11,6 +11,7 @@ the voter-registration reports and the results by constituency.
 
 IMAGES = {
     "CCTAN": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tan_Chye_Cheng.png",
+    "MARSHALL": "https://upload.wikimedia.org/wikipedia/commons/0/09/David_Marshall%2C_1956_%28cropped%29.png",
     "CHART": "/assets/images/election-1948-registered-voters-chart.png",
     "GIMSON": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sir_Franklin_Gimson_in_1951.png",
     "ST20": "/assets/images/straits-times-1948-03-20-page-1.jpg",
@@ -69,7 +70,7 @@ SLIDES = [
     {"img": "VT30", **_P0},  # s22 The electorate stayed small for several year
     {"img": "CHART", **_P4},  # s23 At the next election, on the 10th of April 1
     {"img": "CHART", **_P4},  # s24 The large change came in 1955, under the Ren
-    {"img": "CCTAN", **_P4},  # s25 That election made David Marshall Singapore'
+    {"img": "MARSHALL", **_P4},  # s25 That election made David Marshall Singapore'
     {"img": "CHART", **_P4},  # s26 At the 1959 election, the first under full i
     {"img": "VT", **_P0},  # s27 Where it fits in the bigger story: Singapore
     {"img": "ST21", **_P18},  # s28 The first election, eleven years earlier, wa

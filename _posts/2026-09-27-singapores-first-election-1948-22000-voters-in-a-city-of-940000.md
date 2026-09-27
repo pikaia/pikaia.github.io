@@ -90,6 +90,7 @@ On 20 March 1948 Singapore held its first election. Six seats on a Legislative C
 <script>
 (function () {
   var CCTAN = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tan_Chye_Cheng.png";
+  var MARSHALL = "https://upload.wikimedia.org/wikipedia/commons/0/09/David_Marshall%2C_1956_%28cropped%29.png";
   var CHART = "/assets/images/election-1948-registered-voters-chart.png";
   var GIMSON = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sir_Franklin_Gimson_in_1951.png";
   var ST20 = "/assets/images/straits-times-1948-03-20-page-1.jpg";
@@ -123,7 +124,7 @@ On 20 March 1948 Singapore held its first election. Six seats on a Legislative C
     { src: VT30, type: "cover", zoom: [1.0, 1.05, 1.1], pan: ["35% 50%", "50% 50%", "65% 50%"], ease: "ease-in-out" },
     { src: CHART, type: "letterbox", zoom: [1.0, 1.0, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "linear" },
     { src: CHART, type: "letterbox", zoom: [1.0, 1.0, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "linear" },
-    { src: CCTAN, type: "letterbox", zoom: [1.0, 1.0, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "linear" },
+    { src: MARSHALL, type: "letterbox", zoom: [1.0, 1.0, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "linear" },
     { src: CHART, type: "letterbox", zoom: [1.0, 1.0, 1.0], pan: ["50% 50%", "50% 50%", "50% 50%"], ease: "linear" },
     { src: VT, type: "cover", zoom: [1.0, 1.05, 1.1], pan: ["35% 50%", "50% 50%", "65% 50%"], ease: "ease-in-out" },
     { src: ST21, type: "cover", zoom: [1.8, 1.84, 1.89], pan: ["0% 13.2%", "0% 14.8%", "0% 16.3%"], ease: "ease-in-out" },
@@ -515,6 +516,7 @@ The electorate stayed small for several years. At the next election, on 10 April
 - [File:KITLV A887 - Victoria Theatre en Memorial Hall te Singapore, KITLV 107516.tiff, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_A887_-_Victoria_Theatre_en_Memorial_Hall_te_Singapore,_KITLV_107516.tiff>)
 - [File:Victoria Theatre and Victoria Memorial Hall - c 1930.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Victoria_Theatre_and_Victoria_Memorial_Hall_-_c_1930.jpg>) (gallery)
 - [File:Tan Chye Cheng.png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Tan_Chye_Cheng.png>) (gallery)
+- [File:David Marshall, 1956 (cropped).png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:David_Marshall,_1956_(cropped).png>) (gallery)
 - [File:Sir Franklin Gimson in 1951.png, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Sir_Franklin_Gimson_in_1951.png>) (gallery)
 - [File:1948 Singapore General Elections Result Map.svg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:1948_Singapore_General_Elections_Result_Map.svg>) (gallery)
 - [File:Gravestone of John Laycock, Bidadari Garden, Singapore - 20121008.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Gravestone_of_John_Laycock,_Bidadari_Garden,_Singapore_-_20121008.jpg>) (gallery)
