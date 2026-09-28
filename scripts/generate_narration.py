@@ -1628,6 +1628,26 @@ PRONUNCIATION_OVERRIDES = {
     # as "monalenders"); Chris picked the two-stress "money lenders" reading
     # (2026-09-28, samples in scratch/bk/samples/moneylenders/).
     "moneylenders": "mˈʌni lˈɛndəz",
+    # Indian convicts post batch (2026-09-28). Standard English readings:
+    "Horatio": "həɹˈAʃiQ",        # the brig Horatio - "huh-RAY-shee-oh".
+    "Coleman": "kˈQlmən",         # G. D. Coleman, the architect.
+    "Ronald": "ɹˈɒnəld",
+    "MacPherson": "məkfˈɜːsən",   # Ronald MacPherson, St Andrew's designer.
+    "incurred": "ɪnkˈɜːd",        # plain English, missing from the lexicon.
+    "artizans": "ˌɑːtɪzˈanz",     # old spelling of "artisans" in a McNair quote.
+    "Andaman": "ˈandəmən",        # "AN-duh-mun" (Andaman Islands).
+    "Uttar": "ˈʊtə",              # Uttar Pradesh - "OO-tuh pruh-DESH".
+    "Pradesh": "pɹədˈɛʃ",
+    "dhobies": "dˈQbiz",          # matches misaki's own "dhobis" / our "Dhoby".
+    "chunam": "ʧuːnˈam",          # Anglo-Indian lime plaster, "choo-NAM".
+    "Madrasis": "mədɹˈasiz",      # people from Madras, matching "Madras" (mədɹˈas).
+    "Bras": "bɹˈɑːs",             # Bras Basah - "brass", not the plural of "bra".
+    # Foreign names, Claude's picks from the origin languages (Chris left
+    # hard foreign names to Claude, 2026-09-28):
+    "Paknam": "pˌɑːknˈɑːm",       # Thai Pak Nam, "pahk-NAHM".
+    "Hammapah": "hˈaməpɑː",       # South Indian -appa name, first-syllable stress.
+    "Bawajee": "bˈɑːwɑːʤiː",      # Marathi Bawaji, "BAH-wah-jee".
+    "Rajaram": "ɹˈɑːʤɑːɹˌɑːm",    # Marathi Rajaram, "RAH-jah-rahm".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
