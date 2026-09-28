@@ -43,6 +43,12 @@ More photographs of the buildings Singapore's Indian convicts built, and of the 
 
 *Government House, now the Istana, around 1890. Convicts built most of it between 1867 and 1869. (Photo: G.R. Lambert & Co., KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
 
+### The Istana's main gate today
+
+![The white gateposts and iron gates of the Istana on Orchard Road, with visitors queuing and ceremonial guards on duty](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Istana_Singapore_main_gate%2C_Orchard_Road%2C_during_an_open_house%2C_2022.jpg/1280px-Istana_Singapore_main_gate%2C_Orchard_Road%2C_during_an_open_house%2C_2022.jpg)
+
+*The main gate of the Istana on Orchard Road during a public open house in 2022. (Photo: LesserKnownSingapore, CC BY-SA 4.0, via Wikimedia Commons)*
+
 ### Government House on its hill
 
 ![Government House seen from a distance at the top of a grassy slope](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/KITLV_-_103751_-_Government_House_in_Singapore_-_circa_1890.tif/lossy-page1-1280px-KITLV_-_103751_-_Government_House_in_Singapore_-_circa_1890.tif.jpg)

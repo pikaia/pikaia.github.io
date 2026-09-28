@@ -2,7 +2,7 @@
 layout: post
 title: "The Indian Convicts Who Built Colonial Singapore, 1825–1873"
 date: 2026-09-28 21:27:29 +0800
-last_modified_at: 2026-09-28 23:05:04 +0800
+last_modified_at: 2026-09-28 23:26:58 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/KITLV_-_29163_-_St._Andrew%27s_Cathedral%2C_belonging_to_the_Anglican_Church%2C_Singapore_-_1860.tif/lossy-page1-1280px-KITLV_-_29163_-_St._Andrew%27s_Cathedral%2C_belonging_to_the_Anglican_Church%2C_Singapore_-_1860.tif.jpg
 ---
@@ -224,6 +224,10 @@ Government House, now the Istana, followed. When the Straits Settlements passed 
 
 *Government House, now the Istana, nearing completion in 1869, with the tower still in scaffolding. (Photo: J. F. A. McNair and W. D. Bayliss, Prisoners Their Own Warders, 1899, public domain, via Wikimedia Commons)*
 
+![The Istana in 2022, a white colonial building with a central tower, seen across a wide lawn with visitors, framed by trees and pavilion pillars](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Istana_Singapore%2C_main_building_from_the_lawn_during_an_open_house%2C_2022.jpg/1280px-Istana_Singapore%2C_main_building_from_the_lawn_during_an_open_house%2C_2022.jpg)
+
+*The same building as the Istana in 2022, seen across the lawn during a public open house. (Photo: LesserKnownSingapore, CC BY-SA 4.0, via Wikimedia Commons)*
+
 ## A cheap workforce
 
 For the colony, the convicts were a cheap source of labour. In the early years each convict received rations, clothing, a blanket a year and 50 cents a month for salt and condiments, and convict warders cost less than free ones. In 1849 the Resident Councillor, Thomas Church, told the Governor that "the labour of the convicts is equivalent to all expenses incurred in their maintenance at this station", and argued that giving repairs and minor works to the convict department would be "vastly more economical" than the existing arrangements. According to BiblioAsia, the large public buildings put up with convict labour also strengthened the colony's case for separation from India in 1867.
@@ -264,9 +268,11 @@ Those on a ticket-of-leave were allowed to stay. McNair wrote that they merged i
 - [File:California Digital Library (IA prisonerstheirow00mcnarich).pdf, page 156, Wikimedia Commons](<https://commons.wikimedia.org/w/index.php?title=File:California_Digital_Library_(IA_prisonerstheirow00mcnarich).pdf&page=156>)
 - [File:General monthly muster of the convicts, Singapore Jail (McNair 1899, frontispiece).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:General_monthly_muster_of_the_convicts,_Singapore_Jail_(McNair_1899,_frontispiece).jpg>)
 - [File:Government House, Singapore, approaching completion, 1869 (McNair 1899, Plate XVIII).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Government_House,_Singapore,_approaching_completion,_1869_(McNair_1899,_Plate_XVIII).jpg>)
+- [File:Istana Singapore, main building from the lawn during an open house, 2022.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Istana_Singapore,_main_building_from_the_lawn_during_an_open_house,_2022.jpg>)
 - [File:KITLV - 89910 - Cavanagh Bridge in Singapore - before 1880.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif>) (gallery)
 - [File:Main gate of Singapore Jail, Bras Basah (McNair 1899, Plate XI).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Main_gate_of_Singapore_Jail,_Bras_Basah_(McNair_1899,_Plate_XI).jpg>) (gallery)
 - [File:Convicts stone-quarrying at Pulau Ubin, Singapore (McNair 1899, Plate XX).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Convicts_stone-quarrying_at_Pulau_Ubin,_Singapore_(McNair_1899,_Plate_XX).jpg>) (gallery)
+- [File:Istana Singapore main gate, Orchard Road, during an open house, 2022.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Istana_Singapore_main_gate,_Orchard_Road,_during_an_open_house,_2022.jpg>) (gallery)
 - [File:Photographic Views of Singapore Plate 06 St Andrew's Cathedral and Raffles Monument.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Photographic_Views_of_Singapore_Plate_06_St_Andrew's_Cathedral_and_Raffles_Monument.jpg>) (gallery)
 - [File:KITLV - 89904 - Hotel de l'Europe against the backdrop of St Andrews Cathedral in Singapore - before 1880.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_89904_-_Hotel_de_l'Europe_against_the_backdrop_of_St_Andrews_Cathedral_in_Singapore_-_before_1880.tif>) (gallery)
 - [File:Malaysia; view across the harbour to Fort Canning and the ca Wellcome V0037489.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Malaysia;_view_across_the_harbour_to_Fort_Canning_and_the_ca_Wellcome_V0037489.jpg>) (gallery)
