@@ -7,6 +7,18 @@ post_title: "The Indian Convicts Who Built Colonial Singapore, 1825–1873"
 
 More photographs of the buildings Singapore's Indian convicts built, and of the convicts themselves as McNair photographed them.
 
+### The main gate of the jail
+
+![A two-storey gatehouse with arched windows and a tiled roof, with uniformed guards seated outside](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Main_gate_of_Singapore_Jail%2C_Bras_Basah_%28McNair_1899%2C_Plate_XI%29.jpg/1280px-Main_gate_of_Singapore_Jail%2C_Bras_Basah_%28McNair_1899%2C_Plate_XI%29.jpg)
+
+*The main gate of the convict jail on Bras Basah Road, which the convicts built and finished in 1860. (Photo: J. F. A. McNair and W. D. Bayliss, Prisoners Their Own Warders, 1899, public domain, via Wikimedia Commons)*
+
+### Convicts quarrying granite on Pulau Ubin
+
+![A rocky quarry face with cut granite blocks scattered in the foreground](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Convicts_stone-quarrying_at_Pulau_Ubin%2C_Singapore_%28McNair_1899%2C_Plate_XX%29.jpg/1280px-Convicts_stone-quarrying_at_Pulau_Ubin%2C_Singapore_%28McNair_1899%2C_Plate_XX%29.jpg)
+
+*Convicts quarrying stone on Pulau Ubin for the colony's public works. (Photo: J. F. A. McNair and W. D. Bayliss, Prisoners Their Own Warders, 1899, public domain, via Wikimedia Commons)*
+
 ### St Andrew's Cathedral, around 1900
 
 ![St Andrew's Cathedral seen across the Padang, with its tall spire and the Raffles statue in the foreground](https://upload.wikimedia.org/wikipedia/commons/8/86/Photographic_Views_of_Singapore_Plate_06_St_Andrew%27s_Cathedral_and_Raffles_Monument.jpg)
@@ -36,6 +48,12 @@ More photographs of the buildings Singapore's Indian convicts built, and of the 
 ![Government House seen from a distance at the top of a grassy slope](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/KITLV_-_103751_-_Government_House_in_Singapore_-_circa_1890.tif/lossy-page1-1280px-KITLV_-_103751_-_Government_House_in_Singapore_-_circa_1890.tif.jpg)
 
 *Government House on its hill in the eastern suburb of the town, around 1890. (Photo: unknown photographer, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
+
+### Cavenagh Bridge, before 1880
+
+![Cavenagh Bridge over the Singapore River, an iron suspension bridge with stone towers, with people walking across](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif/lossy-page1-1280px-KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif.jpg)
+
+*Cavenagh Bridge over the Singapore River, photographed before 1880. Convict labour went into the bridge in the late 1860s. (Photo: unknown photographer, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
 
 ### Cavenagh Bridge, around 1870
 

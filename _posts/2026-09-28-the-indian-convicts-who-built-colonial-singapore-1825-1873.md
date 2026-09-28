@@ -2,7 +2,7 @@
 layout: post
 title: "The Indian Convicts Who Built Colonial Singapore, 1825–1873"
 date: 2026-09-28 21:27:29 +0800
-last_modified_at: 2026-09-28 21:27:29 +0800
+last_modified_at: 2026-09-28 23:05:04 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/KITLV_-_29163_-_St._Andrew%27s_Cathedral%2C_belonging_to_the_Anglican_Church%2C_Singapore_-_1860.tif/lossy-page1-1280px-KITLV_-_29163_-_St._Andrew%27s_Cathedral%2C_belonging_to_the_Anglican_Church%2C_Singapore_-_1860.tif.jpg
 ---
@@ -191,6 +191,12 @@ When the first convicts landed, four free watchmen from Chittagong were put in c
 
 Under rules formalised by Governor William Butterworth in 1845, the convicts were divided into six classes. New arrivals worked in light irons in the fourth class, and those thought likely to escape wore heavy irons in the fifth. After a probation, a convict moved into the third class to work on roads and public works, and good conduct could lift him into the second class as a petty officer, hospital orderly or office worker. At the top was the first class, trustworthy convicts on a ticket-of-leave, who lived and worked outside the jail and reported to a monthly muster. A man serving a life sentence could reach it after sixteen years.
 
+<div style="clear: both;"></div>
+
+![Rows of convicts in white standing in lines around a domed pavilion in the jail grounds, with trees behind](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/General_monthly_muster_of_the_convicts%2C_Singapore_Jail_%28McNair_1899%2C_frontispiece%29.jpg/1280px-General_monthly_muster_of_the_convicts%2C_Singapore_Jail_%28McNair_1899%2C_frontispiece%29.jpg)
+
+*The general monthly muster of the convicts at the Singapore jail, before 1873. (Photo: J. F. A. McNair and W. D. Bayliss, Prisoners Their Own Warders, 1899, public domain, via Wikimedia Commons)*
+
 The convicts also built their own jail. It took about twenty years, was finished in 1860, and on completion was the largest building complex in the settlement, stretching along Bras Basah Road from Victoria Street to Bencoolen Street.
 
 The convicts were not the first Indians in that part of town. Indian washermen, or dhobies, had come in 1819 with the sepoy garrison at the foot of Government Hill, now Fort Canning, as part of the service workers who looked after the soldiers. They were free workers, mostly from what is now Uttar Pradesh and Bihar, along with Tamil dhobies from the Madras region, and they washed clothes in the stream that fed the Bras Basah canal and dried them on the green nearby, which gave Dhoby Ghaut its name. Singapore's early Indian population grew from both groups, free workers and convicts, living a few streets apart.
@@ -214,9 +220,9 @@ Government House, now the Istana, followed. When the Straits Settlements passed 
 
 <div style="clear: both;"></div>
 
-![Cavenagh Bridge over the Singapore River before 1880, an iron suspension bridge with stone towers, seen from the riverbank with people walking across](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif/lossy-page1-1280px-KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif.jpg)
+![Government House under construction in 1869, a long two-storey colonial building with verandas and a central tower wrapped in scaffolding, behind a lawn](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Government_House%2C_Singapore%2C_approaching_completion%2C_1869_%28McNair_1899%2C_Plate_XVIII%29.jpg/1280px-Government_House%2C_Singapore%2C_approaching_completion%2C_1869_%28McNair_1899%2C_Plate_XVIII%29.jpg)
 
-*Cavenagh Bridge over the Singapore River, photographed before 1880. Convict labour went into the bridge in the late 1860s. (Photo: unknown photographer, KITLV/Leiden University Library, public domain, via Wikimedia Commons)*
+*Government House, now the Istana, nearing completion in 1869, with the tower still in scaffolding. (Photo: J. F. A. McNair and W. D. Bayliss, Prisoners Their Own Warders, 1899, public domain, via Wikimedia Commons)*
 
 ## A cheap workforce
 
@@ -256,7 +262,11 @@ Those on a ticket-of-leave were allowed to stay. McNair wrote that they merged i
 - [File:KITLV - 29163 - St. Andrew's Cathedral, belonging to the Anglican Church, Singapore - 1860.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_29163_-_St._Andrew's_Cathedral,_belonging_to_the_Anglican_Church,_Singapore_-_1860.tif>)
 - [File:California Digital Library (IA prisonerstheirow00mcnarich).pdf, page 127, Wikimedia Commons](<https://commons.wikimedia.org/w/index.php?title=File:California_Digital_Library_(IA_prisonerstheirow00mcnarich).pdf&page=127>)
 - [File:California Digital Library (IA prisonerstheirow00mcnarich).pdf, page 156, Wikimedia Commons](<https://commons.wikimedia.org/w/index.php?title=File:California_Digital_Library_(IA_prisonerstheirow00mcnarich).pdf&page=156>)
-- [File:KITLV - 89910 - Cavanagh Bridge in Singapore - before 1880.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif>)
+- [File:General monthly muster of the convicts, Singapore Jail (McNair 1899, frontispiece).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:General_monthly_muster_of_the_convicts,_Singapore_Jail_(McNair_1899,_frontispiece).jpg>)
+- [File:Government House, Singapore, approaching completion, 1869 (McNair 1899, Plate XVIII).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Government_House,_Singapore,_approaching_completion,_1869_(McNair_1899,_Plate_XVIII).jpg>)
+- [File:KITLV - 89910 - Cavanagh Bridge in Singapore - before 1880.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_89910_-_Cavanagh_Bridge_in_Singapore_-_before_1880.tif>) (gallery)
+- [File:Main gate of Singapore Jail, Bras Basah (McNair 1899, Plate XI).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Main_gate_of_Singapore_Jail,_Bras_Basah_(McNair_1899,_Plate_XI).jpg>) (gallery)
+- [File:Convicts stone-quarrying at Pulau Ubin, Singapore (McNair 1899, Plate XX).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Convicts_stone-quarrying_at_Pulau_Ubin,_Singapore_(McNair_1899,_Plate_XX).jpg>) (gallery)
 - [File:Photographic Views of Singapore Plate 06 St Andrew's Cathedral and Raffles Monument.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Photographic_Views_of_Singapore_Plate_06_St_Andrew's_Cathedral_and_Raffles_Monument.jpg>) (gallery)
 - [File:KITLV - 89904 - Hotel de l'Europe against the backdrop of St Andrews Cathedral in Singapore - before 1880.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_89904_-_Hotel_de_l'Europe_against_the_backdrop_of_St_Andrews_Cathedral_in_Singapore_-_before_1880.tif>) (gallery)
 - [File:Malaysia; view across the harbour to Fort Canning and the ca Wellcome V0037489.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Malaysia;_view_across_the_harbour_to_Fort_Canning_and_the_ca_Wellcome_V0037489.jpg>) (gallery)
