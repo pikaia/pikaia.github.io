@@ -1648,6 +1648,9 @@ PRONUNCIATION_OVERRIDES = {
     "Hammapah": "hˈaməpɑː",       # South Indian -appa name, first-syllable stress.
     "Bawajee": "bˈɑːwɑːʤiː",      # Marathi Bawaji, "BAH-wah-jee".
     "Rajaram": "ɹˈɑːʤɑːɹˌɑːm",    # Marathi Rajaram, "RAH-jah-rahm".
+    # Chris's ear-picks (2026-09-28, samples in scratch/ic/samples/):
+    "Basah": "bˈɑːsɑː",           # Bras Basah - "brass BAH-sah".
+    "Somapah": "sˈQməpɑː",        # Somapah (Village/Road) - "SOH-muh-pah".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
