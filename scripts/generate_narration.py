@@ -1671,6 +1671,13 @@ PRONUNCIATION_OVERRIDES = {
     "Mohammed": "məhˈamɪd",       # matches misaki's own "Muhammad".
     "Habib": "hˈɑːbɪb",           # Arabic Habib - "HAH-bib".
     "al-Habshi": "ˌalhˈabʃi",     # Arabic al-Habshi.
+    # Chris's ear-picks, 2026-09-30 (samples in scratch/hl/samples/):
+    "Fook": "fˈʊk",               # Fook Tet Soo Khek temple - "FOOK-tet-SOO-kek".
+    "Tet": "tˈɛt",
+    "Soo": "sˈuː",
+    "Khek": "kˈɛk",
+    "Keramat": "kəɹˈɑːmat",       # Malay keramat - "keh-RAH-mat".
+    "Salleh": "sˈalɛ",            # Malay Salleh - "SAL-leh".
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
