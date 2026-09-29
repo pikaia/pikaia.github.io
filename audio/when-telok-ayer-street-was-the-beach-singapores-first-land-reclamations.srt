@@ -243,313 +243,333 @@ was pulled down in 1879
 as the reclamation began.
 
 51
-00:03:20,875 --> 00:03:25,048
+00:03:20,875 --> 00:03:25,065
 Its replacement, designed
 by the municipal engineer
 
 52
-00:03:25,128 --> 00:03:29,467
+00:03:25,145 --> 00:03:29,502
 James MacRitchie with
 cast-iron work made in Glasgow,
 
 53
-00:03:29,547 --> 00:03:33,550
+00:03:29,582 --> 00:03:33,600
 was built on the new land
 between 1890 and 1894.
 
 54
-00:03:33,550 --> 00:03:37,450
+00:03:33,600 --> 00:03:37,500
 That building survives
 today as Lau-Pa-Sat.
 
 55
-00:03:37,450 --> 00:03:42,601
+00:03:37,500 --> 00:03:42,651
 In November 1896, at the request of
 a member of the Legislative Council,
 
 56
-00:03:42,681 --> 00:03:44,999
+00:03:42,731 --> 00:03:45,049
 the government published what the
 
 57
-00:03:45,079 --> 00:03:49,075
+00:03:45,129 --> 00:03:49,125
 Telok Ayer reclamation had
 cost and what it had earned.
 
 58
-00:03:49,075 --> 00:03:53,514
+00:03:49,125 --> 00:03:53,564
 According to the statement, printed in the
 
 59
-00:03:53,594 --> 00:03:58,356
+00:03:53,644 --> 00:03:58,406
 Singapore Free Press,
 $917,243 had been spent
 
 60
-00:03:58,436 --> 00:04:02,015
+00:03:58,486 --> 00:04:02,065
 on the work between 1879 and 1896,
 
 61
-00:04:02,095 --> 00:04:07,475
+00:04:02,145 --> 00:04:07,525
 and it had produced 1,808,028
 square feet of land.
 
 62
-00:04:07,475 --> 00:04:10,450
+00:04:07,525 --> 00:04:10,500
 About 88,000 square feet had gone to
 
 63
-00:04:10,530 --> 00:04:13,500
+00:04:10,580 --> 00:04:13,550
 Finlayson Green and the new market.
 
 64
-00:04:13,500 --> 00:04:18,150
+00:04:13,550 --> 00:04:18,200
 The government had sold
 653,028 square feet at
 
 65
-00:04:18,230 --> 00:04:23,908
+00:04:18,280 --> 00:04:23,958
 an average of $1.13 a square
 foot, bringing in $739,481,
 
 66
-00:04:23,988 --> 00:04:27,507
+00:04:24,038 --> 00:04:27,557
 and more than a million square feet
 
 67
-00:04:27,587 --> 00:04:32,625
+00:04:27,637 --> 00:04:32,675
 were still available for
 sale or held in reserve.
 
 68
-00:04:32,625 --> 00:04:35,651
+00:04:32,675 --> 00:04:35,701
 The statement put the
 cost of reclamation at
 
 69
-00:04:35,731 --> 00:04:38,969
+00:04:35,781 --> 00:04:39,019
 51 cents a square foot,
 so the land was selling
 
 70
-00:04:39,049 --> 00:04:42,225
+00:04:39,099 --> 00:04:42,275
 for more than twice what
 it had cost to make.
 
 71
-00:04:42,225 --> 00:04:45,617
+00:04:42,275 --> 00:04:45,667
 Even before the Telok
 Ayer works were finished,
 
 72
-00:04:45,697 --> 00:04:48,800
+00:04:45,747 --> 00:04:48,850
 a second, larger scheme began further out.
 
 73
-00:04:48,800 --> 00:04:52,785
+00:04:48,850 --> 00:04:52,835
 Started in 1893, it was meant to reclaim
 
 74
-00:04:52,865 --> 00:04:56,625
+00:04:52,915 --> 00:04:56,675
 88 acres behind a 5,000-foot seawall.
 
 75
-00:04:56,625 --> 00:05:01,503
+00:04:56,675 --> 00:05:01,553
 In 1910 engineers found that
 the seawall was sinking,
 
 76
-00:05:01,583 --> 00:05:06,180
+00:05:01,633 --> 00:05:06,230
 and work was suspended
 with 65 acres reclaimed and
 
 77
-00:05:06,260 --> 00:05:11,125
+00:05:06,310 --> 00:05:11,175
 4,120 feet of wall built,
 leaving a gap of 880 feet.
 
 78
-00:05:11,125 --> 00:05:14,583
+00:05:11,175 --> 00:05:14,633
 The unfinished section
 was turned into a tidal
 
 79
-00:05:14,662 --> 00:05:18,200
+00:05:14,713 --> 00:05:18,250
 basin for small vessels,
 the Telok Ayer Basin.
 
 80
-00:05:18,200 --> 00:05:22,447
+00:05:18,250 --> 00:05:22,497
 Work resumed in 1930 and
 was completed in 1932,
 
 81
-00:05:22,527 --> 00:05:25,853
+00:05:22,577 --> 00:05:25,903
 by which time the cost had risen from
 
 82
-00:05:25,933 --> 00:05:29,800
+00:05:25,983 --> 00:05:29,850
 2.5 million to 15 million Straits dollars.
 
 83
-00:05:29,800 --> 00:05:32,608
+00:05:29,850 --> 00:05:32,658
 A road built along the new land,
 
 84
-00:05:32,688 --> 00:05:36,750
+00:05:32,738 --> 00:05:36,800
 Raffles Way, was renamed
 Shenton Way in 1951.
 
 85
-00:05:36,750 --> 00:05:40,265
+00:05:36,800 --> 00:05:40,315
 According to the National
 Library Board's account,
 
 86
-00:05:40,345 --> 00:05:43,285
+00:05:40,395 --> 00:05:43,335
 all the reclamation of the colonial period
 
 87
-00:05:43,365 --> 00:05:46,600
+00:05:43,415 --> 00:05:46,650
 added about 3 square
 kilometres to Singapore.
 
 88
-00:05:46,600 --> 00:05:51,199
+00:05:46,650 --> 00:05:51,249
 Between 1965 and 2015, the
 country reclaimed about 138
 
 89
-00:05:51,279 --> 00:05:56,052
+00:05:51,329 --> 00:05:56,102
 square kilometres more, at
 Changi, along the East Coast,
 
 90
-00:05:56,132 --> 00:06:00,725
+00:05:56,182 --> 00:06:00,775
 on Jurong Island, at Tuas
 and around the river mouth.
 
 91
-00:06:00,725 --> 00:06:04,489
+00:06:00,775 --> 00:06:04,539
 The Telok Ayer Basin itself was filled in
 
 92
-00:06:04,569 --> 00:06:08,426
+00:06:04,619 --> 00:06:08,476
 between 1974 and 1977, and the land beyond
 
 93
-00:06:08,506 --> 00:06:11,975
+00:06:08,556 --> 00:06:12,025
 the old waterfront became Marina Bay.
 
 94
-00:06:11,975 --> 00:06:16,308
+00:06:12,025 --> 00:06:16,358
 According to the Singapore Land Authority,
 
 95
-00:06:16,388 --> 00:06:22,612
+00:06:16,438 --> 00:06:22,662
 the country's land area grew
 from 581.5 square kilometres in
 
 96
-00:06:22,692 --> 00:06:28,050
+00:06:22,742 --> 00:06:28,100
 1960 to 744.3 square
 kilometres at the end of 2025.
 
 97
-00:06:28,050 --> 00:06:32,025
+00:06:28,100 --> 00:06:32,075
 Two confirmed projects will
 move the shoreline again.
 
 98
-00:06:32,025 --> 00:06:36,184
+00:06:32,075 --> 00:06:36,234
 At Tuas, the Maritime and
 Port Authority is building
 
 99
-00:06:36,264 --> 00:06:39,850
+00:06:36,314 --> 00:06:39,900
 a new port in four
 phases on reclaimed land.
 
 100
-00:06:39,850 --> 00:06:44,459
+00:06:39,900 --> 00:06:44,509
 The first phase of reclamation
 was completed in 2021,
 
 101
-00:06:44,539 --> 00:06:48,883
+00:06:44,589 --> 00:06:48,932
 and when all four phases
 are finished in the 2040s
 
 102
-00:06:48,963 --> 00:06:53,395
+00:06:49,012 --> 00:06:53,445
 the port will cover about
 1,337 hectares and handle
 
 103
-00:06:53,475 --> 00:06:58,075
+00:06:53,525 --> 00:06:58,125
 up to 65 million twenty-foot
 container units a year.
 
 104
-00:06:58,075 --> 00:07:01,864
+00:06:58,125 --> 00:07:01,914
 Off the East Coast, the Urban
 Redevelopment Authority is
 
 105
-00:07:01,944 --> 00:07:06,493
+00:07:01,994 --> 00:07:06,543
 planning "Long Island", which could
 reclaim more than 800 hectares,
 
 106
-00:07:06,573 --> 00:07:08,911
+00:07:06,623 --> 00:07:08,961
 about twice the size of Marina Bay,
 
 107
-00:07:08,991 --> 00:07:12,642
+00:07:09,041 --> 00:07:12,692
 to protect the low-lying
 coast from rising sea levels,
 
 108
-00:07:12,722 --> 00:07:17,075
+00:07:12,772 --> 00:07:17,125
 create a new reservoir and provide
 land for future development.
 
 109
-00:07:17,075 --> 00:07:20,757
+00:07:17,125 --> 00:07:20,718
+As described when it was
+announced in November 2023,
+
+110
+00:07:20,798 --> 00:07:25,874
+the concept is three long tracts of
+land from Marina East to Tanah Merah,
+
+111
+00:07:25,954 --> 00:07:29,829
+with the new reservoir between
+them and East Coast Park,
+
+112
+00:07:29,909 --> 00:07:34,500
+and a tidal gate and pumping
+station between each pair of tracts.
+
+113
+00:07:34,500 --> 00:07:38,182
 As of its update in March
 2026, the plans were still
 
-110
-00:07:20,837 --> 00:07:23,868
+114
+00:07:38,262 --> 00:07:41,293
 being worked out through
 technical studies,
 
-111
-00:07:23,948 --> 00:07:28,650
+115
+00:07:41,373 --> 00:07:46,075
 and reclamation will begin only
 after those studies are complete.
 
-112
-00:07:28,650 --> 00:07:32,140
+116
+00:07:46,075 --> 00:07:49,565
 Where it fits in the bigger
 story: Much of downtown
 
-113
-00:07:32,220 --> 00:07:35,650
+117
+00:07:49,645 --> 00:07:53,075
 Singapore stands on ground
 that was once the bay.
 
-114
-00:07:35,650 --> 00:07:40,282
+118
+00:07:53,075 --> 00:07:57,707
 The shoreline has been moving since
 1822, first with hills carried
 
-115
-00:07:40,362 --> 00:07:44,922
+119
+00:07:57,787 --> 00:08:02,347
 to the sea and seawalls built at
 low tide, and the old waterfront
 
-116
-00:07:45,002 --> 00:07:50,000
+120
+00:08:02,427 --> 00:08:07,425
 streets like Telok Ayer Street still
 trace where the beach used to be.

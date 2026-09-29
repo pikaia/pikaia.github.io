@@ -11,7 +11,7 @@ The Singapore Free Press of 17 Nov 1896 (page 309) is zoomed to the cost
 statement. Named officials (Raffles, Collyer, MacRitchie) get places, not
 portraits.
 
-46 slides, one per sentence.
+47 slides, one per sentence.
 """
 
 CREDITS = {
@@ -22,6 +22,8 @@ CREDITS = {
     "MAP3": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
     "MAP4": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
     "MAP5": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
+    "LI0": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
+    "LI1": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
 }
 
 IMAGES = {
@@ -34,6 +36,8 @@ IMAGES = {
     "CQLOC": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Singapore._Collyer_Quai_LCCN2017657654.jpg/1920px-Singapore._Collyer_Quai_LCCN2017657654.jpg",
     "FINLAYSON": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/KITLV_-_79894_-_Kleingrothe%2C_C.J._-_Medan_-_Finlayson_Green_at_Singapore_-_circa_1910.tif/lossy-page1-1920px-KITLV_-_79894_-_Kleingrothe%2C_C.J._-_Medan_-_Finlayson_Green_at_Singapore_-_circa_1910.tif.jpg",
     "JACKSON": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Plan_of_the_Town_of_Singapore_%281822%29_by_Lieutenant_Philip_Jackson_original.jpg",
+    "LI0": "/assets/images/long-island-map-0.png",
+    "LI1": "/assets/images/long-island-map-1.png",
     "LPS": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Built_in_1894_as_a_market%2C_with_cast-iron_supports._it%27s_a_hawker_centre_now_%28Singapore_version_of_a_food_court%29_%288235341079%29.jpg/1920px-Built_in_1894_as_a_market%2C_with_cast-iron_supports._it%27s_a_hawker_centre_now_%28Singapore_version_of_a_food_court%29_%288235341079%29.jpg",
     "M1951": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Map_of_Singapore_City_in_1951.png/1920px-Map_of_Singapore_City_in_1951.png",
     "MAP0": "/assets/images/reclamation-map-0.png",
@@ -106,10 +110,11 @@ SLIDES = [
     {"img": "MARINA", **_P0},  # s39 Two confirmed projects will move the shoreli
     {"img": "MARINA", **_P1},  # s40 At Tuas, the Maritime and Port Authority is 
     {"img": "PANO2", **_P4},  # s41 The first phase of reclamation was completed
-    {"img": "MARINA", **_P4},  # s42 Off the East Coast, the Urban Redevelopment 
-    {"img": "CQ1910", **_P4},  # s43 As of its update in March 2026, the plans we
-    {"img": "MAP5", **_P2},  # s44 Where it fits in the bigger story: Much of d
-    {"img": "CQ1890", **_P0},  # s45 The shoreline has been moving since 1822, fi
+    {"img": "LI0", **_P2},  # s42 Off the East Coast, the Urban Redevelopment 
+    {"img": "LI1", **_P2},  # s43 As described when it was announced in Novemb
+    {"img": "LI1", **_P2},  # s44 As of its update in March 2026, the plans we
+    {"img": "MAP5", **_P2},  # s45 Where it fits in the bigger story: Much of d
+    {"img": "CQ1890", **_P0},  # s46 The shoreline has been moving since 1822, fi
 ]
 
 SCHEDULE = [
@@ -117,12 +122,12 @@ SCHEDULE = [
     (38.1, 5), (43.475, 6), (56.575, 7), (61.225, 8), (69.775, 9),
     (76.95, 10), (90.175, 11), (98.525, 12), (110.35, 13), (115.075, 14),
     (128.8, 15), (138.125, 16), (141.825, 17), (159.8, 18), (172.675, 19),
-    (177.9, 20), (188.95, 21), (200.875, 22), (213.55, 23), (217.45, 24),
-    (229.075, 25), (247.475, 26), (253.5, 27), (272.625, 28), (282.225, 29),
-    (288.8, 30), (296.625, 31), (311.125, 32), (318.2, 33), (329.8, 34),
-    (336.75, 35), (346.6, 36), (360.725, 37), (371.975, 38), (388.05, 39),
-    (392.025, 40), (399.85, 41), (418.075, 42), (437.075, 43), (448.65, 44),
-    (455.65, 45),
+    (177.9, 20), (188.95, 21), (200.875, 22), (213.6, 23), (217.5, 24),
+    (229.125, 25), (247.525, 26), (253.55, 27), (272.675, 28), (282.275, 29),
+    (288.85, 30), (296.675, 31), (311.175, 32), (318.25, 33), (329.85, 34),
+    (336.8, 35), (346.65, 36), (360.775, 37), (372.025, 38), (388.1, 39),
+    (392.075, 40), (399.9, 41), (418.125, 42), (437.125, 43), (454.5, 44),
+    (466.075, 45), (473.075, 46),
 ]
-TOTAL_DURATION = 470.0
+TOTAL_DURATION = 487.425
 TIMING_JSON = "audio/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations.timing.json"
