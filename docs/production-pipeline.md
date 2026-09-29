@@ -1458,8 +1458,7 @@ yet" placeholder instead):
   cmd=(python scripts/stage_youtube_text.py
       _posts/2026-08-16-jalan-payoh-lai-kangkar-montfort-nativity-church.md
       scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py
-      scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py
-      --post-url https://pikaia.github.io/2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/)
+      scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church-short.py)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
