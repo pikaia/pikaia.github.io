@@ -1651,6 +1651,14 @@ PRONUNCIATION_OVERRIDES = {
     # Chris's ear-picks (2026-09-28, samples in scratch/ic/samples/):
     "Basah": "bˈɑːsɑː",           # Bras Basah - "brass BAH-sah".
     "Somapah": "sˈQməpɑː",        # Somapah (Village/Road) - "SOH-muh-pah".
+    # Shoreline/reclamation post batch (2026-09-29). Standard / origin-language readings:
+    "Mazu": "mˈɑːʣuː",            # Mandarin Mazu, sea goddess - "MAH-dzoo".
+    "Wallich": "wˈɒlɪk",          # Mount Wallich, after the botanist Nathaniel Wallich.
+    "MacRitchie": "məkɹˈɪʧi",     # James MacRitchie, municipal engineer.
+    "Finlayson": "fˈɪnləsən",     # Finlayson Green.
+    "Al-Abrar": "ˌalabɹˈɑː",      # Al-Abrar Mosque, Arabic al-Abrar.
+    "Nagore": "nˈɑːɡɔː",          # Nagore Dargah, Tamil Nadu town - "NAH-gor".
+    "Dargah": "dˈɑːɡɑː",          # lexicon gives "DOOR-gah"; Persian dargah is "DAR-gah".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
