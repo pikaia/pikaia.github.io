@@ -63,8 +63,11 @@ IMG_ALT_RE = re.compile(r'\balt="([^"]*)"')
 # ".../Redbridge_(8166305323).jpg" - is still captured. A plain "[^)]+"
 # stopped at the first ")" and the "$" anchor then failed the whole
 # match, dropping the image from the caption map. Caught on the Japanese
-# Garden post's hero.
-MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\(((?:[^()\s]|\([^()]*\))+)\)$')
+# Garden post's hero. The first alternative accepts kramdown's angle-bracket
+# form "![alt](<url>)", used for URLs with unbalanced/odd parens; without it
+# every such image fell through to a raw-URL [REVIEW CREDIT] line (caught on
+# the vanished-hills post).
+MD_IMG_RE = re.compile(r'^!\[([^\]]*)\]\((?:<([^<>\s]+)>|((?:[^()\s]|\([^()]*\))+))\)$')
 EM_TAG_RE = re.compile(r'<em\b[^>]*>(.*?)</em>', re.DOTALL)
 FIGURE_RE = re.compile(r'<figure\b[^>]*>(.*?)</figure>', re.DOTALL)
 FIGCAPTION_RE = re.compile(r'<figcaption\b[^>]*>(.*?)</figcaption>', re.DOTALL)
@@ -209,7 +212,7 @@ def _pair_from_block(block: str) -> tuple[str, str, str] | None:
     img_m = IMG_TAG_RE.search(block) or MD_IMG_RE.search(block)
     if not img_m:
         return None
-    url = img_m.group(1) if img_m.re is IMG_TAG_RE else img_m.group(2)
+    url = img_m.group(1) if img_m.re is IMG_TAG_RE else (img_m.group(2) or img_m.group(3))
     alt = ""
     if img_m.re is IMG_TAG_RE:
         alt_m = IMG_ALT_RE.search(block)
@@ -268,7 +271,7 @@ def extract_image_captions(text: str) -> dict[str, dict[str, str]]:
         alt = ""
         md_m = MD_IMG_RE.match(block)
         if md_m:
-            alt, img_url = md_m.group(1), md_m.group(2)
+            alt, img_url = md_m.group(1), md_m.group(2) or md_m.group(3)
         else:
             html_m = IMG_TAG_RE.search(block)
             if html_m and "<em" not in block:
