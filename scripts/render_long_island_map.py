@@ -41,8 +41,11 @@ M_PER_PX = 156543.03 * math.cos(math.radians(1.3)) / 2 ** Z
 COAST = [(360, 505), (420, 452), (480, 425), (560, 392), (650, 362), (760, 327), (870, 300),
          (990, 266), (1100, 236), (1200, 206), (1300, 182), (1420, 166), (1512, 166)]
 RES = 62     # full reservoir width, px, between East Coast Park and the islands
-WIDTH = 91   # peak island width, px (islands are fuller mid-way, narrower at the gates)
-JOIN = 0.13  # length of the land joints at each end, as a fraction of the coast
+WIDTH = 79   # peak island width, px (islands are fuller mid-way, narrower at the gates)
+JOIN_W = 0.11  # solid land joint at the Marina East end (no reservoir), fraction of coast
+JOIN_E = 0.04  # solid land joint at the Tanah Merah end
+RAMP = 0.07    # length over which the reservoir opens (rounded) after each joint
+TIP = 0.035    # length over which the end islands' outer tips curve back to the shore
 GATES = [0.33, 0.67]  # tidal gates between the islands, as fractions along the coast
 GAP = 0.018  # width of each gate gap, as a fraction of the coast
 
@@ -112,7 +115,12 @@ def main():
         return x * x * (3 - 2 * x)
     # Reservoir width: zero at both ends (the islands join the mainland there),
     # full width in between, so the reservoir is enclosed by land and gates.
-    r = RES * smooth(t / JOIN) * smooth((1 - t) / JOIN)
+    # A solid joint zone at each end (island directly against the shore, no
+    # reservoir), then a rounded opening of the lagoon: sqrt of a smoothstep
+    # gives a round, not pointed, end to the reservoir.
+    def opening(x, zero, ramp):
+        return np.sqrt(smooth((x - zero) / ramp))
+    r = RES * opening(t, JOIN_W, RAMP) * opening(1 - t, JOIN_E, RAMP)
     # Island width: fuller mid-island, narrowing towards each gate; at the two
     # land joints the island is widest (a thick connection to the mainland).
     edges = [0.0] + GATES + [1.0]
@@ -121,11 +129,15 @@ def main():
         a0, a1 = edges[k] + (GAP / 2 if k > 0 else 0), edges[k + 1] - (GAP / 2 if k < 2 else 0)
         m = (t >= a0) & (t <= a1)
         u = (t[m] - a0) / (a1 - a0)
+        # the outer ends of the end islands curve back onto the coast (rounded tips)
         taper_l = 1.0 if k == 0 else 0.55 + 0.45 * np.sin(np.pi * np.minimum(u, 0.5))
         taper_r = 1.0 if k == 2 else 0.55 + 0.45 * np.sin(np.pi * np.minimum(1 - u, 0.5))
         w[m] = WIDTH * np.minimum(taper_l, taper_r)
     inner = xy + nrm * r[:, None]
-    outer = xy + nrm * (r + w)[:, None]
+    # The seaward line is steady (it doesn't follow the reservoir's width); only
+    # the end islands' tips curve back onto the shore.
+    tip = np.sqrt(smooth(t / TIP)) * np.sqrt(smooth((1 - t) / TIP))
+    outer = xy + nrm * ((RES + w) * tip)[:, None]
     tracts, area_px = [], 0.0
     for k in range(3):
         a0, a1 = edges[k] + (GAP / 2 if k > 0 else 0), edges[k + 1] - (GAP / 2 if k < 2 else 0)
