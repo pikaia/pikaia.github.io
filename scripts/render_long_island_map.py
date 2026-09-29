@@ -8,7 +8,9 @@ of the concept announced in November 2023: three elongated tracts of reclaimed
 land from Marina East to Tanah Merah (the westernmost extending Marina East, the
 easternmost starting from Tanah Merah), a new reservoir between them and East
 Coast Park, and a tidal gate and pumping station between each pair of tracts,
-about 800 hectares in all. The tract shapes, widths and offsets are hand-set
+about 800 hectares in all. The two end islands join the mainland with wide
+land connections, so the reservoir is enclosed by land and the two gates, as in
+URA's concept drawings. The island shapes, widths and offsets are hand-set
 approximations sized to roughly 800 ha; URA says the design is still being
 studied. Official URA/CNA graphics are copyrighted and are not used.
 
@@ -38,10 +40,11 @@ M_PER_PX = 156543.03 * math.cos(math.radians(1.3)) / 2 ** Z
 # East Coast shoreline (pixel space of the cached base), Marina East -> Tanah Merah.
 COAST = [(360, 505), (420, 452), (480, 425), (560, 392), (650, 362), (760, 327), (870, 300),
          (990, 266), (1100, 236), (1200, 206), (1300, 182), (1420, 166), (1512, 166)]
-RES = 62    # reservoir width, px (seaward edge of the coast to the tracts)
-WIDTH = 83  # tract width, px
-# Tracts as fractions along the coastline; the ends join Marina East / Tanah Merah.
-TRACTS = [(0.0, 0.30), (0.335, 0.66), (0.695, 1.0)]
+RES = 62     # full reservoir width, px, between East Coast Park and the islands
+WIDTH = 91   # peak island width, px (islands are fuller mid-way, narrower at the gates)
+JOIN = 0.13  # length of the land joints at each end, as a fraction of the coast
+GATES = [0.33, 0.67]  # tidal gates between the islands, as fractions along the coast
+GAP = 0.018  # width of each gate gap, as a fraction of the coast
 
 
 def base():
@@ -77,6 +80,12 @@ def along(pts, n=400):
     normal = np.column_stack([-d[:, 1], d[:, 0]])  # rotate +90deg: points out to sea here
     if normal[:, 1].mean() < 0:
         normal = -normal
+    # smooth the normals so the offset edges don't kink at the coastline's corners
+    k = np.hanning(41)
+    k /= k.sum()
+    pad = np.pad(normal, ((20, 20), (0, 0)), mode="edge")
+    normal = np.column_stack([np.convolve(pad[:, 0], k, "valid"), np.convolve(pad[:, 1], k, "valid")])
+    normal /= np.hypot(normal[:, 0], normal[:, 1])[:, None]
     return xy, normal
 
 
@@ -96,24 +105,45 @@ def main():
     muted = Image.blend(muted, Image.new("RGB", b.size, "white"), 0.3)
     xy, nrm = along(COAST)
     N = len(xy)
+    t = np.linspace(0, 1, N)
+
+    def smooth(x):
+        x = np.clip(x, 0, 1)
+        return x * x * (3 - 2 * x)
+    # Reservoir width: zero at both ends (the islands join the mainland there),
+    # full width in between, so the reservoir is enclosed by land and gates.
+    r = RES * smooth(t / JOIN) * smooth((1 - t) / JOIN)
+    # Island width: fuller mid-island, narrowing towards each gate; at the two
+    # land joints the island is widest (a thick connection to the mainland).
+    edges = [0.0] + GATES + [1.0]
+    w = np.zeros(N)
+    for k in range(3):
+        a0, a1 = edges[k] + (GAP / 2 if k > 0 else 0), edges[k + 1] - (GAP / 2 if k < 2 else 0)
+        m = (t >= a0) & (t <= a1)
+        u = (t[m] - a0) / (a1 - a0)
+        taper_l = 1.0 if k == 0 else 0.55 + 0.45 * np.sin(np.pi * np.minimum(u, 0.5))
+        taper_r = 1.0 if k == 2 else 0.55 + 0.45 * np.sin(np.pi * np.minimum(1 - u, 0.5))
+        w[m] = WIDTH * np.minimum(taper_l, taper_r)
+    inner = xy + nrm * r[:, None]
+    outer = xy + nrm * (r + w)[:, None]
     tracts, area_px = [], 0.0
-    for a, z in TRACTS:
-        i0, i1 = int(a * (N - 1)), int(z * (N - 1))
-        inner = [tuple(xy[i] + nrm[i] * (RES if 0 < i < N - 1 else 0)) for i in range(i0, i1 + 1)]
-        # the two end tracts close onto the existing coast (Marina East / Tanah Merah)
-        if a == 0.0:
-            inner = [tuple(xy[i0])] + inner[1:]
-        if z == 1.0:
-            inner = inner[:-1] + [tuple(xy[i1])]
-        outer = [tuple(xy[i] + nrm[i] * (RES + WIDTH)) for i in range(i0, i1 + 1)]
-        poly = inner + outer[::-1]
+    for k in range(3):
+        a0, a1 = edges[k] + (GAP / 2 if k > 0 else 0), edges[k + 1] - (GAP / 2 if k < 2 else 0)
+        idx = np.where((t >= a0) & (t <= a1))[0]
+        poly = [tuple(inner[i]) for i in idx] + [tuple(outer[i]) for i in idx[::-1]]
         tracts.append(poly)
         q = np.array(poly)
         area_px += 0.5 * abs(np.dot(q[:, 0], np.roll(q[:, 1], 1)) - np.dot(q[:, 1], np.roll(q[:, 0], 1)))
     ha = area_px * M_PER_PX ** 2 / 1e4
-    print(f"tract area ~{ha:.0f} ha")
-    reservoir = [tuple(p) for p in xy] + [tuple(xy[i] + nrm[i] * RES) for i in range(N - 1, -1, -1)]
-    gates = [tuple(xy[int(g * (N - 1))] + nrm[int(g * (N - 1))] * (RES + WIDTH / 2)) for g in (0.3175, 0.6775)]
+    print(f"island area ~{ha:.0f} ha")
+    reservoir = [tuple(p) for p in xy] + [tuple(inner[i]) for i in range(N - 1, -1, -1)]
+    # Each gate spans its whole gap, from the reservoir edge to the islands' outer line.
+    gate_polys, gates = [], []
+    for g in GATES:
+        idx = np.where(np.abs(t - g) <= GAP / 2 + 1e-9)[0]
+        gate_polys.append([tuple(inner[i]) for i in idx] + [tuple(inner[i] + nrm[i] * WIDTH * 0.55) for i in idx[::-1]])
+        c = int(g * (N - 1))
+        gates.append(tuple(inner[c] + nrm[c] * WIDTH * 0.275))
 
     for stage in (0, 1):
         img = muted.copy().convert("RGBA")
@@ -123,6 +153,8 @@ def main():
             d.polygon(reservoir, fill=(40, 110, 190, 150))
             for poly in tracts:
                 d.polygon(poly, fill=(233, 138, 43, 235), outline=(160, 80, 10, 255))
+            for poly in gate_polys:
+                d.polygon(poly, fill=(30, 50, 90, 255))
         img = Image.alpha_composite(img, ov)
         d = ImageDraw.Draw(img)
         lab = font(22, bold=True)
@@ -138,7 +170,7 @@ def main():
         tag(1380, 110, "Tanah Merah")
         if stage == 1:
             for gx, gy in gates:
-                d.ellipse([gx - 11, gy - 11, gx + 11, gy + 11], fill=(255, 255, 255, 255), outline=(20, 60, 120, 255), width=4)
+                d.ellipse([gx - 7, gy - 7, gx + 7, gy + 7], fill=(255, 255, 255, 255))
             tag(gates[0][0] - 60, gates[0][1] + 24, "tidal gate and pumping station", f=small)
             tag(gates[1][0] - 60, gates[1][1] + 24, "tidal gate and pumping station", f=small)
             tag(700, 500, "Planned \"Long Island\": three tracts, about 800 hectares", f=font(24, bold=True), col=(150, 70, 0, 255))
