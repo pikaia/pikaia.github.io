@@ -1299,9 +1299,11 @@ PRONUNCIATION_OVERRIDES = {
                                     # class as "rallied"/"tapped"
     "Mapletree": "mˈeɪpəltɹiː",    # "MAY-pul-tree"
     "Sino": "sˈaɪnoʊ",             # "SY-noh" (Sino Land, the developer)
-    "Bedok": "bədˈɒk",             # "buh-DOK", local Singapore reading -
-                                    # confirmed by Chris by ear
-                                    # (2026-09-20), candidate 1 of 3, from
+    "Bedok": "bədˈQk",             # "buh-DOAK" (oh vowel, as in "boat") -
+                                    # Chris's re-pick 2026-09-30 on the hills
+                                    # post (scratch/hl/samples/bedok/c5),
+                                    # replacing "buh-DOK" (bədˈɒk), his first
+                                    # pick of 2026-09-20, candidate 1 of 3, from
                                     # scratch/the-fullerton-building-the-
                                     # post-office-with-a-lighthouse-on-
                                     # the-roof-pronunciation/
