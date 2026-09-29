@@ -13,6 +13,12 @@ More photographs and maps of the waterfront hills south of the old town and the 
 
 *The city in 1893, with Mount Wallich, Mount Erskine and Mount Palmer marked behind the waterfront. (Image: The Edinburgh Geographical Institute / John Bartholomew and Co., public domain, via Wikimedia Commons)*
 
+### Hoo Ah Kay (Whampoa)
+
+![A formal oval portrait photograph of Hoo Ah Kay in a dark robe with two medals](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Hon._Hoh-Ah-Kay_Whampoa%2C_C.M.G.%2C_M.L.C.%2C_and_Consul_for_Wellcome_V0037527.jpg/1280px-The_Hon._Hoh-Ah-Kay_Whampoa%2C_C.M.G.%2C_M.L.C.%2C_and_Consul_for_Wellcome_V0037527.jpg)
+
+*Hoo Ah Kay, better known as Whampoa, one of the later owners of Mount Palmer. (Image: Wellcome Collection, CC BY 4.0, via Wikimedia Commons)*
+
 ### The road to Tanjong Pagar
 
 ![A postcard of the road to Tanjong Pagar with carts and pedestrians, a domed building ahead and a cut bank on the right](<https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Singapore._Road_to_Tanjong_Pagar.%2C_KITLV_1404883.tiff/lossy-page1-1280px-Singapore._Road_to_Tanjong_Pagar.%2C_KITLV_1404883.tiff.jpg>)

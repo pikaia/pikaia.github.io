@@ -11,6 +11,45 @@ In the 1880s, three hills stood along the waterfront south of Singapore's town: 
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-hills-singapore-dug-into-the-sea.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A beach at the foot of Mount Palmer, with people wading in the shallows and a steep wooded hill rising behind the shore](<https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Strand_en_badgasten_aan_de_voet_van_Mount_Palmer_%28Mount_Parsee%2C_Parsee_Hill%29_bij_Singapore_Foot_of_Mount_Palmer._S.pore_%28titel_op_object%29%2C_RP-F-F01104-Z.jpg/1280px-Strand_en_badgasten_aan_de_voet_van_Mount_Palmer_%28Mount_Parsee%2C_Parsee_Hill%29_bij_Singapore_Foot_of_Mount_Palmer._S.pore_%28titel_op_object%29%2C_RP-F-F01104-Z.jpg>)
 
 *The beach at the foot of Mount Palmer, photographed between about 1870 and 1910. (Photo: unknown photographer, Rijksmuseum, CC0, via Wikimedia Commons)*
@@ -333,5 +372,6 @@ The largest cutting of hills came after independence. For the East Coast reclama
 - [File:Habib Noh Tomb on Mount Palmer.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Habib_Noh_Tomb_on_Mount_Palmer.jpg>) (gallery)
 - [File:Ann Siang Hill Park, Singapore (P1100992).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Ann_Siang_Hill_Park,_Singapore_(P1100992).jpg>) (gallery)
 - [File:Ann Siang Hill from Club Street.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Ann_Siang_Hill_from_Club_Street.jpg>) (gallery)
+- [File:The Hon. Hoh-Ah-Kay Whampoa, C.M.G., M.L.C., and Consul for Wellcome V0037527.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:The_Hon._Hoh-Ah-Kay_Whampoa,_C.M.G.,_M.L.C.,_and_Consul_for_Wellcome_V0037527.jpg>) (gallery)
 
 [← Back to all posts](/)
