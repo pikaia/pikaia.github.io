@@ -92,7 +92,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
       _posts/2026-09-29-when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations.md
       scripts/video-configs/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations.py
       scripts/video-configs/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations-short.py
-      --post-url https://pikaia.github.io/2026/09/28/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations/)
+      )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
