@@ -1659,6 +1659,9 @@ PRONUNCIATION_OVERRIDES = {
     "Al-Abrar": "ˌalabɹˈɑː",      # Al-Abrar Mosque, Arabic al-Abrar.
     "Nagore": "nˈɑːɡɔː",          # Nagore Dargah, Tamil Nadu town - "NAH-gor".
     "Dargah": "dˈɑːɡɑː",          # lexicon gives "DOOR-gah"; Persian dargah is "DAR-gah".
+    # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
+    # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
+    "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1828,6 +1831,9 @@ ABBREVIATION_EXPANSIONS = {
     # "mei ren wo" - same 2+1 grouping problem, same fix (see the
     # "mei-ren" PRONUNCIATION_OVERRIDES entry above).
     re.compile(r"\bmei ren\b"): "mei-ren",
+    # "Lau Pa Sat" (shoreline post) - fused for the "Lau-Pa-Sat" override,
+    # so ordinary "sat"/"Pa" elsewhere stay untouched.
+    re.compile(r"\bLau Pa Sat\b"): "Lau-Pa-Sat",
 }
 
 
