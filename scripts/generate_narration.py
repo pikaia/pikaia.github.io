@@ -1654,7 +1654,7 @@ PRONUNCIATION_OVERRIDES = {
     # Shoreline/reclamation post batch (2026-09-29). Standard / origin-language readings:
     "Mazu": "mˈɑːʣuː",            # Mandarin Mazu, sea goddess - "MAH-dzoo".
     "Wallich": "wˈɒlɪk",          # Mount Wallich, after the botanist Nathaniel Wallich.
-    "MacRitchie": "məkɹˈɪʧi",     # James MacRitchie, municipal engineer.
+    "MacRitchie": "mˌak ɹˈɪʧi",   # James MacRitchie - "mak RIT-chee", break after "Mac" (Chris's pick 2026-09-29; the fused reading slid into "muh-KRITCH-ee").
     "Finlayson": "fˈɪnləsən",     # Finlayson Green.
     "Al-Abrar": "ˌalabɹˈɑː",      # Al-Abrar Mosque, Arabic al-Abrar.
     "Nagore": "nˈɑːɡɔː",          # Nagore Dargah, Tamil Nadu town - "NAH-gor".
