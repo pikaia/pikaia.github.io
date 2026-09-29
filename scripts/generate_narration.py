@@ -1664,6 +1664,13 @@ PRONUNCIATION_OVERRIDES = {
     # Chris caught it on the shoreline post (2026-09-29).
     "labourers": "lˈAbəɹəz",
     "labourer": "lˈAbəɹə",
+    # Vanished-hills post batch (2026-09-30). Standard readings:
+    "Erskine": "ˈɜːskɪn",         # Mount Erskine / Erskine Road - "ER-skin".
+    "Faber": "fˈAbə",             # Mount Faber - "FAY-buh".
+    "Nathaniel": "nəθˈanjəl",
+    "Mohammed": "məhˈamɪd",       # matches misaki's own "Muhammad".
+    "Habib": "hˈɑːbɪb",           # Arabic Habib - "HAH-bib".
+    "al-Habshi": "ˌalhˈabʃi",     # Arabic al-Habshi.
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".

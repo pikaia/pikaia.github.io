@@ -76,7 +76,7 @@ Mount Palmer was the largest of the three, about 119 feet (36 metres) high. It w
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Page 5 of the Straits Times Weekly Issue, 22 November 1884, which reported the blast on Mount Wallich. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
 </div>
 
-The [Telok Ayer reclamation](/2026/09/29/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations/), begun in 1879, needed earth, and the nearest earth was in the hills behind the bay. On a Thursday evening in November 1884, according to the Straits Times Weekly Issue, a charge of 1,000 lb of gunpowder and a few pounds of dynamite was fired in a 50-foot tunnel bored into the face of Mount Wallich, beside the new road to Tanjong Pagar. The explosion made the ground tremble for some distance, and the paper reported that about 50,000 tons of rock and earth were brought down in one blast, broken small enough to be carted away.
+The [Telok Ayer reclamation](/2026/09/29/when-telok-ayer-street-was-the-beach-singapores-first-land-reclamations/), begun in 1879, needed earth, and the nearest earth was in the hills behind the bay. On a Thursday evening in November 1884, according to the Straits Times Weekly Issue, a charge of 1,000 pounds of gunpowder and a few pounds of dynamite was fired in a 50-foot tunnel bored into the face of Mount Wallich, beside the new road to Tanjong Pagar. The explosion made the ground tremble for some distance, and the paper reported that about 50,000 tons of rock and earth were brought down in one blast, broken small enough to be carted away.
 
 The hill was taken down over the following years, and its earth went into the new land behind Raffles Quay. Wallich Street, named in 1899, runs across the site of the vanished hill today.
 
@@ -193,7 +193,7 @@ The hills were also in the way. Goods from the [docks at Tanjong Pagar](/2026/09
       <text class="om-event-label" style="font-size:15px" x="592" y="340" text-anchor="middle">Telok Ayer</text>
       <text class="om-event-label" style="font-size:15px" x="592" y="358" text-anchor="middle">reclamation begins</text>
       </g>
-      <g class="om-hit" tabindex="0" data-label="Nov 1884" data-val="A single charge of 1,000 lb of gunpowder and some dynamite brought down about 50,000 tons of rock and earth on Mount Wallich (Straits Times Weekly Issue, 22 November 1884).">
+      <g class="om-hit" tabindex="0" data-label="Nov 1884" data-val="A single charge of 1,000 pounds of gunpowder and some dynamite brought down about 50,000 tons of rock and earth on Mount Wallich (Straits Times Weekly Issue, 22 November 1884).">
       <line x1="642" y1="250" x2="642" y2="220" stroke="var(--text-secondary)" stroke-width="1.5"/>
       <circle cx="642" cy="220" r="4" fill="var(--text-secondary)"/>
       <text class="om-event-year" style="font-size:17px" x="642" y="209" text-anchor="middle">Nov 1884</text>
@@ -242,7 +242,7 @@ The hills were also in the way. Goods from the [docks at Tanjong Pagar](/2026/09
         <tr><td>1822</td><td>Nathaniel Wallich convalesced in Botany Hall, a house on the hill later named Mount Wallich, in 1822.</td></tr>
         <tr><td>1828</td><td>Part of Mount Palmer was sold to a Parsi in 1828, and its slopes became the Parsi community's burial ground.</td></tr>
         <tr><td>1879</td><td>The Telok Ayer reclamation began in 1879, using earth from the hills behind the bay.</td></tr>
-        <tr><td>Nov 1884</td><td>A single charge of 1,000 lb of gunpowder and some dynamite brought down about 50,000 tons of rock and earth on Mount Wallich (Straits Times Weekly Issue, 22 November 1884).</td></tr>
+        <tr><td>Nov 1884</td><td>A single charge of 1,000 pounds of gunpowder and some dynamite brought down about 50,000 tons of rock and earth on Mount Wallich (Straits Times Weekly Issue, 22 November 1884).</td></tr>
         <tr><td>1899</td><td>Wallich Street, on the site of the vanished hill, was named in 1899.</td></tr>
         <tr><td>1905</td><td>Fort Palmer was demolished in 1905, and Mount Palmer was cut down for the Telok Ayer Basin reclamation.</td></tr>
         <tr><td>1913</td><td>The Straits Times of 25 August 1913 reported that the government had acquired Mount Erskine.</td></tr>
