@@ -1659,6 +1659,11 @@ PRONUNCIATION_OVERRIDES = {
     "Al-Abrar": "ˌalabɹˈɑː",      # Al-Abrar Mosque, Arabic al-Abrar.
     "Nagore": "nˈɑːɡɔː",          # Nagore Dargah, Tamil Nadu town - "NAH-gor".
     "Dargah": "dˈɑːɡɑː",          # lexicon gives "DOOR-gah"; Persian dargah is "DAR-gah".
+    # misaki's British lexicon has the short "a" of "lab" ("LAB-er-ers");
+    # Singapore/British usage is "LAY-buh-ruhz", like "labour" (lˈAbə).
+    # Chris caught it on the shoreline post (2026-09-29).
+    "labourers": "lˈAbəɹəz",
+    "labourer": "lˈAbəɹə",
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
