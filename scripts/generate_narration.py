@@ -1693,6 +1693,17 @@ PRONUNCIATION_OVERRIDES = {
     # light stress on every syllable. Chris's pick c5, 2026-09-30
     # (scratch/cb/samples/lim-boon-keng/).
     "Lim-Boon-Keng": "lˌɪm bˌuːn kˌAŋ",
+    # Same treatment for the other names in the Chinese banks post (Chris
+    # approved the fused_even sample, 2026-09-30, scratch/cb/samples/other-names/):
+    "Oei-Tiong-Ham": "wˌiː tjˌɒŋ hˌam",
+    "Eu-Tong-Sen": "jˌuː tˌɒŋ sˌɛn",
+    "Lee-Kong-Chian": "lˌiː kˌɒŋ kjˌɛn",
+    "Lim-Nee-Soon": "lˌɪm nˌiː sˌuːn",
+    "Tan-Ean-Kiam": "tˌan ˌiːən kjˌɑːm",
+    "Lee-Choon-Guan": "lˌiː ʧˌuːn ɡwˌɑːn",
+    "Lim-Peng-Siang": "lˌɪm pˌɛŋ sjˌɑːŋ",
+    "Wong-Ah-Fook": "wˌɒŋ ˌɑː fˌʊk",
+    "Low-Peng-Yam": "lˌQ pˌɛŋ jˌam",
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
@@ -1871,6 +1882,15 @@ ABBREVIATION_EXPANSIONS = {
     # "Lim Boon Keng" - fused so the name reads as one even word, not three
     # stressed ones (see the "Lim-Boon-Keng" PRONUNCIATION_OVERRIDES entry).
     re.compile(r"\bLim Boon Keng\b"): "Lim-Boon-Keng",
+    re.compile(r"\bOei Tiong Ham\b"): "Oei-Tiong-Ham",
+    re.compile(r"\bEu Tong Sen\b"): "Eu-Tong-Sen",
+    re.compile(r"\bLee Kong Chian\b"): "Lee-Kong-Chian",
+    re.compile(r"\bLim Nee Soon\b"): "Lim-Nee-Soon",
+    re.compile(r"\bTan Ean Kiam\b"): "Tan-Ean-Kiam",
+    re.compile(r"\bLee Choon Guan\b"): "Lee-Choon-Guan",
+    re.compile(r"\bLim Peng Siang\b"): "Lim-Peng-Siang",
+    re.compile(r"\bWong Ah Fook\b"): "Wong-Ah-Fook",
+    re.compile(r"\bLow Peng Yam\b"): "Low-Peng-Yam",
 }
 
 
