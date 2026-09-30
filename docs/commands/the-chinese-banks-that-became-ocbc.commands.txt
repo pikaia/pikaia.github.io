@@ -1,0 +1,123 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md audio/the-chinese-banks-that-became-ocbc.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md audio/the-chinese-banks-that-became-ocbc.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-chinese-banks-that-became-ocbc.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md the-chinese-banks-that-became-ocbc)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md scripts/video-configs/the-chinese-banks-that-became-ocbc.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc.py --out preview-motion/the-chinese-banks-that-became-ocbc.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc-short.py --out preview-motion/the-chinese-banks-that-became-ocbc-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-banks-that-became-ocbc-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md
+      scripts/video-configs/the-chinese-banks-that-became-ocbc.py
+      scripts/video-configs/the-chinese-banks-that-became-ocbc-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+"C:\Users\chris\projects\pikaia.github.io\audio\the-chinese-banks-that-became-ocbc.srt"
+
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-09-30-the-chinese-banks-that-became-ocbc.md scripts/video-configs/the-chinese-banks-that-became-ocbc.py 
+  --youtube-url https://youtu.be/u-oNInoCuhE
+  --shorts-url https://youtube.com/shorts/CPrcBtDFne0
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-banks-that-became-ocbc.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done
