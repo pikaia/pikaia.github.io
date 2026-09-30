@@ -455,7 +455,7 @@ Somewhere along that decade, SkillsFuture also picked up a second, unplanned pur
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#sf-tooltip');
   var crosshair = svg.querySelector('#sf-crosshair');

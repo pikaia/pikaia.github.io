@@ -606,7 +606,7 @@ Two years after passing that Act through Parliament, Sheares was pulled out of h
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#tf-tooltip');
   var hits = svg.querySelectorAll('.tf-hit');

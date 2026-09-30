@@ -519,7 +519,7 @@ A memorial building dedicated to Bhai Maharaj Singh was opened there on 23 Octob
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');

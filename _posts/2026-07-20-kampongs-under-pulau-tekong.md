@@ -416,7 +416,7 @@ That town didn't survive the 1980s. Around 1987, the Singapore Armed Forces sett
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#tk-tooltip');
   var hits = svg.querySelectorAll('.tk-hit');

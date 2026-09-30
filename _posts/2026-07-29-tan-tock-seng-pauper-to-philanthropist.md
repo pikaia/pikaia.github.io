@@ -424,7 +424,7 @@ Tan died on 24 February 1850, leaving an estimated fortune of 500,000 Spanish do
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#ts-tooltip');
   var hits = svg.querySelectorAll('.ts-hit');

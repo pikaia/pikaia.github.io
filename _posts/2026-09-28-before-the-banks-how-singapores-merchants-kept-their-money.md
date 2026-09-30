@@ -528,7 +528,7 @@ The foreign banks gave Singapore's trade access to large amounts of capital and 
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');

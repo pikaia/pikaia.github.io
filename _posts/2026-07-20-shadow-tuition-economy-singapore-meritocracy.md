@@ -406,7 +406,7 @@ The industry's growth traces a straight line. Singapore's Household Expenditure 
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#ti-tooltip');
   var hits = svg.querySelectorAll('.ti-hit');

@@ -471,7 +471,7 @@ The cemetery outlived the trade that founded it by decades, and it didn't stay a
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.tl-tooltip');
   var hits = svg.querySelectorAll('.tl-hit');

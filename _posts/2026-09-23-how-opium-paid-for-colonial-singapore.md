@@ -481,7 +481,7 @@ The syndicate's local farms sat on top of a much longer supply chain that made S
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');
@@ -641,7 +641,7 @@ That revenue was collected one pipe at a time. Licensed opium shops and dens lin
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');
@@ -861,7 +861,7 @@ Ending the private farm did not end the government's dependence on opium money o
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');

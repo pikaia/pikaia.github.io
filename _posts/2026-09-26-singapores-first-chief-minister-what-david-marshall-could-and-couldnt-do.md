@@ -506,7 +506,7 @@ The Sunday Times of 3 April ran the headline "Labour wins, Marshall will be Chie
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');

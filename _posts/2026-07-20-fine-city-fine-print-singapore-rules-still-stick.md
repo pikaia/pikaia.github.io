@@ -440,7 +440,7 @@ What ties all five together isn't strictness or leniency — it's how unevenly S
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('#rt-tooltip');
   var hits = svg.querySelectorAll('.rt-hit');

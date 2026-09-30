@@ -492,7 +492,7 @@ The local fishermen, mainly Chinese and Malay, worked closer to shore in small u
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.jf-tooltip');
   var hits = svg.querySelectorAll('.jf-hit');

@@ -530,7 +530,7 @@ What replaced tin, gradually, was everything else. Through the late twentieth ce
 <script>
 (function() {
   var card = document.currentScript.previousElementSibling;
-  var svg = card.querySelector('svg');
+  var svg = card.querySelector('.om-chart-wrap svg') || card.querySelector('svg');
   var wrap = svg.parentElement;
   var tooltip = wrap.querySelector('.om-tooltip');
   var hits = svg.querySelectorAll('.om-hit');
