@@ -1680,6 +1680,9 @@ PRONUNCIATION_OVERRIDES = {
     "Khek": "kˈɛk",
     "Keramat": "kəɹˈɑːmat",       # Malay keramat - "keh-RAH-mat".
     "Salleh": "sˈalɛ",            # Malay Salleh - "SAL-leh".
+    # Chinese banks post batch (2026-09-30). Standard readings:
+    "overdrawn": "ˌOvədɹˈɔːn",    # plain English, missing from the lexicon.
+    "Wong": "wˈɒŋ",               # Wong Ah Fook (Cantonese Wong) - "WONG".
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
