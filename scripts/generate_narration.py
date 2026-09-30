@@ -1688,6 +1688,11 @@ PRONUNCIATION_OVERRIDES = {
     "Sze": "sˈiː",                # Sze Hai Tong - "SEE-high-tong".
     "Oei": "wˈiː",                # Oei Tiong Ham - "WEE".
     "Eu": "jˈuː",                 # Eu Tong Sen - "YOO".
+    # Three-part Chinese names read as three separate stressed words sound
+    # fragmented; fused (via the ABBREVIATION_EXPANSIONS rewrite) with the same
+    # light stress on every syllable. Chris's pick c5, 2026-09-30
+    # (scratch/cb/samples/lim-boon-keng/).
+    "Lim-Boon-Keng": "lˌɪm bˌuːn kˌAŋ",
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
@@ -1863,6 +1868,9 @@ ABBREVIATION_EXPANSIONS = {
     # "Lau Pa Sat" (shoreline post) - fused for the "Lau-Pa-Sat" override,
     # so ordinary "sat"/"Pa" elsewhere stay untouched.
     re.compile(r"\bLau Pa Sat\b"): "Lau-Pa-Sat",
+    # "Lim Boon Keng" - fused so the name reads as one even word, not three
+    # stressed ones (see the "Lim-Boon-Keng" PRONUNCIATION_OVERRIDES entry).
+    re.compile(r"\bLim Boon Keng\b"): "Lim-Boon-Keng",
 }
 
 
