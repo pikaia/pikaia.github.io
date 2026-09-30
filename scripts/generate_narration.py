@@ -1683,6 +1683,11 @@ PRONUNCIATION_OVERRIDES = {
     # Chinese banks post batch (2026-09-30). Standard readings:
     "overdrawn": "ˌOvədɹˈɔːn",    # plain English, missing from the lexicon.
     "Wong": "wˈɒŋ",               # Wong Ah Fook (Cantonese Wong) - "WONG".
+    # Chris's ear-picks, 2026-09-30 (samples in scratch/cb/samples/):
+    "Yik": "jˈɪk",                # Kwong Yik - "KWONG-yik".
+    "Sze": "sˈiː",                # Sze Hai Tong - "SEE-high-tong".
+    "Oei": "wˈiː",                # Oei Tiong Ham - "WEE".
+    "Eu": "jˈuː",                 # Eu Tong Sen - "YOO".
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
