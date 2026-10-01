@@ -1724,6 +1724,7 @@ PRONUNCIATION_OVERRIDES = {
     "Kerviel": "kɜːvjˈɛl",            # "ker-VYEL".
     "Kweku": "kwˈɛkuː",               # Akan day-name, "KWEH-koo".
     "Adoboli": "ˌadəbˈQli",           # "ah-doh-BOH-lee".
+    "SIMEX": "sˈImɛks",               # "SIGH-mex", Chris's pick 2026-10-02 (scratch/bb/samples/simex/).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
