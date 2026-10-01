@@ -1704,6 +1704,7 @@ PRONUNCIATION_OVERRIDES = {
     "Lim-Peng-Siang": "lˌɪm pˌɛŋ sjˌɑːŋ",
     "Wong-Ah-Fook": "wˌɒŋ ˌɑː fˌʊk",
     "Low-Peng-Yam": "lˌQ pˌɛŋ jˌam",
+    "Seow-Poh-Leng": "sjˌW pˌQ lˌɛŋ",  # "syow-poh-leng", Chris's pick 2026-10-01 (scratch/br/samples/).
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
@@ -1891,6 +1892,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLim Peng Siang\b"): "Lim-Peng-Siang",
     re.compile(r"\bWong Ah Fook\b"): "Wong-Ah-Fook",
     re.compile(r"\bLow Peng Yam\b"): "Low-Peng-Yam",
+    re.compile(r"\bSeow Poh Leng\b"): "Seow-Poh-Leng",
 }
 
 
