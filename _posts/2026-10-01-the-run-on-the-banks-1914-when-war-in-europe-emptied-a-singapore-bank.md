@@ -2,7 +2,7 @@
 layout: post
 title: "The Run on the Banks, 1914: When War in Europe Emptied a Singapore Bank"
 date: 2026-10-01 21:54:16 +0800
-last_modified_at: 2026-10-01 21:54:16 +0800
+last_modified_at: 2026-10-01 22:56:32 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/c/c4/Souvenir_of_Singapore%2C_1914_-_Plate_11_-_Chinese_Quarters.jpg
 ---
@@ -227,9 +227,11 @@ On 24 September the Straits Times reported that the bank was expected to reopen 
 
 In 1914, a bank in trouble depended on its community standing behind it, and on the government deciding to step in. Today the safety net is set out in advance. Singapore has had a deposit insurance scheme since 2006, run by the Singapore Deposit Insurance Corporation. Since April 2024 it covers Singapore dollar deposits of up to $100,000 per depositor at each member bank, enough, according to the corporation, to cover 91 per cent of depositors in full. In October 2008, during the global financial crisis, the government went further and guaranteed all bank deposits until the end of 2010, backed by $150 billion of reserves. No claims were made under the guarantee.
 
+Could a run like 1914 happen again? Several of the conditions behind it are now dealt with directly. Banks in Singapore are supervised by the Monetary Authority of Singapore, which requires them to hold minimum levels of capital and of liquid assets that can be turned into cash quickly, so that a sudden wave of withdrawals is less likely to empty the till as it did on Kling Street. Most ordinary depositors are fully insured, which removes much of the reason to queue at all. But runs have not disappeared, and they have become much faster. On 9 March 2023, customers of Silicon Valley Bank in the United States withdrew about US$42 billion, almost a quarter of its deposits, in a single day, much of it above the insured limit, and requests for about US$100 billion more were waiting the next morning. Regulators closed the bank on 10 March. In 1914 the run on the Chinese Commercial Bank took two days; phone banking and messages spreading online meant this one took little more than one. The lesson that carries over from Kling Street is that confidence is what holds a bank together, and that the safeguards built since then are meant to protect it before a panic starts.
+
 [See more historical photos related to this post →](/gallery/the-run-on-the-banks-1914-when-war-in-europe-emptied-a-singapore-bank/)
 
-**Where it fits in the bigger story:** The Chinese Commercial Bank survived the panic of August 1914 because the government examined its books, said publicly that it was sound and lent it money. A century later, deposit insurance and the 2008 guarantee were built to make that kind of rescue unnecessary, by giving ordinary depositors no reason to run.
+**Where it fits in the bigger story:** The Chinese Commercial Bank survived the panic of August 1914 because the government examined its books, said publicly that it was sound and lent it money. A century later, deposit insurance, the 2008 guarantee and the rules on capital and liquidity were built to make that kind of rescue unnecessary, by giving ordinary depositors no reason to run, though a run can now move far faster than one on Kling Street.
 
 ---
 
@@ -244,6 +246,9 @@ In 1914, a bank in trouble depended on its community standing behind it, and on 
 - [Deposit Insurance Scheme, Singapore Deposit Insurance Corporation](https://www.sdic.org.sg/di_faq/)
 - [Deposit insurance limit goes up to $100,000 from today, Singapore Deposit Insurance Corporation, 1 April 2024](https://sdic.org.sg/api/207/Deposit%20insurance%20limit%20goes%20up%20to%20100000%20from%20today%20SDIC%20launches%20public%20education%20campaign.pdf)
 - [Ministerial statement on the Government Guarantee on Deposits, Monetary Authority of Singapore, 2008](https://www.mas.gov.sg/news/speeches/2008/ministerial-statement-by-mr-lim-hng-kiang-minister-for-trade-and-industry-and-deputy-chairman-monetary-authority-of-singapore-on-government-guarantee-on-deposits)
+- [Material Loss Review of Silicon Valley Bank, Office of Inspector General, Federal Reserve Board, September 2023](https://oig.federalreserve.gov/reports/board-material-loss-review-silicon-valley-bank-sep2023.pdf)
+- [MAS Notice 649: Minimum Liquid Assets and Liquidity Coverage Ratio, Monetary Authority of Singapore](https://www.mas.gov.sg/regulation/notices/notice-649/mas-notice-649--minimum-liquid-assets-and-liquidity-coverage-ratio)
+- [MAS Notice 637: Risk Based Capital Adequacy Requirements for Banks Incorporated in Singapore, Monetary Authority of Singapore](https://www.mas.gov.sg/regulation/notices/notice-637)
 - [File:Souvenir of Singapore, 1914 - Plate 11 - Chinese Quarters.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Souvenir_of_Singapore,_1914_-_Plate_11_-_Chinese_Quarters.jpg>)
 - [File:KITLV - 79891 - Kleingrothe, C.J. - Medan - Raffles Place, Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79891_-_Kleingrothe,_C.J._-_Medan_-_Raffles_Place,_Singapore_-_circa_1910.tif>)
 - [File:Kling Street, Singapore (NYPL Hades-2359713-4044478).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Kling_Street,_Singapore_(NYPL_Hades-2359713-4044478).jpg>)

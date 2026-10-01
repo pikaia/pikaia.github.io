@@ -1782,13 +1782,18 @@ ABBREVIATION_EXPANSIONS = {
     # loose [\d,]* so it can't swallow a *trailing* comma - "S$1,000, and
     # plainclothes officers" was becoming "1,000, Singapore dollars and
     # plainclothes" (comma misplaced), caught on the fine-city post.
-    re.compile(r"S\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
+    # "US$" must be handled first: the S$ rule below used to match the "S$"
+    # inside "US$42 billion", reading it as "U 42 billion Singapore dollars"
+    # (caught on the 1914 bank-run post). The S$ and M$ rules now also
+    # require a non-letter before them.
+    re.compile(r"\bUS\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 US dollars",
+    re.compile(r"(?<![A-Za-z])S\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Singapore dollars",
     # "M$" - the Malayan dollar (the pre-1967 currency; officially the
     # Malaya and British Borneo dollar, but universally shortened to
     # "Malayan dollar"). Same failure mode as S$ ("M" + a literal "?" for
     # the "$"), same fix. Caught on the Christmas Island post ("M$20
     # million", "M$1.5 million", "M$48 million").
-    re.compile(r"M\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Malayan dollars",
+    re.compile(r"(?<![A-Za-z])M\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Malayan dollars",
     # "DD Month" dates (the house style throughout post prose, e.g. "25
     # August 1963") - misaki reads the bare day numeral as a cardinal
     # ("twenty-five August"), but spoken English always reads the day-of-
