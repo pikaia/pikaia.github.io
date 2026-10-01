@@ -237,7 +237,7 @@ SIMEX itself made no loss from the collapse, and no other financial institution 
 
 ## A trader's view
 
-I was working at Bank of America in Singapore at the time, and we were trading futures on SIMEX ourselves, so the scandal was the talk of the market. In foreign exchange circles, Barings was not a name we came across much. It was known as a top British credit, and not much more. When the news broke, it sounded like a story you hear every so often in the markets: someone builds a reputation as a brilliant trader, and the results turn out to come from something illegal. The lesson I took from it, and never forgot, is that there is no such thing as a star trader. There are people who make money from speculation consistently, but they usually do it with a systematic approach to each day's trading, not by being stars.
+At the time I was on the short-term interest rate trading desk at Security Pacific National Bank in Singapore, later part of Bank of America, and we were trading futures on SIMEX ourselves, so the scandal was the talk of the market. In the foreign exchange and money markets, Barings was not a name we came across much. It was known as a top British credit, and not much more. When the news broke, it sounded like a story you hear every so often in the markets: someone builds a reputation as a brilliant trader, and the results turn out to come from something illegal. The lesson I took from it, and never forgot, is that there is no such thing as a star trader. There are people who make money from speculation consistently, but they usually do it with a systematic approach to each day's trading, not by being stars.
 
 ## Could it happen again?
 
