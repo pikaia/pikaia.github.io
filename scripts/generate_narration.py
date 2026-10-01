@@ -1708,6 +1708,22 @@ PRONUNCIATION_OVERRIDES = {
     # Fused key, paired with the ABBREVIATION_EXPANSIONS rewrite below.
     # Chris's ear-pick 2026-09-29 (scratch/rc/samples/lau-pa-sat/).
     "Lau-Pa-Sat": "lˈaʊ pˈɑː sˈɑːt",   # "LOW-pah-SAHT".
+    # Barings 1995 post.
+    "Leeson": "lˈiːsᵊn",              # "LEE-sun".
+    "Leeson's": "lˈiːsᵊnz",
+    "Nikkei": "nˈɪkA",                # "NICK-ay".
+    "Kobe": "kˈQbA",                  # the city: "KOH-bay", not "KOH-bee".
+    "Bishopsgate": "bˈɪʃəpsɡˌAt",
+    "Hu": "hˈuː",                     # Richard Hu, "hoo".
+    "Dhabi": "dˈɑːbi",                # Abu Dhabi.
+    "Waterhouse": "wˈɔːtəhˌWs",       # Price Waterhouse.
+    "Kellogg": "kˈɛlɒɡ",
+    "Société": "sˌɒsjAtˈA",           # French: "so-syay-TAY".
+    "Générale": "ʒˌAnAɹˈɑːl",         # "zhay-nay-RAHL".
+    "Jérôme": "ʒAɹˈQm",               # "zhay-ROHM".
+    "Kerviel": "kɜːvjˈɛl",            # "ker-VYEL".
+    "Kweku": "kwˈɛkuː",               # Akan day-name, "KWEH-koo".
+    "Adoboli": "ˌadəbˈQli",           # "ah-doh-BOH-lee".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1898,6 +1914,8 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWong Ah Fook\b"): "Wong-Ah-Fook",
     re.compile(r"\bLow Peng Yam\b"): "Low-Peng-Yam",
     re.compile(r"\bSeow Poh Leng\b"): "Seow-Poh-Leng",
+    # Barings' account number, read digit by digit as traders said it.
+    re.compile(r"\b88888\b"): "eight eight eight eight eight",
 }
 
 
@@ -2395,7 +2413,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
