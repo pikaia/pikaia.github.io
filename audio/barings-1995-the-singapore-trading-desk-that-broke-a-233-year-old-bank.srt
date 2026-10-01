@@ -1,0 +1,789 @@
+﻿1
+00:00:00,080 --> 00:00:03,735
+Barings, 1995: The Singapore Trading
+
+2
+00:00:03,815 --> 00:00:07,525
+Desk That Broke a 233-Year-Old Bank
+
+3
+00:00:07,525 --> 00:00:11,694
+On the afternoon of Thursday
+the 23rd of February 1995,
+
+4
+00:00:11,774 --> 00:00:16,328
+Nick Leeson told a colleague
+at Barings' office in Singapore
+
+5
+00:00:16,408 --> 00:00:20,425
+that he had to visit his
+wife in hospital, and left.
+
+6
+00:00:20,425 --> 00:00:22,350
+He did not come back.
+
+7
+00:00:22,350 --> 00:00:25,794
+Leeson ran the bank's futures
+business on the Singapore
+
+8
+00:00:25,874 --> 00:00:28,869
+International Monetary
+Exchange, known as SIMEX,
+
+9
+00:00:28,949 --> 00:00:32,649
+and over two and a half years
+he had hidden mounting losses
+
+10
+00:00:32,729 --> 00:00:36,125
+in an account numbered eight
+eight eight eight eight.
+
+11
+00:00:36,125 --> 00:00:38,411
+Three days later Barings,
+
+12
+00:00:38,491 --> 00:00:42,750
+a London bank founded
+in 1762, was insolvent.
+
+13
+00:00:42,750 --> 00:00:47,179
+Barings was founded in
+1762 by Francis Baring,
+
+14
+00:00:47,259 --> 00:00:52,650
+and by 1995 it was the oldest
+merchant bank in Britain.
+
+15
+00:00:52,650 --> 00:00:56,075
+It had come close to failing once before.
+
+16
+00:00:56,075 --> 00:01:01,022
+In 1890, heavy losses on Argentine
+debt threatened its solvency,
+
+17
+00:01:01,102 --> 00:01:05,500
+and a consortium of banks was
+put together to rescue it.
+
+18
+00:01:05,500 --> 00:01:09,775
+A century later it was a
+respected but old-fashioned house,
+
+19
+00:01:09,855 --> 00:01:14,875
+still run from its head office on
+Bishopsgate in the City of London.
+
+20
+00:01:14,875 --> 00:01:20,085
+Barings' futures arm in Singapore,
+Baring Futures (Singapore),
+
+21
+00:01:20,165 --> 00:01:22,725
+had been incorporated in 1986.
+
+22
+00:01:22,725 --> 00:01:25,621
+It was a small unit, and for most of its
+
+23
+00:01:25,701 --> 00:01:29,050
+life it attracted little
+attention in London.
+
+24
+00:01:29,050 --> 00:01:32,715
+Leeson had joined Barings
+in London in 1989 as a
+
+25
+00:01:32,795 --> 00:01:36,772
+clerk in its settlements
+department, the office that
+
+26
+00:01:36,852 --> 00:01:40,675
+processes and records
+trades after they are made.
+
+27
+00:01:40,675 --> 00:01:46,980
+He arrived in Singapore in April 1992 to
+manage the futures operation's paperwork,
+
+28
+00:01:47,060 --> 00:01:50,562
+and after passing the
+Institute of Banking and
+
+29
+00:01:50,642 --> 00:01:55,625
+Finance's futures trading test
+in June he began trading as well.
+
+30
+00:01:55,625 --> 00:02:00,852
+In July 1992 Baring Futures
+(Singapore) started trading on SIMEX,
+
+31
+00:02:00,932 --> 00:02:05,342
+whose trading floor was in
+OUB Centre at Raffles Place,
+
+32
+00:02:05,422 --> 00:02:08,525
+with Leeson as one of its two traders.
+
+33
+00:02:08,525 --> 00:02:12,369
+On the 3rd of July 1992 he
+opened an error account,
+
+34
+00:02:12,449 --> 00:02:15,450
+numbered eight eight eight eight eight.
+
+35
+00:02:15,450 --> 00:02:19,082
+Error accounts are a normal
+part of a trading business,
+
+36
+00:02:19,162 --> 00:02:22,052
+used to park small
+mistakes, such as a trade
+
+37
+00:02:22,132 --> 00:02:25,575
+done at the wrong price,
+until they are sorted out.
+
+38
+00:02:25,575 --> 00:02:28,098
+Leeson used this one to hide the
+
+39
+00:02:28,178 --> 00:02:31,350
+losses on his own unauthorised trading.
+
+40
+00:02:31,350 --> 00:02:35,622
+By the end of September 1992,
+according to the inspectors
+
+41
+00:02:35,702 --> 00:02:39,593
+later appointed by Singapore's
+Minister for Finance,
+
+42
+00:02:39,673 --> 00:02:44,025
+the account held losses of
+8.8 million Singapore dollars.
+
+43
+00:02:44,025 --> 00:02:47,399
+In June 1993 Leeson was made general
+
+44
+00:02:47,479 --> 00:02:51,125
+manager of Baring Futures (Singapore).
+
+45
+00:02:51,125 --> 00:02:55,148
+He was in charge of the front
+office, which did the trading,
+
+46
+00:02:55,228 --> 00:02:59,400
+and also of the back office,
+which processed and recorded it.
+
+47
+00:02:59,400 --> 00:03:01,682
+The person placing the trades was
+
+48
+00:03:01,762 --> 00:03:04,625
+therefore the same person checking them.
+
+49
+00:03:04,625 --> 00:03:09,178
+An internal audit in July and
+August 1994 warned that this was
+
+50
+00:03:09,258 --> 00:03:13,811
+a serious risk, but the bank
+kept Leeson in both roles because
+
+51
+00:03:13,891 --> 00:03:18,300
+of his experience and the
+profits he appeared to be making.
+
+52
+00:03:18,300 --> 00:03:22,650
+Those reported profits had
+made him a star in London.
+
+53
+00:03:22,650 --> 00:03:27,824
+By the end of December 1994, the
+losses hidden in account eight
+
+54
+00:03:27,904 --> 00:03:33,575
+eight eight eight eight had reached
+373.9 million Singapore dollars.
+
+55
+00:03:33,575 --> 00:03:36,930
+In January 1995 a senior auditor found
+
+56
+00:03:37,010 --> 00:03:40,625
+a discrepancy in the Singapore accounts.
+
+57
+00:03:40,625 --> 00:03:44,120
+Leeson explained it with
+a story about a trade with
+
+58
+00:03:44,200 --> 00:03:46,994
+an American firm, Spear, Leeds & Kellogg,
+
+59
+00:03:47,074 --> 00:03:51,000
+and produced a doctored payment
+statement to support it.
+
+60
+00:03:51,000 --> 00:03:54,689
+In the same month, SIMEX
+alerted Barings to the size
+
+61
+00:03:54,769 --> 00:03:58,096
+of its positions in Nikkei
+futures and options,
+
+62
+00:03:58,176 --> 00:04:01,800
+the contracts that track
+Japan's main stock index.
+
+63
+00:04:01,800 --> 00:04:04,906
+Barings' senior management told SIMEX that
+
+64
+00:04:04,986 --> 00:04:08,475
+the bank had enough
+assets to back the trades.
+
+65
+00:04:08,475 --> 00:04:13,393
+Leeson's positions in
+early 1995 depended on the
+
+66
+00:04:13,473 --> 00:04:19,200
+Nikkei 225 index not falling
+below about 19,000 points.
+
+67
+00:04:19,200 --> 00:04:24,198
+At 5.46 in the morning on
+the 17th of January 1995,
+
+68
+00:04:24,278 --> 00:04:27,583
+a powerful earthquake struck Kobe,
+
+69
+00:04:27,663 --> 00:04:30,750
+killing more than 6,400 people.
+
+70
+00:04:30,750 --> 00:04:35,016
+Japanese shares fell, and by the 23rd of
+
+71
+00:04:35,096 --> 00:04:39,225
+January the Nikkei was down to 17,785.
+
+72
+00:04:39,225 --> 00:04:42,517
+Instead of cutting his
+losses, Leeson bought more,
+
+73
+00:04:42,597 --> 00:04:45,025
+hoping the market would bounce back.
+
+74
+00:04:45,025 --> 00:04:48,973
+It kept sliding, and on
+the 23rd of February,
+
+75
+00:04:49,053 --> 00:04:51,659
+when the index touched 17,580,
+
+76
+00:04:51,739 --> 00:04:56,125
+his losses reached 1.4
+billion Singapore dollars.
+
+77
+00:04:56,125 --> 00:05:00,868
+That afternoon, a senior settlements
+clerk on secondment from London
+
+78
+00:05:00,948 --> 00:05:05,700
+noticed the discrepancy in Leeson's
+account and asked him about it.
+
+79
+00:05:05,700 --> 00:05:08,541
+Leeson said he had to go to the hospital,
+
+80
+00:05:08,621 --> 00:05:12,325
+and that night he and his
+wife flew to Kuala Lumpur.
+
+81
+00:05:12,325 --> 00:05:17,325
+At first his colleagues feared he
+had stolen money and disappeared.
+
+82
+00:05:17,325 --> 00:05:19,512
+On the 24th of February they found
+
+83
+00:05:19,592 --> 00:05:22,125
+account eight eight eight eight eight.
+
+84
+00:05:22,125 --> 00:05:26,075
+Barings did not have the
+money to cover the losses.
+
+85
+00:05:26,075 --> 00:05:30,586
+The Bank of England tried to
+arrange a rescue and failed,
+
+86
+00:05:30,666 --> 00:05:36,787
+and on Sunday the 26th of February 1995
+Barings was placed in administration,
+
+87
+00:05:36,867 --> 00:05:40,975
+with total losses of 2.2
+billion Singapore dollars.
+
+88
+00:05:40,975 --> 00:05:43,860
+The next day SIMEX placed Baring Futures
+
+89
+00:05:43,940 --> 00:05:47,350
+(Singapore) under interim
+judicial management.
+
+90
+00:05:47,350 --> 00:05:51,629
+On the 6th of March the
+Dutch group ING completed
+
+91
+00:05:51,709 --> 00:05:55,542
+its takeover of Barings,
+paying a nominal £1
+
+92
+00:05:55,622 --> 00:05:59,625
+and putting in £540
+million to pay creditors.
+
+93
+00:05:59,625 --> 00:06:03,459
+Leeson and his wife went on
+from Kuala Lumpur to Sabah,
+
+94
+00:06:03,539 --> 00:06:06,662
+and on the 1st of March
+they took a flight to
+
+95
+00:06:06,742 --> 00:06:10,300
+Frankfurt by way of Brunei,
+Bangkok and Abu Dhabi.
+
+96
+00:06:10,300 --> 00:06:12,746
+They were detained on arrival at
+
+97
+00:06:12,826 --> 00:06:15,825
+Frankfurt airport on the 2nd of March.
+
+98
+00:06:15,825 --> 00:06:19,796
+Leeson first fought Singapore's
+request to extradite him,
+
+99
+00:06:19,876 --> 00:06:22,426
+asking instead to be sent to Britain,
+
+100
+00:06:22,506 --> 00:06:26,700
+but in October he decided to
+return to Singapore for trial.
+
+101
+00:06:26,700 --> 00:06:31,850
+He was extradited on the
+23rd of November 1995.
+
+102
+00:06:31,850 --> 00:06:37,276
+On the 1st of December he pleaded guilty
+to two charges of fraud and forgery,
+
+103
+00:06:37,356 --> 00:06:41,075
+and was sentenced to six
+and a half years in prison.
+
+104
+00:06:41,075 --> 00:06:44,046
+He was released on the 3rd of July
+
+105
+00:06:44,126 --> 00:06:47,625
+1999 with remission for good behaviour.
+
+106
+00:06:47,625 --> 00:06:51,835
+The collapse was reported around
+the world as a London story,
+
+107
+00:06:51,915 --> 00:06:53,944
+but the trading, the fraud and
+
+108
+00:06:54,024 --> 00:06:57,400
+much of the investigation
+happened in Singapore.
+
+109
+00:06:57,400 --> 00:07:00,676
+In early March the
+Commercial Affairs Department
+
+110
+00:07:00,756 --> 00:07:04,313
+began a fraud investigation,
+and on the 9th of March
+
+111
+00:07:04,393 --> 00:07:06,900
+the Minister for Finance, Richard Hu,
+
+112
+00:07:06,980 --> 00:07:11,525
+appointed two inspectors to look
+into Baring Futures (Singapore).
+
+113
+00:07:11,525 --> 00:07:15,226
+Their report, released on
+the 17th of October 1995,
+
+114
+00:07:15,306 --> 00:07:22,120
+blamed Barings' senior management for failures
+that allowed Leeson's trades to go undetected,
+
+115
+00:07:22,200 --> 00:07:26,425
+and found that SIMEX should
+have audited the firm sooner.
+
+116
+00:07:26,425 --> 00:07:30,795
+In June 1996 the Commercial
+Affairs Department dropped its
+
+117
+00:07:30,875 --> 00:07:36,934
+investigation into four other men, including
+two of Leeson's former supervisors,
+
+118
+00:07:37,014 --> 00:07:40,850
+finding insufficient grounds
+for criminal charges.
+
+119
+00:07:40,850 --> 00:07:44,091
+SIMEX itself made no
+loss from the collapse,
+
+120
+00:07:44,171 --> 00:07:48,775
+and no other financial institution
+in Singapore was affected.
+
+121
+00:07:48,775 --> 00:07:52,751
+Even so, the Futures Trading
+Act was amended with effect
+
+122
+00:07:52,831 --> 00:07:56,879
+from the 1st of April 1995,
+giving the Monetary Authority
+
+123
+00:07:56,959 --> 00:08:00,646
+of Singapore closer oversight
+of futures traders and
+
+124
+00:08:00,726 --> 00:08:04,992
+requiring them to be licensed,
+and further measures followed
+
+125
+00:08:05,072 --> 00:08:09,200
+to strengthen the regulation
+of futures trading on SIMEX.
+
+126
+00:08:09,200 --> 00:08:13,047
+At the time I was on the
+short-term interest rate trading
+
+127
+00:08:13,127 --> 00:08:16,629
+desk at Security Pacific
+National Bank in Singapore,
+
+128
+00:08:16,709 --> 00:08:22,002
+later part of Bank of America, and we
+were trading futures on SIMEX ourselves,
+
+129
+00:08:22,082 --> 00:08:24,975
+so the scandal was the talk of the market.
+
+130
+00:08:24,975 --> 00:08:28,008
+In the foreign exchange and money markets,
+
+131
+00:08:28,088 --> 00:08:31,275
+Barings was not a name
+we came across much.
+
+132
+00:08:31,275 --> 00:08:35,575
+It was known as a top British
+credit, and not much more.
+
+133
+00:08:35,575 --> 00:08:39,639
+When the news broke, it sounded
+like a story you hear every so
+
+134
+00:08:39,719 --> 00:08:44,452
+often in the markets: someone builds
+a reputation as a brilliant trader,
+
+135
+00:08:44,532 --> 00:08:48,275
+and the results turn out to
+come from something illegal.
+
+136
+00:08:48,275 --> 00:08:51,292
+The lesson I took from
+it, and never forgot,
+
+137
+00:08:51,372 --> 00:08:54,750
+is that there is no such
+thing as a star trader.
+
+138
+00:08:54,750 --> 00:08:58,864
+There are people who make money
+from speculation consistently,
+
+139
+00:08:58,944 --> 00:09:01,570
+but they usually do it with a systematic
+
+140
+00:09:01,650 --> 00:09:05,100
+approach to each day's
+trading, not by being stars.
+
+141
+00:09:05,100 --> 00:09:07,125
+Could it happen again?
+
+142
+00:09:07,125 --> 00:09:11,547
+The particular weakness at Barings
+Singapore, one person running
+
+143
+00:09:11,627 --> 00:09:16,200
+both the trading and the settlement,
+is now ruled out in writing.
+
+144
+00:09:16,200 --> 00:09:20,219
+The Monetary Authority of
+Singapore's guidelines on internal
+
+145
+00:09:20,299 --> 00:09:24,727
+controls say a firm should have
+processes that stop any one member
+
+146
+00:09:24,807 --> 00:09:29,236
+of staff from handling an entire
+transaction from start to finish,
+
+147
+00:09:29,316 --> 00:09:33,198
+and they name trade execution
+combined with settlement and
+
+148
+00:09:33,278 --> 00:09:37,650
+reconciliation as an example of
+inadequate separation of duties.
+
+149
+00:09:37,650 --> 00:09:41,225
+Rogue trading has not
+disappeared, however.
+
+150
+00:09:41,225 --> 00:09:46,074
+In January 2008 the French
+bank Société Générale announced
+
+151
+00:09:46,154 --> 00:09:51,682
+losses of €4.9 billion from
+unauthorised trades by Jérôme Kerviel,
+
+152
+00:09:51,762 --> 00:09:56,186
+and in September 2011 the
+Swiss bank UBS lost about 2
+
+153
+00:09:56,266 --> 00:10:01,450
+billion US dollars through trades
+by Kweku Adoboli in London.
+
+154
+00:10:01,450 --> 00:10:05,345
+Both banks survived, but in
+both cases the positions had
+
+155
+00:10:05,425 --> 00:10:09,400
+grown very large before the
+bank's controls caught them.
+
+156
+00:10:09,400 --> 00:10:13,263
+The 1914 run on a Singapore
+bank showed how quickly
+
+157
+00:10:13,343 --> 00:10:17,284
+confidence can leave a bank;
+Barings showed how much
+
+158
+00:10:17,364 --> 00:10:21,075
+damage one unchecked desk
+can do from inside it.
+
+159
+00:10:21,075 --> 00:10:24,903
+Where it fits in the bigger story:
+Barings is usually remembered
+
+160
+00:10:24,983 --> 00:10:28,872
+as the bank that one man broke,
+but the controls that should have
+
+161
+00:10:28,952 --> 00:10:32,596
+stopped him were missing on a
+trading floor at Raffles Place,
+
+162
+00:10:32,676 --> 00:10:36,748
+and Singapore's own inspectors and
+lawmakers did much of the work of
+
+163
+00:10:36,828 --> 00:10:40,675
+explaining what went wrong and
+tightening the rules afterwards.
+
+164
+00:10:40,675 --> 00:10:43,866
+The most useful lesson
+from it is a simple one:
+
+165
+00:10:43,946 --> 00:10:47,485
+a trader whose profits look
+too good to be true is a
+
+166
+00:10:47,565 --> 00:10:50,975
+reason to look harder,
+not a reason to look away.

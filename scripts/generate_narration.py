@@ -1714,7 +1714,6 @@ PRONUNCIATION_OVERRIDES = {
     "Nikkei": "nˈɪkA",                # "NICK-ay".
     "Kobe": "kˈQbA",                  # the city: "KOH-bay", not "KOH-bee".
     "Bishopsgate": "bˈɪʃəpsɡˌAt",
-    "Hu": "hˈuː",                     # Richard Hu, "hoo".
     "Dhabi": "dˈɑːbi",                # Abu Dhabi.
     "Waterhouse": "wˈɔːtəhˌWs",       # Price Waterhouse.
     "Kellogg": "kˈɛlɒɡ",

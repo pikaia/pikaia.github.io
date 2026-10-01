@@ -11,6 +11,45 @@ On the afternoon of Thursday 23 February 1995, Nick Leeson told a colleague at B
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/barings-1995-the-singapore-trading-desk-that-broke-a-233-year-old-bank.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![Smoke and flames rising over the port of Kobe at dawn, with cranes silhouetted against the sky](<https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fire_of_Great_Hanshin_earthquake_Seen_from_Portisland.jpg/1280px-Fire_of_Great_Hanshin_earthquake_Seen_from_Portisland.jpg>)
 
 *Fires burning in Kobe, seen from Port Island, after the earthquake of 17 January 1995. The earthquake set off the market fall that turned Leeson's hidden losses into the collapse of Barings. (Photo: City of Kobe, CC BY 2.1 JP, via Wikimedia Commons)*
@@ -282,5 +321,7 @@ At the time I was on the short-term interest rate trading desk at Security Pacif
 - [File:Images from The Great Hanshin-Awaji Earthquake＝a040.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Images_from_The_Great_Hanshin-Awaji_Earthquake＝a040.jpg>) (gallery)
 - [File:OUB Centre Skyward.JPG, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:OUB_Centre_Skyward.JPG>) (gallery)
 - [File:SGX Centre Two.JPG, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:SGX_Centre_Two.JPG>) (gallery)
+- [File:Raffles Place in front of OUB Centre, Singapore - 20020829.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Raffles_Place_in_front_of_OUB_Centre,_Singapore_-_20020829.jpg>) (video)
+- [File:Evening view of UOB Plaza, OUB Centre and OCBC Centre near the Singapore River - 20010608.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Evening_view_of_UOB_Plaza,_OUB_Centre_and_OCBC_Centre_near_the_Singapore_River_-_20010608.jpg>) (video)- [File:Evening view of UOB Plaza, OUB Centre and OCBC Centre near the Singapore River - 20010608.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Evening_view_of_UOB_Plaza,_OUB_Centre_and_OCBC_Centre_near_the_Singapore_River_-_20010608.jpg>) (video)
 
 [← Back to all posts](/)
