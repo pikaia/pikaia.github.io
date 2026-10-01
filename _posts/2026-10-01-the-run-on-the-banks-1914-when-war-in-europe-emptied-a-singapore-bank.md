@@ -11,6 +11,45 @@ On Tuesday 4 August 1914, the day before news of war in Europe was published in 
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-run-on-the-banks-1914-when-war-in-europe-emptied-a-singapore-bank.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A busy street in Singapore's Chinese quarter in 1914, with rickshaws and pedestrians between rows of shophouses with shuttered upper floors](<https://upload.wikimedia.org/wikipedia/commons/c/c4/Souvenir_of_Singapore%2C_1914_-_Plate_11_-_Chinese_Quarters.jpg>)
 
 *"Chinese Quarters", from a souvenir album of Singapore published in 1914. (Photo: unknown photographer, from Souvenir of Singapore (1914), public domain, via Wikimedia Commons)*
@@ -259,5 +298,8 @@ In 1914, a bank in trouble depended on its community standing behind it, and on 
 - [File:KITLV - 79892 - Kleingrothe, C.J. - Medan - Raffles Place, Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79892_-_Kleingrothe,_C.J._-_Medan_-_Raffles_Place,_Singapore_-_circa_1910.tif>) (gallery)
 - [File:KITLV - 79923 - Kleingrothe, C.J. - Medan - South Bridge Road, Singapore - circa 1910.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_79923_-_Kleingrothe,_C.J._-_Medan_-_South_Bridge_Road,_Singapore_-_circa_1910.tif>) (gallery)
 - [File:Singapore. Linksboven Raffles Place. Rechtsboven Raffles Place. Linksonder Ra, Bestanddeelnr 844 07.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Singapore._Linksboven_Raffles_Place._Rechtsboven_Raffles_Place._Linksonder_Ra,_Bestanddeelnr_844_07.jpg>) (gallery)
+- [File:Skyline of the Central Business District of Singapore with Esplanade Bridge in the evening.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Skyline_of_the_Central_Business_District_of_Singapore_with_Esplanade_Bridge_in_the_evening.jpg>) (video)
+- [File:MASBuilding-Singapore-20090914.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:MASBuilding-Singapore-20090914.jpg>) (video)
+- [File:3003 Tasman Drive.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:3003_Tasman_Drive.jpg>) (video)
 
 [← Back to all posts](/)
