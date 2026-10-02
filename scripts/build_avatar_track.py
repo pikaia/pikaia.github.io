@@ -11,6 +11,11 @@ refuses a mouth file whose duration no longer matches the config.
 Loudness-driven on purpose: it doesn't care which TTS voice made the
 audio, so a later voice change needs no change here. See
 docs/superpowers/specs/2026-10-02-avatar-presenter-design.md.
+
+Shapes (on by default): also writes a per-frame mouth shape - closed
+m/b/p, lip-on-teeth f/v, pursed oo/w/o, wide ee - from Kokoro's own
+phoneme timings (avatar_visemes.py, reads audio/<slug>.timing.json, one
+Kokoro load, ~20 s). --no-shapes skips it (loudness only, version 1).
 """
 
 import argparse
@@ -112,10 +117,12 @@ def blink_schedule(slug, n_frames, fps):
         t += rng.uniform(*BLINK_GAP_S)
 
 
-def build_track(samples, sr, fps, duration_s, slug, source):
+def build_track(samples, sr, fps, duration_s, slug, source, shapes=None):
+    """shapes: (shape string, fallen-back sentence indices) from
+    avatar_visemes.compute_shapes, or None for a loudness-only (v1) file."""
     n_frames = int(duration_s * fps)  # same count watch_video_lib.render() uses
     levels = debounce(quantise(normalise(frame_rms(samples, sr, fps, n_frames))))
-    return {
+    track = {
         "version": MOUTH_FILE_VERSION,
         "fps": fps,
         "frames": n_frames,
@@ -124,6 +131,10 @@ def build_track(samples, sr, fps, duration_s, slug, source):
         "mouth": "".join(str(v) for v in levels),
         "blinks": blink_schedule(slug, n_frames, fps),
     }
+    if shapes is not None:
+        shape, fallback = shapes
+        track.update(version=2, shape=shape, shape_fallback=fallback)
+    return track
 
 
 def main():
@@ -131,12 +142,30 @@ def main():
     ap.add_argument("mp3", help="audio/<slug>.mp3")
     ap.add_argument("--fps", type=int, default=25, help="must match the video config's FPS (default 25)")
     ap.add_argument("--out", help="default: audio/<slug>.avatar.json next to the mp3")
+    ap.add_argument("--no-shapes", action="store_true",
+                    help="loudness only (version 1 file); skips loading Kokoro")
+    ap.add_argument("--voice", default="bm_george", help="the narration's Kokoro voice (default bm_george)")
     args = ap.parse_args()
 
     mp3 = Path(args.mp3)
     out = Path(args.out) if args.out else mouth_path_for_audio(mp3)
-    track = build_track(decode_mono(mp3), SAMPLE_RATE, args.fps, probe_duration(mp3),
-                        mp3.stem, mp3.as_posix())
+    duration = probe_duration(mp3)
+    shapes = None
+    if not args.no_shapes:
+        timing_path = mp3.with_suffix(".timing.json")
+        if not timing_path.exists():
+            sys.exit(f"error: no {timing_path} next to the mp3 - mouth shapes need the narration's "
+                     f"timing.json (written by generate_narration.py); pass --no-shapes for loudness only")
+        from avatar_visemes import compute_shapes, kokoro_synth
+        timing = json.loads(timing_path.read_text(encoding="utf-8"))
+        print(f"Loading Kokoro for mouth shapes ({len(timing)} sentences) ...", file=sys.stderr)
+        synth, vocab = kokoro_synth(args.voice)
+        shapes = compute_shapes(timing, synth, int(duration * args.fps), args.fps, vocab)
+        for i in shapes[1]:
+            print(f"  sentence {i} fell back to loudness-only (its length no longer matches its "
+                  f"phonemes): {timing[i]['text'][:60]!r}", file=sys.stderr)
+    track = build_track(decode_mono(mp3), SAMPLE_RATE, args.fps, duration,
+                        mp3.stem, mp3.as_posix(), shapes)
     out.write_text(json.dumps(track, separators=(",", ":")), encoding="utf-8")
 
     hist = Counter(track["mouth"])
@@ -144,6 +173,10 @@ def main():
     spread = "  ".join(f"{k}:{100 * hist.get(k, 0) / total:.0f}%" for k in "0123")
     print(f"Wrote {out} - {track['frames']} frames ({track['duration_s']}s @ {args.fps}fps), "
           f"{len(track['blinks'])} blinks, mouth levels {spread}")
+    if "shape" in track:
+        sc = Counter(track["shape"])
+        shape_spread = "  ".join(f"{k}:{100 * sc.get(k, 0) / total:.0f}%" for k in "MFUE")
+        print(f"  mouth shapes {shape_spread}; {len(track['shape_fallback'])} sentence(s) fell back")
 
 
 if __name__ == "__main__":

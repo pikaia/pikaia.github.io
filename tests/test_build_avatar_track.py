@@ -77,9 +77,39 @@ def test_cli_end_to_end(tmp_path):
                     "-f", "lavfi", "-i", "sine=frequency=220:sample_rate=16000",
                     "-filter_complex", "[0:a]atrim=0:1[s];[1:a]atrim=0:2[t];[s][t]concat=n=2:v=0:a=1",
                     str(mp3)], check=True)
-    subprocess.run(["python", "scripts/build_avatar_track.py", str(mp3)], check=True)
+    subprocess.run(["python", "scripts/build_avatar_track.py", str(mp3), "--no-shapes"], check=True)
     import json
     data = json.loads((tmp_path / "clip.avatar.json").read_text(encoding="utf-8"))
     assert data["frames"] == len(data["mouth"])
     assert abs(data["duration_s"] - 3.0) < 0.1
     assert data["mouth"][:20] == "0" * 20
+
+
+def test_build_track_with_shapes_is_v2():
+    samples = np.concatenate([np.zeros(SR, np.float32), tone(1.0, 0.4)])
+    shape = "." * 25 + "M" * 25
+    track = bat.build_track(samples, SR, 25, 2.0, "slug", "audio/slug.mp3", shapes=(shape, [3]))
+    assert track["version"] == 2
+    assert track["shape"] == shape and track["shape_fallback"] == [3]
+
+
+def test_build_track_without_shapes_stays_v1():
+    track = bat.build_track(np.zeros(SR, np.float32), SR, 25, 1.0, "s", "audio/s.mp3")
+    assert track["version"] == 1 and "shape" not in track
+
+
+def test_cli_no_shapes_writes_v1(tmp_path):
+    mp3 = tmp_path / "clip.mp3"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=frequency=220:sample_rate=16000:d=1",
+                    str(mp3)], check=True)
+    subprocess.run(["python", "scripts/build_avatar_track.py", str(mp3), "--no-shapes"], check=True)
+    import json
+    assert json.loads((tmp_path / "clip.avatar.json").read_text(encoding="utf-8"))["version"] == 1
+
+
+def test_cli_shapes_without_timing_json_errors(tmp_path):
+    mp3 = tmp_path / "clip.mp3"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "sine=frequency=220:sample_rate=16000:d=1",
+                    str(mp3)], check=True)
+    r = subprocess.run(["python", "scripts/build_avatar_track.py", str(mp3)], capture_output=True, text=True)
+    assert r.returncode != 0 and "timing.json" in r.stderr and "--no-shapes" in r.stderr

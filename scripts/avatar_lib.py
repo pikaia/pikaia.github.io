@@ -19,6 +19,9 @@ PNG_DIR = AVATAR_DIR / "png"
 LAYER_NAMES = ["body", "eyes-open", "eyes-closed", "mouth-0", "mouth-1", "mouth-2", "mouth-3"]
 BLINK_FRAMES = 3
 MOUTH_FILE_VERSION = 1
+# 1 = loudness only; 2 adds a per-frame "shape" string (M F U E or .) from
+# avatar_visemes.py. The renderer reads both.
+MOUTH_FILE_VERSIONS = (1, 2)
 
 CORNERS = {"bottom-right", "bottom-left", "top-right", "top-left"}
 DEFAULTS = {"corner": "bottom-right", "size": 0.20, "margin": 0.03, "fade": 0.3}
@@ -111,12 +114,14 @@ def load_mouth_file(path, fps, total_duration):
     if not path.exists():
         raise FileNotFoundError(f"no mouth file at {path} - {rerun}")
     data = json.loads(path.read_text(encoding="utf-8"))
-    if data.get("version") != MOUTH_FILE_VERSION:
-        raise ValueError(f"{path}: version {data.get('version')} != {MOUTH_FILE_VERSION} - {rerun}")
+    if data.get("version") not in MOUTH_FILE_VERSIONS:
+        raise ValueError(f"{path}: version {data.get('version')} not one of {MOUTH_FILE_VERSIONS} - {rerun}")
     if data["fps"] != fps:
         raise ValueError(f"{path}: fps {data['fps']} != config fps {fps} - {rerun} with --fps {fps}")
     if len(data["mouth"]) != data["frames"]:
         raise ValueError(f"{path}: mouth has {len(data['mouth'])} entries but frames={data['frames']} - {rerun}")
+    if "shape" in data and len(data["shape"]) != data["frames"]:
+        raise ValueError(f"{path}: shape has {len(data['shape'])} entries but frames={data['frames']} - {rerun}")
     if abs(data["duration_s"] - total_duration) > 1.0 / fps:
         raise ValueError(f"{path}: built for {data['duration_s']}s audio but TOTAL_DURATION is "
                          f"{total_duration}s - narration changed since; {rerun}")

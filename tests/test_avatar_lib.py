@@ -123,3 +123,20 @@ def test_load_mouth_file_rejects_length_mismatch(tmp_path):
 def test_video_dims_defaults():
     assert al.video_dims(cfg()) == (1280, 720, 25)
     assert al.video_dims(cfg(WIDTH=1080, HEIGHT=1920, FPS=30)) == (1080, 1920, 30)
+
+
+def test_load_mouth_file_accepts_v2_with_shape(tmp_path):
+    p = _write_track(tmp_path / "x.avatar.json", version=2, shape="." * 250, shape_fallback=[])
+    assert al.load_mouth_file(p, 25, 10.0)["shape"] == "." * 250
+
+
+def test_load_mouth_file_rejects_short_shape(tmp_path):
+    p = _write_track(tmp_path / "x.avatar.json", version=2, shape="." * 249, shape_fallback=[])
+    with pytest.raises(ValueError, match="shape"):
+        al.load_mouth_file(p, 25, 10.0)
+
+
+def test_load_mouth_file_rejects_unknown_version(tmp_path):
+    p = _write_track(tmp_path / "x.avatar.json", version=3)
+    with pytest.raises(ValueError, match="version"):
+        al.load_mouth_file(p, 25, 10.0)
