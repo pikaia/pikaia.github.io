@@ -37,10 +37,21 @@ def load_layers(diameter, png_dir=PNG_DIR):
     return layers
 
 
-def compose_avatar(layers, mouth_level, eyes_closed):
+def mouth_layer_for(level, shape):
+    """Silence always closes the mouth; otherwise a shaped mouth (M F U E)
+    beats the loudness level; otherwise the level picks the opening."""
+    if level == 0:
+        return "mouth-0"
+    if shape in ("M", "F", "U", "E"):
+        return f"mouth-{shape}"
+    return f"mouth-{level}"
+
+
+def compose_avatar(layers, mouth, eyes_closed):
+    """mouth: a loudness level (0-3) or a layer name such as 'mouth-F'."""
     img = layers["body"].copy()
     img.alpha_composite(layers["eyes-closed" if eyes_closed else "eyes-open"])
-    img.alpha_composite(layers[f"mouth-{mouth_level}"])
+    img.alpha_composite(layers[mouth if isinstance(mouth, str) else f"mouth-{mouth}"])
     return img
 
 
@@ -70,6 +81,7 @@ def render_track(cfg, out_path, png_dir=PNG_DIR):
     layers = load_layers(d, png_dir)
     blinking = blink_frame_set(track["blinks"])
     mouth = track["mouth"]
+    shape = track.get("shape")
     total_frames = int(cfg.TOTAL_DURATION * fps)  # same count watch_video_lib.render() uses
     blank = bytes(d * d * 4)
     cache = {}
@@ -86,7 +98,8 @@ def render_track(cfg, out_path, png_dir=PNG_DIR):
             if a <= 0.0:
                 proc.stdin.write(blank)
                 continue
-            key = (int(mouth[min(i, len(mouth) - 1)]), i in blinking)
+            j = min(i, len(mouth) - 1)
+            key = (mouth_layer_for(int(mouth[j]), shape[j] if shape else "."), i in blinking)
             if key not in cache:
                 cache[key] = compose_avatar(layers, *key)
             proc.stdin.write(with_alpha(cache[key], a).tobytes())

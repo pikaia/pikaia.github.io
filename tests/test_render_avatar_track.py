@@ -9,9 +9,8 @@ import render_avatar_track as rat
 
 
 def solid_layers(tmp_path, d=64):
-    colours = {"body": (0, 0, 255, 255), "eyes-open": (0, 0, 0, 0), "eyes-closed": (0, 0, 0, 0),
-               "mouth-0": (0, 0, 0, 0), "mouth-1": (0, 0, 0, 0), "mouth-2": (0, 0, 0, 0),
-               "mouth-3": (255, 0, 0, 255)}
+    colours = {name: (0, 0, 0, 0) for name in al.LAYER_NAMES}
+    colours.update({"body": (0, 0, 255, 255), "mouth-3": (255, 0, 0, 255), "mouth-F": (0, 255, 0, 255)})
     for name, c in colours.items():
         im = Image.new("RGBA", (d, d), (0, 0, 0, 0))
         if c[3]:
@@ -83,3 +82,52 @@ def test_render_track_skips_without_avatar(tmp_path):
 def test_default_track_path():
     from pathlib import Path
     assert rat.default_track_path(Path("scripts/video-configs/foo.py")) == al.REPO_ROOT / "preview-motion/foo-avatar.mov"
+
+
+def test_mouth_layer_for():
+    assert rat.mouth_layer_for(0, "F") == "mouth-0"       # silence always closes
+    assert rat.mouth_layer_for(2, "F") == "mouth-F"
+    assert rat.mouth_layer_for(2, ".") == "mouth-2"
+    assert rat.mouth_layer_for(3, "M") == "mouth-M"
+
+
+def test_compose_accepts_layer_name(tmp_path):
+    layers = rat.load_layers(32, solid_layers(tmp_path))
+    assert rat.compose_avatar(layers, "mouth-F", False).getpixel((16, 20)) == (0, 255, 0, 255)
+
+
+def _track_cfg(tmp_path, **track_over):
+    timing = tmp_path / "t.timing.json"
+    track = {"version": 1, "fps": 25, "frames": 50, "duration_s": 2.0, "source": "x",
+             "mouth": "3" * 50, "blinks": []}
+    track.update(track_over)
+    (tmp_path / "t.avatar.json").write_text(json.dumps(track), encoding="utf-8")
+    return types.SimpleNamespace(TOTAL_DURATION=2.0, TIMING_JSON=str(timing), WIDTH=320, HEIGHT=180,
+                                 AVATAR={"ranges": [(0, None)], "size": 0.4, "margin": 0.05, "fade": 0.0})
+
+
+def _frame_rgb(path, n, tmp_path):
+    f = tmp_path / f"f{n}.png"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(path), "-vf", f"select=eq(n\\,{n})",
+                    "-frames:v", "1", str(f)], check=True)
+    return Image.open(f).convert("RGBA").getpixel((36, 45))      # inside the mouth box at 72 px
+
+
+def test_render_v2_track_uses_shapes(tmp_path):
+    png = tmp_path / "png"
+    png.mkdir()
+    solid_layers(png)
+    cfg = _track_cfg(tmp_path, version=2, shape="F" * 25 + "." * 25, shape_fallback=[])
+    out = tmp_path / "a.mov"
+    rat.render_track(cfg, out, png)
+    assert _frame_rgb(out, 10, tmp_path)[:3] == (0, 255, 0)      # shape F wins over level 3
+    assert _frame_rgb(out, 40, tmp_path)[:3] == (255, 0, 0)      # no shape -> level 3
+
+
+def test_render_v1_track_uses_levels_only(tmp_path):
+    png = tmp_path / "png"
+    png.mkdir()
+    solid_layers(png)
+    out = tmp_path / "a.mov"
+    rat.render_track(_track_cfg(tmp_path), out, png)
+    assert _frame_rgb(out, 10, tmp_path)[:3] == (255, 0, 0)

@@ -15,8 +15,10 @@ SVG_PATH = AVATAR_DIR / "avatar.svg"
 PNG_DIR = AVATAR_DIR / "png"
 
 # One PNG per name, all the same square canvas, stacked
-# body -> eyes-open|eyes-closed -> mouth-N.
-LAYER_NAMES = ["body", "eyes-open", "eyes-closed", "mouth-0", "mouth-1", "mouth-2", "mouth-3"]
+# body -> eyes-open|eyes-closed -> one mouth (mouth-0..3 by loudness, or a
+# shaped mouth-M/F/U/E from avatar_visemes.py).
+LAYER_NAMES = ["body", "eyes-open", "eyes-closed", "mouth-0", "mouth-1", "mouth-2", "mouth-3",
+               "mouth-M", "mouth-F", "mouth-U", "mouth-E"]
 BLINK_FRAMES = 3
 MOUTH_FILE_VERSION = 1
 # 1 = loudness only; 2 adds a per-frame "shape" string (M F U E or .) from
