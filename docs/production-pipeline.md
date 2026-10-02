@@ -1741,15 +1741,21 @@ URL lives in the profile bio), the narration disclosure, the image
 credits and the hashtags. Section 9 warns if it runs over TikTok's
 4,000-character limit; trim the Images lines if so.
 
-**Settings, every upload:**
-- Visibility: **Everyone**
-- **AI-generated content label: on.** The narration is a synthetic voice
-  (and the avatar, when a Short gets one, is generated artwork). TikTok
-  asks creators to label AI-generated content; leaving it on is the safe
-  default and doesn't limit reach for a disclosed, non-deceptive video.
-- Allow comments: on. Duet/Stitch: your choice (off keeps the video
-  intact).
-- Cover: pick a frame showing the title slide or a strong image.
+**Settings, every upload** (TikTok Studio web labels, confirmed on the
+Barings Short, 2026-10-02):
+- When to post: **Now**. Who can see this post: **Everyone**.
+- High-quality uploads: **on** (the default from Web Studio).
+- Allow users to: **Comment** on. **Reuse of content** (TikTok's combined
+  Duet/Stitch switch) on - it can help reach; turn it off only if you'd
+  rather nobody remixes the video.
+- Disclose post content: **off** - that switch is for paid brand/product
+  promotion, which these aren't.
+- **AI-generated content: on.** The narration is a synthetic voice (and
+  the avatar, when a Short gets one, is generated artwork); TikTok asks
+  creators to label AI-generated content.
+- Audience control: **off**.
+- Cover: "Edit cover" on the thumbnail - pick the title slide or a
+  strong image.
 
 **No URL wiring needed.** The post links to YouTube only (section 11);
 TikTok isn't linked from the blog.
