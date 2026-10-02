@@ -334,6 +334,14 @@ def load_video_config(config_path: Path):
     return module
 
 
+def avatar_disclosure(main_cfg) -> str | None:
+    """Description line for a main video with the avatar overlay (its
+    config sets AVATAR). The voice is already disclosed by the narration
+    line; this covers the on-screen presenter."""
+    if main_cfg is None or getattr(main_cfg, "AVATAR", None) is None:
+        return None
+    return "Presenter: an illustrated avatar of the author, animated locally from the narration audio."
+
 def images_used_in_order(config_path: Path | None) -> tuple[list[str] | None, dict[str, str]]:
     """(ordered image URLs, {url: credit}). The URL list is None (not an
     empty list) when no config was given or the path doesn't exist yet -
@@ -612,6 +620,9 @@ def main() -> None:
     out_lines.append(f"Full story: {short_url}")
     out_lines.append("")
     out_lines.append(narration_line)
+    avatar_line = avatar_disclosure(load_video_config(main_config_path) if main_config_path else None)
+    if avatar_line:
+        out_lines.append(avatar_line)
     out_lines.append("")
     main_credit_lines = build_credit_lines(main_images, captions, main_credits, existing_main_url)
     if main_images is not None:

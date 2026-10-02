@@ -88,6 +88,17 @@ exception to that convention. See
 `docs/superpowers/specs/2026-08-20-route-walk-animation-design.md` for the full design,
 and `scripts/render_route_clip.py` for the matching video-export renderer.
 
+## Avatar presenter
+
+An optional lip-synced cartoon of Chris in a corner bubble over the main YouTube
+video, rendered entirely locally (pipeline sections 1.5, 6a, 6b; turned on per post
+by an `AVATAR` dict in the main video config). The artwork is a layered SVG,
+`assets/avatar/avatar.svg`; `scripts/build_avatar.py` rasterises it into
+`assets/avatar/png/*.png`, which **are committed** — another deliberate exception to
+the no-binaries rule, like the OSM tiles. The reference photos it was drawn from stay
+in `scratch/` and are never committed. See
+`docs/superpowers/specs/2026-10-02-avatar-presenter-design.md`.
+
 ## Python linting
 
 The pipeline scripts (`scripts/`, `scripts/video-configs/`) are linted with **ruff**
@@ -97,6 +108,10 @@ any script change — it must pass clean. The rule set is a bug-catching net onl
 enforced, so match the surrounding code's style by reading it. Keep the inline
 `# noqa: E402` on the `sys.path.insert(...)`-then-import pattern in the render/config
 helpers.
+
+Pipeline tests live in `tests/` (pytest): run `python -m pytest tests -v` alongside
+`ruff check .` before committing script changes. Cheap automated tests are preferred —
+add them for new script logic.
 
 ## Git
 

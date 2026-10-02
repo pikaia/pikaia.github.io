@@ -23,11 +23,13 @@ The rest maps 1:1 to this doc's own section numbers:
 
 ```
 1. Generate narration audio (Kokoro TTS)         -- section 1   [Manual]
+1.5 (Opt.) Build the avatar mouth track          -- section 1.5 [Manual]
 2. Insert the Listen widget                      -- section 2   [Manual]
 3. Push + publish early, then video configs      -- section 3   [Claude]
 4. Generate the Watch widget from that config     -- section 4   [Manual]
 5. Check smoothness + review the gap report      -- section 5   [Manual]
 6. Render the main video                         -- section 6   [Manual]
+6a/6b (Opt.) Avatar track + overlay              -- section 6a  [Manual]
 7. Render the YouTube Short                      -- section 7   [Manual]
 8. Verify both files                             -- section 8   [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
@@ -359,6 +361,35 @@ Example:
 
 ---
 
+### 1.5 Build the avatar mouth track (optional)
+
+Only for a post whose main video config sets `AVATAR` (section 3; the
+avatar presenter — see
+`docs/superpowers/specs/2026-10-02-avatar-presenter-design.md`). Reads
+the finished narration and writes `audio/<slug>.avatar.json`: one mouth
+level (0 closed .. 3 wide) per video frame from the audio's loudness,
+plus blink frames seeded by the slug (identical on every rerun). Takes
+about a second. Commit the `.avatar.json` with the audio in section 12.
+
+**Re-run it whenever the mp3 changes** (a late pronunciation fix, a
+`--no-cache` resynthesis): step 6a compares the file's duration with the
+config's `TOTAL_DURATION` and refuses a stale one, naming this step.
+
+```
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/<slug>.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+```
+
+The summary line prints the level spread (Barings, for reference:
+`0:39%  1:17%  2:38%  3:7%`). A spread wildly different from that on a
+normal narration is worth a look before rendering.
+
+---
+
 ## 2. Insert the Listen widget
 
 ```
@@ -468,6 +499,19 @@ WIDTH, HEIGHT, FPS = 1280, 720, 25
 # say. scripts/stage_youtube_text.py uses these in the YouTube
 # description instead of flagging the image [REVIEW CREDIT].
 CREDITS = {"CHART": "Chart by Lesser Known Singapore, data: <source>"}
+
+# Optional. The avatar presenter (sections 1.5, 6a, 6b) - a lip-synced
+# corner bubble. Leave it out and those steps skip themselves.
+AVATAR = {
+    "ranges": [(0, 30), (-30, None)],  # seconds; negative = from the end, None = to the end
+    "corner": "bottom-right",          # bottom-right | bottom-left | top-right | top-left
+    "size": 0.20,                       # bubble diameter, fraction of frame height
+    "margin": 0.03,                     # gap to frame edges, fraction of frame height
+    "fade": 0.3,                        # fade in/out seconds at each range edge
+}
+# Only "ranges" is required. Phase 1 (the test) is the bookends above;
+# Phase 2 would be "ranges": [(0, None)] - the whole video. Ranges that
+# run off the video, are empty, or overlap are an error, not a clamp.
 ```
 
 `pan` values here are `(x, y)` floats in 0-1 (fraction of image width/
@@ -1267,6 +1311,49 @@ scripts and gap reports that produced it.
 
 ---
 
+### 6a. Render the avatar track (optional)
+
+Only when the main config sets `AVATAR`; otherwise it prints "skipped"
+and exits. Stacks the avatar's PNG layers (`assets/avatar/png/`) per
+frame from `audio/<slug>.avatar.json` (section 1.5) into
+`preview-motion/<slug>-avatar.mov` — a small transparent (qtrle ARGB)
+video the full length of the main one, transparent outside the ranges,
+fades baked in. About **1 second** for an 11-minute video, tiny memory,
+safe to run from Claude's own tool.
+
+```
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/<slug>.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+```
+
+### 6b. Overlay the avatar (optional)
+
+Lays the 6a track over the finished main video in one ffmpeg pass and
+writes a **new** file, `preview-motion/<slug>-avatar.mp4`; the plain
+`<slug>.mp4` is never touched (it refuses `--out` = `--in`), so both are
+there to compare. Audio is copied; video re-encoded with the same
+settings as section 6. About **1.5 minutes** for an 11-minute video.
+
+```
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/<slug>.py --in preview-motion/<slug>.mp4 --out preview-motion/<slug>-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/<slug>.log
+```
+
+**Order:** any route-walk clip splices go into `<slug>.mp4` first; the
+avatar overlay is always the last video step. **Upload
+`<slug>-avatar.mp4`, not `<slug>.mp4`, when it exists**, and run
+section 8 against it.
+
+---
+
 ## 7. Render the YouTube Short
 
 **[Manual]** — the `-short.py` config should already exist from section
@@ -1331,6 +1418,12 @@ Tan Kim Seng post (2026-09-16) went unverified — `validate_short_config()`
 spot-check still catches anything that isn't that one bug (wrong image,
 stale timing, off-by-one), and only running it against the main config
 every time means the Short never actually gets looked at.
+
+**Avatar posts:** verify `preview-motion/<slug>-avatar.mp4` (pass it
+via `--video` to `--spot-frame`), and also pull spot frames just inside
+and just outside each `AVATAR` range edge — the bubble should be faint
+mid-fade, solid inside a range, absent outside. Its frame count must
+equal the plain `<slug>.mp4`'s.
 
 Don't trust that a render "looks done" — verify. `--verify-frames`
 (added 2026-09-16, same day as the bug above, so 8.1 stops depending on
@@ -1893,6 +1986,14 @@ after the scheduled date, `publish-early-reset.sh <slug>`.
 | Per-post video config (main) | `scripts/video-configs/<slug>.py` |
 | Per-post video config (Short) | `scripts/video-configs/<slug>-short.py` |
 | Route-walk clip renderer | `scripts/render_route_clip.py` |
+| Avatar: shared helpers (AVATAR config, ranges, mouth-file checks) | `scripts/avatar_lib.py` |
+| Avatar: SVG -> PNG layers (re-run only when the SVG changes) | `scripts/build_avatar.py` |
+| Avatar: mouth/blink track (section 1.5) | `scripts/build_avatar_track.py` |
+| Avatar: transparent bubble track (section 6a) | `scripts/render_avatar_track.py` |
+| Avatar: overlay onto the main video (section 6b) | `scripts/overlay_avatar.py` |
+| Avatar artwork (SVG source + committed PNG layers) | `assets/avatar/avatar.svg`, `assets/avatar/png/` |
+| Avatar mouth track (tracked) | `audio/<slug>.avatar.json` |
+| Pipeline tests (`python -m pytest tests -v`) | `tests/` |
 | YouTube upload text stager | `scripts/stage_youtube_text.py` |
 | Publish a post today (permanent; moves the date) | `scripts/publish-now.sh` |
 | Publish a post early, keeping its scheduled date/URL (reversible) | `scripts/publish-early.sh` + `scripts/publish-early-reset.sh` |
