@@ -69,3 +69,23 @@ Images (personal photography and Wikimedia Commons and NewspaperSG):
 - unknown photographer, from Souvenir of Singapore (1914
 - Malaya Tribune, via NewspaperSG, National Library Board Singapore, public domain
 - New York Public Library, public domain, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Caption:
+The Run on the Banks, 1914: When War in Europe Emptied a Singapore Bank
+
+On Tuesday 4 August 1914, the day before news of war in Europe was published in Singapore, depositors began to rush the Chinese Commercial Bank on Kling Street. By the next evening they had taken out more than $300,000, and the bank closed its doors. It would stay shut for eight weeks, and the story of how it reopened says a good deal about how a bank could be saved before deposit insurance existed.
+
+Full story: link in bio
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+Images (personal photography and Wikimedia Commons and NewspaperSG):
+- unknown photographer, from Souvenir of Singapore (1914
+- Malaya Tribune, via NewspaperSG, National Library Board Singapore, public domain
+- New York Public Library, public domain, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok

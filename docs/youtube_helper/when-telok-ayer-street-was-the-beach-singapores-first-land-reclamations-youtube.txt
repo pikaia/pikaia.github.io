@@ -80,3 +80,23 @@ Images (Wikimedia Commons; maps by Lesser Known Singapore):
 - unknown photographer, KITLV/Leiden University Library, public domain, via Wikimedia Commons
 - Lambert & Co., KITLV/Leiden University Library, public domain, via Wikimedia Commons
 - Maps by Lesser Known Singapore; map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Caption:
+When Telok Ayer Street Was the Beach: Singapore's First Land Reclamations
+
+When the Thian Hock Keng temple was built on Telok Ayer Street between 1839 and 1842, it stood on the beach. Sailors landing from China came up from the water to give thanks to Mazu, the goddess of the sea, for a safe crossing. By the end of the century it was four streets from the sea, and today the water is further away still. The land in front of it was made by the colonial government, which levelled hills, built seawalls and filled in the bay.
+
+Full story: link in bio
+
+Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+
+Images (Wikimedia Commons; maps by Lesser Known Singapore):
+- unknown photographer, KITLV/Leiden University Library, public domain, via Wikimedia Commons
+- Lambert & Co., KITLV/Leiden University Library, public domain, via Wikimedia Commons
+- Maps by Lesser Known Singapore; map data © OpenStreetMap contributors
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
