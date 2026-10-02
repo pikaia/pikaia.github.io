@@ -32,4 +32,4 @@ TIMING_JSON = "audio/john-crawfurd-the-diplomat-scholar-who-secured-singapores-g
 BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
+CAPTION_Y_FRAC = 0.70

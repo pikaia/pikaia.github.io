@@ -33,4 +33,4 @@ TIMING_JSON = "audio/singapores-first-election-1948-22000-voters-in-a-city-of-94
 BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
+CAPTION_Y_FRAC = 0.70

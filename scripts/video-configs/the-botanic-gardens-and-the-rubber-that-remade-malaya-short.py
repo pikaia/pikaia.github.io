@@ -34,4 +34,4 @@ TIMING_JSON = "audio/the-botanic-gardens-and-the-rubber-that-remade-malaya.timin
 BURN_CAPTIONS = True
 CAPTION_FONT_RATIO = 0.032
 CAPTION_MAX_WIDTH_FRAC = 0.86
-CAPTION_Y_FRAC = 0.80
+CAPTION_Y_FRAC = 0.70

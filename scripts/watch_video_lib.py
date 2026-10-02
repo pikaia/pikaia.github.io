@@ -100,12 +100,15 @@ USER_AGENT = "pikaia-blog-tool/1.0 (https://pikaia.github.io; chriskslee@gmail.c
 
 # Burned captions now only appear on Shorts (1080x1920), so these are
 # tuned for that frame: ~38px text, wrapping across most of the width,
-# sitting low. Small white text with a thin dark outline and no box - the
-# old solid rounded-rectangle read as far too heavy (matched against
-# YouTube's own low-key caption overlay).
+# sitting in the lower third. Small white text with a thin dark outline and
+# no box - the old solid rounded-rectangle read as far too heavy (matched
+# against YouTube's own low-key caption overlay). Centred at 70% height
+# (was 80% until 2026-10-02) so even a three-line caption ends above the
+# bottom ~22% that TikTok's caption/username overlay and YouTube Shorts'
+# title row cover (tests/test_caption_safe_zone.py).
 DEFAULT_CAPTION_FONT_RATIO = 0.020
 DEFAULT_CAPTION_MAX_WIDTH_FRAC = 0.88
-DEFAULT_CAPTION_Y_FRAC = 0.80
+DEFAULT_CAPTION_Y_FRAC = 0.70
 
 # Since 2026-09, narration captions are NOT burned into the exported
 # video - YouTube shows the uploaded .srt as a toggleable caption track
