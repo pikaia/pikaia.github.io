@@ -19,11 +19,24 @@ services, no hosted avatar/lip-sync APIs, no cloud rendering.
 |---|---|---|
 | **1 (this spec)** | Corner bubble during intro + outro ranges only, main landscape video only, `bm_george` voice | — |
 | 2 | Same bubble for the whole video (`"ranges": [(0, None)]`) | Phase 1 retention improves |
-| Later, separate projects | Local voice clone of Chris (e.g. F5-TTS/XTTS); Shorts; in-post Watch widget (JS, reusing the same SVG + mouth file); phoneme-shaped mouths; expressions | Each on its own merits |
+| Later, separate projects | Local voice clone of Chris (see voice-clone note below); Shorts; in-post Watch widget (JS, reusing the same SVG + mouth file); phoneme-shaped mouths; expressions | Each on its own merits |
 
 Phase 1 design choices are made so the later phases don't need rework: the
 mouth file is voice-agnostic (amplitude-based), and the SVG + JSON pair is
 renderer-agnostic (Python now, browser later).
+
+**Voice-clone note (2026-10-02):** XTTS-v2 and F5-TTS are **excluded** —
+both ship pretrained weights under non-commercial licences (Coqui Public
+Model License; CC-BY-NC), incompatible with a monetised channel, and Coqui
+no longer exists to sell a commercial licence. Candidates instead, both
+MIT and CPU-runnable on the current laptop (i5-1240P, 16 GB, no NVIDIA
+GPU): **OpenVoice v2** as a voice-conversion pass over Kokoro output
+(keeps the whole pronunciation-override pipeline, but mostly transfers
+timbre — accent/rhythm stay Kokoro's), or **Chatterbox** zero-shot cloning
+(carries Chris's accent, but loses Kokoro phoneme overrides and is slow on
+CPU). Training a model (e.g. RVC) needs a GPU, which breaks the local-only
+rule. Re-verify licences at the time; decide by an ear test of ~30 s of
+Chris's voice through both.
 
 ## Out of scope (Phase 1)
 
