@@ -334,6 +334,14 @@ def load_video_config(config_path: Path):
     return module
 
 
+def optional_config(config_path: Path | None):
+    """The config module, or None when no path was given or the config
+    isn't written yet (the stager runs before a video exists, too)."""
+    if config_path is None or not Path(config_path).exists():
+        return None
+    return load_video_config(Path(config_path))
+
+
 def avatar_disclosure(main_cfg) -> str | None:
     """Description line for a main video with the avatar overlay (its
     config sets AVATAR). The voice is already disclosed by the narration
@@ -620,7 +628,7 @@ def main() -> None:
     out_lines.append(f"Full story: {short_url}")
     out_lines.append("")
     out_lines.append(narration_line)
-    avatar_line = avatar_disclosure(load_video_config(main_config_path) if main_config_path else None)
+    avatar_line = avatar_disclosure(optional_config(main_config_path))
     if avatar_line:
         out_lines.append(avatar_line)
     out_lines.append("")

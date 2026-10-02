@@ -81,3 +81,23 @@ def test_overlay_skips_without_avatar(tmp_path):
     c = cfg()
     del c.AVATAR
     assert oa.overlay(c, tmp_path / "m.mp4", tmp_path / "a.mov", tmp_path / "o.mp4") is False
+
+
+def test_verify_same_frames_rejects_mismatch(tmp_path):
+    a, b = tmp_path / "a.mp4", tmp_path / "b.mp4"
+    make_main(a)
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(a), "-t", "1", str(b)], check=True)
+    oa.verify_same_frames(a, a)
+    with pytest.raises(RuntimeError, match="frame count"):
+        oa.verify_same_frames(a, b)
+
+
+def test_overlay_rejects_track_built_for_other_size(tmp_path):
+    main, track, out = tmp_path / "m.mp4", tmp_path / "a.mov", tmp_path / "o.mp4"
+    make_main(main)
+    make_track(track)                      # 72x72
+    c = cfg()
+    c.AVATAR = {**c.AVATAR, "size": 0.3}   # now expects 54x54
+    with pytest.raises(ValueError, match="step 6a"):
+        oa.overlay(c, main, track, out)
+    assert not out.exists()

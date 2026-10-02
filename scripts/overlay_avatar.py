@@ -13,6 +13,7 @@ is skipped (exit 0).
 """
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -31,6 +32,30 @@ def build_overlay_cmd(in_path, track_path, out_path, x, y):
             str(out_path)]
 
 
+def frame_count(path):
+    out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames",
+                          "-show_entries", "stream=nb_read_frames", "-of", "json", str(path)],
+                         check=True, capture_output=True, text=True).stdout
+    return int(json.loads(out)["streams"][0]["nb_read_frames"])
+
+
+def track_width(path):
+    out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                          "-show_entries", "stream=width", "-of", "csv=p=0", str(path)],
+                         check=True, capture_output=True, text=True).stdout
+    return int(out.strip())
+
+
+def verify_same_frames(in_path, out_path):
+    """Full-decode frame count of the overlaid video must equal the plain
+    one's - the two-input re-encode is where dropped/duplicated frames
+    would come from (see docs/production-pipeline.md section 8)."""
+    a, b = frame_count(in_path), frame_count(out_path)
+    if a != b:
+        raise RuntimeError(f"frame count mismatch: {in_path} has {a}, {out_path} has {b}")
+    return a
+
+
 def overlay(cfg, in_path, track_path, out_path):
     settings = avatar_settings(cfg)
     if settings is None:
@@ -43,9 +68,13 @@ def overlay(cfg, in_path, track_path, out_path):
         raise FileNotFoundError(f"no avatar track at {track_path} - run step 6a "
                                 f"(python scripts/render_avatar_track.py --config ...) first")
     out_w, out_h, _ = video_dims(cfg)
-    _, x, y = bubble_geometry(settings, out_w, out_h)
+    d, x, y = bubble_geometry(settings, out_w, out_h)
+    if track_width(track_path) != d:
+        raise ValueError(f"{track_path} is {track_width(track_path)}px wide but AVATAR now gives a "
+                         f"{d}px bubble - the config changed since; re-run step 6a")
     subprocess.run(build_overlay_cmd(in_path, track_path, out_path, x, y), check=True)
-    print(f"Wrote {out_path}")
+    n = verify_same_frames(in_path, out_path)
+    print(f"Wrote {out_path} - {n} frames, same as {in_path}")
     return True
 
 

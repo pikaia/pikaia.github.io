@@ -1337,6 +1337,10 @@ writes a **new** file, `preview-motion/<slug>-avatar.mp4`; the plain
 `<slug>.mp4` is never touched (it refuses `--out` = `--in`), so both are
 there to compare. Audio is copied; video re-encoded with the same
 settings as section 6. About **1.5 minutes** for an 11-minute video.
+It then full-decodes both files and **fails if their frame counts
+differ** (the frame-count check section 8.1's `--verify-frames` can't do
+for this file), and it refuses a 6a track whose size no longer matches
+the config's `AVATAR` (re-run 6a after changing `size`).
 
 ```
 { echo; date; echo "=== 6b. Overlay the avatar ==="
@@ -1349,8 +1353,8 @@ settings as section 6. About **1.5 minutes** for an 11-minute video.
 
 **Order:** any route-walk clip splices go into `<slug>.mp4` first; the
 avatar overlay is always the last video step. **Upload
-`<slug>-avatar.mp4`, not `<slug>.mp4`, when it exists**, and run
-section 8 against it.
+`<slug>-avatar.mp4`, not `<slug>.mp4`, when it exists** (section 8 notes
+what to check on it).
 
 ---
 
@@ -1419,11 +1423,12 @@ spot-check still catches anything that isn't that one bug (wrong image,
 stale timing, off-by-one), and only running it against the main config
 every time means the Short never actually gets looked at.
 
-**Avatar posts:** verify `preview-motion/<slug>-avatar.mp4` (pass it
+**Avatar posts:** spot-check `preview-motion/<slug>-avatar.mp4` (pass it
 via `--video` to `--spot-frame`), and also pull spot frames just inside
 and just outside each `AVATAR` range edge — the bubble should be faint
-mid-fade, solid inside a range, absent outside. Its frame count must
-equal the plain `<slug>.mp4`'s.
+mid-fade, solid inside a range, absent outside. `--verify-frames` only
+reads the plain `<slug>.mp4`; the avatar file's frame-count check is
+built into 6b (it prints `- N frames, same as ...` on success).
 
 Don't trust that a render "looks done" — verify. `--verify-frames`
 (added 2026-09-16, same day as the bug above, so 8.1 stops depending on
