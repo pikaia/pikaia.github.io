@@ -13,6 +13,12 @@ import math
 
 UNIT_S = 0.025  # one pred_dur unit = 600 samples at 24 kHz
 INTEGRITY_TOL_S = 0.001
+# Show each shape one frame before its sound: lips close before an "m" is
+# heard. Measured 2026-10-02 against synthesized audio, raw-duration sound
+# times sit 0-50 ms after the real onset of a voiced sound (Kokoro's own
+# word timestamps shift a further 75 ms earlier, too early), so 40 ms lead
+# lands within ~10 ms of the onset.
+SHAPE_LEAD_S = 0.04
 
 SHAPE_OF = {
     **dict.fromkeys("mbp", "M"),        # lips closed
@@ -68,12 +74,13 @@ def frame_shapes(spans, n_frames, fps):
     return "".join(out)
 
 
-def compute_shapes(timing, synth, n_frames, fps, vocab=None):
+def compute_shapes(timing, synth, n_frames, fps, vocab=None, lead_s=SHAPE_LEAD_S):
     """(shape string, fallen-back sentence indices). timing is timing.json's
     list of {text, offset_s, duration_s}; synth(text) returns one
     (phonemes, pred_dur) per Kokoro chunk. A sentence whose durations
     don't add up to its real length, or don't pair with its phonemes,
-    gets no shapes (the mouth falls back to loudness there)."""
+    gets no shapes (the mouth falls back to loudness there). Every shape
+    shows lead_s early (see SHAPE_LEAD_S)."""
     spans, fallback = [], []
     for idx, sent in enumerate(timing):
         results = synth(sent["text"])
@@ -90,4 +97,51 @@ def compute_shapes(timing, synth, n_frames, fps, vocab=None):
             fallback.append(idx)
             continue
         spans += sent_spans
+    # Shift earlier by lead_s; a shape in the first lead_s of the audio
+    # starts at 0 but keeps its full length rather than vanishing.
+    spans = [(max(0.0, t0 - lead_s), max(0.0, t0 - lead_s) + (t1 - t0), shape) for t0, t1, shape in spans]
     return frame_shapes(spans, n_frames, fps), fallback
+
+
+def kokoro_synth(voice="bm_george"):
+    """(synth, vocab) for compute_shapes. Loads Kokoro once through
+    generate_narration's own pipeline builder (same pronunciation
+    overrides), then swaps *this pipeline's* model.forward_with_tokens
+    for a durations-only copy of Kokoro 0.9.4's: the same steps up to
+    pred_dur, minus the audio decoder. Identical pred_dur, a fraction of
+    the time (Barings' 68 sentences: ~8 s). Returns silent audio of the
+    right length so the pipeline's own bookkeeping is unchanged."""
+    import sys
+    from pathlib import Path
+
+    import torch
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import generate_narration as gn
+
+    pipeline = gn._build_pipeline(gn._lang_code_for(voice))
+    model = pipeline.model
+
+    def durations_only(input_ids, ref_s, speed=1):
+        input_lengths = torch.full((input_ids.shape[0],), input_ids.shape[-1],
+                                   device=input_ids.device, dtype=torch.long)
+        text_mask = torch.arange(input_lengths.max()).unsqueeze(0).expand(
+            input_lengths.shape[0], -1).type_as(input_lengths)
+        text_mask = torch.gt(text_mask + 1, input_lengths.unsqueeze(1)).to(model.device)
+        bert_dur = model.bert(input_ids, attention_mask=(~text_mask).int())
+        d_en = model.bert_encoder(bert_dur).transpose(-1, -2)
+        d = model.predictor.text_encoder(d_en, ref_s[:, 128:], input_lengths, text_mask)
+        x, _ = model.predictor.lstm(d)
+        duration = torch.sigmoid(model.predictor.duration_proj(x)).sum(axis=-1) / speed
+        pred_dur = torch.round(duration).clamp(min=1).long().squeeze()
+        return torch.zeros(int(pred_dur.sum()) * 600), pred_dur
+
+    model.forward_with_tokens = durations_only
+
+    def synth(text):
+        with torch.inference_mode():
+            return [(r.phonemes, [int(v) for v in r.pred_dur.reshape(-1).tolist()])
+                    for r in pipeline(text, voice=voice, split_pattern=None)
+                    if r.pred_dur is not None]
+
+    return synth, model.vocab

@@ -55,7 +55,7 @@ def test_compute_shapes_places_sentences_at_their_offsets():
     timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1},
               {"text": "b", "offset_s": 0.1, "duration_s": 0.1}]
     synth = _synth_from({"a": [("ta", [1, 1, 1, 1])], "b": [("mɑ", [1, 1, 1, 1])]})
-    shape, fallback = av.compute_shapes(timing, synth, 5, 25)
+    shape, fallback = av.compute_shapes(timing, synth, 5, 25, lead_s=0.0)
     # "m" in sentence b spans 0.125-0.15 s -> frame 3
     assert shape == "...M." and fallback == []
 
@@ -64,7 +64,7 @@ def test_compute_shapes_integrity_mismatch_falls_back():
     timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1},
               {"text": "b", "offset_s": 0.1, "duration_s": 0.2}]   # b's audio is longer than its phonemes say
     synth = _synth_from({"a": [("ma", [1, 1, 1, 1])], "b": [("mɑ", [1, 1, 1, 1])]})
-    shape, fallback = av.compute_shapes(timing, synth, 8, 25)
+    shape, fallback = av.compute_shapes(timing, synth, 8, 25, lead_s=0.0)
     assert fallback == [1]
     assert "M" in shape[:2] and "M" not in shape[2:]
 
@@ -72,7 +72,7 @@ def test_compute_shapes_integrity_mismatch_falls_back():
 def test_compute_shapes_multi_chunk_sentence():
     timing = [{"text": "long", "offset_s": 0.0, "duration_s": 0.2}]
     synth = _synth_from({"long": [("ta", [1, 1, 1, 1]), ("tm", [1, 1, 1, 1])]})
-    shape, fallback = av.compute_shapes(timing, synth, 5, 25)
+    shape, fallback = av.compute_shapes(timing, synth, 5, 25, lead_s=0.0)
     # second chunk starts at 0.1 s; its "m" is at 0.15-0.175 s -> frames 3 (0.12-0.16) and 4 (0.16-0.20)
     assert shape == "...MM" and fallback == []
 
@@ -80,5 +80,22 @@ def test_compute_shapes_multi_chunk_sentence():
 def test_compute_shapes_unpairable_result_falls_back():
     timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1}]
     synth = _synth_from({"a": [("mab", [1, 1, 1, 1])]})          # 3 chars but only 2 inner durations
-    shape, fallback = av.compute_shapes(timing, synth, 3, 25)
+    shape, fallback = av.compute_shapes(timing, synth, 3, 25, lead_s=0.0)
     assert fallback == [0] and shape == "..."
+
+
+def test_compute_shapes_leads_the_sound_by_one_frame():
+    # Lips have to be shut before an "m" is heard, so shapes show 40 ms early
+    # (measured 2026-10-02: raw-duration onsets sit 0-50 ms after the shape
+    # would otherwise appear). "m" at 0.125-0.15 s -> shown 0.085-0.11 s -> frame 2.
+    timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1},
+              {"text": "b", "offset_s": 0.1, "duration_s": 0.1}]
+    synth = _synth_from({"a": [("ta", [1, 1, 1, 1])], "b": [("mɑ", [1, 1, 1, 1])]})
+    assert av.SHAPE_LEAD_S == 0.04
+    assert av.compute_shapes(timing, synth, 5, 25)[0] == "..M.."
+
+
+def test_compute_shapes_lead_clamps_at_zero():
+    timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.075}]
+    synth = _synth_from({"a": [("m", [0, 1, 2])]})              # "m" at 0.0-0.025 s
+    assert av.compute_shapes(timing, synth, 2, 25)[0] == "M."
