@@ -34,6 +34,7 @@ The rest maps 1:1 to this doc's own section numbers:
 8. Verify both files                             -- section 8   [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
+10a. (Opt.) Upload the Short to TikTok           -- section 10a [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
 12. Commit and push                               -- section 12  [Claude]
 12a. (Opt.) Publish before the scheduled date     -- section 12a [Manual]
@@ -1707,6 +1708,50 @@ There's no dedicated "AI-generated/altered content" disclosure toggle
 that's been found to reliably apply to these uploads (synthetic
 voiceover without synthetic imagery) — not chased further unless it
 resurfaces in a changed upload UI.
+
+---
+
+## 10a. Upload the Short to TikTok (optional)
+
+TikTok gets the **same file as the YouTube Short**,
+`preview-motion/<slug>-short.mp4`. There is no separate TikTok render:
+the Short is already 1080x1920 with burned-in captions, and since
+2026-10-02 those captions sit at 70% of the frame height
+(`CAPTION_Y_FRAC = 0.70`), clear of TikTok's caption/username overlay
+across the bottom ~22% of the screen. A Short rendered before that date
+has its captions at 80%, partly under TikTok's overlay; re-render it
+(section 7) before uploading it to TikTok.
+
+**Division of labor:** same as section 10 - Chris does the upload clicks
+(TikTok web: tiktok.com/upload, or the phone app) and pastes the text.
+
+**Before the first upload of any Short, check its image permissions.**
+CC-licensed Commons images are fine on any platform with the credit
+line. Images used under an emailed permission (see `docs/copyright/`:
+e.g. IRFA's Maistre portrait, the Catholic Heritage Centre photos) were
+granted for the blog and YouTube - confirm the permission's wording
+covers TikTok, or leave that Short off TikTok.
+
+**Caption:** paste the `=== TIKTOK ===` block from
+`docs/youtube_helper/<slug>-youtube.txt` (written by section 9) into
+TikTok's single caption box. It carries the title, hook, "Full story:
+link in bio" (TikTok captions don't make links clickable - the blog
+URL lives in the profile bio), the narration disclosure, the image
+credits and the hashtags. Section 9 warns if it runs over TikTok's
+4,000-character limit; trim the Images lines if so.
+
+**Settings, every upload:**
+- Visibility: **Everyone**
+- **AI-generated content label: on.** The narration is a synthetic voice
+  (and the avatar, when a Short gets one, is generated artwork). TikTok
+  asks creators to label AI-generated content; leaving it on is the safe
+  default and doesn't limit reach for a disclosed, non-deceptive video.
+- Allow comments: on. Duet/Stitch: your choice (off keeps the video
+  intact).
+- Cover: pick a frame showing the title slide or a strong image.
+
+**No URL wiring needed.** The post links to YouTube only (section 11);
+TikTok isn't linked from the blog.
 
 ---
 
