@@ -1,34 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- PLACEHOLDER avatar. Replaced by Chris's likeness in plan Task 7.
+  <!-- Avatar presenter: a flat-vector likeness of Chris (the blog's author),
+       drawn from reference photos kept only in scratch/ (never committed).
        Layer contract: groups with ids body, eyes-open, eyes-closed,
        mouth-0..mouth-3, brows. build_avatar.py renders each of the first
        seven alone onto a 512x512 transparent canvas; brows stays inside body
-       for now. Body content is clipped to the r=250 bubble (#bubble); the border
-       circle is drawn last, on top. -->
+       for now. Body content is clipped to the r=250 bubble (#bubble); the
+       border circle is drawn last, on top. Eyes sit behind the glasses
+       lenses, so the glasses are drawn in body *after* nothing - the eye
+       layers are composited on top of body, and the lenses are unfilled. -->
   <defs><clipPath id="bubble"><circle cx="256" cy="256" r="250"/></clipPath></defs>
   <g id="body">
     <g clip-path="url(#bubble)">
     <circle cx="256" cy="256" r="250" fill="#2f4858"/>
-    <path d="M86 470 Q256 350 426 470 L426 512 L86 512 Z" fill="#33658a"/>
-    <ellipse cx="256" cy="236" rx="120" ry="140" fill="#e8b996"/>
-    <path d="M136 210 Q140 90 256 86 Q372 90 376 210 Q330 140 256 146 Q182 140 136 210 Z" fill="#1d1d1d"/>
+    <!-- shirt: light-blue collared -->
+    <path d="M60 512 Q70 430 170 405 L256 440 L342 405 Q442 430 452 512 Z" fill="#9cc3e6"/>
+    <!-- neck -->
+    <path d="M206 360 L206 420 Q256 448 306 420 L306 360 Z" fill="#c9966f"/>
+    <!-- collar -->
+    <path d="M196 392 L256 440 L226 470 L178 412 Z" fill="#c4dcf2"/>
+    <path d="M316 392 L256 440 L286 470 L334 412 Z" fill="#c4dcf2"/>
+    <path d="M256 440 L256 512" stroke="#7fa9cf" stroke-width="4"/>
+    <!-- ears -->
+    <ellipse cx="146" cy="262" rx="20" ry="34" fill="#d9a47f"/>
+    <ellipse cx="366" cy="262" rx="20" ry="34" fill="#d9a47f"/>
+    <!-- face: broad oval, full cheeks -->
+    <path d="M152 210 Q150 130 256 122 Q362 130 360 210 L358 280 Q352 352 300 382 Q256 404 212 382 Q160 352 154 280 Z" fill="#e3b48f"/>
+    <!-- cheek shading -->
+    <path d="M160 300 Q172 352 212 380 Q190 350 182 300 Z" fill="#d6a37f"/>
+    <path d="M352 300 Q340 352 300 380 Q322 350 330 300 Z" fill="#d6a37f"/>
+    <!-- hair: short grey, side-parted, high forehead -->
+    <path d="M146 236 Q136 150 186 112 Q236 80 300 92 Q366 108 372 170 Q376 206 366 236 L356 236 Q356 182 334 158 Q300 140 262 146 Q214 140 180 162 Q158 184 158 236 Z" fill="#b9b8b3"/>
+    <path d="M196 120 Q240 96 300 104 Q262 112 236 140 Q214 128 196 120 Z" fill="#d6d5d0"/>
+    <path d="M232 98 Q228 120 236 140" fill="none" stroke="#8f8e89" stroke-width="5" stroke-linecap="round"/>
+    <!-- nose -->
+    <path d="M250 262 Q244 296 236 306 Q256 316 276 306" fill="none" stroke="#b9845f" stroke-width="5" stroke-linecap="round"/>
     <g id="brows">
-      <rect x="182" y="186" width="56" height="10" rx="5" fill="#1d1d1d"/>
-      <rect x="274" y="186" width="56" height="10" rx="5" fill="#1d1d1d"/>
+      <path d="M178 196 Q206 184 236 192" fill="none" stroke="#6f6e6a" stroke-width="8" stroke-linecap="round"/>
+      <path d="M276 192 Q306 184 334 196" fill="none" stroke="#6f6e6a" stroke-width="8" stroke-linecap="round"/>
     </g>
     </g>
     <circle cx="256" cy="256" r="250" fill="none" stroke="#f2f2f2" stroke-width="10"/>
   </g>
   <g id="eyes-open">
-    <ellipse cx="210" cy="226" rx="14" ry="16" fill="#1d1d1d"/>
-    <ellipse cx="302" cy="226" rx="14" ry="16" fill="#1d1d1d"/>
+    <ellipse cx="210" cy="234" rx="10" ry="11" fill="#2a2420"/>
+    <ellipse cx="302" cy="234" rx="10" ry="11" fill="#2a2420"/>
+    <circle cx="213" cy="230" r="3" fill="#ffffff"/>
+    <circle cx="305" cy="230" r="3" fill="#ffffff"/>
+    <!-- glasses drawn with the eyes so the frames sit on top of them -->
+    <g fill="none" stroke="#33302d" stroke-width="6">
+      <rect x="168" y="210" width="80" height="50" rx="12"/>
+      <rect x="264" y="210" width="80" height="50" rx="12"/>
+      <path d="M248 228 Q256 222 264 228"/>
+      <path d="M168 224 L150 230"/>
+      <path d="M344 224 L362 230"/>
+    </g>
   </g>
   <g id="eyes-closed">
-    <rect x="194" y="224" width="32" height="6" rx="3" fill="#1d1d1d"/>
-    <rect x="286" y="224" width="32" height="6" rx="3" fill="#1d1d1d"/>
+    <path d="M198 236 Q210 242 222 236" fill="none" stroke="#2a2420" stroke-width="5" stroke-linecap="round"/>
+    <path d="M290 236 Q302 242 314 236" fill="none" stroke="#2a2420" stroke-width="5" stroke-linecap="round"/>
+    <g fill="none" stroke="#33302d" stroke-width="6">
+      <rect x="168" y="210" width="80" height="50" rx="12"/>
+      <rect x="264" y="210" width="80" height="50" rx="12"/>
+      <path d="M248 228 Q256 222 264 228"/>
+      <path d="M168 224 L150 230"/>
+      <path d="M344 224 L362 230"/>
+    </g>
   </g>
-  <g id="mouth-0"><rect x="226" y="306" width="60" height="8" rx="4" fill="#8a3b3b"/></g>
-  <g id="mouth-1"><ellipse cx="256" cy="310" rx="30" ry="9" fill="#5a1e1e"/></g>
-  <g id="mouth-2"><ellipse cx="256" cy="312" rx="32" ry="17" fill="#5a1e1e"/></g>
-  <g id="mouth-3"><ellipse cx="256" cy="316" rx="34" ry="26" fill="#5a1e1e"/></g>
+  <!-- mouths share one centre (256, 338); 0 is a relaxed smile -->
+  <g id="mouth-0">
+    <path d="M222 334 Q256 352 290 334" fill="none" stroke="#9a5546" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g id="mouth-1">
+    <path d="M224 332 Q256 330 288 332 Q272 352 256 352 Q240 352 224 332 Z" fill="#5a1e1e" stroke="#9a5546" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g id="mouth-2">
+    <path d="M222 328 Q256 324 290 328 Q278 364 256 364 Q234 364 222 328 Z" fill="#5a1e1e" stroke="#9a5546" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M228 330 Q256 327 284 330 L282 337 Q256 334 230 337 Z" fill="#f4f1ea"/>
+  </g>
+  <g id="mouth-3">
+    <path d="M220 324 Q256 318 292 324 Q284 378 256 378 Q228 378 220 324 Z" fill="#5a1e1e" stroke="#9a5546" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M226 326 Q256 321 286 326 L284 334 Q256 330 228 334 Z" fill="#f4f1ea"/>
+    <ellipse cx="256" cy="366" rx="16" ry="7" fill="#b5524f"/>
+  </g>
 </svg>
