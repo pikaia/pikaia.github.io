@@ -85,7 +85,10 @@ def test_default_track_path():
 
 
 def test_mouth_layer_for():
-    assert rat.mouth_layer_for(0, "F") == "mouth-0"       # silence always closes
+    # Quiet sounds (the hiss of f, the closure of m/b) read as silent to the
+    # loudness meter; a shape only exists inside a spoken sound, so it wins.
+    assert rat.mouth_layer_for(0, "F") == "mouth-F"
+    assert rat.mouth_layer_for(0, ".") == "mouth-0"       # a real pause stays closed
     assert rat.mouth_layer_for(2, "F") == "mouth-F"
     assert rat.mouth_layer_for(2, ".") == "mouth-2"
     assert rat.mouth_layer_for(3, "M") == "mouth-M"

@@ -103,9 +103,14 @@ unchanged. Approved by Chris via an Artifact page (each shape beside its
 word) before committing.
 
 **Per-frame mouth choice** in `render_avatar_track.py` (step 6a):
-- loudness level `0` → `mouth-0` (silence always closes);
-- else shape `M/F/U/E` → `mouth-M/F/U/E`;
-- else → `mouth-{level}` (1–3).
+- shape `M/F/U/E` → `mouth-M/F/U/E`, even on a loudness-0 frame;
+- else → `mouth-{level}` (level 0, a pause, is the closed `mouth-0`).
+
+*Revised during implementation (2026-10-02):* the draft had silence
+(level 0) override shapes. On Barings that hid 55% of f/v frames and 45%
+of m/b/p frames, because those sounds are quiet (a hiss, a lip closure)
+and the loudness meter reads them as silent. Shapes exist only inside
+spoken sounds, never in pauses, so letting them win keeps pauses closed.
 
 Version-1 files and fallen-back sentences render exactly as Phase 1. A PNG
 set missing the new layers raises the existing "run `build_avatar.py`"

@@ -38,10 +38,11 @@ def load_layers(diameter, png_dir=PNG_DIR):
 
 
 def mouth_layer_for(level, shape):
-    """Silence always closes the mouth; otherwise a shaped mouth (M F U E)
-    beats the loudness level; otherwise the level picks the opening."""
-    if level == 0:
-        return "mouth-0"
+    """A shaped mouth (M F U E) wins, even on a frame the loudness meter
+    calls silent: shapes only exist inside spoken sounds, and the sounds
+    they mark are the quiet ones (the hiss of an f, the closure of m/b -
+    on Barings 55% of f/v frames measured as silent). With no shape, the
+    loudness level picks the opening, and level 0 (a pause) closes."""
     if shape in ("M", "F", "U", "E"):
         return f"mouth-{shape}"
     return f"mouth-{level}"
