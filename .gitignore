@@ -12,3 +12,6 @@ SubtitleEdit/
 # Copyright-request working files with personal data (kept local only)
 docs/copyright/chancery-request-*.json
 docs/copyright/chancery-request-*.pdf
+
+# superpowers plan-execution workspace (ledgers, briefs)
+.superpowers/
