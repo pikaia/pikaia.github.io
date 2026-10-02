@@ -694,7 +694,7 @@ def main() -> None:
     out_lines.append("")
     out_lines.append("=== TIKTOK (upload the Short's file) ===")
     out_lines.append("")
-    out_lines.append("Caption:")
+    out_lines.append("Description:")
     tiktok_text = tiktok_caption(
         title, hook, narration_line, avatar_disclosure(optional_config(short_config_path)),
         short_credit_lines, describe_image_sources(short_credit_lines) if short_images is not None else None)

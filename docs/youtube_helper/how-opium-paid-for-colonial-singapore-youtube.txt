@@ -53,7 +53,7 @@ Images (Wikimedia Commons):
 
 === TIKTOK (upload the Short's file) ===
 
-Caption:
+Description:
 How Opium Paid for Colonial Singapore
 
 For most of the nineteenth century, the government that ran Singapore paid its bills with money from opium. Not through smuggling, and not by looking the other way, but openly: the colonial administration auctioned off the exclusive right to prepare and sell the drug to the highest bidder, and for decades the proceeds covered somewhere between 40 and 60 percent of everything the government spent. It was the single largest source of public revenue in a free port that famously charged no import duties, and the arrangement ran for well over a century before Singapore turned around and made the very trade that had funded it a crime.

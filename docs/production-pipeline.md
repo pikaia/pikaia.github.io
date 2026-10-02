@@ -1734,7 +1734,8 @@ covers TikTok, or leave that Short off TikTok.
 
 **Caption:** paste the `=== TIKTOK ===` block from
 `docs/youtube_helper/<slug>-youtube.txt` (written by section 9) into
-TikTok's single caption box. It carries the title, hook, "Full story:
+TikTok's **Description** box (delete the filename TikTok pre-fills
+there first; the pasted hashtags become tags on their own). It carries the title, hook, "Full story:
 link in bio" (TikTok captions don't make links clickable - the blog
 URL lives in the profile bio), the narration disclosure, the image
 credits and the hashtags. Section 9 warns if it runs over TikTok's

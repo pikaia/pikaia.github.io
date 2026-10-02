@@ -76,7 +76,7 @@ Images (Wikimedia Commons):
 
 === TIKTOK (upload the Short's file) ===
 
-Caption:
+Description:
 The Bank That Spent a Century Teaching Singapore to Save
 
 For a couple of generations of Singaporean schoolchildren, the first bank account was a small book filled a little at a time with ten-cent stamps, bought at the school bookshop and pasted into printed rows of squares. The stamps, the passbook, the queue in the school hall on collection day all belonged to the Post Office Savings Bank, an institution whose entire purpose, from 1877 onward, was to get ordinary people into the habit of putting money aside.

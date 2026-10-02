@@ -53,7 +53,7 @@ Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice
 
 === TIKTOK (upload the Short's file) ===
 
-Caption:
+Description:
 The Doctor Who Shrank Singapore's Families, Then Became Its President
 
 In 1969, Singapore's Parliament passed the Voluntary Sterilisation Act without a single vote against it — a law that would go on to help engineer one of the steepest fertility declines any country has seen in peacetime. It wasn't pushed through by a career politician. It was pushed through by a working obstetrician who, two years later, would be tapped by Lee Kuan Yew to become Singapore's second president — a job most people since have treated as ceremonial, a name and a signature, with no real memory of the population engineering he'd already done before he ever moved into the Istana.

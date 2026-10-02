@@ -65,7 +65,7 @@ Images (Wikimedia Commons):
 
 === TIKTOK (upload the Short's file) ===
 
-Caption:
+Description:
 He Wrote Singapore's Economics Textbook, Then Spent 30 Years Defying It
 
 For decades, almost every Singaporean who sat for pre-university economics learned supply and demand from the same textbook: Elements of Economic Theory, first published in 1971 and reprinted through the 1980s as the standard A-Level and junior college text. Its lead author, Lim Chong Yah, taught a generation the clean logic of free markets. Then, for 30 years running Singapore's actual wage-setting machinery, he spent much of his career deciding when that logic should be overruled.

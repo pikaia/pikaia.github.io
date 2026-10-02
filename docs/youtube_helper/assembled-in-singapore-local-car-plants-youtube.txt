@@ -59,7 +59,7 @@ Images (credited individually):
 
 === TIKTOK (upload the Short's file) ===
 
-Caption:
+Description:
 Assembled in Singapore: The Short Life of Local Car Plants
 
 Since early 2023, Hyundai has been building electric cars in a seven-storey plant in the Jurong Innovation District — the first time cars have been assembled in Singapore in more than forty years. That gap is easy to read as the natural state of things: Singapore is small, has no car industry, taxes cars harder than almost anywhere on earth, and imports every one it drives. For about half a century, though, it did assemble them. The plants were never large and never lasted, and the last of them shut in 1980, but for a while "assembled in Singapore" was a label you could find on a new car.
