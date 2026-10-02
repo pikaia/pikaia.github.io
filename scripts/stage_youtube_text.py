@@ -342,6 +342,27 @@ def optional_config(config_path: Path | None):
     return load_video_config(Path(config_path))
 
 
+# TikTok gets the same vertical file as the YouTube Short. Its caption is
+# one text box: no title field, no clickable links (the blog link lives in
+# the profile bio), hashtags at the end. Limit per TikTok's upload screen
+# as of 2026 - re-check if TikTok rejects a paste.
+TIKTOK_CAPTION_LIMIT = 4000
+TIKTOK_HASHTAGS = "#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok"
+
+
+def tiktok_caption(title, hook, narration_line, avatar_line, credit_lines, image_sources) -> str:
+    lines = [title, "", hook, "", "Full story: link in bio", "", narration_line]
+    if avatar_line:
+        lines.append(avatar_line)
+    if credit_lines:
+        lines += ["", f"Images ({image_sources}):" if image_sources else "Images:", *credit_lines]
+    lines += ["", TIKTOK_HASHTAGS]
+    return "\n".join(lines)
+
+
+def tiktok_over_limit(caption: str) -> bool:
+    return len(caption) > TIKTOK_CAPTION_LIMIT
+
 def avatar_disclosure(main_cfg) -> str | None:
     """Description line for a main video with the avatar overlay (its
     config sets AVATAR). The voice is already disclosed by the narration
@@ -668,6 +689,16 @@ def main() -> None:
         image_sources = describe_image_sources(short_credit_lines)
         out_lines.append(f"Images ({image_sources}):")
     out_lines.extend(short_credit_lines)
+    out_lines.append("")
+    out_lines.append("-" * 70)
+    out_lines.append("")
+    out_lines.append("=== TIKTOK (upload the Short's file) ===")
+    out_lines.append("")
+    out_lines.append("Caption:")
+    tiktok_text = tiktok_caption(
+        title, hook, narration_line, avatar_disclosure(optional_config(short_config_path)),
+        short_credit_lines, describe_image_sources(short_credit_lines) if short_images is not None else None)
+    out_lines.append(tiktok_text)
 
     out_text = "\n".join(out_lines) + "\n"
 
@@ -695,6 +726,9 @@ def main() -> None:
         elif desc_len > 4700:
             print(f"NOTE: the FULL VIDEO description is {desc_len} chars (YouTube limit 5,000) - "
                   f"close to the cap.", file=sys.stderr)
+    if tiktok_over_limit(tiktok_text):
+        print(f"WARNING: the TikTok caption is {len(tiktok_text)} chars - over the "
+              f"{TIKTOK_CAPTION_LIMIT:,} limit. Trim the Images lines before pasting.", file=sys.stderr)
 
 
 if __name__ == "__main__":
