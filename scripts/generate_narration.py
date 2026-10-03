@@ -1739,6 +1739,19 @@ PRONUNCIATION_OVERRIDES = {
     "Thio-Chan-Bee": "tˌiO ʧˌan bˌiː",
     "Lim-Yew-Hock": "lˌɪm jˌuː hˌɒk",
     "Tan-Eng-Joo": "tˌan ˌɛŋ ʤˌuː",
+    # UOB post batch (2026-10-03). Single obvious Hokkien readings:
+    "Kheng": "kˈɛŋ",                  # "KENG" - Wee Kheng Chiang.
+    "Piah": "pˈiːɑ",                  # "PEE-ah" - Ong Piah Teng.
+    "Teng": "tˈɛŋ",                   # "TENG".
+    "Chua": "ʧˈuːə",                  # "CHOO-ah" - Chua Keh Hai.
+    "Keh": "kˈɛ",                     # "KEH".
+    "Ying": "jˈɪŋ",                   # "YING" - Lien Ying Chow.
+    "Bian": "bˈiːɑn",                 # "BEE-an" - Bian Chiang Bank.
+    # Three-part names fused with even stress (see "Lim-Boon-Keng" above):
+    "Wee-Cho-Yaw": "wˌiː ʧˌO jˌɔː",
+    "Ong-Piah-Teng": "ˌɒŋ pˌiːɑ tˌɛŋ",
+    "Chua-Keh-Hai": "ʧˌuːə kˌɛ hˌI",
+    "Aw-Boon-Haw": "ˌɔː bˌuːn hˌɔː",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1934,6 +1947,10 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bThio Chan Bee\b"): "Thio-Chan-Bee",
     re.compile(r"\bLim Yew Hock\b"): "Lim-Yew-Hock",
     re.compile(r"\bTan Eng Joo\b"): "Tan-Eng-Joo",
+    re.compile(r"\bWee Cho Yaw\b"): "Wee-Cho-Yaw",
+    re.compile(r"\bOng Piah Teng\b"): "Ong-Piah-Teng",
+    re.compile(r"\bChua Keh Hai\b"): "Chua-Keh-Hai",
+    re.compile(r"\bAw Boon Haw\b"): "Aw-Boon-Haw",
 }
 
 
