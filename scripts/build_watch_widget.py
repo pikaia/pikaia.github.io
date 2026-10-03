@@ -656,6 +656,9 @@ def build_watch_script(cfg, slug: str) -> tuple[str, int, bool]:
 
     timing_path = REPO_ROOT / cfg.TIMING_JSON
     sentences = json.loads(timing_path.read_text(encoding="utf-8"))
+    # The JS only uses sentence text for captions: show fused names as written.
+    from generate_narration import caption_text
+    sentences = [{**x, "text": caption_text(x["text"])} for x in sentences]
     sentences_line = "  var sentences = " + json.dumps(sentences, ensure_ascii=False) + ";"
 
     schedule_lines = ", ".join(f"{{ t: {t}, slide: {s} }}" for t, s in cfg.SCHEDULE)

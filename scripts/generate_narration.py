@@ -1971,6 +1971,26 @@ def _apply_abbreviation_expansions(text: str) -> str:
     return text
 
 
+# The fused names above ("Wee Kheng Chiang" -> "Wee-Kheng-Chiang") exist only
+# to steer the voice, but the fused form is what lands in timing.json, so
+# anything shown to a viewer (the .srt, burned-in Short captions, the Watch
+# widget) passes through caption_text() to put the spaces back. Only exact
+# fusions are reversed - a rule whose pattern is the plain name and whose
+# replacement is that name hyphenated - so real compounds like
+# "Build-To-Order" are left alone.
+_UNFUSE = {
+    repl: repl.replace("-", " ")
+    for pattern, repl in ABBREVIATION_EXPANSIONS.items()
+    if isinstance(repl, str) and "-" in repl and pattern.pattern == r"\b" + repl.replace("-", " ") + r"\b"
+}
+
+
+def caption_text(text: str) -> str:
+    for fused, plain in _UNFUSE.items():
+        text = text.replace(fused, plain)
+    return text
+
+
 def _process_block(block: str, narrative: list[str]) -> bool:
     """Returns False if this block signals the Sources divider (stop)."""
     if block == "---":
@@ -2377,7 +2397,7 @@ def _segment_sentence(text: str, start: float, dur: float) -> list[tuple[float, 
 def _build_srt(sentences: list[dict]) -> str:
     cues: list[tuple[float, float, str]] = []
     for s in sentences:
-        cues.extend(_segment_sentence(s["text"], s["offset_s"], s["duration_s"]))
+        cues.extend(_segment_sentence(caption_text(s["text"]), s["offset_s"], s["duration_s"]))
     blocks = [
         f"{i}\n{_srt_timestamp(cs)} --> {_srt_timestamp(ce)}\n{_wrap_srt_lines(txt)}\n"
         for i, (cs, ce, txt) in enumerate(cues, 1)

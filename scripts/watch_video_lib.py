@@ -605,9 +605,11 @@ def load_captions(timing_path, max_chars=100):
             t += share
         return result
 
+    from generate_narration import caption_text  # fused names -> as written
+
     chunks = []
     for s in sentences:
-        chunks.extend(split_long(s["text"], s["offset_s"], s["duration_s"]))
+        chunks.extend(split_long(caption_text(s["text"]), s["offset_s"], s["duration_s"]))
     return chunks
 
 
