@@ -1724,6 +1724,15 @@ PRONUNCIATION_OVERRIDES = {
     "Kweku": "kwˈɛkuː",               # Akan day-name, "KWEH-koo".
     "Adoboli": "ˌadəbˈQli",           # "ah-doh-BOH-lee".
     "SIMEX": "sˈImɛks",               # "SIGH-mex", Chris's pick 2026-10-02 (scratch/bb/samples/simex/).
+    # Progressive Party post batch (2026-10-03). Single obvious readings:
+    "Silva": "sˈɪlvə",                # "SIL-vuh" - Claude da Silva.
+    "Paglar": "pˈaɡlɑː",              # "PAG-lar" - C. J. Paglar.
+    "Menon": "mˈAnən",                # "MAY-nun" - Vilasini Menon (Malayalam name).
+    "UMNO": "ˈʌmnO",                  # "UM-no", said as a word, as in Malaysia.
+    # Three-part names fused with even stress (see "Lim-Boon-Keng" above):
+    "Thio-Chan-Bee": "tˌiO ʧˌan bˌiː",
+    "Lim-Yew-Hock": "lˌɪm jˌuː hˌɒk",
+    "Tan-Eng-Joo": "tˌan ˌɛŋ ʤˌuː",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1916,6 +1925,9 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bSeow Poh Leng\b"): "Seow-Poh-Leng",
     # Barings' account number, read digit by digit as traders said it.
     re.compile(r"\b88888\b"): "eight eight eight eight eight",
+    re.compile(r"\bThio Chan Bee\b"): "Thio-Chan-Bee",
+    re.compile(r"\bLim Yew Hock\b"): "Lim-Yew-Hock",
+    re.compile(r"\bTan Eng Joo\b"): "Tan-Eng-Joo",
 }
 
 
