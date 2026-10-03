@@ -99,3 +99,33 @@ def test_compute_shapes_lead_clamps_at_zero():
     timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.075}]
     synth = _synth_from({"a": [("m", [0, 1, 2])]})              # "m" at 0.0-0.025 s
     assert av.compute_shapes(timing, synth, 2, 25)[0] == "M."
+
+
+def test_compute_shapes_rejects_same_length_resynthesis_via_provenance():
+    # A changed override can keep a sentence's total length while moving its
+    # sounds around; the length check can't see that, the provenance check can.
+    timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1},
+              {"text": "b", "offset_s": 0.1, "duration_s": 0.1}]
+    synth = _synth_from({"a": [("ma", [1, 1, 1, 1])], "b": [("mɑ", [1, 1, 1, 1])]})
+    verdicts = {"a": True, "b": False}
+    shape, fallback = av.compute_shapes(timing, synth, 8, 25, lead_s=0.0,
+                                        provenance=lambda text, dur: verdicts[text])
+    assert fallback == [1] and "M" not in shape[2:]
+
+
+def test_compute_shapes_unknown_provenance_falls_back():
+    timing = [{"text": "a", "offset_s": 0.0, "duration_s": 0.1}]
+    synth = _synth_from({"a": [("ma", [1, 1, 1, 1])]})
+    shape, fallback = av.compute_shapes(timing, synth, 3, 25, lead_s=0.0, provenance=lambda text, dur: None)
+    assert fallback == [0] and shape == "..."
+
+
+def test_cache_provenance(tmp_path):
+    import numpy as np
+    import generate_narration as gn
+    check = av.cache_provenance("bm_george", cache_dir=tmp_path)
+    key = gn._sentence_cache_key("Hello there.", "bm_george", gn._lang_code_for("bm_george"))
+    assert check("Hello there.", 0.5) is None                      # never synthesized with today's overrides
+    np.save(tmp_path / f"{key}.npy", np.zeros(12000, np.float32))  # 0.5 s at 24 kHz
+    assert check("Hello there.", 0.5) is True
+    assert check("Hello there.", 0.6) is False

@@ -156,14 +156,18 @@ def main():
         if not timing_path.exists():
             sys.exit(f"error: no {timing_path} next to the mp3 - mouth shapes need the narration's "
                      f"timing.json (written by generate_narration.py); pass --no-shapes for loudness only")
-        from avatar_visemes import compute_shapes, kokoro_synth
+        from avatar_visemes import cache_provenance, compute_shapes, kokoro_synth
         timing = json.loads(timing_path.read_text(encoding="utf-8"))
         print(f"Loading Kokoro for mouth shapes ({len(timing)} sentences) ...", file=sys.stderr)
         synth, vocab = kokoro_synth(args.voice)
-        shapes = compute_shapes(timing, synth, int(duration * args.fps), args.fps, vocab)
+        shapes = compute_shapes(timing, synth, int(duration * args.fps), args.fps, vocab,
+                                provenance=cache_provenance(args.voice))
         for i in shapes[1]:
-            print(f"  sentence {i} fell back to loudness-only (its length no longer matches its "
-                  f"phonemes): {timing[i]['text'][:60]!r}", file=sys.stderr)
+            print(f"  sentence {i} fell back to loudness-only: {timing[i]['text'][:60]!r}", file=sys.stderr)
+        if shapes[1]:
+            print(f"  {len(shapes[1])} of {len(timing)} sentence(s) have no shapes: their audio wasn't made "
+                  f"with today's pronunciation overrides (re-run step 1.2, then this step), or the narration "
+                  f"used another voice (pass --voice).", file=sys.stderr)
     track = build_track(decode_mono(mp3), SAMPLE_RATE, args.fps, duration,
                         mp3.stem, mp3.as_posix(), shapes)
     out.write_text(json.dumps(track, separators=(",", ":")), encoding="utf-8")

@@ -74,15 +74,23 @@ def frame_shapes(spans, n_frames, fps):
     return "".join(out)
 
 
-def compute_shapes(timing, synth, n_frames, fps, vocab=None, lead_s=SHAPE_LEAD_S):
+def compute_shapes(timing, synth, n_frames, fps, vocab=None, lead_s=SHAPE_LEAD_S, provenance=None):
     """(shape string, fallen-back sentence indices). timing is timing.json's
     list of {text, offset_s, duration_s}; synth(text) returns one
     (phonemes, pred_dur) per Kokoro chunk. A sentence whose durations
     don't add up to its real length, or don't pair with its phonemes,
     gets no shapes (the mouth falls back to loudness there). Every shape
-    shows lead_s early (see SHAPE_LEAD_S)."""
+    shows lead_s early (see SHAPE_LEAD_S).
+
+    provenance(text, duration_s) -> True / False / None, if given, must
+    return True for a sentence to get shapes: the length check alone can't
+    see an override change that moves sounds around but keeps the total
+    length (see cache_provenance)."""
     spans, fallback = [], []
     for idx, sent in enumerate(timing):
+        if provenance is not None and provenance(sent["text"], sent["duration_s"]) is not True:
+            fallback.append(idx)
+            continue
         results = synth(sent["text"])
         units = sum(sum(d) for _, d in results)
         if abs(units * UNIT_S - sent["duration_s"]) > INTEGRITY_TOL_S:
@@ -101,6 +109,36 @@ def compute_shapes(timing, synth, n_frames, fps, vocab=None, lead_s=SHAPE_LEAD_S
     # starts at 0 but keeps its full length rather than vanishing.
     spans = [(max(0.0, t0 - lead_s), max(0.0, t0 - lead_s) + (t1 - t0), shape) for t0, t1, shape in spans]
     return frame_shapes(spans, n_frames, fps), fallback
+
+
+def cache_provenance(voice="bm_george", cache_dir=None):
+    """check(text, duration_s) for compute_shapes: was this sentence's audio
+    made with today's pronunciation overrides? generate_narration's cache
+    key covers the sentence, voice and every override whose word appears
+    in it, so an entry under today's key with the right sample count means
+    re-running Kokoro now reproduces that audio's timing. True = yes,
+    False = cached audio has another length, None = no entry (an override
+    changed since, or the cache was cleared) - both of the last two mean
+    re-run step 1.2 before trusting shapes for that sentence."""
+    import sys
+    from pathlib import Path
+
+    import numpy as np
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import generate_narration as gn
+
+    cache_dir = Path(cache_dir) if cache_dir else Path(gn._CACHE_DIR)
+    lang_code = gn._lang_code_for(voice)
+
+    def check(text, duration_s):
+        path = cache_dir / f"{gn._sentence_cache_key(text, voice, lang_code)}.npy"
+        if not path.exists():
+            return None
+        n = np.load(path, mmap_mode="r").shape[0]
+        return abs(n / gn.SAMPLE_RATE - duration_s) <= INTEGRITY_TOL_S
+
+    return check
 
 
 def kokoro_synth(voice="bm_george"):

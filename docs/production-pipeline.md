@@ -379,10 +379,16 @@ own per-sound timings (`scripts/avatar_visemes.py`). It reads
 `audio/<slug>.timing.json`, loads Kokoro once and runs only its duration
 step (no audio is made; about 20-25 s for a 10-minute narration). Each
 shape shows one frame before its sound, as animators lead lip movement.
-Each sentence is checked against its real length in the audio; one that
-no longer matches (an override changed after that sentence was cached)
-**falls back** to loudness-only and is listed - harmless, but re-running
-step 1.2 with `--no-cache` and then this step clears it. `--no-shapes`
+Each sentence must pass two checks before it gets shapes: its audio was
+made with today's pronunciation overrides (its `.narration-cache` entry
+under today's key exists with the right length), and its re-computed
+sounds add up to its real length. A sentence that fails **falls back**
+to loudness-only and is listed - harmless. The usual cause is an
+override added since the narration was made (likely when adding the
+avatar to an older post): re-run step 1.2 (a normal run - the cache
+re-synthesizes only the affected sentences, no `--no-cache` needed),
+then this step. If nearly every sentence falls back, the narration used
+another voice - pass `--voice`. `--no-shapes`
 skips all of this (loudness only, no Kokoro). If the narration voice
 isn't `bm_george`, pass `--voice <name>`.
 
