@@ -334,30 +334,24 @@ Example:
   Should succeed with no error and print a duration that's plausible for
   the post's word count (a post with several minutes of prose should
   yield several minutes of audio, not a few seconds).
-- **[FALLBACK — only if synthesis actually stalled/hung; skip entirely
-  if the normal command above already succeeded]** If synthesis
-  stalls/hangs on a specific post's text (a known occasional Kokoro
-  issue), split the post's paragraphs into 2-8 pieces and synthesize
-  each separately, then concatenate:
+- **1.4 Join split narration - safe to run every time.** Only does
+  anything if synthesis stalled/hung on a post (a known occasional Kokoro
+  issue) and you split the post's paragraphs into 2-8 pieces and
+  synthesized each separately. Name those pieces
+  `audio/<slug>.part1.mp3`, `audio/<slug>.part2.mp3`, ... and this joins
+  them, in numeric order, into `audio/<slug>.mp3`. With no pieces (the
+  normal case) it prints "nothing to join" and exits without touching
+  anything, so it can sit in the template and run blind. If the pieces
+  exist *and* `audio/<slug>.mp3` already does, it refuses rather than
+  overwrite a good narration; pass `--force` only if the pieces are the
+  narration you want.
   ```
-  { echo; date; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
-    cmd=(ffmpeg -y -i "concat:part1.mp3|part2.mp3|..." -acodec copy audio/<slug>.mp3)
+  { echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+    cmd=(python scripts/join_narration_parts.py audio/<slug>.mp3)
     echo "\$ ${cmd[*]}"; echo
     time "${cmd[@]}"
     echo
   } 2>&1 | tee -a logs/<slug>.log
-  ```
-  Example — note `part1.mp3`/`part2.mp3` here are placeholder pieces
-  you'd have generated yourself while working around a stall, not real
-  files that exist for every post; don't just swap in your own slug and
-  run this if your synthesis completed normally the first time:
-  ```
-  { echo; date; echo "=== 1.4 [FALLBACK] Concatenate split narration ==="
-    cmd=(ffmpeg -y -i "concat:jalan-payoh-lai-part1.mp3|jalan-payoh-lai-part2.mp3" -acodec copy audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
-    echo "\$ ${cmd[*]}"; echo
-    time "${cmd[@]}"
-    echo
-  } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
   ```
 
 ---
@@ -2033,10 +2027,9 @@ after the scheduled date, `publish-early-reset.sh <slug>`.
   `scripts/generate_narration.py`, with that doc as a human-readable
   summary kept in sync by hand. Add a new override only after verifying
   by ear against a real render, not preemptively.
-- **Re-running a command hangs with no output.** Only two commands in
-  this doc write a file without `-y` risk in mind: the section 1.4
-  fallback concat and section 8's spot-frame `ffmpeg -ss` check (both
-  now include `-y`, but if you're running an older or hand-typed
+- **Re-running a command hangs with no output.** Section 8's spot-frame
+  `ffmpeg -ss` check writes a file without `-y` risk in mind (it now
+  includes `-y`; section 1.4's join is a script that passes `-y` itself, but if you're running an older or hand-typed
   variant, watch for this). Without `-y`, re-running either against an
   output path that already exists hits ffmpeg's own "File already
   exists. Overwrite? [y/N]" prompt — which hangs forever in a

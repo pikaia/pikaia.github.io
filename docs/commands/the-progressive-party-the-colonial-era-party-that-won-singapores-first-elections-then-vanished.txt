@@ -19,6 +19,13 @@
   echo
 } 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
 
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
 { echo; date; echo "=== 1.5 Build avatar mouth track ==="
   cmd=(python scripts/build_avatar_track.py audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3)
   echo "\$ ${cmd[*]}"; echo
