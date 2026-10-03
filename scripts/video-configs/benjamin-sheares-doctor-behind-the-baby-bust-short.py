@@ -36,3 +36,6 @@ TOTAL_DURATION = 46.55  # real sentence-timing boundary for this post's opening 
 TIMING_JSON = "audio/benjamin-sheares-doctor-behind-the-baby-bust.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

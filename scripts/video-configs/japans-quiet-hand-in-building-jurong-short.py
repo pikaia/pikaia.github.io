@@ -27,3 +27,6 @@ TOTAL_DURATION = 48.65
 TIMING_JSON = "audio/japans-quiet-hand-in-building-jurong.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

@@ -33,3 +33,6 @@ TOTAL_DURATION = 43.5  # real sentence-timing boundary for this post's opening h
 TIMING_JSON = "audio/the-fishball-noodle-that-exposed-singapores-hawker-rent-gap.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

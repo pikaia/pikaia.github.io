@@ -154,6 +154,9 @@ def _available_memory_gb():
     return None
 
 
+SHORT_MIN_SECONDS = 60
+
+
 def validate_short_config(cfg, config_path):
     """Fail fast on the exact silent-failure class caught 2026-09-16 (Tan
     Kim Seng post): a `-short.py` config missing `WIDTH, HEIGHT = 1080,
@@ -175,13 +178,21 @@ def validate_short_config(cfg, config_path):
         problems.append(f"WIDTH={width}, HEIGHT={height} is not a vertical frame (expected 1080x1920)")
     if not getattr(cfg, "BURN_CAPTIONS", False):
         problems.append("BURN_CAPTIONS not set to True (Shorts are watched muted/autoplay, main videos rely on the uploaded .srt instead)")
+    # TikTok's creator rewards count only videos longer than one minute, and
+    # the Short's file is cross-posted there (section 10a); YouTube Shorts
+    # allow up to 3 minutes. From 2026-10-03 every new Short runs over 60 s;
+    # the Shorts made before then carry SHORT_UNDER_A_MINUTE_OK = True.
+    duration = getattr(cfg, "TOTAL_DURATION", None)
+    if duration is not None and duration <= SHORT_MIN_SECONDS and not getattr(cfg, "SHORT_UNDER_A_MINUTE_OK", False):
+        problems.append(f"TOTAL_DURATION={duration}s - a Short must run longer than {SHORT_MIN_SECONDS}s so the "
+                        f"TikTok copy qualifies for TikTok's creator rewards; extend the excerpt to a later "
+                        f"sentence boundary (aim for about 62-75s)")
     if problems:
         print(f"ERROR: {config_path} looks like a Shorts config (filename ends in '-short') but:", file=sys.stderr)
         for p in problems:
             print(f"  - {p}", file=sys.stderr)
-        print("Add `WIDTH, HEIGHT = 1080, 1920` and `BURN_CAPTIONS = True` "
-              "(see docs/production-pipeline.md section 3, the Short config "
-              "subsection). Refusing to proceed.", file=sys.stderr)
+        print("Fix the Short config as above (see docs/production-pipeline.md "
+              "section 3, the Short config subsection). Refusing to proceed.", file=sys.stderr)
         sys.exit(1)
 
 

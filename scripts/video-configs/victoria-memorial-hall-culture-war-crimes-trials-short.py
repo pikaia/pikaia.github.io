@@ -30,3 +30,6 @@ TOTAL_DURATION = 37.75
 TIMING_JSON = "audio/victoria-memorial-hall-culture-war-crimes-trials.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

@@ -31,3 +31,6 @@ TOTAL_DURATION = 47.0
 TIMING_JSON = "audio/dear-you-and-the-dialect-singapore-tried-to-retire.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

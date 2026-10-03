@@ -51,3 +51,6 @@ TIMING_JSON = "audio/jalan-payoh-lai-kangkar-montfort-nativity-church.timing.jso
 # they rely on the uploaded .srt. Caption size/position come from the
 # DEFAULT_CAPTION_* module constants (small outlined white text, no box).
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

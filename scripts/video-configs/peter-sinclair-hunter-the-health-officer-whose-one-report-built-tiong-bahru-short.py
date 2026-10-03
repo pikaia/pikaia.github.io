@@ -31,3 +31,6 @@ TIMING_JSON = "audio/peter-sinclair-hunter-the-health-officer-whose-one-report-b
 # Shorts keep burned-in narration captions (muted autoplay); main videos do not -
 # they rely on the uploaded .srt.
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

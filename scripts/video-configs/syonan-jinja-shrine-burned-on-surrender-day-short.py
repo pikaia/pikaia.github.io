@@ -32,3 +32,6 @@ TOTAL_DURATION = 38.325
 TIMING_JSON = "audio/syonan-jinja-shrine-burned-on-surrender-day.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

@@ -697,7 +697,15 @@ timings:**
 Pick a self-contained excerpt — not a mid-sentence truncation. Look for
 a real hook→payoff (→cliffhanger) arc in the real sentence timings: the
 post's opening few sentences almost always work well (title hook
-through the first strong beat). Write a second config,
+through the first strong beat). **It must run longer than one minute**
+(from 2026-10-03): TikTok's creator rewards count only videos over 60
+seconds, and the Short's file is cross-posted there (section 10a);
+YouTube Shorts allow up to 3 minutes, so one file serves both. Aim for
+about 62-75 seconds, ending on a sentence boundary - usually the
+opening sentences through the second strong beat rather than the first.
+`validate_short_config()` refuses a Short of 60 seconds or less; the
+Shorts made before this rule carry `SHORT_UNDER_A_MINUTE_OK = True` so
+they still re-render unchanged. Write a second config,
 `scripts/video-configs/<slug>-short.py`:
 
 ```python
@@ -711,7 +719,7 @@ SLIDES = [
 ]
 
 SCHEDULE = [(0.0, 0), (16.2, 1), (32.4, 2)]
-TOTAL_DURATION = 48.65          # the excerpt's own length, not the full post's
+TOTAL_DURATION = 68.4           # the excerpt's own length, not the full post's - over 60 s
 TIMING_JSON = "audio/<slug>.timing.json"
 
 # Shorts keep burned-in captions (main videos don't, section 6); these

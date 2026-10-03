@@ -27,3 +27,6 @@ TOTAL_DURATION = 36.25
 TIMING_JSON = "audio/what-a-square-foot-of-hdb-flat-has-cost.timing.json"
 
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True

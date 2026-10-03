@@ -37,3 +37,6 @@ TIMING_JSON = "audio/three-days-stock-exchange-shut-1985.timing.json"
 # they rely on the uploaded .srt. Caption size/position come from the
 # DEFAULT_CAPTION_* module constants (small outlined white text, no box).
 BURN_CAPTIONS = True
+
+# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
+SHORT_UNDER_A_MINUTE_OK = True
