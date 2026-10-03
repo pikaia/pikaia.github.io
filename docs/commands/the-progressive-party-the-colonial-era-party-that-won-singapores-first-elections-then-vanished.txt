@@ -1,0 +1,150 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py --out preview-motion/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py --in preview-motion/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.mp4 --out preview-motion/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-short.py --out preview-motion/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md
+      scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py
+      scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+"C:\Users\chris\projects\pikaia.github.io\audio\the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.srt"
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+"C:\Users\chris\projects\pikaia.github.io\audio\the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.srt"
+
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-03-the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.md scripts/video-configs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.py 
+  --youtube-url https://youtu.be/mNiPLrnVCRs
+  --shorts-url 	https://youtube.com/shorts/6xL3hSS2ink
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7692286884029943071
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-progressive-party-the-colonial-era-party-that-won-singapores-first-elections-then-vanished.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done
