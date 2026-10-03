@@ -1766,8 +1766,10 @@ Barings Short, 2026-10-02):
   the avatar, when a Short gets one, is generated artwork); TikTok asks
   creators to label AI-generated content.
 - Audience control: **off**.
-- Cover: "Edit cover" on the thumbnail - pick the title slide or a
-  strong image.
+- Cover (optional): the thumbnail on your profile grid. Leaving it
+  uses the first frame - the opening image with the burned-in title
+  caption, which is usually fine. Use "Edit cover" only if that frame is
+  dark or hard to read.
 
 **Wire the TikTok link into the post** in section 11: once the TikTok
 video is live, copy its URL (Share -> Copy link, of the form
