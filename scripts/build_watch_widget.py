@@ -143,8 +143,13 @@ def build_slides_js(cfg, images_by_key: dict) -> tuple[list[str], int, bool]:
         zoom = json.dumps(slide["zoom"])
         pans = ", ".join(js_pan(p) for p in slide["pan"])
         ease = slide.get("ease", "ease-in-out")
+        # IMAGE_BG (watch_video_lib) flattens a transparent PNG onto a colour
+        # in the video; the widget paints the same colour behind it instead
+        # of the usual blurred copy, which would hide dark legend text.
+        bg = getattr(cfg, "IMAGE_BG", {}).get(key)
+        bgc = f', bgc: "#{bg[0]:02x}{bg[1]:02x}{bg[2]:02x}"' if bg else ""
         lines.append(
-            f'{{ src: {key}, type: "{slide["type"]}", zoom: {zoom}, pan: [{pans}], ease: "{ease}" }},'
+            f'{{ src: {key}, type: "{slide["type"]}", zoom: {zoom}, pan: [{pans}], ease: "{ease}"{bgc} }},'
         )
     return lines, manual_count, has_chart
 
@@ -305,6 +310,7 @@ __CHART_LIB__
       var bg = document.createElement('div');
       bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\\'' + s.src + '\\');transform-origin:' + s.pan[0] + ';';
       bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
+      if (s.bgc) { bg.style.cssText = 'position:absolute;inset:0;background:' + s.bgc + ';'; bg.style.animation = ''; }
       var fg = document.createElement('div');
       fg.style.cssText = 'position:absolute;inset:6%;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:url(\\'' + s.src + '\\');';
       el.appendChild(bg); el.appendChild(fg);

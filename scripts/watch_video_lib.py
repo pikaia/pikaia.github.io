@@ -52,6 +52,9 @@ Config module contract (see scripts/video-configs/ for real examples):
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
                                     relative to the repo root.
     WIDTH, HEIGHT, FPS: int      - optional, default 1280x720x25.
+    IMAGE_BG: dict               - optional {IMAGES key: (r, g, b)}: flatten
+                                    that transparent PNG onto this colour
+                                    (default: alpha dropped -> black).
     BURN_CAPTIONS: bool          - optional, default False (module const).
                                     Landscape videos leave it off and ship
                                     the .srt to YouTube; every -short.py
@@ -193,7 +196,7 @@ def load_config(config_path):
 
 
 @functools.lru_cache(maxsize=None)
-def load_source(img_ref, config_dir):
+def load_source(img_ref, config_dir, bg=None):
     if img_ref.startswith("http://") or img_ref.startswith("https://"):
         CACHE_DIR.mkdir(exist_ok=True)
         digest = hashlib.sha256(img_ref.encode("utf-8")).hexdigest()[:16]
@@ -217,7 +220,18 @@ def load_source(img_ref, config_dir):
     # Found 2026-09-23 on the opium post's tomb photo (an iPhone JPEG),
     # via a direct compose_frame_at() spot-check - the live post itself was
     # never affected, only this Python rendering path.
-    return ImageOps.exif_transpose(Image.open(path)).convert("RGB")
+    img = ImageOps.exif_transpose(Image.open(path))
+    # bg: flatten a transparent image (a map or emblem PNG) onto this colour
+    # instead of letting convert("RGB") drop the alpha, which leaves the
+    # transparent areas black - and black legend text invisible. Opt-in per
+    # image via a config's IMAGE_BG = {key: (r, g, b)}; unset, behaviour is
+    # unchanged. Added 2026-10-03 for the Progressive Party post's maps.
+    if bg is not None and (img.mode in ("RGBA", "LA") or "transparency" in img.info):
+        rgba = img.convert("RGBA")
+        flat = Image.new("RGBA", rgba.size, tuple(bg) + (255,))
+        flat.alpha_composite(rgba)
+        return flat.convert("RGB")
+    return img.convert("RGB")
 
 
 @functools.lru_cache(maxsize=None)
@@ -628,7 +642,8 @@ def _prepare_slide(cfg, i, out_w, out_h):
     slide = cfg.SLIDES[i]
     if slide["type"] in ("chart", "route-walk"):
         return None
-    src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir)
+    src = load_source(cfg.IMAGES[slide["img"]], cfg._config_dir,
+                      bg=getattr(cfg, "IMAGE_BG", {}).get(slide["img"]))
     max_zoom = max(slide["zoom"])
     is_letterbox = slide["type"] == "letterbox"
     work_scale = LETTERBOX_WORK_SCALE if is_letterbox else WORK_SCALE

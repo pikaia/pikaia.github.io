@@ -522,6 +522,13 @@ WIDTH, HEIGHT, FPS = 1280, 720, 25
 # description instead of flagging the image [REVIEW CREDIT].
 CREDITS = {"CHART": "Chart by Lesser Known Singapore, data: <source>"}
 
+# Optional. Flatten a transparent PNG (a results map, an emblem) onto a
+# colour instead of the default, which drops the alpha channel to black and
+# hides dark legend text. The Watch widget (section 4) paints the same
+# colour behind that slide. Check each graphic: a white-on-transparent
+# emblem wants to stay on black.
+IMAGE_BG = {"MAP": (232, 230, 224)}
+
 # Optional. The avatar presenter (sections 1.5, 6a, 6b) - a lip-synced
 # corner bubble. Leave it out and those steps skip themselves.
 AVATAR = {
