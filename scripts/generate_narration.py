@@ -1752,6 +1752,14 @@ PRONUNCIATION_OVERRIDES = {
     "Ong-Piah-Teng": "ˌɒŋ pˌiːɑ tˌɛŋ",
     "Chua-Keh-Hai": "ʧˌuːə kˌɛ hˌI",
     "Aw-Boon-Haw": "ˌɔː bˌuːn hˌɔː",
+    # Four ambiguous readings, ear-picked by Chris (2026-10-03) from samples in
+    # scratch/uob/samples/<word>/ - candidate 1 of 3 each.
+    "Wee-Kheng-Chiang": "wˌiː kˌɛŋ ʧjˌaŋ",      # "chyang".
+    "Wee-Kheng-Chiang's": "wˌiː kˌɛŋ ʧjˌaŋz",
+    "Chiang": "ʧjˈaŋ",                          # same reading alone - the Bian Chiang Bank.
+    "Wee-Ee-Cheong": "wˌiː ˌiː ʧjˌɒŋ",          # "chyong".
+    "Lien-Ying-Chow": "lˌiən jˌɪŋ ʧˌW",         # "LEE-en".
+    "Karimun": "kəɹˈiːmʊn",                     # "kuh-REE-moon" - the Indonesian island.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1951,6 +1959,9 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bOng Piah Teng\b"): "Ong-Piah-Teng",
     re.compile(r"\bChua Keh Hai\b"): "Chua-Keh-Hai",
     re.compile(r"\bAw Boon Haw\b"): "Aw-Boon-Haw",
+    re.compile(r"\bWee Kheng Chiang\b"): "Wee-Kheng-Chiang",
+    re.compile(r"\bWee Ee Cheong\b"): "Wee-Ee-Cheong",
+    re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
 }
 
 
