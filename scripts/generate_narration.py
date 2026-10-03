@@ -1729,6 +1729,12 @@ PRONUNCIATION_OVERRIDES = {
     "Paglar": "pˈaɡlɑː",              # "PAG-lar" - C. J. Paglar.
     "Menon": "mˈAnən",                # "MAY-nun" - Vilasini Menon (Malayalam name).
     "UMNO": "ˈʌmnO",                  # "UM-no", said as a word, as in Malaysia.
+    # Four ambiguous names, ear-picked by Chris (2026-10-03) from samples in
+    # scratch/pp/samples/<word>/ - candidate 1 of 3 each.
+    "Samat": "sˈɑmɑt",                # "SAH-maht" - Dr Abdul Samat.
+    "Kulasingha": "kˌʊləsˈɪŋɡə",      # "koo-luh-SING-guh" - H. J. C. Kulasingha.
+    "Vilasini": "vɪlˈɑːsɪni",         # "vi-LAH-si-nee" - Vilasini Menon.
+    "Rochore": "ɹˈOʧɔː",              # "ROH-chor" - the 1955 constituency (today's Rochor).
     # Three-part names fused with even stress (see "Lim-Boon-Keng" above):
     "Thio-Chan-Bee": "tˌiO ʧˌan bˌiː",
     "Lim-Yew-Hock": "lˌɪm jˌuː hˌɒk",
