@@ -1223,15 +1223,14 @@ This does two things, both instantly (no rendering of the real video):
 2. **Smoothness check** — renders ~4s of test frames per slide through
    the real frame-compose code path and flags any slide where
    consecutive frames go near-identical for 2+ frames in a row
-   (JERKY). **Known false positives, not bugs:** a `letterbox` slide
-   with zero pan (foreground pinned) always reads JERKY because the
-   static foreground dominates the pixel-diff metric regardless of how
-   smoothly the blurred background is actually moving; a `chart` slide
-   reads JERKY for the same reason (mostly-static gridlines/background
-   dominate the frame). Real jerkiness only shows up on `cover`-type
-   slides or any slide with genuine pan movement — don't block a
-   render on the two false-positive cases above, but do treat a JERKY
-   `cover` slide as a real problem to fix (usually means too little
+   (JERKY). A `letterbox` slide with zero pan (foreground pinned) and
+   any `chart` slide hold still by design - the static foreground or
+   gridlines dominate the pixel-diff metric - so since 2026-10-03 the
+   check reports them as `static (letterbox)` / `static (chart)`
+   instead and they don't fail it. A letterbox slide whose pan moves
+   is still checked normally. Treat any remaining JERKY slide (a
+   `cover` slide, or a slide with real pan movement) as a real problem
+   to fix (usually means too little
    supersampling headroom for that slide's pan distance/duration —
    see `WORK_SCALE`/`LETTERBOX_WORK_SCALE` at the top of
    `watch_video_lib.py` if this ever needs deeper investigation).
@@ -2031,10 +2030,10 @@ after the scheduled date, `publish-early-reset.sh <slug>`.
   check that the mp3 file actually exists at the derived path and that
   ffmpeg's `-map 0:v -map 1:a -c:a aac -shortest` args are present in
   the command it builds.
-- **A slide reads "JERKY" in `--check-only`.** Check whether it's a
-  `letterbox` slide with zero pan or a `chart` slide first — both are
-  documented false positives (section 5). Only investigate further if
-  it's a `cover` slide or a slide with real pan movement.
+- **A slide reads "JERKY" in `--check-only`.** It's a `cover` slide or a
+  slide with real pan movement (pinned letterbox and chart slides now
+  read `static (...)` instead, section 5) - usually a slow push-in over
+  a long slide; widen its zoom range or add a small pan drift.
 - **A render "looks stalled".** Don't kill it on a flat file-size
   reading alone — check for a genuine completion signal (log line,
   process actually gone) first; ffmpeg's disk writes are bursty.

@@ -836,6 +836,17 @@ def write_gap_report(cfg, gaps, slug):
     return report_path
 
 
+def static_slide_kind(slide):
+    """'letterbox' or 'chart' when held frames are expected by design (a
+    pinned letterbox foreground, or a chart's mostly-still frame), else None.
+    A letterbox slide whose pan moves is checked normally."""
+    if slide["type"] == "chart":
+        return "chart"
+    if slide["type"] == "letterbox" and len(set(map(tuple, slide.get("pan", [])))) <= 1:
+        return "letterbox"
+    return None
+
+
 def check_smoothness(cfg, duration=4.0, sample_slides=None):
     # Render a short slice of every requested slide through the exact same
     # compose_frame_at() code path the real render uses (critical - a
@@ -860,6 +871,10 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
     # by diffing just the line-tip region across frames instead of the whole
     # frame - real, continuous, non-repeating motion every frame - before
     # concluding the JERKY flag here was the metric, not the rendering.
+    #
+    # So both classes are reported as "static (letterbox)" / "static (chart)"
+    # instead of JERKY and don't fail the check (see static_slide_kind()); a
+    # letterbox slide whose pan actually moves still gets the normal verdict.
     import numpy as np
 
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
@@ -894,10 +909,15 @@ def check_smoothness(cfg, duration=4.0, sample_slides=None):
                 max_held_streak = max(max_held_streak, streak)
             else:
                 streak = 0
-        status = "JERKY" if max_held_streak >= 2 else "smooth"
-        if max_held_streak >= 2:
-            any_bad = True
         slide = cfg.SLIDES[slide_idx]
+        static_kind = static_slide_kind(slide)
+        if max_held_streak < 2:
+            status = "smooth"
+        elif static_kind:
+            status = f"static ({static_kind})"
+        else:
+            status = "JERKY"
+            any_bad = True
         label = slide.get("img", slide["type"])
         print(f"slide {slide_idx} ({label}, {slide['type']}): "
               f"{held}/{max(1, len(frames)-1)} held-frame gaps, max consecutive streak {max_held_streak} -> {status}",
@@ -1195,7 +1215,7 @@ def main():
 
     if args.check_only:
         ok = check_smoothness(cfg, duration=args.check_duration)
-        print("ALL SMOOTH" if ok else "SOME JERKY (see per-slide detail above; letterbox+zero-pan false positives are expected)", file=sys.stderr)
+        print("ALL SMOOTH (any 'static' slides hold still by design)" if ok else "SOME JERKY (see per-slide detail above)", file=sys.stderr)
         sys.exit(0 if ok else 1)
 
     if not args.out:
