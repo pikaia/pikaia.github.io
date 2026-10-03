@@ -353,6 +353,15 @@ Example:
     echo
   } 2>&1 | tee -a logs/<slug>.log
   ```
+  Example:
+  ```
+  { echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+    cmd=(python scripts/join_narration_parts.py audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    echo
+  } 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+  ```
 
 ---
 
@@ -381,6 +390,17 @@ config's `TOTAL_DURATION` and refuses a stale one, naming this step.
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/<slug>.log
+```
+
+**Example:**
+
+```
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/jalan-payoh-lai-kangkar-montfort-nativity-church.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 The summary prints the level spread and the shape spread (Barings, for
@@ -1337,6 +1357,17 @@ safe to run from Claude's own tool.
 } 2>&1 | tee -a logs/<slug>.log
 ```
 
+**Example:**
+
+```
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
+```
+
 ### 6b. Overlay the avatar (optional)
 
 Lays the 6a track over the finished main video in one ffmpeg pass and
@@ -1356,6 +1387,17 @@ the config's `AVATAR` (re-run 6a after changing `size`).
   time "${cmd[@]}"
   echo
 } 2>&1 | tee -a logs/<slug>.log
+```
+
+**Example:**
+
+```
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/jalan-payoh-lai-kangkar-montfort-nativity-church.py --in preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church.mp4 --out preview-motion/jalan-payoh-lai-kangkar-montfort-nativity-church-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jalan-payoh-lai-kangkar-montfort-nativity-church.log
 ```
 
 **Order:** any route-walk clip splices go into `<slug>.mp4` first; the
