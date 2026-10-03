@@ -362,35 +362,19 @@ Example:
 
 ---
 
-### 1.5 Build the avatar mouth track (optional)
+### 1.5 Build the avatar mouth track
 
-Only for a post whose main video config sets `AVATAR` (section 3; the
-avatar presenter — see
-`docs/superpowers/specs/2026-10-02-avatar-presenter-design.md`). Reads
-the finished narration and writes `audio/<slug>.avatar.json`: one mouth
-level (0 closed .. 3 wide) per video frame from the audio's loudness,
-plus blink frames seeded by the slug (identical on every rerun). Takes
-about a second. Commit the `.avatar.json` with the audio in section 12.
-
-**Mouth shapes (on by default):** besides how open the mouth is, the
-script picks shaped mouths for the sounds viewers notice - closed lips on
-m/b/p, lip on teeth on f/v, pursed on oo/w/o, wide on ee - from Kokoro's
-own per-sound timings (`scripts/avatar_visemes.py`). It reads
-`audio/<slug>.timing.json`, loads Kokoro once and runs only its duration
-step (no audio is made; about 20-25 s for a 10-minute narration). Each
-shape shows one frame before its sound, as animators lead lip movement.
-Each sentence must pass two checks before it gets shapes: its audio was
-made with today's pronunciation overrides (its `.narration-cache` entry
-under today's key exists with the right length), and its re-computed
-sounds add up to its real length. A sentence that fails **falls back**
-to loudness-only and is listed - harmless. The usual cause is an
-override added since the narration was made (likely when adding the
-avatar to an older post): re-run step 1.2 (a normal run - the cache
-re-synthesizes only the affected sentences, no `--no-cache` needed),
-then this step. If nearly every sentence falls back, the narration used
-another voice - pass `--voice`. `--no-shapes`
-skips all of this (loudness only, no Kokoro). If the narration voice
-isn't `bm_george`, pass `--voice <name>`.
+Run it straight after the narration (1.2-1.4), every time while the
+avatar presenter is being tested - it only needs the finished mp3 and
+its `timing.json`, not the video config, so it doesn't wait for section
+3 (Claude writes the configs in parallel). It writes
+`audio/<slug>.avatar.json`: one mouth level (0 closed .. 3 wide) and one
+mouth shape per video frame, plus blink frames seeded by the slug
+(identical on every rerun). The file only takes effect if the main
+config sets `AVATAR` (section 3; see
+`docs/superpowers/specs/2026-10-02-avatar-presenter-design.md`) - for a
+post without it, steps 6a/6b skip themselves and the file is harmless.
+Commit the `.avatar.json` with the audio in section 12.
 
 **Re-run it whenever the mp3 changes** (a late pronunciation fix, a
 `--no-cache` resynthesis): step 6a compares the file's duration with the
