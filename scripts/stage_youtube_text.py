@@ -334,6 +334,22 @@ def load_video_config(config_path: Path):
     return module
 
 
+YOUTUBE_TITLE_LIMIT = 100
+
+
+def short_title(title: str) -> str:
+    """The Short's title: the post title plus " #Shorts", within YouTube's
+    100-character limit. Too long, it uses the part after the title's colon
+    (usually the descriptive half); still too long, it cuts at a word."""
+    tag = " #Shorts"
+    for candidate in (title, title.split(": ", 1)[1] if ": " in title else None):
+        if candidate and len(candidate) + len(tag) <= YOUTUBE_TITLE_LIMIT:
+            return candidate + tag
+    room = YOUTUBE_TITLE_LIMIT - len(tag) - 1
+    cut = title[:room].rsplit(" ", 1)[0].rstrip(",;:")
+    return cut + "…" + tag
+
+
 def optional_config(config_path: Path | None):
     """The config module, or None when no path was given or the config
     isn't written yet (the stager runs before a video exists, too)."""
@@ -674,7 +690,7 @@ def main() -> None:
     out_lines.append("=== SHORT ===")
     out_lines.append("")
     out_lines.append("Title:")
-    out_lines.append(f"{title} #Shorts")
+    out_lines.append(short_title(title))
     out_lines.append("")
     out_lines.append("Description:")
     out_lines.append(f"{hook} #Shorts")
@@ -726,6 +742,12 @@ def main() -> None:
         elif desc_len > 4700:
             print(f"NOTE: the FULL VIDEO description is {desc_len} chars (YouTube limit 5,000) - "
                   f"close to the cap.", file=sys.stderr)
+    if len(title) > YOUTUBE_TITLE_LIMIT:
+        print(f"WARNING: the title is {len(title)} chars - over YouTube's {YOUTUBE_TITLE_LIMIT}. "
+              f"Shorten the FULL VIDEO title before uploading.", file=sys.stderr)
+    if short_title(title) != f"{title} #Shorts":
+        print(f"NOTE: the Short's title was shortened to fit YouTube's {YOUTUBE_TITLE_LIMIT} characters: "
+              f"{short_title(title)!r} - edit it by hand if you prefer another wording.", file=sys.stderr)
     if tiktok_over_limit(tiktok_text):
         print(f"WARNING: the TikTok caption is {len(tiktok_text)} chars - over the "
               f"{TIKTOK_CAPTION_LIMIT:,} limit. Trim the Images lines before pasting.", file=sys.stderr)
