@@ -1769,15 +1769,18 @@ Barings Short, 2026-10-02):
 - Cover: "Edit cover" on the thumbnail - pick the title slide or a
   strong image.
 
-**No URL wiring needed.** The post links to YouTube only (section 11);
-TikTok isn't linked from the blog.
+**Wire the TikTok link into the post** in section 11: once the TikTok
+video is live, copy its URL (Share -> Copy link, of the form
+`https://www.tiktok.com/@lesserknownsingapore/video/<id>`) and pass it as
+`--tiktok-url`. The post's icon row gets a TikTok button after Shorts.
 
 ---
 
 ## 11. Wire the published URLs into the post
 
 **The easiest path is re-running section 4's script** with
-`--youtube-url`/`--shorts-url` now that both are known — it replaces
+`--youtube-url`/`--shorts-url` (and `--tiktok-url`, if the Short went to
+TikTok, section 10a) now that they are known — it replaces
 the whole widget block in place (safe, idempotent) and adds the row's
 YouTube/Shorts buttons as part of that, so the manual markup edit below
 is now a fallback, not the default: use it only when hand-patching a
@@ -1796,7 +1799,7 @@ Python video config, which carries the full slide definition.
 
 ```
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
-  cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/...)
+  cmd=(python scripts/build_watch_widget.py _posts/<file>.md scripts/video-configs/<slug>.py --youtube-url https://youtu.be/... --shorts-url https://youtube.com/shorts/... --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo

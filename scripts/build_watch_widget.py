@@ -37,7 +37,8 @@ Usage:
         _posts/<file>.md \\
         scripts/video-configs/<slug>.py \\
         [--youtube-url https://youtu.be/...] \\
-        [--shorts-url https://youtube.com/shorts/...]
+        [--shorts-url https://youtube.com/shorts/...] \\
+        [--tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...]
 """
 import argparse
 import hashlib
@@ -154,7 +155,8 @@ def build_slides_js(cfg, images_by_key: dict) -> tuple[list[str], int, bool]:
     return lines, manual_count, has_chart
 
 
-def build_row_markup(youtube_url: str | None, shorts_url: str | None, grad_id: str) -> str:
+def build_row_markup(youtube_url: str | None, shorts_url: str | None, grad_id: str,
+                     tiktok_url: str | None = None) -> str:
     parts = [
         '<div style="display: flex; gap: 2em; margin: 0.5em 0 1.5em 0; align-items: flex-end;">',
         '  <div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; user-select: none;">',
@@ -191,6 +193,21 @@ def build_row_markup(youtube_url: str | None, shorts_url: str | None, grad_id: s
             "      </svg>",
             "    </span>",
             '    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Shorts</span>',
+            "  </a>",
+        ]
+    if tiktok_url:
+        # The Short's file, cross-posted to TikTok (pipeline section 10a).
+        parts += [
+            f'  <a href="{tiktok_url}" target="_blank" rel="noopener" aria-label="Watch a short version of this story on TikTok" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">',
+            '    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">',
+            '      <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true">',
+            '        <rect x="1" y="1" width="22" height="22" rx="7" fill="#000"/>',
+            '        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#25F4EE" transform="translate(-0.6 -0.4)"/>',
+            '        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#FE2C55" transform="translate(0.6 0.4)"/>',
+            '        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#fff"/>',
+            "      </svg>",
+            "    </span>",
+            '    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">TikTok</span>',
             "  </a>",
         ]
     parts.append("</div>")
@@ -668,12 +685,18 @@ def find_existing_urls(text: str) -> tuple[str | None, str | None]:
     return main_url, short_url
 
 
+def find_existing_tiktok_url(text: str) -> str | None:
+    m = re.search(r'href="(https://(?:www\.|vm\.)?tiktok\.com/[^"]+)"', text)
+    return m.group(1) if m else None
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("post_path")
     ap.add_argument("config_path", help="scripts/video-configs/<slug>.py")
     ap.add_argument("--youtube-url", default=None)
     ap.add_argument("--shorts-url", default=None)
+    ap.add_argument("--tiktok-url", default=None, help="the Short cross-posted to TikTok (section 10a)")
     args = ap.parse_args()
 
     post_path = Path(args.post_path)
@@ -689,9 +712,10 @@ def main() -> None:
     existing_youtube, existing_shorts = find_existing_urls(post_text)
     youtube_url = args.youtube_url or existing_youtube
     shorts_url = args.shorts_url or existing_shorts
+    tiktok_url = args.tiktok_url or find_existing_tiktok_url(post_text)
 
     grad_id = gradient_id(slug)
-    row_markup = build_row_markup(youtube_url, shorts_url, grad_id)
+    row_markup = build_row_markup(youtube_url, shorts_url, grad_id, tiktok_url)
     watch_script, manual_count, _has_chart = build_watch_script(cfg, slug)
 
     block = "\n\n".join([
