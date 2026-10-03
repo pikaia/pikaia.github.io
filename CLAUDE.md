@@ -111,7 +111,10 @@ helpers.
 
 Pipeline tests live in `tests/` (pytest): run `python -m pytest tests -v` alongside
 `ruff check .` before committing script changes. Cheap automated tests are preferred —
-add them for new script logic.
+add them for new script logic. GitHub Actions (`.github/workflows/tests.yml`) runs the same
+`ruff check .` + fast pytest suite on every push and pull request, on a Windows runner
+(the caption tests need Arial); the `slow` Kokoro tests run locally only
+(`python -m pytest tests -m slow`). Test dependencies are pinned in `requirements-dev.txt`.
 
 ## Git
 
