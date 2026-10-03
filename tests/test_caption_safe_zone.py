@@ -42,3 +42,11 @@ def test_template_short_caption_clears_platform_overlays():
                                     CAPTION_MAX_WIDTH_FRAC=0.86, CAPTION_Y_FRAC=y)
         bottom = caption_bottom(cfg)
         assert bottom < PLATFORM_OVERLAY_TOP * H, f"CAPTION_Y_FRAC = {y} puts caption bottom at {bottom}px"
+
+
+def test_caption_font_is_arial_not_the_fallback():
+    # Without Arial, load_font() falls back to PIL's built-in default font
+    # (itself a FreeTypeFont, but loaded from memory at a fixed small size),
+    # and the safe-zone tests above would pass without proving anything.
+    font = wvl.load_font(38)
+    assert "arial" in str(getattr(font, "path", "")).lower() and font.size == 38

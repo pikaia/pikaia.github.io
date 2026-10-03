@@ -1,0 +1,29 @@
+name: Tests
+
+# Runs ruff and the pipeline's pytest suite on every push and pull request.
+# Windows, to match the machine the pipeline runs on (the burned-caption
+# tests need Arial, which Linux runners don't have). The `slow` tests load
+# the Kokoro TTS model and are skipped here (pyproject.toml's default).
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check .
+      - run: python -m pytest tests -q
