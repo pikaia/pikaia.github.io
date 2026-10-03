@@ -372,6 +372,20 @@ level (0 closed .. 3 wide) per video frame from the audio's loudness,
 plus blink frames seeded by the slug (identical on every rerun). Takes
 about a second. Commit the `.avatar.json` with the audio in section 12.
 
+**Mouth shapes (on by default):** besides how open the mouth is, the
+script picks shaped mouths for the sounds viewers notice - closed lips on
+m/b/p, lip on teeth on f/v, pursed on oo/w/o, wide on ee - from Kokoro's
+own per-sound timings (`scripts/avatar_visemes.py`). It reads
+`audio/<slug>.timing.json`, loads Kokoro once and runs only its duration
+step (no audio is made; about 20-25 s for a 10-minute narration). Each
+shape shows one frame before its sound, as animators lead lip movement.
+Each sentence is checked against its real length in the audio; one that
+no longer matches (an override changed after that sentence was cached)
+**falls back** to loudness-only and is listed - harmless, but re-running
+step 1.2 with `--no-cache` and then this step clears it. `--no-shapes`
+skips all of this (loudness only, no Kokoro). If the narration voice
+isn't `bm_george`, pass `--voice <name>`.
+
 **Re-run it whenever the mp3 changes** (a late pronunciation fix, a
 `--no-cache` resynthesis): step 6a compares the file's duration with the
 config's `TOTAL_DURATION` and refuses a stale one, naming this step.
@@ -385,8 +399,9 @@ config's `TOTAL_DURATION` and refuses a stale one, naming this step.
 } 2>&1 | tee -a logs/<slug>.log
 ```
 
-The summary line prints the level spread (Barings, for reference:
-`0:39%  1:17%  2:38%  3:7%`). A spread wildly different from that on a
+The summary prints the level spread and the shape spread (Barings, for
+reference: `0:39%  1:17%  2:38%  3:7%`, shapes `M:6%  F:4%  U:11%  E:11%`,
+0 sentences fell back). A spread wildly different from that on a
 normal narration is worth a look before rendering.
 
 ---

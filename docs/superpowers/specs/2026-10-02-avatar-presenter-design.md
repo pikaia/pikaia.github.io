@@ -19,7 +19,7 @@ services, no hosted avatar/lip-sync APIs, no cloud rendering.
 |---|---|---|
 | **1 (this spec)** | Corner bubble during intro + outro ranges only, main landscape video only, `bm_george` voice | — |
 | 2 | Same bubble for the whole video (`"ranges": [(0, None)]`) | Phase 1 retention improves |
-| Later, separate projects | Local voice clone of Chris (see voice-clone note below); Shorts; in-post Watch widget (JS, reusing the same SVG + mouth file); phoneme-shaped mouths; expressions | Each on its own merits |
+| Later, separate projects | Local voice clone of Chris (see voice-clone note below); Shorts; in-post Watch widget (JS, reusing the same SVG + mouth file); phoneme-shaped mouths (**done 2026-10-02**, `docs/superpowers/specs/2026-10-02-avatar-shaped-mouths-design.md`); expressions | Each on its own merits |
 
 Phase 1 design choices are made so the later phases don't need rework: the
 mouth file is voice-agnostic (amplitude-based), and the SVG + JSON pair is
