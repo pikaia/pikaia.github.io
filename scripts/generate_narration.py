@@ -1767,6 +1767,12 @@ PRONUNCIATION_OVERRIDES = {
     "summed": "sˈʌmd",
     "Battlebox": "bˈætᵊlbɒks",      # the Fort Canning bunker.
     "Lee-Keng-Yan": "lˌiː kˌAŋ jˌɑːn",   # fused, even stress; "Keng" and "Yan" as above.
+    # Three ambiguous readings, ear-picked by Chris (2026-10-04) from samples in
+    # scratch/fort-palmer-fort-canning-and-the-forts-that-guarded-a-free-port/ -
+    # candidate 1 of 3 each.
+    "Siloso": "sɪlˈOsO",            # "si-LOH-soh" - Fort Siloso, Sentosa.
+    "Serapong": "səɹˈɑːpɒŋ",        # "suh-RAH-pong" - Fort Serapong, Sentosa.
+    "Tan-Keong-Saik": "tˌan kiˌɒŋ sˌAk",  # "SAYK".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1970,6 +1976,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWee Ee Cheong\b"): "Wee-Ee-Cheong",
     re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
     re.compile(r"\bLee Keng Yan\b"): "Lee-Keng-Yan",
+    re.compile(r"\bTan Keong Saik\b"): "Tan-Keong-Saik",
 }
 
 
