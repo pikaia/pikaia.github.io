@@ -188,6 +188,20 @@ run finishes, without you needing to say "done" after every one. Only
 Claude can arm it (it's a Claude Code tool, not something run from your
 own terminal); the script itself is just the reusable watching logic.
 
+**The per-post command file [Claude].** As soon as a new post's draft is
+pushed, Claude writes `docs/commands/<slug>.txt`, every step from 1.1 to 12
+wrapped in the tee-to-log block, ready for Chris to paste:
+
+```
+python scripts/make_command_file.py _posts/<date>-<slug>.md
+```
+
+It fills in `docs/commands/TEMPLATE.txt`. Step 11's URLs are placeholders to
+replace after upload, and the subtitle path is a comment line (a bare path
+would run the `.srt` as a shell script). It refuses to overwrite an existing
+file, which may hold pasted URLs, unless given `--force`. A change to the
+steps themselves goes into `TEMPLATE.txt`, so later posts pick it up.
+
 ---
 
 ## 1. Generate narration audio
