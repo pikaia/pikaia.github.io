@@ -129,7 +129,8 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
-# Subtitles for YouTube (paste this path, do not run it): "C:\Users\chris\projects\pikaia.github.io\audio\{SLUG}.srt"
+# Subtitles for YouTube (paste this path, do not run it):
+# "C:\Users\chris\projects\pikaia.github.io\audio\{SLUG}.srt"
 
 
 
@@ -137,8 +138,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
  steps 4 to 9 done, review logs
 ================================================================================================================================
 
-# Subtitles for YouTube (paste this path, do not run it): 
- 
+# Subtitles for YouTube (paste this path, do not run it):
 # "C:\Users\chris\projects\pikaia.github.io\audio\{SLUG}.srt"
 
 

@@ -137,7 +137,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
  steps 4 to 9 done, review logs
 ================================================================================================================================
 
-# Subtitles for YouTube (paste this path, do not run it): "C:\Users\chris\projects\pikaia.github.io\audio\uob-the-united-chinese-bank-of-1935-and-the-family-that-built-it.srt"
+# Subtitles for YouTube (paste this path, do not run it): 
+ 
+# "C:\Users\chris\projects\pikaia.github.io\audio\uob-the-united-chinese-bank-of-1935-and-the-family-that-built-it.srt"
 
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
