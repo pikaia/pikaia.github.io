@@ -1779,6 +1779,14 @@ PRONUNCIATION_OVERRIDES = {
     "Mutoh": "mˈuːtO",             # "MOO-toh".
     "Ishii": "iʃˈiː",              # "ee-SHEE" - Yasuo Ishii.
     "Deoli": "dˈAoli",             # "DAY-oh-lee" - the internment camp in Rajasthan.
+    # Ear-picked by Chris (2026-10-05) from samples in
+    # scratch/the-yokohama-specie-bank-japans-bank-in-prewar-singapore/:
+    "Meyer": "mˈAəɹ",              # c2 "MAY-er" - Meyer Chambers.
+    # c1: Japanese names with light, even stress, closer to Japanese.
+    "Nakamura": "nˌɑkɑmˌuɹɑ",
+    "Unagami": "ˌunɑɡˌɑmi",
+    "Yasuo": "jˌɑsuˌO",
+    "Okada": "ˌOkɑdˌɑ",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
