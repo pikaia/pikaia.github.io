@@ -1760,6 +1760,13 @@ PRONUNCIATION_OVERRIDES = {
     "Wee-Ee-Cheong": "wˌiː ˌiː ʧjˌɒŋ",          # "chyong".
     "Lien-Ying-Chow": "lˌiən jˌɪŋ ʧˌW",         # "LEE-en".
     "Karimun": "kəɹˈiːmʊn",                     # "kuh-REE-moon" - the Indonesian island.
+    # Forts post (2026-10-04): single-reading fixes for words misaki doesn't know.
+    "Blakang": "blˈɑːkɑŋ",          # "BLAH-kahng" - Pulau Blakang Mati, now Sentosa.
+    "Mati": "mˈɑːti",               # "MAH-tee".
+    "Anderson": "ˈændəɹsən",        # the surname.
+    "summed": "sˈʌmd",
+    "Battlebox": "bˈætᵊlbɒks",      # the Fort Canning bunker.
+    "Lee-Keng-Yan": "lˌiː kˌAŋ jˌɑːn",   # fused, even stress; "Keng" and "Yan" as above.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1962,6 +1969,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWee Kheng Chiang\b"): "Wee-Kheng-Chiang",
     re.compile(r"\bWee Ee Cheong\b"): "Wee-Ee-Cheong",
     re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
+    re.compile(r"\bLee Keng Yan\b"): "Lee-Keng-Yan",
 }
 
 
