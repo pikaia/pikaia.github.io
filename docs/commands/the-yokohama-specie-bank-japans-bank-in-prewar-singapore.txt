@@ -1,0 +1,159 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md audio/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md audio/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md the-yokohama-specie-bank-japans-bank-in-prewar-singapore)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py --out preview-motion/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py --in preview-motion/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.mp4 --out preview-motion/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-short.py --out preview-motion/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md
+      scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py
+      scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+# Subtitles for YouTube (paste this path, do not run it):
+# "C:\Users\chris\projects\pikaia.github.io\audio\the-yokohama-specie-bank-japans-bank-in-prewar-singapore.srt"
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+# Subtitles for YouTube (paste this path, do not run it):
+# "C:\Users\chris\projects\pikaia.github.io\audio\the-yokohama-specie-bank-japans-bank-in-prewar-singapore.srt"
+
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-05-the-yokohama-specie-bank-japans-bank-in-prewar-singapore.md scripts/video-configs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.py 
+  --youtube-url https://youtu.be/...
+  --shorts-url https://youtube.com/shorts/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-yokohama-specie-bank-japans-bank-in-prewar-singapore.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done

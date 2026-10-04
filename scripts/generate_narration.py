@@ -1773,6 +1773,12 @@ PRONUNCIATION_OVERRIDES = {
     "Siloso": "sɪlˈOsO",            # "si-LOH-soh" - Fort Siloso, Sentosa.
     "Serapong": "səɹˈɑːpɒŋ",        # "suh-RAH-pong" - Fort Serapong, Sentosa.
     "Tan-Keong-Saik": "tˌan kiˌɒŋ sˌAk",  # "SAYK".
+    # Yokohama Specie Bank post (2026-10-05): single-reading fixes.
+    "Shimbun": "ʃˈɪmbʊn",          # "SHIM-boon" - the Syonan Shimbun.
+    "Jukichi": "ʤˈuːkiʧi",         # "JOO-kee-chee" - Jukichi Okada.
+    "Mutoh": "mˈuːtO",             # "MOO-toh".
+    "Ishii": "iʃˈiː",              # "ee-SHEE" - Yasuo Ishii.
+    "Deoli": "dˈAoli",             # "DAY-oh-lee" - the internment camp in Rajasthan.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2494,7 +2500,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
