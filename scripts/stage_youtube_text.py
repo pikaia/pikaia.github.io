@@ -323,7 +323,13 @@ def extract_sources(text: str) -> list[str]:
         if not line.startswith("- "):
             continue
         link_m = SOURCE_LINK_RE.match(line[2:])
-        lines.append("- " + (link_m.group(1) if link_m else clean_text(line[2:])))
+        entry = link_m.group(1) if link_m else clean_text(line[2:])
+        # Commons file pages ("File:..., Wikimedia Commons") are image credits,
+        # already covered by the Images list; repeating them as sources is what
+        # pushed image-heavy posts over YouTube's 5,000-character limit.
+        if entry.startswith("File:"):
+            continue
+        lines.append("- " + entry)
     return lines
 
 
