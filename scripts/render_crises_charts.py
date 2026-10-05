@@ -55,6 +55,24 @@ GROWTH_MAX = 42.0  # per cent; the largest single fall is -41.7 (construction, 2
 # % change (tint, upper) and its contribution in points (solid, lower).
 PCT_FRAC, PTS_FRAC = 0.26, 0.36  # max bar length as a fraction of the column width (PNG)
 PCT_FRAC_SVG = 0.17  # narrower in the post, where labels are wider relative to the column
+# The figures the post's text cites: (year, industry, "g" own % change | "c" points).
+# Only these (and the whole-economy row) keep a label and full colour; the rest are
+# faded, with their values still in the hover tooltip and the table.
+CITED = {(1985, "Construction", "g"), (1985, "Construction", "c"), (1985, "Manufacturing", "g"),
+         (1985, "Manufacturing", "c"), (1985, "Finance and insurance", "c"),
+         (1998, "Finance and insurance", "g"), (1998, "Finance and insurance", "c"),
+         (2001, "Manufacturing", "g"), (2001, "Manufacturing", "c"),
+         (2009, "Transport and storage", "g"), (2009, "Manufacturing", "g"),
+         (2020, "Construction", "g"), (2020, "Construction", "c"), (2020, "Hotels and food services", "g"),
+         (2020, "Business services and real estate", "g"), (2020, "Manufacturing", "g"), (2020, "Manufacturing", "c")}
+
+
+def _cited(yv, sec, kind):
+    return sec == "Whole economy" or (yv, sec, kind) in CITED
+
+
+def _fade(rgb, a=0.3):
+    return tuple(round(c * a + b * (1 - a)) for c, b in zip(rgb, CHART_BG))
 
 
 def _frame(title, sub, foot):
@@ -100,7 +118,7 @@ def gdp_png():
 def sectors_png():
     img, d = _frame("What each crisis cost, by industry",
                     "Each industry's own change in the crisis year (light bars, %) and what it added to or took off GDP growth (solid bars, points)",
-                    "Source: Singapore Department of Statistics, GDP by industry (M015721) and contribution to growth (M015741). The two bars use different scales.")
+                    "Source: SingStat tables M015721 and M015741. The two bars use different scales. Labelled: the figures discussed.")
     years = sorted(CRISIS)
     lab_w, x0, x1, top, bot = 330, 350, 1230, 152, 655
     col = (x1 - x0) / len(years)
@@ -121,16 +139,18 @@ def sectors_png():
         for j, yv in enumerate(years):
             cx = x0 + col * (j + 0.5)
             if total:
-                bars = [(GROWTH[yv], col * PTS_FRAC / CONTRIB_MAX, DOWN, UP, f"{GROWTH[yv]:+.1f}%", cy, 7)]
+                bars = [(GROWTH[yv], col * PTS_FRAC / CONTRIB_MAX, DOWN, UP, f"{GROWTH[yv]:+.1f}%", cy, 7, True)]
             else:
                 c = CRISIS[yv][s]
-                bars = [(c["growth"], col * PCT_FRAC / GROWTH_MAX, DOWN_TINT, UP_TINT, f"{c['growth']:+.1f}%", cy - 9, 7),
-                        (c["contrib"], col * PTS_FRAC / CONTRIB_MAX, DOWN, UP, f"{c['contrib']:+.1f}", cy + 9, 7)]
-            for v, scale, cdown, cup, lab, by, hh in bars:
+                bars = [(c["growth"], col * PCT_FRAC / GROWTH_MAX, DOWN_TINT, UP_TINT, f"{c['growth']:+.1f}%", cy - 9, 7, _cited(yv, s, "g")),
+                        (c["contrib"], col * PTS_FRAC / CONTRIB_MAX, DOWN, UP, f"{c['contrib']:+.1f}", cy + 9, 7, _cited(yv, s, "c"))]
+            for v, scale, cdown, cup, lab, by, hh, hl in bars:
                 ex = cx + v * scale
-                d.rectangle([min(cx, ex) * SS, (by - hh) * SS, max(cx, ex) * SS, (by + hh) * SS], fill=cdown if v < 0 else cup)
-                tx, anc = (ex - 5, "rm") if v < 0 else (ex + 5, "lm")
-                d.text((tx * SS, by * SS), lab, font=fv, fill=CHART_TEXT if total else CHART_SECONDARY, anchor=anc)
+                colr = cdown if v < 0 else cup
+                d.rectangle([min(cx, ex) * SS, (by - hh) * SS, max(cx, ex) * SS, (by + hh) * SS], fill=colr if hl else _fade(colr))
+                if hl:
+                    tx, anc = (ex - 5, "rm") if v < 0 else (ex + 5, "lm")
+                    d.text((tx * SS, by * SS), lab, font=load_font(14 * SS), fill=CHART_TEXT, anchor=anc)
     ly = 118 * SS
     for lx, colr, lab in [(60, DOWN_TINT, "Industry's own change, %"), (330, DOWN, "Points of GDP growth")]:
         d.rectangle([lx * SS, ly, (lx + 22) * SS, ly + 12 * SS], fill=colr)
@@ -234,23 +254,26 @@ def svg():
             cx = x0 + col * (j + 0.5)
             if total:
                 tip = f"Real GDP growth {GROWTH[yv]:+.1f}%"
-                bars = [(GROWTH[yv], col * PTS_FRAC / CONTRIB_MAX, "--down", "--up", f"{GROWTH[yv]:+.1f}%", cy, 5)]
+                bars = [(GROWTH[yv], col * PTS_FRAC / CONTRIB_MAX, "--down", "--up", f"{GROWTH[yv]:+.1f}%", cy, 5, True)]
             else:
                 c = CRISIS[yv][sec]
                 tip = (f"Fell {abs(c['growth']):.1f}%" if c["growth"] < 0 else f"Grew {c['growth']:.1f}%") \
                     + f"; {c['share']:.1f}% of the economy the year before; {c['contrib']:+.1f} points of GDP growth"
-                bars = [(c["growth"], col * PCT_FRAC_SVG / GROWTH_MAX, "--down-tint", "--up-tint", f"{c['growth']:+.1f}%", cy - 6, 4),
-                        (c["contrib"], col * PTS_FRAC / CONTRIB_MAX, "--down", "--up", f"{c['contrib']:+.1f}", cy + 6, 4)]
+                bars = [(c["growth"], col * PCT_FRAC_SVG / GROWTH_MAX, "--down-tint", "--up-tint", f"{c['growth']:+.1f}%", cy - 6, 4, _cited(yv, sec, "g")),
+                        (c["contrib"], col * PTS_FRAC / CONTRIB_MAX, "--down", "--up", f"{c['contrib']:+.1f}", cy + 6, 4, _cited(yv, sec, "c"))]
             g = [f'  <g class="cc-hit" tabindex="0" data-label="{sec}, {yv}" data-val="{tip}">'
                  f'<rect class="cc-hitarea" x="{cx - col / 2 + 2:.1f}" y="{cy - rowh / 2 + 1:.1f}" width="{col - 4:.1f}" height="{rowh - 2}" fill="transparent"/>']
-            for v, scale, vdown, vup, lab, by, hh in bars:
+            for v, scale, vdown, vup, lab, by, hh, hl in bars:
                 ex = cx + v * scale
-                g.append(f'<rect x="{min(cx, ex):.1f}" y="{by - hh:.1f}" width="{max(abs(ex - cx), 0.8):.1f}" height="{2 * hh}" rx="1.5" fill="var({vdown if v < 0 else vup})"/>')
+                fade = "" if hl else ' opacity="0.3"'
+                g.append(f'<rect x="{min(cx, ex):.1f}" y="{by - hh:.1f}" width="{max(abs(ex - cx), 0.8):.1f}" height="{2 * hh}" rx="1.5" fill="var({vdown if v < 0 else vup})"{fade}/>')
             s.append("".join(g) + "</g>")
-            for v, scale, vdown, vup, lab, by, hh in bars:
+            for v, scale, vdown, vup, lab, by, hh, hl in bars:
+                if not hl:
+                    continue
                 ex = cx + v * scale
                 tx, anc = (ex - 3, "end") if v < 0 else (ex + 3, "start")
-                s.append(f'  <text class="cc-val{" cc-total" if total else ""}" x="{tx:.1f}" y="{by + 3.5:.1f}" text-anchor="{anc}">{lab}</text>')
+                s.append(f'  <text class="cc-val cc-hl" x="{tx:.1f}" y="{by + 3.5:.1f}" text-anchor="{anc}">{lab}</text>')
     s.append("</svg>")
     out.append("\n".join(s))
     # 3. Size of each sector, 2000 vs 2025
