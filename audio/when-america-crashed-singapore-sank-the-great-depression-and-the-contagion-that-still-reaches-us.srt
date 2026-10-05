@@ -321,382 +321,539 @@ or nearly stopped growing,
 in six years since 1961.
 
 70
-00:04:33,075 --> 00:04:36,655
+00:04:33,075 --> 00:04:37,430
+Official national accounts
+for Singapore begin in 1960,
+
+71
+00:04:37,510 --> 00:04:42,025
+so there are no comparable
+yearly figures for the 1930s.
+
+72
+00:04:42,025 --> 00:04:45,605
 The chart shows each year's
 growth in real terms,
 
-71
-00:04:36,735 --> 00:04:39,200
+73
+00:04:45,685 --> 00:04:48,150
 with the years of decline in red.
 
-72
-00:04:39,200 --> 00:04:43,891
+74
+00:04:48,150 --> 00:04:52,841
 The figures by industry show where
 each of the later crises hit,
 
-73
-00:04:43,971 --> 00:04:47,325
+75
+00:04:52,921 --> 00:04:56,275
 and they do not all
 follow the 1930s pattern.
 
-74
-00:04:47,325 --> 00:04:49,800
-1985.
-
-75
-00:04:49,800 --> 00:04:52,413
-Singapore's first recession after
-
 76
-00:04:52,493 --> 00:04:55,350
-independence was largely home-made.
+00:04:56,275 --> 00:05:00,110
+The chart below measures each
+industry's contribution to
 
 77
-00:04:55,350 --> 00:05:00,371
+00:05:00,190 --> 00:05:02,836
+the year's growth in percentage points,
+
+78
+00:05:02,916 --> 00:05:07,950
+which depends both on how far the
+industry fell and on how large it was.
+
+79
+00:05:07,950 --> 00:05:12,000
+The bottom row shows the
+growth of the whole economy.
+
+80
+00:05:12,000 --> 00:05:14,475
+1985.
+
+81
+00:05:14,475 --> 00:05:17,088
+Singapore's first recession after
+
+82
+00:05:17,168 --> 00:05:20,025
+independence was largely home-made.
+
+83
+00:05:20,025 --> 00:05:25,046
 According to the National Library
 Board, a construction boom had ended,
 
-78
-00:05:00,451 --> 00:05:04,753
+84
+00:05:25,126 --> 00:05:29,428
 with the market saturated by
 the end of 1984, and high costs,
 
-79
-00:05:04,833 --> 00:05:09,575
+85
+00:05:29,508 --> 00:05:34,250
 together with a slowdown in the
 United States, hurt manufacturing.
 
-80
-00:05:09,575 --> 00:05:12,729
-Construction fell by 17 per cent and
+86
+00:05:34,250 --> 00:05:38,592
+Construction fell by 17
+per cent and manufacturing
 
-81
-00:05:12,809 --> 00:05:17,300
-manufacturing by 7.3 per
-cent, while finance grew.
+87
+00:05:38,672 --> 00:05:43,457
+by 7.3 per cent, together
+taking 3.6 points off growth,
 
-82
-00:05:17,300 --> 00:05:19,625
+88
+00:05:43,537 --> 00:05:47,075
+while finance grew and added 1.6 points.
+
+89
+00:05:47,075 --> 00:05:49,400
 1998.
 
-83
-00:05:19,625 --> 00:05:23,497
+90
+00:05:49,400 --> 00:05:53,272
 The Asian financial crisis
 began with the collapse
 
-84
-00:05:23,577 --> 00:05:28,240
+91
+00:05:53,352 --> 00:05:58,015
 of the Thai baht in July 1997
 and spread through currencies,
 
-85
-00:05:28,320 --> 00:05:30,850
+92
+00:05:58,095 --> 00:06:00,625
 banks and investors' confidence.
 
-86
-00:05:30,850 --> 00:05:35,389
+93
+00:06:00,625 --> 00:06:04,977
 In Singapore the biggest fall
 was in finance and insurance,
 
-87
-00:05:35,469 --> 00:05:39,775
-down 20.2 per cent, while
+94
+00:06:05,057 --> 00:06:10,762
+down 20.2 per cent, which took 2.4 points
+off growth, more than the economy's
+
+95
+00:06:10,842 --> 00:06:15,575
+whole fall of 2.2 per cent, while
 manufacturing barely changed.
 
-88
-00:05:39,775 --> 00:05:43,800
+96
+00:06:15,575 --> 00:06:19,600
 This was a crisis of
 money more than of goods.
 
-89
-00:05:43,800 --> 00:05:45,850
+97
+00:06:19,600 --> 00:06:21,650
 2001.
 
-90
-00:05:45,850 --> 00:05:50,650
+98
+00:06:21,650 --> 00:06:26,450
 The dot-com bust is the
 closest match to the 1930s.
 
-91
-00:05:50,650 --> 00:05:57,224
+99
+00:06:26,450 --> 00:06:33,024
 In 2000, electronics made up 69 per cent
 of Singapore's non-oil domestic exports,
 
-92
-00:05:57,304 --> 00:06:00,425
+100
+00:06:33,104 --> 00:06:36,225
 the goods the island makes for export.
 
-93
-00:06:00,425 --> 00:06:04,209
+101
+00:06:36,225 --> 00:06:40,253
 When American technology
 spending collapsed,
 
-94
-00:06:04,289 --> 00:06:08,864
-electronics exports fell by
-19.9 per cent in 2001 and
+102
+00:06:40,333 --> 00:06:44,081
+electronics exports fell by 19.9 per cent
 
-95
-00:06:08,944 --> 00:06:13,775
-manufacturing by 11.6 per
-cent, and the economy shrank.
+103
+00:06:44,161 --> 00:06:48,175
+in 2001 and manufacturing
+by 11.6 per cent.
 
-96
-00:06:13,775 --> 00:06:18,575
+104
+00:06:48,175 --> 00:06:51,989
+Manufacturing alone took
+3.0 points off growth,
+
+105
+00:06:52,069 --> 00:06:55,300
+and the economy shrank by 1.1 per cent.
+
+106
+00:06:55,300 --> 00:07:00,100
 Chips and computer parts had
 taken the place of rubber and tin.
 
-97
-00:06:18,575 --> 00:06:21,950
+107
+00:07:00,100 --> 00:07:03,475
 2008 to 2009.
 
-98
-00:06:21,950 --> 00:06:26,581
+108
+00:07:03,475 --> 00:07:08,106
 The global financial crisis
 began in American banks and
 
-99
-00:06:26,661 --> 00:06:31,206
+109
+00:07:08,186 --> 00:07:12,731
 reached Singapore through
 trade: transport and storage
 
-100
-00:06:31,286 --> 00:06:36,602
+110
+00:07:12,811 --> 00:07:18,127
 fell by 8.8 per cent in 2009 and
 manufacturing by 4.2 per cent,
 
-101
-00:06:36,682 --> 00:06:41,050
+111
+00:07:18,207 --> 00:07:22,575
 and electronics exports
 fell in both 2008 and 2009.
 
-102
-00:06:41,050 --> 00:06:46,200
+112
+00:07:22,575 --> 00:07:27,725
 It was partly a crisis of money
 and partly a crisis of goods.
 
-103
-00:06:46,200 --> 00:06:48,000
+113
+00:07:27,725 --> 00:07:29,525
 2020.
 
-104
-00:06:48,000 --> 00:06:51,050
+114
+00:07:29,525 --> 00:07:32,575
 The pandemic followed neither route.
 
-105
-00:06:51,050 --> 00:06:55,377
+115
+00:07:32,575 --> 00:07:36,902
 Borders closed and, under the
 "circuit breaker" from the
 
-106
-00:06:55,457 --> 00:07:00,100
+116
+00:07:36,982 --> 00:07:41,625
 7th of April to the 1st of June
 2020, most workplaces shut.
 
-107
-00:07:00,100 --> 00:07:03,679
-Construction fell by 41.7 per cent and
+117
+00:07:41,625 --> 00:07:44,852
+Construction fell by 41.7 per cent,
 
-108
-00:07:03,759 --> 00:07:07,722
-hotels and food services by 20.2 per cent,
+118
+00:07:44,932 --> 00:07:49,955
+hotels and food services by
+20.2 per cent and business
 
-109
-00:07:07,802 --> 00:07:11,750
-while manufacturing grew by 7.5 per cent.
+119
+00:07:50,035 --> 00:07:52,412
+services by 12.4 per cent,
 
-110
-00:07:11,750 --> 00:07:16,750
+120
+00:07:52,492 --> 00:07:58,350
+while manufacturing grew by 7.5
+per cent and added 1.5 points.
+
+121
+00:07:58,350 --> 00:08:03,350
 Taken together, Singapore's crises
 have arrived by two main routes.
 
-111
-00:07:16,750 --> 00:07:22,848
+122
+00:08:03,350 --> 00:08:09,448
 The goods route, a fall in demand
 for what Singapore makes and ships,
 
-112
-00:07:22,928 --> 00:07:27,225
+123
+00:08:09,528 --> 00:08:13,825
 was the route of 1930 and
 2001 and part of 2009.
 
-113
-00:07:27,225 --> 00:07:32,063
+124
+00:08:13,825 --> 00:08:18,663
 The money route, through banks,
 currencies and confidence,
 
-114
-00:07:32,143 --> 00:07:35,450
+125
+00:08:18,743 --> 00:08:22,050
 was the route of 1998 and part of 2008.
 
-115
-00:07:35,450 --> 00:07:38,975
+126
+00:08:22,050 --> 00:08:27,175
+The size of an industry matters
+as much as the size of its fall.
+
+127
+00:08:27,175 --> 00:08:31,370
+Construction's 41.7 per
+cent drop in 2020 was the
+
+128
+00:08:31,450 --> 00:08:35,383
+steepest of any industry
+in these five crises,
+
+129
+00:08:35,463 --> 00:08:39,658
+but construction was then
+only about 3.5 per cent
+
+130
+00:08:39,738 --> 00:08:43,925
+of the economy, so it
+cost 1.5 points of growth.
+
+131
+00:08:43,925 --> 00:08:48,339
+Manufacturing's fall of 11.6
+per cent in 2001 was far
+
+132
+00:08:48,419 --> 00:08:53,257
+smaller in percentage terms,
+but manufacturing was about a
+
+133
+00:08:53,337 --> 00:08:58,000
+quarter of the economy in
+2000, and it cost 3.0 points.
+
+134
+00:08:58,000 --> 00:09:01,526
+An economy that leans
+on one large industry
+
+135
+00:09:01,606 --> 00:09:04,625
+is exposed when that industry falls.
+
+136
+00:09:04,625 --> 00:09:10,170
+One spread across several industries
+of similar size is less exposed,
+
+137
+00:09:10,250 --> 00:09:14,735
+because a fall in one can be
+offset by growth in others,
+
+138
+00:09:14,815 --> 00:09:18,729
+as finance offset
+manufacturing in 1985 and 2001,
+
+139
+00:09:18,809 --> 00:09:23,700
+and manufacturing offset
+construction and transport in 2020.
+
+140
+00:09:23,700 --> 00:09:27,912
+Diversification does not help
+much against a shock that
+
+141
+00:09:27,992 --> 00:09:32,675
+hits nearly everything at once,
+as the lockdown of 2020 did.
+
+142
+00:09:32,675 --> 00:09:38,100
+Singapore's economy is more
+evenly spread than it was in 2000.
+
+143
+00:09:38,100 --> 00:09:43,358
+Measured at current prices,
+manufacturing's share of GDP
+
+144
+00:09:43,438 --> 00:09:48,792
+fell from 25.9 per cent in
+2000 to 17.4 per cent in 2025,
+
+145
+00:09:48,872 --> 00:09:54,988
+while wholesale and retail trade
+grew from 12.5 to 19.7 per cent,
+
+146
+00:09:55,068 --> 00:10:00,025
+and finance and insurance
+from 9.4 to 13.2 per cent.
+
+147
+00:10:00,025 --> 00:10:03,550
 Electronics matters to Singapore again.
 
-116
-00:07:38,975 --> 00:07:42,490
+148
+00:10:03,550 --> 00:10:07,065
 In August 2026 the Ministry
 of Trade and Industry,
 
-117
-00:07:42,570 --> 00:07:48,099
+149
+00:10:07,145 --> 00:10:12,674
 renamed the Ministry of Energy, Trade
 and Industry on the 1st of October 2026,
 
-118
-00:07:48,179 --> 00:07:53,205
+150
+00:10:12,754 --> 00:10:17,780
 raised its forecast for growth in
 2026 to between 4.5 and 5.5 per cent,
 
-119
-00:07:53,285 --> 00:07:58,022
+151
+00:10:17,860 --> 00:10:22,598
 citing "the acceleration in global
 AI-related capital expenditure":
 
-120
-00:07:58,102 --> 00:08:01,043
+152
+00:10:22,678 --> 00:10:25,618
 spending, much of it in the United States,
 
-121
-00:08:01,123 --> 00:08:06,300
+153
+00:10:25,698 --> 00:10:30,875
 on the data centres, chips and equipment
 behind artificial intelligence.
 
-122
-00:08:06,300 --> 00:08:10,328
+154
+00:10:30,875 --> 00:10:34,903
 The Monetary Authority of
 Singapore's policy statement of
 
-123
-00:08:10,408 --> 00:08:15,013
+155
+00:10:34,983 --> 00:10:39,588
 July 2026 said that "AI-related
 investments have remained robust,
 
-124
-00:08:15,093 --> 00:08:18,905
+156
+00:10:39,668 --> 00:10:43,480
 underpinning strong production
 and trade of IT-related
 
-125
-00:08:18,985 --> 00:08:22,365
+157
+00:10:43,560 --> 00:10:46,940
 goods," and listed as a
 risk that "an unexpected
 
-126
-00:08:22,445 --> 00:08:26,690
+158
+00:10:47,020 --> 00:10:51,265
 tightening in financial conditions
 or pullback in AI-related
 
-127
-00:08:26,770 --> 00:08:30,950
+159
+00:10:51,345 --> 00:10:55,525
 investment could impact the
 sustainability of GDP growth."
 
-128
-00:08:30,950 --> 00:08:35,824
+160
+00:10:55,525 --> 00:11:00,399
 The comparison with 2001 is
 natural: growth concentrated in
 
-129
-00:08:35,904 --> 00:08:41,025
+161
+00:11:00,479 --> 00:11:05,600
 one product cycle, driven by
 American spending on technology.
 
-130
-00:08:41,025 --> 00:08:45,300
+162
+00:11:05,600 --> 00:11:09,875
 The data also shows how
 much has changed since then.
 
-131
-00:08:45,300 --> 00:08:50,981
+163
+00:11:09,875 --> 00:11:15,556
 Electronics now makes up about a
 quarter of non-oil domestic exports,
 
-132
-00:08:51,061 --> 00:08:54,150
+164
+00:11:15,636 --> 00:11:18,725
 against more than two-thirds in 2000.
 
-133
-00:08:54,150 --> 00:08:57,872
+165
+00:11:18,725 --> 00:11:22,447
 Electronics exports have
 also fallen sharply twice
 
-134
-00:08:57,952 --> 00:09:01,450
+166
+00:11:22,527 --> 00:11:26,025
 in recent years without
 the economy shrinking.
 
-135
-00:09:01,450 --> 00:09:05,561
+167
+00:11:26,025 --> 00:11:30,136
 They dropped by 22.5 per cent in 2019
 
-136
-00:09:05,641 --> 00:09:08,846
+168
+00:11:30,216 --> 00:11:33,421
 and by 19.7 per cent in 2023,
 
-137
-00:09:08,926 --> 00:09:14,250
+169
+00:11:33,501 --> 00:11:38,825
 while the economy grew
 by 1.2 and 1.5 per cent.
 
-138
-00:09:14,250 --> 00:09:16,858
+170
+00:11:38,825 --> 00:11:41,432
 A large financial and services sector,
 
-139
-00:09:16,938 --> 00:09:21,172
+171
+00:11:41,512 --> 00:11:45,747
 and exports such as pharmaceuticals,
 chemicals and machinery,
 
-140
-00:09:21,252 --> 00:09:25,000
+172
+00:11:45,827 --> 00:11:49,575
 now carry much of the load
 that electronics once did.
 
-141
-00:09:25,000 --> 00:09:27,975
+173
+00:11:49,575 --> 00:11:52,550
 What has not changed is the route.
 
-142
-00:09:27,975 --> 00:09:31,591
+174
+00:11:52,550 --> 00:11:56,166
 If a shock comes from
 technology spending abroad,
 
-143
-00:09:31,671 --> 00:09:36,418
+175
+00:11:56,246 --> 00:12:00,993
 it would reach Singapore by the
 goods route, the same route that
 
-144
-00:09:36,498 --> 00:09:41,175
+176
+00:12:01,073 --> 00:12:05,750
 carried the rubber slump in 1930
 and the dot-com bust in 2001.
 
-145
-00:09:41,175 --> 00:09:44,753
+177
+00:12:05,750 --> 00:12:09,328
 Where it fits in the bigger
 story: The Great Depression
 
-146
-00:09:44,833 --> 00:09:48,677
+178
+00:12:09,408 --> 00:12:13,252
 is usually remembered as an
 American and European disaster,
 
-147
-00:09:48,757 --> 00:09:51,271
+179
+00:12:13,332 --> 00:12:15,846
 but it reached Singapore within months,
 
-148
-00:09:51,351 --> 00:09:55,275
+180
+00:12:15,926 --> 00:12:19,850
 through the price of rubber
 and the tyres on American cars.
 
-149
-00:09:55,275 --> 00:09:58,994
+181
+00:12:19,850 --> 00:12:23,569
 Nearly a century later, the
 route a crisis takes into
 
-150
-00:09:59,074 --> 00:10:03,375
+182
+00:12:23,649 --> 00:12:27,950
 Singapore still depends on what
 the world is buying from it.

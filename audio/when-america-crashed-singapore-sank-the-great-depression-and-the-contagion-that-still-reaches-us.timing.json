@@ -145,193 +145,253 @@
     "duration_s": 7.05
   },
   {
-    "text": "The chart shows each year's growth in real terms, with the years of decline in red.",
+    "text": "Official national accounts for Singapore begin in 1960, so there are no comparable yearly figures for the 1930s.",
     "offset_s": 273.075,
+    "duration_s": 8.95
+  },
+  {
+    "text": "The chart shows each year's growth in real terms, with the years of decline in red.",
+    "offset_s": 282.025,
     "duration_s": 6.125
   },
   {
     "text": "The figures by industry show where each of the later crises hit, and they do not all follow the 1930s pattern.",
-    "offset_s": 279.2,
+    "offset_s": 288.15,
     "duration_s": 8.125
   },
   {
+    "text": "The chart below measures each industry's contribution to the year's growth in percentage points, which depends both on how far the industry fell and on how large it was.",
+    "offset_s": 296.275,
+    "duration_s": 11.675
+  },
+  {
+    "text": "The bottom row shows the growth of the whole economy.",
+    "offset_s": 307.95,
+    "duration_s": 4.05
+  },
+  {
     "text": "1985.",
-    "offset_s": 287.325,
+    "offset_s": 312.0,
     "duration_s": 2.475
   },
   {
     "text": "Singapore's first recession after independence was largely home-made.",
-    "offset_s": 289.8,
+    "offset_s": 314.475,
     "duration_s": 5.55
   },
   {
     "text": "According to the National Library Board, a construction boom had ended, with the market saturated by the end of 1984, and high costs, together with a slowdown in the United States, hurt manufacturing.",
-    "offset_s": 295.35,
+    "offset_s": 320.025,
     "duration_s": 14.225
   },
   {
-    "text": "Construction fell by 17 per cent and manufacturing by 7.3 per cent, while finance grew.",
-    "offset_s": 309.575,
-    "duration_s": 7.725
+    "text": "Construction fell by 17 per cent and manufacturing by 7.3 per cent, together taking 3.6 points off growth, while finance grew and added 1.6 points.",
+    "offset_s": 334.25,
+    "duration_s": 12.825
   },
   {
     "text": "1998.",
-    "offset_s": 317.3,
+    "offset_s": 347.075,
     "duration_s": 2.325
   },
   {
     "text": "The Asian financial crisis began with the collapse of the Thai baht in July 1997 and spread through currencies, banks and investors' confidence.",
-    "offset_s": 319.625,
+    "offset_s": 349.4,
     "duration_s": 11.225
   },
   {
-    "text": "In Singapore the biggest fall was in finance and insurance, down 20.2 per cent, while manufacturing barely changed.",
-    "offset_s": 330.85,
-    "duration_s": 8.925
+    "text": "In Singapore the biggest fall was in finance and insurance, down 20.2 per cent, which took 2.4 points off growth, more than the economy's whole fall of 2.2 per cent, while manufacturing barely changed.",
+    "offset_s": 360.625,
+    "duration_s": 14.95
   },
   {
     "text": "This was a crisis of money more than of goods.",
-    "offset_s": 339.775,
+    "offset_s": 375.575,
     "duration_s": 4.025
   },
   {
     "text": "2001.",
-    "offset_s": 343.8,
+    "offset_s": 379.6,
     "duration_s": 2.05
   },
   {
     "text": "The dot-com bust is the closest match to the 1930s.",
-    "offset_s": 345.85,
+    "offset_s": 381.65,
     "duration_s": 4.8
   },
   {
     "text": "In 2000, electronics made up 69 per cent of Singapore's non-oil domestic exports, the goods the island makes for export.",
-    "offset_s": 350.65,
+    "offset_s": 386.45,
     "duration_s": 9.775
   },
   {
-    "text": "When American technology spending collapsed, electronics exports fell by 19.9 per cent in 2001 and manufacturing by 11.6 per cent, and the economy shrank.",
-    "offset_s": 360.425,
-    "duration_s": 13.35
+    "text": "When American technology spending collapsed, electronics exports fell by 19.9 per cent in 2001 and manufacturing by 11.6 per cent.",
+    "offset_s": 396.225,
+    "duration_s": 11.95
+  },
+  {
+    "text": "Manufacturing alone took 3.0 points off growth, and the economy shrank by 1.1 per cent.",
+    "offset_s": 408.175,
+    "duration_s": 7.125
   },
   {
     "text": "Chips and computer parts had taken the place of rubber and tin.",
-    "offset_s": 373.775,
+    "offset_s": 415.3,
     "duration_s": 4.8
   },
   {
     "text": "2008 to 2009.",
-    "offset_s": 378.575,
+    "offset_s": 420.1,
     "duration_s": 3.375
   },
   {
     "text": "The global financial crisis began in American banks and reached Singapore through trade: transport and storage fell by 8.8 per cent in 2009 and manufacturing by 4.2 per cent, and electronics exports fell in both 2008 and 2009.",
-    "offset_s": 381.95,
+    "offset_s": 423.475,
     "duration_s": 19.1
   },
   {
     "text": "It was partly a crisis of money and partly a crisis of goods.",
-    "offset_s": 401.05,
+    "offset_s": 442.575,
     "duration_s": 5.15
   },
   {
     "text": "2020.",
-    "offset_s": 406.2,
+    "offset_s": 447.725,
     "duration_s": 1.8
   },
   {
     "text": "The pandemic followed neither route.",
-    "offset_s": 408.0,
+    "offset_s": 449.525,
     "duration_s": 3.05
   },
   {
     "text": "Borders closed and, under the \"circuit breaker\" from the 7th of April to the 1st of June 2020, most workplaces shut.",
-    "offset_s": 411.05,
+    "offset_s": 452.575,
     "duration_s": 9.05
   },
   {
-    "text": "Construction fell by 41.7 per cent and hotels and food services by 20.2 per cent, while manufacturing grew by 7.5 per cent.",
-    "offset_s": 420.1,
-    "duration_s": 11.65
+    "text": "Construction fell by 41.7 per cent, hotels and food services by 20.2 per cent and business services by 12.4 per cent, while manufacturing grew by 7.5 per cent and added 1.5 points.",
+    "offset_s": 461.625,
+    "duration_s": 16.725
   },
   {
     "text": "Taken together, Singapore's crises have arrived by two main routes.",
-    "offset_s": 431.75,
+    "offset_s": 478.35,
     "duration_s": 5.0
   },
   {
     "text": "The goods route, a fall in demand for what Singapore makes and ships, was the route of 1930 and 2001 and part of 2009.",
-    "offset_s": 436.75,
+    "offset_s": 483.35,
     "duration_s": 10.475
   },
   {
     "text": "The money route, through banks, currencies and confidence, was the route of 1998 and part of 2008.",
-    "offset_s": 447.225,
+    "offset_s": 493.825,
     "duration_s": 8.225
   },
   {
+    "text": "The size of an industry matters as much as the size of its fall.",
+    "offset_s": 502.05,
+    "duration_s": 5.125
+  },
+  {
+    "text": "Construction's 41.7 per cent drop in 2020 was the steepest of any industry in these five crises, but construction was then only about 3.5 per cent of the economy, so it cost 1.5 points of growth.",
+    "offset_s": 507.175,
+    "duration_s": 16.75
+  },
+  {
+    "text": "Manufacturing's fall of 11.6 per cent in 2001 was far smaller in percentage terms, but manufacturing was about a quarter of the economy in 2000, and it cost 3.0 points.",
+    "offset_s": 523.925,
+    "duration_s": 14.075
+  },
+  {
+    "text": "An economy that leans on one large industry is exposed when that industry falls.",
+    "offset_s": 538.0,
+    "duration_s": 6.625
+  },
+  {
+    "text": "One spread across several industries of similar size is less exposed, because a fall in one can be offset by growth in others, as finance offset manufacturing in 1985 and 2001, and manufacturing offset construction and transport in 2020.",
+    "offset_s": 544.625,
+    "duration_s": 19.075
+  },
+  {
+    "text": "Diversification does not help much against a shock that hits nearly everything at once, as the lockdown of 2020 did.",
+    "offset_s": 563.7,
+    "duration_s": 8.975
+  },
+  {
+    "text": "Singapore's economy is more evenly spread than it was in 2000.",
+    "offset_s": 572.675,
+    "duration_s": 5.425
+  },
+  {
+    "text": "Measured at current prices, manufacturing's share of GDP fell from 25.9 per cent in 2000 to 17.4 per cent in 2025, while wholesale and retail trade grew from 12.5 to 19.7 per cent, and finance and insurance from 9.4 to 13.2 per cent.",
+    "offset_s": 578.1,
+    "duration_s": 21.925
+  },
+  {
     "text": "Electronics matters to Singapore again.",
-    "offset_s": 455.45,
+    "offset_s": 600.025,
     "duration_s": 3.525
   },
   {
     "text": "In August 2026 the Ministry of Trade and Industry, renamed the Ministry of Energy, Trade and Industry on the 1st of October 2026, raised its forecast for growth in 2026 to between 4.5 and 5.5 per cent, citing \"the acceleration in global AI-related capital expenditure\": spending, much of it in the United States, on the data centres, chips and equipment behind artificial intelligence.",
-    "offset_s": 458.975,
+    "offset_s": 603.55,
     "duration_s": 27.325
   },
   {
     "text": "The Monetary Authority of Singapore's policy statement of July 2026 said that \"AI-related investments have remained robust, underpinning strong production and trade of IT-related goods,\" and listed as a risk that \"an unexpected tightening in financial conditions or pullback in AI-related investment could impact the sustainability of GDP growth.\"",
-    "offset_s": 486.3,
+    "offset_s": 630.875,
     "duration_s": 24.65
   },
   {
     "text": "The comparison with 2001 is natural: growth concentrated in one product cycle, driven by American spending on technology.",
-    "offset_s": 510.95,
+    "offset_s": 655.525,
     "duration_s": 10.075
   },
   {
     "text": "The data also shows how much has changed since then.",
-    "offset_s": 521.025,
+    "offset_s": 665.6,
     "duration_s": 4.275
   },
   {
     "text": "Electronics now makes up about a quarter of non-oil domestic exports, against more than two-thirds in 2000.",
-    "offset_s": 525.3,
+    "offset_s": 669.875,
     "duration_s": 8.85
   },
   {
     "text": "Electronics exports have also fallen sharply twice in recent years without the economy shrinking.",
-    "offset_s": 534.15,
+    "offset_s": 678.725,
     "duration_s": 7.3
   },
   {
     "text": "They dropped by 22.5 per cent in 2019 and by 19.7 per cent in 2023, while the economy grew by 1.2 and 1.5 per cent.",
-    "offset_s": 541.45,
+    "offset_s": 686.025,
     "duration_s": 12.8
   },
   {
     "text": "A large financial and services sector, and exports such as pharmaceuticals, chemicals and machinery, now carry much of the load that electronics once did.",
-    "offset_s": 554.25,
+    "offset_s": 698.825,
     "duration_s": 10.75
   },
   {
     "text": "What has not changed is the route.",
-    "offset_s": 565.0,
+    "offset_s": 709.575,
     "duration_s": 2.975
   },
   {
     "text": "If a shock comes from technology spending abroad, it would reach Singapore by the goods route, the same route that carried the rubber slump in 1930 and the dot-com bust in 2001.",
-    "offset_s": 567.975,
+    "offset_s": 712.55,
     "duration_s": 13.2
   },
   {
     "text": "Where it fits in the bigger story: The Great Depression is usually remembered as an American and European disaster, but it reached Singapore within months, through the price of rubber and the tyres on American cars.",
-    "offset_s": 581.175,
+    "offset_s": 725.75,
     "duration_s": 14.1
   },
   {
     "text": "Nearly a century later, the route a crisis takes into Singapore still depends on what the world is buying from it.",
-    "offset_s": 595.275,
+    "offset_s": 739.85,
     "duration_s": 8.1
   }
 ]
