@@ -1,16 +1,21 @@
 """Charts for the Great Depression / contagion post, from official data in
-assets/data/singapore-crises-data.json (SingStat tables M015721 and M450981):
+assets/data/singapore-crises-data.json (SingStat tables M015721 real GDP by
+industry, M015731 GDP at current prices, M015741 contribution to growth,
+M450981 non-oil domestic exports):
 
   assets/images/singapore-gdp-growth-chart.png       - annual real GDP growth,
       1961-2025, falls in red, each recession year labelled
-  assets/images/singapore-crisis-sectors-chart.png   - growth of five industries
-      in each crisis year (1985, 1998, 2001, 2009, 2020)
+  assets/images/singapore-crisis-sectors-chart.png   - what each crisis cost:
+      each industry's contribution to GDP growth (percentage points) in 1985,
+      1998, 2001, 2009 and 2020 - its size times how far it fell
+  assets/images/singapore-sector-size-chart.png      - each industry's share of
+      GDP at current prices, 2000 and 2025
   assets/images/singapore-electronics-share-chart.png - electronics' share of
       non-oil domestic exports, 1997-2025
 
 PNGs are the dark-theme video/Watch "chart" slides. With --svg the script
-instead prints the post's inline SVG markup for the same three charts (theme
-tokens, per-mark hover data attributes), to paste into the post.
+instead prints the post's inline SVG markup for the same four charts (theme
+tokens, per-mark hover data attributes), separated by <!-- next chart -->.
 
     python scripts/render_crises_charts.py [--svg]
 """
@@ -29,16 +34,20 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / "assets" / "data" / "singapore-crises-data.json").read_text(encoding="utf-8"))
 IMG = ROOT / "assets" / "images"
 W, H, SS = 1280, 720, 2
-UP = (57, 135, 229)     # #3987e5, dark-mode diverging blue (growth)
-DOWN = (230, 103, 103)  # #e66767, dark-mode diverging red (fall)
+UP = (57, 135, 229)       # #3987e5, dark-mode diverging blue (growth)
+DOWN = (230, 103, 103)    # #e66767, dark-mode diverging red (fall)
+SERIES_2 = (31, 166, 31)  # #1fa61f, dark-mode categorical slot 2 (the 2025 bars)
 
 GROWTH = {int(k): v for k, v in DATA["growth"].items()}
 CRISIS = {int(k): v for k, v in DATA["crisis"].items()}
 SHARE = {int(k): v for k, v in DATA["share"].items()}
+SIZE = {int(k): v for k, v in DATA["size"].items()}
 LABELS = {1964: "1964", 1985: "1985", 1998: "1998", 2001: "2001", 2009: "2009", 2020: "2020"}
 CRISIS_NAMES = {1985: "1985 recession", 1998: "Asian financial crisis", 2001: "Dot-com bust",
                 2009: "Global financial crisis", 2020: "Pandemic"}
 SECTORS = list(next(iter(CRISIS.values())).keys())
+SIZE_ORDER = sorted(SIZE[2025], key=lambda s: -SIZE[2025][s])
+CONTRIB_MAX = 3.2  # percentage points; the largest single contribution is -3.0 (manufacturing, 2001)
 
 
 def _frame(title, sub, foot):
@@ -82,30 +91,58 @@ def gdp_png():
 
 
 def sectors_png():
-    img, d = _frame("Where each crisis hit hardest", "Growth of five industries in each crisis year (real terms)",
-                    "Source: Singapore Department of Statistics, GDP by industry in chained (2015) dollars (table M015721).")
+    img, d = _frame("What each crisis cost, by industry",
+                    "Each industry's contribution to GDP growth in the crisis year, in percentage points (its size x how far it fell)",
+                    "Source: Singapore Department of Statistics, contribution to growth in GDP by industry (table M015741).")
     years = sorted(CRISIS)
-    lab_w, x0, x1, top, bot = 300, 330, 1230, 160, 610
+    lab_w, x0, x1, top, bot = 330, 350, 1230, 150, 640
     col = (x1 - x0) / len(years)
-    rowh = (bot - top - 40) / len(SECTORS)
-    scale = col * 0.27 / 42  # px per percentage point: +22.3 and -41.7 labels side by side still fit
-    fh, fv, fl = load_font(16 * SS), load_font(14 * SS, bold=False), load_font(17 * SS)
+    rows = SECTORS + ["Whole economy"]
+    rowh = (bot - top - 40) / len(rows)
+    scale = col * 0.36 / CONTRIB_MAX
+    fh, fv, fl = load_font(16 * SS), load_font(14 * SS, bold=False), load_font(16 * SS)
     for j, yv in enumerate(years):
         cx = x0 + col * (j + 0.5)
         d.text((cx * SS, (top + 4) * SS), str(yv), font=fh, fill=CHART_TEXT, anchor="mm")
         d.text((cx * SS, (top + 24) * SS), CRISIS_NAMES[yv], font=fv, fill=CHART_SECONDARY, anchor="mm")
         d.line([(cx * SS, (top + 40) * SS), (cx * SS, bot * SS)], fill=CHART_MUTED, width=SS)
-    for i, s in enumerate(SECTORS):
+    for i, s in enumerate(rows):
         cy = top + 40 + rowh * (i + 0.5)
+        if s == "Whole economy":
+            d.line([(x0 * SS, (cy - rowh / 2) * SS), (x1 * SS, (cy - rowh / 2) * SS)], fill=CHART_MUTED, width=SS)
         d.text(((lab_w + 10) * SS, cy * SS), s, font=fl, fill=CHART_TEXT, anchor="rm")
         for j, yv in enumerate(years):
-            v = CRISIS[yv][s]
+            v = GROWTH[yv] if s == "Whole economy" else CRISIS[yv][s]["contrib"]
             cx = x0 + col * (j + 0.5)
             ex = cx + v * scale
-            d.rectangle([min(cx, ex) * SS, (cy - 9) * SS, max(cx, ex) * SS, (cy + 9) * SS], fill=DOWN if v < 0 else UP)
+            d.rectangle([min(cx, ex) * SS, (cy - 8) * SS, max(cx, ex) * SS, (cy + 8) * SS], fill=DOWN if v < 0 else UP)
             tx, anc = (ex - 6, "rm") if v < 0 else (ex + 6, "lm")
-            d.text((tx * SS, cy * SS), f"{v:+.1f}", font=fv, fill=CHART_SECONDARY, anchor=anc)
+            d.text((tx * SS, cy * SS), f"{v:+.1f}", font=fv, fill=CHART_TEXT if s == "Whole economy" else CHART_SECONDARY, anchor=anc)
     _save(img, "singapore-crisis-sectors-chart.png")
+
+
+def size_png():
+    img, d = _frame("A more evenly spread economy", "Each industry's share of GDP at current prices, 2000 and 2025",
+                    "Source: Singapore Department of Statistics, GDP at current prices by industry (table M015731).")
+    lab_w, x0, x1, top, bot = 380, 400, 1150, 160, 640
+    rowh = (bot - top) / len(SIZE_ORDER)
+    sx = lambda v: (x0 + v / 30 * (x1 - x0)) * SS  # noqa: E731
+    f, fl = load_font(14 * SS, bold=False), load_font(16 * SS)
+    for v in (0, 10, 20, 30):
+        d.line([(sx(v), top * SS), (sx(v), bot * SS)], fill=CHART_GRID if v else CHART_MUTED, width=SS)
+        d.text((sx(v), (bot + 18) * SS), f"{v}%", font=f, fill=CHART_MUTED, anchor="mm")
+    for i, s in enumerate(SIZE_ORDER):
+        cy = top + rowh * (i + 0.5)
+        d.text(((lab_w + 6) * SS, cy * SS), s, font=fl, fill=CHART_TEXT, anchor="rm")
+        for k, (yv, colr, dy) in enumerate([(2000, UP, -9), (2025, SERIES_2, 9)]):
+            v = SIZE[yv][s]
+            d.rectangle([sx(0), (cy + dy - 7) * SS, sx(v), (cy + dy + 7) * SS], fill=colr)
+            d.text((sx(v) + 8 * SS, (cy + dy) * SS), f"{v:.1f}%", font=f, fill=CHART_SECONDARY, anchor="lm")
+    ly = 124 * SS
+    for lx, colr, lab in [(60, UP, "2000"), (160, SERIES_2, "2025")]:
+        d.rectangle([lx * SS, ly, (lx + 22) * SS, ly + 12 * SS], fill=colr)
+        d.text(((lx + 30) * SS, ly + 6 * SS), lab, font=load_font(17 * SS, bold=False), fill=CHART_SECONDARY, anchor="lm")
+    _save(img, "singapore-sector-size-chart.png")
 
 
 def share_png():
@@ -125,14 +162,15 @@ def share_png():
     for yv in (2000, 2025):
         x, y = sx(yv), sy(SHARE[yv])
         d.ellipse([x - 7 * SS, y - 7 * SS, x + 7 * SS, y + 7 * SS], fill=CHART_BG, outline=UP, width=3 * SS)
-        d.text((x, y - 22 * SS), f"{yv}: {SHARE[yv]:.0f}%", font=load_font(16 * SS), fill=CHART_TEXT, anchor="mm")
+        d.text((x, y - 22 * SS), f"{yv}: {SHARE[yv]:.0f}%", font=load_font(16 * SS), fill=CHART_TEXT,
+               anchor="rm" if yv == years[-1] else "mm")
     _save(img, "singapore-electronics-share-chart.png")
 
 
 def svg():
     """Inline SVG for the post (theme tokens; hover data on every mark)."""
     out = []
-    # GDP growth bars
+    # 1. GDP growth bars
     x0, x1, vmin, vmax, top, bot = 46, 790, -6, 16, 14, 230
     sy = lambda v: top + (vmax - v) / (vmax - vmin) * (bot - top)  # noqa: E731
     years = sorted(GROWTH)
@@ -154,33 +192,65 @@ def svg():
             g.append(f'  <text class="cc-axis" x="{bx + bw / 2:.1f}" y="{bot + 18}" text-anchor="middle">{yv}</text>')
     g.append("</svg>")
     out.append("\n".join(g))
-    # Sector small multiples
+    # 2. What each crisis cost (contribution to growth)
     yrs = sorted(CRISIS)
-    lab_w, x0, x1, top = 150, 160, 795, 40
+    lab_w, x0, x1, top = 196, 206, 795, 40
     col = (x1 - x0) / len(yrs)
-    rowh = 34
-    scale = col * 0.27 / 42
-    aria = "; ".join(f"{yv}: " + ", ".join(f"{s.lower()} {CRISIS[yv][s]:+.1f}%" for s in SECTORS) for yv in yrs)
-    s = [f'<svg viewBox="0 0 800 {top + rowh * len(SECTORS) + 10}" width="100%" height="auto" role="img" aria-label="Growth of five industries in each crisis year. {aria}.">']
+    rows = SECTORS + ["Whole economy"]
+    rowh = 28
+    scale = col * 0.36 / CONTRIB_MAX
+    aria = "; ".join(f"{yv}: " + ", ".join(f"{s.lower()} {CRISIS[yv][s]['contrib']:+.1f}" for s in SECTORS)
+                     + f", whole economy {GROWTH[yv]:+.1f}" for yv in yrs)
+    h = top + rowh * len(rows) + 8
+    s = [f'<svg viewBox="0 0 800 {h}" width="100%" height="auto" role="img" aria-label="Contribution of each industry to GDP growth in each crisis year, in percentage points. {aria}.">']
     for j, yv in enumerate(yrs):
         cx = x0 + col * (j + 0.5)
         s.append(f'  <text class="cc-colhead" x="{cx:.1f}" y="14" text-anchor="middle">{yv}</text>')
         s.append(f'  <text class="cc-colsub" x="{cx:.1f}" y="28" text-anchor="middle">{CRISIS_NAMES[yv]}</text>')
-        s.append(f'  <line x1="{cx:.1f}" y1="{top - 4}" x2="{cx:.1f}" y2="{top + rowh * len(SECTORS)}" stroke="var(--axis)"/>')
-    for i, sec in enumerate(SECTORS):
+        s.append(f'  <line x1="{cx:.1f}" y1="{top - 4}" x2="{cx:.1f}" y2="{top + rowh * len(rows)}" stroke="var(--axis)"/>')
+    for i, sec in enumerate(rows):
         cy = top + rowh * (i + 0.5)
+        total = sec == "Whole economy"
+        if total:
+            s.append(f'  <line x1="20" y1="{cy - rowh / 2:.1f}" x2="{x1}" y2="{cy - rowh / 2:.1f}" stroke="var(--axis)"/>')
         s.append(f'  <text class="cc-row" x="{lab_w}" y="{cy + 4:.1f}" text-anchor="end">{sec}</text>')
         for j, yv in enumerate(yrs):
-            v = CRISIS[yv][sec]
+            if total:
+                v, tip = GROWTH[yv], f"Real GDP growth {GROWTH[yv]:+.1f}%"
+            else:
+                c = CRISIS[yv][sec]
+                v = c["contrib"]
+                tip = (f"Fell {abs(c['growth']):.1f}%" if c["growth"] < 0 else f"Grew {c['growth']:.1f}%") \
+                    + f"; {c['share']:.0f}% of the economy the year before; {v:+.1f} points of GDP growth"
             cx = x0 + col * (j + 0.5)
             ex = cx + v * scale
-            s.append(f'  <g class="cc-hit" tabindex="0" data-label="{sec}, {yv}" data-val="{v:+.1f}% in real terms">'
-                     f'<rect x="{min(cx, ex):.1f}" y="{cy - 7:.1f}" width="{max(abs(ex - cx), 0.8):.1f}" height="14" rx="2" fill="var({"--down" if v < 0 else "--up"})"/></g>')
+            s.append(f'  <g class="cc-hit" tabindex="0" data-label="{sec}, {yv}" data-val="{tip}">'
+                     f'<rect x="{min(cx, ex):.1f}" y="{cy - 6:.1f}" width="{max(abs(ex - cx), 0.8):.1f}" height="12" rx="2" fill="var({"--down" if v < 0 else "--up"})"/></g>')
             tx, anc = (ex - 4, "end") if v < 0 else (ex + 4, "start")
-            s.append(f'  <text class="cc-val" x="{tx:.1f}" y="{cy + 4:.1f}" text-anchor="{anc}">{v:+.1f}</text>')
+            s.append(f'  <text class="cc-val{" cc-total" if total else ""}" x="{tx:.1f}" y="{cy + 4:.1f}" text-anchor="{anc}">{v:+.1f}</text>')
     s.append("</svg>")
     out.append("\n".join(s))
-    # Electronics share line
+    # 3. Size of each sector, 2000 vs 2025
+    lab_w, x0, x1, top = 214, 224, 740, 10
+    rowh = 34
+    sx = lambda v: x0 + v / 30 * (x1 - x0)  # noqa: E731
+    h = top + rowh * len(SIZE_ORDER) + 26
+    aria = "; ".join(f"{sec.lower()} {SIZE[2000][sec]:.1f}% in 2000 and {SIZE[2025][sec]:.1f}% in 2025" for sec in SIZE_ORDER)
+    z = [f'<svg viewBox="0 0 800 {h}" width="100%" height="auto" role="img" aria-label="Horizontal bar chart of each industry\'s share of GDP at current prices: {aria}.">']
+    for v in (0, 10, 20, 30):
+        z.append(f'  <line x1="{sx(v):.1f}" y1="{top}" x2="{sx(v):.1f}" y2="{top + rowh * len(SIZE_ORDER)}" stroke="var({"--axis" if v == 0 else "--grid"})"/>')
+        z.append(f'  <text class="cc-axis" x="{sx(v):.1f}" y="{top + rowh * len(SIZE_ORDER) + 16}" text-anchor="middle">{v}%</text>')
+    for i, sec in enumerate(SIZE_ORDER):
+        cy = top + rowh * (i + 0.5)
+        z.append(f'  <text class="cc-row" x="{lab_w}" y="{cy + 4:.1f}" text-anchor="end">{sec}</text>')
+        for yv, var, dy in [(2000, "--up", -7), (2025, "--series-2", 7)]:
+            v = SIZE[yv][sec]
+            z.append(f'  <g class="cc-hit" tabindex="0" data-label="{sec}, {yv}" data-val="{v:.1f}% of GDP">'
+                     f'<rect x="{x0}" y="{cy + dy - 6:.1f}" width="{sx(v) - x0:.1f}" height="12" rx="2" fill="var({var})"/></g>')
+            z.append(f'  <text class="cc-val" x="{sx(v) + 4:.1f}" y="{cy + dy + 4:.1f}">{v:.1f}%</text>')
+    z.append("</svg>")
+    out.append("\n".join(z))
+    # 4. Electronics share line
     yrs = sorted(SHARE)
     x0, x1, top, bot = 46, 780, 20, 200
     sx = lambda yv: x0 + (yv - yrs[0]) / (yrs[-1] - yrs[0]) * (x1 - x0)  # noqa: E731
@@ -212,4 +282,5 @@ if __name__ == "__main__":
     else:
         gdp_png()
         sectors_png()
+        size_png()
         share_png()

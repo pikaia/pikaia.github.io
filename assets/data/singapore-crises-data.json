@@ -68,39 +68,214 @@
  },
  "crisis": {
   "1985": {
-   "Manufacturing": -7.3,
-   "Construction": -17.0,
-   "Finance and insurance": 15.0,
-   "Transport and storage": 1.7,
-   "Hotels and food services": -0.2
+   "Manufacturing": {
+    "growth": -7.3,
+    "share": 21.4,
+    "contrib": -1.6
+   },
+   "Wholesale and retail trade": {
+    "growth": -3.8,
+    "share": 12.0,
+    "contrib": -0.5
+   },
+   "Finance and insurance": {
+    "growth": 15.0,
+    "share": 10.9,
+    "contrib": 1.6
+   },
+   "Business services and real estate": {
+    "growth": 6.9,
+    "share": 8.7,
+    "contrib": 0.6
+   },
+   "Transport and storage": {
+    "growth": 1.7,
+    "share": 10.7,
+    "contrib": 0.2
+   },
+   "Information and communications": {
+    "growth": 7.0,
+    "share": 2.3,
+    "contrib": 0.2
+   },
+   "Construction": {
+    "growth": -17.0,
+    "share": 11.7,
+    "contrib": -2.0
+   },
+   "Hotels and food services": {
+    "growth": -0.2,
+    "share": 3.4,
+    "contrib": 0.0
+   }
   },
   "1998": {
-   "Manufacturing": -0.7,
-   "Construction": 2.0,
-   "Finance and insurance": -20.2,
-   "Transport and storage": 4.0,
-   "Hotels and food services": -7.1
+   "Manufacturing": {
+    "growth": -0.7,
+    "share": 22.2,
+    "contrib": -0.2
+   },
+   "Wholesale and retail trade": {
+    "growth": -8.2,
+    "share": 11.8,
+    "contrib": -1.0
+   },
+   "Finance and insurance": {
+    "growth": -20.2,
+    "share": 12.0,
+    "contrib": -2.4
+   },
+   "Business services and real estate": {
+    "growth": 3.2,
+    "share": 11.3,
+    "contrib": 0.4
+   },
+   "Transport and storage": {
+    "growth": 4.0,
+    "share": 8.9,
+    "contrib": 0.4
+   },
+   "Information and communications": {
+    "growth": 12.7,
+    "share": 3.1,
+    "contrib": 0.4
+   },
+   "Construction": {
+    "growth": 2.0,
+    "share": 7.1,
+    "contrib": 0.1
+   },
+   "Hotels and food services": {
+    "growth": -7.1,
+    "share": 2.5,
+    "contrib": -0.2
+   }
   },
   "2001": {
-   "Manufacturing": -11.6,
-   "Construction": 0.2,
-   "Finance and insurance": 10.3,
-   "Transport and storage": -0.6,
-   "Hotels and food services": -1.5
+   "Manufacturing": {
+    "growth": -11.6,
+    "share": 25.9,
+    "contrib": -3.0
+   },
+   "Wholesale and retail trade": {
+    "growth": -0.8,
+    "share": 12.5,
+    "contrib": -0.1
+   },
+   "Finance and insurance": {
+    "growth": 10.3,
+    "share": 9.4,
+    "contrib": 1.0
+   },
+   "Business services and real estate": {
+    "growth": -0.5,
+    "share": 10.6,
+    "contrib": -0.1
+   },
+   "Transport and storage": {
+    "growth": -0.6,
+    "share": 9.3,
+    "contrib": -0.1
+   },
+   "Information and communications": {
+    "growth": 14.9,
+    "share": 3.5,
+    "contrib": 0.5
+   },
+   "Construction": {
+    "growth": 0.2,
+    "share": 4.9,
+    "contrib": 0.0
+   },
+   "Hotels and food services": {
+    "growth": -1.5,
+    "share": 2.3,
+    "contrib": 0.0
+   }
   },
   "2009": {
-   "Manufacturing": -4.2,
-   "Construction": 22.3,
-   "Finance and insurance": 1.0,
-   "Transport and storage": -8.8,
-   "Hotels and food services": -4.0
+   "Manufacturing": {
+    "growth": -4.2,
+    "share": 20.6,
+    "contrib": -0.9
+   },
+   "Wholesale and retail trade": {
+    "growth": -3.9,
+    "share": 16.5,
+    "contrib": -0.6
+   },
+   "Finance and insurance": {
+    "growth": 1.0,
+    "share": 11.0,
+    "contrib": 0.1
+   },
+   "Business services and real estate": {
+    "growth": 4.0,
+    "share": 13.0,
+    "contrib": 0.5
+   },
+   "Transport and storage": {
+    "growth": -8.8,
+    "share": 9.2,
+    "contrib": -0.8
+   },
+   "Information and communications": {
+    "growth": 6.2,
+    "share": 3.6,
+    "contrib": 0.2
+   },
+   "Construction": {
+    "growth": 22.3,
+    "share": 4.4,
+    "contrib": 1.0
+   },
+   "Hotels and food services": {
+    "growth": -4.0,
+    "share": 2.0,
+    "contrib": -0.1
+   }
   },
   "2020": {
-   "Manufacturing": 7.5,
-   "Construction": -41.7,
-   "Finance and insurance": 7.2,
-   "Transport and storage": -17.6,
-   "Hotels and food services": -20.2
+   "Manufacturing": {
+    "growth": 7.5,
+    "share": 19.3,
+    "contrib": 1.5
+   },
+   "Wholesale and retail trade": {
+    "growth": -2.0,
+    "share": 17.6,
+    "contrib": -0.4
+   },
+   "Finance and insurance": {
+    "growth": 7.2,
+    "share": 13.2,
+    "contrib": 0.9
+   },
+   "Business services and real estate": {
+    "growth": -12.4,
+    "share": 13.3,
+    "contrib": -1.6
+   },
+   "Transport and storage": {
+    "growth": -17.6,
+    "share": 6.2,
+    "contrib": -1.1
+   },
+   "Information and communications": {
+    "growth": 14.4,
+    "share": 4.4,
+    "contrib": 0.6
+   },
+   "Construction": {
+    "growth": -41.7,
+    "share": 3.5,
+    "contrib": -1.5
+   },
+   "Hotels and food services": {
+    "growth": -20.2,
+    "share": 2.0,
+    "contrib": -0.4
+   }
   }
  },
  "share": {
@@ -135,5 +310,33 @@
   "2025": 24.3
  },
  "gdp_updated": "14/04/2026",
- "nodx_updated": "17/09/2026"
+ "nodx_updated": "17/09/2026",
+ "size": {
+  "2000": {
+   "Manufacturing": 25.9,
+   "Wholesale and retail trade": 12.5,
+   "Finance and insurance": 9.4,
+   "Business services and real estate": 10.6,
+   "Transport and storage": 9.3,
+   "Information and communications": 3.5,
+   "Construction": 4.9,
+   "Hotels and food services": 2.3
+  },
+  "2025": {
+   "Manufacturing": 17.4,
+   "Wholesale and retail trade": 19.7,
+   "Finance and insurance": 13.2,
+   "Business services and real estate": 10.4,
+   "Transport and storage": 7.6,
+   "Information and communications": 6.0,
+   "Construction": 3.8,
+   "Hotels and food services": 1.7
+  }
+ },
+ "sources": {
+  "real": "M015721",
+  "current": "M015731",
+  "contribution": "M015741",
+  "nodx": "M450981"
+ }
 }

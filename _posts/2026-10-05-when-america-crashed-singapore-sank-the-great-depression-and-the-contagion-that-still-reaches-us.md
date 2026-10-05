@@ -11,6 +11,45 @@ In 1929 a pound of Malayan rubber sold for an average of 34 cents. By June 1932 
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/when-america-crashed-singapore-sank-the-great-depression-and-the-contagion-that-still-reaches-us.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A rubber tapper at work among rows of tall rubber trees on a plantation near Singapore around 1914](https://upload.wikimedia.org/wikipedia/commons/9/99/Souvenir_of_Singapore%2C_1914_-_Plate_10_-_Rubber_Tapping.jpg)
 
 *Rubber tapping, from a souvenir album of Singapore of about 1914. (Unknown photographer, public domain, via Wikimedia Commons)*
@@ -48,7 +87,7 @@ The chain in 1929 to 1932 ran in one direction: a crash abroad, then a fall in d
 
 ## Testing the pattern on later crises
 
-Singapore's economy has shrunk, or nearly stopped growing, in six years since 1961. The chart shows each year's growth in real terms, with the years of decline in red.
+Singapore's economy has shrunk, or nearly stopped growing, in six years since 1961. Official national accounts for Singapore begin in 1960, so there are no comparable yearly figures for the 1930s. The chart shows each year's growth in real terms, with the years of decline in red.
 
 <div class="viz-root" style="clear: both;">
 <style>
@@ -62,6 +101,7 @@ Singapore's economy has shrunk, or nearly stopped growing, in six years since 19
   --axis:           #c3c2b7;
   --up:             #2a78d6;
   --down:           #e34948;
+  --series-2:       #008300;
   --border:         rgba(11,11,11,0.10);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -76,6 +116,7 @@ Singapore's economy has shrunk, or nearly stopped growing, in six years since 19
   --axis:           #383835;
   --up:             #3987e5;
   --down:           #e66767;
+  --series-2:       #1fa61f;
   --border:         rgba(255,255,255,0.10);
   }
 }
@@ -89,6 +130,7 @@ Singapore's economy has shrunk, or nearly stopped growing, in six years since 19
   --axis:           #383835;
   --up:             #3987e5;
   --down:           #e66767;
+  --series-2:       #1fa61f;
   --border:         rgba(255,255,255,0.10);
 }
 .cc-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px 20px 12px; margin: 1.5em 0; }
@@ -316,102 +358,151 @@ Singapore's economy has shrunk, or nearly stopped growing, in six years since 19
 </script>
 </div>
 
-The figures by industry show where each of the later crises hit, and they do not all follow the 1930s pattern.
+The figures by industry show where each of the later crises hit, and they do not all follow the 1930s pattern. The chart below measures each industry's contribution to the year's growth in percentage points, which depends both on how far the industry fell and on how large it was. The bottom row shows the growth of the whole economy.
 
 <div class="viz-root" style="clear: both;">
 <div class="cc-card">
-  <p class="cc-title">Where each crisis hit hardest</p>
-  <p class="cc-subtitle">Growth of five industries in each crisis year, in real terms (per cent)</p>
+  <p class="cc-title">What each crisis cost, by industry</p>
+  <p class="cc-subtitle">Each industry's contribution to GDP growth in the crisis year, in percentage points</p>
   <div class="cc-legend">
     <span><i class="cc-swatch" style="background: var(--up)"></i>Growth</span>
     <span><i class="cc-swatch" style="background: var(--down)"></i>Decline</span>
   </div>
   <div class="cc-chart-wrap">
-<svg viewBox="0 0 800 220" width="100%" height="auto" role="img" aria-label="Growth of five industries in each crisis year. 1985: manufacturing -7.3%, construction -17.0%, finance and insurance +15.0%, transport and storage +1.7%, hotels and food services -0.2%; 1998: manufacturing -0.7%, construction +2.0%, finance and insurance -20.2%, transport and storage +4.0%, hotels and food services -7.1%; 2001: manufacturing -11.6%, construction +0.2%, finance and insurance +10.3%, transport and storage -0.6%, hotels and food services -1.5%; 2009: manufacturing -4.2%, construction +22.3%, finance and insurance +1.0%, transport and storage -8.8%, hotels and food services -4.0%; 2020: manufacturing +7.5%, construction -41.7%, finance and insurance +7.2%, transport and storage -17.6%, hotels and food services -20.2%.">
-  <text class="cc-colhead" x="223.5" y="14" text-anchor="middle">1985</text>
-  <text class="cc-colsub" x="223.5" y="28" text-anchor="middle">1985 recession</text>
-  <line x1="223.5" y1="36" x2="223.5" y2="210" stroke="var(--axis)"/>
-  <text class="cc-colhead" x="350.5" y="14" text-anchor="middle">1998</text>
-  <text class="cc-colsub" x="350.5" y="28" text-anchor="middle">Asian financial crisis</text>
-  <line x1="350.5" y1="36" x2="350.5" y2="210" stroke="var(--axis)"/>
-  <text class="cc-colhead" x="477.5" y="14" text-anchor="middle">2001</text>
-  <text class="cc-colsub" x="477.5" y="28" text-anchor="middle">Dot-com bust</text>
-  <line x1="477.5" y1="36" x2="477.5" y2="210" stroke="var(--axis)"/>
-  <text class="cc-colhead" x="604.5" y="14" text-anchor="middle">2009</text>
-  <text class="cc-colsub" x="604.5" y="28" text-anchor="middle">Global financial crisis</text>
-  <line x1="604.5" y1="36" x2="604.5" y2="210" stroke="var(--axis)"/>
-  <text class="cc-colhead" x="731.5" y="14" text-anchor="middle">2020</text>
-  <text class="cc-colsub" x="731.5" y="28" text-anchor="middle">Pandemic</text>
-  <line x1="731.5" y1="36" x2="731.5" y2="210" stroke="var(--axis)"/>
-  <text class="cc-row" x="150" y="61.0" text-anchor="end">Manufacturing</text>
-  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 1985" data-val="-7.3% in real terms"><rect x="217.5" y="50.0" width="6.0" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="213.5" y="61.0" text-anchor="end">-7.3</text>
-  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 1998" data-val="-0.7% in real terms"><rect x="349.9" y="50.0" width="0.8" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="345.9" y="61.0" text-anchor="end">-0.7</text>
-  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2001" data-val="-11.6% in real terms"><rect x="468.0" y="50.0" width="9.5" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="464.0" y="61.0" text-anchor="end">-11.6</text>
-  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2009" data-val="-4.2% in real terms"><rect x="601.1" y="50.0" width="3.4" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="597.1" y="61.0" text-anchor="end">-4.2</text>
-  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2020" data-val="+7.5% in real terms"><rect x="731.5" y="50.0" width="6.1" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="741.6" y="61.0" text-anchor="start">+7.5</text>
-  <text class="cc-row" x="150" y="95.0" text-anchor="end">Construction</text>
-  <g class="cc-hit" tabindex="0" data-label="Construction, 1985" data-val="-17.0% in real terms"><rect x="209.6" y="84.0" width="13.9" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="205.6" y="95.0" text-anchor="end">-17.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Construction, 1998" data-val="+2.0% in real terms"><rect x="350.5" y="84.0" width="1.6" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="356.1" y="95.0" text-anchor="start">+2.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Construction, 2001" data-val="+0.2% in real terms"><rect x="477.5" y="84.0" width="0.8" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="481.7" y="95.0" text-anchor="start">+0.2</text>
-  <g class="cc-hit" tabindex="0" data-label="Construction, 2009" data-val="+22.3% in real terms"><rect x="604.5" y="84.0" width="18.2" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="626.7" y="95.0" text-anchor="start">+22.3</text>
-  <g class="cc-hit" tabindex="0" data-label="Construction, 2020" data-val="-41.7% in real terms"><rect x="697.5" y="84.0" width="34.0" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="693.5" y="95.0" text-anchor="end">-41.7</text>
-  <text class="cc-row" x="150" y="129.0" text-anchor="end">Finance and insurance</text>
-  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 1985" data-val="+15.0% in real terms"><rect x="223.5" y="118.0" width="12.2" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="239.7" y="129.0" text-anchor="start">+15.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 1998" data-val="-20.2% in real terms"><rect x="334.0" y="118.0" width="16.5" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="330.0" y="129.0" text-anchor="end">-20.2</text>
-  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2001" data-val="+10.3% in real terms"><rect x="477.5" y="118.0" width="8.4" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="489.9" y="129.0" text-anchor="start">+10.3</text>
-  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2009" data-val="+1.0% in real terms"><rect x="604.5" y="118.0" width="0.8" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="609.3" y="129.0" text-anchor="start">+1.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2020" data-val="+7.2% in real terms"><rect x="731.5" y="118.0" width="5.9" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="741.4" y="129.0" text-anchor="start">+7.2</text>
-  <text class="cc-row" x="150" y="163.0" text-anchor="end">Transport and storage</text>
-  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 1985" data-val="+1.7% in real terms"><rect x="223.5" y="152.0" width="1.4" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="228.9" y="163.0" text-anchor="start">+1.7</text>
-  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 1998" data-val="+4.0% in real terms"><rect x="350.5" y="152.0" width="3.3" height="14" rx="2" fill="var(--up)"/></g>
-  <text class="cc-val" x="357.8" y="163.0" text-anchor="start">+4.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2001" data-val="-0.6% in real terms"><rect x="477.0" y="152.0" width="0.8" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="473.0" y="163.0" text-anchor="end">-0.6</text>
-  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2009" data-val="-8.8% in real terms"><rect x="597.3" y="152.0" width="7.2" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="593.3" y="163.0" text-anchor="end">-8.8</text>
-  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2020" data-val="-17.6% in real terms"><rect x="717.1" y="152.0" width="14.4" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="713.1" y="163.0" text-anchor="end">-17.6</text>
-  <text class="cc-row" x="150" y="197.0" text-anchor="end">Hotels and food services</text>
-  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 1985" data-val="-0.2% in real terms"><rect x="223.3" y="186.0" width="0.8" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="219.3" y="197.0" text-anchor="end">-0.2</text>
-  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 1998" data-val="-7.1% in real terms"><rect x="344.7" y="186.0" width="5.8" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="340.7" y="197.0" text-anchor="end">-7.1</text>
-  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2001" data-val="-1.5% in real terms"><rect x="476.3" y="186.0" width="1.2" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="472.3" y="197.0" text-anchor="end">-1.5</text>
-  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2009" data-val="-4.0% in real terms"><rect x="601.2" y="186.0" width="3.3" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="597.2" y="197.0" text-anchor="end">-4.0</text>
-  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2020" data-val="-20.2% in real terms"><rect x="715.0" y="186.0" width="16.5" height="14" rx="2" fill="var(--down)"/></g>
-  <text class="cc-val" x="711.0" y="197.0" text-anchor="end">-20.2</text>
+<svg viewBox="0 0 800 300" width="100%" height="auto" role="img" aria-label="Contribution of each industry to GDP growth in each crisis year, in percentage points. 1985: manufacturing -1.6, wholesale and retail trade -0.5, finance and insurance +1.6, business services and real estate +0.6, transport and storage +0.2, information and communications +0.2, construction -2.0, hotels and food services +0.0, whole economy -0.6; 1998: manufacturing -0.2, wholesale and retail trade -1.0, finance and insurance -2.4, business services and real estate +0.4, transport and storage +0.4, information and communications +0.4, construction +0.1, hotels and food services -0.2, whole economy -2.2; 2001: manufacturing -3.0, wholesale and retail trade -0.1, finance and insurance +1.0, business services and real estate -0.1, transport and storage -0.1, information and communications +0.5, construction +0.0, hotels and food services +0.0, whole economy -1.1; 2009: manufacturing -0.9, wholesale and retail trade -0.6, finance and insurance +0.1, business services and real estate +0.5, transport and storage -0.8, information and communications +0.2, construction +1.0, hotels and food services -0.1, whole economy +0.1; 2020: manufacturing +1.5, wholesale and retail trade -0.4, finance and insurance +0.9, business services and real estate -1.6, transport and storage -1.1, information and communications +0.6, construction -1.5, hotels and food services -0.4, whole economy -3.6.">
+  <text class="cc-colhead" x="264.9" y="14" text-anchor="middle">1985</text>
+  <text class="cc-colsub" x="264.9" y="28" text-anchor="middle">1985 recession</text>
+  <line x1="264.9" y1="36" x2="264.9" y2="292" stroke="var(--axis)"/>
+  <text class="cc-colhead" x="382.7" y="14" text-anchor="middle">1998</text>
+  <text class="cc-colsub" x="382.7" y="28" text-anchor="middle">Asian financial crisis</text>
+  <line x1="382.7" y1="36" x2="382.7" y2="292" stroke="var(--axis)"/>
+  <text class="cc-colhead" x="500.5" y="14" text-anchor="middle">2001</text>
+  <text class="cc-colsub" x="500.5" y="28" text-anchor="middle">Dot-com bust</text>
+  <line x1="500.5" y1="36" x2="500.5" y2="292" stroke="var(--axis)"/>
+  <text class="cc-colhead" x="618.3" y="14" text-anchor="middle">2009</text>
+  <text class="cc-colsub" x="618.3" y="28" text-anchor="middle">Global financial crisis</text>
+  <line x1="618.3" y1="36" x2="618.3" y2="292" stroke="var(--axis)"/>
+  <text class="cc-colhead" x="736.1" y="14" text-anchor="middle">2020</text>
+  <text class="cc-colsub" x="736.1" y="28" text-anchor="middle">Pandemic</text>
+  <line x1="736.1" y1="36" x2="736.1" y2="292" stroke="var(--axis)"/>
+  <text class="cc-row" x="196" y="58.0" text-anchor="end">Manufacturing</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 1985" data-val="Fell 7.3%; 21% of the economy the year before; -1.6 points of GDP growth"><rect x="243.7" y="48.0" width="21.2" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="239.7" y="58.0" text-anchor="end">-1.6</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 1998" data-val="Fell 0.7%; 22% of the economy the year before; -0.2 points of GDP growth"><rect x="380.0" y="48.0" width="2.7" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="376.0" y="58.0" text-anchor="end">-0.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2001" data-val="Fell 11.6%; 26% of the economy the year before; -3.0 points of GDP growth"><rect x="460.7" y="48.0" width="39.8" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="456.7" y="58.0" text-anchor="end">-3.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2009" data-val="Fell 4.2%; 21% of the economy the year before; -0.9 points of GDP growth"><rect x="606.4" y="48.0" width="11.9" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="602.4" y="58.0" text-anchor="end">-0.9</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2020" data-val="Grew 7.5%; 19% of the economy the year before; +1.5 points of GDP growth"><rect x="736.1" y="48.0" width="19.9" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="760.0" y="58.0" text-anchor="start">+1.5</text>
+  <text class="cc-row" x="196" y="86.0" text-anchor="end">Wholesale and retail trade</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 1985" data-val="Fell 3.8%; 12% of the economy the year before; -0.5 points of GDP growth"><rect x="258.3" y="76.0" width="6.6" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="254.3" y="86.0" text-anchor="end">-0.5</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 1998" data-val="Fell 8.2%; 12% of the economy the year before; -1.0 points of GDP growth"><rect x="369.4" y="76.0" width="13.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="365.4" y="86.0" text-anchor="end">-1.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 2001" data-val="Fell 0.8%; 12% of the economy the year before; -0.1 points of GDP growth"><rect x="499.2" y="76.0" width="1.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="495.2" y="86.0" text-anchor="end">-0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 2009" data-val="Fell 3.9%; 16% of the economy the year before; -0.6 points of GDP growth"><rect x="610.3" y="76.0" width="8.0" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="606.3" y="86.0" text-anchor="end">-0.6</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 2020" data-val="Fell 2.0%; 18% of the economy the year before; -0.4 points of GDP growth"><rect x="730.8" y="76.0" width="5.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="726.8" y="86.0" text-anchor="end">-0.4</text>
+  <text class="cc-row" x="196" y="114.0" text-anchor="end">Finance and insurance</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 1985" data-val="Grew 15.0%; 11% of the economy the year before; +1.6 points of GDP growth"><rect x="264.9" y="104.0" width="21.2" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="290.1" y="114.0" text-anchor="start">+1.6</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 1998" data-val="Fell 20.2%; 12% of the economy the year before; -2.4 points of GDP growth"><rect x="350.9" y="104.0" width="31.8" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="346.9" y="114.0" text-anchor="end">-2.4</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2001" data-val="Grew 10.3%; 9% of the economy the year before; +1.0 points of GDP growth"><rect x="500.5" y="104.0" width="13.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="517.8" y="114.0" text-anchor="start">+1.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2009" data-val="Grew 1.0%; 11% of the economy the year before; +0.1 points of GDP growth"><rect x="618.3" y="104.0" width="1.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="623.6" y="114.0" text-anchor="start">+0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2020" data-val="Grew 7.2%; 13% of the economy the year before; +0.9 points of GDP growth"><rect x="736.1" y="104.0" width="11.9" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="752.0" y="114.0" text-anchor="start">+0.9</text>
+  <text class="cc-row" x="196" y="142.0" text-anchor="end">Business services and real estate</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 1985" data-val="Grew 6.9%; 9% of the economy the year before; +0.6 points of GDP growth"><rect x="264.9" y="132.0" width="8.0" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="276.9" y="142.0" text-anchor="start">+0.6</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 1998" data-val="Grew 3.2%; 11% of the economy the year before; +0.4 points of GDP growth"><rect x="382.7" y="132.0" width="5.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="392.0" y="142.0" text-anchor="start">+0.4</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 2001" data-val="Fell 0.5%; 11% of the economy the year before; -0.1 points of GDP growth"><rect x="499.2" y="132.0" width="1.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="495.2" y="142.0" text-anchor="end">-0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 2009" data-val="Grew 4.0%; 13% of the economy the year before; +0.5 points of GDP growth"><rect x="618.3" y="132.0" width="6.6" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="628.9" y="142.0" text-anchor="start">+0.5</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 2020" data-val="Fell 12.4%; 13% of the economy the year before; -1.6 points of GDP growth"><rect x="714.9" y="132.0" width="21.2" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="710.9" y="142.0" text-anchor="end">-1.6</text>
+  <text class="cc-row" x="196" y="170.0" text-anchor="end">Transport and storage</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 1985" data-val="Grew 1.7%; 11% of the economy the year before; +0.2 points of GDP growth"><rect x="264.9" y="160.0" width="2.7" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="271.6" y="170.0" text-anchor="start">+0.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 1998" data-val="Grew 4.0%; 9% of the economy the year before; +0.4 points of GDP growth"><rect x="382.7" y="160.0" width="5.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="392.0" y="170.0" text-anchor="start">+0.4</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2001" data-val="Fell 0.6%; 9% of the economy the year before; -0.1 points of GDP growth"><rect x="499.2" y="160.0" width="1.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="495.2" y="170.0" text-anchor="end">-0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2009" data-val="Fell 8.8%; 9% of the economy the year before; -0.8 points of GDP growth"><rect x="607.7" y="160.0" width="10.6" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="603.7" y="170.0" text-anchor="end">-0.8</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2020" data-val="Fell 17.6%; 6% of the economy the year before; -1.1 points of GDP growth"><rect x="721.5" y="160.0" width="14.6" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="717.5" y="170.0" text-anchor="end">-1.1</text>
+  <text class="cc-row" x="196" y="198.0" text-anchor="end">Information and communications</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 1985" data-val="Grew 7.0%; 2% of the economy the year before; +0.2 points of GDP growth"><rect x="264.9" y="188.0" width="2.7" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="271.6" y="198.0" text-anchor="start">+0.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 1998" data-val="Grew 12.7%; 3% of the economy the year before; +0.4 points of GDP growth"><rect x="382.7" y="188.0" width="5.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="392.0" y="198.0" text-anchor="start">+0.4</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 2001" data-val="Grew 14.9%; 4% of the economy the year before; +0.5 points of GDP growth"><rect x="500.5" y="188.0" width="6.6" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="511.1" y="198.0" text-anchor="start">+0.5</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 2009" data-val="Grew 6.2%; 4% of the economy the year before; +0.2 points of GDP growth"><rect x="618.3" y="188.0" width="2.7" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="625.0" y="198.0" text-anchor="start">+0.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 2020" data-val="Grew 14.4%; 4% of the economy the year before; +0.6 points of GDP growth"><rect x="736.1" y="188.0" width="8.0" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="748.1" y="198.0" text-anchor="start">+0.6</text>
+  <text class="cc-row" x="196" y="226.0" text-anchor="end">Construction</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 1985" data-val="Fell 17.0%; 12% of the economy the year before; -2.0 points of GDP growth"><rect x="238.4" y="216.0" width="26.5" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="234.4" y="226.0" text-anchor="end">-2.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 1998" data-val="Grew 2.0%; 7% of the economy the year before; +0.1 points of GDP growth"><rect x="382.7" y="216.0" width="1.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="388.0" y="226.0" text-anchor="start">+0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 2001" data-val="Grew 0.2%; 5% of the economy the year before; +0.0 points of GDP growth"><rect x="500.5" y="216.0" width="0.8" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="504.5" y="226.0" text-anchor="start">+0.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 2009" data-val="Grew 22.3%; 4% of the economy the year before; +1.0 points of GDP growth"><rect x="618.3" y="216.0" width="13.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="635.6" y="226.0" text-anchor="start">+1.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 2020" data-val="Fell 41.7%; 4% of the economy the year before; -1.5 points of GDP growth"><rect x="716.2" y="216.0" width="19.9" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="712.2" y="226.0" text-anchor="end">-1.5</text>
+  <text class="cc-row" x="196" y="254.0" text-anchor="end">Hotels and food services</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 1985" data-val="Fell 0.2%; 3% of the economy the year before; +0.0 points of GDP growth"><rect x="264.9" y="244.0" width="0.8" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="268.9" y="254.0" text-anchor="start">+0.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 1998" data-val="Fell 7.1%; 2% of the economy the year before; -0.2 points of GDP growth"><rect x="380.0" y="244.0" width="2.7" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="376.0" y="254.0" text-anchor="end">-0.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2001" data-val="Fell 1.5%; 2% of the economy the year before; +0.0 points of GDP growth"><rect x="500.5" y="244.0" width="0.8" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="504.5" y="254.0" text-anchor="start">+0.0</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2009" data-val="Fell 4.0%; 2% of the economy the year before; -0.1 points of GDP growth"><rect x="617.0" y="244.0" width="1.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="613.0" y="254.0" text-anchor="end">-0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2020" data-val="Fell 20.2%; 2% of the economy the year before; -0.4 points of GDP growth"><rect x="730.8" y="244.0" width="5.3" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val" x="726.8" y="254.0" text-anchor="end">-0.4</text>
+  <line x1="20" y1="264.0" x2="795" y2="264.0" stroke="var(--axis)"/>
+  <text class="cc-row" x="196" y="282.0" text-anchor="end">Whole economy</text>
+  <g class="cc-hit" tabindex="0" data-label="Whole economy, 1985" data-val="Real GDP growth -0.6%"><rect x="256.9" y="272.0" width="8.0" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val cc-total" x="252.9" y="282.0" text-anchor="end">-0.6</text>
+  <g class="cc-hit" tabindex="0" data-label="Whole economy, 1998" data-val="Real GDP growth -2.2%"><rect x="353.5" y="272.0" width="29.2" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val cc-total" x="349.5" y="282.0" text-anchor="end">-2.2</text>
+  <g class="cc-hit" tabindex="0" data-label="Whole economy, 2001" data-val="Real GDP growth -1.1%"><rect x="485.9" y="272.0" width="14.6" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val cc-total" x="481.9" y="282.0" text-anchor="end">-1.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Whole economy, 2009" data-val="Real GDP growth +0.1%"><rect x="618.3" y="272.0" width="1.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val cc-total" x="623.6" y="282.0" text-anchor="start">+0.1</text>
+  <g class="cc-hit" tabindex="0" data-label="Whole economy, 2020" data-val="Real GDP growth -3.6%"><rect x="688.4" y="272.0" width="47.7" height="12" rx="2" fill="var(--down)"/></g>
+  <text class="cc-val cc-total" x="684.4" y="282.0" text-anchor="end">-3.6</text>
 </svg>
     <div class="cc-tooltip"></div>
   </div>
-  <p class="cc-foot">Source: Singapore Department of Statistics, GDP by industry in chained (2015) dollars (table M015721).</p>
+  <p class="cc-foot">Source: Singapore Department of Statistics, contribution to growth in real GDP by industry (table M015741). Hover a bar for the industry's growth and its share of the economy the year before. The industries shown do not add up exactly to the whole economy, which also includes smaller items such as taxes on products.</p>
   <details class="cc-details">
     <summary>View as table</summary>
     <table class="cc-table">
       <thead><tr><th>Industry</th><th>1985</th><th>1998</th><th>2001</th><th>2009</th><th>2020</th></tr></thead>
       <tbody>
-        <tr><td>Manufacturing</td><td>-7.3%</td><td>-0.7%</td><td>-11.6%</td><td>-4.2%</td><td>+7.5%</td></tr>
-        <tr><td>Construction</td><td>-17.0%</td><td>+2.0%</td><td>+0.2%</td><td>+22.3%</td><td>-41.7%</td></tr>
-        <tr><td>Finance and insurance</td><td>+15.0%</td><td>-20.2%</td><td>+10.3%</td><td>+1.0%</td><td>+7.2%</td></tr>
-        <tr><td>Transport and storage</td><td>+1.7%</td><td>+4.0%</td><td>-0.6%</td><td>-8.8%</td><td>-17.6%</td></tr>
-        <tr><td>Hotels and food services</td><td>-0.2%</td><td>-7.1%</td><td>-1.5%</td><td>-4.0%</td><td>-20.2%</td></tr>
+        <tr><td>Manufacturing</td><td>-1.6 (-7.3%)</td><td>-0.2 (-0.7%)</td><td>-3.0 (-11.6%)</td><td>-0.9 (-4.2%)</td><td>+1.5 (+7.5%)</td></tr>
+        <tr><td>Wholesale and retail trade</td><td>-0.5 (-3.8%)</td><td>-1.0 (-8.2%)</td><td>-0.1 (-0.8%)</td><td>-0.6 (-3.9%)</td><td>-0.4 (-2.0%)</td></tr>
+        <tr><td>Finance and insurance</td><td>+1.6 (+15.0%)</td><td>-2.4 (-20.2%)</td><td>+1.0 (+10.3%)</td><td>+0.1 (+1.0%)</td><td>+0.9 (+7.2%)</td></tr>
+        <tr><td>Business services and real estate</td><td>+0.6 (+6.9%)</td><td>+0.4 (+3.2%)</td><td>-0.1 (-0.5%)</td><td>+0.5 (+4.0%)</td><td>-1.6 (-12.4%)</td></tr>
+        <tr><td>Transport and storage</td><td>+0.2 (+1.7%)</td><td>+0.4 (+4.0%)</td><td>-0.1 (-0.6%)</td><td>-0.8 (-8.8%)</td><td>-1.1 (-17.6%)</td></tr>
+        <tr><td>Information and communications</td><td>+0.2 (+7.0%)</td><td>+0.4 (+12.7%)</td><td>+0.5 (+14.9%)</td><td>+0.2 (+6.2%)</td><td>+0.6 (+14.4%)</td></tr>
+        <tr><td>Construction</td><td>-2.0 (-17.0%)</td><td>+0.1 (+2.0%)</td><td>+0.0 (+0.2%)</td><td>+1.0 (+22.3%)</td><td>-1.5 (-41.7%)</td></tr>
+        <tr><td>Hotels and food services</td><td>+0.0 (-0.2%)</td><td>-0.2 (-7.1%)</td><td>+0.0 (-1.5%)</td><td>-0.1 (-4.0%)</td><td>-0.4 (-20.2%)</td></tr>
+        <tr><td>Whole economy</td><td>-0.6%</td><td>-2.2%</td><td>-1.1%</td><td>+0.1%</td><td>-3.6%</td></tr>
       </tbody>
     </table>
   </details>
@@ -439,17 +530,123 @@ The figures by industry show where each of the later crises hit, and they do not
 </script>
 </div>
 
-**1985.** Singapore's first recession after independence was largely home-made. According to the National Library Board, a construction boom had ended, with the market saturated by the end of 1984, and high costs, together with a slowdown in the United States, hurt manufacturing. Construction fell by 17 per cent and manufacturing by 7.3 per cent, while finance grew.
+**1985.** Singapore's first recession after independence was largely home-made. According to the National Library Board, a construction boom had ended, with the market saturated by the end of 1984, and high costs, together with a slowdown in the United States, hurt manufacturing. Construction fell by 17 per cent and manufacturing by 7.3 per cent, together taking 3.6 points off growth, while finance grew and added 1.6 points.
 
-**1998.** The Asian financial crisis began with the collapse of the Thai baht in July 1997 and spread through currencies, banks and investors' confidence. In Singapore the biggest fall was in finance and insurance, down 20.2 per cent, while manufacturing barely changed. This was a crisis of money more than of goods.
+**1998.** The Asian financial crisis began with the collapse of the Thai baht in July 1997 and spread through currencies, banks and investors' confidence. In Singapore the biggest fall was in finance and insurance, down 20.2 per cent, which took 2.4 points off growth, more than the economy's whole fall of 2.2 per cent, while manufacturing barely changed. This was a crisis of money more than of goods.
 
-**2001.** The dot-com bust is the closest match to the 1930s. In 2000, electronics made up 69 per cent of Singapore's non-oil domestic exports, the goods the island makes for export. When American technology spending collapsed, electronics exports fell by 19.9 per cent in 2001 and manufacturing by 11.6 per cent, and the economy shrank. Chips and computer parts had taken the place of rubber and tin.
+**2001.** The dot-com bust is the closest match to the 1930s. In 2000, electronics made up 69 per cent of Singapore's non-oil domestic exports, the goods the island makes for export. When American technology spending collapsed, electronics exports fell by 19.9 per cent in 2001 and manufacturing by 11.6 per cent. Manufacturing alone took 3.0 points off growth, and the economy shrank by 1.1 per cent. Chips and computer parts had taken the place of rubber and tin.
 
 **2008–09.** The global financial crisis began in American banks and reached Singapore through trade: transport and storage fell by 8.8 per cent in 2009 and manufacturing by 4.2 per cent, and electronics exports fell in both 2008 and 2009. It was partly a crisis of money and partly a crisis of goods.
 
-**2020.** The pandemic followed neither route. Borders closed and, under the "circuit breaker" from 7 April to 1 June 2020, most workplaces shut. Construction fell by 41.7 per cent and hotels and food services by 20.2 per cent, while manufacturing grew by 7.5 per cent.
+**2020.** The pandemic followed neither route. Borders closed and, under the "circuit breaker" from 7 April to 1 June 2020, most workplaces shut. Construction fell by 41.7 per cent, hotels and food services by 20.2 per cent and business services by 12.4 per cent, while manufacturing grew by 7.5 per cent and added 1.5 points.
 
 Taken together, Singapore's crises have arrived by two main routes. The goods route, a fall in demand for what Singapore makes and ships, was the route of 1930 and 2001 and part of 2009. The money route, through banks, currencies and confidence, was the route of 1998 and part of 2008.
+
+The size of an industry matters as much as the size of its fall. Construction's 41.7 per cent drop in 2020 was the steepest of any industry in these five crises, but construction was then only about 3.5 per cent of the economy, so it cost 1.5 points of growth. Manufacturing's fall of 11.6 per cent in 2001 was far smaller in percentage terms, but manufacturing was about a quarter of the economy in 2000, and it cost 3.0 points. An economy that leans on one large industry is exposed when that industry falls. One spread across several industries of similar size is less exposed, because a fall in one can be offset by growth in others, as finance offset manufacturing in 1985 and 2001, and manufacturing offset construction and transport in 2020. Diversification does not help much against a shock that hits nearly everything at once, as the lockdown of 2020 did.
+
+Singapore's economy is more evenly spread than it was in 2000. Measured at current prices, manufacturing's share of GDP fell from 25.9 per cent in 2000 to 17.4 per cent in 2025, while wholesale and retail trade grew from 12.5 to 19.7 per cent, and finance and insurance from 9.4 to 13.2 per cent.
+
+<div class="viz-root" style="clear: both;">
+<div class="cc-card">
+  <p class="cc-title">A more evenly spread economy</p>
+  <p class="cc-subtitle">Each industry's share of GDP at current prices, 2000 and 2025</p>
+  <div class="cc-legend">
+    <span><i class="cc-swatch" style="background: var(--up)"></i>2000</span>
+    <span><i class="cc-swatch" style="background: var(--series-2)"></i>2025</span>
+  </div>
+  <div class="cc-chart-wrap">
+<svg viewBox="0 0 800 308" width="100%" height="auto" role="img" aria-label="Horizontal bar chart of each industry's share of GDP at current prices: wholesale and retail trade 12.5% in 2000 and 19.7% in 2025; manufacturing 25.9% in 2000 and 17.4% in 2025; finance and insurance 9.4% in 2000 and 13.2% in 2025; business services and real estate 10.6% in 2000 and 10.4% in 2025; transport and storage 9.3% in 2000 and 7.6% in 2025; information and communications 3.5% in 2000 and 6.0% in 2025; construction 4.9% in 2000 and 3.8% in 2025; hotels and food services 2.3% in 2000 and 1.7% in 2025.">
+  <line x1="224.0" y1="10" x2="224.0" y2="282" stroke="var(--axis)"/>
+  <text class="cc-axis" x="224.0" y="298" text-anchor="middle">0%</text>
+  <line x1="396.0" y1="10" x2="396.0" y2="282" stroke="var(--grid)"/>
+  <text class="cc-axis" x="396.0" y="298" text-anchor="middle">10%</text>
+  <line x1="568.0" y1="10" x2="568.0" y2="282" stroke="var(--grid)"/>
+  <text class="cc-axis" x="568.0" y="298" text-anchor="middle">20%</text>
+  <line x1="740.0" y1="10" x2="740.0" y2="282" stroke="var(--grid)"/>
+  <text class="cc-axis" x="740.0" y="298" text-anchor="middle">30%</text>
+  <text class="cc-row" x="214" y="31.0" text-anchor="end">Wholesale and retail trade</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 2000" data-val="12.5% of GDP"><rect x="224" y="14.0" width="215.0" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="443.0" y="24.0">12.5%</text>
+  <g class="cc-hit" tabindex="0" data-label="Wholesale and retail trade, 2025" data-val="19.7% of GDP"><rect x="224" y="28.0" width="338.8" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="566.8" y="38.0">19.7%</text>
+  <text class="cc-row" x="214" y="65.0" text-anchor="end">Manufacturing</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2000" data-val="25.9% of GDP"><rect x="224" y="48.0" width="445.5" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="673.5" y="58.0">25.9%</text>
+  <g class="cc-hit" tabindex="0" data-label="Manufacturing, 2025" data-val="17.4% of GDP"><rect x="224" y="62.0" width="299.3" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="527.3" y="72.0">17.4%</text>
+  <text class="cc-row" x="214" y="99.0" text-anchor="end">Finance and insurance</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2000" data-val="9.4% of GDP"><rect x="224" y="82.0" width="161.7" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="389.7" y="92.0">9.4%</text>
+  <g class="cc-hit" tabindex="0" data-label="Finance and insurance, 2025" data-val="13.2% of GDP"><rect x="224" y="96.0" width="227.0" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="455.0" y="106.0">13.2%</text>
+  <text class="cc-row" x="214" y="133.0" text-anchor="end">Business services and real estate</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 2000" data-val="10.6% of GDP"><rect x="224" y="116.0" width="182.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="410.3" y="126.0">10.6%</text>
+  <g class="cc-hit" tabindex="0" data-label="Business services and real estate, 2025" data-val="10.4% of GDP"><rect x="224" y="130.0" width="178.9" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="406.9" y="140.0">10.4%</text>
+  <text class="cc-row" x="214" y="167.0" text-anchor="end">Transport and storage</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2000" data-val="9.3% of GDP"><rect x="224" y="150.0" width="160.0" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="388.0" y="160.0">9.3%</text>
+  <g class="cc-hit" tabindex="0" data-label="Transport and storage, 2025" data-val="7.6% of GDP"><rect x="224" y="164.0" width="130.7" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="358.7" y="174.0">7.6%</text>
+  <text class="cc-row" x="214" y="201.0" text-anchor="end">Information and communications</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 2000" data-val="3.5% of GDP"><rect x="224" y="184.0" width="60.2" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="288.2" y="194.0">3.5%</text>
+  <g class="cc-hit" tabindex="0" data-label="Information and communications, 2025" data-val="6.0% of GDP"><rect x="224" y="198.0" width="103.2" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="331.2" y="208.0">6.0%</text>
+  <text class="cc-row" x="214" y="235.0" text-anchor="end">Construction</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 2000" data-val="4.9% of GDP"><rect x="224" y="218.0" width="84.3" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="312.3" y="228.0">4.9%</text>
+  <g class="cc-hit" tabindex="0" data-label="Construction, 2025" data-val="3.8% of GDP"><rect x="224" y="232.0" width="65.4" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="293.4" y="242.0">3.8%</text>
+  <text class="cc-row" x="214" y="269.0" text-anchor="end">Hotels and food services</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2000" data-val="2.3% of GDP"><rect x="224" y="252.0" width="39.6" height="12" rx="2" fill="var(--up)"/></g>
+  <text class="cc-val" x="267.6" y="262.0">2.3%</text>
+  <g class="cc-hit" tabindex="0" data-label="Hotels and food services, 2025" data-val="1.7% of GDP"><rect x="224" y="266.0" width="29.2" height="12" rx="2" fill="var(--series-2)"/></g>
+  <text class="cc-val" x="257.2" y="276.0">1.7%</text>
+</svg>
+    <div class="cc-tooltip"></div>
+  </div>
+  <p class="cc-foot">Source: Singapore Department of Statistics, GDP at current prices by industry (table M015731). Shares are of the whole economy; the industries shown do not add up to 100 per cent.</p>
+  <details class="cc-details">
+    <summary>View as table</summary>
+    <table class="cc-table">
+      <thead><tr><th>Industry</th><th>2000</th><th>2025</th></tr></thead>
+      <tbody>
+        <tr><td>Wholesale and retail trade</td><td>12.5%</td><td>19.7%</td></tr>
+        <tr><td>Manufacturing</td><td>25.9%</td><td>17.4%</td></tr>
+        <tr><td>Finance and insurance</td><td>9.4%</td><td>13.2%</td></tr>
+        <tr><td>Business services and real estate</td><td>10.6%</td><td>10.4%</td></tr>
+        <tr><td>Transport and storage</td><td>9.3%</td><td>7.6%</td></tr>
+        <tr><td>Information and communications</td><td>3.5%</td><td>6.0%</td></tr>
+        <tr><td>Construction</td><td>4.9%</td><td>3.8%</td></tr>
+        <tr><td>Hotels and food services</td><td>2.3%</td><td>1.7%</td></tr>
+      </tbody>
+    </table>
+  </details>
+</div>
+<script>
+(function() {
+  var card = document.currentScript.previousElementSibling;
+  var svg = card.querySelector('.cc-chart-wrap svg');
+  var wrap = svg.parentElement;
+  var tooltip = wrap.querySelector('.cc-tooltip');
+  svg.querySelectorAll('.cc-hit').forEach(function(hit) {
+    function show() {
+      tooltip.innerHTML = '<div class="cc-tooltip-val">' + hit.getAttribute('data-label') + '</div>' +
+        '<div class="cc-tooltip-label">' + hit.getAttribute('data-val') + '</div>';
+      var b = hit.getBoundingClientRect(), w = wrap.getBoundingClientRect();
+      tooltip.style.left = Math.min(Math.max(b.left - w.left + b.width / 2 - 100, 0), w.width - 240) + 'px';
+      tooltip.style.top = Math.max(b.top - w.top - 48, 0) + 'px';
+      tooltip.classList.add('visible');
+    }
+    function hide() { tooltip.classList.remove('visible'); }
+    hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show);
+    hit.addEventListener('pointerleave', hide); hit.addEventListener('blur', hide);
+  });
+})();
+</script>
+</div>
 
 ## The AI question
 
@@ -592,6 +789,8 @@ Electronics now makes up about a quarter of non-oil domestic exports, against mo
 - ["Free Passages to China: F.M.S. Mining Coolies, Three Thousand in One Week," The Straits Times, 28 May 1932, page 11, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19320528-1)
 - ["Labour Problems in the Colony," The Straits Times, 19 May 1931, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/search?q=unemployed%20Chinese%20repatriation%20free%20passages%20China)
 - [Gross Domestic Product in Chained (2015) Dollars, by Industry (SSIC 2020), Annual (table M015721), Singapore Department of Statistics](https://tablebuilder.singstat.gov.sg/table/TS/M015721)
+- [Gross Domestic Product at Current Prices, by Industry (SSIC 2020), Annual (table M015731), Singapore Department of Statistics](https://tablebuilder.singstat.gov.sg/table/TS/M015731)
+- [Contribution to Growth in Real Gross Domestic Product, by Industry (SSIC 2020), Annual (table M015741), Singapore Department of Statistics](https://tablebuilder.singstat.gov.sg/table/TS/M015741)
 - [Domestic Exports of Major Non-Oil Products, Monthly (table M450981), Singapore Department of Statistics](https://tablebuilder.singstat.gov.sg/table/TS/M450981)
 - ["Singapore experiences its first post-independence recession," Singapore History, National Library Board Singapore](https://www.nlb.gov.sg/main/article-detail?cmsuuid=9f9489cf-5432-4797-bf66-fd1b3bab7a2b)
 - ["Asian financial crisis (1997–1998)," Singapore Infopedia, National Library Board Singapore](https://www.nlb.gov.sg/main/article-detail?cmsuuid=6a94eaac-75ec-41ff-b5ef-38154ccae4e0)
