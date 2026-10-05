@@ -38,3 +38,4 @@ exclude:
   - CLAUDE.md
   - README.md
   - docs
+  - scratch
