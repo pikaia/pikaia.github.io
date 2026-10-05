@@ -8,7 +8,7 @@ his own portrait. The later-crises half alternates the four chart PNGs
 (letterbox, frozen) with photos of the city, the port and Jurong Island; the
 crisis-by-industry chart returns once for each crisis the text walks through.
 
-47 slides, 747.95s. AVATAR: first and last 30s (avatar test #5).
+49 slides, 747.95s. AVATAR: first and last 30s (avatar test #5).
 """
 
 _U = "https://upload.wikimedia.org/wikipedia/commons"
@@ -130,17 +130,19 @@ SLIDES = [
     {"img": "SECTORS", **_GFX},       # 33 s54     construction -41.7%
     {"img": "CONTAINER", **_OUT},     # 34 s55-56  two routes: goods
     {"img": "MBFC", **_OUT},          # 35 s57     the money route
-    {"img": "SECTORS", **_GFX},       # 36 s58-60  size matters as much as the fall
-    {"img": "JURONG", **_IN},         # 37 s61-63  diversification
-    {"img": "SIZE", **_GFX},          # 38 s64-65  more evenly spread
-    {"img": "DATACTR", **_OUT},       # 39 s66-67  AI-related capital expenditure
-    {"img": "MAS", **_PORT},          # 40 s68     the MAS statement
-    {"img": "NYSE29", **_IN},         # 41 s69-70  American spending on technology
-    {"img": "ELEC", **_GFX},          # 42 s71-73  electronics a quarter of NODX
-    {"img": "JURONG", **_OUT},        # 43 s74     pharmaceuticals, chemicals
-    {"img": "HARBPAN", **_OUT},       # 44 s75-76  the route has not changed
-    {"img": "TAP1914", **_OUT},       # 45 s77     where it fits
-    {"img": "BRANIK", **_OUT},        # 46 s78     what the world is buying
+    {"img": "SECTORS", **_GFX},       # 36 s58-59  size matters as much as the fall
+    {"img": "TPAGAR", **_OUT},        # 37 s60     manufacturing, a quarter of the economy
+    {"img": "JURONG", **_IN},         # 38 s61-62  diversification
+    {"img": "MBSCB", **_OUT},         # 39 s63     the lockdown hit nearly everything
+    {"img": "SIZE", **_GFX},          # 40 s64-65  more evenly spread
+    {"img": "DATACTR", **_OUT},       # 41 s66-67  AI-related capital expenditure
+    {"img": "MAS", **_PORT},          # 42 s68     the MAS statement
+    {"img": "NYSE29", **_IN},         # 43 s69-70  American spending on technology
+    {"img": "ELEC", **_GFX},          # 44 s71-73  electronics a quarter of NODX
+    {"img": "JURONG", **_OUT},        # 45 s74     pharmaceuticals, chemicals
+    {"img": "HARBPAN", **_OUT},       # 46 s75-76  the route has not changed
+    {"img": "TAP1914", **_OUT},       # 47 s77     where it fits
+    {"img": "BRANIK", **_OUT},        # 48 s78     what the world is buying
 ]
 
 SCHEDULE = [
@@ -150,8 +152,8 @@ SCHEDULE = [
     (231.05, 19), (234.8, 20), (248.3, 21), (266.025, 22), (288.15, 23), (312.0, 24),
     (334.25, 25), (347.075, 26), (360.625, 27), (379.6, 28), (396.225, 29), (408.175, 30),
     (420.1, 31), (447.725, 32), (461.625, 33), (478.35, 34), (493.825, 35), (502.05, 36),
-    (538.0, 37), (572.675, 38), (600.025, 39), (630.875, 40), (655.525, 41), (669.875, 42),
-    (698.825, 43), (709.575, 44), (725.75, 45), (739.85, 46),
+    (523.925, 37), (538.0, 38), (563.7, 39), (572.675, 40), (600.025, 41), (630.875, 42), (655.525, 43),
+    (669.875, 44), (698.825, 45), (709.575, 46), (725.75, 47), (739.85, 48),
 ]
 TOTAL_DURATION = 747.95
 TIMING_JSON = "audio/when-america-crashed-singapore-sank-the-great-depression-and-the-contagion-that-still-reaches-us.timing.json"
