@@ -101,6 +101,14 @@ LIP_CORNERS = (61, 291)
 LEVEL_MAX = 6.0  # degrees; a bigger lip-line difference means a wrong shot, not a slant
 
 
+UPPER_LIP = 0      # face-mesh point at the top of the upper lip
+CENTRE_MAX = 0.10  # cap on the centring nudge, as a fraction of face width
+
+
+def lip_centre_x(pts):
+    return float((pts[LIP_CORNERS[0], 0] + pts[LIP_CORNERS[1], 0]) / 2)
+
+
 def lip_angle(pts):
     a, b = pts[LIP_CORNERS[0]], pts[LIP_CORNERS[1]]
     return float(np.degrees(np.arctan2(b[1] - a[1], b[0] - a[0])))
@@ -165,8 +173,20 @@ def aligner(base_path, geo):
             turn = float(np.clip(base_lips - lip_angle(cv2.transform(pts[None], M)[0]), -LEVEL_MAX, LEVEL_MAX))
             R = cv2.getRotationMatrix2D((float(geo.mx), float(geo.my)), -turn, 1.0)
             M = (np.vstack([R, [0, 0, 1]]) @ np.vstack([M, [0, 0, 1]]))[:2]
+        # Centre the mouth on the resting mouth: across by the lip corners'
+        # midpoint, down by the top of the upper lip (the jaw drops when the
+        # mouth opens, the upper lip does not). A head turned a little
+        # between shots puts the mouth off to one side after a 2D alignment.
+        shift = np.zeros(2)
+        if name != "blink":
+            q = cv2.transform(pts[None], M)[0]
+            shift = np.array([lip_centre_x(base_pts) - lip_centre_x(q), base_pts[UPPER_LIP, 1] - q[UPPER_LIP, 1]])
+            shift = np.clip(shift, -geo.f * CENTRE_MAX, geo.f * CENTRE_MAX)
+            M = M.copy()
+            M[:, 2] += shift
         print(f"  {name}: aligned on {len(STABLE)} landmarks, scale {np.hypot(M[0, 0], M[1, 0]):.3f}, "
-              f"worst point off by {resid:.1f}px, lips levelled {turn:+.1f} deg")
+              f"worst point off by {resid:.1f}px, lips levelled {turn:+.1f} deg, "
+              f"mouth centred by {shift[0]:+.0f},{shift[1]:+.0f}px")
         return cv2.warpAffine(load_photo(path), M, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REPLICATE)
     return align
 
