@@ -38,7 +38,14 @@ def test_avatar_settings_none_when_absent():
 def test_avatar_settings_defaults_and_resolution():
     s = al.avatar_settings(cfg(AVATAR={"ranges": [(0, 30), (-30, None)]}))
     assert s == {"ranges": [(0, 30), (70.0, 100.0)], "corner": "bottom-right",
-                 "size": 0.20, "margin": 0.03, "fade": 0.3}
+                 "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon", "hold": 1, "ease": 1.0}
+
+
+def test_avatar_settings_photo_style_gets_hold_and_ease():
+    s = al.avatar_settings(cfg(AVATAR={"ranges": [(0, 30)], "style": "photo"}))
+    assert (s["hold"], s["ease"]) == al.STYLE_MOTION["photo"]
+    s = al.avatar_settings(cfg(AVATAR={"ranges": [(0, 30)], "style": "photo", "hold": 5, "ease": 0.8}))
+    assert (s["hold"], s["ease"]) == (5, 0.8)
 
 
 @pytest.mark.parametrize("bad", [
@@ -49,6 +56,11 @@ def test_avatar_settings_defaults_and_resolution():
     {"ranges": [(0, 10)], "size": 0.6},
     {"ranges": [(0, 10)], "margin": -0.1},
     {"ranges": [(0, 10)], "fade": -1},
+    {"ranges": [(0, 10)], "style": "anime"},
+    {"ranges": [(0, 10)], "hold": 0},
+    {"ranges": [(0, 10)], "hold": 2.5},
+    {"ranges": [(0, 10)], "ease": 0},
+    {"ranges": [(0, 10)], "ease": 1.5},
 ])
 def test_avatar_settings_rejects_bad_values(bad):
     with pytest.raises(ValueError):

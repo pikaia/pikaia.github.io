@@ -134,3 +134,36 @@ def test_render_v1_track_uses_levels_only(tmp_path):
     out = tmp_path / "a.mov"
     rat.render_track(_track_cfg(tmp_path), out, png)
     assert _frame_rgb(out, 10, tmp_path)[:3] == (255, 0, 0)
+
+
+def test_hold_keys_absorbs_short_runs():
+    keys = list("aaabbaaaccccd")
+    assert rat.hold_keys(keys, 1) == keys
+    assert rat.hold_keys(keys, 3) == list("aaaaaaaacccc" + "c")
+
+
+def test_hold_keys_keeps_first_frame():
+    assert rat.hold_keys(list("ab"), 3) == list("aa")
+
+
+def frame_px(out, n, xy, tmp_path):
+    frame = tmp_path / f"f{n}.png"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(out), "-vf", f"select=eq(n\\,{n})",
+                    "-frames:v", "1", str(frame)], check=True)
+    return Image.open(frame).convert("RGBA").getpixel(xy)[:3]
+
+
+def test_render_track_photo_style_eases_between_mouths(tmp_path):
+    png_dir = tmp_path / "png"
+    png_dir.mkdir()
+    solid_layers(png_dir)
+    cfg = fake_cfg(tmp_path)
+    cfg.AVATAR = {"ranges": [(0, 2.0)], "size": 0.4, "margin": 0.05, "fade": 0.0,
+                  "style": "photo", "ease": 0.5, "hold": 1}
+    out = tmp_path / "a.mov"
+    assert rat.render_track(cfg, out, png_dir) is True
+    # the mouth switches from closed (body blue shows) to wide (red) at frame 10
+    assert frame_px(out, 9, (36, 50), tmp_path) == (0, 0, 255)
+    r, _, b = frame_px(out, 10, (36, 50), tmp_path)
+    assert 100 < r < 160 and 100 < b < 160          # halfway, not a hard cut
+    assert frame_px(out, 30, (36, 50), tmp_path) == (255, 0, 0)

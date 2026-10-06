@@ -549,10 +549,18 @@ AVATAR = {
     "size": 0.20,                       # bubble diameter, fraction of frame height
     "margin": 0.03,                     # gap to frame edges, fraction of frame height
     "fade": 0.3,                        # fade in/out seconds at each range edge
+    "style": "cartoon",                 # cartoon (assets/avatar/png) | photo (assets/avatar/photo/png)
+    # "hold": 3, "ease": 0.55,          # optional; per-style defaults (cartoon 1 / 1.0 = hard cuts)
 }
 # Only "ranges" is required. Phase 1 (the test) is the bookends above;
 # Phase 2 would be "ranges": [(0, None)] - the whole video. Ranges that
 # run off the video, are empty, or overlap are an error, not a clamp.
+# "style": "photo" uses the photo presenter built by
+# scripts/build_photo_avatar.py from nine photos in scratch/avatar-photos/
+# (named in assets/avatar/photo/shots.json). Photos flicker on hard cuts, so
+# that style defaults to hold=3 (a mouth must last 3 frames before the bubble
+# switches) and ease=0.55 (each frame moves 55% toward the next mouth). A
+# photo-style upload needs YouTube's "altered or synthetic content" box ticked.
 ```
 
 `pan` values here are `(x, y)` floats in 0-1 (fraction of image width/

@@ -13,6 +13,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 AVATAR_DIR = REPO_ROOT / "assets" / "avatar"
 SVG_PATH = AVATAR_DIR / "avatar.svg"
 PNG_DIR = AVATAR_DIR / "png"
+# The photo presenter: the same layer names cut from photos of Chris
+# (scripts/build_photo_avatar.py). The source photos stay in scratch/.
+PHOTO_PNG_DIR = AVATAR_DIR / "photo" / "png"
+STYLE_DIRS = {"cartoon": PNG_DIR, "photo": PHOTO_PNG_DIR}
+# Per style: (hold, ease). hold = frames a new mouth must last before the
+# bubble switches to it; ease = how far each frame moves toward the target
+# image (1.0 = hard cut). A cartoon reads fine snapping between drawings;
+# photos flicker unless the mouth holds and cross-fades (tested 2026-10-06).
+STYLE_MOTION = {"cartoon": (1, 1.0), "photo": (3, 0.55)}
 
 # One PNG per name, all the same square canvas, stacked
 # body -> eyes-open|eyes-closed -> one mouth (mouth-0..3 by loudness, or a
@@ -26,7 +35,7 @@ MOUTH_FILE_VERSION = 1
 MOUTH_FILE_VERSIONS = (1, 2)
 
 CORNERS = {"bottom-right", "bottom-left", "top-right", "top-left"}
-DEFAULTS = {"corner": "bottom-right", "size": 0.20, "margin": 0.03, "fade": 0.3}
+DEFAULTS = {"corner": "bottom-right", "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon"}
 
 
 def resolve_ranges(ranges, total):
@@ -69,6 +78,15 @@ def avatar_settings(cfg):
         raise ValueError(f"AVATAR margin {s['margin']} - must be >= 0")
     if s["fade"] < 0:
         raise ValueError(f"AVATAR fade {s['fade']} - must be >= 0")
+    if s["style"] not in STYLE_DIRS:
+        raise ValueError(f"AVATAR style {s['style']!r} - use one of {sorted(STYLE_DIRS)}")
+    hold, ease = STYLE_MOTION[s["style"]]
+    s.setdefault("hold", hold)
+    s.setdefault("ease", ease)
+    if not (isinstance(s["hold"], int) and s["hold"] >= 1):
+        raise ValueError(f"AVATAR hold {s['hold']!r} - must be a whole number of frames >= 1")
+    if not 0 < s["ease"] <= 1:
+        raise ValueError(f"AVATAR ease {s['ease']} - must be in (0, 1]")
     s["ranges"] = resolve_ranges(raw["ranges"], cfg.TOTAL_DURATION)
     return s
 

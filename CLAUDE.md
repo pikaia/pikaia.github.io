@@ -96,7 +96,12 @@ by an `AVATAR` dict in the main video config). The artwork is a layered SVG,
 `assets/avatar/avatar.svg`; `scripts/build_avatar.py` rasterises it into
 `assets/avatar/png/*.png`, which **are committed** — another deliberate exception to
 the no-binaries rule, like the OSM tiles. The reference photos it was drawn from stay
-in `scratch/` and are never committed. See
+in `scratch/` and are never committed. A second, photo-based look
+(`AVATAR` `"style": "photo"`) uses `assets/avatar/photo/png/*.png`, built by
+`scripts/build_photo_avatar.py` from nine photos of Chris in
+`scratch/avatar-photos/` (never committed; `assets/avatar/photo/shots.json` names
+the files). Its background is replaced with the cartoon's dark blue so no room
+detail is published. See
 `docs/superpowers/specs/2026-10-02-avatar-presenter-design.md`.
 
 ## Python linting

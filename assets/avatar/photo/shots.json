@@ -1,0 +1,17 @@
+{
+  "note": "Which photo is which shot for scripts/build_photo_avatar.py. Photos live in scratch/avatar-photos/ (never committed); all nine from one sitting, 2026-10-06. mouth/eyes_y/face_w are full-resolution pixels on the resting photo.",
+  "shots": {
+    "rest": "PXL_20261006_151556093.jpg",
+    "slight": "PXL_20261006_151621076.jpg",
+    "open": "PXL_20261006_151628366.jpg",
+    "wide": "PXL_20261006_151723498.jpg",
+    "m": "PXL_20261006_151739192.jpg",
+    "f": "PXL_20261006_151803954.jpg",
+    "oo": "PXL_20261006_152055890.jpg",
+    "ee": "PXL_20261006_152134279.jpg",
+    "blink": "PXL_20261006_152142588.jpg"
+  },
+  "mouth": [1665, 1740],
+  "eyes_y": 1360,
+  "face_w": 780
+}

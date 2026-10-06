@@ -3,7 +3,8 @@
     python scripts/render_avatar_track.py --config scripts/video-configs/<slug>.py
 
 Reads the config's AVATAR settings, audio/<slug>.avatar.json (step 1.5)
-and the PNG layers in assets/avatar/png/, and writes
+and the PNG layers for the AVATAR style (assets/avatar/png/ for the
+cartoon, assets/avatar/photo/png/ for the photo version), and writes
 preview-motion/<slug>-avatar.mov: a bubble-sized qtrle ARGB video the full
 length of the main video, transparent outside AVATAR's ranges and faded
 at their edges, so step 6b can lay it over <slug>.mp4 frame for frame.
@@ -16,11 +17,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from avatar_lib import (  # noqa: E402
-    BLINK_FRAMES, LAYER_NAMES, PNG_DIR, REPO_ROOT, alpha_at, avatar_settings,
+    BLINK_FRAMES, LAYER_NAMES, PNG_DIR, REPO_ROOT, STYLE_DIRS, alpha_at, avatar_settings,
     bubble_geometry, load_mouth_file, mouth_path_for_config, video_dims,
 )
 from watch_video_lib import load_config  # noqa: E402
@@ -63,6 +65,25 @@ def with_alpha(img, a):
     return Image.merge("RGBA", (r, g, b, alpha.point(lambda v: int(v * a))))
 
 
+def hold_keys(keys, hold):
+    """Per-frame layer keys with short runs absorbed: the bubble switches to
+    a new key only when that key's run lasts at least `hold` frames (or it
+    is the first frame); otherwise the current key carries on. hold=1 keeps
+    every frame as it was."""
+    if hold <= 1 or not keys:
+        return list(keys)
+    out, cur, i = [], keys[0], 0
+    while i < len(keys):
+        j = i
+        while j < len(keys) and keys[j] == keys[i]:
+            j += 1
+        if j - i >= hold:
+            cur = keys[i]
+        out.extend([cur] * (j - i))
+        i = j
+    return out
+
+
 def blink_frame_set(blinks):
     return {f for b in blinks for f in range(b, b + BLINK_FRAMES)}
 
@@ -71,7 +92,7 @@ def default_track_path(config_path):
     return REPO_ROOT / "preview-motion" / f"{Path(config_path).stem}-avatar.mov"
 
 
-def render_track(cfg, out_path, png_dir=PNG_DIR):
+def render_track(cfg, out_path, png_dir=None):
     settings = avatar_settings(cfg)
     if settings is None:
         print("No AVATAR in this config - step 6a skipped.")
@@ -79,13 +100,18 @@ def render_track(cfg, out_path, png_dir=PNG_DIR):
     out_w, out_h, fps = video_dims(cfg)
     track = load_mouth_file(mouth_path_for_config(cfg), fps, cfg.TOTAL_DURATION)
     d, _, _ = bubble_geometry(settings, out_w, out_h)
-    layers = load_layers(d, png_dir)
+    layers = load_layers(d, png_dir or STYLE_DIRS[settings["style"]])
     blinking = blink_frame_set(track["blinks"])
     mouth = track["mouth"]
     shape = track.get("shape")
     total_frames = int(cfg.TOTAL_DURATION * fps)  # same count watch_video_lib.render() uses
+    keys = hold_keys([mouth_layer_for(int(mouth[min(i, len(mouth) - 1)]),
+                                      shape[min(i, len(mouth) - 1)] if shape else ".")
+                      for i in range(total_frames)], settings["hold"])
+    ease = settings["ease"]
     blank = bytes(d * d * 4)
     cache = {}
+    eased = None  # float image the bubble is easing toward its target from
 
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -98,12 +124,17 @@ def render_track(cfg, out_path, png_dir=PNG_DIR):
             a = alpha_at(i / fps, settings["ranges"], settings["fade"])
             if a <= 0.0:
                 proc.stdin.write(blank)
+                eased = None
                 continue
-            j = min(i, len(mouth) - 1)
-            key = (mouth_layer_for(int(mouth[j]), shape[j] if shape else "."), i in blinking)
+            key = (keys[i], i in blinking)
             if key not in cache:
                 cache[key] = compose_avatar(layers, *key)
-            proc.stdin.write(with_alpha(cache[key], a).tobytes())
+            img = cache[key]
+            if ease < 1.0:
+                target = np.asarray(img, dtype=np.float32)
+                eased = target if eased is None else eased + (target - eased) * ease
+                img = Image.fromarray(np.rint(eased).astype(np.uint8), "RGBA")
+            proc.stdin.write(with_alpha(img, a).tobytes())
             if i % (fps * 60) == 0:
                 print(f"frame {i}/{total_frames} t={i / fps:.0f}s", file=sys.stderr)
     finally:
@@ -111,7 +142,7 @@ def render_track(cfg, out_path, png_dir=PNG_DIR):
         proc.wait()
     if proc.returncode != 0:
         raise RuntimeError(f"ffmpeg exited {proc.returncode} writing {out_path}")
-    print(f"Wrote {out_path} - {total_frames} frames, {d}x{d}, ranges {settings['ranges']}")
+    print(f"Wrote {out_path} - {total_frames} frames, {d}x{d}, {settings['style']}, ranges {settings['ranges']}")
     return True
 
 
