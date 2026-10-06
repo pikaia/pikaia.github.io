@@ -1800,8 +1800,8 @@ PRONUNCIATION_OVERRIDES = {
     "How-Wan-Hong": "hˌW wˌɑn hˌɒŋ",
     "Kenzo": "kˌɛnzˌO",            # light, even stress, closer to Japanese (as for the YSB names).
     "Tange": "tˌɑŋɡˌA",
-    # Ambiguous, candidate 1 in the code - NOT ear-verified yet (samples in
-    # scratch/lien-ying-chow-the-banker-who-escaped-to-chongqing/):
+    # Ear-picked by Chris (2026-10-07) from samples in
+    # scratch/lien-ying-chow-the-banker-who-escaped-to-chongqing/ - candidate A of each:
     "Dapu": "dˈɑːpuː",             # "DAH-poo" (pinyin Dabu has an unaspirated p).
     "Chi-Owyang": "ʧˌiː ˌOjˈɑŋ",   # "chee oh-YANG" - Chi Owyang, from Ouyang.
 }
