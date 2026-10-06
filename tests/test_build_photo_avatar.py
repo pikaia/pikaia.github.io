@@ -21,7 +21,7 @@ def test_load_spec_ok(tmp_path):
 
 @pytest.mark.parametrize("bad", [
     {"shots": {"rest": "r.jpg"}},
-    {"mouth": None},
+    {"mouth": None},          # face_w and eyes_y without mouth: all three or none
 ])
 def test_load_spec_rejects_incomplete(tmp_path, bad):
     s = spec(**bad)
@@ -56,3 +56,12 @@ def test_to_layer_is_a_512_circle():
 def test_shots_json_is_complete():
     s = bpa.load_spec(bpa.SPEC)
     assert set(s["shots"]) == set(bpa.SHOTS)
+
+
+def test_load_spec_allows_landmark_measurement(tmp_path):
+    s = spec()
+    for k in ("mouth", "eyes_y", "face_w"):
+        del s[k]
+    p = tmp_path / "s.json"
+    p.write_text(json.dumps(s), encoding="utf-8")
+    assert "mouth" not in bpa.load_spec(p)

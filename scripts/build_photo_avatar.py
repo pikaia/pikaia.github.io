@@ -7,12 +7,13 @@ The photo counterpart of build_avatar.py: writes the same layer names
 (body, eyes-open, eyes-closed, mouth-0..3, mouth-M/F/U/E, 512px RGBA) into
 assets/avatar/photo/png/, which render_avatar_track.py uses when a config
 sets AVATAR "style": "photo". The source photos stay in scratch/ and are
-never committed; shots.json (committed) names which file is which shot and
-where the face sits in the resting photo, so the layers can be rebuilt.
+never committed; shots.json (committed) names which file is which shot, so
+the layers can be rebuilt. Where the face sits in the resting photo (mouth,
+eyes_y, face_w) is measured from its landmarks unless shots.json gives it.
 
-How: the resting photo is the base. Each other shot is aligned to it (SIFT
-on the upper face - glasses, eyes, brows, nose - then a similarity
-transform), colour-nudged to the base using the cheeks only, and its mouth
+How: the resting photo is the base. Each other shot is aligned to it on face
+landmarks that hold still while the mouth moves (MediaPipe Face Landmarker:
+eye corners and nose, then a similarity transform), colour-nudged to the base using the cheeks only, and its mouth
 (or, for the blink, eye) area cut out with a feathered ellipse. The base's
 background is replaced with the cartoon bubble's dark blue using a person
 mask (torchvision DeepLabV3, weights downloaded once from pytorch.org,
@@ -49,9 +50,9 @@ def load_spec(path):
     missing = [s for s in SHOTS if s not in spec.get("shots", {})]
     if missing:
         raise ValueError(f"{path}: shots missing {missing} - need one file for each of {SHOTS}")
-    for k in ("mouth", "eyes_y", "face_w"):
-        if k not in spec:
-            raise ValueError(f"{path}: needs '{k}' (full-resolution pixels on the resting photo)")
+    given = [k for k in ("mouth", "eyes_y", "face_w") if k in spec]
+    if given and len(given) < 3:
+        raise ValueError(f"{path}: give all of mouth/eyes_y/face_w or none (none = measured from landmarks)")
     return spec
 
 
@@ -77,36 +78,78 @@ class Geometry:
         self.f = spec["face_w"] // HALF
         f, mx, my = self.f, self.mx, self.my
         self.crop = (mx - int(f * 1.2), my - int(f * 1.5), mx + int(f * 1.2), my + int(f * 0.9))
-        self.mouth = ellipse_mask(shape, (mx, my + f * 0.07), (f * 0.34, f * 0.30), f * 0.05)
+        # kept below the nostrils and inside the jaw
+        self.mouth = ellipse_mask(shape, (mx, my + f * 0.06), (f * 0.32, f * 0.25), f * 0.045)
         ring = ellipse_mask(shape, (mx, my + f * 0.07), (f * 0.46, f * 0.40), 0) > 0.5
         ring &= self.mouth < 0.05
         ring[my:, :] = False  # cheeks only: below the mouth line the ring reaches the shirt
         self.mouth_ring = ring
         self.eyes = ellipse_mask(shape, (mx, self.eyes_y), (f * 0.50, f * 0.15), f * 0.05)
         self.eyes_ring = (cv2.dilate(self.eyes, np.ones((25, 25))) > 0.05) & (self.eyes < 0.05)
-        upper = np.zeros(shape, np.uint8)
-        cv2.rectangle(upper, (mx - f, self.eyes_y - f), (mx + f, my - f // 5), 255, -1)
-        self.upper_face = upper
 
 
-def aligner(base, geo):
-    sift = cv2.SIFT_create(4000)
-    gray = cv2.cvtColor(base, cv2.COLOR_RGB2GRAY)
-    kb, db = sift.detectAndCompute(gray, geo.upper_face)
-    bf = cv2.BFMatcher()
+MODEL = Path.home() / ".cache" / "mediapipe" / "face_landmarker.task"
+MODEL_URL = ("https://storage.googleapis.com/mediapipe-models/face_landmarker/"
+             "face_landmarker/float16/1/face_landmarker.task")
+# Face-mesh points that hold still while the mouth and eyelids move: eye
+# corners, the bridge and ridge of the nose, the nostril wings.
+STABLE = [33, 133, 362, 263, 168, 6, 197, 195, 5, 4, 1, 98, 327]
+LIPS_INNER = (13, 14)
+EYES = (33, 133, 362, 263)
+CHEEKS = (234, 454)
+
+
+def landmarks(path, _cache={}):
+    """(478, 2) face-mesh points in full-resolution pixels (MediaPipe Face
+    Landmarker, runs locally; model fetched once into ~/.cache/mediapipe)."""
+    if path in _cache:
+        return _cache[path]
+    import mediapipe as mp
+    from mediapipe.tasks.python import vision
+    from mediapipe.tasks.python.core.base_options import BaseOptions
+    if not MODEL.exists():
+        import urllib.request
+        MODEL.parent.mkdir(parents=True, exist_ok=True)
+        urllib.request.urlretrieve(MODEL_URL, MODEL)
+    if "lm" not in _cache:
+        _cache["lm"] = vision.FaceLandmarker.create_from_options(
+            vision.FaceLandmarkerOptions(base_options=BaseOptions(model_asset_path=str(MODEL)), num_faces=1))
+    rgb = np.array(ImageOps.exif_transpose(Image.open(path)).convert("RGB"))
+    res = _cache["lm"].detect(mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb))
+    if not res.face_landmarks:
+        raise RuntimeError(f"{Path(path).name}: no face found")
+    h, w = rgb.shape[:2]
+    pts = np.array([(p.x * w, p.y * h) for p in res.face_landmarks[0]], np.float32)
+    _cache[path] = pts
+    return pts
+
+
+def face_spec(path):
+    """mouth / eyes_y / face_w for the resting photo, from its landmarks."""
+    pts = landmarks(path)
+    mouth = pts[list(LIPS_INNER)].mean(0)
+    return {"mouth": [int(mouth[0]), int(mouth[1])], "eyes_y": int(pts[list(EYES), 1].mean()),
+            "face_w": int(np.linalg.norm(pts[CHEEKS[0]] - pts[CHEEKS[1]]))}
+
+
+def aligner(base_path, geo):
+    """Line each shot up with the resting photo on face landmarks that do not
+    move with the mouth (eye corners, nose), by a similarity transform (shift,
+    turn, scale - no shear). Handles leaning in and small nods, where the
+    earlier SIFT matching lost track (2026-10-06 shirt sets)."""
     h, w = geo.shape
+    dst = landmarks(base_path)[STABLE] / HALF
 
-    def align(img, name):
-        k, d = sift.detectAndCompute(cv2.cvtColor(img, cv2.COLOR_RGB2GRAY), geo.upper_face)
-        good = [a for a, b in bf.knnMatch(db, d, k=2) if a.distance < 0.7 * b.distance]
-        if len(good) < 12:
-            raise RuntimeError(f"{name}: only {len(good)} face matches with the resting photo - "
-                               "was it taken in the same sitting, camera untouched?")
-        src = np.float32([k[x.trainIdx].pt for x in good])
-        dst = np.float32([kb[x.queryIdx].pt for x in good])
-        M, inliers = cv2.estimateAffinePartial2D(src, dst, method=cv2.RANSAC, ransacReprojThreshold=4)
-        print(f"  {name}: {int(inliers.sum())} matched points, scale {np.hypot(M[0, 0], M[1, 0]):.3f}")
-        return cv2.warpAffine(img, M, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REPLICATE)
+    def align(path, name):
+        src = landmarks(path)[STABLE] / HALF
+        M, _ = cv2.estimateAffinePartial2D(src, dst, method=cv2.LMEDS)
+        resid = np.abs(cv2.transform(src[None], M)[0] - dst).max()
+        if resid > geo.f * 0.06:
+            raise RuntimeError(f"{name}: face points disagree with the resting photo by {resid:.0f}px - "
+                               "check it is the right shot")
+        print(f"  {name}: aligned on {len(STABLE)} landmarks, scale {np.hypot(M[0, 0], M[1, 0]):.3f}, "
+              f"worst point off by {resid:.1f}px")
+        return cv2.warpAffine(load_photo(path), M, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REPLICATE)
     return align
 
 
@@ -151,9 +194,13 @@ def to_layer(rgb, alpha, crop):
 
 
 def build(spec, photos, out_dir):
-    base = load_photo(Path(photos) / spec["shots"]["rest"])
+    rest = Path(photos) / spec["shots"]["rest"]
+    if not all(k in spec for k in ("mouth", "eyes_y", "face_w")):
+        spec = {**spec, **face_spec(rest)}
+        print(f"Face position from landmarks: mouth {spec['mouth']}, eyes_y {spec['eyes_y']}, face_w {spec['face_w']}")
+    base = load_photo(rest)
     geo = Geometry(spec, base.shape[:2])
-    align = aligner(base, geo)
+    align = aligner(Path(photos) / spec["shots"]["rest"], geo)
     out_dir.mkdir(parents=True, exist_ok=True)
     print("Person mask (background -> dark blue) ...")
     pm = person_mask(base)[..., None]
@@ -166,7 +213,7 @@ def build(spec, photos, out_dir):
     empty.save(out_dir / "mouth-0.png")  # resting mouth = the base itself
     print("Aligning shots to the resting photo ...")
     for shot, layer in SHOT_LAYERS.items():
-        img = align(load_photo(Path(photos) / spec["shots"][shot]), shot)
+        img = align(Path(photos) / spec["shots"][shot], shot)
         mask, ring = (geo.eyes, geo.eyes_ring) if shot == "blink" else (geo.mouth, geo.mouth_ring)
         to_layer(colour_match(img, base, ring), mask, geo.crop).save(out_dir / f"{layer}.png")
     print(f"Wrote {len(SHOTS) + 2} layers to {out_dir}")
