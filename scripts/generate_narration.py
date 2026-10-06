@@ -1787,6 +1787,23 @@ PRONUNCIATION_OVERRIDES = {
     "Unagami": "ˌunɑɡˌɑmi",
     "Yasuo": "jˌɑsuˌO",
     "Okada": "ˌOkɑdˌɑ",
+    # Lien Ying Chow post (2026-10-06): single-reading fixes.
+    "Lien": "lˈiən",               # "LEE-en", as in Lien-Ying-Chow (misaki reads the English "lien", "leen").
+    "Lien's": "lˈiənz",
+    "great-granduncle": "ɡɹˌAt ɡɹˈændʌŋkᵊl",
+    "Thye": "tˈI",                 # "TIE" - Kian Thye, the ship chandler (Hokkien aspirated t).
+    "Kai-shek": "kˌI ʃˈɛk",        # Chiang Kai-shek, the usual English reading.
+    "Tan-Sia-Kuang": "tˌan sˌiːɑ kwˌɑŋ",   # fused, even stress.
+    "Tan-Lark-Sye": "tˌan lˌɑːk sˌI",       # "SYE".
+    "Loke-Wan-Tho": "lˌOk wˌɑn tˌO",
+    "Tay-Woo-Seng": "tˌA wˌuː sˌɛŋ",
+    "How-Wan-Hong": "hˌW wˌɑn hˌɒŋ",
+    "Kenzo": "kˌɛnzˌO",            # light, even stress, closer to Japanese (as for the YSB names).
+    "Tange": "tˌɑŋɡˌA",
+    # Ambiguous, candidate 1 in the code - NOT ear-verified yet (samples in
+    # scratch/lien-ying-chow-the-banker-who-escaped-to-chongqing/):
+    "Dapu": "dˈɑːpuː",             # "DAH-poo" (pinyin Dabu has an unaspirated p).
+    "Chi-Owyang": "ʧˌiː ˌOjˈɑŋ",   # "chee oh-YANG" - Chi Owyang, from Ouyang.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -1873,6 +1890,9 @@ ABBREVIATION_EXPANSIONS = {
     # the "$"), same fix. Caught on the Christmas Island post ("M$20
     # million", "M$1.5 million", "M$48 million").
     re.compile(r"(?<![A-Za-z])M\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Malayan dollars",
+    # "HK$" - the Hong Kong dollar, same "?" failure and same fix. Caught on
+    # the Lien Ying Chow post ("savings of HK$10").
+    re.compile(r"(?<![A-Za-z])HK\$(\d+(?:,\d{3})*(?:\.\d+)?)(\s+(?:million|billion|thousand))?"): r"\1\2 Hong Kong dollars",
     # "DD Month" dates (the house style throughout post prose, e.g. "25
     # August 1963") - misaki reads the bare day numeral as a cardinal
     # ("twenty-five August"), but spoken English always reads the day-of-
@@ -1991,6 +2011,12 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
     re.compile(r"\bLee Keng Yan\b"): "Lee-Keng-Yan",
     re.compile(r"\bTan Keong Saik\b"): "Tan-Keong-Saik",
+    re.compile(r"\bTan Sia Kuang\b"): "Tan-Sia-Kuang",
+    re.compile(r"\bTan Lark Sye\b"): "Tan-Lark-Sye",
+    re.compile(r"\bLoke Wan Tho\b"): "Loke-Wan-Tho",
+    re.compile(r"\bTay Woo Seng\b"): "Tay-Woo-Seng",
+    re.compile(r"\bHow Wan Hong\b"): "How-Wan-Hong",
+    re.compile(r"\bChi Owyang\b"): "Chi-Owyang",
 }
 
 
