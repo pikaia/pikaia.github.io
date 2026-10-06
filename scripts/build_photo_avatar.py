@@ -97,6 +97,13 @@ STABLE = [33, 133, 362, 263, 168, 6, 197, 195, 5, 4, 1, 98, 327]
 LIPS_INNER = (13, 14)
 EYES = (33, 133, 362, 263)
 CHEEKS = (234, 454)
+LIP_CORNERS = (61, 291)
+LEVEL_MAX = 6.0  # degrees; a bigger lip-line difference means a wrong shot, not a slant
+
+
+def lip_angle(pts):
+    a, b = pts[LIP_CORNERS[0]], pts[LIP_CORNERS[1]]
+    return float(np.degrees(np.arctan2(b[1] - a[1], b[0] - a[0])))
 
 
 def landmarks(path, _cache={}):
@@ -138,17 +145,28 @@ def aligner(base_path, geo):
     turn, scale - no shear). Handles leaning in and small nods, where the
     earlier SIFT matching lost track (2026-10-06 shirt sets)."""
     h, w = geo.shape
-    dst = landmarks(base_path)[STABLE] / HALF
+    base_pts = landmarks(base_path) / HALF
+    dst = base_pts[STABLE]
+    base_lips = lip_angle(base_pts)
 
     def align(path, name):
-        src = landmarks(path)[STABLE] / HALF
+        pts = landmarks(path) / HALF
+        src = pts[STABLE]
         M, _ = cv2.estimateAffinePartial2D(src, dst, method=cv2.LMEDS)
         resid = np.abs(cv2.transform(src[None], M)[0] - dst).max()
         if resid > geo.f * 0.06:
             raise RuntimeError(f"{name}: face points disagree with the resting photo by {resid:.0f}px - "
                                "check it is the right shot")
+        # Level the lip line to the resting photo's. A relaxed closed mouth
+        # sits a degree or two off level, an open one doesn't, and switching
+        # between them read as the mouth moving on a slant (2026-10-06).
+        turn = 0.0
+        if name != "blink":
+            turn = float(np.clip(base_lips - lip_angle(cv2.transform(pts[None], M)[0]), -LEVEL_MAX, LEVEL_MAX))
+            R = cv2.getRotationMatrix2D((float(geo.mx), float(geo.my)), -turn, 1.0)
+            M = (np.vstack([R, [0, 0, 1]]) @ np.vstack([M, [0, 0, 1]]))[:2]
         print(f"  {name}: aligned on {len(STABLE)} landmarks, scale {np.hypot(M[0, 0], M[1, 0]):.3f}, "
-              f"worst point off by {resid:.1f}px")
+              f"worst point off by {resid:.1f}px, lips levelled {turn:+.1f} deg")
         return cv2.warpAffine(load_photo(path), M, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REPLICATE)
     return align
 

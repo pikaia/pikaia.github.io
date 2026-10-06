@@ -65,3 +65,11 @@ def test_load_spec_allows_landmark_measurement(tmp_path):
     p = tmp_path / "s.json"
     p.write_text(json.dumps(s), encoding="utf-8")
     assert "mouth" not in bpa.load_spec(p)
+
+
+def test_lip_angle_reads_the_corner_line():
+    pts = np.zeros((478, 2), np.float32)
+    pts[61], pts[291] = (100, 200), (200, 200)
+    assert bpa.lip_angle(pts) == 0.0
+    pts[291] = (200, 210)                     # right corner lower = positive (image y down)
+    assert 5.6 < bpa.lip_angle(pts) < 5.8
