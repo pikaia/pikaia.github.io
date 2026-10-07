@@ -16,8 +16,8 @@ landmarks that hold still while the mouth moves (MediaPipe Face Landmarker:
 eye corners and nose, then a similarity transform), colour-nudged to the base using the cheeks only, and its mouth
 (or, for the blink, eye) area cut out with a feathered ellipse. The base's
 background is replaced with the cartoon bubble's dark blue using a person
-mask (torchvision DeepLabV3, weights downloaded once from pytorch.org,
-refined with GrabCut). Lessons from the first build (2026-10-06): all nine
+mask (MediaPipe's selfie multiclass segmenter, model downloaded once; it
+replaced DeepLabV3 + GrabCut on 2026-10-07). Lessons from the first build (2026-10-06): all nine
 shots must come from ONE sitting with the camera untouched - mixing
 sessions shows as colour and position flicker - and the colour sample must
 stay on the cheeks (a ring reaching the shirt tints the patch).
@@ -198,28 +198,43 @@ def colour_match(img, base, region):
     return np.clip(out, 0, 255)
 
 
-def person_mask(base):
-    """Soft 0-1 mask of the person (DeepLabV3 'person', refined by GrabCut)."""
-    import torch
-    from torchvision.models.segmentation import DeepLabV3_ResNet101_Weights, deeplabv3_resnet101
-    h, w = base.shape[:2]
-    weights = DeepLabV3_ResNet101_Weights.DEFAULT
-    model = deeplabv3_resnet101(weights=weights).eval()
-    x = weights.transforms()(torch.from_numpy(base).permute(2, 0, 1)).unsqueeze(0)
-    with torch.no_grad():
-        prob = torch.softmax(model(x)["out"][0], 0)[15].numpy()  # VOC class 15 = person
-    prob = cv2.resize(prob, (w, h), interpolation=cv2.INTER_LINEAR)
-    gc = np.full((h, w), cv2.GC_PR_BGD, np.uint8)
-    gc[prob > 0.3] = cv2.GC_PR_FGD
-    gc[prob > 0.9] = cv2.GC_FGD
-    gc[prob < 0.02] = cv2.GC_BGD
-    cv2.grabCut(cv2.cvtColor(base, cv2.COLOR_RGB2BGR), gc, None, np.zeros((1, 65)), np.zeros((1, 65)),
-                4, cv2.GC_INIT_WITH_MASK)
-    hard = np.isin(gc, (cv2.GC_FGD, cv2.GC_PR_FGD)).astype(np.uint8)
+SEG_MODEL = Path.home() / ".cache" / "mediapipe" / "selfie_multiclass_256x256.tflite"
+SEG_MODEL_URL = ("https://storage.googleapis.com/mediapipe-models/image_segmenter/"
+                 "selfie_multiclass_256x256/float32/latest/selfie_multiclass_256x256.tflite")
+
+
+def soft_edge_mask(p):
+    """Person mask from a 0-1 person-confidence map: the largest region above
+    0.5, holes closed, solid inside, with the model's own soft values kept only
+    in a thin band round the outline (hair, ears). The raw confidence alone
+    never reaches 0 on the background, so used directly it ghosts the room."""
+    hard = (p > 0.5).astype(np.uint8)
     _, lab, stats, _ = cv2.connectedComponentsWithStats(hard)
     hard = (lab == 1 + np.argmax(stats[1:, cv2.CC_STAT_AREA])).astype(np.uint8)
     hard = cv2.morphologyEx(hard, cv2.MORPH_CLOSE, np.ones((15, 15), np.uint8))
-    return cv2.GaussianBlur(hard.astype(np.float32), (0, 0), 2.0)
+    soft = np.clip((p - 0.3) / 0.4, 0, 1)
+    k = np.ones((9, 9), np.uint8)
+    band = cv2.dilate(hard, k) - cv2.erode(hard, k)
+    return cv2.GaussianBlur(np.where(band > 0, soft, hard.astype(np.float32)), (0, 0), 1.5)
+
+
+def person_mask(base):
+    """Soft 0-1 mask of the person (MediaPipe selfie multiclass segmenter,
+    runs locally; model fetched once into ~/.cache/mediapipe). Replaced
+    DeepLabV3 + GrabCut on 2026-10-07, which let a strip of door frame beside
+    the jaw through as 'person'."""
+    import mediapipe as mp
+    from mediapipe.tasks.python import vision
+    from mediapipe.tasks.python.core.base_options import BaseOptions
+    if not SEG_MODEL.exists():
+        import urllib.request
+        SEG_MODEL.parent.mkdir(parents=True, exist_ok=True)
+        urllib.request.urlretrieve(SEG_MODEL_URL, SEG_MODEL)
+    seg = vision.ImageSegmenter.create_from_options(vision.ImageSegmenterOptions(
+        base_options=BaseOptions(model_asset_path=str(SEG_MODEL)), output_confidence_masks=True))
+    res = seg.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(base.astype(np.uint8))))
+    background = np.squeeze(res.confidence_masks[0].numpy_view()).astype(np.float32)  # class 0
+    return soft_edge_mask(1 - background)
 
 
 def to_layer(rgb, alpha, crop):

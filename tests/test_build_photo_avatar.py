@@ -79,3 +79,16 @@ def test_lip_centre_x_is_the_corner_midpoint():
     pts = np.zeros((478, 2), np.float32)
     pts[61], pts[291] = (100, 200), (180, 204)
     assert bpa.lip_centre_x(pts) == 140.0
+
+
+def test_soft_edge_mask_drops_background_and_stray_blobs():
+    # A person-confidence map that never reaches 0 on the background (the
+    # segmenter's real behaviour), one large person region and a small stray
+    # region: the background and the stray must both come out as 0.
+    p = np.full((200, 200), 0.05, np.float32)
+    p[60:200, 50:150] = 0.95   # the person
+    p[10:30, 10:30] = 0.9      # a stray blob, e.g. a door frame
+    m = bpa.soft_edge_mask(p)
+    assert m[100, 100] > 0.99          # solid inside
+    assert m[5, 190] < 0.01            # no background ghost
+    assert m[20, 20] < 0.01            # stray blob removed
