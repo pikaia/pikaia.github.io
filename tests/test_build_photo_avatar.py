@@ -92,3 +92,14 @@ def test_soft_edge_mask_drops_background_and_stray_blobs():
     assert m[100, 100] > 0.99          # solid inside
     assert m[5, 190] < 0.01            # no background ghost
     assert m[20, 20] < 0.01            # stray blob removed
+
+
+def test_crop_centres_on_head_not_mouth():
+    s = {"mouth": [400, 600], "eyes_y": 400, "face_w": 200}
+    geo = bpa.Geometry(s, (500, 500))
+    person = np.zeros((500, 500), np.float32)
+    person[:, 160:260] = 1.0           # head spans x 160-259 at half res: centre ~210
+    before = geo.crop
+    geo.centre_on_head(person)
+    assert geo.crop[0] - before[0] == 209 - 200
+    assert (geo.crop[0] + geo.crop[2]) // 2 == 209

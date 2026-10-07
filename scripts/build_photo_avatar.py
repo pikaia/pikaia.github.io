@@ -87,6 +87,18 @@ class Geometry:
         self.eyes = ellipse_mask(shape, (mx, self.eyes_y), (f * 0.50, f * 0.15), f * 0.05)
         self.eyes_ring = (cv2.dilate(self.eyes, np.ones((25, 25))) > 0.05) & (self.eyes < 0.05)
 
+    def centre_on_head(self, person):
+        """Shift the crop sideways so the bubble centres the whole head (hair
+        and ears, from the person mask at eye level), not the mouth: a head
+        turned even slightly puts the mouth off the head's centre, and the
+        round bubble makes that visible (2026-10-07)."""
+        xs = np.where(person[self.eyes_y] > 0.5)[0]
+        if len(xs) < self.f // 2:
+            return
+        dx = int((xs.min() + xs.max()) / 2) - self.mx
+        x0, y0, x1, y1 = self.crop
+        self.crop = (x0 + dx, y0, x1 + dx, y1)
+
 
 MODEL = Path.home() / ".cache" / "mediapipe" / "face_landmarker.task"
 MODEL_URL = ("https://storage.googleapis.com/mediapipe-models/face_landmarker/"
@@ -257,6 +269,7 @@ def build(spec, photos, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     print("Person mask (background -> dark blue) ...")
     pm = person_mask(base)[..., None]
+    geo.centre_on_head(pm[..., 0])
     body_rgb = base.astype(np.float32) * pm + np.array(BG, np.float32) * (1 - pm)
     body = to_layer(body_rgb, np.ones(geo.shape), geo.crop)
     ImageDraw.Draw(body).ellipse((3, 3, SIZE - 4, SIZE - 4), outline=(240, 240, 240, 255), width=10)
