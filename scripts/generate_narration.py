@@ -1814,9 +1814,9 @@ PRONUNCIATION_OVERRIDES = {
     "Mitter": "mˈɪtəɹ",                           # Rana Mitter, the historian.
     "Dalforce": "dˈælfɔːɹs",
     "Dalley": "dˈæli",
-    # Ambiguous, candidate A in the code - NOT ear-verified yet (samples in
-    # scratch/the-nanyang-volunteer-drivers-of-the-burma-road-1939/):
-    "Lashio": "lˈæʃiO",            # A "LASH-ee-oh", the usual English reading.
+    # Ear-picked by Chris (2026-10-07) from samples in
+    # scratch/the-nanyang-volunteer-drivers-of-the-burma-road-1939/ - candidate A of 3:
+    "Lashio": "lˈæʃiO",            # "LASH-ee-oh", the usual English reading.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
