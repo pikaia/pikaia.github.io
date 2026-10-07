@@ -1804,6 +1804,19 @@ PRONUNCIATION_OVERRIDES = {
     # scratch/lien-ying-chow-the-banker-who-escaped-to-chongqing/ - candidate A of each:
     "Dapu": "dˈɑːpuː",             # "DAH-poo" (pinyin Dabu has an unaspirated p).
     "Chi-Owyang": "ʧˌiː ˌOjˈɑŋ",   # "chee oh-YANG" - Chi Owyang, from Ouyang.
+    # Nanyang volunteers post (2026-10-07): single-reading fixes.
+    "Nanyang-Siang-Pau": "nˌanjˌaŋ sjˌɑːŋ pˌW",   # the newspaper; "Pau" = "pow".
+    "Tan-Kah-Kee": "tˌan kˌɑː kˌiː",              # fused, even stress.
+    "Sun-Yat-Sen": "sˌʊn jˌat sˈɛn",              # as "Yat-sen" above.
+    "Lim-Chu-Kang": "lˌɪm ʧˌuː kˌɑŋ",
+    "Li-Yuemei": "lˌiː ywˌɛ mˌA",                 # Mandarin Yuèméi, light even stress.
+    "Hua-Mulan": "hwˌɑ mˈuːlɑn",
+    "Mitter": "mˈɪtəɹ",                           # Rana Mitter, the historian.
+    "Dalforce": "dˈælfɔːɹs",
+    "Dalley": "dˈæli",
+    # Ambiguous, candidate A in the code - NOT ear-verified yet (samples in
+    # scratch/the-nanyang-volunteer-drivers-of-the-burma-road-1939/):
+    "Lashio": "lˈæʃiO",            # A "LASH-ee-oh", the usual English reading.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2017,6 +2030,12 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bTay Woo Seng\b"): "Tay-Woo-Seng",
     re.compile(r"\bHow Wan Hong\b"): "How-Wan-Hong",
     re.compile(r"\bChi Owyang\b"): "Chi-Owyang",
+    re.compile(r"\bNanyang Siang Pau\b"): "Nanyang-Siang-Pau",
+    re.compile(r"\bTan Kah Kee\b"): "Tan-Kah-Kee",
+    re.compile(r"\bSun Yat Sen\b"): "Sun-Yat-Sen",
+    re.compile(r"\bLim Chu Kang\b"): "Lim-Chu-Kang",
+    re.compile(r"\bLi Yuemei\b"): "Li-Yuemei",
+    re.compile(r"\bHua Mulan\b"): "Hua-Mulan",
 }
 
 
