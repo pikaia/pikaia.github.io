@@ -1817,6 +1817,11 @@ PRONUNCIATION_OVERRIDES = {
     # Ear-picked by Chris (2026-10-07) from samples in
     # scratch/the-nanyang-volunteer-drivers-of-the-burma-road-1939/ - candidate A of 3:
     "Lashio": "lˈæʃiO",            # "LASH-ee-oh", the usual English reading.
+    # $50 million gift post (2026-10-08): single-reading fixes, the usual English readings.
+    "Mamoru": "mˈɑːmɔːɹuː",        # "MAH-maw-roo" - Mamoru Shinozaki.
+    "Shinozaki": "ʃˌinəzˈɑːki",    # "shee-noh-ZAH-kee".
+    "Tomoyuki": "tˌOmOjˈuːki",     # "toh-moh-YOO-kee".
+    "Yamashita": "jˌɑːməʃˈiːtə",   # "yah-mah-SHEE-tah".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2036,6 +2041,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLim Chu Kang\b"): "Lim-Chu-Kang",
     re.compile(r"\bLi Yuemei\b"): "Li-Yuemei",
     re.compile(r"\bHua Mulan\b"): "Hua-Mulan",
+    re.compile(r"\bTan Yeok Seong\b"): "Tan-Yeok-Seong",
 }
 
 
