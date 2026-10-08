@@ -1832,7 +1832,7 @@ PRONUNCIATION_OVERRIDES = {
     "Negri": "nˈɛɡɹi",                      # Negri Sembilan, the older spelling of Negeri.
     "Sembilan": "səmbˈiːlən",
     "Eaton": "ˈiːtᵊn",                      # Clay Eaton, the historian.
-    "katis": "kˈɑːtiz",                     # kati, the Malay/Chinese weight, about 0.6 kg.
+    "katis": "kˈatiz",                      # "KAT-eez", the "ca" of "cat" (ear-picked by Chris, 2026-10-09); kati, about 0.6 kg.
     "kangkong": "kˈɑŋkɒŋ",                  # "KAHNG-kong", water spinach.
     "beansprouts": "bˈiːnspɹWts",
     "Adrien": "ˈAdɹiən",                    # Bishop Adrien Devals.
