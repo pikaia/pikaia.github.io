@@ -1836,6 +1836,13 @@ PRONUNCIATION_OVERRIDES = {
     "kangkong": "kˈɑŋkɒŋ",                  # "KAHNG-kong", water spinach.
     "beansprouts": "bˈiːnspɹWts",
     "Adrien": "ˈAdɹiən",                    # Bishop Adrien Devals.
+    # Ear-picked by Chris (2026-10-09) from samples in
+    # scratch/new-syonan-the-endau-settlement-1943-*/ - candidate A of each:
+    "Endau": "ˈɛndW",                       # "EN-dow".
+    "Bahau": "bˈɑːhW",                      # "BAH-how".
+    "Bahau's": "bˈɑːhWz",
+    "Devals": "dəvˈɑːl",                    # "deh-VAHL", French, final s silent.
+    "Po-Leung-Kok": "pˌO ljˌʊŋ kˌɒk",       # "poh-LYOONG-kok", fused, even stress.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
