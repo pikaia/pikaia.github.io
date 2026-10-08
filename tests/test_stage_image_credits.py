@@ -26,3 +26,8 @@ def test_commons_only_credits_are_not_personal_photography():
 def test_personal_photo_still_labelled():
     assert describe_image_sources(["- Chris Lee", "- Someone, CC BY-SA 4.0, via Wikimedia Commons"]) == \
         "personal photography and Wikimedia Commons"
+
+
+def test_openstreetmap_credit_is_not_personal_photography():
+    lines = ["- Don Christie, CC BY-SA 4.0, via Wikimedia Commons", "- Map data © OpenStreetMap contributors"]
+    assert describe_image_sources(lines) == "Wikimedia Commons and OpenStreetMap"

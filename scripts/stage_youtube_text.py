@@ -475,8 +475,11 @@ def describe_image_sources(credit_lines: list[str]) -> str:
     # Our own charts/maps/timelines ("Chart by Lesser Known Singapore...",
     # from a config's CREDITS dict) are neither Commons nor personal
     # photography - don't let them trip the "personal photography" label.
+    # An OpenStreetMap map-data credit is a map source, not personal
+    # photography either (caught on the Endau post's map, 2026-10-09).
+    has_osm = any("OpenStreetMap" in line for line in credit_lines)
     has_other = any("Wikimedia Commons" not in line and "NewspaperSG" not in line
-                     and "Lesser Known Singapore" not in line
+                     and "Lesser Known Singapore" not in line and "OpenStreetMap" not in line
                      and not line.endswith("]") for line in credit_lines)
     parts = []
     if has_other:
@@ -485,6 +488,8 @@ def describe_image_sources(credit_lines: list[str]) -> str:
         parts.append("Wikimedia Commons")
     if has_newspapersg:
         parts.append("NewspaperSG")
+    if has_osm:
+        parts.append("OpenStreetMap")
     return " and ".join(parts) if parts else "Wikimedia Commons"
 
 
