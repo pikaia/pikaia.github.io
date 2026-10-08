@@ -59,7 +59,7 @@ Description:
 On 25 June 1942, four months into the Japanese Occupation, the 72-year-old Lim Boon Keng led a delegation of Chinese community leaders from Singapore and Malaya to present a cheque for $50 million to General Tomoyuki Yamashita, the commander of the army that had taken the island. The next day the Syonan Times reported it as a "voluntary gift" from the Chinese, made to mark "their loyalty, sincerity and co-operation." The money had in fact been demanded of them, under a levy that fell on every Chinese household and business of means, and when the community could not raise all of it, close to half was borrowed from a Japanese bank. #Shorts
 
 Full story: https://da.gd/tNuTRd
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/Y1s-JRv2GEQ
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
