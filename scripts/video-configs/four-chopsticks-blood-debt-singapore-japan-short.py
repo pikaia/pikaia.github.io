@@ -1,7 +1,9 @@
 """Video config for the "Four Chopsticks and the Blood Debt" post's
 YouTube Shorts excerpt.
 
-Self-contained hook: the post's opening (0-38.33s) - the "four
+Self-contained hook: the post's opening (0-64.675s since 2026-10-08, when it
+was extended through sentences 3-4, the Sook Ching itself, to pass the 60s
+TikTok line and given the 0.70 caption height) - the "four
 chopsticks" nickname mystery, closing on the reveal: more than 600
 remains recovered from mass graves, victims of a massacre Singapore
 and Japan spent decades reconciling - a real payoff, not a
@@ -21,19 +23,23 @@ WIDTH, HEIGHT = 1080, 1920
 IMAGES = {
     "MEMORIAL": "https://upload.wikimedia.org/wikipedia/commons/2/27/Civilian_War_Memorial%2C_Singapore-3276.jpg",
     "ITEMS": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Items_found_in_mass_graves_due_to_the_Sook_Ching_massacre_of_1942_by_the_Japanese.jpg",
+    "YAMASHITA": "https://upload.wikimedia.org/wikipedia/commons/4/40/Yamashita_and_Percival_discuss_surrender_terms.jpg",
+    "MARCH": "https://upload.wikimedia.org/wikipedia/commons/1/15/JapaneseMarchSgpCity.jpg",
 }
 
 SLIDES = [
     {"img": "MEMORIAL", "type": "cover", "zoom": [1, 1.06, 1.12], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)]},
     {"img": "MEMORIAL", "type": "cover", "zoom": [1.12, 1.06, 1], "pan": [(0.5, 0.45), (0.5, 0.5), (0.5, 0.55)]},
     {"img": "ITEMS", "type": "letterbox", "zoom": [1, 1.05, 1.1], "pan": [(0.5, 0.5), (0.5, 0.5), (0.5, 0.5)]},
+    {"img": "YAMASHITA", "type": "cover", "zoom": [1.0, 1.04, 1.08], "pan": [(0.5, 0.45), (0.5, 0.45), (0.5, 0.45)]},
+    {"img": "MARCH", "type": "cover", "zoom": [1.0, 1.05, 1.1], "pan": [(0.45, 0.5), (0.5, 0.5), (0.55, 0.5)]},
 ]
 
-SCHEDULE = [(0.0, 0), (5.425, 1), (21.125, 2)]
-TOTAL_DURATION = 38.325  # real sentence-timing boundary for this post's opening hook
+SCHEDULE = [(0.0, 0), (5.425, 1), (21.125, 2), (38.325, 3), (50.825, 4)]
+TOTAL_DURATION = 64.675  # end of sentence 4; extended 2026-10-08 past the 60s TikTok line
 TIMING_JSON = "audio/four-chopsticks-blood-debt-singapore-japan.timing.json"
 
 BURN_CAPTIONS = True
-
-# Made before the over-one-minute rule (2026-10-03); see validate_short_config().
-SHORT_UNDER_A_MINUTE_OK = True
+CAPTION_FONT_RATIO = 0.032
+CAPTION_MAX_WIDTH_FRAC = 0.86
+CAPTION_Y_FRAC = 0.70
