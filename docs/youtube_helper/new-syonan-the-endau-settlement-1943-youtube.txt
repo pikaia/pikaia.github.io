@@ -59,7 +59,7 @@ Description:
 On the afternoon of 1 February 1944, about 300 people left occupied Singapore for a stretch of newly cleared jungle near Endau, about 150 kilometres up the east coast of Johor. The Syonan Shimbun called them "pioneers in every sense of the word". They were some 20 families, most of them from the Bukit Timah district, 46 girls from the Po Leung Kok home, and a party of labourers and technicians, sent to grow food at a settlement that had been named New Syonan. Within a year the paper was reporting more than 7,000 settlers there. The settlement was an answer to a simple problem: Singapore under the Japanese did not have enough to eat. #Shorts
 
 Full story: https://da.gd/TVZiFJ
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/cC-kruIoLCw
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
