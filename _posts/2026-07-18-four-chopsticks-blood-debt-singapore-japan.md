@@ -43,6 +43,17 @@ Commuters passing Esplanade MRT station walk beneath four tapering white columns
     </span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Shorts</span>
   </a>
+  <a href="https://www.tiktok.com/@lesserknownsingapore/video/7694327223125331231" target="_blank" rel="noopener" aria-label="Watch a short version of this story on TikTok" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
+    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">
+      <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="1" y="1" width="22" height="22" rx="7" fill="#000"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#25F4EE" transform="translate(-0.6 -0.4)"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#FE2C55" transform="translate(0.6 0.4)"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#fff"/>
+      </svg>
+    </span>
+    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">TikTok</span>
+  </a>
 </div>
 
 <audio id="listen-audio" preload="none" style="display: none;">
@@ -190,26 +201,46 @@ Commuters passing Esplanade MRT station walk beneath four tapering white columns
     var ease = s.ease || 'linear';
     var dur = slideDurations[imageSchedule.findIndex(function (e) { return e.slide === i; })];
 
-    if (s.type === 'letterbox') {
+    if (s.type === 'chart') {
+      var chart = buildChartSlide(s);
+      el.appendChild(chart.svg);
+      el._chartUpdate = chart.update;
+    } else if (s.type === 'letterbox') {
       var bg = document.createElement('div');
-      bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');';
+      bg.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-position:center;filter:blur(30px) brightness(0.55);background-image:url(\'' + s.src + '\');transform-origin:' + s.pan[0] + ';';
       bg.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
+      if (s.bgc) { bg.style.cssText = 'position:absolute;inset:0;background:' + s.bgc + ';'; bg.style.animation = ''; }
       var fg = document.createElement('div');
       fg.style.cssText = 'position:absolute;inset:6%;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:url(\'' + s.src + '\');';
       el.appendChild(bg); el.appendChild(fg);
       el._animTargets = [bg];
     } else {
       var layer = document.createElement('div');
-      layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');';
+      layer.style.cssText = 'position:absolute;inset:-8%;background-size:cover;background-image:url(\'' + s.src + '\');transform-origin:' + s.pan[0] + ';';
       layer.style.animation = 'kb' + i + ' ' + dur + 's ' + ease + ' forwards';
       el.appendChild(layer);
       el._animTargets = [layer];
     }
-    styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; } }\n';
+    if (s.type !== 'chart') {
+      // transform-origin is keyframed alongside transform/background-position,
+      // always matching that keyframe's own pan value - not left at CSS's
+      // default 50% 50% (center). scale() magnifies around transform-origin,
+      // so a default center origin makes zoom drift away from wherever pan
+      // moved the crop, worse the further pan sits from center and the
+      // higher the zoom - for an aggressive pan (e.g. a newspaper-page
+      // "cover" slide targeting one corner) this made the live widget end
+      // up centered on the opposite side of the image from the Python
+      // renderer's own crop, a real bug, not a stale-cache issue (caught by
+      // Chris on the Lim Peng Siang post, 2026-09-22, isolated with a
+      // static-keyframe CSS-only reproduction before this fix). The Python
+      // renderer (watch_video_lib.py) is unaffected - it does its own pixel
+      // crop, no CSS transform-origin concept applies there.
+      styleEl.textContent += '@keyframes kb' + i + ' { 0% { transform: scale(' + s.zoom[0] + '); background-position: ' + s.pan[0] + '; transform-origin: ' + s.pan[0] + '; } 50% { transform: scale(' + s.zoom[1] + '); background-position: ' + s.pan[1] + '; transform-origin: ' + s.pan[1] + '; } 100% { transform: scale(' + s.zoom[2] + '); background-position: ' + s.pan[2] + '; transform-origin: ' + s.pan[2] + '; } }\n';
+    }
     stage.appendChild(el);
     return el;
   });
-  slides.forEach(function (s) { var img = new Image(); img.src = s.src; });
+  slides.forEach(function (s) { if (s.src) { var img = new Image(); img.src = s.src; } });
 
   var currentIndex = -1, currentSentenceIndex = -1;
   function fmtTime(t) {
@@ -233,6 +264,14 @@ Commuters passing Esplanade MRT station walk beneath four tapering white columns
       if (currentIndex >= 0) slideEls[currentIndex].style.opacity = '0';
       slideEls[sIdx].style.opacity = '1';
       currentIndex = sIdx;
+    }
+    if (slideEls[sIdx]._chartUpdate) {
+      var schedIdx = imageSchedule.findIndex(function (e) { return e.slide === sIdx; });
+      var segStart = imageSchedule[schedIdx].t;
+      var nextEntry = imageSchedule[schedIdx + 1];
+      var segEnd = nextEntry ? nextEntry.t : TOTAL_DURATION;
+      var chartProgress = Math.min(1, Math.max(0, (t - segStart) / Math.max(0.001, segEnd - segStart)));
+      slideEls[sIdx]._chartUpdate(t, chartProgress);
     }
     var cIdx = sentenceIndexForTime(t);
     if (cIdx !== currentSentenceIndex) { captionEl.textContent = captionChunks[cIdx].text; currentSentenceIndex = cIdx; }
