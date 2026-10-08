@@ -88,632 +88,632 @@ kept supplies short for
 the rest of the Occupation.
 
 20
-00:01:10,825 --> 00:01:14,909
+00:01:10,825 --> 00:01:14,918
 According to the National
 Library's BiblioAsia journal,
 
 21
-00:01:14,989 --> 00:01:18,391
+00:01:14,998 --> 00:01:18,409
 the rice ration in Syonan
 started at 20 katis,
 
 22
-00:01:18,471 --> 00:01:21,575
+00:01:18,489 --> 00:01:21,600
 about 12 kilograms, per person per month.
 
 23
-00:01:21,575 --> 00:01:26,337
+00:01:21,600 --> 00:01:26,362
 Towards the end of the Occupation
 it had fallen to 8 katis for men,
 
 24
-00:01:26,417 --> 00:01:29,806
+00:01:26,442 --> 00:01:29,831
 6 for women and 4 for
 each child, and people had
 
 25
-00:01:29,886 --> 00:01:34,150
+00:01:29,911 --> 00:01:34,175
 to queue for it in small amounts
 whenever supplies arrived.
 
 26
-00:01:34,150 --> 00:01:37,737
+00:01:34,175 --> 00:01:37,762
 The administration ran a
 "Grow More Food" campaign,
 
 27
-00:01:37,817 --> 00:01:42,275
+00:01:37,842 --> 00:01:42,300
 with exhibitions, cheap seeds
 and radio talks on how to plant.
 
 28
-00:01:42,275 --> 00:01:45,862
+00:01:42,300 --> 00:01:45,887
 Tapioca, sweet potato and
 ragi, a kind of millet,
 
 29
-00:01:45,942 --> 00:01:49,978
+00:01:45,967 --> 00:01:50,003
 became everyday staples, and
 school fields and even the
 
 30
-00:01:50,058 --> 00:01:53,950
+00:01:50,083 --> 00:01:53,975
 Padang were turned into
 vegetable and tapioca plots.
 
 31
-00:01:53,950 --> 00:01:55,800
+00:01:53,975 --> 00:01:55,825
 It was not enough.
 
 32
-00:01:55,800 --> 00:02:00,403
+00:01:55,825 --> 00:02:00,428
 In late 1943 the military
 administration announced a plan to
 
 33
-00:02:00,483 --> 00:02:05,242
+00:02:00,508 --> 00:02:05,267
 move large numbers of people out
 of the city to farm the land,
 
 34
-00:02:05,322 --> 00:02:09,222
+00:02:05,347 --> 00:02:09,247
 with a goal, according to
 the historian Clay Eaton,
 
 35
-00:02:09,302 --> 00:02:14,375
+00:02:09,327 --> 00:02:14,400
 of sending as many as 300,000
 people from Syonan to rural Malaya.
 
 36
-00:02:14,375 --> 00:02:19,067
+00:02:14,400 --> 00:02:19,092
 The task of carrying out the
 scheme went to Mamoru Shinozaki,
 
 37
-00:02:19,147 --> 00:02:22,587
+00:02:19,172 --> 00:02:22,612
 the Japanese welfare
 official who had earlier
 
 38
-00:02:22,667 --> 00:02:26,421
+00:02:22,692 --> 00:02:26,446
 brought together the
 Oversea Chinese Association,
 
 39
-00:02:26,501 --> 00:02:30,725
+00:02:26,526 --> 00:02:30,750
 as told in the post on the
 $50 million "gift" of 1942.
 
 40
-00:02:30,725 --> 00:02:33,100
+00:02:30,750 --> 00:02:33,125
 Two sites were chosen.
 
 41
-00:02:33,100 --> 00:02:37,163
+00:02:33,125 --> 00:02:37,188
 The association was given
 responsibility for a settlement for
 
 42
-00:02:37,243 --> 00:02:40,491
+00:02:37,268 --> 00:02:40,516
 Chinese families at Endau,
 on the coast of Johor,
 
 43
-00:02:40,571 --> 00:02:45,245
+00:02:40,596 --> 00:02:45,270
 while a second settlement at Bahau,
 in Negri Sembilan, was planned for
 
 44
-00:02:45,325 --> 00:02:49,184
+00:02:45,350 --> 00:02:49,209
 Eurasians and Chinese Catholics
 under the Eurasian Welfare
 
 45
-00:02:49,264 --> 00:02:53,475
+00:02:49,289 --> 00:02:53,500
 Association and the Catholic
 Bishop of Malacca, Adrien Devals.
 
 46
-00:02:53,475 --> 00:02:57,255
+00:02:53,500 --> 00:02:57,280
 The association put up $2
 million to build the farms,
 
 47
-00:02:57,335 --> 00:03:02,725
+00:02:57,360 --> 00:03:02,750
 and a construction committee was formed
 under its chairman, Lim Boon Keng.
 
 48
-00:03:02,725 --> 00:03:07,993
+00:03:02,750 --> 00:03:08,018
 Inspection parties travelled up to
 survey the site through late 1943,
 
 49
-00:03:08,073 --> 00:03:12,567
+00:03:08,098 --> 00:03:12,592
 and a flag was raised over it
 on the 14th of December 1943,
 
 50
-00:03:12,647 --> 00:03:16,600
+00:03:12,672 --> 00:03:16,625
 the date later marked as
 the settlement's founding.
 
 51
-00:03:16,600 --> 00:03:20,785
+00:03:16,625 --> 00:03:20,810
 To persuade families to go,
 Shinozaki is said to have promised
 
 52
-00:03:20,865 --> 00:03:24,705
+00:03:20,890 --> 00:03:24,730
 that the Japanese army would
 not interfere, and that rice
 
 53
-00:03:24,785 --> 00:03:28,775
+00:03:24,810 --> 00:03:28,800
 would be supplied until the
 farms could feed the settlers.
 
 54
-00:03:28,775 --> 00:03:32,750
+00:03:28,800 --> 00:03:32,775
 The settlement was run by
 the Chinese themselves.
 
 55
-00:03:32,750 --> 00:03:37,986
+00:03:32,775 --> 00:03:38,011
 According to a 2020 study of the
 settlers' oral histories by Huang Qiuhong,
 
 56
-00:03:38,066 --> 00:03:42,805
+00:03:38,091 --> 00:03:42,830
 there were no restrictions on
 people's movement in and out of Endau,
 
 57
-00:03:42,885 --> 00:03:46,925
+00:03:42,910 --> 00:03:46,950
 unlike at Bahau, where settlers
 needed a permit to leave.
 
 58
-00:03:46,925 --> 00:03:50,692
+00:03:46,950 --> 00:03:50,717
 The first party left from the
 municipal building in Syonan,
 
 59
-00:03:50,772 --> 00:03:52,975
+00:03:50,797 --> 00:03:53,000
 where the deputy mayor told them to
 
 60
-00:03:53,055 --> 00:03:56,250
+00:03:53,080 --> 00:03:56,275
 set an example for the
 settlers who would follow.
 
 61
-00:03:56,250 --> 00:04:00,668
+00:03:56,275 --> 00:04:00,693
 Lorry loads of rice, foodstuffs
 and farming tools went with them,
 
 62
-00:04:00,748 --> 00:04:04,900
+00:04:00,773 --> 00:04:04,925
 and a second group was due to
 leave about a fortnight later.
 
 63
-00:04:04,900 --> 00:04:08,375
+00:04:04,925 --> 00:04:08,400
 Many of the settlers who
 followed were city people
 
 64
-00:04:08,455 --> 00:04:11,725
+00:04:08,480 --> 00:04:11,750
 with little experience
 of farming or building.
 
 65
-00:04:11,725 --> 00:04:14,803
+00:04:11,750 --> 00:04:14,828
 On arrival, families lived in longhouses
 
 66
-00:04:14,883 --> 00:04:17,725
+00:04:14,908 --> 00:04:17,750
 shared by five to ten families each.
 
 67
-00:04:17,725 --> 00:04:20,740
+00:04:17,750 --> 00:04:20,765
 Each family was then
 given about three acres,
 
 68
-00:04:20,820 --> 00:04:25,143
+00:04:20,845 --> 00:04:25,168
 half of it dry land and half wet
 land for rice, and could choose
 
 69
-00:04:25,223 --> 00:04:28,800
+00:04:25,248 --> 00:04:28,825
 to stay in the longhouse
 or build a home of its own.
 
 70
-00:04:28,800 --> 00:04:32,378
+00:04:28,825 --> 00:04:32,403
 Settlers grew rice,
 tapioca, sweet potatoes and
 
 71
-00:04:32,458 --> 00:04:36,350
+00:04:32,483 --> 00:04:36,375
 vegetables such as kangkong,
 spinach and tomatoes.
 
 72
-00:04:36,350 --> 00:04:39,836
+00:04:36,375 --> 00:04:39,861
 The settlement hospital
 handed out medicines free,
 
 73
-00:04:39,916 --> 00:04:42,546
+00:04:39,941 --> 00:04:42,571
 and its staff later recalled that what
 
 74
-00:04:42,626 --> 00:04:46,050
+00:04:42,651 --> 00:04:46,075
 everyone asked for was
 quinine, against malaria.
 
 75
-00:04:46,050 --> 00:04:49,058
+00:04:46,075 --> 00:04:49,070
 At first, the association gave each
 
 76
-00:04:49,138 --> 00:04:52,050
+00:04:49,150 --> 00:04:52,050
 settler 18 katis of rice a month.
 
 77
-00:04:52,050 --> 00:04:55,976
+00:04:52,050 --> 00:04:55,984
 Later, according to the settler
 Wan Leong Gay's interview
 
 78
-00:04:56,056 --> 00:05:00,123
+00:04:56,064 --> 00:05:00,140
 with the National Archives of
 Singapore, it could no longer
 
 79
-00:05:00,203 --> 00:05:04,350
+00:05:00,220 --> 00:05:04,375
 supply that much, and the ration
 fell to only 4 or 5 katis.
 
 80
-00:05:04,350 --> 00:05:08,518
+00:05:04,375 --> 00:05:08,543
 Settlers traded with nearby
 Malay villages, and barbers,
 
 81
-00:05:08,598 --> 00:05:13,150
+00:05:08,623 --> 00:05:13,175
 pawnshops and small medicine
 shops opened in people's homes.
 
 82
-00:05:13,150 --> 00:05:18,222
+00:05:13,175 --> 00:05:18,247
 On the 14th of December 1944, the
 settlement's first anniversary,
 
 83
-00:05:18,302 --> 00:05:23,850
+00:05:18,327 --> 00:05:23,875
 the Syonan Shimbun published an
 annual report from its administrators.
 
 84
-00:05:23,850 --> 00:05:27,898
+00:05:23,875 --> 00:05:27,923
 It described a "virgin
 jungle of a year ago" turned
 
 85
-00:05:27,978 --> 00:05:32,025
+00:05:28,003 --> 00:05:32,050
 into a farming colony of
 more than 7,000 settlers.
 
 86
-00:05:32,025 --> 00:05:36,509
+00:05:32,050 --> 00:05:36,534
 It listed 245 buildings, 50
 of them settlers' quarters,
 
 87
-00:05:36,589 --> 00:05:41,406
+00:05:36,614 --> 00:05:41,431
 along with a school, a hospital
 and a bank, and 5,000 acres
 
 88
-00:05:41,486 --> 00:05:46,050
+00:05:41,511 --> 00:05:46,075
 of cleared land, of which
 2,000 acres were rice fields.
 
 89
-00:05:46,050 --> 00:05:50,175
+00:05:46,075 --> 00:05:50,200
 The report also said that
 rice was "in abundance".
 
 90
-00:05:50,175 --> 00:05:53,443
+00:05:50,200 --> 00:05:53,468
 That claim sits uneasily
 beside the settlers' own
 
 91
-00:05:53,523 --> 00:05:57,337
+00:05:53,548 --> 00:05:57,362
 later accounts of the shrinking
 ration, and the newspaper
 
 92
-00:05:57,417 --> 00:06:00,549
+00:05:57,442 --> 00:06:00,574
 was an instrument of the
 occupation government,
 
 93
-00:06:00,629 --> 00:06:04,250
+00:06:00,654 --> 00:06:04,275
 so its figures are best read
 as the official picture.
 
 94
-00:06:04,250 --> 00:06:09,750
+00:06:04,275 --> 00:06:09,775
 Later accounts put the settlement's
 population as high as 12,000.
 
 95
-00:06:09,750 --> 00:06:12,724
+00:06:09,775 --> 00:06:12,749
 The Malayan People's Anti-Japanese Army,
 
 96
-00:06:12,804 --> 00:06:16,924
+00:06:12,829 --> 00:06:16,949
 the guerrilla force led by
 the Malayan Communist Party,
 
 97
-00:06:17,004 --> 00:06:20,975
+00:06:17,029 --> 00:06:21,000
 regarded the association's
 leaders as collaborators.
 
 98
-00:06:20,975 --> 00:06:25,400
+00:06:21,000 --> 00:06:25,425
 Convoys travelling between
 Syonan and Endau were ambushed.
 
 99
-00:06:25,400 --> 00:06:29,966
+00:06:25,425 --> 00:06:29,991
 On the 19th of April 1944,
 guerrillas attacked an association
 
 100
-00:06:30,046 --> 00:06:34,992
+00:06:30,071 --> 00:06:35,017
 party visiting the settlement and
 killed several of its officials,
 
 101
-00:06:35,072 --> 00:06:38,953
+00:06:35,097 --> 00:06:38,978
 among them Tan Ean Teck, a
 42-year-old rubber trader
 
 102
-00:06:39,033 --> 00:06:43,450
+00:06:39,058 --> 00:06:43,475
 who had given to China's war
 relief before the Occupation.
 
 103
-00:06:43,450 --> 00:06:46,975
+00:06:43,475 --> 00:06:47,000
 He was buried at Bukit
 Brown four days later.
 
 104
-00:06:46,975 --> 00:06:49,899
+00:06:47,000 --> 00:06:49,924
 Settlers also later recalled officials
 
 105
-00:06:49,979 --> 00:06:53,300
+00:06:50,004 --> 00:06:53,325
 being killed inside the settlement itself.
 
 106
-00:06:53,300 --> 00:06:58,634
+00:06:53,325 --> 00:06:58,659
 In the end, according to Eaton, it was
 Shinozaki, rather than the association,
 
 107
-00:06:58,714 --> 00:07:01,619
+00:06:58,739 --> 00:07:01,644
 who negotiated a truce
 with the guerrillas,
 
 108
-00:07:01,699 --> 00:07:06,975
+00:07:01,724 --> 00:07:07,000
 reportedly by offering them rice in
 return for leaving the settlement alone.
 
 109
-00:07:06,975 --> 00:07:11,590
+00:07:07,000 --> 00:07:11,615
 The Bahau settlement, which
 the Japanese called Fuji-go,
 
 110
-00:07:11,670 --> 00:07:15,028
+00:07:11,695 --> 00:07:15,053
 began a month earlier, when its first 150
 
 111
-00:07:15,108 --> 00:07:19,300
+00:07:15,133 --> 00:07:19,325
 pioneers left Syonan on
 the 28th of December 1943.
 
 112
-00:07:19,300 --> 00:07:21,500
+00:07:19,325 --> 00:07:21,525
 It fared much worse.
 
 113
-00:07:21,500 --> 00:07:25,505
+00:07:21,525 --> 00:07:25,530
 Its clay soil was hard to farm,
 malaria spread through the
 
 114
-00:07:25,585 --> 00:07:29,600
+00:07:25,610 --> 00:07:29,625
 settlement within months, and
 malnutrition made it worse.
 
 115
-00:07:29,600 --> 00:07:32,789
+00:07:29,625 --> 00:07:32,814
 Bishop Devals died in January 1945,
 
 116
-00:07:32,869 --> 00:07:37,740
+00:07:32,894 --> 00:07:37,765
 and by the end of the war
 an estimated 500 of Bahau's
 
 117
-00:07:37,820 --> 00:07:41,650
+00:07:37,845 --> 00:07:41,675
 roughly 2,000 to 3,000 settlers had died.
 
 118
-00:07:41,650 --> 00:07:46,004
+00:07:41,675 --> 00:07:46,029
 Endau, on the coast, had less
 malaria and more fertile ground,
 
 119
-00:07:46,084 --> 00:07:50,375
+00:07:46,109 --> 00:07:50,400
 and the association had not
 rushed its settlers out as fast.
 
 120
-00:07:50,375 --> 00:07:54,050
+00:07:50,400 --> 00:07:54,075
 Bahau's story deserves a post of its own.
 
 121
-00:07:54,050 --> 00:07:58,464
+00:07:54,075 --> 00:07:58,489
 When Japan surrendered in
 August 1945, the settlers of New
 
 122
-00:07:58,544 --> 00:08:03,425
+00:07:58,569 --> 00:08:03,450
 Syonan returned to Singapore,
 and the settlement was abandoned.
 
 123
-00:08:03,425 --> 00:08:06,925
+00:08:03,450 --> 00:08:06,950
 Singapore still imports
 most of what it eats.
 
 124
-00:08:06,925 --> 00:08:11,848
+00:08:06,950 --> 00:08:11,873
 According to the Singapore Food
 Agency, more than 90 per cent
 
 125
-00:08:11,928 --> 00:08:16,442
+00:08:11,953 --> 00:08:16,467
 of its food came from abroad
 in 2025, from more than 180
 
 126
-00:08:16,522 --> 00:08:21,525
+00:08:16,547 --> 00:08:21,550
 countries and regions, up from
 about 140 two decades earlier.
 
 127
-00:08:21,525 --> 00:08:25,261
+00:08:21,550 --> 00:08:25,286
 In March 2019, the
 government set the "30 by
 
 128
-00:08:25,341 --> 00:08:28,729
+00:08:25,366 --> 00:08:28,754
 30" goal of producing 30 per cent of the
 
 129
-00:08:28,809 --> 00:08:32,625
+00:08:28,834 --> 00:08:32,650
 country's nutritional
 needs locally by 2030.
 
 130
-00:08:32,625 --> 00:08:36,899
+00:08:32,650 --> 00:08:36,924
 In November 2025, that goal
 was replaced by a new plan,
 
 131
-00:08:36,979 --> 00:08:41,174
+00:08:37,004 --> 00:08:41,199
 the Singapore Food Story 2,
 with the government citing
 
 132
-00:08:41,254 --> 00:08:45,450
+00:08:41,279 --> 00:08:45,475
 high operating costs, limited
 land and farm closures.
 
 133
-00:08:45,450 --> 00:08:50,328
+00:08:45,475 --> 00:08:50,353
 The new plan aims for local farms
 to be able to supply 20 per cent
 
 134
-00:08:50,408 --> 00:08:55,437
+00:08:50,433 --> 00:08:55,462
 of the fibre (vegetables, beansprouts
 and mushrooms) and 30 per cent
 
 135
-00:08:55,517 --> 00:09:00,475
+00:08:55,542 --> 00:09:00,500
 of the protein (eggs and seafood)
 that Singapore consumes by 2035.
 
 136
-00:09:00,475 --> 00:09:04,027
+00:09:00,500 --> 00:09:04,052
 It sets local farming
 alongside three other measures:
 
 137
-00:09:04,107 --> 00:09:06,700
+00:09:04,132 --> 00:09:06,725
 buying from a wider range of countries,
 
 138
-00:09:06,780 --> 00:09:10,275
+00:09:06,805 --> 00:09:10,300
 keeping stockpiles, and
 international partnerships.
 
 139
-00:09:10,275 --> 00:09:15,500
+00:09:10,300 --> 00:09:15,525
 The difference from 1944 is
 in how the problem is handled.
 
 140
-00:09:15,500 --> 00:09:18,881
+00:09:15,525 --> 00:09:18,906
 The wartime answer, once
 the ships stopped coming,
 
 141
-00:09:18,961 --> 00:09:22,975
+00:09:18,986 --> 00:09:23,000
 was to move people out of the
 city to grow their own food.
 
 142
-00:09:22,975 --> 00:09:26,686
+00:09:23,000 --> 00:09:26,711
 Today's plan is designed
 so that no single source of
 
 143
-00:09:26,766 --> 00:09:30,914
+00:09:26,791 --> 00:09:30,939
 food can fail, by spreading
 imports across many countries,
 
 144
-00:09:30,994 --> 00:09:34,275
+00:09:31,019 --> 00:09:34,300
 holding reserves and
 growing a share at home.
 
 145
-00:09:34,275 --> 00:09:38,148
+00:09:34,300 --> 00:09:38,173
 Why it matters today: New Syonan
 is little remembered beside
 
 146
-00:09:38,228 --> 00:09:42,100
+00:09:38,253 --> 00:09:42,125
 the darker stories of the
 Occupation, yet it shows how close
 
 147
-00:09:42,180 --> 00:09:46,646
+00:09:42,205 --> 00:09:46,671
 Singapore came to running out of
 food when its supply lines were cut,
 
 148
-00:09:46,726 --> 00:09:49,808
+00:09:46,751 --> 00:09:49,833
 and why food security
 remains a standing concern
 
 149
-00:09:49,888 --> 00:09:53,775
+00:09:49,913 --> 00:09:53,800
 for an island that grows only
 a small part of what it eats.
