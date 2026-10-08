@@ -147,6 +147,19 @@ def extract_hook(body: str) -> str:
     return ""
 
 
+def _author_and_repository(source: str) -> tuple[str, str]:
+    """Split "<author> / Wikimedia Commons" into the author and a ", via
+    Wikimedia Commons" suffix. The repository after the "/" used to be
+    dropped, so describe_image_sources() saw no "Wikimedia Commons" in the
+    line and labelled Commons photos "personal photography" (caught on the
+    four-chopsticks post's Short, 2026-10-08)."""
+    author, _, rest = source.partition("/")
+    for repo in ("Wikimedia Commons", "NewspaperSG"):
+        if repo in rest:
+            return author.strip(), f", via {repo}"
+    return author.strip(), ""
+
+
 def extract_image_credit(raw_caption: str) -> str:
     """Best-effort author/license extraction from a caption's free text
     (markdown links already stripped by the caller). Tries known phrasing
@@ -168,8 +181,8 @@ def extract_image_credit(raw_caption: str) -> str:
             suffix = ", via Wikimedia Commons"
         if "," in inner:
             source, license_ = inner.rsplit(",", 1)
-            author = source.split("/")[0].strip()
-            return f"{author}, {license_.strip()}{suffix}"
+            author, via = _author_and_repository(source)
+            return f"{author}, {license_.strip()}{suffix or via}"
         return inner.strip() + suffix
     m = PHOTO_BY_RE.search(caption)
     if m:
@@ -197,7 +210,8 @@ def extract_image_credit(raw_caption: str) -> str:
         # credit (mentions a known repository or licence token).
         if "," in inner and re.search(r'Wikimedia Commons|NewspaperSG|public domain|CC[ -]|GFDL|Open Government', inner):
             source, license_ = inner.rsplit(",", 1)
-            return f"{source.split('/')[0].strip()}, {license_.strip()}"
+            author, via = _author_and_repository(source)
+            return f"{author}, {license_.strip()}{via}"
         return f"{inner} [REVIEW CREDIT]"
     return f"{caption} [REVIEW CREDIT]"
 
