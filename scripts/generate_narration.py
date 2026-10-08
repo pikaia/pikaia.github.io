@@ -1825,6 +1825,17 @@ PRONUNCIATION_OVERRIDES = {
     # Ear-picked by Chris (2026-10-08) from samples in
     # scratch/the-50-million-gift-of-1942-tan-yeok-seong/ - candidate A of 3:
     "Tan-Yeok-Seong": "tˌan jˌɔk sjˌɔŋ",   # "tan yok syong", close to Hokkien Io̍k-siông; fused, even stress.
+    # Endau settlement post (2026-10-09): single-reading fixes.
+    "Tan-Ean-Teck": "tˌan ˌiːən tˌɛk",       # fused, even stress; "Ean" as Tan Ean Kiam above.
+    "Wan-Leong-Gay": "wˌɑn lˌiɒŋ ɡˌA",       # the Endau settler interviewed by the National Archives.
+    "Huang-Qiuhong": "hwˌɑŋ ʧjˌoʊ hˈʊŋ",     # Mandarin Huáng Qiūhóng.
+    "Negri": "nˈɛɡɹi",                      # Negri Sembilan, the older spelling of Negeri.
+    "Sembilan": "səmbˈiːlən",
+    "Eaton": "ˈiːtᵊn",                      # Clay Eaton, the historian.
+    "katis": "kˈɑːtiz",                     # kati, the Malay/Chinese weight, about 0.6 kg.
+    "kangkong": "kˈɑŋkɒŋ",                  # "KAHNG-kong", water spinach.
+    "beansprouts": "bˈiːnspɹWts",
+    "Adrien": "ˈAdɹiən",                    # Bishop Adrien Devals.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2045,6 +2056,10 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLi Yuemei\b"): "Li-Yuemei",
     re.compile(r"\bHua Mulan\b"): "Hua-Mulan",
     re.compile(r"\bTan Yeok Seong\b"): "Tan-Yeok-Seong",
+    re.compile(r"\bTan Ean Teck\b"): "Tan-Ean-Teck",
+    re.compile(r"\bWan Leong Gay\b"): "Wan-Leong-Gay",
+    re.compile(r"\bHuang Qiuhong\b"): "Huang-Qiuhong",
+    re.compile(r"\bPo Leung Kok\b"): "Po-Leung-Kok",
 }
 
 
