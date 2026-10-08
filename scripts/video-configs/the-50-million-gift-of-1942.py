@@ -50,6 +50,7 @@ IMAGES = {
 
 # Credits for images not captioned in the post or its gallery.
 CREDITS = {
+    "CHART": "Chart by Lesser Known Singapore, figures from NLB Infopedia's Oversea Chinese Association article",
     "TKK1946": "Tan Kah Kee, Lee Kong Chian and Tan Lark Sye in about 1946, Tan Kah Kee Memorial Museum, public domain, via Wikimedia Commons",
     "BURMA": "Lorries on the Yunnan-Burma Road in 1940, Xiao Qian and Kuang Guang, public domain, via Wikimedia Commons",
     "MARCH": "Japanese troops marching through Singapore's city centre, February 1942, Imperial War Museums, public domain, via Wikimedia Commons",
