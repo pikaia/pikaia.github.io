@@ -1822,6 +1822,9 @@ PRONUNCIATION_OVERRIDES = {
     "Shinozaki": "ʃˌinəzˈɑːki",    # "shee-noh-ZAH-kee".
     "Tomoyuki": "tˌOmOjˈuːki",     # "toh-moh-YOO-kee".
     "Yamashita": "jˌɑːməʃˈiːtə",   # "yah-mah-SHEE-tah".
+    # Ear-picked by Chris (2026-10-08) from samples in
+    # scratch/the-50-million-gift-of-1942-tan-yeok-seong/ - candidate A of 3:
+    "Tan-Yeok-Seong": "tˌan jˌɔk sjˌɔŋ",   # "tan yok syong", close to Hokkien Io̍k-siông; fused, even stress.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
