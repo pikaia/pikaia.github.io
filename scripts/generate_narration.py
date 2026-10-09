@@ -1849,6 +1849,11 @@ PRONUNCIATION_OVERRIDES = {
     "Orfeur": "ˈɔːfə",                      # "OR-fer", Governor Orfeur Cavenagh.
     "Seah-Eu-Chin": "sˌiːə jˌuː ʧˌɪn",      # fused, even stress; "Seah" as above.
     "Hoo-Ah-Kay": "hˌuː ˌɑː kˌA",           # Whampoa's own name; fused, even stress.
+    # Straits dollar post (2026-10-09): British money words, standard readings.
+    "fourpence": "fˈɔːpəns",                # "FOR-puhns", as sixpence (sˈɪkspəns).
+    "sevenpence": "sˈɛvᵊnpəns",
+    "tenpence": "tˈɛnpəns",
+    "Tan-Jiak-Kim": "tˌan dʒiˌɑk kˌɪm",      # fused, even stress; "Jiak" as above.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2075,6 +2080,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bPo Leung Kok\b"): "Po-Leung-Kok",
     re.compile(r"\bSeah Eu Chin\b"): "Seah-Eu-Chin",
     re.compile(r"\bHoo Ah Kay\b"): "Hoo-Ah-Kay",
+    re.compile(r"\bTan Jiak Kim\b"): "Tan-Jiak-Kim",
 }
 
 
