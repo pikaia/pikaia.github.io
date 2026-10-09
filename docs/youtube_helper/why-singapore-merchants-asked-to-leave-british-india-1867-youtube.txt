@@ -59,7 +59,7 @@ Description:
 At noon on Monday, 1 April 1867, a salute of guns from Fort Canning announced a ceremony at the Town Hall, the building that is today the Victoria Theatre. A crowd gathered outside, and inside, the Order constituting the Straits Settlements a colony of the Crown was read aloud. For four decades, Singapore, Penang and Malacca had been governed as an outlying part of British India, under orders from Calcutta. From that day they answered to the Colonial Office in London instead. The change had not been imposed from above. It was the result of a campaign of more than ten years by Singapore's own merchants, who had grown tired of being ruled by a government that, in their view, understood little about their trade. #Shorts
 
 Full story: https://da.gd/dRJ5m
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/iA0240juJBo
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
