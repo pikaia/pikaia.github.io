@@ -11,6 +11,45 @@ For about a century, the quickest way from the sea to the heart of Singapore's b
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/change-alley-singapores-lane-of-money-changers-and-bargains.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![The corner of a building at the entrance to Change Alley in 1965, with a sign reading CHANGE ALLEY, a large sign for City Book Store Limited, canvas awnings and shoppers below](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Change_Alley_Singapore_street_sign_January_1965.jpg/1280px-Change_Alley_Singapore_street_sign_January_1965.jpg)
 
 *The entrance to Change Alley in January 1965, with its street sign, the City Book Store and the awnings of the stalls. (Don Christie, CC BY-SA 4.0, via Wikimedia Commons)*
