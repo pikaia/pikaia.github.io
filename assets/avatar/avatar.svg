@@ -5,7 +5,7 @@
        mouth-0..mouth-3, mouth-M, mouth-F, mouth-U, mouth-E, brows.
        build_avatar.py renders each of the first eleven alone onto a 512x512 transparent canvas; brows stays inside body
        for now. Motion parts (AVATAR "motion": True) are nested groups rendered
-       on their own too: back, head, brows, rim inside body; pupils, glasses
+       on their own too: back (bg, shoulders), head, brows, rim inside body; pupils, glasses
        inside eyes-open; lids inside eyes-closed. Body content is clipped to the r=250 bubble (#bubble); the
        border circle is drawn last, on top. Eyes sit behind the glasses
        lenses, so the glasses are drawn in body *after* nothing - the eye
@@ -14,7 +14,8 @@
   <g id="body">
     <g clip-path="url(#bubble)">
     <g id="back">
-    <circle cx="256" cy="256" r="250" fill="#2f4858"/>
+    <g id="bg"><circle cx="256" cy="256" r="250" fill="#2f4858"/></g>
+    <g id="shoulders">
     <!-- shirt: light-blue collared -->
     <path d="M60 512 Q70 430 170 405 L256 440 L342 405 Q442 430 452 512 Z" fill="#9cc3e6"/>
     <!-- neck -->
@@ -23,6 +24,7 @@
     <path d="M196 392 L256 440 L226 470 L178 412 Z" fill="#c4dcf2"/>
     <path d="M316 392 L256 440 L286 470 L334 412 Z" fill="#c4dcf2"/>
     <path d="M256 440 L256 512" stroke="#7fa9cf" stroke-width="4"/>
+    </g>
     </g>
     <g id="head">
     <!-- ears -->

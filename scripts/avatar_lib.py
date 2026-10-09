@@ -30,7 +30,7 @@ LAYER_NAMES = ["body", "eyes-open", "eyes-closed", "mouth-0", "mouth-1", "mouth-
                "mouth-M", "mouth-F", "mouth-U", "mouth-E"]
 # Parts of the cartoon that move on their own when AVATAR has "motion": True
 # (avatar_motion.py). Nested groups in the SVG, rendered alone like the rest.
-MOTION_LAYER_NAMES = ["back", "head", "brows", "pupils", "glasses", "lids", "rim"]
+MOTION_LAYER_NAMES = ["back", "bg", "shoulders", "head", "brows", "pupils", "glasses", "lids", "rim"]
 ALL_LAYER_NAMES = LAYER_NAMES + MOTION_LAYER_NAMES
 BLINK_FRAMES = 3
 MOUTH_FILE_VERSION = 1

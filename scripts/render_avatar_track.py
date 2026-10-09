@@ -26,7 +26,7 @@ from avatar_lib import (  # noqa: E402
     BLINK_FRAMES, LAYER_NAMES, MOTION_LAYER_NAMES, PNG_DIR, REPO_ROOT, STYLE_DIRS, alpha_at,
     avatar_settings, bubble_geometry, load_mouth_file, mouth_path_for_config, video_dims,
 )
-from avatar_motion import BREATH_SCALE, motion_curves, sentence_start_frames  # noqa: E402
+from avatar_motion import BREATH_RISE, motion_curves, sentence_start_frames  # noqa: E402
 from watch_video_lib import load_config  # noqa: E402
 
 
@@ -91,6 +91,8 @@ def hold_keys(keys, hold):
 MOTION_SS = 2
 # The head tilts about the base of the neck (512-canvas coordinates).
 HEAD_PIVOT = (256, 400)
+# Top of the shoulder line, where the breathing rise is measured.
+SHOULDER_Y = 400
 
 
 def _shift(img, dx, dy):
@@ -106,10 +108,16 @@ def compose_moving(layers, mouth, eyes_closed, p, size):
     values in 512-canvas units (avatar_motion.motion_curves)."""
     k = size / 512
     back = layers["back"]
-    stretch = 1 + BREATH_SCALE * p["breath"]
-    h = int(round(size * stretch))
-    frame = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    frame.alpha_composite(back if h == size else back.resize((size, h), Image.BILINEAR), (0, size - h))
+    frame = layers["bg"].copy()
+    # Breathing: the shoulders stretch up from the bottom of the bubble, so the
+    # shoulder line (about y=400) rises BREATH_RISE px while the bottom edge stays
+    # put and no background shows under the shirt.
+    rise = BREATH_RISE * p["breath"] * k
+    if rise:
+        h = int(round(size * (1 + rise / (size - SHOULDER_Y * k))))
+        frame.alpha_composite(layers["shoulders"].resize((size, h), Image.BICUBIC), (0, size - h))
+    else:
+        frame.alpha_composite(layers["shoulders"])
     head = layers["head"].copy()
     head.alpha_composite(_shift(layers["brows"], 0, p["brow_dy"] * k))
     if eyes_closed:
