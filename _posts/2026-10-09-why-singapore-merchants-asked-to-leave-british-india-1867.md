@@ -1,0 +1,300 @@
+---
+layout: post
+title: "Why Singapore's Merchants Asked to Leave British India: The 1867 Transfer to Crown Rule"
+date: 2026-10-09 09:35:00 +0800
+last_modified_at: 2026-10-09 09:35:00 +0800
+categories: [history]
+image: https://upload.wikimedia.org/wikipedia/commons/6/66/Town_Hall%2C_Singapore_-_1860s.jpg
+---
+
+At noon on Monday, 1 April 1867, a salute of guns from Fort Canning announced a ceremony at the Town Hall, the building that is today the Victoria Theatre. A crowd gathered outside, and inside, the Order constituting the Straits Settlements a colony of the Crown was read aloud. For four decades, Singapore, Penang and Malacca had been governed as an outlying part of British India, under orders from Calcutta. From that day they answered to the Colonial Office in London instead. The change had not been imposed from above. It was the result of a campaign of more than ten years by Singapore's own merchants, who had grown tired of being ruled by a government that, in their view, understood little about their trade.
+
+[← Back to all posts](/)
+
+![The Town Hall of Singapore in the 1860s, a two-storey classical building with arched windows and a portico, seen across an open lawn](https://upload.wikimedia.org/wikipedia/commons/6/66/Town_Hall%2C_Singapore_-_1860s.jpg)
+
+*The Town Hall, now the Victoria Theatre, in the 1860s. The transfer to Crown rule took place here on 1 April 1867. (G. R. Lambert, public domain, via Wikimedia Commons)*
+
+## The day of the transfer
+
+According to the historian C. B. Buckley, who described the ceremony in his Anecdotal History of Old Times in Singapore (1902), the acting governor, Colonel Henry Man, arrived first and went round the room greeting the guests. Then the new governor, Colonel Harry Ord, walked in under another salute without removing his hat, and sat down on the dais without acknowledging anyone. Buckley wrote that the impression this created "was never removed". Admiral Sir Henry Keppel, a popular figure in Singapore, arrived next, shook hands with the people he knew, and declined a seat on the dais, taking an ordinary Town Hall chair on the floor instead.
+
+<div style="float: right; max-width: 240px; width: 38%; margin: 0.25em 0 1em 1.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Sir_Harry_Ord.jpg" alt="Portrait of Sir Harry Ord, a bearded man in a dark coat seated with a hand at his chest" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Sir Harry Ord, the first governor of the Straits Settlements as a Crown colony, in 1869. (Unknown photographer, public domain, via Wikimedia Commons)</em>
+</div>
+
+The documents were read and the oaths administered. Then the members of the new Legislative Council were sworn in. Among them was William Henry Read, a merchant who had chaired many of the public meetings that led to that moment. For the first time, men from outside the government sat on a council that made the colony's own laws.
+
+## Ruled from Calcutta
+
+Penang, Malacca and Singapore were joined together as the Straits Settlements in 1826, under the East India Company. In 1830 they were reduced to a residency under the Bengal Presidency, and from 1851 they were placed directly under the Governor-General of India. Laws for Singapore were made in Calcutta, and its affairs were one small item among the many problems of governing India.
+
+Yet the settlements were growing fast. When Singapore's petition for a transfer reached the House of Commons in April 1858, Lord Bury told the House that their trade had risen from £4 million in 1840 to £15 million in 1857. Singapore's merchants felt that their interests lay with the trade passing between Europe and China, not with India, and that Calcutta treated the Straits mainly as a place to send convicts.
+
+<div style="clear: both;"></div>
+
+<div class="viz-root" style="clear: both;">
+<style>
+.viz-root {
+  color-scheme: light;
+  --surface-1:      #fcfcfb;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --grid:           #e1e0d9;
+  --axis:           #c3c2b7;
+  --series-1:       #2a78d6;
+  --band-bank:      #dbe8f8;
+  --band-war:       #e6e5df;
+  --border:         rgba(11,11,11,0.10);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --axis:           #4a4a46;
+    --series-1:       #3987e5;
+    --band-bank:      #1c3452;
+    --band-war:       #3a3a37;
+    --border:         rgba(255,255,255,0.10);
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --surface-1:      #1a1a19;
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #898781;
+  --grid:           #2c2c2a;
+  --axis:           #4a4a46;
+  --series-1:       #3987e5;
+  --band-bank:      #1c3452;
+  --band-war:       #3a3a37;
+  --border:         rgba(255,255,255,0.10);
+}
+.lt-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px 20px 12px; margin: 1.5em 0; }
+.lt-title { font-size: 16px; font-weight: 600; color: var(--text-primary); margin: 0 0 2px; }
+.lt-subtitle { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; }
+.lt-legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-secondary); margin: 0 0 4px; }
+.lt-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lt-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.lt-chart-wrap { position: relative; }
+.lt-tooltip { position: absolute; pointer-events: none; opacity: 0; transition: opacity 120ms; background: var(--surface-1); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 12.5px; color: var(--text-primary); box-shadow: 0 2px 8px rgba(0,0,0,0.12); max-width: 260px; }
+.lt-tooltip.visible { opacity: 1; }
+.lt-tooltip-val { font-weight: 600; margin-bottom: 2px; }
+.lt-tooltip-label { color: var(--text-secondary); }
+.lt-foot { font-size: 11.5px; color: var(--text-muted); margin-top: 6px; }
+.lt-details { margin-top: 10px; }
+.lt-details summary { font-size: 12.5px; color: var(--text-secondary); cursor: pointer; }
+.lt-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12.5px; }
+.lt-table th, .lt-table td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--grid); color: var(--text-primary); }
+.lt-table th { color: var(--text-secondary); font-weight: 600; }
+.lt-axis { font-size: 11px; fill: var(--text-muted); }
+.lt-band { font-size: 10.5px; fill: var(--text-secondary); }
+.lt-year { font-size: 12px; font-weight: 600; fill: var(--text-primary); }
+.lt-lab { font-size: 10.5px; fill: var(--text-secondary); }
+.lt-dot { fill: var(--surface-1); stroke: var(--series-1); stroke-width: 2.5; }
+.lt-hit:focus { outline: none; }
+.lt-hit:focus .lt-dot, .lt-hit:hover .lt-dot { fill: var(--series-1); }
+</style>
+<div class="lt-card">
+  <p class="lt-title">Forty years under British India, 1826 to 1867</p>
+  <p class="lt-subtitle">The Straits Settlements' quarrels with the Government of India, and the road to Crown rule</p>
+  <div class="lt-legend">
+    <span><i class="lt-swatch" style="background: var(--band-bank)"></i>Governed as part of British India, 1826 to 1867</span>
+  </div>
+  <div class="lt-chart-wrap">
+    <svg viewBox="0 0 800 322" width="100%" height="auto" role="img" aria-label="Timeline from 1825 to 1870. 1826: Straits Settlements formed. 1830: Placed under Bengal. 1835: First law to bring in the rupee. 1847: Second rupee law. 1851: Under the Governor- General of India. 1855: Rupee bill; transfer first proposed. 1856: Meeting against port dues. 1857: Petition to Parliament. 1858: Debated in the Commons. 1863: Port dues raised again. 1866: Act of Parliament. 1867: Crown colony, 1 April. The years 1826 to 1867, when the settlements were governed as part of British India, are shaded.">
+      <rect x="46.4" y="140" width="678.3" height="40" rx="3" fill="var(--band-bank)"/>
+      <text class="lt-band" x="252.0" y="174" text-anchor="middle">Governed as part of British India, 1826 to 1867</text>
+      <line x1="30.0" y1="160" x2="770.0" y2="160" stroke="var(--axis)" stroke-width="1.5"/>
+      <line x1="30.0" y1="156" x2="30.0" y2="164" stroke="var(--axis)"/>
+      <line x1="112.2" y1="156" x2="112.2" y2="164" stroke="var(--axis)"/>
+      <line x1="194.4" y1="156" x2="194.4" y2="164" stroke="var(--axis)"/>
+      <line x1="276.7" y1="156" x2="276.7" y2="164" stroke="var(--axis)"/>
+      <line x1="358.9" y1="156" x2="358.9" y2="164" stroke="var(--axis)"/>
+      <line x1="441.1" y1="156" x2="441.1" y2="164" stroke="var(--axis)"/>
+      <line x1="523.3" y1="156" x2="523.3" y2="164" stroke="var(--axis)"/>
+      <line x1="605.6" y1="156" x2="605.6" y2="164" stroke="var(--axis)"/>
+      <line x1="687.8" y1="156" x2="687.8" y2="164" stroke="var(--axis)"/>
+      <line x1="770.0" y1="156" x2="770.0" y2="164" stroke="var(--axis)"/>
+      <text class="lt-axis" x="30.0" y="204" text-anchor="middle">1825</text>
+      <text class="lt-axis" x="194.4" y="204" text-anchor="middle">1835</text>
+      <text class="lt-axis" x="276.7" y="204" text-anchor="middle">1840</text>
+      <text class="lt-axis" x="358.9" y="204" text-anchor="middle">1845</text>
+      <text class="lt-axis" x="441.1" y="204" text-anchor="middle">1850</text>
+      <text class="lt-axis" x="605.6" y="204" text-anchor="middle">1860</text>
+      <text class="lt-axis" x="687.8" y="204" text-anchor="middle">1865</text>
+      <text class="lt-axis" x="770.0" y="204" text-anchor="middle">1870</text>
+      <g class="lt-hit" tabindex="0" data-label="1826: Straits Settlements formed" data-val="Penang, Malacca and Singapore are united as the Straits Settlements under the East India Company."><rect x="6.4" y="50" width="80" height="120" fill="transparent"/><line x1="46.4" y1="160" x2="46.4" y2="102" stroke="var(--axis)"/><circle class="lt-dot" cx="46.4" cy="160" r="5"/><text class="lt-year" x="43.4" y="68" text-anchor="start">1826</text><text class="lt-lab" x="43.4" y="82" text-anchor="start">Straits Settlements</text><text class="lt-lab" x="43.4" y="95" text-anchor="start">formed</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1830: Placed under Bengal" data-val="The settlements are reduced to a residency under the Bengal Presidency, governed from Calcutta."><rect x="72.2" y="152" width="80" height="112" fill="transparent"/><line x1="112.2" y1="160" x2="112.2" y2="206" stroke="var(--axis)"/><circle class="lt-dot" cx="112.2" cy="160" r="5"/><text class="lt-year" x="112.2" y="220" text-anchor="middle">1830</text><text class="lt-lab" x="112.2" y="234" text-anchor="middle">Placed under</text><text class="lt-lab" x="112.2" y="247" text-anchor="middle">Bengal</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1835: First law to bring in the rupee" data-val="The first of Calcutta's currency laws aimed at making the Indian rupee the currency of the Straits."><rect x="154.4" y="50" width="80" height="120" fill="transparent"/><line x1="194.4" y1="160" x2="194.4" y2="102" stroke="var(--axis)"/><circle class="lt-dot" cx="194.4" cy="160" r="5"/><text class="lt-year" x="194.4" y="68" text-anchor="middle">1835</text><text class="lt-lab" x="194.4" y="82" text-anchor="middle">First law to bring</text><text class="lt-lab" x="194.4" y="95" text-anchor="middle">in the rupee</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1847: Second rupee law" data-val="A second currency law; Singapore's traders go on using the Spanish and Mexican dollar."><rect x="351.8" y="152" width="80" height="112" fill="transparent"/><line x1="391.8" y1="160" x2="391.8" y2="206" stroke="var(--axis)"/><circle class="lt-dot" cx="391.8" cy="160" r="5"/><text class="lt-year" x="391.8" y="220" text-anchor="middle">1847</text><text class="lt-lab" x="391.8" y="234" text-anchor="middle">Second</text><text class="lt-lab" x="391.8" y="247" text-anchor="middle">rupee law</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1851: Under the Governor- General of India" data-val="The settlements are placed directly under the Governor-General of India."><rect x="417.6" y="50" width="80" height="120" fill="transparent"/><line x1="457.6" y1="160" x2="457.6" y2="102" stroke="var(--axis)"/><circle class="lt-dot" cx="457.6" cy="160" r="5"/><text class="lt-year" x="460.6" y="68" text-anchor="end">1851</text><text class="lt-lab" x="460.6" y="82" text-anchor="end">Under the Governor-</text><text class="lt-lab" x="460.6" y="95" text-anchor="end">General of India</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1855: Rupee bill; transfer first proposed" data-val="A bill to make Indian copper coins legal tender; a public meeting in August first raises a transfer, and votes it down."><rect x="483.3" y="152" width="80" height="112" fill="transparent"/><line x1="523.3" y1="160" x2="523.3" y2="206" stroke="var(--axis)"/><circle class="lt-dot" cx="523.3" cy="160" r="5"/><text class="lt-year" x="526.3" y="220" text-anchor="end">1855</text><text class="lt-lab" x="526.3" y="234" text-anchor="end">Rupee bill; transfer</text><text class="lt-lab" x="526.3" y="247" text-anchor="end">first proposed</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1856: Meeting against port dues" data-val="On 18 December a public meeting chaired by W. H. Read condemns India's plan for tonnage dues on shipping."><rect x="499.8" y="50" width="80" height="120" fill="transparent"/><line x1="539.8" y1="160" x2="539.8" y2="102" stroke="var(--axis)"/><circle class="lt-dot" cx="539.8" cy="160" r="5"/><text class="lt-year" x="542.8" y="68" text-anchor="end">1856</text><text class="lt-lab" x="542.8" y="82" text-anchor="end">Meeting against</text><text class="lt-lab" x="542.8" y="95" text-anchor="end">port dues</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1857: Petition to Parliament" data-val="In October Singapore's European community signs a petition asking Parliament to place the Straits under the Crown."><rect x="516.2" y="152" width="80" height="162" fill="transparent"/><line x1="556.2" y1="160" x2="556.2" y2="256" stroke="var(--axis)"/><circle class="lt-dot" cx="556.2" cy="160" r="5"/><text class="lt-year" x="556.2" y="270" text-anchor="middle">1857</text><text class="lt-lab" x="556.2" y="284" text-anchor="middle">Petition to</text><text class="lt-lab" x="556.2" y="297" text-anchor="middle">Parliament</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1858: Debated in the Commons" data-val="Lord Bury presents the petition in the House of Commons in April 1858."><rect x="532.7" y="0" width="80" height="170" fill="transparent"/><line x1="572.7" y1="160" x2="572.7" y2="52" stroke="var(--axis)"/><circle class="lt-dot" cx="572.7" cy="160" r="5"/><text class="lt-year" x="569.7" y="18" text-anchor="start">1858</text><text class="lt-lab" x="569.7" y="32" text-anchor="start">Debated in</text><text class="lt-lab" x="569.7" y="45" text-anchor="start">the Commons</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1863: Port dues raised again" data-val="Calcutta revives port dues; the Chamber of Commerce and Governor Cavenagh oppose them."><rect x="614.9" y="152" width="80" height="112" fill="transparent"/><line x1="654.9" y1="160" x2="654.9" y2="206" stroke="var(--axis)"/><circle class="lt-dot" cx="654.9" cy="160" r="5"/><text class="lt-year" x="654.9" y="220" text-anchor="middle">1863</text><text class="lt-lab" x="654.9" y="234" text-anchor="middle">Port dues</text><text class="lt-lab" x="654.9" y="247" text-anchor="middle">raised again</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1866: Act of Parliament" data-val="The Act to provide for the Government of the Straits Settlements is passed on 10 August 1866."><rect x="664.2" y="50" width="80" height="120" fill="transparent"/><line x1="704.2" y1="160" x2="704.2" y2="102" stroke="var(--axis)"/><circle class="lt-dot" cx="704.2" cy="160" r="5"/><text class="lt-year" x="707.2" y="68" text-anchor="end">1866</text><text class="lt-lab" x="707.2" y="82" text-anchor="end">Act of</text><text class="lt-lab" x="707.2" y="95" text-anchor="end">Parliament</text></g>
+      <g class="lt-hit" tabindex="0" data-label="1867: Crown colony, 1 April" data-val="The settlements are transferred to the Colonial Office at a ceremony in the Town Hall on 1 April 1867."><rect x="680.7" y="152" width="80" height="162" fill="transparent"/><line x1="720.7" y1="160" x2="720.7" y2="256" stroke="var(--axis)"/><circle class="lt-dot" cx="720.7" cy="160" r="5"/><text class="lt-year" x="723.7" y="270" text-anchor="end">1867</text><text class="lt-lab" x="723.7" y="284" text-anchor="end">Crown colony,</text><text class="lt-lab" x="723.7" y="297" text-anchor="end">1 April</text></g>
+    </svg>
+    <div class="lt-tooltip"></div>
+  </div>
+  <p class="lt-foot">Sources: C. B. Buckley, An Anecdotal History of Old Times in Singapore (1902); Hansard, 21 April 1856; The Straits Times, 23 December 1856.</p>
+  <details class="lt-details">
+    <summary>View as table</summary>
+    <table class="lt-table">
+      <thead><tr><th>Year</th><th>Event</th></tr></thead>
+      <tbody>
+        <tr><td>1826</td><td>Penang, Malacca and Singapore are united as the Straits Settlements under the East India Company.</td></tr>
+        <tr><td>1830</td><td>The settlements are reduced to a residency under the Bengal Presidency, governed from Calcutta.</td></tr>
+        <tr><td>1835</td><td>The first of Calcutta's currency laws aimed at making the Indian rupee the currency of the Straits.</td></tr>
+        <tr><td>1847</td><td>A second currency law; Singapore's traders go on using the Spanish and Mexican dollar.</td></tr>
+        <tr><td>1851</td><td>The settlements are placed directly under the Governor-General of India.</td></tr>
+        <tr><td>1855</td><td>A bill to make Indian copper coins legal tender; a public meeting in August first raises a transfer, and votes it down.</td></tr>
+        <tr><td>1856</td><td>On 18 December a public meeting chaired by W. H. Read condemns India's plan for tonnage dues on shipping.</td></tr>
+        <tr><td>1857</td><td>In October Singapore's European community signs a petition asking Parliament to place the Straits under the Crown.</td></tr>
+        <tr><td>1858</td><td>Lord Bury presents the petition in the House of Commons in April 1858.</td></tr>
+        <tr><td>1863</td><td>Calcutta revives port dues; the Chamber of Commerce and Governor Cavenagh oppose them.</td></tr>
+        <tr><td>1866</td><td>The Act to provide for the Government of the Straits Settlements is passed on 10 August 1866.</td></tr>
+        <tr><td>1867</td><td>The settlements are transferred to the Colonial Office at a ceremony in the Town Hall on 1 April 1867.</td></tr>
+      </tbody>
+    </table>
+  </details>
+</div>
+<script>
+(function() {
+  var card = document.currentScript.previousElementSibling;
+  var svg = card.querySelector('.lt-chart-wrap svg');
+  var wrap = svg.parentElement;
+  var tooltip = wrap.querySelector('.lt-tooltip');
+  svg.querySelectorAll('.lt-hit').forEach(function(hit) {
+    function show() {
+      tooltip.innerHTML = '<div class="lt-tooltip-val">' + hit.getAttribute('data-label') + '</div>' +
+        '<div class="lt-tooltip-label">' + hit.getAttribute('data-val') + '</div>';
+      var b = hit.getBoundingClientRect(), w = wrap.getBoundingClientRect();
+      tooltip.style.left = Math.min(Math.max(b.left - w.left + b.width / 2 - 130, 0), w.width - 260) + 'px';
+      tooltip.style.top = Math.max(b.top - w.top - 20, 0) + 'px';
+      tooltip.classList.add('visible');
+    }
+    function hide() { tooltip.classList.remove('visible'); }
+    hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show);
+    hit.addEventListener('pointerleave', hide); hit.addEventListener('blur', hide);
+  });
+})();
+</script>
+</div>
+
+## The rupee
+
+<div style="float: left; max-width: 240px; width: 38%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/East_India_Company%2C_One_Rupee%2C_1840_-_reverse.jpg" alt="A silver East India Company one-rupee coin of 1840, reading ONE RUPEE inside a wreath" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">An East India Company rupee of 1840, the coin Calcutta wanted the Straits to use. (5snake5, CC0, via Wikimedia Commons)</em>
+</div>
+
+The first quarrel was about money itself. Trade in South-East Asia had long been conducted in Spanish and Mexican silver dollars, as told in the post on [the Spanish dollar](/2026/09/24/the-spanish-dollar-that-ruled-singapores-early-economy/), and the Malay, Chinese and Bugis traders who came to Singapore expected to be paid in them. The Government of India wanted one currency across its territories, and in currency laws of 1835, 1847 and 1855 it tried to make the Indian rupee the money of the Straits. For a time, the treasury in Singapore was told to make its payments in rupees instead of dollars, at 220 rupees to 100 dollars.
+
+The merchants feared that traders from the region would not accept the new coins, and that the change would damage their business. They held public meetings, protested against what one resolution called "the insidious introduction of the Rupee Currency", and petitioned Parliament. In the House of Lords in April 1856, the Earl of Albemarle presented their petition and described the rupee's small change as "the most barbarous and inconvenient coin that could be conceived". The bill to make Indian copper coins legal tender in the Straits did not pass, and the dollar remained the money of Singapore.
+
+<div style="clear: both;"></div>
+
+![A Mexican silver eight-reales coin of 1888, front and back, its surface stamped with many small Chinese merchants' chop marks](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/1888_M%C3%A9xico_8_Reals_Trade_Coin_Silver.jpg/1280px-1888_M%C3%A9xico_8_Reals_Trade_Coin_Silver.jpg)
+
+*A Mexican silver dollar of 1888, stamped with the chop marks of Chinese merchants who tested its silver as it passed through their hands. Coins like this were the everyday money of the region's trade. (Centpacrr, CC BY-SA 3.0, via Wikimedia Commons)*
+
+## Port dues on a free port
+
+<div style="float: right; max-width: 300px; width: 44%; margin: 0.25em 0 1em 1.5em;">
+<img src="/assets/images/straits-times-1856-12-23-page-4.jpg" alt="Page 4 of The Straits Times, 23 December 1856, a dense page of small print in five columns" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Page 4 of The Straits Times, 23 December 1856. The report in the centre column describes the public meeting against the proposed tonnage dues. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+The second quarrel was about the free port. Since its founding in 1819, Singapore had charged no duties on the ships and goods that used its harbour, and the merchants regarded this as the basis of its success. In 1856 the Government of India proposed to levy tonnage dues on ships arriving at the port. According to The Straits Times of 23 December 1856, the aim was to cover the cost of the Master Attendant's department, about 8,000 rupees a year.
+
+The sum was small, but the principle was not. At a crowded public meeting on 18 December 1856, with W. H. Read in the chair, the merchants resolved that the dues were "an unwarrantable attack upon the freedom of this port", and sent a memorial to Calcutta. In 1857 the Company's directors in London forbade the dues. The proposal returned in 1863, when the Governor of the Straits, Colonel Orfeur Cavenagh, sided with the Chamber of Commerce against it, and it was dropped again.
+
+<div style="clear: both;"></div>
+
+## Convicts, taxes and neglect
+
+The third set of complaints was about how Calcutta used the Straits. Convicts from across India had been shipped to Singapore since 1825, as told in the post on [the Indian convicts who built colonial Singapore](/2026/09/28/the-indian-convicts-who-built-colonial-singapore-1825-1873/), and in 1858 Lord Bury told the Commons that the convicts of Bombay, Madras and Bengal were all being sent there. In 1857, the uprising in India made the merchants more uneasy about the convict population, and it also brought public works in the Straits to a halt, as India cut spending to pay for the crisis. In 1860, Calcutta proposed to extend an Indian income tax to the Straits. A public meeting called it unsuited to the settlements and "framed in total ignorance" of their finances, and the proposal was soon dropped.
+
+## The campaign
+
+<div style="float: left; max-width: 240px; width: 38%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Charles_Canning%2C_1st_Earl_Canning.jpg" alt="Photographic portrait of Lord Canning, seated, in a dark coat" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">Charles Canning, Governor-General of India, who agreed in 1859 that India could not govern the Straits well. (John Jabez Edwin Mayall, public domain, via Wikimedia Commons)</em>
+</div>
+
+The idea of leaving Indian rule was first raised at a public meeting in Singapore in August 1855, and voted down. Two years later, in September 1857, a meeting of the European merchants resolved to petition Parliament, and in October most of Singapore's European community signed a petition asking for the Straits Settlements to be placed directly under the Crown. Lord Bury presented it in the House of Commons in April 1858.
+
+Even India's Governor-General, Lord Canning, came to agree. In a minute written in November 1859, he observed that the Chinese of the Straits were very different from the people Indian officials were trained to govern, and concluded that unless officers were specially trained for the Straits, "the Indian Government cannot do justice to these Settlements". The campaign continued into the 1860s. At a Town Hall meeting in December 1863 that prepared a further report in favour of the transfer, Seah Eu Chin was recorded as present, the only Chinese merchant named among those who attended.
+
+London accepted the transfer in principle, but it was held up for years by questions of money, in particular who would pay for the troops and the fortifications India had been building at Singapore. The Act of Parliament to provide for the government of the Straits Settlements was finally passed on 10 August 1866, and an Order in Council fixed 1 April 1867 as the date.
+
+<div style="clear: both;"></div>
+
+## What changed
+
+<div style="float: right; max-width: 240px; width: 38%; margin: 0.25em 0 1em 1.5em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/India_Straits%2C_One_Cent%2C_1862_-_reverse.jpg/1280px-India_Straits%2C_One_Cent%2C_1862_-_reverse.jpg" alt="A copper coin of 1862 reading ONE CENT INDIA STRAITS inside a wreath" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A copper cent struck for the Straits by the Government of India in 1862. It is a cent of the dollar, not a fraction of the rupee. (5snake5, CC0, via Wikimedia Commons)</em>
+</div>
+
+The new Crown colony had its own governor, an Executive Council and a Legislative Council, with a few unofficial members, drawn from the merchants, sitting alongside the officials. Hoo Ah Kay, better known as Whampoa, later joined the Legislative Council as its first Chinese member. The settlements were now governed as a colony in their own right, from London, rather than as the far edge of India.
+
+The merchants did not get everything they hoped for. Governor Ord had his own views and a forceful manner, and he was soon at odds with the community that had campaigned for the change. But the two things they had fought hardest for survived. The dollar remained Singapore's currency, and the port remained free.
+
+![Government House in Singapore in 1869, a large two-storey building with a central tower, still partly covered in scaffolding](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Government_House%2C_Singapore%2C_approaching_completion%2C_1869_%28McNair_1899%2C_Plate_XVIII%29.jpg/1280px-Government_House%2C_Singapore%2C_approaching_completion%2C_1869_%28McNair_1899%2C_Plate_XVIII%29.jpg)
+
+*Government House, today's Istana, nearing completion in 1869, two years after the transfer. (Unknown photographer, public domain, via Wikimedia Commons)*
+
+## The free port today
+
+Both survive in some form today. Singapore still has its own dollar, and it still charges customs duty on only four kinds of goods, according to Singapore Customs: intoxicating liquors, tobacco products, motor vehicles, and petroleum products. Almost everything else enters without duty, although the goods and services tax applies to imports as it does to goods sold at home. The quarrels of the 1850s were, in a sense, an early argument over the same principle.
+
+[See 12 more historical photos related to this post →](/gallery/why-singapore-merchants-asked-to-leave-british-india-1867/)
+
+**Why it matters today:** The transfer of 1867 is usually remembered, if at all, as a change of office in London, but it was won by people in Singapore arguing for their own interests, and two of the things they defended, the dollar and the free port, still shape the country.
+
+---
+
+**Sources**
+
+- [C. B. Buckley, An Anecdotal History of Old Times in Singapore (1902), Internet Archive](https://archive.org/details/ananecdotalhist02buckgoog)
+- [Song Ong Siang, One Hundred Years' History of the Chinese in Singapore (1923; annotated edition 2020)](https://en.wikipedia.org/wiki/One_Hundred_Years%27_History_of_the_Chinese_in_Singapore)
+- [Indian Currency, House of Lords, 21 April 1856, Hansard](https://api.parliament.uk/historic-hansard/lords/1856/apr/21/indian-currency)
+- [Straits of Malacca, House of Commons, 13 April 1858, Hansard](https://hansard.parliament.uk/Commons/1858-04-13/debates/0e4a9bc0-ef0e-4fde-9fcd-44c85073a259/StraitsOfMalacca)
+- [The Straits Times, 23 December 1856, page 4, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/page/straitstimes18561223-1.1.4)
+- [Transfer of the Straits Settlements, Wikipedia](https://en.wikipedia.org/wiki/Transfer_of_the_Straits_Settlements)
+- [Straits Settlements, Singapore Infopedia, National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=b0d91ecc-3de3-4e79-a132-b2d0d886bb98)
+- [History of Singapore currency, Singapore Infopedia, National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=ac36a2e4-5620-4812-9405-e5bd24023213)
+- [Duties and Dutiable Goods, Singapore Customs](https://customs.gov.sg/businesses/valuation-duties-taxes-and-fees/duties-and-dutiable-goods/)
+- [File:Town_Hall,_Singapore_-_1860s.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Town_Hall,_Singapore_-_1860s.jpg>)
+- [File:Sir_Harry_Ord.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Sir_Harry_Ord.jpg>)
+- [File:East_India_Company,_One_Rupee,_1840_-_reverse.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:East_India_Company,_One_Rupee,_1840_-_reverse.jpg>)
+- [File:1888_México_8_Reals_Trade_Coin_Silver.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:1888_México_8_Reals_Trade_Coin_Silver.jpg>)
+- [File:Charles_Canning,_1st_Earl_Canning.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Charles_Canning,_1st_Earl_Canning.jpg>)
+- [File:India_Straits,_One_Cent,_1862_-_reverse.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:India_Straits,_One_Cent,_1862_-_reverse.jpg>)
+- [File:Government_House,_Singapore,_approaching_completion,_1869_(McNair_1899,_Plate_XVIII).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Government_House,_Singapore,_approaching_completion,_1869_(McNair_1899,_Plate_XVIII).jpg>)
+- [File:Sir_Orfeur_Cavenagh.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Sir_Orfeur_Cavenagh.jpg>) (gallery)
+- [File:Admiral_of_the_Fleet_Sir_Henry_Keppel.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Admiral_of_the_Fleet_Sir_Henry_Keppel.jpg>) (gallery)
+- [File:John_Crawfurd.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:John_Crawfurd.jpg>) (gallery)
+- [File:Seah_Eu_Chin.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Seah_Eu_Chin.jpg>) (gallery)
+- [File:The_Hon._Hoh-Ah-Kay_Whampoa,_C.M.G.,_M.L.C.,_and_Consul_for_Wellcome_V0037527.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:The_Hon._Hoh-Ah-Kay_Whampoa,_C.M.G.,_M.L.C.,_and_Consul_for_Wellcome_V0037527.jpg>) (gallery)
+- [File:KITLV_-_29175_-_View_of_the_harbor_of_Singapore_-_1860.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_29175_-_View_of_the_harbor_of_Singapore_-_1860.tif>) (gallery)
+- [File:KITLV_-_29170_-_Promenade_in_Singapore_-_1860.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_-_29170_-_Promenade_in_Singapore_-_1860.tif>) (gallery)
+- [File:Gezicht_op_de_Esplanade_te_Singapore,_RP-F-F01025-BH.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Gezicht_op_de_Esplanade_te_Singapore,_RP-F-F01025-BH.jpg>) (gallery)
+- [File:Gezicht_op_Singapore,_RP-F-F01025-AZ.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Gezicht_op_Singapore,_RP-F-F01025-AZ.jpg>) (gallery)
+- [File:Map_of_Singapore_from_A_Sailor's_Life_under_Four_Sovereigns_(1899).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Map_of_Singapore_from_A_Sailor%27s_Life_under_Four_Sovereigns_(1899).jpg>) (gallery)
+- [File:Chinese_in_Singapore,_Aleksei_Vysheslavtsev,_page_121_(1867).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Chinese_in_Singapore,_Aleksei_Vysheslavtsev,_page_121_(1867).jpg>) (gallery)
+- [File:SPANISH_PIECE_OF_EIGHT,_CARLOS_IV_MEXICO_MINT_1805_-8_REALES_b_-_Flickr_-_woody1778a.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:SPANISH_PIECE_OF_EIGHT,_CARLOS_IV_MEXICO_MINT_1805_-8_REALES_b_-_Flickr_-_woody1778a.jpg>) (gallery)
+
+[← Back to all posts](/)

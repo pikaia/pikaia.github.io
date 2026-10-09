@@ -1843,6 +1843,12 @@ PRONUNCIATION_OVERRIDES = {
     "Bahau's": "bˈɑːhWz",
     "Devals": "dəvˈɑːl",                    # "deh-VAHL", French, final s silent.
     "Po-Leung-Kok": "pˌO ljˌʊŋ kˌɒk",       # "poh-LYOONG-kok", fused, even stress.
+    # 1867 transfer post (2026-10-09): single-reading fixes.
+    "Buckley": "bˈʌkli",                    # C. B. Buckley, the historian.
+    "Cavenagh": "kˈavənə",                  # "KAV-uh-nuh", -agh silent as in Cavanagh.
+    "Orfeur": "ˈɔːfə",                      # "OR-fer", Governor Orfeur Cavenagh.
+    "Seah-Eu-Chin": "sˌiːə jˌuː ʧˌɪn",      # fused, even stress; "Seah" as above.
+    "Hoo-Ah-Kay": "hˌuː ˌɑː kˌA",           # Whampoa's own name; fused, even stress.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2067,6 +2073,8 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWan Leong Gay\b"): "Wan-Leong-Gay",
     re.compile(r"\bHuang Qiuhong\b"): "Huang-Qiuhong",
     re.compile(r"\bPo Leung Kok\b"): "Po-Leung-Kok",
+    re.compile(r"\bSeah Eu Chin\b"): "Seah-Eu-Chin",
+    re.compile(r"\bHoo Ah Kay\b"): "Hoo-Ah-Kay",
 }
 
 
