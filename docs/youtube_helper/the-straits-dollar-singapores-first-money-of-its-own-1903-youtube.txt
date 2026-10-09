@@ -49,7 +49,7 @@ Description:
 On the afternoon of 29 January 1906, the Legislative Council of the Straits Settlements fixed the value of the dollar at two shillings and fourpence in British money. The next morning's Straits Times led its fifth page with the news, under the headline "Government tries to buy £100,000 at Saturday's Rate and then lowers the Dollar", and a reader wrote in that "a most painful sensation has been caused in Singapore". What the day settled lasted far longer than the row. For the first time, Singapore had a dollar of its own whose value did not rise and fall with the price of silver, backed by reserves under a currency board, and that idea of a fully backed currency still underpins the Singapore dollar today. #Shorts
 
 Full story: https://da.gd/EqBAk
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/0mbM0VDTSuU
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
