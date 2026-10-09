@@ -44,7 +44,7 @@
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 ================================================================================================================================
-1.2 done. build video-configs
+1.1-2 done. build video-configs
 ================================================================================================================================
 
 
@@ -144,9 +144,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-10-10-change-alley-singapores-lane-of-money-changers-and-bargains.md scripts/video-configs/change-alley-singapores-lane-of-money-changers-and-bargains.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/D0-jkF1E49I
+  --shorts-url https://youtube.com/shorts/LFr2Wtn-fDo
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7694788486628494622
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

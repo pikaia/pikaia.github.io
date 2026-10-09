@@ -51,7 +51,7 @@ Description:
 For about a century, the quickest way from the sea to the heart of Singapore's business district was a narrow lane about a hundred metres long. Change Alley ran from Collyer Quay, where sailors and passengers came ashore at Clifford Pier, to Raffles Place, the square of banks and trading houses. It was named, by most accounts, for the money-changers who did business along it, and over the years it also became one of the busiest bazaars in the city, where tourists, sailors and the clerks and office workers from the surrounding buildings haggled over watches, pens, shirts and cloth. The open-air alley closed on 30 April 1989, and an air-conditioned arcade now stands on the site. #Shorts
 
 Full story: https://da.gd/2sQxF
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/D0-jkF1E49I
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
