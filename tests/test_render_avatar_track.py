@@ -167,3 +167,55 @@ def test_render_track_photo_style_eases_between_mouths(tmp_path):
     r, _, b = frame_px(out, 10, (36, 50), tmp_path)
     assert 100 < r < 160 and 100 < b < 160          # halfway, not a hard cut
     assert frame_px(out, 30, (36, 50), tmp_path) == (255, 0, 0)
+
+
+def test_motion_setting_validated():
+    import pytest
+    cfg = types.SimpleNamespace(TOTAL_DURATION=10.0, AVATAR={"ranges": [(0, 5)], "motion": True})
+    assert al.avatar_settings(cfg)["motion"] is True
+    assert al.avatar_settings(types.SimpleNamespace(TOTAL_DURATION=10.0, AVATAR={"ranges": [(0, 5)]}))["motion"] is False
+    with pytest.raises(ValueError, match="cartoon"):
+        al.avatar_settings(types.SimpleNamespace(TOTAL_DURATION=10.0,
+                                                 AVATAR={"ranges": [(0, 5)], "motion": True, "style": "photo"}))
+    with pytest.raises(ValueError, match="True or False"):
+        al.avatar_settings(types.SimpleNamespace(TOTAL_DURATION=10.0, AVATAR={"ranges": [(0, 5)], "motion": "yes"}))
+
+
+def _rest():
+    return {"head_dx": 0.0, "head_dy": 0.0, "tilt": 0.0, "breath": 0.0, "pupil_dx": 0.0, "brow_dy": 0.0}
+
+
+def _visible_diff(a, b):
+    import numpy as np
+    a, b = np.asarray(a).astype(int), np.asarray(b).astype(int)
+    seen = (a[..., 3] > 32) | (b[..., 3] > 32)       # ignore near-transparent edge pixels
+    return np.abs(a - b).max(axis=2)[seen]
+
+
+def test_compose_moving_at_rest_matches_still_face():
+    layers = rat.load_layers(128, al.PNG_DIR, al.LAYER_NAMES + al.MOTION_LAYER_NAMES)
+    moving = rat.compose_moving(layers, "mouth-2", False, _rest(), 128)
+    still = rat.compose_avatar(layers, "mouth-2", False)
+    # Each part is resized to the bubble on its own, so part edges blend a
+    # touch differently from the one-piece face - faint, and invisible at
+    # bubble size (checked on the side-by-side preview, 2026-10-09).
+    d = _visible_diff(moving, still)
+    assert (d > 8).mean() < 0.03 and d.max() <= 64
+
+
+def test_compose_moving_moves_the_head():
+    layers = rat.load_layers(128, al.PNG_DIR, al.LAYER_NAMES + al.MOTION_LAYER_NAMES)
+    a = rat.compose_moving(layers, "mouth-0", False, _rest(), 128)
+    b = rat.compose_moving(layers, "mouth-0", False, {**_rest(), "tilt": 3.0, "head_dx": 6.0}, 128)
+    assert (_visible_diff(a, b) > 40).sum() > 500
+    assert b.getpixel((1, 1))[3] == 0                          # still nothing outside the bubble
+
+
+def test_render_track_with_motion(tmp_path):
+    cfg = fake_cfg(tmp_path)
+    cfg.AVATAR["motion"] = True
+    (tmp_path / "t.timing.json").write_text(json.dumps({"sentences": [{"offset_s": 0.0}, {"offset_s": 0.8}]}),
+                                            encoding="utf-8")
+    out = tmp_path / "m.mov"
+    assert rat.render_track(cfg, out) is True
+    assert probe(out, "pix_fmt,nb_read_frames") == "argb,50"

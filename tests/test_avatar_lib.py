@@ -38,7 +38,8 @@ def test_avatar_settings_none_when_absent():
 def test_avatar_settings_defaults_and_resolution():
     s = al.avatar_settings(cfg(AVATAR={"ranges": [(0, 30), (-30, None)]}))
     assert s == {"ranges": [(0, 30), (70.0, 100.0)], "corner": "bottom-right",
-                 "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon", "hold": 1, "ease": 1.0}
+                 "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon", "hold": 1, "ease": 1.0,
+                 "motion": False}
 
 
 def test_avatar_settings_photo_style_gets_hold_and_ease():

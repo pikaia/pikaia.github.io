@@ -28,6 +28,10 @@ STYLE_MOTION = {"cartoon": (1, 1.0), "photo": (3, 0.55)}
 # shaped mouth-M/F/U/E from avatar_visemes.py).
 LAYER_NAMES = ["body", "eyes-open", "eyes-closed", "mouth-0", "mouth-1", "mouth-2", "mouth-3",
                "mouth-M", "mouth-F", "mouth-U", "mouth-E"]
+# Parts of the cartoon that move on their own when AVATAR has "motion": True
+# (avatar_motion.py). Nested groups in the SVG, rendered alone like the rest.
+MOTION_LAYER_NAMES = ["back", "head", "brows", "pupils", "glasses", "lids", "rim"]
+ALL_LAYER_NAMES = LAYER_NAMES + MOTION_LAYER_NAMES
 BLINK_FRAMES = 3
 MOUTH_FILE_VERSION = 1
 # 1 = loudness only; 2 adds a per-frame "shape" string (M F U E or .) from
@@ -35,7 +39,8 @@ MOUTH_FILE_VERSION = 1
 MOUTH_FILE_VERSIONS = (1, 2)
 
 CORNERS = {"bottom-right", "bottom-left", "top-right", "top-left"}
-DEFAULTS = {"corner": "bottom-right", "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon"}
+DEFAULTS = {"corner": "bottom-right", "size": 0.20, "margin": 0.03, "fade": 0.3, "style": "cartoon",
+            "motion": False}
 
 
 def resolve_ranges(ranges, total):
@@ -87,6 +92,10 @@ def avatar_settings(cfg):
         raise ValueError(f"AVATAR hold {s['hold']!r} - must be a whole number of frames >= 1")
     if not 0 < s["ease"] <= 1:
         raise ValueError(f"AVATAR ease {s['ease']} - must be in (0, 1]")
+    if not isinstance(s["motion"], bool):
+        raise ValueError(f"AVATAR motion {s['motion']!r} - must be True or False")
+    if s["motion"] and s["style"] != "cartoon":
+        raise ValueError("AVATAR motion is only drawn for the cartoon style")
     s["ranges"] = resolve_ranges(raw["ranges"], cfg.TOTAL_DURATION)
     return s
 

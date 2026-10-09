@@ -13,6 +13,7 @@ frame is stacking three small images, so memory stays tiny.
 """
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -22,16 +23,17 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from avatar_lib import (  # noqa: E402
-    BLINK_FRAMES, LAYER_NAMES, PNG_DIR, REPO_ROOT, STYLE_DIRS, alpha_at, avatar_settings,
-    bubble_geometry, load_mouth_file, mouth_path_for_config, video_dims,
+    BLINK_FRAMES, LAYER_NAMES, MOTION_LAYER_NAMES, PNG_DIR, REPO_ROOT, STYLE_DIRS, alpha_at,
+    avatar_settings, bubble_geometry, load_mouth_file, mouth_path_for_config, video_dims,
 )
+from avatar_motion import BREATH_SCALE, motion_curves, sentence_start_frames  # noqa: E402
 from watch_video_lib import load_config  # noqa: E402
 
 
-def load_layers(diameter, png_dir=PNG_DIR):
+def load_layers(diameter, png_dir=PNG_DIR, names=LAYER_NAMES):
     png_dir = Path(png_dir)
     layers = {}
-    for name in LAYER_NAMES:
+    for name in names:
         path = png_dir / f"{name}.png"
         if not path.exists():
             raise FileNotFoundError(f"missing avatar layer {path} - run python scripts/build_avatar.py")
@@ -84,6 +86,51 @@ def hold_keys(keys, hold):
     return out
 
 
+# Motion frames are drawn at twice the bubble size and scaled down, so the
+# sub-pixel sway and tilt stay smooth instead of stepping a pixel at a time.
+MOTION_SS = 2
+# The head tilts about the base of the neck (512-canvas coordinates).
+HEAD_PIVOT = (256, 400)
+
+
+def _shift(img, dx, dy):
+    if not dx and not dy:
+        return img
+    return img.transform(img.size, Image.AFFINE, (1, 0, -dx, 0, 1, -dy), resample=Image.BILINEAR)
+
+
+def compose_moving(layers, mouth, eyes_closed, p, size):
+    """One motion frame at `size` px (the layers' size): shoulders breathe,
+    the head (with brows, eyes, glasses and mouth) sways and tilts about the
+    neck, the pupils glance and the brows lift. p holds this frame's curve
+    values in 512-canvas units (avatar_motion.motion_curves)."""
+    k = size / 512
+    back = layers["back"]
+    stretch = 1 + BREATH_SCALE * p["breath"]
+    h = int(round(size * stretch))
+    frame = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    frame.alpha_composite(back if h == size else back.resize((size, h), Image.BILINEAR), (0, size - h))
+    head = layers["head"].copy()
+    head.alpha_composite(_shift(layers["brows"], 0, p["brow_dy"] * k))
+    if eyes_closed:
+        head.alpha_composite(layers["lids"])
+    else:
+        head.alpha_composite(_shift(layers["pupils"], p["pupil_dx"] * k, 0))
+    head.alpha_composite(layers["glasses"])
+    head.alpha_composite(layers[mouth if isinstance(mouth, str) else f"mouth-{mouth}"])
+    if p["tilt"] or p["head_dx"] or p["head_dy"]:
+        head = head.rotate(p["tilt"], resample=Image.BICUBIC, center=(HEAD_PIVOT[0] * k, HEAD_PIVOT[1] * k),
+                           translate=(p["head_dx"] * k, p["head_dy"] * k))
+    frame.alpha_composite(head)
+    frame.alpha_composite(layers["rim"])
+    # keep everything inside the bubble: the unstretched background is the
+    # circle, and the rim's outer half sits just beyond it
+    r, g, b, a = frame.split()
+    bubble = np.maximum(np.asarray(back.getchannel("A")), np.asarray(layers["rim"].getchannel("A")))
+    a = Image.fromarray(np.minimum(np.asarray(a), bubble))
+    return Image.merge("RGBA", (r, g, b, a))
+
+
 def blink_frame_set(blinks):
     return {f for b in blinks for f in range(b, b + BLINK_FRAMES)}
 
@@ -100,7 +147,16 @@ def render_track(cfg, out_path, png_dir=None):
     out_w, out_h, fps = video_dims(cfg)
     track = load_mouth_file(mouth_path_for_config(cfg), fps, cfg.TOTAL_DURATION)
     d, _, _ = bubble_geometry(settings, out_w, out_h)
-    layers = load_layers(d, png_dir or STYLE_DIRS[settings["style"]])
+    png_dir = png_dir or STYLE_DIRS[settings["style"]]
+    motion = settings["motion"]
+    if motion:
+        layers = load_layers(d * MOTION_SS, png_dir, LAYER_NAMES + MOTION_LAYER_NAMES)
+        timing_path = REPO_ROOT / cfg.TIMING_JSON
+        timing = json.loads(timing_path.read_text(encoding="utf-8")) if timing_path.exists() else []
+        curves = motion_curves(track["mouth"] if isinstance(track["mouth"], list) else [int(c) for c in track["mouth"]],
+                               sentence_start_frames(timing, fps), fps, seed=Path(cfg.TIMING_JSON).stem)
+    else:
+        layers = load_layers(d, png_dir)
     blinking = blink_frame_set(track["blinks"])
     mouth = track["mouth"]
     shape = track.get("shape")
@@ -127,9 +183,14 @@ def render_track(cfg, out_path, png_dir=None):
                 eased = None
                 continue
             key = (keys[i], i in blinking)
-            if key not in cache:
-                cache[key] = compose_avatar(layers, *key)
-            img = cache[key]
+            if motion:
+                j = min(i, len(curves["tilt"]) - 1)
+                p = {name: float(c[j]) for name, c in curves.items()}
+                img = compose_moving(layers, *key, p, d * MOTION_SS).resize((d, d), Image.LANCZOS)
+            else:
+                if key not in cache:
+                    cache[key] = compose_avatar(layers, *key)
+                img = cache[key]
             if ease < 1.0:
                 target = np.asarray(img, dtype=np.float32)
                 eased = target if eased is None else eased + (target - eased) * ease
@@ -142,7 +203,8 @@ def render_track(cfg, out_path, png_dir=None):
         proc.wait()
     if proc.returncode != 0:
         raise RuntimeError(f"ffmpeg exited {proc.returncode} writing {out_path}")
-    print(f"Wrote {out_path} - {total_frames} frames, {d}x{d}, {settings['style']}, ranges {settings['ranges']}")
+    print(f"Wrote {out_path} - {total_frames} frames, {d}x{d}, {settings['style']}"
+          f"{' + motion' if motion else ''}, ranges {settings['ranges']}")
     return True
 
 
