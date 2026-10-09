@@ -1854,6 +1854,10 @@ PRONUNCIATION_OVERRIDES = {
     "sevenpence": "sˈɛvᵊnpəns",
     "tenpence": "tˈɛnpəns",
     "Tan-Jiak-Kim": "tˌan dʒiˌɑk kˌɪm",      # fused, even stress; "Jiak" as above.
+    # Change Alley post (2026-10-10): brand names, standard readings.
+    "Delifrance": "dˈɛlifɹˌɑːns",           # "DELLY-frahns", the bakery-cafe chain.
+    "Caltex": "kˈaltɛks",                   # "KAL-tex", Caltex House.
+    "Hitachi": "hɪtˈɑːʧi",                  # "hi-TAH-chee", Hitachi Tower.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2597,7 +2601,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
-    "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "POSB", "PTSD", "UK", "UN",
+    "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG",
 }
 
