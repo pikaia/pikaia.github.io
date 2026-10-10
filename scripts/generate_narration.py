@@ -1871,14 +1871,14 @@ PRONUNCIATION_OVERRIDES = {
     "Koh-Seow-Chuan": "kˌO sjˌW ʧwˌɑn",     # fused, even stress; "Seow" as "syow", Chris kept this default (2026-10-10).
     "Zhang-Huimei": "ʤˌɑŋ hwˌA mˌA",        # fused, even stress; Mandarin "jahng hway-may".
     # P. Govindasamy Pillai post (2026-10-10): Tamil names and places, Malay title.
-    "Govindasamy": "ɡˌOvɪndəsˈɑːmi",         # Tamil Govindasamy, "go-vin-duh-SAH-mee"; pending Chris's ear-pick.
-    "Pillai": "pˈɪlI",                      # Tamil Pillai, "PILL-eye"; pending Chris's ear-pick.
+    "Govindasamy": "ɡˌOvɪndəsˈɑːmi",         # Tamil Govindasamy, "go-vin-duh-SAH-mee"; Chris kept this default (2026-10-10).
+    "Pillai": "pˈɪlI",                      # Tamil Pillai, "PILL-eye"; Chris kept this default (2026-10-10).
     "Pillai's": "pˈɪlIz",                   # possessive, same sound.
     "Koorainadu": "kˌuːɹInˈɑːdu",           # Koorainadu, "koo-rye-NAH-doo".
     "Mayavaram": "mˈɑːjəvəɹəm",             # Mayavaram, "MAH-yuh-vuh-rum".
-    "Mayiladuthurai": "mˌIlˌɑːdutˈuɹI",     # Mayiladuthurai, "my-lah-doo-THOO-rye"; pending Chris's ear-pick.
+    "Mayiladuthurai": "mˌIlˌɑːdutˈuɹI",     # Mayiladuthurai, "my-lah-doo-THOO-rye"; Chris kept this default (2026-10-10).
     "Tanjore": "tænʤˈɔːɹ",                  # "tan-JOR", the old Tanjore district.
-    "Pakiriammal": "pˌɑːkiɹiˈɑːmɑːl",       # Pakiriammal, "pah-kee-ree-AHM-mahl"; pending Chris's ear-pick.
+    "Pakiriammal": "pˌɑːkiɹiˈɑːmɑːl",       # Pakiriammal, "pah-kee-ree-AHM-mahl"; Chris kept this default (2026-10-10).
     "saree": "sˈɑːɹi",                      # same as "sari", "SAH-ree".
     "Dhanalakshmi": "dˌʌnəlˈʌkʃmi",          # Dhanalakshmi, "dhun-uh-LUCK-shmee".
     "Campbell": "kˈæmbəl",                  # "KAM-bul", Campbell Lane.
