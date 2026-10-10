@@ -1858,6 +1858,18 @@ PRONUNCIATION_OVERRIDES = {
     "Delifrance": "dˈɛlifɹˌɑːns",           # "DELLY-frahns", the bakery-cafe chain.
     "Caltex": "kˈaltɛks",                   # "KAL-tex", Caltex House.
     "Hitachi": "hɪtˈɑːʧi",                  # "hi-TAH-chee", Hitachi Tower.
+    # Remittance-houses post (2026-10-10): Mandarin terms and Hokkien/Teochew names.
+    "qiaopi": "ʧjˈWpˌi",                    # qiaopi, "CHYOW-pee"; pending Chris's ear-pick.
+    "qiaopiju": "ʧjˌWpiʤˈuː",               # qiaopiju, "chyow-pee-JOO".
+    "shuike": "ʃwˈAkə",                     # shuike, "SHWAY-kuh".
+    "huipi": "hwˈApi",                      # huipi, "HWAY-pee".
+    "Jervois": "ʤˈɜːvɪs",                   # "JER-vis", as the governor's name was said.
+    "Ellenborough": "ˈɛlənbəɹə",            # "EL-un-buh-ruh", Ellenborough Market.
+    "Ong-Kong-Chang": "ˌɒŋ kˌɒŋ ʧˌaŋ",       # fused, even stress.
+    "Ong-Kong-Teng": "ˌɒŋ kˌɒŋ tˌɛŋ",        # fused, even stress.
+    "Lim-Ah-Tye": "lˌɪm ˌɑː tˌaɪ",          # fused, even stress.
+    "Koh-Seow-Chuan": "kˌO sjˌW ʧwˌɑn",     # fused, even stress; "Seow" pending Chris's ear-pick.
+    "Zhang-Huimei": "ʤˌɑŋ hwˌA mˌA",        # fused, even stress; Mandarin "jahng hway-may".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2085,6 +2097,11 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bSeah Eu Chin\b"): "Seah-Eu-Chin",
     re.compile(r"\bHoo Ah Kay\b"): "Hoo-Ah-Kay",
     re.compile(r"\bTan Jiak Kim\b"): "Tan-Jiak-Kim",
+    re.compile(r"\bOng Kong Chang\b"): "Ong-Kong-Chang",
+    re.compile(r"\bOng Kong Teng\b"): "Ong-Kong-Teng",
+    re.compile(r"\bLim Ah Tye\b"): "Lim-Ah-Tye",
+    re.compile(r"\bKoh Seow Chuan\b"): "Koh-Seow-Chuan",
+    re.compile(r"\bZhang Huimei\b"): "Zhang-Huimei",
 }
 
 
