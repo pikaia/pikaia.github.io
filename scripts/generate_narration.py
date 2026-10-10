@@ -1870,6 +1870,24 @@ PRONUNCIATION_OVERRIDES = {
     "Lim-Ah-Tye": "lˌɪm ˌɑː tˌaɪ",          # fused, even stress.
     "Koh-Seow-Chuan": "kˌO sjˌW ʧwˌɑn",     # fused, even stress; "Seow" as "syow", Chris kept this default (2026-10-10).
     "Zhang-Huimei": "ʤˌɑŋ hwˌA mˌA",        # fused, even stress; Mandarin "jahng hway-may".
+    # P. Govindasamy Pillai post (2026-10-10): Tamil names and places, Malay title.
+    "Govindasamy": "ɡˌOvɪndəsˈɑːmi",         # Tamil Govindasamy, "go-vin-duh-SAH-mee"; pending Chris's ear-pick.
+    "Pillai": "pˈɪlI",                      # Tamil Pillai, "PILL-eye"; pending Chris's ear-pick.
+    "Pillai's": "pˈɪlIz",                   # possessive, same sound.
+    "Koorainadu": "kˌuːɹInˈɑːdu",           # Koorainadu, "koo-rye-NAH-doo".
+    "Mayavaram": "mˈɑːjəvəɹəm",             # Mayavaram, "MAH-yuh-vuh-rum".
+    "Mayiladuthurai": "mˌIlˌɑːdutˈuɹI",     # Mayiladuthurai, "my-lah-doo-THOO-rye"; pending Chris's ear-pick.
+    "Tanjore": "tænʤˈɔːɹ",                  # "tan-JOR", the old Tanjore district.
+    "Pakiriammal": "pˌɑːkiɹiˈɑːmɑːl",       # Pakiriammal, "pah-kee-ree-AHM-mahl"; pending Chris's ear-pick.
+    "saree": "sˈɑːɹi",                      # same as "sari", "SAH-ree".
+    "Dhanalakshmi": "dˌʌnəlˈʌkʃmi",          # Dhanalakshmi, "dhun-uh-LUCK-shmee".
+    "Campbell": "kˈæmbəl",                  # "KAM-bul", Campbell Lane.
+    "Alvernia": "ælvˈɜːniə",                # "al-VER-nee-uh", Mount Alvernia Hospital.
+    "Srinivasa": "ʃɹˌiːnivˈɑːsə",           # Srinivasa, "shree-nee-VAH-suh".
+    "Perumal": "pˈɛɹumɑːl",                 # Tamil Perumal, "PEH-roo-mahl".
+    "di-Pertuan": "dˌi pərtˈuːən",          # Malay Yang di-Pertuan Negara, "dee-per-TOO-un".
+    "Ramakrishnan": "ɹˌɑːməkɹˈɪʃnən",       # "rah-muh-KRISH-nun".
+    "Abdullah": "æbdˈʌlə",                  # "ab-DULL-uh", Munshi Abdullah.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2619,7 +2637,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
