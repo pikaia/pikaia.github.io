@@ -1859,7 +1859,7 @@ PRONUNCIATION_OVERRIDES = {
     "Caltex": "kˈaltɛks",                   # "KAL-tex", Caltex House.
     "Hitachi": "hɪtˈɑːʧi",                  # "hi-TAH-chee", Hitachi Tower.
     # Remittance-houses post (2026-10-10): Mandarin terms and Hokkien/Teochew names.
-    "qiaopi": "ʧjˈWpˌi",                    # qiaopi, "CHYOW-pee"; pending Chris's ear-pick.
+    "qiaopi": "ʧjˈWpˌi",                    # qiaopi, "CHYOW-pee"; Chris kept this default (2026-10-10), A of 3.
     "qiaopiju": "ʧjˌWpiʤˈuː",               # qiaopiju, "chyow-pee-JOO".
     "shuike": "ʃwˈAkə",                     # shuike, "SHWAY-kuh".
     "huipi": "hwˈApi",                      # huipi, "HWAY-pee".
@@ -1868,7 +1868,7 @@ PRONUNCIATION_OVERRIDES = {
     "Ong-Kong-Chang": "ˌɒŋ kˌɒŋ ʧˌaŋ",       # fused, even stress.
     "Ong-Kong-Teng": "ˌɒŋ kˌɒŋ tˌɛŋ",        # fused, even stress.
     "Lim-Ah-Tye": "lˌɪm ˌɑː tˌaɪ",          # fused, even stress.
-    "Koh-Seow-Chuan": "kˌO sjˌW ʧwˌɑn",     # fused, even stress; "Seow" pending Chris's ear-pick.
+    "Koh-Seow-Chuan": "kˌO sjˌW ʧwˌɑn",     # fused, even stress; "Seow" as "syow", Chris kept this default (2026-10-10).
     "Zhang-Huimei": "ʤˌɑŋ hwˌA mˌA",        # fused, even stress; Mandarin "jahng hway-may".
 }
 
