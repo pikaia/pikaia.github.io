@@ -1,7 +1,8 @@
 # Voice clone of Chris for the narration
 
-**Status:** proposed 2026-10-10, not started. Waiting on the reference
-recording (section 2).
+**Status:** bake-off samples ready 2026-10-10 (section 3, results below),
+waiting on Chris's ear-pick. Reference recording received the same day
+(4 min 12 s, M4A, very low background noise).
 
 ## Goal
 
@@ -183,6 +184,35 @@ Possible outcomes:
   respelling and loudness-only mouth costs (section 5).
 - **Neither sounds right:** stay on George, note why in this spec, and
   re-check in a few months; zero-shot models are improving quickly.
+
+### Bake-off results (2026-10-10)
+
+Licences re-checked on install day: OpenVoice (code MIT, `myshell-ai/OpenVoiceV2`
+weights MIT) and Chatterbox 0.1.7 (code MIT, `ResembleAI/chatterbox` weights MIT).
+
+| | A: Kokoro + OpenVoice | B: Chatterbox |
+|---|---|---|
+| Speed (CPU, s per s of audio) | 0.31 on top of Kokoro | 5.5 |
+| 14.5-min narration | about 4.5 min extra | about 80 min |
+| Length vs Kokoro | at most 9 ms per sentence (limit 40 ms) | its own timing |
+| Output level | about -25 LUFS, like Kokoro | about -19 LUFS (normalise) |
+
+Setup notes, needed again if a winner moves into the pipeline:
+
+- **OpenVoice** is installed with `pip install --no-deps git+https://github.com/myshell-ai/OpenVoice.git`
+  on top of `torch==2.6.0 torchaudio==2.6.0 "numpy<2" librosa==0.10.2.post1 soundfile
+  huggingface_hub`, plus `inflect unidecode eng_to_ipa pypinyin jieba cn2an`, which its
+  text module imports even though the converter never uses them. Its `setup.py` pins
+  2022-era packages (`numpy==1.22.0` and others) that don't build on Python 3.12.
+- **OpenVoice bug:** `ToneColorConverter(..., enable_watermark=False)` raises a
+  TypeError, because the keyword is passed on to the base class. Build it through
+  `OpenVoiceBaseClass.__init__` and set `watermark_model = None` instead.
+- **OpenVoice embeddings:** the source is George (24 cached Abdullah sentences) and the
+  target is Chris (the whole reading in 10 s chunks), with `tau=0.3`. Output is 22,050 Hz.
+- **Chatterbox** is `pip install chatterbox-tts==0.1.7`, then `pip install "setuptools<81"`:
+  its Perth watermarker imports `pkg_resources`, which newer setuptools drops, and
+  without it `ChatterboxTTS` fails with `'NoneType' object is not callable`. The seed is
+  fixed per sentence (1234), and the reference is an 18 s clip of the reading.
 
 ## 4. Pipeline changes if A wins
 
