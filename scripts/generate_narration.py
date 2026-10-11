@@ -1888,6 +1888,20 @@ PRONUNCIATION_OVERRIDES = {
     "di-Pertuan": "dˌi pərtˈuːən",          # Malay Yang di-Pertuan Negara, "dee-per-TOO-un".
     "Ramakrishnan": "ɹˌɑːməkɹˈɪʃnən",       # "rah-muh-KRISH-nun".
     "Abdullah": "æbdˈʌlə",                  # "ab-DULL-uh", Munshi Abdullah.
+    # Munshi Abdullah post (2026-10-11): Malay and Arabic names, Hikayat terms.
+    "Abdullah's": "æbdˈʌləz",               # possessive, same sound.
+    "Farquhar's": "fˈɑːkwəz",               # possessive of the ear-verified "FAR-kwuh".
+    "Kadir": "kˈɑːdɪɹ",                     # Abdul Kadir, "KAH-dir".
+    "Hikayat": "hɪkˈɑːjɑt",                 # Malay hikayat, "hi-KAH-yat".
+    "Syed": "sˈIəd",                        # Syed, "SYE-ud"; pending Chris's ear-pick.
+    "Pangeran": "pɑŋəɹˈɑn",                 # Malay/Palembang title, "pah-nguh-RAHN"; pending Chris's ear-pick.
+    "Omar": "ˈQmɑː",                        # "OH-mah".
+    "Malang": "mˈɑːlɑŋ",                    # Tanjong Malang, "MAH-lahng".
+    "Thomsen": "tˈɒmsən",                   # Claudius Thomsen, "TOM-sun".
+    "duit": "dˈuːɪt",                       # Malay copper coin, "DOO-it".
+    "Infopedia": "ˌɪnfəpˈiːdiə",            # NLB's Infopedia, "in-fuh-PEE-dee-uh".
+    "Keasberry": "kˈiːzbəɹi",               # Benjamin Keasberry, "KEEZ-buh-ree".
+    "Jawi": "ʤˈɑːwi",                       # Jawi script, "JAH-wee".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
