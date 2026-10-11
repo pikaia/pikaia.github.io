@@ -1,6 +1,6 @@
 """Short config for the Munshi Abdullah post.
 
-The post's opening, sentences 0-7 (0-65.975s, over the 60s TikTok line): the
+The post's opening, sentences 0-7 (0-65.85s, over the 60s TikTok line): the
 evening in March 1823 when Abdullah met Farquhar on the road, the attack, the
 Hikayat, and the debt behind it. The tall kris fills the vertical frame; the
 1823 sketch, Farquhar's portrait, the 1849 page and the Bugis prau are small
@@ -41,7 +41,7 @@ SLIDES = [
     {"img": "BUGIS", **_LB},                                    # s5-7 the debt
 ]
 SCHEDULE = [(0.0, 0), (4.475, 1), (19.925, 2), (34.6, 3), (49.55, 4)]
-TOTAL_DURATION = 65.975
+TOTAL_DURATION = 65.85
 TIMING_JSON = "audio/munshi-abdullah-the-scribe-who-watched-singapore-begin.timing.json"
 
 BURN_CAPTIONS = True
