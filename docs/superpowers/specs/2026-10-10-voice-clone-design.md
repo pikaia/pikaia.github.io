@@ -1,6 +1,6 @@
 # Voice clone of Chris for the narration
 
-**Status:** Chris picked **option A (OpenVoice)** by ear on 2026-10-11
+**Status:** Chris picked **option A (OpenVoice)** by ear on 2026-10-11. Switch-over approved (Chris, 2026-10-11): turn it on right after the 2026-10-14 retention read.
 ("open voice is ok"). The `--clone openvoice` flag is built (section 4),
 off by default; it goes into the command template after the 2026-10-14
 retention read, together with the disclosure in section 6. Reference recording received the same day
