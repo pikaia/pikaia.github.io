@@ -1893,8 +1893,8 @@ PRONUNCIATION_OVERRIDES = {
     "Farquhar's": "fˈɑːkwəz",               # possessive of the ear-verified "FAR-kwuh".
     "Kadir": "kˈɑːdɪɹ",                     # Abdul Kadir, "KAH-dir".
     "Hikayat": "hɪkˈɑːjɑt",                 # Malay hikayat, "hi-KAH-yat".
-    "Syed": "sˈIəd",                        # Syed, "SYE-ud"; pending Chris's ear-pick.
-    "Pangeran": "pɑŋəɹˈɑn",                 # Malay/Palembang title, "pah-nguh-RAHN"; pending Chris's ear-pick.
+    "Syed": "sˈIəd",                        # Syed, "SYE-ud"; Chris picked this by ear (2026-10-11).
+    "Pangeran": "pɑŋəɹˈɑn",                 # Malay/Palembang title, "pah-nguh-RAHN"; Chris picked this by ear (2026-10-11).
     "Omar": "ˈQmɑː",                        # "OH-mah".
     "Malang": "mˈɑːlɑŋ",                    # Tanjong Malang, "MAH-lahng".
     "Thomsen": "tˈɒmsən",                   # Claudius Thomsen, "TOM-sun".
