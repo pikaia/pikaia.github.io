@@ -1902,6 +1902,10 @@ PRONUNCIATION_OVERRIDES = {
     "Infopedia": "ˌɪnfəpˈiːdiə",            # NLB's Infopedia, "in-fuh-PEE-dee-uh".
     "Keasberry": "kˈiːzbəɹi",               # Benjamin Keasberry, "KEEZ-buh-ree".
     "Jawi": "ʤˈɑːwi",                       # Jawi script, "JAH-wee".
+    # Chris flagged 2026-10-11 (heard in the Abdullah video, not re-rendered):
+    # the default "pə-HANG" should be "pə-HUNG", as Malay says it.
+    "Pahang": "pəhˈʌŋ",
+    "Pahang's": "pəhˈʌŋz",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
