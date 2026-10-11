@@ -36,7 +36,7 @@ timbre — accent/rhythm stay Kokoro's), or **Chatterbox** zero-shot cloning
 (carries Chris's accent, but loses Kokoro phoneme overrides and is slow on
 CPU). Training a model (e.g. RVC) needs a GPU, which breaks the local-only
 rule. Re-verify licences at the time; decide by an ear test of ~30 s of
-Chris's voice through both.
+Chris's voice through both. Full plan: `2026-10-10-voice-clone-design.md`.
 
 ## Out of scope (Phase 1)
 

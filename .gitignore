@@ -15,3 +15,7 @@ docs/copyright/chancery-request-*.pdf
 
 # superpowers plan-execution workspace (ledgers, briefs)
 .superpowers/
+
+# Voice-clone candidate environments (docs/superpowers/specs/2026-10-10-voice-clone-design.md)
+.venv-openvoice/
+.venv-chatterbox/
