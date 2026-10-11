@@ -115,7 +115,7 @@ A **one-off** recording, not a per-post read.
 - **Delivery:** Chris's normal speaking voice, at the pace he'd use to
   tell someone a story. The clone copies whatever it hears, so don't read
   in a "presenter" voice unless that is what the videos should sound like.
-- **Where it goes:** `scratch/voice-ref/`. It is never committed and is
+- **Where it goes:** `scratch/voice/`. It is never committed and is
   exempt from the per-post scratch clean-up, like the avatar reference
   photos. A recording of someone's voice is enough to clone it, so it is
   treated as private.
@@ -188,7 +188,7 @@ Possible outcomes:
 
 - **`generate_narration.py`:** a new `--clone openvoice` flag (default
   off, so every existing command and cache entry is unaffected), with the
-  reference clip at `scratch/voice-ref/`. Each Kokoro sentence passes
+  reference clip at `scratch/voice/`. Each Kokoro sentence passes
   through the converter before it is cached.
 - **Cache key:** add `{"c": "openvoice", "r": <sha256 of the reference
   clip>}` to `_sentence_cache_key`, so a new reference recording busts
