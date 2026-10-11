@@ -425,7 +425,7 @@ In the evenings Raffles would lie back with his eyes closed, so still that Abdul
 
 When the British cleared the point at the mouth of the Singapore River, workers came across a large slab of sandstone covered in carved letters worn down by centuries of tides. Abdullah describes crowds of every community coming to look at it. The Hindus said the writing was Hindu and the Chinese said it was Chinese, but no one could read it. When Raffles took Abdullah and Thomsen to see it, Abdullah thought the letters looked Arabic. People pressed paste into the grooves to take moulds and smeared the stone with ink to make the letters stand out, and in the end Raffles concluded that the script was Hindu in origin.
 
-The stone stayed where it was for more than twenty years. Around January 1843, it was blown up on the orders of the acting settlement engineer, to widen the river mouth and make room for Fort Fullerton. A few fragments were rescued and sent to Calcutta, one of them came back to Singapore in 1918, and that piece is now in the National Museum of Singapore. Its script, possibly Old Javanese, has still not been fully deciphered.
+The stone stayed where it was for more than twenty years. Around January 1843, it was blown up on the orders of the acting settlement engineer, to widen the river mouth and make room for Fort Fullerton. A few fragments were rescued and sent to Calcutta, one of them was returned to Singapore in 1919, and that piece is now in the National Museum of Singapore. Its script, possibly Old Javanese, has still not been fully deciphered.
 
 ## The slave boats
 

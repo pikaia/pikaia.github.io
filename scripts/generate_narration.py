@@ -1906,6 +1906,31 @@ PRONUNCIATION_OVERRIDES = {
     # the default "pə-HANG" should be "pə-HUNG", as Malay says it.
     "Pahang": "pəhˈʌŋ",
     "Pahang's": "pəhˈʌŋz",
+    # Singapore Stone post (2026-10-12): the people who studied the stone,
+    # Malay and Indonesian terms, and the Chola title read on it in 2019.
+    "Badang": "bədˈʌŋ",                     # NOT ear-verified yet; "bə-DUNG", like Pahang.
+    "Sejarah": "sɪʤˈɑːɹə",                  # Sejarah Melayu, "si-JAH-ruh".
+    "Melaka": "məlˈɑːkə",                   # "muh-LAH-kuh", not "muh-LAK-uh".
+    "Montgomerie": "mᵊntɡˈʌməɹi",           # Dr William Montgomerie, as "Montgomery".
+    "Stevenson": "stˈiːvᵊnsᵊn",
+    "Stevenson's": "stˈiːvᵊnsᵊnz",
+    "Drumgoole": "dɹʌmɡˈuːl",               # George Drumgoole Coleman, "drum-GOOL".
+    "Laidlay": "lˈAdli",                    # J. W. Laidlay, "LAYD-lee".
+    "Roy": "ɹˈY",                           # the barque Rob Roy.
+    "Ceylonese": "sˌɛlənˈiːz",
+    "Kawi": "kˈɑːwi",                       # the old script of Java, "KAH-wee".
+    "Krom": "kɹˈɒm",                        # N. J. Krom.
+    "Majapahit": "mˌɑːʤəpˈɑːhɪt",           # "mah-juh-PAH-hit".
+    "Casparis": "kaspˈɑːɹɪs",               # J. G. de Casparis, "kas-PAH-ris".
+    "Boechari": "buːkˈɑːɹi",                # Indonesian "oe" is "oo": "boo-KAH-ree".
+    "Miksic": "mˈɪksɪk",                    # John Miksic, "MIK-sik".
+    "Iain": "ˈiːən",
+    "kesariva": "kˈAsəɹivə",
+    "Parakesarivarman": "pˌaɹəkˌAsəɹivˈɑːmən",
+    "I-Shiang": "ˌiː ʃjˈaŋ",
+    "Francesco": "fɹanʧˈɛskQ",
+    "Perono": "pɛɹˈQnQ",
+    "Cacciafoco": "kˌaʧəfˈQkQ",             # "kah-chuh-FOH-koh".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same

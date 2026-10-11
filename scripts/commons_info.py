@@ -20,7 +20,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-UA = {"User-Agent": "pikaia-blog-research/1.0 (one-off image research for a blog post)"}
+UA = {"User-Agent": "pikaia-blog-research/1.0 (https://pikaia.github.io; image research for blog posts)"}
 API = "https://commons.wikimedia.org/w/api.php?"
 
 
@@ -65,15 +65,22 @@ def lookup(titles, width=1280):
     return out
 
 
+def preview_url(thumb, width=330):
+    """A small standard-size thumbnail for the contact sheet. Commons serves
+    standard widths (330px among them) from cache; fetching every file at the
+    post's 1280px got HTTP 429s on a 20-image sheet (Munshi Abdullah post)."""
+    return re.sub(r"/\d+px-", f"/{width}px-", thumb) if "/thumb/" in thumb else thumb
+
+
 def contact_sheet(info, path, cols=4, tile=(380, 260)):
     from PIL import Image, ImageDraw
     import io
     tiles = []
     for title, v in info.items():
-        im = Image.open(io.BytesIO(get(v["thumb"]))).convert("RGB")
+        im = Image.open(io.BytesIO(get(preview_url(v["thumb"])))).convert("RGB")
         im.thumbnail(tile)
         tiles.append((title[5:50], im))
-        time.sleep(2)
+        time.sleep(4)
     rows = (len(tiles) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * (tile[0] + 10), rows * (tile[1] + 25)), "white")
     d = ImageDraw.Draw(sheet)
