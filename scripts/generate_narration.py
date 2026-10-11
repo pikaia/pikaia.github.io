@@ -2382,8 +2382,114 @@ def _worker_synth(sent: str):
     return audio, False
 
 
+# --- voice clone (option A of docs/superpowers/specs/2026-10-10-voice-clone-design.md)
+# Kokoro speaks every sentence exactly as before (same overrides, same
+# George cache entries), then OpenVoice's tone-colour converter re-voices it
+# towards Chris's reference recording. The converter runs in its own
+# environment (.venv-openvoice) via scripts/openvoice_convert.py. It keeps
+# the clip length to within a few ms; each converted sentence is padded or
+# trimmed to George's exact sample count, so timing.json, the .srt and the
+# avatar's mouth shapes (which check George's cache, see
+# avatar_visemes.cache_provenance) are unchanged.
+_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
+DEFAULT_CLONE_REF = os.path.join(_ROOT, "scratch", "voice", "ref-full.wav")
+CLONE_MAX_DRIFT_S = 0.040  # one video frame at 25 fps
+
+
+def _openvoice_python() -> str:
+    sub = "Scripts/python.exe" if os.name == "nt" else "bin/python"
+    return os.path.join(_ROOT, ".venv-openvoice", sub)
+
+
+def _file_sha256(path: str) -> str:
+    with open(path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()
+
+
+def _clone_cache_key(george_key: str, ref_sha: str) -> str:
+    # A new reference recording busts every clone entry; George's own
+    # entries (keyed without this) stay valid.
+    payload = json.dumps({"k": george_key, "c": "openvoice", "r": ref_sha}, sort_keys=True)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:32]
+
+
+def _match_length(audio, n: int, sent: str):
+    """Pad with silence or trim to n samples; stop if the drift is over a frame."""
+    import numpy as np
+    drift = (len(audio) - n) / SAMPLE_RATE
+    if abs(drift) > CLONE_MAX_DRIFT_S:
+        raise SystemExit(f"--clone: converted sentence is {drift * 1000:+.0f} ms off George's "
+                         f"length (limit {CLONE_MAX_DRIFT_S * 1000:.0f} ms): {sent}")
+    if len(audio) >= n:
+        return audio[:n].astype(np.float32)
+    return np.concatenate([audio, np.zeros(n - len(audio), dtype=np.float32)]).astype(np.float32)
+
+
+def clone_openvoice(sentences: list[str], george: list, george_paths: list[str],
+                    ref: str, use_cache: bool = True, run=None) -> list:
+    """George's per-sentence audio -> the same sentences re-voiced, each the
+    same length. Cached in .narration-cache/ beside the George entries."""
+    import subprocess
+    import tempfile
+    import numpy as np
+    import soundfile as sf
+
+    if not os.path.exists(ref):
+        raise SystemExit(f"--clone: reference recording not found: {ref}")
+    py = _openvoice_python()
+    ref_sha = _file_sha256(ref)
+    out: list = [None] * len(sentences)
+    paths = [os.path.join(_CACHE_DIR, _clone_cache_key(os.path.basename(p)[:-4], ref_sha) + ".npy")
+             for p in george_paths]
+    miss = []
+    for i, a in enumerate(george):
+        if a is None:
+            continue
+        if use_cache and os.path.exists(paths[i]):
+            out[i] = np.load(paths[i])
+        else:
+            miss.append(i)
+    print(f"Voice clone (OpenVoice): {len(miss)} to convert, "
+          f"{sum(a is not None for a in out)} from cache", file=sys.stderr)
+    if not miss:
+        return out
+    if run is None and not os.path.exists(py):
+        raise SystemExit(f"--clone openvoice: {py} not found; set up .venv-openvoice "
+                         "(see the voice-clone spec, bake-off setup notes)")
+    os.makedirs(_CACHE_DIR, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp:
+        jobs = []
+        for i in miss:
+            src, dst = os.path.join(tmp, f"{i:04d}-in.wav"), os.path.join(tmp, f"{i:04d}-out.wav")
+            sf.write(src, george[i], SAMPLE_RATE)
+            jobs.append({"in": src, "out": dst})
+        clips = os.path.join(tmp, "src-clips")
+        os.makedirs(clips)
+        # George's embedding is made once (then cached); seed it from the
+        # 24 longest sentences of this narration.
+        longest = sorted((i for i, a in enumerate(george) if a is not None),
+                         key=lambda i: -len(george[i]))[:24]
+        for i in longest:
+            sf.write(os.path.join(clips, f"{i:04d}.wav"), george[i], SAMPLE_RATE)
+        manifest = os.path.join(tmp, "jobs.json")
+        with open(manifest, "w", encoding="utf-8") as f:
+            json.dump(jobs, f)
+        cmd = [py, "-I", os.path.join(os.path.dirname(os.path.abspath(__file__)), "openvoice_convert.py"),
+               "--ref", ref, "--manifest", manifest, "--se-dir", _CACHE_DIR, "--src-clips", clips]
+        (run or subprocess.run)(cmd, check=True)
+        for i, job in zip(miss, jobs):
+            a, sr = sf.read(job["out"], dtype="float32")
+            if sr != SAMPLE_RATE:
+                raise SystemExit(f"--clone: converter wrote {sr} Hz, expected {SAMPLE_RATE}")
+            out[i] = _match_length(a, len(george[i]), sentences[i])
+            if use_cache:
+                np.save(paths[i], out[i])
+    return out
+
+
 def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str,
-                           jobs: int = 1, use_cache: bool = True) -> list[dict]:
+                           jobs: int = 1, use_cache: bool = True,
+                           clone: str | None = None, clone_ref: str = DEFAULT_CLONE_REF) -> list[dict]:
     """Synthesize each sentence separately (see split_sentences() above),
     concatenating the audio and recording each sentence's exact real
     duration as its timing - free, no separate alignment step. Writes
@@ -2448,6 +2554,9 @@ def synthesize_with_timing(paragraphs: list[str], voice: str, out_path: str,
                         miss, pool.imap(_worker_synth, [sentences[j] for j in miss], chunksize=1)):
                     seg_audios[i] = audio
                     _tick()
+
+    if clone == "openvoice":
+        seg_audios = clone_openvoice(sentences, seg_audios, paths, clone_ref, use_cache=use_cache)
 
     all_audio = []
     sentences_out: list[dict] = []
@@ -2741,6 +2850,11 @@ def main() -> None:
                              "capped at 4; 1 = bit-exact serial)")
     parser.add_argument("--no-cache", action="store_true",
                         help="ignore .narration-cache/ and re-synthesize every sentence")
+    parser.add_argument("--clone", choices=["openvoice"], default=None,
+                        help="re-voice the Kokoro narration towards Chris's recording "
+                             "(off by default; needs .venv-openvoice)")
+    parser.add_argument("--clone-ref", default=DEFAULT_CLONE_REF,
+                        help="reference recording for --clone (default: scratch/voice/ref-full.wav)")
     args = parser.parse_args()
 
     with open(args.post_path, "r", encoding="utf-8") as f:
@@ -2805,7 +2919,8 @@ def main() -> None:
 
     print(f"Extracted {len(full_text)} characters, {len(narrative)} paragraphs.", file=sys.stderr)
     sentences = synthesize_with_timing(narrative, args.voice, args.out_path,
-                                       jobs=args.jobs, use_cache=not args.no_cache)
+                                       jobs=args.jobs, use_cache=not args.no_cache,
+                                       clone=args.clone, clone_ref=args.clone_ref)
     base = os.path.splitext(args.out_path)[0]
     print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt ({len(sentences)} sentences)", file=sys.stderr)
 

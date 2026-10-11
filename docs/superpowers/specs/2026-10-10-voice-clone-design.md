@@ -1,7 +1,9 @@
 # Voice clone of Chris for the narration
 
-**Status:** bake-off samples ready 2026-10-10 (section 3, results below),
-waiting on Chris's ear-pick. Reference recording received the same day
+**Status:** Chris picked **option A (OpenVoice)** by ear on 2026-10-11
+("open voice is ok"). The `--clone openvoice` flag is built (section 4),
+off by default; it goes into the command template after the 2026-10-14
+retention read, together with the disclosure in section 6. Reference recording received the same day
 (4 min 12 s, M4A, very low background noise).
 
 ## Goal
@@ -228,6 +230,24 @@ Setup notes, needed again if a winner moves into the pipeline:
   and names the sentence rather than producing an out-of-sync mouth.
 - **Command file / template:** step 1.2 gains the flag. Tell Chris the
   command changed (standing rule).
+
+**Built 2026-10-11.** Two details differ from the plan above:
+
+- The cache key is a separate clone key (George's key + `"c": "openvoice"` +
+  the reference recording's sha256), not a change to `_sentence_cache_key`.
+  George's entries stay exactly as they are, so `avatar_visemes.cache_provenance`
+  keeps working unchanged.
+- Each converted sentence is padded or trimmed to George's exact sample count
+  (the drift is at most 9 ms), so `timing.json` and the `.srt` are identical
+  byte for byte to a George-only run. This was checked end to end.
+- Embeddings are cached in `.narration-cache/`: Chris's as
+  `openvoice-target-<sha>.pt`, George's as `openvoice-george.pt`. George's was
+  seeded from the 24 Abdullah sentences, and it is only saved when built from
+  at least 60 s of audio.
+
+Still to do at switch-over: add the flag to `docs/commands/TEMPLATE.txt` step 1.2
+(and tell Chris the command changed), plus the section 6 labels and the About
+page note.
 
 ## 5. Pipeline changes if B wins
 

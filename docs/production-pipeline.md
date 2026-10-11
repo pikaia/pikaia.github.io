@@ -317,6 +317,17 @@ Example:
   identical regardless of `--jobs`; the mp3 audio varies slightly run
   to run (Kokoro is not seeded), which the cache freezes. `--no-cache`
   forces a full re-synthesis.
+- **Voice clone, `--clone openvoice` (built 2026-10-11, off by default,
+  not in the command template yet).** After Kokoro, each sentence is
+  re-voiced towards Chris's recording (`scratch/voice/ref-full.wav`, or
+  `--clone-ref`) by `scripts/openvoice_convert.py`, run in
+  `.venv-openvoice`. Each converted sentence is padded or trimmed to
+  George's exact length (the run stops and names the sentence if one
+  drifts by more than 40 ms), so `timing.json`, the `.srt` and the mouth
+  shapes don't change. Converted audio is cached beside George's, keyed
+  on the reference recording's hash. It adds about 0.3 s per second of
+  audio. Don't use it before the 2026-10-14 retention read; see
+  `docs/superpowers/specs/2026-10-10-voice-clone-design.md`.
 - Output: `audio/<slug>.mp3`, `audio/<slug>.timing.json` (real
   per-sentence `{text, offset_s, duration_s}`, driven off Kokoro's own
   synthesis — not guessed even splits), and `audio/<slug>.srt` — the
