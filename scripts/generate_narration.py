@@ -1908,7 +1908,7 @@ PRONUNCIATION_OVERRIDES = {
     "Pahang's": "pəhˈʌŋz",
     # Singapore Stone post (2026-10-12): the people who studied the stone,
     # Malay and Indonesian terms, and the Chola title read on it in 2019.
-    "Badang": "bədˈʌŋ",                     # NOT ear-verified yet; "bə-DUNG", like Pahang.
+    "Badang": "bədˈʌŋ",                     # "bə-DUNG", like Pahang (Chris, by ear).
     "Sejarah": "sɪʤˈɑːɹə",                  # Sejarah Melayu, "si-JAH-ruh".
     "Melaka": "məlˈɑːkə",                   # "muh-LAH-kuh", not "muh-LAK-uh".
     "Montgomerie": "mᵊntɡˈʌməɹi",           # Dr William Montgomerie, as "Montgomery".
