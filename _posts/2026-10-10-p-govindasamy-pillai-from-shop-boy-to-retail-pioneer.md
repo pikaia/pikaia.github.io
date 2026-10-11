@@ -43,6 +43,17 @@ In 1905 a teenage runaway from a village in South India stepped ashore at Tanjon
     </span>
     <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Shorts</span>
   </a>
+  <a href="https://www.tiktok.com/@lesserknownsingapore/video/7695199692556143903" target="_blank" rel="noopener" aria-label="Watch a short version of this story on TikTok" style="display: inline-flex; flex-direction: column; align-items: center; gap: 0.2em; text-decoration: none; color: inherit;">
+    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888;">
+      <svg width="1.4em" height="1.4em" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="1" y="1" width="22" height="22" rx="7" fill="#000"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#25F4EE" transform="translate(-0.6 -0.4)"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#FE2C55" transform="translate(0.6 0.4)"/>
+        <path d="M13.2 5h2.3c.2 1.6 1.4 2.8 3 3v2.3a5.3 5.3 0 0 1-3-1v5.2a4.2 4.2 0 1 1-4.2-4.2h.4v2.4h-.4a1.8 1.8 0 1 0 1.9 1.8z" fill="#fff"/>
+      </svg>
+    </span>
+    <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">TikTok</span>
+  </a>
 </div>
 
 <audio id="listen-audio" preload="none" style="display: none;">
