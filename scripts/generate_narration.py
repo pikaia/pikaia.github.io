@@ -1931,6 +1931,29 @@ PRONUNCIATION_OVERRIDES = {
     "Francesco": "fɹanʧˈɛskQ",
     "Perono": "pɛɹˈQnQ",
     "Cacciafoco": "kˌaʧəfˈQkQ",             # "kah-chuh-FOH-koh".
+    # Forbidden Hill post (2026-10-12): Malay, Indonesian and Mandarin names
+    # from the history of Fort Canning, and the people who dug it.
+    "Gadjah": "ɡˈaʤə",                      # Gadjah Mada University, "GAH-juh".
+    "Mada": "mˈɑːdə",
+    "Larangan": "ləɹˈɑːŋən",                # Bukit Larangan, "luh-RAH-ngun", no hard g.
+    "duku": "dˈuːkuː",                      # the fruit, "DOO-koo".
+    "Nila": "nˈiːlə",                       # Sang Nila Utama.
+    "Utama": "uːtˈɑːmə",                    # "oo-TAH-muh", not "yoo-".
+    "Wang": "wˈɑŋ",                         # Wang Dayuan, Mandarin "wahng".
+    "Dayuan": "dˌɑːjuˈɑːn",                 # "dah-yoo-AHN", the same yuan as the dynasty.
+    "Danmaxi": "dˌɑːnmɑːʃˈiː",              # Mandarin Danmaxi, "dahn-mah-SHEE".
+    "Longyamen": "lˌʊŋjɑːmˈʌn",             # Mandarin Longyamen, "loong-yah-MUN".
+    "Banzu": "bˌɑːndzˈuː",                  # Mandarin Banzu, "bahn-DZOO".
+    "pancur": "pˈanʧʊə",                    # Malay "spring", "PAN-choor".
+    "Callenfels": "kˈalənfɛls",             # P. V. van Stein Callenfels.
+    "Winstedt": "wˈɪnstɛt",                 # Sir Richard Winstedt, "WIN-stet".
+    "Natalie": "nˈatəli",
+    "Civilisations": "sˌɪvɪlaɪzˈAʃᵊnz",     # Asian Civilisations Museum (British spelling).
+    "kala": "kˈɑːlə",                       # the guardian face, Sanskrit "KAH-luh".
+    "Hakim": "hˈɑːkɪm",                     # Wa Hakim, Malay "HAH-kim".
+    "Padang": "pədˈʌŋ",                     # "pə-DUNG", like Pahang and Badang (ear-pick pending).
+    "Palembang": "pəlˈɛmbʌŋ",               # "puh-LEM-bung".
+    "Goh-Geok-Yian": "ɡˌQ ɡjˌɒk jˌɛn",      # Goh Geok Yian, fused with even stress (ear-pick pending).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2114,6 +2137,7 @@ ABBREVIATION_EXPANSIONS = {
     # "Lim Boon Keng" - fused so the name reads as one even word, not three
     # stressed ones (see the "Lim-Boon-Keng" PRONUNCIATION_OVERRIDES entry).
     re.compile(r"\bLim Boon Keng\b"): "Lim-Boon-Keng",
+    re.compile(r"\bGoh Geok Yian\b"): "Goh-Geok-Yian",
     re.compile(r"\bOei Tiong Ham\b"): "Oei-Tiong-Ham",
     re.compile(r"\bEu Tong Sen\b"): "Eu-Tong-Sen",
     re.compile(r"\bLee Kong Chian\b"): "Lee-Kong-Chian",
