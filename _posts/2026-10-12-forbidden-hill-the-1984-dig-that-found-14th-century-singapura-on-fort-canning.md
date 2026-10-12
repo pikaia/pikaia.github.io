@@ -11,6 +11,45 @@ In January 1984 the American archaeologist John Miksic and a small team spent te
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/forbidden-hill-the-1984-dig-that-found-14th-century-singapura-on-fort-canning.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A watercolour of a green hill rising above a road and a row of low buildings by the water, with a house and a flagstaff on the summit](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Charles_Dyce%2C_Government_Hill_from_the_New_Harbour_Road%2C_Singapore%2C_1846%2C_Watercolour_%26_Ink_on_paper%2C_27.2_x_44.8_cm.png/1280px-Charles_Dyce%2C_Government_Hill_from_the_New_Harbour_Road%2C_Singapore%2C_1846%2C_Watercolour_%26_Ink_on_paper%2C_27.2_x_44.8_cm.png)
 
 *Government Hill, as Fort Canning was then called, painted from the New Harbour Road in the 1840s by Charles Dyce, with Government House on the summit. Malays had known it as Bukit Larangan, the Forbidden Hill. (Charles Andrew Dyce, public domain, via Wikimedia Commons)*
