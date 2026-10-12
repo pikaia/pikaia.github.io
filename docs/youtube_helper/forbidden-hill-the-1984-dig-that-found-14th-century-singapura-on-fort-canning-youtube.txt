@@ -79,7 +79,7 @@ Description:
 In January 1984 the American archaeologist John Miksic and a small team spent ten days digging test pits on Fort Canning Hill, beside the shrine known as the Keramat Iskandar Shah. For the first few days they found almost nothing of interest. Then the colour of the soil changed, and out came pieces of blue-and-white Chinese porcelain made in the 1300s. It was the first hard evidence that a town had stood on the hill some five hundred years before the British arrived, and that the Singapura of the old Malay chronicles was more than a story. #Shorts
 
 Full story: https://da.gd/Qq7ASp
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/KDsdozDJ_tk
 
 Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
 
