@@ -1951,9 +1951,9 @@ PRONUNCIATION_OVERRIDES = {
     "Civilisations": "sˌɪvɪlaɪzˈAʃᵊnz",     # Asian Civilisations Museum (British spelling).
     "kala": "kˈɑːlə",                       # the guardian face, Sanskrit "KAH-luh".
     "Hakim": "hˈɑːkɪm",                     # Wa Hakim, Malay "HAH-kim".
-    "Padang": "pədˈʌŋ",                     # "pə-DUNG", like Pahang and Badang (ear-pick pending).
+    "Padang": "pədˈʌŋ",                     # "pə-DUNG", like Pahang and Badang (Chris, by ear).
     "Palembang": "pəlˈɛmbʌŋ",               # "puh-LEM-bung".
-    "Goh-Geok-Yian": "ɡˌQ ɡjˌɒk jˌɛn",      # Goh Geok Yian, fused with even stress (ear-pick pending).
+    "Goh-Geok-Yian": "ɡˌQ ɡjˌɒk jˌɛn",      # Goh Geok Yian, fused with even stress; "Yian" as "yen" (Chris, by ear).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
