@@ -65,4 +65,4 @@ More views of Fort Canning Hill, the finds from its excavations, and the places 
 
 ![A modern grey government building with a red-tiled roof and a palm tree, with office towers behind](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Parliament_House%2C_Singapore.jpg/1280px-Parliament_House%2C_Singapore.jpg)
 
-*Parliament House, completed in 1999. The site was excavated between November 1995 and January 1996, before it was built, and produced 14th- to 16th-century remains. (edwin11 (Edwin Lee), CC BY 2.0, via Wikimedia Commons)*
+*Parliament House, completed in 1999. The site was excavated between November 1995 and January 1996, before it was built, and produced 14th- to 16th-century remains. (Edwin Lee, CC BY 2.0, via Wikimedia Commons)*

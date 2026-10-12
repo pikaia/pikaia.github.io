@@ -57,16 +57,16 @@ IMAGES = {
 
 # Credits for images not captioned in the post or its gallery.
 CREDITS = {
-    "TIMELINE": "Timeline by Lesser Known Singapore, dates from Wheatley (1961), the Malay Annals, Buckley (1902), Crawfurd (1828), Winstedt (1928) and NUS Press site reports",
-    "YUANVASE": "Yuan dynasty blue-and-white porcelain vase, Jingdezhen, Shanghai Museum, Gary Lee Todd, CC0, via Wikimedia Commons",
-    "YUANJAR": "Yuan dynasty blue-and-white porcelain jar, Jingdezhen, Shanghai Museum, Gary Lee Todd, CC0, via Wikimedia Commons",
-    "RAFFLES": "Sir Thomas Stamford Raffles, 1817, George Francis Joseph, public domain, via Wikimedia Commons",
-    "FARQ": "William Farquhar, about 1830, unknown artist, public domain, via Wikimedia Commons",
-    "CRAWP": "John Crawfurd, 1857, unknown artist, National Museum of Singapore, public domain, via Wikimedia Commons",
-    "HIK1849": "A page from a first edition of the Hikayat Abdullah, 1849, Abdullah bin Abdul Kadir, public domain, via Wikimedia Commons",
-    "JACKSON": "Singapore from the Sea, June 1823, Lieutenant Philip Jackson, public domain, via Wikimedia Commons",
-    "PLAN": "Plan of the Town of Singapore, 1822, Lieutenant Philip Jackson, public domain, via Wikimedia Commons",
-    "STONE09": "The Singapore Stone, National Museum of Singapore, 2009, Jon Callas, CC BY 2.0, via Wikimedia Commons",
+    "TIMELINE": "Timeline by Lesser Known Singapore",
+    "YUANVASE": "Gary Lee Todd, CC0, via Wikimedia Commons",
+    "YUANJAR": "Gary Lee Todd, CC0, via Wikimedia Commons",
+    "RAFFLES": "George Francis Joseph, public domain, via Wikimedia Commons",
+    "FARQ": "Unknown artist (Farquhar portrait), public domain, via Wikimedia Commons",
+    "CRAWP": "Unknown artist (Crawfurd portrait), public domain, via Wikimedia Commons",
+    "HIK1849": "Abdullah bin Abdul Kadir, public domain, via Wikimedia Commons",
+    "JACKSON": "Philip Jackson, public domain, via Wikimedia Commons",
+    "PLAN": "Philip Jackson, public domain, via Wikimedia Commons",
+    "STONE09": "Jon Callas, CC BY 2.0, via Wikimedia Commons",
 }
 
 _E = "ease-in-out"
