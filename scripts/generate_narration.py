@@ -2010,7 +2010,7 @@ PRONUNCIATION_OVERRIDES = {
     "selat": "səlˈɑːt",
     "Selat": "səlˈɑːt",
     "suku": "sˈuːkuː",
-    "Gelam": "ɡəlˈʌm",                      # ear-pick pending.
+    "Gelam": "ɡəlˈʌm",                      # "guh-LUM", Chris by ear.
     "Biduanda": "bˌiːduːˈandə",
     "Parameswara": "pˌɑːɹəmɛswˈɑːɹə",
     "Tomé": "tuːmˈɛ",
