@@ -2003,6 +2003,31 @@ PRONUNCIATION_OVERRIDES = {
     "laut": "lˈaʊt",
     "Santa": "sˈantə",                      # the carrack Santa Catarina.
     "Hugo": "hjˈuːɡQ",                      # Hugo Grotius, the English "HYOO-goh".
+    # Orang laut post (2026-10-13): Malay, Portuguese and personal names of the
+    # sea people and the southern islands.
+    "Laut": "lˈaʊt",
+    "Çelates": "sɛlˈɑːtɛs",
+    "selat": "səlˈɑːt",
+    "Selat": "səlˈɑːt",
+    "suku": "sˈuːkuː",
+    "Gelam": "ɡəlˈʌm",                      # ear-pick pending.
+    "Biduanda": "bˌiːduːˈandə",
+    "Parameswara": "pˌɑːɹəmɛswˈɑːɹə",
+    "Tomé": "tuːmˈɛ",
+    "Pires": "pˈiːɹɛs",
+    "Bendahara": "bˌɛndəhˈɑːɹə",
+    "Laksamana": "lˌaksəmˈɑːnə",
+    "Mahmud": "mɑːmˈuːd",
+    "Pulai": "pˈuːlaɪ",
+    "Kadut": "kˈɑːdʊt",
+    "pulau": "pˈuːlaʊ",
+    "Semakau": "sˌɛməkˈaʊ",
+    "Seking": "sˈɛkɪŋ",
+    "Blangah": "blˈɑːŋə",
+    "Rohani": "ɹəhˈɑːni",
+    "Teck": "tˈɛk",
+    "Firdaus": "fˈɪədaʊs",
+    "Sani": "sˈɑːni",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2189,6 +2214,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bGoh Geok Yian\b"): "Goh-Geok-Yian",
     # Roman-numeral regnal number (Eredia post): "Shah III" read as "Shah the Third".
     re.compile(r"\bShah III\b"): "Shah the Third",
+    re.compile(r"\bShah II\b"): "Shah the Second",
     re.compile(r"\bOei Tiong Ham\b"): "Oei-Tiong-Ham",
     re.compile(r"\bEu Tong Sen\b"): "Eu-Tong-Sen",
     re.compile(r"\bLee Kong Chian\b"): "Lee-Kong-Chian",
@@ -2863,7 +2889,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
-    "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "UK", "UN",
+    "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP",
 }
 
