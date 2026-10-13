@@ -2028,6 +2028,23 @@ PRONUNCIATION_OVERRIDES = {
     "Teck": "tˈɛk",
     "Firdaus": "fˈɪədaʊs",
     "Sani": "sˈɑːni",
+    # Syonan Syoken post (2026-10-14): Japanese names of the Occupation's lotteries and officials,
+    # and the 1942 winners.
+    "Syoken": "ʃˈoʊkɛn",                 # "SHOH-ken" - matches Syonan; kunrei romanisation of shoken.
+    "Domei": "dˈoʊmeɪ",                  # "DOH-may" - the Domei news agency.
+    "Hara": "hˈɑːɹə",
+    "Letchuman": "lˈɛʧuːmən",            # ear-pick pending.
+    "Chettiar": "ʧˈɛtiəɹ",               # "CHET-ee-ar" - matches Chettiars.
+    "Ampang": "ˈɑːmpɑːŋ",
+    "dhoby": "dˈQbi",                    # matches Dhoby.
+    "Nakahira": "nˌɑːkɑːhˈiːɹə",
+    "Konan": "kˈoʊnɑːn",                 # "KOH-nahn" - Konan Saiken.
+    "Saiken": "sˈaɪkɛn",
+    "kati": "kˈati",                        # "KAT-ee" - matches katis (Chris, by ear, 2026-10-09).
+    "Engo": "ˈɛŋɡoʊ",
+    "Nanpo": "nˈɑːnpoʊ",
+    "Kaihatsu": "kˌaɪhˈɑːtsuː",
+    "Kinko": "kˈɪŋkoʊ",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
