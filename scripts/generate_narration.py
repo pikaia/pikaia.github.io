@@ -2033,7 +2033,7 @@ PRONUNCIATION_OVERRIDES = {
     "Syoken": "ʃˈoʊkɛn",                 # "SHOH-ken" - matches Syonan; kunrei romanisation of shoken.
     "Domei": "dˈoʊmeɪ",                  # "DOH-may" - the Domei news agency.
     "Hara": "hˈɑːɹə",
-    "Letchuman": "lˈɛʧuːmən",            # ear-pick pending.
+    "Letchuman": "lˈɛʧuːmən",            # "LETCH-oo-mun", Chris by ear.
     "Chettiar": "ʧˈɛtiəɹ",               # "CHET-ee-ar" - matches Chettiars.
     "Ampang": "ˈɑːmpɑːŋ",
     "dhoby": "dˈQbi",                    # matches Dhoby.
