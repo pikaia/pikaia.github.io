@@ -1961,12 +1961,12 @@ PRONUNCIATION_OVERRIDES = {
     "mapmaker": "mˈapmAkə",
     "Manuel": "manwˈɛl",
     "Godinho": "ɡuːdˈiːnjuː",
-    "Erédia": "ɪɹˈɛdiə",                     # ear-pick pending.
+    "Erédia": "ɪɹˈɛdiə",                     # "ih-RED-ee-uh" (Chris, by ear).
     "Erédia's": "ɪɹˈɛdiəz",
     "Xabandaria": "ʃˌabəndəɹˈiːə",
     "Xebandaria": "ʃˌɛbəndəɹˈiːə",
     "Sabandaria": "sˌabəndəɹˈiːə",
-    "shahbandar": "ʃˈɑːbandɑː",              # ear-pick pending.
+    "shahbandar": "ʃˈɑːbandɑː",              # "SHAH-bun-dar" (Chris, by ear).
     "shahbandar's": "ʃˈɑːbandɑːz",
     "Sabander": "sˈabəndə",
     "Sabam": "sˈɑːbɑːm",
