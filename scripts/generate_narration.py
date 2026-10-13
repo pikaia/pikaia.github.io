@@ -1954,6 +1954,55 @@ PRONUNCIATION_OVERRIDES = {
     "Padang": "pədˈʌŋ",                     # "pə-DUNG", like Pahang and Badang (Chris, by ear).
     "Palembang": "pəlˈɛmbʌŋ",               # "puh-LEM-bung".
     "Goh-Geok-Yian": "ɡˌQ ɡjˌɒk jˌɛn",      # Goh Geok Yian, fused with even stress; "Yian" as "yen" (Chris, by ear).
+    # Eredia post (2026-10-13): Portuguese, Spanish, Dutch and Malay names from
+    # the Straits of the 1600s.
+    "Harbourmaster": "hˈɑːbəmˌɑːstə",
+    "harbourmaster": "hˈɑːbəmˌɑːstə",
+    "mapmaker": "mˈapmAkə",
+    "Manuel": "manwˈɛl",
+    "Godinho": "ɡuːdˈiːnjuː",
+    "Erédia": "ɪɹˈɛdiə",                     # ear-pick pending.
+    "Erédia's": "ɪɹˈɛdiəz",
+    "Xabandaria": "ʃˌabəndəɹˈiːə",
+    "Xebandaria": "ʃˌɛbəndəɹˈiːə",
+    "Sabandaria": "sˌabəndəɹˈiːə",
+    "shahbandar": "ʃˈɑːbandɑː",              # ear-pick pending.
+    "shahbandar's": "ʃˈɑːbandɑːz",
+    "Sabander": "sˈabəndə",
+    "Sabam": "sˈɑːbɑːm",
+    "Sincapura": "sˌɪŋkəpˈʊəɹə",
+    "Borschberg": "bˈɔːʃbɜːɡ",
+    "João": "ʒwˈaʊ",
+    "Aquaviva": "ˌakwəvˈiːvə",
+    "Dona": "dˈQnə",
+    "Elena": "ɛlˈɛnə",
+    "Vessiva": "vəsˈiːvə",
+    "Suppa": "sˈuːpə",
+    "Cornelis": "kɔːnˈAlɪs",
+    "Matelief": "mˈɑːtəliːf",
+    "Alauddin": "ˌalaʊdˈiːn",
+    "Riayat": "ɹiˈɑːjat",
+    "Jacques": "ʒˈak",
+    "Coutre": "kˈuːtɹə",
+    "Ysla": "ˈiːslə",
+    "Vieja": "vjˈAhə",
+    "Paulo": "pˈaʊlQ",
+    "Pereira": "pəɹˈAɹə",
+    "Sawar": "sˈɑːwɑː",
+    "André": "ɑːndɹˈA",
+    "Furtado": "fʊətˈɑːdQ",
+    "Mendonça": "mɛndˈɒnsə",
+    "Heemskerck": "hˈAmskɛɹk",
+    "Catarina": "kˌatəɹˈiːnə",
+    "kraak": "kɹˈɑːk",
+    "Grotius": "ɡɹˈQʃəs",
+    "Liberum": "lˈɪbəɹəm",
+    "Muda": "mˈuːdə",
+    "Aceh": "ˈɑːʧA",
+    "Acehnese": "ˌɑːʧAnˈiːz",
+    "laut": "lˈaʊt",
+    "Santa": "sˈantə",                      # the carrack Santa Catarina.
+    "Hugo": "hjˈuːɡQ",                      # Hugo Grotius, the English "HYOO-goh".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2138,6 +2187,8 @@ ABBREVIATION_EXPANSIONS = {
     # stressed ones (see the "Lim-Boon-Keng" PRONUNCIATION_OVERRIDES entry).
     re.compile(r"\bLim Boon Keng\b"): "Lim-Boon-Keng",
     re.compile(r"\bGoh Geok Yian\b"): "Goh-Geok-Yian",
+    # Roman-numeral regnal number (Eredia post): "Shah III" read as "Shah the Third".
+    re.compile(r"\bShah III\b"): "Shah the Third",
     re.compile(r"\bOei Tiong Ham\b"): "Oei-Tiong-Ham",
     re.compile(r"\bEu Tong Sen\b"): "Eu-Tong-Sen",
     re.compile(r"\bLee Kong Chian\b"): "Lee-Kong-Chian",
