@@ -2045,6 +2045,35 @@ PRONUNCIATION_OVERRIDES = {
     "Nanpo": "nˈɑːnpoʊ",
     "Kaihatsu": "kˌaɪhˈɑːtsuː",
     "Kinko": "kˈɪŋkoʊ",
+    # Tani Yutaka post (2026-10-14): Japanese and Malay names in the Harimau story.
+    "Tani": "tˈɑːni",                    # "TAH-nee" - Japanese ta-ni.
+    "Tani's": "tˈɑːniz",
+    "Yutaka": "juːtˈɑːkə",               # "yoo-TAH-kah".
+    "Harimau": "hˈɑːɹimˌaʊ",             # PENDING ear-pick (scratch/tani-yutaka-harimau/).
+    "Malai": "məlˈaɪ",                   # "muh-LIE" - the occupation's spelling of Malaya.
+    "Urakichi": "ˌuːɹɑːkˈiːʧi",
+    "Mohammad": "moʊhˈaməd",             # matches misaki's Muhammad.
+    "Yamada": "jəmˈɑːdə",
+    "Shizuko": "ʃɪzˈuːkoʊ",              # "shi-ZOO-koh".
+    "robbed": "ɹˈɒbd",                   # misaki is missing the past tense.
+    "Yai": "jˈaɪ",                       # Hat Yai, "haht YIE".
+    "Kamoto": "kəmˈoʊtoʊ",
+    "Toshio": "tˈoʊʃioʊ",                # "TOH-shee-oh".
+    "Manchukuo": "mˌanʧuːkwˈoʊ",         # "man-choo-KWOH".
+    "Jitra": "ʤˈɪtɹə",
+    "Kikan": "kˈiːkɑːn",                 # "KEE-kahn" - F Kikan.
+    "Fujiwara": "fˌuːʤiwˈɑːɹə",
+    "Iwaichi": "iːwˈaɪʧi",               # "ee-WHY-chee".
+    "Shukan": "ʃˈuːkɑːn",
+    "Asahi": "əsˈɑːhi",                  # "uh-SAH-hee".
+    "Daiei": "dˈaɪeɪ",                   # "DIE-ay" - the Daiei film studio.
+    "Marai": "məɹˈaɪ",                   # "muh-RYE" - Marai no Tora.
+    "Nakata": "nəkˈɑːtə",
+    "Bharu": "bˈɑːɹuː",                  # Kota Bharu.
+    "Kaiketsu": "kˌaɪkˈɛtsuː",
+    "Harimao": "hˌɑːɹimˈaʊ",             # "hah-ree-MOW" - Japanese spelling of the nickname.
+    "Teater": "teɪˈɑːtə",                # Malay "tay-AH-ter" - Teater Ekamatra.
+    "Ekamatra": "ˌɛkəmˈɑːtɹə",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
