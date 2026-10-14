@@ -2107,6 +2107,8 @@ PRONUNCIATION_OVERRIDES = {
     "Jyokyu": "ʤˈoʊkjuː",                # "JOH-kyoo".
     "Tokkyu": "tˈɒkjuː",                 # "TOCK-kyoo".
     "Kenshu": "kˈɛnʃuː",                 # "KEN-shoo".
+    "Ibuse": "iːbˈuːseɪ",                # "ee-BOO-seh", Chris's ear-pick (A).
+    "Nihongo": "nihˈɒŋɡoʊ",              # "nee-HON-goh", Chris's ear-pick (A).
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
