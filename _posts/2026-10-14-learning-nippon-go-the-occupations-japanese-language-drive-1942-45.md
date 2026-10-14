@@ -2,7 +2,7 @@
 layout: post
 title: "Learning Nippon-go: The Occupation's Japanese-Language Drive, 1942–45"
 date: 2026-10-14 23:10:00 +0800
-last_modified_at: 2026-10-14 23:10:00 +0800
+last_modified_at: 2026-10-15 00:11:18 +0800
 categories: [history]
 image: https://upload.wikimedia.org/wikipedia/commons/f/f2/Belajarlah_Pakailah_Bahasa_Nippon.jpg
 ---
@@ -92,7 +92,7 @@ By the end, the Syonan Shimbun was claiming success. A column in June 1945 calle
 
 The newspaper lessons did more than list words. By Lesson 103, printed on 23 June 1942, they had reached grammar, with a note that adjectives come before the nouns they describe and that "ka" placed at the end of a sentence turns it into a question.
 
-In June 1986 I went to Japan on a scholarship from AOTS, a Japanese organisation that trains engineers and managers from abroad, and we started with Nihongo lessons at the Yokohama Kenshu Center. I was not a good student, and it was years before I understood why. The teaching was intensive, but no one explained how differently the language is built. Japanese puts the verb at the end of a sentence (subject, object, verb), while English puts it in the middle (subject, verb, object), and I wasn't sharp enough to work out that basic but critical difference for myself. I still picked up a smattering of spoken Japanese from daily life, but I count it as a wasted opportunity.
+In June 1986, straight after graduating from NUS, I went to Japan for 18 months on a scholarship from AOTS, a Japanese organisation that trains engineers and managers from abroad, and we started with Nihongo lessons at the Yokohama Kenshu Center. I was not a good student, and it was years before I understood why. The teaching was intensive, but no one explained how differently the language is built. Japanese puts the verb at the end of a sentence (subject, object, verb), while English puts it in the middle (subject, verb, object), and I wasn't sharp enough to work out that basic but critical difference for myself. I still picked up a smattering of spoken Japanese from daily life, but I count it as a wasted opportunity.
 
 <div style="clear: both;"></div>
 
