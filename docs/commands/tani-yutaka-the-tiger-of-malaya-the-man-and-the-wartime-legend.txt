@@ -6,7 +6,7 @@
 } 2>&1 | tee -a logs/tani-yutaka-the-tiger-of-malaya-the-man-and-the-wartime-legend.log
 
 { echo; date; echo "=== 1.2 Generate narration audio ==="
-  cmd=(python scripts/generate_narration.py _posts/2026-10-14-tani-yutaka-the-tiger-of-malaya-the-man-and-the-wartime-legend.md audio/tani-yutaka-the-tiger-of-malaya-the-man-and-the-wartime-legend.mp3)
+  cmd=(python scripts/generate_narration.py _posts/2026-10-14-tani-yutaka-the-tiger-of-malaya-the-man-and-the-wartime-legend.md audio/tani-yutaka-the-tiger-of-malaya-the-man-and-the-wartime-legend.mp3 --clone openvoice)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo

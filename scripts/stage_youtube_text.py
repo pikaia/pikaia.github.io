@@ -45,6 +45,7 @@ import argparse
 import datetime
 import html
 import importlib.util
+import json
 import re
 import sys
 import urllib.error
@@ -407,6 +408,26 @@ def avatar_disclosure(main_cfg) -> str | None:
         return None
     return "Presenter: an illustrated avatar of the author, animated locally from the narration audio."
 
+def narration_disclosure(voice: str, voice_json: Path | None = None) -> str:
+    """The description's narration line. audio/<slug>.voice.json, written
+    by generate_narration.py, says whether the audio was re-voiced with
+    --clone openvoice; then the line says it is an AI clone of the
+    author's voice (the voice-clone spec, section 6). A missing file means
+    narration from before the sidecar existed, which was always Kokoro."""
+    clone = None
+    if voice_json is not None and voice_json.exists():
+        clone = json.loads(voice_json.read_text(encoding="utf-8")).get("clone")
+    if clone == "openvoice":
+        return (f"Narration: an AI clone of the author's voice (Kokoro TTS, open-source, Apache 2.0 license, "
+                f"voice {voice}, converted with OpenVoice, open-source, MIT license)")
+    return f"Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice {voice})"
+
+
+CLONE_UPLOAD_NOTE = ("UPLOAD NOTE (not part of any description): the narration is an AI clone of the "
+                     "author's voice. On YouTube, answer Yes to \"Altered or synthetic content\" for both "
+                     "the video and the Short; on TikTok, turn on the AI-generated content label.")
+
+
 def images_used_in_order(config_path: Path | None) -> tuple[list[str] | None, dict[str, str]]:
     """(ordered image URLs, {url: credit}). The URL list is None (not an
     empty list) when no config was given or the path doesn't exist yet -
@@ -675,10 +696,12 @@ def main() -> None:
 
     post_url = resolve_post_url(args.post_url, fm, POST_DATE_PREFIX_RE.sub("", post_path.stem), not args.no_verify)
     short_url = shorten_url(post_url, args.shortener)
-    narration_line = (f"Narration: synthesized voice (Kokoro TTS, open-source, "
-                       f"Apache 2.0 license, voice {args.voice})")
+    voice_json = REPO_ROOT / "audio" / f"{slug}.voice.json"
+    narration_line = narration_disclosure(args.voice, voice_json)
 
     out_lines = []
+    if narration_line.startswith("Narration: an AI clone"):
+        out_lines += [CLONE_UPLOAD_NOTE, ""]
     out_lines.append("=== FULL VIDEO ===")
     out_lines.append("")
     out_lines.append("Title:")

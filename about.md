@@ -16,4 +16,6 @@ Posts are researched from public sources; corrections and suggestions are always
 
 This site is written and maintained with the help of <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg" alt="Claude" width="16" height="16" style="vertical-align: -2px;"> [Claude Code](https://claude.com/claude-code), Anthropic's AI coding assistant — used for research, drafting, and publishing posts.
 
+The Listen audio and the videos are narrated by a synthesized voice. From October 2026, new posts use an AI clone of my own voice: the narration is generated with Kokoro TTS and then converted towards a recording of me with OpenVoice, both open-source. Earlier posts keep the original synthesized voice.
+
 <div style="clear: both;"></div>

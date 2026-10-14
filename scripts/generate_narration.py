@@ -3098,7 +3098,13 @@ def main() -> None:
                                        jobs=args.jobs, use_cache=not args.no_cache,
                                        clone=args.clone, clone_ref=args.clone_ref)
     base = os.path.splitext(args.out_path)[0]
-    print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt ({len(sentences)} sentences)", file=sys.stderr)
+    # Which voice made this audio, for the AI-voice disclosure that
+    # stage_youtube_text.py writes into the upload text (step 9). Written on
+    # every run, so a re-run without --clone switches the disclosure back.
+    with open(f"{base}.voice.json", "w", encoding="utf-8") as f:
+        json.dump({"voice": args.voice, "clone": args.clone}, f)
+    print(f"Wrote {args.out_path}, {base}.timing.json, {base}.srt, {base}.voice.json "
+          f"({len(sentences)} sentences)", file=sys.stderr)
 
 
 if __name__ == "__main__":

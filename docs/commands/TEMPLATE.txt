@@ -6,7 +6,7 @@
 } 2>&1 | tee -a logs/{SLUG}.log
 
 { echo; date; echo "=== 1.2 Generate narration audio ==="
-  cmd=(python scripts/generate_narration.py {POST} audio/{SLUG}.mp3)
+  cmd=(python scripts/generate_narration.py {POST} audio/{SLUG}.mp3 --clone openvoice)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
