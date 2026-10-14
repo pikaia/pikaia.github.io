@@ -2074,6 +2074,39 @@ PRONUNCIATION_OVERRIDES = {
     "Harimao": "hˌɑːɹimˈaʊ",             # "hah-ree-MOW" - Japanese spelling of the nickname.
     "Teater": "teɪˈɑːtə",                # Malay "tay-AH-ter" - Teater Ekamatra.
     "Ekamatra": "ˌɛkəmˈɑːtɹə",
+    # Learning Nippon-go post (2026-10-14): Japanese words from the Occupation's
+    # language drive, read as the romaji spells them (kunrei spellings such as
+    # Sinbun, Syokyu and Gekizyo read like the Hepburn shinbun, shokyu, gekijo).
+    "Ohayo": "oʊhˈɑːjoʊ",                # "oh-HAH-yoh".
+    "gozaimasu": "ɡˌoʊzaɪmˈɑːs",         # "goh-zai-MAHS", final u silent.
+    "Arigato": "ˌɑːɹiɡˈɑːtoʊ",           # "ah-ree-GAH-toh".
+    "Ikaga": "ikˈɑːɡə",                  # "ee-KAH-gah".
+    "desu": "dˈɛs",                      # "DESS", final u silent.
+    "Masuji": "məsˈuːʤi",                # "mah-SOO-jee".
+    "kurisumasu": "kˌʊɹisʊmˈɑːs",        # "koo-ree-soo-MAHS" (Christmas).
+    "nodo": "nˈoʊdoʊ",
+    "kataru": "kətˈɑːɹuː",
+    "kippu": "kˈɪpuː",
+    "koo-ree-soo-mah-soo": "kˌuːɹiːsˌuːmˈɑːsuː",  # the 1942 lesson's own pronunciation guide.
+    "Manabe": "mənˈɑːbeɪ",               # "mah-NAH-beh" (learn).
+    "Tukae": "tsʊkˈɑːeɪ",                # "tsoo-KAH-eh" (use), kunrei for tsukae.
+    "Nippongo": "nˈɪpɒŋɡoʊ",             # as "Nippon-go".
+    "Tokubetu-si": "tˌoʊkuːbˈɛtsuːʃi",   # "toh-koo-BET-soo-shee" (tokubetsu-shi).
+    "Futu": "fˈuːtsuː",                  # "FOO-tsoo" (futsu).
+    "Gakko": "ɡˈɑːkoʊ",                  # "GAHK-koh" (school).
+    "Gakuen": "ɡˈɑːkuːɛn",               # "GAH-koo-en".
+    "Jinbo": "ʤˈɪmboʊ",                  # "JIM-boh".
+    "Kotaro": "kˈoʊtɑːɹoʊ",              # "KOH-tah-roh".
+    "Toa": "tˈoʊə",                      # "TOH-ah" (Dai Toa, Greater East Asia).
+    "Gekizyo": "ɡˈɛkiʤoʊ",               # "GEH-kee-joh" (gekijo, theatre).
+    "Gunseikanbu": "ɡˌʊnseɪkˈɑːnbuː",    # "goon-say-KAHN-boo".
+    "Kokugo": "kˈoʊkuːɡoʊ",              # "KOH-koo-goh".
+    "Sinbun": "ʃˈɪnbʊn",                 # "SHIN-boon" - matches Shimbun.
+    "Syokyu": "ʃˈoʊkjuː",                # "SHOH-kyoo" - matches Syonan.
+    "Chukyu": "ʧˈuːkjuː",                # "CHOO-kyoo".
+    "Jyokyu": "ʤˈoʊkjuː",                # "JOH-kyoo".
+    "Tokkyu": "tˈɒkjuː",                 # "TOCK-kyoo".
+    "Kenshu": "kˈɛnʃuː",                 # "KEN-shoo".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
