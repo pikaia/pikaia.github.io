@@ -21,3 +21,4 @@ def test_openvoice_sidecar_discloses_clone(tmp_path):
     line = syt.narration_disclosure("bm_george", p)
     assert line.startswith("Narration: an AI clone of the author's voice")
     assert "OpenVoice" in line and "MIT license" in line
+    assert "then converted to the author's voice" in line

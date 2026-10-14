@@ -418,8 +418,9 @@ def narration_disclosure(voice: str, voice_json: Path | None = None) -> str:
     if voice_json is not None and voice_json.exists():
         clone = json.loads(voice_json.read_text(encoding="utf-8")).get("clone")
     if clone == "openvoice":
-        return (f"Narration: an AI clone of the author's voice (Kokoro TTS, open-source, Apache 2.0 license, "
-                f"voice {voice}, converted with OpenVoice, open-source, MIT license)")
+        return (f"Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, "
+                f"Apache 2.0 license, voice {voice}, then converted to the author's voice with OpenVoice, "
+                f"open-source, MIT license)")
     return f"Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice {voice})"
 
 
