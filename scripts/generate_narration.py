@@ -2049,7 +2049,7 @@ PRONUNCIATION_OVERRIDES = {
     "Tani": "tˈɑːni",                    # "TAH-nee" - Japanese ta-ni.
     "Tani's": "tˈɑːniz",
     "Yutaka": "juːtˈɑːkə",               # "yoo-TAH-kah".
-    "Harimau": "hˈɑːɹimˌaʊ",             # PENDING ear-pick (scratch/tani-yutaka-harimau/).
+    "Harimau": "hˈɑːɹimˌaʊ",             # "HAH-ree-mow", Chris by ear (2026-10-14).
     "Malai": "məlˈaɪ",                   # "muh-LIE" - the occupation's spelling of Malaya.
     "Urakichi": "ˌuːɹɑːkˈiːʧi",
     "Mohammad": "moʊhˈaməd",             # matches misaki's Muhammad.
