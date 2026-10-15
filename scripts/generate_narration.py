@@ -2121,6 +2121,18 @@ PRONUNCIATION_OVERRIDES = {
     "Bintan": "bˈɪntɑn",                 # "BIN-tahn", the Riau island.
     "Johore": "ʤəhˈɔːɹ",                 # old spelling of Johor - "juh-HOR".
     "Choah-Ah-Lam": "ʧwˌɑː ˌɑː lˌɑːm",    # fused, even stress.
+    # Interned in India post (Inge and Kusalasaya pending the ear-pick):
+    "Fukuda": "fuːkˈuːdɑː",              # "foo-KOO-dah"
+    "Kurahachi": "kˌuːɹɑːhˈɑːʧiː",       # "koo-rah-HAH-chee"
+    "Echigoya": "ˌɛʧiːɡˈQjɑː",           # "eh-chee-GOH-yah", the kimono store
+    "Mitsui": "mˈiːtsuːiː",              # "MEET-soo-ee"
+    "Mussoorie": "məsˈʊəɹiː",            # "muh-SOOR-ee", the hill station
+    "Karuna": "kɑːɹˈuːnɑː",              # "kah-ROO-nah"
+    "Lourenço": "ləɹˈɛnsQ",              # "luh-REN-soh", Lourenço Marques
+    "Marques": "mˈɑːkɛʃ",                # "MAR-kesh" (not "marks")
+    "kachi-gumi": "kˈɑːʧiː ɡˈuːmiː",     # "KAH-chee GOO-mee", victory group
+    "make-gumi": "mˈɑːkeɪ ɡˈuːmiː",      # "MAH-keh GOO-mee", defeat group
+    "Rajagopalachari": "ɹˌɑːʤəɡˌQpɑːlˈɑːʧəɹiː",  # "rah-juh-goh-pah-LAH-chuh-ree"
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2984,7 +2996,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
