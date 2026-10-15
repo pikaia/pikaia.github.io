@@ -2109,7 +2109,9 @@ PRONUNCIATION_OVERRIDES = {
     "Kenshu": "kˈɛnʃuː",                 # "KEN-shoo".
     "Ibuse": "iːbˈuːseɪ",                # "ee-BOO-seh", Chris's ear-pick (A).
     "Nihongo": "nihˈɒŋɡoʊ",              # "nee-HON-goh", Chris's ear-pick (A).
-    # Horsburgh Lighthouse post (Horsburgh and Branca pending the ear-pick):
+    # Horsburgh Lighthouse post (Horsburgh and Branca: ear-pick B for both):
+    "Horsburgh": "hˈɔːsbɜːɡ",            # "HORSE-burg".
+    "Branca": "bɹˈɑːŋkɑː",               # "BRAHNG-kah", Portuguese "white".
     "Pedra": "pˈɛdɹə",                   # "PED-ruh", Portuguese "stone".
     "Zetland": "zˈɛtlənd",               # "ZET-lund", the Masonic lodge.
     "Putih": "pˈuːti",                   # Malay "white" - "POO-tee".
