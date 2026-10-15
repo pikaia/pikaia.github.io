@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Historical Photos: Kangkar, Montfort, and Nativity Church"
-post_url: /2026/08/16/jalan-payoh-lai-kangkar-montfort-nativity-church/
+post_url: /2026/08/15/jalan-payoh-lai-kangkar-montfort-nativity-church/
 post_title: "The Lane Was Named After My School. Neither Is There Anymore."
 ---
 

@@ -613,7 +613,7 @@ Lien could carry his savings out of Singapore in 1942 in his clothes. Most peopl
 - [One Raffles Place history, OUB Centre Limited](https://www.oubcentre.com.sg/onerafflesplace-history.html)
 - [Launch of Deposit Insurance Scheme in Singapore, Monetary Authority of Singapore, 2006](https://www.mas.gov.sg/news/media-releases/2006/launch-of-deposit-insurance-scheme-in-singapore)
 - [Deposit insurance limit goes up to $100,000 from today, Singapore Deposit Insurance Corporation, 1 April 2024](https://sdic.org.sg/api/207/Deposit%20insurance%20limit%20goes%20up%20to%20100000%20from%20today%20SDIC%20launches%20public%20education%20campaign.pdf)
-- [Yokohama Specie Bank timeline (Meyer Chambers, 1933 to 1941), Lesser Known Singapore](/2026/10/05/the-yokohama-specie-bank-japans-bank-in-prewar-singapore/)
+- [Yokohama Specie Bank timeline (Meyer Chambers, 1933 to 1941), Lesser Known Singapore](/2026/10/04/the-yokohama-specie-bank-japans-bank-in-prewar-singapore/)
 - ["New Building in Raffles Place," The Straits Budget, 4 December 1930, page 2, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/page/straitsbudget19301204-1.1.2) (gallery)
 - [File:SG_Singapore_Raffles_Square_-_1963_(W63-K27-15).jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:SG_Singapore_Raffles_Square_-_1963_(W63-K27-15).jpg>)
 - [File:Chongqing_bomb.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Chongqing_bomb.jpg>)

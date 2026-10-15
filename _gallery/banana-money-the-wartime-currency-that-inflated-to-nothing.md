@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Historical Photos: Banana Money"
-post_url: /2026/09/19/banana-money-the-wartime-currency-that-inflated-to-nothing/
+post_url: /2026/09/18/banana-money-the-wartime-currency-that-inflated-to-nothing/
 post_title: "'Banana Money': The Wartime Currency That Inflated to Nothing"
 ---
 

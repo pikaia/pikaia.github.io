@@ -371,7 +371,7 @@ Collecting the levy in a country that had just been invaded proved hard, which i
 
 ## The loan
 
-To make up the remaining $22 million, the association borrowed it from the Yokohama Specie Bank, Japan's main foreign-exchange bank, which had reopened in Singapore in March in the building of the interned Hongkong and Shanghai Bank (see [the earlier post on the Yokohama Specie Bank](/2026/10/05/the-yokohama-specie-bank-japans-bank-in-prewar-singapore/)). According to BiblioAsia, it was a secured loan at 6 per cent interest, to be repaid within a year. In effect, the Chinese community paid part of the "gift" to the Japanese government with money lent to it by a Japanese bank, and then owed that bank the money with interest.
+To make up the remaining $22 million, the association borrowed it from the Yokohama Specie Bank, Japan's main foreign-exchange bank, which had reopened in Singapore in March in the building of the interned Hongkong and Shanghai Bank (see [the earlier post on the Yokohama Specie Bank](/2026/10/04/the-yokohama-specie-bank-japans-bank-in-prewar-singapore/)). According to BiblioAsia, it was a secured loan at 6 per cent interest, to be repaid within a year. In effect, the Chinese community paid part of the "gift" to the Japanese government with money lent to it by a Japanese bank, and then owed that bank the money with interest.
 
 <div style="clear: both;"></div>
 
@@ -543,7 +543,7 @@ To give a sense of scale, the National Library Board's account of the Oversea Ch
 <em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A one-dollar note issued by the Japanese government for Malaya in 1942, front and back. (National Museum of American History, public domain, via Wikimedia Commons)</em>
 </div>
 
-At the same time, the Japanese authorities were bringing in their own currency for occupied Malaya, issued at first at par with the Straits dollar. Over the next three years the military administration printed so much of it that its value collapsed, as described in the post on [banana money](/2026/09/19/banana-money-the-wartime-currency-that-inflated-to-nothing/). In the middle of 1942 that collapse still lay ahead, so the $50 million was a heavy sum in real terms.
+At the same time, the Japanese authorities were bringing in their own currency for occupied Malaya, issued at first at par with the Straits dollar. Over the next three years the military administration printed so much of it that its value collapsed, as described in the post on [banana money](/2026/09/18/banana-money-the-wartime-currency-that-inflated-to-nothing/). In the middle of 1942 that collapse still lay ahead, so the $50 million was a heavy sum in real terms.
 
 <div style="clear: both;"></div>
 

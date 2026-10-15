@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Historical Photos: National Service Then and Now"
-post_url: /2026/08/16/national-service-cmpb-safti-peng-kang-hill-tekong/
+post_url: /2026/08/15/national-service-cmpb-safti-peng-kang-hill-tekong/
 post_title: "National Service Moved to an Island. The Salute Stayed the Same."
 ---
 

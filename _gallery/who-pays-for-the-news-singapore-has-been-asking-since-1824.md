@@ -1,7 +1,7 @@
 ---
 layout: gallery
 title: "More Historical Photos: Raffles Place"
-post_url: /2026/09/25/who-pays-for-the-news-singapore-has-been-asking-since-1824/
+post_url: /2026/09/24/who-pays-for-the-news-singapore-has-been-asking-since-1824/
 post_title: "Who Pays for the News? Singapore Has Been Asking Since 1824"
 ---
 
