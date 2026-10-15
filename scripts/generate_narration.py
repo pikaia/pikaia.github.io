@@ -2109,6 +2109,16 @@ PRONUNCIATION_OVERRIDES = {
     "Kenshu": "kˈɛnʃuː",                 # "KEN-shoo".
     "Ibuse": "iːbˈuːseɪ",                # "ee-BOO-seh", Chris's ear-pick (A).
     "Nihongo": "nihˈɒŋɡoʊ",              # "nee-HON-goh", Chris's ear-pick (A).
+    # Horsburgh Lighthouse post (Horsburgh and Branca pending the ear-pick):
+    "Pedra": "pˈɛdɹə",                   # "PED-ruh", Portuguese "stone".
+    "Zetland": "zˈɛtlənd",               # "ZET-lund", the Masonic lodge.
+    "Putih": "pˈuːti",                   # Malay "white" - "POO-tee".
+    "Puteh": "pˈuːteɪ",                  # Malaysian spelling - "POO-teh".
+    "Dourado": "dʊɹˈɑːdoʊ",              # Portuguese ship name - "doo-RAH-doh".
+    "quarrymen": "kwˈɒɹimən",            # "KWORR-ee-men".
+    "Bintan": "bˈɪntɑn",                 # "BIN-tahn", the Riau island.
+    "Johore": "ʤəhˈɔːɹ",                 # old spelling of Johor - "juh-HOR".
+    "Choah-Ah-Lam": "ʧwˌɑː ˌɑː lˌɑːm",    # fused, even stress.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2332,6 +2342,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLim Chu Kang\b"): "Lim-Chu-Kang",
     re.compile(r"\bLi Yuemei\b"): "Li-Yuemei",
     re.compile(r"\bHua Mulan\b"): "Hua-Mulan",
+    re.compile(r"\bChoah Ah Lam\b"): "Choah-Ah-Lam",
     re.compile(r"\bTan Yeok Seong\b"): "Tan-Yeok-Seong",
     re.compile(r"\bTan Ean Teck\b"): "Tan-Ean-Teck",
     re.compile(r"\bWan Leong Gay\b"): "Wan-Leong-Gay",
