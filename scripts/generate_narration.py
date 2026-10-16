@@ -2121,7 +2121,9 @@ PRONUNCIATION_OVERRIDES = {
     "Bintan": "bˈɪntɑn",                 # "BIN-tahn", the Riau island.
     "Johore": "ʤəhˈɔːɹ",                 # old spelling of Johor - "juh-HOR".
     "Choah-Ah-Lam": "ʧwˌɑː ˌɑː lˌɑːm",    # fused, even stress.
-    # Interned in India post (Inge and Kusalasaya pending the ear-pick):
+    # Interned in India post (Inge and Kusalasaya: ear-pick A for both):
+    "Inge": "ˈɪŋ",                       # "ING", Norah Inge
+    "Kusalasaya": "kˌuːsɑːlɑːsˈɑːjɑː",   # "koo-sah-lah-SAH-yah", from the spelling
     "Fukuda": "fuːkˈuːdɑː",              # "foo-KOO-dah"
     "Kurahachi": "kˌuːɹɑːhˈɑːʧiː",       # "koo-rah-HAH-chee"
     "Echigoya": "ˌɛʧiːɡˈQjɑː",           # "eh-chee-GOH-yah", the kimono store
