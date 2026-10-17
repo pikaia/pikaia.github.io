@@ -2140,6 +2140,7 @@ PRONUNCIATION_OVERRIDES = {
     "quarried": "kwˈɒɹɪd",               # "KWOR-id", like "carried"/"married"
     "Tioman": "tiˈQmɑn",                 # Pulau Tioman, Malay "tee-OH-mahn"
     "Ranfurly": "ɹˈanfɜːli",             # "RAN-fur-lee", the Central Otago town
+    "Glororum": "ɡlˈɔːɹəɹəm",            # "GLOR-uh-rum", his Northumberland birthplace; Chris picked A by ear (2026-10-17)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
