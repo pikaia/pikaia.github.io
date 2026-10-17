@@ -2141,6 +2141,12 @@ PRONUNCIATION_OVERRIDES = {
     "Tioman": "tiˈQmɑn",                 # Pulau Tioman, Malay "tee-OH-mahn"
     "Ranfurly": "ɹˈanfɜːli",             # "RAN-fur-lee", the Central Otago town
     "Glororum": "ɡlˈɔːɹəɹəm",            # "GLOR-uh-rum", his Northumberland birthplace; Chris picked A by ear (2026-10-17)
+    # Thomas Dunman post (2026-10-18):
+    "Dyce": "dˈIs",                       # Martin Dyce & Co. - rhymes with "dice".
+    "headcloth": "hˈɛdklɒθ",
+    "kōban": "kˈQban",                    # Japanese police box, "KOH-ban".
+    "Tan-Tock-Seng": "tˌan tˌɒk sˌɛŋ",    # fused, even stress.
+    "Cheang-Hong-Lim": "ʧiˌaŋ hˌɒŋ lˌɪm",  # fused, even stress; "Cheang" as above.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2378,6 +2384,8 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLim Ah Tye\b"): "Lim-Ah-Tye",
     re.compile(r"\bKoh Seow Chuan\b"): "Koh-Seow-Chuan",
     re.compile(r"\bZhang Huimei\b"): "Zhang-Huimei",
+    re.compile(r"\bTan Tock Seng\b"): "Tan-Tock-Seng",
+    re.compile(r"\bCheang Hong Lim\b"): "Cheang-Hong-Lim",
 }
 
 
