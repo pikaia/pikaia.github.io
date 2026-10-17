@@ -2142,6 +2142,8 @@ PRONUNCIATION_OVERRIDES = {
     "Ranfurly": "ɹˈanfɜːli",             # "RAN-fur-lee", the Central Otago town
     "Glororum": "ɡlˈɔːɹəɹəm",            # "GLOR-uh-rum", his Northumberland birthplace; Chris picked A by ear (2026-10-17)
     # Thomas Dunman post (2026-10-18):
+    "Dunman": "dˈʌnmən",                  # "DUN-mun"; Chris picked A by ear (2026-10-18)
+    "Dunman's": "dˈʌnmənz",               # possessive, needs its own entry.
     "Dyce": "dˈIs",                       # Martin Dyce & Co. - rhymes with "dice".
     "headcloth": "hˈɛdklɒθ",
     "kōban": "kˈQban",                    # Japanese police box, "KOH-ban".
