@@ -2135,6 +2135,11 @@ PRONUNCIATION_OVERRIDES = {
     "kachi-gumi": "kˈɑːʧiː ɡˈuːmiː",     # "KAH-chee GOO-mee", victory group
     "make-gumi": "mˈɑːkeɪ ɡˈuːmiː",      # "MAH-keh GOO-mee", defeat group
     "Rajagopalachari": "ɹˌɑːʤəɡˌQpɑːlˈɑːʧəɹiː",  # "rah-juh-goh-pah-LAH-chuh-ree"
+    # John Turnbull Thomson post (2026-10-17):
+    "mapped": "mˈapt",                   # plain past tense, no misaki entry - same gap as "tapped"
+    "quarried": "kwˈɒɹɪd",               # "KWOR-id", like "carried"/"married"
+    "Tioman": "tiˈQmɑn",                 # Pulau Tioman, Malay "tee-OH-mahn"
+    "Ranfurly": "ɹˈanfɜːli",             # "RAN-fur-lee", the Central Otago town
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
