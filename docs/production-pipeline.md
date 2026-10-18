@@ -1615,6 +1615,28 @@ burned in. Pass `--slide 5` (or `--slide 2,5,9` for several, e.g. ones
 a review flagged) to check other slides; a `-short.py` config
 automatically reads `preview-motion/<slug>-short.mp4`.
 
+### 8.3 Write the thumbnails
+
+```
+python scripts/watch_video_lib.py --config scripts/video-configs/<slug>.py --thumbnail
+```
+
+Writes `preview-motion/<slug>-thumbnail.jpg` (1280×720) and, from the
+sibling `-short.py`, `preview-motion/<slug>-short-thumbnail.jpg`
+(1080×1920), each under YouTube's 2 MB limit. Added 2026-10-18 because
+YouTube's auto-picked frames are a lottery: on the Ya'acob Mohamed post
+they offered Lee Kuan Yew's portrait, which a viewer would take for
+Ya'acob. We choose what viewers see, so the thumbnail is always
+uploaded by hand (section 10).
+
+By default each file is the config's first image slide at its opening
+keyframe, which is normally the post's hero image. To pick another,
+Claude sets `THUMBNAIL` in the config while writing it (section 3):
+an `IMAGES` key (`THUMBNAIL = "FERRY"`, cover-cropped and centred) or a
+dict (`THUMBNAIL = {"img": "FERRY", "type": "letterbox", "pan": (0.6, 0.5)}`).
+The named-person rule applies: never a portrait of someone other than
+the post's subject. Claude opens both JPEGs during the pre-upload review.
+
 ---
 
 ## 9. Stage the YouTube upload text file
@@ -1753,6 +1775,13 @@ you're on the right channel, top-left of Studio, before uploading).
 - Not made for kids
 - Category: **Education**
 - Comments/moderation: leave at YouTube's defaults
+- **Thumbnail (main video):** Details → Thumbnail → **Upload file** →
+  `preview-motion/<slug>-thumbnail.jpg` (section 8.3). Don't take one
+  of YouTube's auto-picked frames.
+- **Thumbnail (Short):** use `preview-motion/<slug>-short-thumbnail.jpg`
+  where the upload UI accepts an image; where it only offers a frame
+  picker (the mobile app), pick the opening frame, which is the same
+  picture.
 - **Captions (main video):** captions are no longer burned into the
   file. YouTube's auto-captions are fine for most posts — leave them
   on and move on. Upload `audio/<slug>.srt` as the subtitle track only

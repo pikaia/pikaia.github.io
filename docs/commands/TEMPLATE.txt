@@ -116,6 +116,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 
+{ echo; date; echo "=== 8.3 Write the thumbnails (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/{SLUG}.py --thumbnail)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/{SLUG}.log
+
 { echo; date; echo "=== 9. Stage the YouTube upload text file ==="
   cmd=(python scripts/stage_youtube_text.py
       {POST}

@@ -52,6 +52,8 @@ Config module contract (see scripts/video-configs/ for real examples):
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
                                     relative to the repo root.
     WIDTH, HEIGHT, FPS: int      - optional, default 1280x720x25.
+    THUMBNAIL: str | dict        - optional, the YouTube thumbnail's image
+                                    (--thumbnail); see thumbnail_slide().
     IMAGE_BG: dict               - optional {IMAGES key: (r, g, b)}: flatten
                                     that transparent PNG onto this colour
                                     (default: alpha dropped -> black).
@@ -983,6 +985,88 @@ def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
               f"line above (captions are no longer burned in; the .srt goes to YouTube).", file=sys.stderr)
 
 
+THUMBNAIL_MAX_BYTES = 2 * 1024 * 1024  # YouTube's custom-thumbnail limit
+
+
+def thumbnail_slide(cfg):
+    """The slide a config's YouTube thumbnail is drawn from.
+
+    Optional config `THUMBNAIL`: an IMAGES key (cover, centred), or a slide
+    dict ({"img": key, "type": "cover"|"letterbox", "zoom": z, "pan": (x, y)},
+    any field optional - zoom/pan may also be the usual 3-keyframe lists, of
+    which the first is used). Unset, the first image slide is used at its
+    opening keyframe, i.e. the frame the video itself opens on. Added
+    2026-10-18: YouTube's own auto-picked frames chose Lee Kuan Yew's
+    portrait for the Ya'acob Mohamed video, so the thumbnail is now
+    uploaded by hand from a frame we choose."""
+    spec = getattr(cfg, "THUMBNAIL", None)
+    if spec is None:
+        for slide in cfg.SLIDES:
+            if slide["type"] in ("cover", "letterbox"):
+                spec = slide
+                break
+        else:
+            raise ValueError("no image slide to make a thumbnail from - set THUMBNAIL in the config")
+    if isinstance(spec, str):
+        spec = {"img": spec}
+    if spec["img"] not in cfg.IMAGES:
+        raise ValueError(f"THUMBNAIL image {spec['img']!r} is not an IMAGES key")
+    zoom = spec.get("zoom", 1.0)
+    pan = spec.get("pan", (0.5, 0.5))
+    if isinstance(zoom, (list, tuple)):
+        zoom = zoom[0]
+    if isinstance(pan, list):
+        pan = pan[0]
+    return {"img": spec["img"], "type": spec.get("type", "cover"),
+            "zoom": [zoom] * 3, "pan": [tuple(pan)] * 3}
+
+
+def compose_thumbnail(cfg, out_w, out_h):
+    slide = thumbnail_slide(cfg)
+    one = type("ThumbCfg", (), {"SLIDES": [slide], "IMAGES": cfg.IMAGES,
+                                "IMAGE_BG": getattr(cfg, "IMAGE_BG", {}),
+                                "_config_dir": cfg._config_dir})
+    entry = _prepare_slide(one, 0, out_w, out_h)
+    zoom, (pan_x, pan_y) = slide["zoom"][0], slide["pan"][0]
+    if slide["type"] == "letterbox":
+        max_zoom, prepared, work_w, work_h, fg, fx, fy = entry
+        frame = compose_letterbox_frame_from_prepared(
+            prepared, work_w, work_h, fg, fx, fy, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
+    else:
+        max_zoom, prepared, work_w, work_h = entry
+        frame = crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
+    return frame, slide
+
+
+def _write_one_thumbnail(cfg, config_stem):
+    out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
+    frame, slide = compose_thumbnail(cfg, out_w, out_h)
+    out = REPO_ROOT / "preview-motion" / f"{config_stem}-thumbnail.jpg"
+    out.parent.mkdir(exist_ok=True)
+    for quality in (92, 85, 75, 65):
+        frame.save(out, "JPEG", quality=quality, optimize=True)
+        if out.stat().st_size <= THUMBNAIL_MAX_BYTES:
+            break
+    source = "THUMBNAIL" if getattr(cfg, "THUMBNAIL", None) is not None else "first image slide"
+    print(f"Wrote {out} - {out_w}x{out_h}, {out.stat().st_size // 1024} KB, "
+          f"{slide['img']} ({slide['type']}, from {source})", file=sys.stderr)
+
+
+def write_thumbnails(cfg, config_stem, config_path):
+    """Step 8.3: write preview-motion/<stem>-thumbnail.jpg for YouTube's
+    "Upload thumbnail", and cascade to a sibling -short.py the same way
+    verify_frame_count() does (the Short's is vertical, 1080x1920)."""
+    _write_one_thumbnail(cfg, config_stem)
+    if config_stem.endswith("-short") or config_stem.endswith("_short"):
+        return
+    short_path = Path(config_path).with_name(f"{config_stem}-short.py")
+    if not short_path.exists():
+        return
+    short_cfg = load_config(short_path)
+    validate_short_config(short_cfg, short_path)
+    _write_one_thumbnail(short_cfg, f"{config_stem}-short")
+
+
 def _verify_one_frame_count(cfg, config_stem):
     video = REPO_ROOT / "preview-motion" / f"{config_stem}.mp4"
     if not video.exists():
@@ -1184,6 +1268,8 @@ def main():
                     help="Full-decode frame-count verify against the rendered .mp4 (step 8.1, made mechanical); pointed at a main config, also auto-verifies the sibling -short.py's video if one exists; no render")
     ap.add_argument("--spot-frame", action="store_true",
                     help="Pull one frame from the rendered .mp4 for a slide and print what should be on screen (step 8.2, made mechanical); no render")
+    ap.add_argument("--thumbnail", action="store_true",
+                    help="Write preview-motion/<config-stem>-thumbnail.jpg for YouTube's Upload thumbnail (step 8.3), from the config's THUMBNAIL or its first image slide; a main config also writes the sibling Short's; no render")
     ap.add_argument("--slide", default="2",
                     help="Slide index/indices for --spot-frame, e.g. '2' or '2,5,9' (default: 2)")
     ap.add_argument("--video", help="Path to the rendered .mp4 for --spot-frame (default: preview-motion/<config-stem>.mp4)")
@@ -1208,6 +1294,10 @@ def main():
 
     if args.spot_frame:
         spot_check_frames(cfg, slug, args.slide, args.video)
+        return
+
+    if args.thumbnail:
+        write_thumbnails(cfg, slug, args.config)
         return
 
     gaps = report_slide_gaps(cfg)
