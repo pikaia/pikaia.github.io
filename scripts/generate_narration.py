@@ -2201,9 +2201,9 @@ PRONUNCIATION_OVERRIDES = {
     "Bidwell": "bˈɪdwɛl",                 # the architect R. A. J. Bidwell.
     "Ballas": "bˈaləs",                   # the Jacob Ballas Centre, "BAL-us".
     "Dunearn": "dʌnˈɜːn",                 # Dunearn Road, "dun-ERN".
-    "Maghain": "maɡˈɛn",                  # Maghain Aboth, "mah-GEN"; NOT ear-verified yet
-    "Aboth": "abˈɒt",                     # Maghain Aboth, "ah-BOT"; NOT ear-verified yet
-    "Chesed-El": "hˈɛsɛd ˈɛl",            # "HEH-sed el"; NOT ear-verified yet
+    "Maghain": "maɡˈɛn",                  # Maghain Aboth, "mah-GEN"; default kept (2026-10-19)
+    "Aboth": "abˈɒt",                     # Maghain Aboth, "ah-BOT"; default kept (2026-10-19)
+    "Chesed-El": "hˈɛsɛd ˈɛl",            # "HEH-sed el"; default kept (2026-10-19)
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
