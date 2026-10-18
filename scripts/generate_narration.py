@@ -2150,7 +2150,7 @@ PRONUNCIATION_OVERRIDES = {
     "Tan-Tock-Seng": "tˌan tˌɒk sˌɛŋ",    # fused, even stress.
     "Cheang-Hong-Lim": "ʧiˌaŋ hˌɒŋ lˌɪm",  # fused, even stress; "Cheang" as above.
     # Ya'acob Mohamed post (2026-10-18). "Ya'acob" is rewritten to "Yaacob" below.
-    "Yaacob": "jˈɑːkɒb",                  # "YAH-kob"; ear-pick pending
+    "Yaacob": "jˈɑːkɒb",                  # "YAH-kob"; Chris picked A by ear (2026-10-18)
     "Yaacob's": "jˈɑːkɒbz",               # possessive, needs its own entry.
     "Mohamed": "məhˈamɪd",               # as "Mohammed" above.
     "Pisang": "pˈisaŋ",                   # Sungai Pisang, "PEE-sahng".
