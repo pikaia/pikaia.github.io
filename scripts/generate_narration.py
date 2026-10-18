@@ -2149,6 +2149,44 @@ PRONUNCIATION_OVERRIDES = {
     "kōban": "kˈQban",                    # Japanese police box, "KOH-ban".
     "Tan-Tock-Seng": "tˌan tˌɒk sˌɛŋ",    # fused, even stress.
     "Cheang-Hong-Lim": "ʧiˌaŋ hˌɒŋ lˌɪm",  # fused, even stress; "Cheang" as above.
+    # Ya'acob Mohamed post (2026-10-18). "Ya'acob" is rewritten to "Yaacob" below.
+    "Yaacob": "jˈɑːkɒb",                  # "YAH-kob"; ear-pick pending
+    "Yaacob's": "jˈɑːkɒbz",               # possessive, needs its own entry.
+    "Mohamed": "məhˈamɪd",               # as "Mohammed" above.
+    "Pisang": "pˈisaŋ",                   # Sungai Pisang, "PEE-sahng".
+    "Malim": "mˈɑːlɪm",                   # Tanjong Malim, "MAH-lim".
+    "Madrasah": "madɹˈɑsə",               # "mah-DRAH-suh".
+    "Khairiyah": "kaɪɹˈijə",              # "kai-REE-yuh".
+    "Angkatan": "aŋkˈɑtan",               # Angkatan Pemuda Insaf.
+    "Pemuda": "pəmˈuda",
+    "Insaf": "ˈinsɑf",
+    "Ahmad": "ˈɑmɑd",                     # "AH-mahd".
+    "Jabri": "dʒˈɑbɹi",
+    "Akib": "ˈɑkɪb",
+    "Sebarok": "səbˈɑɹɒk",                # Pulau Sebarok, "suh-BAH-rok".
+    "Esso": "ˈɛsQ",                       # the oil company, "ESS-oh".
+    "Ubi": "ˈubi",                        # Kampong Ubi, "OO-bee".
+    "lobbied": "lˈɒbid",
+    "Aljunied": "ˈaldʒunˌid",             # "AL-joo-need".
+    "Sikatuna": "sˌikatˈuna",             # Order of Sikatuna.
+    "Al-Azhar": "alˈɑzhɑɹ",               # "al-AZ-har".
+    "Gamal": "ɡamˈɑl",                    # Nasser, Egyptian "ga-MAHL".
+    "Abdel": "ˈabdɛl",
+    "Nasser": "nˈasəɹ",
+    "Sepak": "sˈɛpak",                    # sepak takraw, "SEH-pahk TAH-krow".
+    "Takraw": "tˈakɹW",
+    "Lembaga": "ləmbˈɑɡə",                # Lembaga Biasiswa Kenangan Maulud.
+    "Biasiswa": "bˌiasˈiswə",
+    "Kenangan": "kənˈɑŋan",
+    "Maulud": "mˈWlud",
+    "Bahar": "bˈɑhɑɹ",                    # Jalan Bahar.
+    "Hasmah": "hˈɑsmə",
+    "binti": "bˈɪnti",
+    "Awang": "ˈɑwɑŋ",
+    "Sulaiman": "sˌulaɪmˈɑn",
+    "Jeem": "dʒˈim",
+    "Ghani": "ɡˈɑni",
+    "Yong-Nyuk-Lin": "jˌɒŋ njˌʊk lˌɪn",  # fused, even stress.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2388,6 +2426,8 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bZhang Huimei\b"): "Zhang-Huimei",
     re.compile(r"\bTan Tock Seng\b"): "Tan-Tock-Seng",
     re.compile(r"\bCheang Hong Lim\b"): "Cheang-Hong-Lim",
+    re.compile(r"\bYong Nyuk Lin\b"): "Yong-Nyuk-Lin",
+    re.compile(r"\bYa'acob\b"): "Yaacob",
 }
 
 
@@ -3014,7 +3054,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
