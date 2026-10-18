@@ -2188,8 +2188,8 @@ PRONUNCIATION_OVERRIDES = {
     "Ghani": "ɡˈɑni",
     "Yong-Nyuk-Lin": "jˌɒŋ njˌʊk lˌɪn",  # fused, even stress.
     # Tanjong Katong post (2026-10-18). "Choa Kim Keat" is rewritten to "Choa-Kim-Keat" below.
-    "Choa-Kim-Keat": "ʧwˌɑː kˌɪm kˌiːət",    # fused, even stress; "Keat" as "Chiat"; Chris picked A by ear (2026-10-18)
-    "Choa-Kim-Keat's": "ʧwˌɑː kˌɪm kˌiːəts",  # possessive, needs its own entry.
+    "Choa-Kim-Keat": "ʧwˌɑː kˌɪm kjˌət",    # fused, even stress; "Keat" a quick "kyuht"; Chris picked G by ear (2026-10-18)
+    "Choa-Kim-Keat's": "ʧwˌɑː kˌɪm kjˌəts",  # possessive, needs its own entry.
     "Ville": "vˈɪl",                      # "Dunman Ville", the holiday cottages; English "vill".
     "Adelphi": "ədˈɛlfi",                 # the Adelphi Hotel, "uh-DEL-fee".
     "jutted": "ʤˈʌtɪd",
