@@ -2187,6 +2187,14 @@ PRONUNCIATION_OVERRIDES = {
     "Jeem": "dʒˈim",
     "Ghani": "ɡˈɑni",
     "Yong-Nyuk-Lin": "jˌɒŋ njˌʊk lˌɪn",  # fused, even stress.
+    # Tanjong Katong post (2026-10-18). "Choa Kim Keat" is rewritten to "Choa-Kim-Keat" below.
+    "Choa-Kim-Keat": "ʧwˌɑː kˌɪm kˌiːət",    # fused, even stress; "Keat" as "Chiat"; ear-pick pending
+    "Choa-Kim-Keat's": "ʧwˌɑː kˌɪm kˌiːəts",  # possessive, needs its own entry.
+    "Ville": "vˈɪl",                      # "Dunman Ville", the holiday cottages; English "vill".
+    "Adelphi": "ədˈɛlfi",                 # the Adelphi Hotel, "uh-DEL-fee".
+    "jutted": "ʤˈʌtɪd",
+    "Eric": "ˈɛɹɪk",
+    "Sarkies": "sˈɑːɹkiz",                # the Armenian hotel brothers, "SAR-keez".
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2428,6 +2436,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bCheang Hong Lim\b"): "Cheang-Hong-Lim",
     re.compile(r"\bYong Nyuk Lin\b"): "Yong-Nyuk-Lin",
     re.compile(r"\bYa'acob\b"): "Yaacob",
+    re.compile(r"\bChoa Kim Keat"): "Choa-Kim-Keat",
 }
 
 
