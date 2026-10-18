@@ -2436,7 +2436,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bCheang Hong Lim\b"): "Cheang-Hong-Lim",
     re.compile(r"\bYong Nyuk Lin\b"): "Yong-Nyuk-Lin",
     re.compile(r"\bYa'acob\b"): "Yaacob",
-    re.compile(r"\bChoa Kim Keat"): "Choa-Kim-Keat",
+    re.compile(r"\bChoa Kim Keat\b"): "Choa-Kim-Keat",
 }
 
 

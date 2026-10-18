@@ -11,6 +11,15 @@ def test_fused_names_are_unfused():
     assert caption_text("Lim-Yew-Hock defeated A. P. Rajah") == "Lim Yew Hock defeated A. P. Rajah"
 
 
+def test_every_fusion_rule_is_reversible():
+    # A fusion rule missing its closing \b (as "Choa Kim Keat" once was) slips
+    # past _UNFUSE and the hyphens reach the subtitles.
+    from generate_narration import _UNFUSE, ABBREVIATION_EXPANSIONS
+    for pattern, repl in ABBREVIATION_EXPANSIONS.items():
+        if isinstance(repl, str) and "-" in repl and repl.replace("-", " ") in pattern.pattern:
+            assert repl in _UNFUSE, pattern.pattern
+
+
 def test_real_compounds_are_left_alone():
     text = "the Build-To-Order scheme and the Britain-India-Nepal agreement"
     assert caption_text(text) == text
