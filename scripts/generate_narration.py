@@ -1729,6 +1729,7 @@ PRONUNCIATION_OVERRIDES = {
     "Paglar": "pˈaɡlɑː",              # "PAG-lar" - C. J. Paglar.
     "Menon": "mˈAnən",                # "MAY-nun" - Vilasini Menon (Malayalam name).
     "UMNO": "ˈʌmnO",                  # "UM-no", said as a word, as in Malaysia.
+    "PAP": "pˌiːˌAˈpiː",              # People's Action Party, "P-A-P", per Chris (2026-10-19); misaki read it as "pap".
     # Four ambiguous names, ear-picked by Chris (2026-10-03) from samples in
     # scratch/pp/samples/<word>/ - candidate 1 of 3 each.
     "Samat": "sˈɑmɑt",                # "SAH-maht" - Dr Abdul Samat.
@@ -3072,7 +3073,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
