@@ -2207,9 +2207,9 @@ PRONUNCIATION_OVERRIDES = {
     "Chesed-El": "hˈɛsɛd ˈɛl",            # "HEH-sed el"; default kept (2026-10-19)
     # Blakang Mati post (2026-10-20). "Chia Thye Poh", "Kim Jong Un" and "Tua Pek Kong" are fused below.
     "Blacanmati": "blˌɑːkɑnmˈɑːti",       # Eredia's 1604 spelling of Blakang Mati, read the same way.
-    "Imbiah": "ˈɪmbiːə",                  # "IM-bee-ah" - Mount Imbiah, Sentosa.
+    "Imbiah": "ˈɪmbiːə",                  # "IM-bee-ah" - Mount Imbiah, Sentosa; Chris picked A by ear (2026-10-20).
     "laundrymen": "lˈɔːndɹimən",
-    "Kashima": "kaʃˈiːma",                # "ka-SHEE-ma" - the Japanese name for the island.
+    "Kashima": "kaʃˈiːma",                # "ka-SHEE-ma" - the Japanese name for the island; Chris picked A by ear (2026-10-20).
     "Berhala": "bəɹhˈɑːlə",               # "ber-HAH-luh" - Berhala Reping, Malay.
     "Yeo": "jˈO",                         # "YOH" - the Yeo clan (Hokkien surname).
     "Yeos": "jˈOz",
@@ -2219,7 +2219,7 @@ PRONUNCIATION_OVERRIDES = {
     "Hari": "hˈɑːɹi",                     # "HAH-ree" - Hari Raya.
     "Hwa": "hwˈɑː",                       # "HWAH" - Sin Hwa school.
     "surau": "sˈuːɹaʊ",                   # "SOO-row" - a Malay prayer house.
-    "Choe": "ʧˈO",                        # "CHOH" - Alan Choe, the planner.
+    "Choe": "ʧˈO",                        # "CHOH" - Alan Choe, the planner; Chris picked A by ear (2026-10-20).
     "Barisan": "bɑːɹˈiːsɑn",              # "bah-REE-sun" - Barisan Sosialis.
     "Sosialis": "sˌOsiˈɑːlɪs",            # "soh-see-AH-lis".
     "Donald": "dˈɒnəld",
