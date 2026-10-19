@@ -148,16 +148,16 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 # Subtitles for YouTube (paste this path, do not run it):
 # "C:\Users\chris\projects\pikaia.github.io\audio\blakang-mati-before-sentosa-the-islands-kampongs-and-barracks.srt"
 
-
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-10-20-blakang-mati-before-sentosa-the-islands-kampongs-and-barracks.md scripts/video-configs/blakang-mati-before-sentosa-the-islands-kampongs-and-barracks.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/iqMzFU49_Sc
+  --shorts-url https://youtube.com/shorts/TD6rSIoVISM
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7698483821368315167
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
+
 } 2>&1 | tee -a logs/blakang-mati-before-sentosa-the-islands-kampongs-and-barracks.log
 
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
