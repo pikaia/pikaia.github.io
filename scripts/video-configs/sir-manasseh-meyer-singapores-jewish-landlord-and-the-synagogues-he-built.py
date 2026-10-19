@@ -60,8 +60,8 @@ IMAGES = {
 # Credits for images not captioned in the post or its gallery.
 CREDITS = {
     "TIMELINE": "Timeline by Lesser Known Singapore",
-    "MAP0": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
-    "MAP1": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
+    "MAP0": "Map by Lesser Known Singapore; map data © OpenStreetMap contributors",
+    "MAP1": "Map by Lesser Known Singapore; map data © OpenStreetMap contributors",
     "CH2023": "Bahnfrend, CC BY-SA 4.0, via Wikimedia Commons",
     "CHSIDE": "Sam Litvin, CC BY 2.0, via Wikimedia Commons",
     "CHCOL": "Smuconlaw, CC BY-SA 3.0, via Wikimedia Commons",

@@ -151,9 +151,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-10-19-sir-manasseh-meyer-singapores-jewish-landlord-and-the-synagogues-he-built.md scripts/video-configs/sir-manasseh-meyer-singapores-jewish-landlord-and-the-synagogues-he-built.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/C1BIH4WjmLw
+  --shorts-url https://youtube.com/shorts/crsKKT0n4fE
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7698155780880583967
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

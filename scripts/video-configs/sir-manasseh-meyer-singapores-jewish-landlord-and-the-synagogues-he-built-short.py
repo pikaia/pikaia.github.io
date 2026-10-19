@@ -19,7 +19,7 @@ IMAGES = {
 }
 
 CREDITS = {
-    "MAP1": "Map by Lesser Known Singapore; map data (c) OpenStreetMap contributors",
+    "MAP1": "Map by Lesser Known Singapore; map data © OpenStreetMap contributors",
     "NBR": "G. R. Lambert & Co., KITLV, CC BY-SA 4.0, via Wikimedia Commons",
 }
 
