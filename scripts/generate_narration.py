@@ -2205,6 +2205,28 @@ PRONUNCIATION_OVERRIDES = {
     "Maghain": "maɡˈɛn",                  # Maghain Aboth, "mah-GEN"; default kept (2026-10-19)
     "Aboth": "abˈɒt",                     # Maghain Aboth, "ah-BOT"; default kept (2026-10-19)
     "Chesed-El": "hˈɛsɛd ˈɛl",            # "HEH-sed el"; default kept (2026-10-19)
+    # Blakang Mati post (2026-10-20). "Chia Thye Poh", "Kim Jong Un" and "Tua Pek Kong" are fused below.
+    "Blacanmati": "blˌɑːkɑnmˈɑːti",       # Eredia's 1604 spelling of Blakang Mati, read the same way.
+    "Imbiah": "ˈɪmbiːə",                  # "IM-bee-ah" - Mount Imbiah, Sentosa.
+    "laundrymen": "lˈɔːndɹimən",
+    "Kashima": "kaʃˈiːma",                # "ka-SHEE-ma" - the Japanese name for the island.
+    "Berhala": "bəɹhˈɑːlə",               # "ber-HAH-luh" - Berhala Reping, Malay.
+    "Yeo": "jˈO",                         # "YOH" - the Yeo clan (Hokkien surname).
+    "Yeos": "jˈOz",
+    "Meishan": "mˌAʃˈɑːn",                # "may-SHAHN" - Meishan village, Fujian.
+    "Dongshan": "dˌʊŋʃˈɑːn",              # "doong-SHAHN" - Dongshan county.
+    "Zhao'an": "ʤˌaʊˈɑːn",                # "jow-AHN" - the Zhao'an variety of Hokkien.
+    "Hari": "hˈɑːɹi",                     # "HAH-ree" - Hari Raya.
+    "Hwa": "hwˈɑː",                       # "HWAH" - Sin Hwa school.
+    "surau": "sˈuːɹaʊ",                   # "SOO-row" - a Malay prayer house.
+    "Choe": "ʧˈO",                        # "CHOH" - Alan Choe, the planner.
+    "Barisan": "bɑːɹˈiːsɑn",              # "bah-REE-sun" - Barisan Sosialis.
+    "Sosialis": "sˌOsiˈɑːlɪs",            # "soh-see-AH-lis".
+    "Donald": "dˈɒnəld",
+    "Tussauds": "təsˈɔːdz",               # "tuh-SAWDZ" - Madame Tussauds.
+    "Chia-Thye-Poh": "ʧjˌɑː tˌI pˌO",      # fused, even stress: "chyah tie poh".
+    "Kim-Jong-Un": "kˌɪm ʤˌʊŋ ˌʊn",        # fused, even stress.
+    "Tua-Pek-Kong": "tˌuːə pˌɛk kˌɒŋ",     # fused, even stress - the deity.
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -2447,6 +2469,9 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bYong Nyuk Lin\b"): "Yong-Nyuk-Lin",
     re.compile(r"\bYa'acob\b"): "Yaacob",
     re.compile(r"\bChoa Kim Keat\b"): "Choa-Kim-Keat",
+    re.compile(r"\bChia Thye Poh\b"): "Chia-Thye-Poh",
+    re.compile(r"\bKim Jong Un\b"): "Kim-Jong-Un",
+    re.compile(r"\bTua Pek Kong\b"): "Tua-Pek-Kong",
 }
 
 
