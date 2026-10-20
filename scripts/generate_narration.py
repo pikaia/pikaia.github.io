@@ -1717,8 +1717,8 @@ PRONUNCIATION_OVERRIDES = {
     "MacEwen": "məkjˈuːən",
     "Bau": "bˈW",                         # the Sarawak gold town, "bow" as in "cow".
     "Ransome": "ɹˈansəm",
-    "Zehnder": "zˈɛndəɹ",                 # "ZEN-der", as Zehnder Road is said locally (ear-pick pending).
-    "Cathay-Keris": "kaθˈA kəɹˈiːs",      # the Singapore film studio; Malay keris "kuh-REES" (ear-pick pending).
+    "Zehnder": "zˈɛndəɹ",                 # "ZEN-der", as Zehnder Road is said locally.
+    "Cathay-Keris": "kaθˈA kəɹˈiːs",      # the Singapore film studio; Malay keris "kuh-REES".
     "Ramlah": "ɹˈamlɑː",
     "Siput": "sˈiːpʊt",                   # Malay "SEE-put", "snail".
     "bangsawan": "bɑŋsˈɑːwɑn",            # Malay opera.
@@ -1733,7 +1733,7 @@ PRONUNCIATION_OVERRIDES = {
     "Cobbold": "kˈɒbOld",
     "Sabahan": "sɑːbˈɑːən",
     "Sabahans": "sɑːbˈɑːənz",
-    "Sarawakian": "sˌɑːɹɑːwˈɑːkiən",      # ear-pick pending.
+    "Sarawakian": "sˌɑːɹɑːwˈɑːkiən",
     "Sarawakians": "sˌɑːɹɑːwˈɑːkiənz",
     "Sarikei": "sˈɑːɹikA",
     "Kinabalu": "kˌɪnəbəlˈuː",            # "kin-uh-buh-LOO".
