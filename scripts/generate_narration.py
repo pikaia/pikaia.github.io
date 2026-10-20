@@ -1700,6 +1700,15 @@ PRONUNCIATION_OVERRIDES = {
     "Lee-Kong-Chian": "lˌiː kˌɒŋ kjˌɛn",
     "Lim-Nee-Soon": "lˌɪm nˌiː sˌuːn",
     "Tan-Ean-Kiam": "tˌan ˌiːən kjˌɑːm",
+    # Lim Kim San post re-voice (2026-10-20): fused three-part names, even stress.
+    "Lim-Kim-San": "lˌɪm kˌɪm sˌɑːn",
+    "Goh-Keng-Swee": "ɡˌQ kˌAŋ swˌiː",
+    "Lim-Choon-Huat": "lˌɪm ʧˌuːn hwˌɑːt",   # his father; Hokkien "hwaht".
+    "Tan-Siew-Sin": "tˌan sjˌuː sˌɪn",
+    "Pang-Gek-Kim": "pˌɑŋ ɡˌɛk kˌɪm",
+    "Lee-Kuan-Yew": "lˌiː kwˌɑːn jˌuː",
+    "Ramon": "ɹɑːmˈOn",                  # "rah-MOHN" - Ramon Magsaysay.
+    "Magsaysay": "mɑːɡsˈIsI",             # "mahg-SIGH-sigh".
     "Lee-Choon-Guan": "lˌiː ʧˌuːn ɡwˌɑːn",
     "Lim-Peng-Siang": "lˌɪm pˌɛŋ sjˌɑːŋ",
     "Wong-Ah-Fook": "wˌɒŋ ˌɑː fˌʊk",
@@ -2472,6 +2481,12 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bChia Thye Poh\b"): "Chia-Thye-Poh",
     re.compile(r"\bKim Jong Un\b"): "Kim-Jong-Un",
     re.compile(r"\bTua Pek Kong\b"): "Tua-Pek-Kong",
+    re.compile(r"\bLim Kim San\b"): "Lim-Kim-San",
+    re.compile(r"\bGoh Keng Swee\b"): "Goh-Keng-Swee",
+    re.compile(r"\bLim Choon Huat\b"): "Lim-Choon-Huat",
+    re.compile(r"\bTan Siew Sin\b"): "Tan-Siew-Sin",
+    re.compile(r"\bPang Gek Kim\b"): "Pang-Gek-Kim",
+    re.compile(r"\bLee Kuan Yew\b"): "Lee-Kuan-Yew",
 }
 
 

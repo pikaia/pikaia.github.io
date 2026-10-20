@@ -41,3 +41,10 @@ def test_fused_name_counts_as_same_text():
     old = [{"text": "Led by Lim Yew Hock.", "offset_s": 0.0, "duration_s": 2.0}]
     new = [{"text": "Led by Lim-Yew-Hock.", "offset_s": 0.0, "duration_s": 2.5}]
     assert boundary_map(old, new)[2.0] == 2.5
+
+
+def test_ignore_text_allows_reworded_sentence_but_not_a_count_change():
+    reworded = NEW[:2] + [{"text": "D.", "offset_s": 18.45, "duration_s": 5.0}]
+    assert boundary_map(OLD, reworded, ignore_text=True)[18.05] == 18.45
+    with pytest.raises(ValueError):
+        boundary_map(OLD, NEW[:2], ignore_text=True)

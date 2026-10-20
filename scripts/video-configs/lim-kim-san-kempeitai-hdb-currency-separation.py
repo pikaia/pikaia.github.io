@@ -43,4 +43,5 @@ SLIDES = [
 
 SCHEDULE = [(0.0, 0), (36.425, 1), (70.425, 2), (86.075, 3), (108.95, 4), (125.0, 5), (155.975, 6), (176.025, 7), (193.275, 8), (210.275, 9), (233.625, 10), (245.075, 11), (262.25, 12), (273.55, 13), (295.675, 14), (316.325, 15), (324.875, 16), (349.65, 17), (364.625, 18), (380.7, 19), (393.55, 20), (405.6, 21)]
 TOTAL_DURATION = 426.625
-TIMING_JSON = "audio/lim-kim-san-kempeitai-hdb-currency-separation-kokoro.timing.json"
+TIMING_JSON = "audio/lim-kim-san-kempeitai-hdb-currency-separation.timing.json"
+AVATAR = {"ranges": [(0, 30), (-30, None)], "motion": True}

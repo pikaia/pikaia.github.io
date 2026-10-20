@@ -35,11 +35,20 @@ def _norm(text):
     return text.replace("-", " ")
 
 
-def boundary_map(old, new):
-    """{old time: new time} for every sentence start, plus the end of the narration."""
+def boundary_map(old, new, ignore_text=False):
+    """{old time: new time} for every sentence start, plus the end of the narration.
+
+    ignore_text only requires the same number of sentences, for a narration
+    whose rewrite rules changed a sentence's wording since (e.g. "17 August"
+    now read as "the 17th of August") - check the differences it prints."""
+    if len(old) != len(new):
+        raise ValueError(f"{len(old)} old sentences vs {len(new)} new - the post text changed, so retiming by index is unsafe")
+    diffs = [i for i, (o, n) in enumerate(zip(old, new)) if _norm(o["text"]) != _norm(n["text"])]
+    for i in diffs if ignore_text else []:
+        print(f"  sentence {i} reworded:\n    old: {old[i]['text']}\n    new: {new[i]['text']}")
     # Hyphens are ignored: a name fused for pronunciation since the old
     # narration (Lim Yew Hock -> Lim-Yew-Hock) is still the same sentence.
-    if [_norm(s["text"]) for s in old] != [_norm(s["text"]) for s in new]:
+    if diffs and not ignore_text:
         raise ValueError(f"sentence texts differ ({len(old)} old vs {len(new)} new) - the post text changed, so retiming by index is unsafe")
     m = {_key(o["offset_s"]): n["offset_s"] for o, n in zip(old, new)}
     m[_key(old[-1]["offset_s"] + old[-1]["duration_s"])] = round(new[-1]["offset_s"] + new[-1]["duration_s"], 3)
@@ -68,6 +77,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("configs", nargs="+")
     ap.add_argument("--old-timing", help="old timing.json (default: the committed HEAD version)")
+    ap.add_argument("--ignore-text", action="store_true",
+                    help="only require the same sentence count (prints any reworded sentences)")
     args = ap.parse_args()
     for cfg in args.configs:
         src = Path(cfg).read_text(encoding="utf-8")
@@ -79,7 +90,7 @@ def main():
             old = json.loads(subprocess.run(["git", "show", f"HEAD:{tj}"], cwd=ROOT, capture_output=True,
                                             check=True).stdout.decode("utf-8"))
         try:
-            out = retime_source(src, boundary_map(old, new))
+            out = retime_source(src, boundary_map(old, new, args.ignore_text))
         except ValueError as e:
             sys.exit(f"{cfg}: {e}")
         if out == src:
