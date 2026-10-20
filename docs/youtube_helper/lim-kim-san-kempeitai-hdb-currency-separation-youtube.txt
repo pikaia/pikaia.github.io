@@ -1,3 +1,5 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
 === FULL VIDEO ===
 
 Title:
@@ -8,18 +10,20 @@ Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a 
 
 Full story: https://da.gd/8hIs
 
-Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
 
 Images (Wikimedia Commons and NewspaperSG, credited individually):
-- Lim Kim San, photographed in the 1940s — National Archives of Singapore, via Wikimedia Commons, public domain
-- Graduates of Raffles College, 1934 — Eriko Ogihara-Schuck, via Wikimedia Commons, public domain
-- Lim Kim San with his wife Pang Gek Kim on their wedding day, 1940 — National Archives of Singapore, via Wikimedia Commons, public domain
-- A street in Shonan-to, the wartime Japanese name for Singapore, February 1943 — Mainichi Newspapers Co., from Hakyoku e no michi, public domain
-- The Civilian War Memorial, Singapore — Bijay Chaurasia, CC BY-SA 4.0
-- Block 45 Stirling Road, Singapore, one of the first flats built by the HDB, photographed in 2021 — Seloloving, CC BY-SA 4.0
-- The Straits Times front page, 27 May 1961, reporting on relief efforts after the Bukit Ho Swee fire — The Straits Times, 27 May 1961 — "AID for FIRE VICTIMS" — two days after the Bukit Ho Swee fire, reporting the government's plan to build 12,000 low-cost flats on the razed land. (Source: The Straits Times, via NLB NewspaperSG / Wikimedia Commons. Public domain in Singapore: under the Copyright Act (Cap. 63) §96, a published edition's copyright expires if first published before 10 April 1987 — this issue is from 1961, well before that cutoff.) [REVIEW CREDIT]
-- Thirty-storey HDB flats along Strathmore Avenue in Queenstown, Singapore — Calvin Teo, CC BY-SA 2.5
-- Goh Keng Swee, photographed in 1967 — Australian News and Information Bureau, expired
+- National Archives of Singapore, via Wikimedia Commons, public domain (2 photos)
+- Seloloving, CC BY-SA 4.0, via Wikimedia Commons
+- Lim Kim San, public domain, via Wikimedia Commons
+- Eriko Ogihara-Schuck, via Wikimedia Commons, public domain
+- Australian News and Information Bureau, expired, via Wikimedia Commons
+- Mainichi Newspapers Co., from Hakyoku e no michi, public domain, via Wikimedia Commons
+- Bijay Chaurasia, CC BY-SA 4.0, via Wikimedia Commons
+- The Straits Times, public domain, via Wikimedia Commons (2 pages)
+- Calvin Teo, CC BY-SA 2.5, via Wikimedia Commons
+- Auckland Museum, CC BY 4.0, via Wikimedia Commons
 
 Sources:
 - Lim Kim San — Wikipedia
@@ -28,15 +32,6 @@ Sources:
 - Lim Kim San — NLB Infopedia
 - Why Singapore rejected a common currency with Malaysia — CashChanger Stories
 - Bukit Ho Swee fire — Wikipedia
-- File:Lim Kim San in the 1940s.jpg — Wikimedia Commons
-- File:ST27May1961.jpg — Wikimedia Commons
-- File:Goh Keng Swee, 1967 (3x4 crop).jpg — Wikimedia Commons
-- File:Street in Shonan.JPG — Wikimedia Commons
-- File:Block 45 Stirling Road, Singapore.jpg — Wikimedia Commons
-- File:Lim Kim San, 1940.jpg — Wikimedia Commons
-- File:Raffles College graduates 1934.webp — Wikimedia Commons
-- File:Queenstown hdb.jpg — Wikimedia Commons
-- File:Civilian War Memorial, Singapore-3276.jpg — Wikimedia Commons
 
 ----------------------------------------------------------------------
 
@@ -49,8 +44,26 @@ Description:
 Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a young Peranakan businessman named Lim Kim San — not once, but twice — and tortured him on the strength of two accusations that couldn't both be true: that he was a communist, and that he was a British sympathiser. Two decades later, that same man would be the one Singaporeans called "Mr HDB," credited with solving the housing crisis of a newly independent nation. Almost nobody remembers the part in between. #Shorts
 
 Full story: https://da.gd/8hIs
-Full-length video: <paste the main video's URL here after uploading it>
+Full-length video: https://youtu.be/_yul0ASUshU
 
-Narration: synthesized voice (Kokoro TTS, open-source, Apache 2.0 license, voice bm_george)
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
 
 [Video already published at https://youtube.com/shorts/4GwevYQQ8lQ, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+Tortured by the Kempeitai, He Went On to Build a Nation's Homes
+
+Sometime during the Japanese Occupation of Singapore, the Kempeitai picked up a young Peranakan businessman named Lim Kim San — not once, but twice — and tortured him on the strength of two accusations that couldn't both be true: that he was a communist, and that he was a British sympathiser. Two decades later, that same man would be the one Singaporeans called "Mr HDB," credited with solving the housing crisis of a newly independent nation. Almost nobody remembers the part in between.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images:
+[Video already published at https://youtube.com/shorts/4GwevYQQ8lQ, but predates the scripts/video-configs/ pipeline - no committed config exists to auto-generate this Images list. Fill in manually from the post's own image credits, or build a config retroactively and re-run this script.]
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok

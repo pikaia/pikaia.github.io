@@ -927,7 +927,7 @@ PRONUNCIATION_OVERRIDES = {
                                    # entry reads "Baden" as "BAH-dn", wrong -
                                    # confirmed correct via dictionary source)
     "MacKenzie": "məkˈɛnzi",      # "muh-KEN-zee"
-    "Queenstown": "kwˈiːntWn",    # compositional, "Queen's" + "town"
+    "Queenstown": "kwˈiːnztWn",   # "QUEENZ-town"; the z was missing, which read as "queentown" (Chris, by ear, 2026-10-20)
     "qipaos": "ʧiːpˈWz",          # "chee-POWZ" - Mandarin "qi" = "chee" sound
     "Su-Moi": "sˈuːmˌY",          # her birth name, Yong Su-Moi - "SOO-moy"
     "Kudat": "kˈuːdat",           # "KOO-dat", her birthplace in Sabah
@@ -1702,7 +1702,7 @@ PRONUNCIATION_OVERRIDES = {
     "Tan-Ean-Kiam": "tˌan ˌiːən kjˌɑːm",
     # Lim Kim San post re-voice (2026-10-20): fused three-part names, even stress.
     "Lim-Kim-San": "lˌɪm kˌɪm sˌɑːn",
-    "Goh-Keng-Swee": "ɡˌQ kˌAŋ swˌiː",
+    "Goh-Keng-Swee": "ɡˈQ kˌAŋ swˌiː",  # main stress on Goh so it falls, not rises (Chris, by ear, 2026-10-20).
     "Lim-Choon-Huat": "lˌɪm ʧˌuːn hwˌɑːt",   # his father; Hokkien "hwaht".
     "Tan-Siew-Sin": "tˌan sjˌuː sˌɪn",
     "Pang-Gek-Kim": "pˌɑŋ ɡˌɛk kˌɪm",
