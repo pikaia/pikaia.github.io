@@ -42,8 +42,8 @@ SLIDES = [
     {"img": "BRANI", **_LB},                                       # s3  the Southern Islands
     {"img": "JB", **_LB},                                          # s4  born in Kelantan, raised in Johor (s5-7)
 ]
-SCHEDULE = [(0.0, 0), (3.45, 1), (18.05, 2), (31.525, 3), (43.925, 4)]
-TOTAL_DURATION = 69.025
+SCHEDULE = [(0.0, 0), (3.45, 1), (18.05, 2), (31.975, 3), (44.375, 4)]
+TOTAL_DURATION = 69.475
 TIMING_JSON = "audio/yaacob-mohamed-the-forgotten-pioneer.timing.json"
 
 BURN_CAPTIONS = True
