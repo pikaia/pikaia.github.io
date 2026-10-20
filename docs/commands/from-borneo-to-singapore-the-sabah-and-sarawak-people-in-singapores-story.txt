@@ -1,0 +1,166 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md audio/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md audio/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp3 --clone openvoice)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --out preview-motion/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --in preview-motion/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.mp4 --out preview-motion/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-short.py --out preview-motion/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 8.3 Write the thumbnails (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py --thumbnail)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md
+      scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py
+      scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+# Subtitles for YouTube (paste this path, do not run it):
+# "C:\Users\chris\projects\pikaia.github.io\audio\from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.srt"
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+# Subtitles for YouTube (paste this path, do not run it):
+# "C:\Users\chris\projects\pikaia.github.io\audio\from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.srt"
+
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-21-from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.md scripts/video-configs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.py 
+  --youtube-url https://youtu.be/...
+  --shorts-url https://youtube.com/shorts/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/from-borneo-to-singapore-the-sabah-and-sarawak-people-in-singapores-story.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ done
