@@ -1729,7 +1729,7 @@ PRONUNCIATION_OVERRIDES = {
     "Paglar": "pˈaɡlɑː",              # "PAG-lar" - C. J. Paglar.
     "Menon": "mˈAnən",                # "MAY-nun" - Vilasini Menon (Malayalam name).
     "UMNO": "ˈʌmnO",                  # "UM-no", said as a word, as in Malaysia.
-    "PAP": "pˌiːˌAˈpiː",              # People's Action Party, "P-A-P", per Chris (2026-10-19); misaki read it as "pap".
+    "PAP": "pˌiːˌApˈiː",              # People's Action Party, "P-A-P", per Chris (2026-10-19); misaki read it as "pap". Chris picked D by ear (2026-10-20): HDB-style stress; pˌiːˌAˈpiː sounded like four syllables through the clone.
     # Four ambiguous names, ear-picked by Chris (2026-10-03) from samples in
     # scratch/pp/samples/<word>/ - candidate 1 of 3 each.
     "Samat": "sˈɑmɑt",                # "SAH-maht" - Dr Abdul Samat.
