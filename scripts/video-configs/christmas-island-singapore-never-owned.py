@@ -111,3 +111,4 @@ SCHEDULE = [
 ]
 TOTAL_DURATION = 373.65
 TIMING_JSON = "audio/christmas-island-singapore-never-owned.timing.json"
+AVATAR = {"ranges": [(0, 30), (-30, None)], "motion": True}

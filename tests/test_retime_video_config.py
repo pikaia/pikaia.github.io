@@ -35,3 +35,9 @@ def test_refuses_off_boundary_time():
 def test_refuses_changed_text():
     with pytest.raises(ValueError):
         boundary_map(OLD, NEW[:2] + [{"text": "D.", "offset_s": 18.45, "duration_s": 5.0}])
+
+
+def test_fused_name_counts_as_same_text():
+    old = [{"text": "Led by Lim Yew Hock.", "offset_s": 0.0, "duration_s": 2.0}]
+    new = [{"text": "Led by Lim-Yew-Hock.", "offset_s": 0.0, "duration_s": 2.5}]
+    assert boundary_map(old, new)[2.0] == 2.5

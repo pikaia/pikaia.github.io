@@ -31,9 +31,15 @@ def _fmt(t):
     return s + "0" if s.endswith(".") else s
 
 
+def _norm(text):
+    return text.replace("-", " ")
+
+
 def boundary_map(old, new):
     """{old time: new time} for every sentence start, plus the end of the narration."""
-    if [s["text"] for s in old] != [s["text"] for s in new]:
+    # Hyphens are ignored: a name fused for pronunciation since the old
+    # narration (Lim Yew Hock -> Lim-Yew-Hock) is still the same sentence.
+    if [_norm(s["text"]) for s in old] != [_norm(s["text"]) for s in new]:
         raise ValueError(f"sentence texts differ ({len(old)} old vs {len(new)} new) - the post text changed, so retiming by index is unsafe")
     m = {_key(o["offset_s"]): n["offset_s"] for o, n in zip(old, new)}
     m[_key(old[-1]["offset_s"] + old[-1]["duration_s"])] = round(new[-1]["offset_s"] + new[-1]["duration_s"], 3)
