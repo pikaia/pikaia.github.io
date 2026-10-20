@@ -1709,6 +1709,45 @@ PRONUNCIATION_OVERRIDES = {
     "Lee-Kuan-Yew": "lˌiː kwˌɑːn jˌuː",
     "Ramon": "ɹɑːmˈOn",                  # "rah-MOHN" - Ramon Magsaysay.
     "Magsaysay": "mɑːɡsˈIsI",             # "mahg-SIGH-sigh".
+    # Borneo-to-Singapore post (2026-10-21).
+    "Brooke": "bɹˈʊk",                    # Rajah James Brooke.
+    "Kapitan": "kˌɑːpiːtˈɑːn",            # Malay "kah-pee-TAHN", as in Kapitan Cina.
+    "Cina": "ʧˈiːnɑː",                    # Malay "CHEE-nah".
+    "Bonnie": "bˈɒni",
+    "MacEwen": "məkjˈuːən",
+    "Bau": "bˈW",                         # the Sarawak gold town, "bow" as in "cow".
+    "Ransome": "ɹˈansəm",
+    "Zehnder": "zˈɛndəɹ",                 # "ZEN-der", as Zehnder Road is said locally (ear-pick pending).
+    "Cathay-Keris": "kaθˈA kəɹˈiːs",      # the Singapore film studio; Malay keris "kuh-REES" (ear-pick pending).
+    "Ramlah": "ɹˈamlɑː",
+    "Siput": "sˈiːpʊt",                   # Malay "SEE-put", "snail".
+    "bangsawan": "bɑŋsˈɑːwɑn",            # Malay opera.
+    "Dollah": "dˈɒlɑː",
+    "Waktu": "wˈɑktuː",
+    "di": "dˌiː",                         # Malay "at", as in Singapura di Waktu Malam.
+    "Merdeka": "məɹdˈAkɑː",
+    "Murni": "mˈʊɹni",
+    "Anita": "ənˈiːtə",
+    "Pusara": "puːsˈɑːɹɑː",
+    "Abadi": "ɑːbˈɑːdi",
+    "Cobbold": "kˈɒbOld",
+    "Sabahan": "sɑːbˈɑːən",
+    "Sabahans": "sɑːbˈɑːənz",
+    "Sarawakian": "sˌɑːɹɑːwˈɑːkiən",      # ear-pick pending.
+    "Sarawakians": "sˌɑːɹɑːwˈɑːkiənz",
+    "Sarikei": "sˈɑːɹikA",
+    "Kinabalu": "kˌɪnəbəlˈuː",            # "kin-uh-buh-LOO".
+    "Robbi": "ɹˈɒbi",
+    "Sapinggi": "sɑːpˈɪŋɡi",
+    "Masirin": "mɑːsˈiːɹɪn",
+    "Solungin": "sOlˈʊŋɪn",
+    "Heeren": "hˈɪəɹən",                  # Dutch "heeren", "gentlemen".
+    "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
+    "Ong-Tiang-Swee": "ˌɒŋ tjˌɑŋ swˌiː",
+    "Ong-Siew-Eng": "ˌɒŋ sjˌuː ˌɛŋ",
+    "Lim-Eng-Moh": "lˌɪm ˌɛŋ mˌO",
+    "Chee-Swee-Cheng": "ʧˌiː swˌiː ʧˌɛŋ",
+    "Choy-Khun-Heng": "ʧˌY kˌʊn hˌɛŋ",
     "Lee-Choon-Guan": "lˌiː ʧˌuːn ɡwˌɑːn",
     "Lim-Peng-Siang": "lˌɪm pˌɛŋ sjˌɑːŋ",
     "Wong-Ah-Fook": "wˌɒŋ ˌɑː fˌʊk",
@@ -2487,6 +2526,13 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bTan Siew Sin\b"): "Tan-Siew-Sin",
     re.compile(r"\bPang Gek Kim\b"): "Pang-Gek-Kim",
     re.compile(r"\bLee Kuan Yew\b"): "Lee-Kuan-Yew",
+    re.compile(r"\bOng Ewe Hai\b"): "Ong-Ewe-Hai",
+    re.compile(r"\bOng Tiang Swee\b"): "Ong-Tiang-Swee",
+    re.compile(r"\bOng Siew Eng\b"): "Ong-Siew-Eng",
+    re.compile(r"\bLim Eng Moh\b"): "Lim-Eng-Moh",
+    re.compile(r"\bChee Swee Cheng\b"): "Chee-Swee-Cheng",
+    re.compile(r"\bChoy Khun Heng\b"): "Choy-Khun-Heng",
+    re.compile(r"\bCathay Keris\b"): "Cathay-Keris",
 }
 
 
@@ -3113,7 +3159,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
