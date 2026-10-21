@@ -1742,6 +1742,25 @@ PRONUNCIATION_OVERRIDES = {
     "Masirin": "mɑːsˈiːɹɪn",
     "Solungin": "sOlˈʊŋɪn",
     "Heeren": "hˈɪəɹən",                  # Dutch "heeren", "gentlemen".
+    # Labuan post.
+    "labuhan": "lɑːbˈuːhɑːn",             # Malay "harbour", "lah-BOO-hahn".
+    "Saifuddin": "sIfˈʊdɪn",              # Sultan Omar Ali Saifuddin II of Brunei.
+    "Rodney": "ɹˈɒdni",
+    "Mundy": "mˈʌndi",
+    "Catherine": "kˈaθəɹɪn",
+    "Tanjung": "tˈandʒʊŋ",                # Malay "cape", same word as "Tanjong" above.
+    "Kubong": "kˈuːbɒŋ",                  # Tanjung Kubong (ear-pick pending).
+    "Laurence": "lˈɒɹəns",
+    "Guillemard": "ɡˈɪləmɑːd",            # Sir Laurence Guillemard, of Guillemard Road (ear-pick pending).
+    "Maundrell": "mˈɔːndɹəl",
+    "Jesselton": "dʒˈɛsəltən",            # today's Kota Kinabalu.
+    "Toshinari": "tˌOʃɪnˈɑːɹi",
+    "Maeda": "mɑːˈeɪdə",                  # "mah-AY-duh" (ear-pick pending).
+    "Maeda's": "mɑːˈeɪdəz",
+    "Bintulu": "bɪntˈuːluː",
+    "Masao": "mɑːsˈɑːO",
+    "Wootten": "wˈʊtən",
+    "Layang-Layangan": "lɑːjˈɑːŋ lɑːjˈɑːŋən",  # Malay, "lah-YAHNG lah-YAHNG-an" (ear-pick pending).
     "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
     "Ong-Tiang-Swee": "ˌɒŋ tjˌɑŋ swˌiː",
     "Ong-Siew-Eng": "ˌɒŋ sjˌuː ˌɛŋ",
