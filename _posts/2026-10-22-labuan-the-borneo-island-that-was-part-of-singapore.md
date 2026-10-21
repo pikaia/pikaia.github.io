@@ -97,7 +97,14 @@ Labuan also holds a large Commonwealth war cemetery. The Labuan War Cemetery has
 
 ## After the war
 
-The Straits Settlements were dissolved on 1 April 1946, and Singapore became a Crown Colony on its own. Labuan went the other way. On 15 July 1946 it was joined to the new Crown Colony of North Borneo, which took over from the North Borneo Company, and the Straits Times reported the next morning that North Borneo had become a British colony at a ceremony in Jesselton. In 1963 North Borneo, renamed Sabah, became part of Malaysia, and Labuan went with it. On 16 April 1984 Sabah handed the island to the federal government, and it became a federal territory.
+<div style="float: right; max-width: 260px; margin: 0 0 1em 1.5em;">
+<img src="/assets/images/straits-times-1946-07-16-page-1.jpg" alt="The front page of the Straits Times of 16 July 1946, with the headline North Borneo Joins Empire at the top left and a photograph of seized weapons in the centre" style="width: 100%;">
+<em>The Straits Times of 16 July 1946, page 1: "North Borneo Joins Empire," reporting Labuan's transfer from Singapore. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+The Straits Settlements were dissolved on 1 April 1946, and Singapore became a Crown Colony on its own, with Labuan still under its jurisdiction for a few more months. On 15 July 1946 the island was joined to the new Crown Colony of North Borneo, which took over from the North Borneo Company. The next morning's Straits Times reported on its front page that, "with Labuan transferred from the jurisdiction of Singapore," North Borneo had become a British colony at a ceremony in the bullet-scarred Survey Hall in Jesselton, one of the few government buildings there that the bombing had spared. In 1963 North Borneo, renamed Sabah, became part of Malaysia, and Labuan went with it. On 16 April 1984 Sabah handed the island to the federal government, and it became a federal territory.
+
+<div style="clear: both;"></div>
 
 ## Today
 
@@ -266,7 +273,7 @@ Labuan's land area is about 92 square kilometres, roughly an eighth of Singapore
 </script>
 </div>
 
-[See 9 more historical and present-day pictures of Labuan →](/gallery/labuan-the-borneo-island-that-was-part-of-singapore/)
+[See 10 more historical and present-day pictures of Labuan →](/gallery/labuan-the-borneo-island-that-was-part-of-singapore/)
 
 **Where it fits in the bigger story:** Singapore's borders were not always the ones it has now. Like Christmas Island and the Cocos Islands, which are told in the [Christmas Island post](/2026/07/20/christmas-island-singapore-never-owned/), Labuan was for a time run from Singapore as part of one scattered colony, from 1907 until the colony was broken up in 1946. The island never became the rival port that some people in Singapore feared in the 1840s, but for almost forty years it shared Singapore's governors and laws, for about forty years until 1909 it shared its bishop, and its war cemetery still holds many of the men who left Changi for Borneo and never came back.
 
@@ -285,9 +292,9 @@ Labuan's land area is about 92 square kilometres, roughly an eighth of Singapore
 - [Labuan, British Empire map room](https://britishempire.co.uk/maproom/labuan.htm)
 - [Walter Makepeace, Gilbert E. Brooke and Roland St J. Braddell (eds), One Hundred Years of Singapore, vol. 1 (1921), Internet Archive](https://archive.org/details/onehundredyearso01braduoft)
 - [Walter Makepeace, Gilbert E. Brooke and Roland St J. Braddell (eds), One Hundred Years of Singapore, vol. 2 (1921), Internet Archive](https://archive.org/details/onehundredyearso02braduoft)
-- [The Straits Times, 2 January 1907, page 6, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19070102-1)
+- [The Straits Times, 2 January 1907, page 6, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/page/straitstimes19070102-1.1.6)
 - [The Straits Times, 11 September 1945, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19450911-1)
-- ["North Borneo Joins Empire", The Straits Times, 16 July 1946, page 1, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/issue/straitstimes19460716-1)
+- ["North Borneo Joins Empire", The Straits Times, 16 July 1946, page 1, NewspaperSG](https://eresources.nlb.gov.sg/newspapers/digitised/page/straitstimes19460716-1.1.1)
 - [Labuan War Cemetery, Commonwealth War Graves Commission](https://www.cwgc.org/find-a-cemetery/cemetery/17000)
 - [CWGC Memorial to the Missing, Labuan War Cemetery, Australian Department of Veterans' Affairs](https://www.dva.gov.au/recognition/commemorations/memorials/memorials-asia-pacific/malaysia/cwgc-memorial-missing-labuan-war-cemetery)
 - [Surrender to Major-General Wootten at Labuan, Australian War Memorial](https://awm.gov.au/collection/F07316)

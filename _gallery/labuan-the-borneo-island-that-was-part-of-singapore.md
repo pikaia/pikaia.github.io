@@ -30,6 +30,12 @@ More pictures of Labuan, from the treaty of 1846 and the old maps and charts to 
 
 *The Government Offices on Labuan, from a British colonial photograph album (date unknown). (Unknown author, The National Archives UK, Open Government Licence, via Wikimedia Commons)*
 
+### The Labuan Bill, 1907
+
+![A full newspaper page of closely set columns of short news items, with a few headlines and advertisements](/assets/images/straits-times-1907-01-02-page-6.jpg)
+
+*The Straits Times of 2 January 1907, page 6. Among its short notes is one reporting that the Labuan Bill had passed all its stages in the Legislative Council that afternoon. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)*
+
 ### The Prince of Wales's visit, 1922
 
 ![A grey granite memorial stone engraved with the record of a royal visit, standing in a paved square with a yellow colonial building behind](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Labuan_Malaysia_Memorial-Stone-Visit-Prince-of-Wales-01.jpg/1280px-Labuan_Malaysia_Memorial-Stone-Visit-Prince-of-Wales-01.jpg)
