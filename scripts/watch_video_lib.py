@@ -52,8 +52,10 @@ Config module contract (see scripts/video-configs/ for real examples):
     TIMING_JSON: str             - path to the post's <slug>.timing.json,
                                     relative to the repo root.
     WIDTH, HEIGHT, FPS: int      - optional, default 1280x720x25.
-    THUMBNAIL: str | dict        - optional, the YouTube thumbnail's image
+    THUMBNAIL: str | dict | list - optional, the YouTube thumbnail's image
                                     (--thumbnail); see thumbnail_slide().
+                                    A list of four is the channel's 2x2
+                                    grid (see compose_thumbnail()).
     IMAGE_BG: dict               - optional {IMAGES key: (r, g, b)}: flatten
                                     that transparent PNG onto this colour
                                     (default: alpha dropped -> black).
@@ -988,7 +990,11 @@ def spot_check_frames(cfg, config_stem, slide_arg="2", video_override=None):
 THUMBNAIL_MAX_BYTES = 2 * 1024 * 1024  # YouTube's custom-thumbnail limit
 
 
-def thumbnail_slide(cfg):
+THUMBNAIL_GRID_GAP = 6  # px between the 2x2 grid's cells
+THUMBNAIL_GRID_BG = (20, 20, 20)
+
+
+def thumbnail_slide(cfg, spec=None):
     """The slide a config's YouTube thumbnail is drawn from.
 
     Optional config `THUMBNAIL`: an IMAGES key (cover, centred), or a slide
@@ -999,7 +1005,8 @@ def thumbnail_slide(cfg):
     2026-10-18: YouTube's own auto-picked frames chose Lee Kuan Yew's
     portrait for the Ya'acob Mohamed video, so the thumbnail is now
     uploaded by hand from a frame we choose."""
-    spec = getattr(cfg, "THUMBNAIL", None)
+    if spec is None:
+        spec = getattr(cfg, "THUMBNAIL", None)
     if spec is None:
         for slide in cfg.SLIDES:
             if slide["type"] in ("cover", "letterbox"):
@@ -1021,8 +1028,34 @@ def thumbnail_slide(cfg):
             "zoom": [zoom] * 3, "pan": [tuple(pan)] * 3}
 
 
-def compose_thumbnail(cfg, out_w, out_h):
-    slide = thumbnail_slide(cfg)
+def compose_thumbnail(cfg, out_w, out_h, grid=None):
+    """The thumbnail frame and a short label of what it shows.
+
+    A `THUMBNAIL` list of four specs (each as thumbnail_slide() takes them)
+    is a 2x2 grid in reading order, which has been the channel's standard
+    since the Labuan post (2026-10-21): one picture per stage of the story,
+    earliest top left, today bottom right. `grid` is a fallback list, used
+    by a Short whose config sets no THUMBNAIL of its own."""
+    spec = getattr(cfg, "THUMBNAIL", None)
+    if spec is None:
+        spec = grid
+    if isinstance(spec, list):
+        if len(spec) != 4:
+            raise ValueError(f"a THUMBNAIL grid needs 4 images, got {len(spec)}")
+        gap = THUMBNAIL_GRID_GAP
+        cell_w, cell_h = (out_w - gap) // 2, (out_h - gap) // 2
+        frame = Image.new("RGB", (out_w, out_h), THUMBNAIL_GRID_BG)
+        keys = []
+        for i, cell in enumerate(spec):
+            img, slide = _compose_one_thumbnail(cfg, thumbnail_slide(cfg, cell), cell_w, cell_h)
+            frame.paste(img, ((i % 2) * (out_w - cell_w), (i // 2) * (out_h - cell_h)))
+            keys.append(slide["img"])
+        return frame, f"2x2 grid of {', '.join(keys)}"
+    frame, slide = _compose_one_thumbnail(cfg, thumbnail_slide(cfg), out_w, out_h)
+    return frame, f"{slide['img']} ({slide['type']})"
+
+
+def _compose_one_thumbnail(cfg, slide, out_w, out_h):
     one = type("ThumbCfg", (), {"SLIDES": [slide], "IMAGES": cfg.IMAGES,
                                 "IMAGE_BG": getattr(cfg, "IMAGE_BG", {}),
                                 "_config_dir": cfg._config_dir})
@@ -1038,24 +1071,30 @@ def compose_thumbnail(cfg, out_w, out_h):
     return frame, slide
 
 
-def _write_one_thumbnail(cfg, config_stem):
+def _write_one_thumbnail(cfg, config_stem, grid=None):
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
-    frame, slide = compose_thumbnail(cfg, out_w, out_h)
+    frame, label = compose_thumbnail(cfg, out_w, out_h, grid)
     out = REPO_ROOT / "preview-motion" / f"{config_stem}-thumbnail.jpg"
     out.parent.mkdir(exist_ok=True)
     for quality in (92, 85, 75, 65):
         frame.save(out, "JPEG", quality=quality, optimize=True)
         if out.stat().st_size <= THUMBNAIL_MAX_BYTES:
             break
-    source = "THUMBNAIL" if getattr(cfg, "THUMBNAIL", None) is not None else "first image slide"
+    if getattr(cfg, "THUMBNAIL", None) is not None:
+        source = "THUMBNAIL"
+    elif grid is not None:
+        source = "the main config's THUMBNAIL"
+    else:
+        source = "first image slide"
     print(f"Wrote {out} - {out_w}x{out_h}, {out.stat().st_size // 1024} KB, "
-          f"{slide['img']} ({slide['type']}, from {source})", file=sys.stderr)
+          f"{label}, from {source}", file=sys.stderr)
 
 
 def write_thumbnails(cfg, config_stem, config_path):
     """Step 8.3: write preview-motion/<stem>-thumbnail.jpg for YouTube's
     "Upload thumbnail", and cascade to a sibling -short.py the same way
-    verify_frame_count() does (the Short's is vertical, 1080x1920)."""
+    verify_frame_count() does (the Short's is vertical, 1080x1920). A main
+    config's THUMBNAIL grid carries over to a Short that sets none."""
     _write_one_thumbnail(cfg, config_stem)
     if config_stem.endswith("-short") or config_stem.endswith("_short"):
         return
@@ -1064,7 +1103,8 @@ def write_thumbnails(cfg, config_stem, config_path):
         return
     short_cfg = load_config(short_path)
     validate_short_config(short_cfg, short_path)
-    _write_one_thumbnail(short_cfg, f"{config_stem}-short")
+    grid = getattr(cfg, "THUMBNAIL", None)
+    _write_one_thumbnail(short_cfg, f"{config_stem}-short", grid if isinstance(grid, list) else None)
 
 
 def _verify_one_frame_count(cfg, config_stem):

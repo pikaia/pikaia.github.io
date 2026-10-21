@@ -1637,6 +1637,20 @@ dict (`THUMBNAIL = {"img": "FERRY", "type": "letterbox", "pan": (0.6, 0.5)}`).
 The named-person rule applies: never a portrait of someone other than
 the post's subject. Claude opens both JPEGs during the pre-upload review.
 
+**The channel's standard thumbnail is a 2×2 grid** (Chris's call,
+2026-10-21, from the Labuan post on: "a small mark of our channel").
+Claude sets `THUMBNAIL` to a list of four specs, each an `IMAGES` key or
+a dict as above, in reading order: one picture per stage of the story,
+earliest top left, today bottom right, mixing colour and black-and-white
+so it reads at small size. The main video gets a 1280×720 grid; the
+Short gets a 1080×1920 grid of tall cells. A Short config with no
+`THUMBNAIL` of its own inherits the main config's list. Usually it needs
+its own `pan` values for the tall cells, plus `IMAGES` entries for any
+grid image that isn't among its slides. The Labuan configs are the
+reference. Pick images that survive a cover crop: no small portraits,
+since they get pixelated. The named-person rule still applies to every
+cell.
+
 ---
 
 ## 9. Stage the YouTube upload text file

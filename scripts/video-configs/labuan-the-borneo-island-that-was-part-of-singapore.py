@@ -85,6 +85,15 @@ CREDITS = {
     "DOWNTOWN": "Jason Thien, CC BY 2.0, via Wikimedia Commons",
 }
 
+# The channel's 2x2 thumbnail grid, 1846 to today: the flag-raising, the 1906
+# Straits Settlements stamp, the 1945 surrender, the Financial Park.
+THUMBNAIL = [
+    {"img": "FLAG", "pan": (0.5, 0.4)},
+    {"img": "STAMP", "pan": (0.5, 0.22)},
+    {"img": "SURRENDER", "pan": (0.5, 0.45)},
+    "FINPARK",
+]
+
 _E = "ease-in-out"
 _IN = {"type": "cover", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}
 _OUT = {"type": "cover", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}

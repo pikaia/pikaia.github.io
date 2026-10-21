@@ -20,11 +20,20 @@ IMAGES = {
     "FINPARK": f"{_C}/6/61/Labuan_Financial_Park_-_01.JPG/1280px-Labuan_Financial_Park_-_01.JPG",
     "CHART1848": f"{_C}/6/6c/Admiralty_Chart_No_1844_Labuan_Island%2C_Published_1848%2C_Large_Corrections_1902.jpg/1280px-Admiralty_Chart_No_1844_Labuan_Island%2C_Published_1848%2C_Large_Corrections_1902.jpg",
     "FLAG": f"{_U}/0/06/Ceremony_of_Hoisting_the_British_Flag_on_the_island_of_Labuan%2C_N._W._Coast_of_Borneo.jpg",
+    "SURRENDER": f"{_U}/5/5f/Japanese_Surrender%2C_Labuan_%28AWM_115989%29.JPG",  # thumbnail only
 }
 
 CREDITS = {
     "CHART1848": "United Kingdom Hydrographic Office, public domain, via Wikimedia Commons",
 }
+
+# The main video's thumbnail grid, re-panned for tall cells.
+THUMBNAIL = [
+    {"img": "FLAG", "pan": (0.62, 0.5)},
+    "STAMP",
+    {"img": "SURRENDER", "pan": (0.5, 0.4)},
+    {"img": "FINPARK", "pan": (0.35, 0.5)},
+]
 
 _E = "ease-in-out"
 _LB = {"type": "letterbox", "zoom": [1.0, 1.03, 1.06], "pan": [(0.5, 0.5)] * 3, "ease": _E}

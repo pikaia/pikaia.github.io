@@ -47,3 +47,31 @@ def test_frame_matches_output_size(tmp_path, size):
     frame, _ = compose_thumbnail(_cfg(tmp_path), *size)
     assert frame.size == size
     assert frame.getpixel((size[0] // 2, size[1] // 2))[0] > 150  # the red image
+
+
+GRID = ["RED", {"img": "BLUE"}, "BLUE", {"img": "RED", "pan": (0.2, 0.5)}]
+
+
+@pytest.mark.parametrize("size", [(1280, 720), (1080, 1920)])
+def test_grid_of_four_fills_cells_in_reading_order(tmp_path, size):
+    frame, label = compose_thumbnail(_cfg(tmp_path, THUMBNAIL=GRID), *size)
+    w, h = size
+    assert frame.size == size and label.startswith("2x2 grid")
+    assert frame.getpixel((w // 4, h // 4))[0] > 150        # top left: red
+    assert frame.getpixel((3 * w // 4, h // 4))[2] > 150    # top right: blue
+    assert frame.getpixel((w // 4, 3 * h // 4))[2] > 150    # bottom left: blue
+    assert frame.getpixel((3 * w // 4, 3 * h // 4))[0] > 150  # bottom right: red
+    assert frame.getpixel((w // 2, h // 4)) == (20, 20, 20)  # the gap between cells
+    assert frame.getpixel((w - 1, h - 1))[0] > 150           # cells reach the far edges
+
+
+def test_short_inherits_main_grid_but_own_thumbnail_wins(tmp_path):
+    frame, label = compose_thumbnail(_cfg(tmp_path), 1080, 1920, grid=GRID)
+    assert label.startswith("2x2 grid")
+    _, label = compose_thumbnail(_cfg(tmp_path, THUMBNAIL="BLUE"), 1080, 1920, grid=GRID)
+    assert label == "BLUE (cover)"
+
+
+def test_grid_needs_exactly_four(tmp_path):
+    with pytest.raises(ValueError):
+        compose_thumbnail(_cfg(tmp_path, THUMBNAIL=["RED", "BLUE"]), 1280, 720)
