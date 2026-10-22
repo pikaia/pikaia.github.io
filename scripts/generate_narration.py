@@ -1818,6 +1818,9 @@ PRONUNCIATION_OVERRIDES = {
     "Hiroso": "hiɹˈoʊsoʊ",               # "hee-ROH-soh".
     "Niimi": "nˈiːmi",                   # "NEE-mee".
     "Monbukagakusho": "mˌoʊnbuːkɑːɡɑːkˈuːʃoʊ",  # "mohn-boo-kah-gah-KOO-shoh".
+    "Alsagoff": "ˈælsəɡɒf",              # "AL-suh-gof"; Chris picked A by ear (2026-10-23).
+    "Pengiran": "pˈɛŋiɹɑːn",             # Brunei title, "PENG-ee-ran"; Chris picked A by ear (2026-10-23).
+    "TOPACS": "tˈoʊpʌks",                # the Tokyo firm Chris trained at, "TOH-puks"; Chris picked I by ear (2026-10-23).
     # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
     "Lim-Beng-Quan": "lˌɪm bˌɛŋ kwˌɑːn",
     "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
