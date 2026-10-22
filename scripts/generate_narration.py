@@ -1761,6 +1761,14 @@ PRONUNCIATION_OVERRIDES = {
     "Masao": "mɑːsˈɑːO",
     "Wootten": "wˈʊtən",
     "Layang-Layangan": "lɑːjˈɑːŋ lɑːjˈɑːŋən",  # Malay, "lah-YAHNG lah-YAHNG-an".
+    # Saving for the Emperor post (2026-10-22). Single obvious readings:
+    "Seiji": "sˈeɪdʒi",                  # "SAY-jee" - Seiji Hamada, Postal Administrator.
+    "Hamada": "hɑːmˈɑːdə",               # "hah-MAH-duh".
+    "Tencho": "tˈɛntʃoʊ",                # "TEN-choh" - Tencho Setsu, the Emperor's birthday.
+    "Setsu": "sˈɛtsuː",                  # "SET-soo".
+    "Kyoei": "kjˈoʊeɪ",                  # "KYOH-ay" - the Kyoei Gekijo cinema.
+    # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
+    "Lim-Beng-Quan": "lˌɪm bˌɛŋ kwˌɑːn",
     "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
     "Ong-Tiang-Swee": "ˌɒŋ tjˌɑŋ swˌiː",
     "Ong-Siew-Eng": "ˌɒŋ sjˌuː ˌɛŋ",
@@ -2498,6 +2506,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bTan Eng Joo\b"): "Tan-Eng-Joo",
     re.compile(r"\bWee Cho Yaw\b"): "Wee-Cho-Yaw",
     re.compile(r"\bOng Piah Teng\b"): "Ong-Piah-Teng",
+    re.compile(r"\bLim Beng Quan\b"): "Lim-Beng-Quan",
     re.compile(r"\bChua Keh Hai\b"): "Chua-Keh-Hai",
     re.compile(r"\bAw Boon Haw\b"): "Aw-Boon-Haw",
     re.compile(r"\bWee Kheng Chiang\b"): "Wee-Kheng-Chiang",
