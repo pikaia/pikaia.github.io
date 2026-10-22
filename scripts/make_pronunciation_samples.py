@@ -72,6 +72,7 @@ def main():
     if args.word not in args.sentence:
         raise SystemExit(f"{args.word!r} does not appear in the sentence")
     import soundfile as sf
+    sys.stdout.reconfigure(encoding="utf-8")  # the IPA in the report line breaks a cp1252 console
     out = ROOT / "scratch" / f"{args.slug}-{args.key}"
     out.mkdir(parents=True, exist_ok=True)
     pipe = gn._build_pipeline(gn._lang_code_for(args.voice))
