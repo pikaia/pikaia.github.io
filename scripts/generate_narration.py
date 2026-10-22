@@ -1842,6 +1842,16 @@ PRONUNCIATION_OVERRIDES = {
     "tonosama": "tˌoʊnoʊsˈɑːmə",         # "toh-noh-SAH-mah".
     "Kwan": "kwˈɑːn",                    # 寛, read as written, "KWAHN"; Chris picked B by ear (2026-10-23).
     "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; Chris picked A by ear (2026-10-23).
+    # Chek Jawa post (2026-10-23):
+    "Chek": "ʧˈɛk",                      # "check".
+    "Jawa": "ʤˈɑːwə",                    # Malay, "JAH-wah".
+    "Jawa's": "ʤˈɑːwəz",
+    "Sekudu": "səkˈuːduː",               # Pulau Sekudu, "suh-KOO-doo".
+    "Langdon": "lˈæŋdən",
+    "Lin": "lˈɪn",
+    "filmmaker": "fˈɪlmmeɪkə",
+    "Tan-Koh-Siang": "tˌan kˌoʊ sjˌɑːŋ",
+    "Lee-Thor-Seng": "lˌiː tˌɔː sˌɛŋ",
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -2598,6 +2608,8 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWee Kheng Chiang\b"): "Wee-Kheng-Chiang",
     re.compile(r"\bWee Ee Cheong\b"): "Wee-Ee-Cheong",
     re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
+    re.compile(r"\bTan Koh Siang\b"): "Tan-Koh-Siang",
+    re.compile(r"\bLee Thor Seng\b"): "Lee-Thor-Seng",
     re.compile(r"\bLee Keng Yan\b"): "Lee-Keng-Yan",
     re.compile(r"\bTan Keong Saik\b"): "Tan-Keong-Saik",
     re.compile(r"\bTan Sia Kuang\b"): "Tan-Sia-Kuang",
@@ -3273,7 +3285,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
