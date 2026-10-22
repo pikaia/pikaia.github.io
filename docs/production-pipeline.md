@@ -2005,6 +2005,10 @@ content changes without asking first. Rough shape:
   from the repo root and confirm `All checks passed!`. Section 3 already
   lints the configs; this is the catch-all for anything Python that rode
   along since.
+- **Then refresh the post log** — `python scripts/make_post_log.py`
+  rewrites `docs/post-log.md` (every post's title, first-posted date and
+  revisions, from the git history); commit it on its own after the
+  post's commit so the log includes that commit.
 
 **Solo fallback** (Claude unavailable) — the straightforward case is
 just the post's own commit:

@@ -30,3 +30,7 @@ slideshow, exported video, YouTube Shorts, and the YouTube upload itself
 
 - [Post ideas](docs/post-ideas.md) — candidate topics not yet written up
 - [Feature ideas](docs/feature-ideas.md) — candidate site features not yet built
+
+## Post log
+
+- [Post log](docs/post-log.md) — every post's title, first-posted date and revisions, generated from the git history
