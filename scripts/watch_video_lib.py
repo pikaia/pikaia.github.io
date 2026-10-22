@@ -78,6 +78,7 @@ import functools
 import hashlib
 import importlib.util
 import json
+import math
 import multiprocessing
 import os
 import re
@@ -381,10 +382,26 @@ CHART_SUPERSAMPLE = 3
 # shows up as gradual antialiasing change frame to frame.
 
 
+_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def chart_time_label(cur_year, mode="year"):
+    # The readout under the chart's live value. "year" rounds to a whole
+    # year (the original behaviour). "month" reads a fractional year as
+    # "Aug 1943", for a chart spanning only a few years (the 1942-45
+    # savings chart), where a rounded year would run ahead of the line.
+    if mode == "month":
+        yr = int(math.floor(cur_year))
+        m = min(11, int((cur_year - yr) * 12))
+        return f"{_MONTHS[m]} {yr}"
+    return f"{int(round(cur_year))}"
+
+
 def _draw_chart_panel(draw, data, cur_year, panel_top, panel_bot, left, right,
                       x_min, x_max, y_min, y_max, y_tick_step, y_tick_fmt,
                       value_fmt, annotations, tick_font, label_font, sub_font,
-                      out_h, out_w, draw_x_ticks, panel_label=None):
+                      out_h, out_w, draw_x_ticks, panel_label=None,
+                      x_tick_step=5, time_label="year"):
     # One line panel: gridlines + y ticks, the line drawn up to cur_year,
     # annotation dots revealed as the line reaches them, and the live
     # end-dot + value/year readout. Shared by the single-panel chart and
@@ -405,11 +422,13 @@ def _draw_chart_panel(draw, data, cur_year, panel_top, panel_bot, left, right,
         v += y_tick_step
 
     if draw_x_ticks:
-        yr = int(x_min)
+        # First tick at the first whole year inside the range (the same
+        # int(x_min) as before for the whole-year ranges older charts use).
+        yr = math.ceil(x_min)
         while yr <= x_max:
             x = sx(yr)
             draw.text((x, panel_bot + out_h * 0.03), str(yr), font=tick_font, fill=CHART_MUTED, anchor="mm")
-            yr += 5
+            yr += x_tick_step
 
     if panel_label:
         draw.text((left, panel_top - out_h * 0.028), panel_label, font=sub_font, fill=CHART_SECONDARY)
@@ -438,7 +457,7 @@ def _draw_chart_panel(draw, data, cur_year, panel_top, panel_bot, left, right,
     ex, ey = sx(cur_year), sy(cur_val)
     r2 = max(4, int(out_h * 0.007))
     draw.ellipse([ex - r2, ey - r2, ex + r2, ey + r2], fill=CHART_LINE, outline=CHART_BG, width=2)
-    year_label = f"{int(round(cur_year))}"
+    year_label = chart_time_label(cur_year, time_label)
     val_label = value_fmt.format(cur_val)
     label_x = min(ex + 14, right - out_w * 0.16)
     draw.text((label_x, ey - out_h * 0.05), val_label, font=label_font, fill=CHART_TEXT)
@@ -519,7 +538,9 @@ def compose_chart_frame(slide, out_w, out_h, t, progress):
         _draw_chart_panel(draw, data, cur_year, out_h * 0.16, out_h * 0.82,
                           left, right, x_min, x_max, y_min, y_max, step, tick_fmt,
                           value_fmt, anns, tick_font, label_font, sub_font,
-                          out_h, out_w, draw_x_ticks=True)
+                          out_h, out_w, draw_x_ticks=True,
+                          x_tick_step=slide.get("x_tick_step", 5),
+                          time_label=slide.get("time_label", "year"))
 
     return frame.resize((out_w // ss, out_h // ss), Image.LANCZOS)
 
