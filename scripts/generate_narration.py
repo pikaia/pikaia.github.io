@@ -1840,7 +1840,7 @@ PRONUNCIATION_OVERRIDES = {
     "Muar": "mˈuːɑː",                    # Johor town, "MOO-ah".
     "toragari": "tˌoʊɹɑːɡˈɑːɹi",         # "toh-rah-GAH-ree".
     "tonosama": "tˌoʊnoʊsˈɑːmə",         # "toh-noh-SAH-mah".
-    "Kwan": "kˈɑːn",                     # 寛, old romanisation of "Kan"; NOT ear-verified yet.
+    "Kwan": "kwˈɑːn",                    # 寛, read as written, "KWAHN"; Chris picked B by ear (2026-10-23).
     "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; NOT ear-verified yet.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
