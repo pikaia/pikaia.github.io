@@ -1821,6 +1821,38 @@ PRONUNCIATION_OVERRIDES = {
     "Alsagoff": "ˈælsəɡɒf",              # "AL-suh-gof"; Chris picked A by ear (2026-10-23).
     "Pengiran": "pˈɛŋiɹɑːn",             # Brunei title, "PENG-ee-ran"; Chris picked A by ear (2026-10-23).
     "TOPACS": "tˈoʊpʌks",                # the Tokyo firm Chris trained at, "TOH-puks"; Chris picked I by ear (2026-10-23).
+    # Marquis Tokugawa post (2026-10-23):
+    "Yoshichika": "jˌoʊʃitʃˈiːkə",       # "yoh-shee-CHEE-kah".
+    "Holttum": "hˈɒltəm",                # "HOL-tum".
+    "Holttum's": "hˈɒltəmz",
+    "Tanakadate": "tˌɑːnɑːkɑːdˈɑːteɪ",   # "tah-nah-kah-DAH-teh".
+    "Tanakadate's": "tˌɑːnɑːkɑːdˈɑːteɪz",
+    "Hidezō": "hˌiːdɛzˈoʊ",             # "hee-deh-ZOH".
+    "Hideso": "hˌiːdɛsˈoʊ",              # the 1942 paper's spelling, read as written.
+    "kazoku": "kɑːzˈoʊkuː",              # "kah-ZOH-koo".
+    "kōshaku": "kˈoʊʃɑːkuː",            # "KOH-shah-koo" (both ranks).
+    "hakushaku": "hˌɑːkuːʃˈɑːkuː",       # "hah-koo-SHAH-koo".
+    "shishaku": "ʃˈiːʃɑːkuː",            # "SHEE-shah-koo".
+    "danshaku": "dˈɑːnʃɑːkuː",           # "DAHN-shah-koo".
+    "Matsudaira": "mˌɑːtsuːdˈaɪɹə",      # "maht-soo-DYE-rah".
+    "Shungaku": "ʃˈʊŋɡɑːkuː",            # "SHOONG-gah-koo".
+    "Owari": "oʊwˈɑːɹi",                 # "oh-WAH-ree".
+    "Muar": "mˈuːɑː",                    # Johor town, "MOO-ah".
+    "toragari": "tˌoʊɹɑːɡˈɑːɹi",         # "toh-rah-GAH-ree".
+    "tonosama": "tˌoʊnoʊsˈɑːmə",         # "toh-noh-SAH-mah".
+    "Kwan": "kˈɑːn",                     # 寛, old romanisation of "Kan"; NOT ear-verified yet.
+    "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; NOT ear-verified yet.
+    "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
+    "Desch": "dˈɛʃ",                     # "DESH".
+    "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
+    "Yata": "jˈɑːtə",                    # "YAH-tah".
+    "Reyes": "ɹˈeɪjɛs",                  # "RAY-yes".
+    "Tyersall": "tˈaɪəsɔːl",             # Singapore estate, "TIE-uh-sawl".
+    "Marē": "mˈɑːɹeɪ",                  # 馬来, "MAH-ray".
+    "ga": "ɡˈɑː",
+    "aru": "ˈɑːɹuː",
+    "Archey": "ˈɑːtʃi",                  # "AR-chee".
+    "countrymen": "kˈʌntɹimən",
     # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
     "Lim-Beng-Quan": "lˌɪm bˌɛŋ kwˌɑːn",
     "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
