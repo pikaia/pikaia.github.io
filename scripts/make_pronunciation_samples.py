@@ -13,6 +13,11 @@ sample scripts that did that produced identical takes for every candidate
 Example:
     python scripts/make_pronunciation_samples.py new-syonan-the-endau-settlement-1943 katis katis \\
         "Each settler got 18 katis of rice." A-catty=kˈatiz B-car=kˈɑːtiz
+
+With the voice clone on (the default since 2026-10-14), each George take is
+converted with OpenVoice and only the cloned clips are written: Chris listens
+to the clone alone (2026-10-23). --george writes the plain Kokoro takes
+instead, for a post narrated without the clone.
 """
 import argparse
 import sys
@@ -34,6 +39,24 @@ def parse_candidates(items):
     return out
 
 
+def synth_samples(pipe, word, sentence, cands, voice, clone=True, clone_fn=None):
+    """{name: audio} for each candidate reading. With clone on, the George
+    takes go through clone_fn (gn.clone_openvoice) and only the cloned
+    audio is returned; the George takes are never written to disk."""
+    golds = pipe.g2p.lexicon.golds
+    takes = {}
+    for name, ph in cands.items():
+        golds[word] = ph
+        takes[name] = gn._synth_one(pipe, sentence, voice)
+    if not clone:
+        return takes
+    names = list(takes)
+    cloned = (clone_fn or gn.clone_openvoice)(
+        [sentence] * len(names), [takes[n] for n in names],
+        [f"{n}.wav" for n in names], gn.DEFAULT_CLONE_REF, use_cache=False)
+    return dict(zip(names, cloned))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("slug")
@@ -42,6 +65,8 @@ def main():
     ap.add_argument("sentence")
     ap.add_argument("candidates", nargs="+", help="NAME=PHONEMES")
     ap.add_argument("--voice", default="bm_george")
+    ap.add_argument("--george", action="store_true",
+                    help="write the plain Kokoro takes instead of the voice-clone clips")
     args = ap.parse_args()
     cands = parse_candidates(args.candidates)
     if args.word not in args.sentence:
@@ -50,12 +75,10 @@ def main():
     out = ROOT / "scratch" / f"{args.slug}-{args.key}"
     out.mkdir(parents=True, exist_ok=True)
     pipe = gn._build_pipeline(gn._lang_code_for(args.voice))
-    golds = pipe.g2p.lexicon.golds
-    for name, ph in cands.items():
-        golds[args.word] = ph
-        audio = gn._synth_one(pipe, args.sentence, args.voice)
+    takes = synth_samples(pipe, args.word, args.sentence, cands, args.voice, clone=not args.george)
+    for name, audio in takes.items():
         sf.write(out / f"{name}.wav", audio, 24000)
-        print(f"wrote {out / (name + '.wav')}  ({ph}, {len(audio) / 24000:.2f}s)")
+        print(f"wrote {out / (name + '.wav')}  ({cands[name]}, {len(audio) / 24000:.2f}s)")
 
 
 if __name__ == "__main__":
