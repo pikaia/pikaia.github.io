@@ -1841,7 +1841,7 @@ PRONUNCIATION_OVERRIDES = {
     "toragari": "tˌoʊɹɑːɡˈɑːɹi",         # "toh-rah-GAH-ree".
     "tonosama": "tˌoʊnoʊsˈɑːmə",         # "toh-noh-SAH-mah".
     "Kwan": "kwˈɑːn",                    # 寛, read as written, "KWAHN"; Chris picked B by ear (2026-10-23).
-    "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; NOT ear-verified yet.
+    "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; Chris picked A by ear (2026-10-23).
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
