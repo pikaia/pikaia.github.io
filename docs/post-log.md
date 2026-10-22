@@ -8,6 +8,7 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-23 · `2026-10-23-the-marquis-and-the-museum-tokugawa-yoshichika-in-syonan.md`
 
+- 2026-10-23: Watch widget with the published YouTube, Shorts and TikTok links; gap reports, staged YouTube text (Short credit for the 1910 Gardens photo... (`1d0bf83`)
 - 2026-10-23: Narration (voice clone), Listen widget, Kwan ear-picked (B), main video config (50 slides, avatar) and vertical Short config (0-62.3s)... (`292152f`)
 
 ## The Southern Special Students: Malayan Youths Sent to Japan, 1943–45
