@@ -18,6 +18,11 @@ IMAGES = {
     "LKC2026": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lee_Kong_Chian_Natural_History_Museum_Jul2026_01.jpg/1280px-Lee_Kong_Chian_Natural_History_Museum_Jul2026_01.jpg",
 }
 
+# Credits for images not captioned in the post or its gallery.
+CREDITS = {
+    "GARD1910": "C. J. Kleingrothe, public domain, via Wikimedia Commons",
+}
+
 # The main video's thumbnail grid, re-panned for tall cells.
 THUMBNAIL = [
     {"img": "HERO", "pan": (0.45, 0.5)},
