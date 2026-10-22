@@ -16,6 +16,11 @@ On 16 July 1945, a month before Japan surrendered, the Syonan Shimbun carried an
 
 ## A savings bank at every post office
 
+<div style="float: left; max-width: 300px; margin: 0 1.5em 1em 0;">
+<img src="/assets/images/syonan-shimbun-1945-07-16-page-2.jpg" alt="A full newspaper page with the Syonan Shimbun masthead, a report headed Postal Chief Assures Savings Depositors' Money Always Safe at the top left, and a boxed bank advertisement at the bottom right" style="width: 100%;">
+<em>The Syonan Shimbun of 16 July 1945, page 2. The Postmaster-General's assurance is at the top left, and the Malai Banking Association's advertisement for its fourth "Fixed Deposit with Bonus" is at the bottom right. (The Syonan Shimbun, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
 Singapore had had a post office savings bank since 1877, run by the colonial government across the counter of the General Post Office, as described in an [earlier post on POSB](/2026/08/31/posb-peoples-bank-nation-of-savers/). Before the war it was a bank of the Straits Settlements only. An account opened in Singapore could not be used in the Federated Malay States, and the other Malay states had their own arrangements or none at all.
 
 When Singapore fell in February 1942, depositors could no longer draw on those pre-war accounts as they pleased. Later in 1942 the Japanese postal authorities let them take out part of their old balances, at first $30 and then $25 every half-year. From 8 December 1942, the first anniversary of the war in the Pacific, the limits were raised to $100 for the first withdrawal and $50 every half-year after that. The announcement came from Seiji Hamada, the Postal Administrator for Malai and Sumatra. Malai was the administration's name for Malaya, and Singapore had been renamed Syonan.
