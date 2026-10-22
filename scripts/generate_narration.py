@@ -1767,6 +1767,57 @@ PRONUNCIATION_OVERRIDES = {
     "Tencho": "tˈɛntʃoʊ",                # "TEN-choh" - Tencho Setsu, the Emperor's birthday.
     "Setsu": "sˈɛtsuː",                  # "SET-soo".
     "Kyoei": "kjˈoʊeɪ",                  # "KYOH-ay" - the Kyoei Gekijo cinema.
+    # Southern Special Students post (2026-10-23). Single obvious readings:
+    "Woodsville": "wˈʊdzvɪl",            # "WOODZ-vil", off Upper Serangoon Road.
+    "Bostam": "bˈɒstɑːm",                # "BOS-tahm".
+    "Kasmani": "kɑːsmˈɑːni",             # "kahs-MAH-nee".
+    "Nanpō": "nˈɑːnpoʊ",                 # as "Nanpo".
+    "tokubetsu": "tˌoʊkuːbˈɛtsuː",       # "toh-koo-BET-soo".
+    "ryūgakusei": "ɹjˌuːɡɑːkuːsˈeɪ",     # "ryoo-gah-koo-SAY".
+    "Ryugakusei": "ɹjˌuːɡɑːkuːsˈeɪ",
+    "Gunseikan": "ɡˌʊnseɪkˈɑːn",         # "goon-say-KAHN".
+    "Aoki": "ɑːˈoʊki",                   # "ah-OH-kee" - Kazuo Aoki.
+    "Kunrenjo": "kˌʊnɹɛnʤˈoʊ",           # "koon-ren-JOH".
+    "Kunrensho": "kˌʊnɹɛnʃˈoʊ",          # "koon-ren-SHOH".
+    "Kyoji": "kjˈoʊʤi",                  # "KYOH-jee".
+    "Sunagawa": "sˌuːnɑːɡˈɑːwə",         # "soo-nah-GAH-wah".
+    "Mitsuo": "mˈiːtsuːoʊ",              # "MEET-soo-oh".
+    "Matsunaga": "mˌɑːtsuːnˈɑːɡə",       # "maht-soo-NAH-gah".
+    "kokuminfuku": "kˌoʊkuːmɪnfˈuːkuː",  # "koh-koo-min-FOO-koo".
+    "Kokusai": "kˈoʊkuːsaɪ",             # "KOH-koo-sigh".
+    "Gakuyukai": "ɡˌɑːkuːjuːkˈaɪ",       # "gah-koo-yoo-KYE".
+    "Ungku": "ˈʊŋkuː",                   # Malay, "OONG-koo".
+    "Aziz": "ɑːzˈiːz",                   # "ah-ZEEZ".
+    "Mohsen": "mˈoʊsɪn",                 # "MOH-sin" - both spellings, as the paper gave them.
+    "Mohsin": "mˈoʊsɪn",
+    "Waseda": "wɑːsˈeɪdə",               # "wah-SAY-dah".
+    "Mahat": "mɑːhˈɑːt",                 # "mah-HAHT".
+    "Hassan": "hˈæsən",                  # "HAS-un".
+    "Ahmat": "ˈɑːmɑːt",                  # "AH-maht".
+    "Yusoffe": "jˈuːsɒf",                # as "Yusof".
+    "Yusuf": "jˈuːsʊf",                  # "YOO-soof".
+    "Nik": "nˈɪk",
+    "Itsukaichi": "ˌiːtsuːkˈaɪtʃi",      # "eet-soo-KYE-chee".
+    "Kozenji": "koʊzˈɛnʤi",              # "koh-ZEN-jee".
+    "Saeki": "sɑːˈeɪki",                 # "sah-AY-kee".
+    "Meiko": "mˈeɪkoʊ",                  # "MAY-koh".
+    "Kurihara": "kˌʊɹihˈɑːɹə",           # "koo-ree-HAH-rah".
+    "Hamajima": "hˌɑːmɑːʤˈiːmə",         # "hah-mah-JEE-mah".
+    "Yoshihiro": "jˌoʊʃihˈiːɹoʊ",        # "yoh-shee-HEE-roh".
+    "Yura": "jˈuːɹə",                    # "YOO-rah" - Yura Halim, a pen name.
+    "Halim": "hɑːlˈiːm",                 # "hah-LEEM".
+    "Peliharakan": "pəlˌiːhɑːɹˈɑːkən",   # Malay, "puh-lee-hah-RAH-kun".
+    "menteri": "məntˈɛɹi",               # Malay, "mun-TEH-ree".
+    "besar": "bəsˈɑːɹ",                  # Malay, "buh-SAR".
+    "Universiti": "jˌuːnɪvˈɜːsɪti",      # read as "University".
+    "Teknologi": "tɛknˈɒləʤi",           # read as "Technology".
+    "Debu": "dəbˈuː",                    # Malay, "duh-BOO" - Debu Hiroshima.
+    "Kenkichi": "kˈɛŋkitʃi",             # "KENG-kee-chee".
+    "Sonobe": "sˌoʊnoʊbˈeɪ",             # "soh-noh-BAY".
+    "Toshie": "tˈoʊʃiɛ",                 # "TOH-shee-eh".
+    "Hiroso": "hiɹˈoʊsoʊ",               # "hee-ROH-soh".
+    "Niimi": "nˈiːmi",                   # "NEE-mee".
+    "Monbukagakusho": "mˌoʊnbuːkɑːɡɑːkˈuːʃoʊ",  # "mohn-boo-kah-gah-KOO-shoh".
     # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
     "Lim-Beng-Quan": "lˌɪm bˌɛŋ kwˌɑːn",
     "Ong-Ewe-Hai": "ˌɒŋ jˌuː hˌI",
