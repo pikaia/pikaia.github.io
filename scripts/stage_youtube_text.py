@@ -341,8 +341,10 @@ def extract_sources(text: str) -> list[str]:
         entry = link_m.group(1) if link_m else clean_text(line[2:])
         # Commons file pages ("File:..., Wikimedia Commons") are image credits,
         # already covered by the Images list; repeating them as sources is what
-        # pushed image-heavy posts over YouTube's 5,000-character limit.
-        if entry.startswith("File:"):
+        # pushed image-heavy posts over YouTube's 5,000-character limit. Match
+        # the link too: a label like "Hiroshima cenotaph, Wikimedia Commons"
+        # doesn't start with "File:" (Southern Special Students post, 5,084).
+        if entry.startswith("File:") or "commons.wikimedia.org/wiki/File:" in line:
             continue
         lines.append("- " + entry)
     return lines

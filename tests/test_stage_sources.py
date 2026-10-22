@@ -9,6 +9,7 @@ POST = """Text.
 - [File:Fort Gate, Fort Canning, Singapore - 20090103.jpg, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Fort_Gate.jpg>)
 - [File:KITLV - 29173 - circa 1860.tif, Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:KITLV_(1).tif>) (gallery)
 - [OpenStreetMap contributors](https://www.openstreetmap.org/copyright)
+- [Hiroshima Peace Memorial Park cenotaph, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hiroshima_Peace_Memorial_Park_cenotaph.jpg)
 """
 
 
