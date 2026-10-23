@@ -188,6 +188,25 @@ run finishes, without you needing to say "done" after every one. Only
 Claude can arm it (it's a Claude Code tool, not something run from your
 own terminal); the script itself is just the reusable watching logic.
 
+**When Chris hands the remaining steps to Claude [Claude].** Chris's own
+runs stay verbose. When he's busy or heading out and tells Claude to carry
+on, Claude runs each remaining step through `scripts/run_step_quiet.py`
+instead of the tee block, so the step's output doesn't fill Claude's
+context:
+
+```
+python scripts/run_step_quiet.py logs/<slug>.log "<section>.<n> <short name>" -- <command> <arg> ...
+```
+
+The log gets the same block the command file writes (date, `=== ... ===`
+header, echoed command, full output, `real` timing line), so the log reads
+the same whichever of us ran a step, and `watch-pipeline-log.sh` still
+works. The console only shows OK/FAILED with the exit code and time, any
+error/warning/traceback/failed/review lines, and the last six lines. On a
+failure, Claude reads just the part of the log around the error. Claude
+still stops before the steps that are Chris's alone (upload, AI labels,
+picking thumbnails).
+
 **The per-post command file [Claude].** As soon as a new post's draft is
 pushed, Claude writes `docs/commands/<slug>.txt`, every step from 1.1 to 12
 wrapped in the tee-to-log block, ready for Chris to paste:
