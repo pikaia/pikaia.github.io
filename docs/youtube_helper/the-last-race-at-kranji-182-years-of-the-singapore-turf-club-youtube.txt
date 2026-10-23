@@ -1,0 +1,115 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+The Last Race at Kranji: 182 Years of the Singapore Turf Club
+
+Description:
+On the 5th of October 2024, about 10,000 people went to Kranji for the last race meeting of the Singapore Turf Club. The last race of the day was the 100th Singapore Gold Cup, and when it was over, horse racing in Singapore ended after 182 years. In that time the club raced on three courses: an open plain off Serangoon Road that is now Farrer Park, a larger course at Bukit Timah, and finally Kranji. Each move took the horses further from the town, and each of the three sites has since been taken back for the city's other needs.
+
+Full story: https://da.gd/zT58uw
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and NewspaperSG and OpenStreetMap, credited individually):
+- LN9267, CC BY-SA 4.0, via Wikimedia Commons (3 photos)
+- dave ho, CC BY 2.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Singapore Free Press, via NewspaperSG, National Library Board Singapore, public domain
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons (3 photos)
+- Kleingrothe, C.J., KITLV collection, public domain, via Wikimedia Commons
+- Sengkang, copyrighted free use, via Wikimedia Commons (8 photos)
+- Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain (3 photos)
+- Eggjeezprata, CC BY-SA 4.0, via Wikimedia Commons
+- Chart by Lesser Known Singapore, figures from newspaper reports via NewspaperSG
+- Terence Ong, CC BY 2.5, via Wikimedia Commons (2 photos)
+- Seloloving, CC BY-SA 4.0, via Wikimedia Commons
+
+Sources (newspaper articles are from NewspaperSG):
+- Singapore Turf Club, Wikipedia
+- Singapore Gold Cup, Wikipedia
+- Kranji Racecourse, Wikipedia
+- National Heritage Board, Farrer Park Field, Roots.gov.sg
+- Remember Singapore, "Singapore's 182 Years of Horse Racing Reaches the Finishing Line", 29 October 2024
+- Mothership, "Horse racing average attendance fell to 2,600 in 2022, 350 Turf Club staff to be retrenched", June 2023
+- Urban Redevelopment Authority, "Heritage, nature and inclusive spaces to anchor new housing estate at Bukit Timah Turf City", 23 May 2024
+- Remember Singapore, "A Last Look at Turf City", 14 January 2024
+- MS News, "National Day Rally: New homes at Turf Club site in Kranji to be ready in 10 years", August 2025
+- The Singapore Free Press, 8 December 1842, "Singapore Races", page 3
+- The Straits Times, 17 April 1933, "Sir Cecil Looks Into The Future", page 12
+- Malaya Tribune, 17 April 1933, "Bukit Timah Race Course Opened"
+- The Sunday Times, 24 September 1933, "Fortunes Changed Hands At Races", page 10
+- Pinang Gazette, 18 June 1936, "S'pore Turf Club Autumn Meeting: $5,000 Stakes For Gold Cup Race"
+- The Straits Times, 15 November 1947, "Total Pool Now Exceeds One Million", page 1
+- The Sunday Times, 16 November 1947, "Record Crowd At Bukit Timah", page 1
+- The Straits Times, 23 August 1949, "$250,000 Prize Money At S.T.C. Meet", page 12
+- The Straits Times, 23 September 1953, "Gold Cup Money"
+- The Singapore Standard, 18 September 1957, "$35,000 Gold Cup For Next Singapore Race Meeting"
+- The Straits Times, 17 August 1961, "$50,000 Gold Cup Race At S'pore"
+- New Nation, 28 August 1971, Gold Cup stakes of $60,000
+- New Nation, 29 November 1977, "The $100,000 Singapore Gold Cup"
+- The Straits Times, 6 September 1985, Gold Cup prize money raised to $300,000
+- The Straits Times, 4 September 1986, "S'pore Gold Cup worth $330,000 this year"
+- The Straits Times, 1 July 1988, the $400,000 Singapore Gold Cup
+- The Straits Times, 7 October 1990, the $500,000 Singapore Gold Cup
+- The Straits Times, 7 September 1996, the $650,000 Singapore Gold Cup
+- The Straits Times, 9 September 1998, the $750,000 Singapore Gold Cup
+- The New Paper, 1 August 1999, "Kranji Views"
+- The New Paper, 22 September 1999, "'Super Eddie' is back"
+- The New Paper, 26 September 1999, "Power failure mars big night"
+- The Straits Times, 27 February 2000, "The Jewel of Kranji"
+- The New Paper, 5 March 2000, Ouzo wins the first Singapore Airlines International Cup
+- Today, 23 August 2003, Gold Cup prize money raised to $1.5 million
+- The New Paper, 12 November 2005, the $1.25 million Singapore Gold Cup
+- The Straits Times, 11 November 2007, the $1.35 million Singapore Gold Cup
+- The New Paper, 28 October 2017, the $1.35 million Singapore Gold Cup
+- The New Paper, 1 October 2019, the $1 million Singapore Gold Cup
+- The New Paper, 15 November 2021, the $1 million Singapore Gold Cup
+- The Straits Times, 6 June 2023, "Kranji racecourse to make way for housing, other developments"
+- The Straits Times, 2 November 2023, "Nearly $1m boost for finale"
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Last Race at Kranji: 182 Years of the Singapore Turf Club #Shorts
+
+Description:
+On the 5th of October 2024, about 10,000 people went to Kranji for the last race meeting of the Singapore Turf Club. The last race of the day was the 100th Singapore Gold Cup, and when it was over, horse racing in Singapore ended after 182 years. In that time the club raced on three courses: an open plain off Serangoon Road that is now Farrer Park, a larger course at Bukit Timah, and finally Kranji. Each move took the horses further from the town, and each of the three sites has since been taken back for the city's other needs. #Shorts
+
+Full story: https://da.gd/zT58uw
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons and NewspaperSG and OpenStreetMap):
+- LN9267, CC BY-SA 4.0, via Wikimedia Commons
+- dave ho, CC BY 2.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Singapore Free Press, via NewspaperSG, National Library Board Singapore, public domain
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+The Last Race at Kranji: 182 Years of the Singapore Turf Club
+
+On the 5th of October 2024, about 10,000 people went to Kranji for the last race meeting of the Singapore Turf Club. The last race of the day was the 100th Singapore Gold Cup, and when it was over, horse racing in Singapore ended after 182 years. In that time the club raced on three courses: an open plain off Serangoon Road that is now Farrer Park, a larger course at Bukit Timah, and finally Kranji. Each move took the horses further from the town, and each of the three sites has since been taken back for the city's other needs.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and NewspaperSG and OpenStreetMap):
+- LN9267, CC BY-SA 4.0, via Wikimedia Commons
+- dave ho, CC BY 2.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Singapore Free Press, via NewspaperSG, National Library Board Singapore, public domain
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
