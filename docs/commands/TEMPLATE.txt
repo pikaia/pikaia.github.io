@@ -123,6 +123,19 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 
+{ echo; date; echo "=== 8.4 Compress the main video for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/{SLUG}-avatar.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/{SLUG}-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/{SLUG}.log
+{ echo; date; echo "=== 8.4 Compress the Short for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/{SLUG}-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/{SLUG}-short-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/{SLUG}.log
+
 { echo; date; echo "=== 9. Stage the YouTube upload text file ==="
   cmd=(python scripts/stage_youtube_text.py
       {POST}

@@ -32,6 +32,7 @@ The rest maps 1:1 to this doc's own section numbers:
 6a/6b (Opt.) Avatar track + overlay              -- section 6a  [Manual]
 7. Render the YouTube Short                      -- section 7   [Manual]
 8. Verify both files                             -- section 8   [Manual]
+8.4 Compress both files for upload              -- section 8.4 [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
 10a. (Opt.) Upload the Short to TikTok           -- section 10a [Manual]
@@ -1669,6 +1670,24 @@ reference. Pick images that survive a cover crop: no small portraits,
 since they get pixelated. The named-person rule still applies to every
 cell.
 
+### 8.4 Compress both files for upload
+
+```
+ffmpeg -y -i preview-motion/<slug>-avatar.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/<slug>-web.mp4
+ffmpeg -y -i preview-motion/<slug>-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/<slug>-short-web.mp4
+```
+
+Added 2026-10-23 at Chris's request. The rendered files are large (the
+Turf Club main video was 139 MB), so both are re-encoded at CRF 26 into
+smaller `-web.mp4` copies, and those are the files uploaded in sections
+10 and 10a. `+faststart` moves the index to the front of the file. The
+command file runs this after the thumbnails, with `-loglevel warning
+-stats` so the log keeps only the final progress line. The verified
+originals stay in `preview-motion/` as the source of truth; frame
+counts and spot frames (8.1, 8.2) are checked on those, and re-encoding
+doesn't change the frame count. For a post with no avatar, compress
+`preview-motion/<slug>.mp4` instead.
+
 ---
 
 ## 9. Stage the YouTube upload text file
@@ -1803,6 +1822,9 @@ upload is specifically wanted.
 you're on the right channel, top-left of Studio, before uploading).
 
 **Settings, every upload:**
+- **File:** the compressed copies from section 8.4,
+  `preview-motion/<slug>-web.mp4` (main) and
+  `preview-motion/<slug>-short-web.mp4` (Short).
 - Visibility: **Public**
 - Not made for kids
 - Category: **Education**
@@ -1863,7 +1885,7 @@ resurfaces in a changed upload UI.
 ## 10a. Upload the Short to TikTok (optional)
 
 TikTok gets the **same file as the YouTube Short**,
-`preview-motion/<slug>-short.mp4`. There is no separate TikTok render:
+`preview-motion/<slug>-short-web.mp4` (the compressed copy from section 8.4). There is no separate TikTok render:
 the Short is already 1080x1920 with burned-in captions, and since
 2026-10-02 those captions sit at 70% of the frame height
 (`CAPTION_Y_FRAC = 0.70`), clear of TikTok's caption/username overlay

@@ -23,6 +23,13 @@ def test_no_subtitle_path_line():
     assert ".srt" not in out
 
 
+def test_compresses_both_files_for_upload():
+    out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
+    assert "-crf 26" in out and "+faststart" in out
+    assert "preview-motion/some-post-web.mp4" in out
+    assert "preview-motion/some-post-short-web.mp4" in out
+
+
 def test_refuses_to_overwrite(tmp_path):
     write(POST, out_dir=tmp_path)
     with pytest.raises(SystemExit):
