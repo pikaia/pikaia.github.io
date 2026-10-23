@@ -1863,6 +1863,11 @@ PRONUNCIATION_OVERRIDES = {
     # Turf Club post (2026-10-24):
     "Macleod": "məklˈaʊd",               # W. H. M. Read, "muh-KLOWD" (ear-pick A).
     "Indranee": "ɪndɹˈɑːni",             # Indranee Rajah, "in-DRAH-nee" (ear-pick A).
+    # Robinsons post (2026-10-24), all NOT ear-verified yet:
+    "Gaborian": "ɡəbˈɔːɹiən",            # James Gaborian Spicer, "guh-BOR-ee-un".
+    "Rappa": "ɹˈapə",                    # George Rappa Junior, "RAP-uh".
+    "Al-Futtaim": "alfʊtˈIm",            # Al-Futtaim Group, "al-fuh-TIME".
+    "Canningvale": "kˈanɪŋvAl",          # Australian firm, "CAN-ing-vale".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
