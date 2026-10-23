@@ -4,8 +4,8 @@
 
 Fills in the post path and slug and writes docs/commands/<slug>.txt - every
 step from 1.1 to 12, each wrapped in the tee-to-log block, with placeholder
-URLs in step 11 and the subtitle path as a comment line. Refuses to overwrite
-an existing command file (it may hold pasted URLs) unless --force is given.
+URLs in step 11. Refuses to overwrite an existing command file (it may hold
+pasted URLs) unless --force is given.
 """
 
 import argparse

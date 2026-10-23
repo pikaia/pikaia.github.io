@@ -18,10 +18,9 @@ def test_render_fills_slug_and_post():
     assert "logs/some-post.log" in out and POST in out
 
 
-def test_subtitle_path_is_a_comment():
+def test_no_subtitle_path_line():
     out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
-    srt_lines = [ln for ln in out.splitlines() if ln.strip().endswith('.srt"')]
-    assert srt_lines and all(ln.lstrip().startswith("#") for ln in srt_lines)
+    assert ".srt" not in out
 
 
 def test_refuses_to_overwrite(tmp_path):

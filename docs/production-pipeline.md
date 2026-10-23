@@ -216,8 +216,7 @@ python scripts/make_command_file.py _posts/<date>-<slug>.md
 ```
 
 It fills in `docs/commands/TEMPLATE.txt`. Step 11's URLs are placeholders to
-replace after upload, and the subtitle path is a comment line (a bare path
-would run the `.srt` as a shell script). It refuses to overwrite an existing
+replace after upload. It refuses to overwrite an existing
 file, which may hold pasted URLs, unless given `--force`. A change to the
 steps themselves goes into `TEMPLATE.txt`, so later posts pick it up.
 
