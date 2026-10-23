@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Chek Jawa: The Shore That Was Saved by a Survey
+
+First posted 2026-10-23 · `2026-10-23-chek-jawa-the-shore-that-was-saved-by-a-survey.md`
+
+- 2026-10-23: Watch widget, YouTube, Shorts and TikTok links, gap reports and YouTube text (`6eda8a4`)
+- 2026-10-23: Narration (voice clone), Listen widget, main video config (42 slides, land-area chart, OSM map, avatar) and vertical Short config... (`2e4d05a`)
+
 ## The Marquis and the Museum: Tokugawa Yoshichika in Syonan, 1942–44
 
 First posted 2026-10-23 · `2026-10-23-the-marquis-and-the-museum-tokugawa-yoshichika-in-syonan.md`
