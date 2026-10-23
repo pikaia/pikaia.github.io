@@ -1844,7 +1844,7 @@ PRONUNCIATION_OVERRIDES = {
     "Koriba": "kˈoʊɹibə",                # 郡場, "KOH-ree-bah"; Chris picked A by ear (2026-10-23).
     # Chek Jawa post (2026-10-23):
     "Chek": "ʧˈɛk",                      # "check".
-    "Jawa": "ʤˈɑːwə",                    # Malay, "JAH-wah".
+    "Jawa": "ʤˈɑːwə",                    # Malay, "JAH-wuh"; Chris picked A by ear (2026-10-23).
     "Jawa's": "ʤˈɑːwəz",
     "Sekudu": "səkˈuːduː",               # Pulau Sekudu, "suh-KOO-doo".
     "Langdon": "lˈæŋdən",
