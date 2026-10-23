@@ -1857,7 +1857,7 @@ PRONUNCIATION_OVERRIDES = {
     "Farrer": "fˈæɹəɹ",                  # Farrer Park, "FA-rer".
     "Kreta": "kɹˈeɪtə",                  # Kreta Ayer, Malay "KRAY-tuh".
     "Totalisator": "tˈoʊtəlaɪzˌeɪtəɹ",   # "TOH-tuh-lie-zay-ter".
-    "chap-ji-kee": "ʧˌæp ʤˌiː kˌiː",     # Hokkien 十字棋, even stress.
+    "chap-ji-kee": "ʧˌʌp ʤˌiː kˌiː",     # Hokkien 十字棋, even stress.
     "Choo-Poh-Keng": "ʧˌuː pˌoʊ kˌAŋ",   # fused, even stress; "Keng" as above.
     "Tang-See-Chim": "tˌɑŋ sˌiː ʧˌɪm",   # fused, even stress.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
