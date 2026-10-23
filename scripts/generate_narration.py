@@ -1861,8 +1861,8 @@ PRONUNCIATION_OVERRIDES = {
     "Choo-Poh-Keng": "ʧˌuː pˌoʊ kˌAŋ",   # fused, even stress; "Keng" as above.
     "Tang-See-Chim": "tˌɑŋ sˌiː ʧˌɪm",   # fused, even stress.
     # Turf Club post (2026-10-24):
-    "Macleod": "məklˈaʊd",               # W. H. M. Read, "muh-KLOWD".
-    "Indranee": "ɪndɹˈɑːni",             # Indranee Rajah, "in-DRAH-nee".
+    "Macleod": "məklˈaʊd",               # W. H. M. Read, "muh-KLOWD". NOT ear-verified yet.
+    "Indranee": "ɪndɹˈɑːni",             # Indranee Rajah, "in-DRAH-nee". NOT ear-verified yet.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
