@@ -4,6 +4,15 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Singapore Sweep: How the Lottery Went Legal
+
+First posted 2026-10-23 · `2026-10-23-the-singapore-sweep-how-the-lottery-went-legal.md`
+
+- 2026-10-24: Watch widget, YouTube and Shorts links, gap reports and YouTube text (`cc2a2e3`)
+- 2026-10-23: Narration (voice clone), Listen widget, main video config (44 slides, four newspaper pages, avatar) and vertical Short config (0-62.9s)... (`64ce68d`)
+- 2026-10-23: How chap ji kee was played and why it was called the "housewives' opium" (`a7a2cd9`)
+- 2026-10-23: Chap ji kee glossed as Hokkien for "12 cards" (BiblioAsia source) (`521724a`)
+
 ## Chek Jawa: The Shore That Was Saved by a Survey
 
 First posted 2026-10-23 · `2026-10-23-chek-jawa-the-shore-that-was-saved-by-a-survey.md`
