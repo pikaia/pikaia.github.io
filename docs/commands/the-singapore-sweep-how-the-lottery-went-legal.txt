@@ -147,7 +147,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   cmd=(python scripts/build_watch_widget.py _posts/2026-10-23-the-singapore-sweep-how-the-lottery-went-legal.md scripts/video-configs/the-singapore-sweep-how-the-lottery-went-legal.py 
   --youtube-url https://www.youtube.com/watch?v=HT5osrgSzrk
   --shorts-url https://www.youtube.com/shorts/8PJ9lEU-75Y
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7699931795017485598
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
