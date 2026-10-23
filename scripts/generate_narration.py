@@ -1860,6 +1860,9 @@ PRONUNCIATION_OVERRIDES = {
     "chap-ji-kee": "ʧˌʌp ʤˌiː kˌiː",     # Hokkien 十二支 "twelve cards", even stress.
     "Choo-Poh-Keng": "ʧˌuː pˌoʊ kˌAŋ",   # fused, even stress; "Keng" as above.
     "Tang-See-Chim": "tˌɑŋ sˌiː ʧˌɪm",   # fused, even stress.
+    # Turf Club post (2026-10-24):
+    "Macleod": "məklˈaʊd",               # W. H. M. Read, "muh-KLOWD".
+    "Indranee": "ɪndɹˈɑːni",             # Indranee Rajah, "in-DRAH-nee".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
