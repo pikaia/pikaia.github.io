@@ -1852,6 +1852,14 @@ PRONUNCIATION_OVERRIDES = {
     "filmmaker": "fˈɪlmmeɪkə",
     "Tan-Koh-Siang": "tˌan kˌoʊ sjˌɑːŋ",
     "Lee-Thor-Seng": "lˌiː tˌɔː sˌɛŋ",
+    # Singapore Sweep post (2026-10-23):
+    "Toto": "tˈoʊtoʊ",                   # "TOH-toh".
+    "Farrer": "fˈæɹəɹ",                  # Farrer Park, "FA-rer".
+    "Kreta": "kɹˈeɪtə",                  # Kreta Ayer, Malay "KRAY-tuh".
+    "Totalisator": "tˈoʊtəlaɪzˌeɪtəɹ",   # "TOH-tuh-lie-zay-ter".
+    "chap-ji-kee": "ʧˌæp ʤˌiː kˌiː",     # Hokkien 十字棋, even stress.
+    "Choo-Poh-Keng": "ʧˌuː pˌoʊ kˌAŋ",   # fused, even stress; "Keng" as above.
+    "Tang-See-Chim": "tˌɑŋ sˌiː ʧˌɪm",   # fused, even stress.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -2610,6 +2618,9 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bLien Ying Chow\b"): "Lien-Ying-Chow",
     re.compile(r"\bTan Koh Siang\b"): "Tan-Koh-Siang",
     re.compile(r"\bLee Thor Seng\b"): "Lee-Thor-Seng",
+    re.compile(r"\bChoo Poh Keng\b"): "Choo-Poh-Keng",
+    re.compile(r"\bTang See Chim\b"): "Tang-See-Chim",
+    re.compile(r"\bchap ji kee\b"): "chap-ji-kee",
     re.compile(r"\bLee Keng Yan\b"): "Lee-Keng-Yan",
     re.compile(r"\bTan Keong Saik\b"): "Tan-Keong-Saik",
     re.compile(r"\bTan Sia Kuang\b"): "Tan-Sia-Kuang",
