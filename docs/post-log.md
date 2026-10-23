@@ -4,6 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Robinsons and the 1972 Fire: 162 Years of Singapore's Oldest Department Store
+
+First posted 2026-10-24 · `2026-10-24-robinsons-and-the-1972-fire-162-years-of-singapores-oldest-department-store.md`
+
+- No revisions yet.
+
+## The Last Race at Kranji: 182 Years of the Singapore Turf Club
+
+First posted 2026-10-24 · `2026-10-24-the-last-race-at-kranji-182-years-of-the-singapore-turf-club.md`
+
+- 2026-10-24: Watch widget, YouTube, Shorts and TikTok links, gap reports and YouTube text (`e3f2e3b`)
+- 2026-10-24: Narration (voice clone), Listen widget, main video config (38 slides, Gold Cup chart, map, four newspaper pages, avatar) and vertical Short... (`e0c7f3c`)
+
 ## The Singapore Sweep: How the Lottery Went Legal
 
 First posted 2026-10-23 · `2026-10-23-the-singapore-sweep-how-the-lottery-went-legal.md`
