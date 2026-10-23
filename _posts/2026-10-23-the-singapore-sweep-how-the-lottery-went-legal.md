@@ -44,7 +44,7 @@ After the war, lotteries were also run to raise money for causes. In the early 1
 <em>The front page of The Sunday Times, 25 March 1951, with the $250,000 first-prize cheque for the Malayan Chinese Association's second $1 million lottery at the bottom. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
 </div>
 
-Beside the legal games ran illegal ones. The best known was chap ji kee, a numbers lottery run by syndicates, and the courts were still fining and jailing people for running it or carrying its betting slips through the 1950s and 1960s. Lottery tickets from abroad were sold in Singapore too, and in June 1967 the government warned people against buying tickets for a Malta sweep.
+Beside the legal games ran illegal ones. The best known was chap ji kee, Hokkien for "12 cards", a numbers lottery run by syndicates in which punters bet on numbers from 1 to 12. The courts were still fining and jailing people for running it or carrying its betting slips through the 1950s and 1960s. Lottery tickets from abroad were sold in Singapore too, and in June 1967 the government warned people against buying tickets for a Malta sweep.
 
 ## 1966: the Turf Club's Singapore Sweep
 
@@ -143,6 +143,7 @@ The Sweep has carried on without the horses. Its tickets carry seven-digit numbe
 - [Gay World Amusement Park, Wikipedia](https://en.wikipedia.org/wiki/Gay_World_Amusement_Park)
 - [Sweepstake, Wikipedia](https://en.wikipedia.org/wiki/Sweepstake)
 - [Irish Hospitals' Sweepstake, Wikipedia](https://en.wikipedia.org/wiki/Irish_Hospitals%27_Sweepstake)
+- [Janice Loo, "Desperate Housewives: The Lure of Chap Ji Kee", BiblioAsia, National Library Board, October–December 2015](https://biblioasia.nlb.gov.sg/vol-11/issue-3/oct-dec-2015/housewives/)
 - [Racing Post, "Racing in Singapore set to come to an end in October 2024"](https://racingpost.com/news/international/racing-in-singapore-set-to-come-to-an-end-in-october-2024-aTxBR9c4EWbk)
 - The Straits Times, 24 June 1930, "Public And Private Lotteries", page 14, NewspaperSG
 - The Singapore Free Press, 5 July 1930, "Turf Club Sweep Ticket Case", NewspaperSG
