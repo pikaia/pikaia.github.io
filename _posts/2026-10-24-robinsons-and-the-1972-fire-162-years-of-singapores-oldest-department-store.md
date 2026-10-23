@@ -10,6 +10,45 @@ Just before ten o'clock on the morning of the 21st of November 1972, an overload
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/robinsons-and-the-1972-fire-162-years-of-singapores-oldest-department-store.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![Raffles Place in 1971: the domed white Chartered Bank building, a garden with benches, and at right a building with a black facade carrying Chinese characters in red](https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/522a_Singapore_1971_%2851316419105%29.jpg/1280px-522a_Singapore_1971_%2851316419105%29.jpg)
 
 *Raffles Place in 1971, the year before the fire. Robinsons is the building on the right, with its name in Chinese in red on the black facade; the domed building is the Chartered Bank. (Wilford Peloquin, CC BY 2.0, via Wikimedia Commons)*
