@@ -2,7 +2,7 @@
 layout: post
 title: "Robinsons and the 1972 Fire: 162 Years of Singapore's Oldest Department Store"
 date: 2026-10-24 05:39:00 +0800
-last_modified_at: 2026-10-24 05:39:00 +0800
+last_modified_at: 2026-10-24 05:51:00 +0800
 categories: [history, money]
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/522a_Singapore_1971_%2851316419105%29.jpg/1280px-522a_Singapore_1971_%2851316419105%29.jpg
 ---
@@ -73,7 +73,9 @@ On the 21st of December 1972 President [Benjamin Sheares](/2026/07/20/benjamin-s
 
 Robinsons reopened on the 11th of December 1972 in the Specialists' Shopping Centre on Orchard Road, with new stock flown in for the Christmas season. The company planned to rebuild on Raffles Place, but on the 17th of January 1973 the government announced that it had acquired the 24,123-square-foot site.
 
-Orchard Road was by then becoming Singapore's main shopping street, and in 1983 Robinsons moved across the road into The Centrepoint, which became its flagship for the next 30 years. A branch opened in Raffles City in 2001, and in 2008 the Dubai-based Al-Futtaim Group bought the company, paying $7.20 a share for 88 per cent of it.
+My own memory of Robinsons is of this store. When I was a boy, my parents took us to the Specialists' Shopping Centre to buy things, I think about once a year. I also remember hearing about a big fire, which must have been the Raffles Place fire of 1972, the year I turned 12.
+
+Orchard Road was by then becoming Singapore's main shopping street, and in 1983 Robinsons moved across the road into The Centrepoint, which became its flagship for the next 30 years. For a few of those years it also had a second store back in the old business district: a branch in Clifford Centre, near Raffles Place, from 1977 to 1983. A branch opened in Raffles City in 2001, and in 2008 the Dubai-based Al-Futtaim Group bought the company, paying $7.20 a share for 88 per cent of it.
 
 ![The front of The Centrepoint shopping centre, with Robinsons and Marks & Spencer signs above the entrance and a street lamp in front](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Centrepoint_Shopping_Centre%2C_Singapore_-_20060212.jpg/1280px-Centrepoint_Shopping_Centre%2C_Singapore_-_20060212.jpg)
 
