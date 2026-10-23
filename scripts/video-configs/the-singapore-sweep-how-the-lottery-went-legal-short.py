@@ -28,10 +28,10 @@ CREDITS = {
 
 # The main video's thumbnail grid, re-panned for tall cells.
 THUMBNAIL = [
-    {"img": "HORSE1881", "pan": (0.35, 0.5)},
+    {"img": "HORSE1881", "pan": (0.08, 0.5)},
     {"img": "HAPPY", "pan": (0.5, 0.5)},
     {"img": "NATTHEATRE", "pan": (0.48, 0.45)},
-    {"img": "LAVENDER", "pan": (0.3, 0.5)},
+    {"img": "LAVENDER", "pan": (0.02, 0.5)},
 ]
 
 _E = "ease-in-out"
