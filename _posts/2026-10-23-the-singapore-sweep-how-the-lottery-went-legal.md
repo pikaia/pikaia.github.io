@@ -44,7 +44,7 @@ After the war, lotteries were also run to raise money for causes. In the early 1
 <em>The front page of The Sunday Times, 25 March 1951, with the $250,000 first-prize cheque for the Malayan Chinese Association's second $1 million lottery at the bottom. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
 </div>
 
-Beside the legal games ran illegal ones. The best known was chap ji kee, Hokkien for "12 cards", a numbers lottery run by syndicates in which punters bet on numbers from 1 to 12. The courts were still fining and jailing people for running it or carrying its betting slips through the 1950s and 1960s. Lottery tickets from abroad were sold in Singapore too, and in June 1967 the government warned people against buying tickets for a Malta sweep.
+Beside the legal games ran illegal ones. The best known was chap ji kee, Hokkien for "12 cards", a numbers lottery run by syndicates. Punters bet on a pair of numbers from 1 to 12, and the syndicates added up the bets and declared the least-backed pair the winner. It was known as the "housewives' opium", because many of its players were women who staked a few cents at a time in the hope of a little extra money for the household. The courts were still fining and jailing people for running it or carrying its betting slips through the 1950s and 1960s. Lottery tickets from abroad were sold in Singapore too, and in June 1967 the government warned people against buying tickets for a Malta sweep.
 
 ## 1966: the Turf Club's Singapore Sweep
 
