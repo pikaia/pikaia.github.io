@@ -1810,8 +1810,9 @@ posts.
 ### 9.1 Copy the upload files to Google Drive
 
 Added 2026-10-24 at Chris's request. The command file copies everything
-the uploads need into a per-post folder in Google Drive,
-`G:/My Drive/videos/<slug>/`:
+the uploads need straight into the Google Drive videos folder,
+`G:/My Drive/videos/` (no per-post subfolder; every file name already
+starts with the slug):
 
 - `preview-motion/<slug>-web.mp4` and `<slug>-short-web.mp4`, the
   compressed copies from section 8.4;
