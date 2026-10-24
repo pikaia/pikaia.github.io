@@ -1937,6 +1937,19 @@ PRONUNCIATION_OVERRIDES = {
     "Leng": "lˈɛŋ",                       # Siong Leng.
     "Seet-Seng-Huat": "sˌiːt sˌɛŋ hwˌɑːt",  # fused, even stress.
     "Hoo-Tiang-Lai": "hˌuː tjˌaŋ lˌaɪ",     # fused, even stress.
+    # Changi Murals post (2026-10-25):
+    "billiard": "bˈɪliəd",
+    "Luke": "lˈuːk",
+    "Luke's": "lˈuːks",
+    "Batok": "bˈɑːtɒk",                   # Bukit Batok, Malay "BAH-tok".
+    "Payne": "pˈeɪn",
+    "airmen": "ˈɛːmən",
+    "Searle": "sˈɜːl",                    # Ronald Searle, "SURL".
+    "Hammond": "hˈamənd",
+    "Bridport": "bɹˈɪdpɔːt",
+    "Healey": "hˈiːli",
+    "Larkhill": "lˈɑːkhɪl",
+    "PoW": "pˌiː ˌəʊ dˈʌbəljuː",          # "P-O-W" in a 1959 headline.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
