@@ -1,0 +1,208 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md audio/kusu-island-and-the-ninth-month-pilgrimage.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md audio/kusu-island-and-the-ninth-month-pilgrimage.mp3 --clone openvoice)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/kusu-island-and-the-ninth-month-pilgrimage.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/kusu-island-and-the-ninth-month-pilgrimage.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/kusu-island-and-the-ninth-month-pilgrimage.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md kusu-island-and-the-ninth-month-pilgrimage)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --out preview-motion/kusu-island-and-the-ninth-month-pilgrimage.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --in preview-motion/kusu-island-and-the-ninth-month-pilgrimage.mp4 --out preview-motion/kusu-island-and-the-ninth-month-pilgrimage-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage-short.py --out preview-motion/kusu-island-and-the-ninth-month-pilgrimage-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 8.3 Write the thumbnails (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py --thumbnail)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 8.4 Compress the main video for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/kusu-island-and-the-ninth-month-pilgrimage-avatar.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/kusu-island-and-the-ninth-month-pilgrimage-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+{ echo; date; echo "=== 8.4 Compress the Short for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/kusu-island-and-the-ninth-month-pilgrimage-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/kusu-island-and-the-ninth-month-pilgrimage-short-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md
+      scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py
+      scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+================================================================================================================================
+ review passed, Claude copies the upload files to Google Drive, then Chris uploads:
+================================================================================================================================
+
+{ echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
+  dest="G:/My Drive/videos"
+  mkdir -p "$dest"
+  cmd=(cp -v
+      preview-motion/kusu-island-and-the-ninth-month-pilgrimage-web.mp4
+      preview-motion/kusu-island-and-the-ninth-month-pilgrimage-short-web.mp4
+      preview-motion/kusu-island-and-the-ninth-month-pilgrimage-thumbnail.jpg
+      preview-motion/kusu-island-and-the-ninth-month-pilgrimage-short-thumbnail.jpg
+      audio/kusu-island-and-the-ninth-month-pilgrimage.srt
+      docs/youtube_helper/kusu-island-and-the-ninth-month-pilgrimage-youtube.txt
+      "$dest/")
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+================================================================================================================================
+ uploaded; Chris sends the links, then step 11:
+================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md scripts/video-configs/kusu-island-and-the-ninth-month-pilgrimage.py 
+  --youtube-url https://youtu.be/...
+  --shorts-url https://youtube.com/shorts/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ step 12 (commit, post log) and then 12.1, both done by Claude:
+================================================================================================================================
+
+{ echo; date; echo "=== 12.1 Clear the Google Drive copies ==="
+  ls "G:/My Drive/videos/kusu-island-and-the-ninth-month-pilgrimage"*
+  cmd=(rm -v "G:/My Drive/videos/kusu-island-and-the-ninth-month-pilgrimage"*)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kusu-island-and-the-ninth-month-pilgrimage.log
+
+================================================================================================================================
+ done
