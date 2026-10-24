@@ -1897,6 +1897,9 @@ PRONUNCIATION_OVERRIDES = {
     "et": "ˈA",                          # French "and", as in Brossard et Mopin, "ay".
     "Mopin": "mˈɒpɪn",                   # Brossard et Mopin, "MOP-in".
     "MUIS": "mˈuːɪs",                    # Majlis Ugama Islam Singapura, "MOO-iss" (ear-pick B).
+    "Fatimah": "fˈɑːtima",               # Hajjah Fatimah, "FAH-ti-mah" (ear-pick C).
+    "Fatimah's": "fˈɑːtimaz",            # possessive of the above.
+    "Brossard": "bɹˈɒsɑːd",              # Brossard et Mopin, "BROSS-ard" (ear-pick A).
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
