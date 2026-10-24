@@ -1,0 +1,208 @@
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp3 --clone openvoice)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --out preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --in preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.mp4 --out preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.py --out preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 8.3 Write the thumbnails (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py --thumbnail)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 8.4 Compress the main video for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-avatar.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+{ echo; date; echo "=== 8.4 Compress the Short for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md
+      scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py
+      scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+================================================================================================================================
+ review passed, Claude copies the upload files to Google Drive, then Chris uploads:
+================================================================================================================================
+
+{ echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
+  dest="G:/My Drive/videos"
+  mkdir -p "$dest"
+  cmd=(cp -v
+      preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-web.mp4
+      preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short-web.mp4
+      preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-thumbnail.jpg
+      preview-motion/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-short-thumbnail.jpg
+      audio/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.srt
+      docs/youtube_helper/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade-youtube.txt
+      "$dest/")
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+================================================================================================================================
+ uploaded; Chris sends the links, then step 11:
+================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md scripts/video-configs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.py 
+  --youtube-url https://youtu.be/...
+  --shorts-url https://youtube.com/shorts/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ step 12 (commit, post log) and then 12.1, both done by Claude:
+================================================================================================================================
+
+{ echo; date; echo "=== 12.1 Clear the Google Drive copies ==="
+  ls "G:/My Drive/videos/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade"*
+  cmd=(rm -v "G:/My Drive/videos/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade"*)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.log
+
+================================================================================================================================
+ done
