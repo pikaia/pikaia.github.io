@@ -8,7 +8,9 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-24 · `2026-10-24-robinsons-and-the-1972-fire-162-years-of-singapores-oldest-department-store.md`
 
-- No revisions yet.
+- 2026-10-24: Watch widget, with the YouTube, Shorts and TikTok links (`84cf1ea`)
+- 2026-10-24: Narration (voice clone), Listen widget, main video config (41 slides, store map, four newspaper pages, avatar) and vertical Short config... (`a08571a`)
+- 2026-10-24: My memory of the Specialists' Centre store, and the Clifford Centre branch (1977 to 1983) (`37797d6`)
 
 ## The Last Race at Kranji: 182 Years of the Singapore Turf Club
 
