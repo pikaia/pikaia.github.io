@@ -1900,6 +1900,14 @@ PRONUNCIATION_OVERRIDES = {
     "Fatimah": "fˈɑːtima",               # Hajjah Fatimah, "FAH-ti-mah" (ear-pick C).
     "Fatimah's": "fˈɑːtimaz",            # possessive of the above.
     "Brossard": "bɹˈɒsɑːd",              # Brossard et Mopin, "BROSS-ard" (ear-pick A).
+    # Cemeteries post (2026-10-24):
+    "columbaria": "kˌɒləmbˈɛəɹiə",       # plural of columbarium, "col-um-BAIR-ee-uh".
+    "Lornie": "lˈɔːni",                  # Lornie Road, "LOR-nee".
+    "Theng": "tˈɛŋ",                     # Peck San Theng, "TENG".
+    "Bishan": "bˈiʃan",                  # the town, Mandarin Bishan, "BEE-shan".
+    "reburied": "ɹiːbˈɛɹid",             # "ree-BERR-eed".
+    "Mandai": "mˈandI",                  # Mandai Road, "MUN-dye".
+    "Theresa's": "təɹˈiːzəz",            # St Theresa's Church, "tuh-REE-zuhz".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
