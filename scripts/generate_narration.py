@@ -1908,6 +1908,18 @@ PRONUNCIATION_OVERRIDES = {
     "reburied": "ɹiːbˈɛɹid",             # "ree-BERR-eed".
     "Mandai": "mˈandI",                  # Mandai Road, "MUN-dye".
     "Theresa's": "təɹˈiːzəz",            # St Theresa's Church, "tuh-REE-zuhz".
+    # Chinese Protectorate post (2026-10-24):
+    "Kuk": "kˈʊk",                       # Poh Leung Kuk, Cantonese "guk", "KOOK".
+    "sinkeh": "sˈɪnkA",                  # Hokkien "new guest", a new arrival, "SIN-kay".
+    "Larut": "lˈaɹʊt",                   # the Larut wars in Perak, "LAH-root".
+    "mui": "mˈuːi",                      # mui tsai, Cantonese, "MOO-ee".
+    "tsai": "ʦˈI",                       # mui tsai, "TSYE".
+    "Remo": "ɹˈɛmO",                     # San Remo, "REH-moh".
+    "Powell": "pˈaʊəl",                  # Francis Powell, "POW-ul".
+    "Crofton": "kɹˈɒftən",               # George Crofton Wray, "CROF-tun".
+    "Wray": "ɹˈA",                       # "RAY".
+    "Evans": "ˈɛvənz",                   # William Evans, "EV-unz".
+    "taskforce": "tˈɑːskfɔːs",           # "TASK-force".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
