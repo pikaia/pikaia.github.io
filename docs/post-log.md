@@ -4,6 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Hajjah Fatimah: The Widow Who Ran a Fleet and Built a Mosque
+
+First posted 2026-10-24 · `2026-10-24-hajjah-fatimah-the-widow-who-ran-a-fleet-and-built-a-mosque.md`
+
+- No revisions yet.
+
+## The Selarang Square Squeeze, 1942
+
+First posted 2026-10-24 · `2026-10-24-the-selarang-square-squeeze-1942.md`
+
+- 2026-10-24: YouTube, Shorts and TikTok links in the Watch widget; gap reports and YouTube text (`3f66200`)
+- 2026-10-24: Narration (voice clone), Listen widget, main video config (38 slides, Changi map, the 1946 trial page, avatar) and vertical Short config... (`853f19c`)
+
 ## Robinsons and the 1972 Fire: 162 Years of Singapore's Oldest Department Store
 
 First posted 2026-10-24 · `2026-10-24-robinsons-and-the-1972-fire-162-years-of-singapores-oldest-department-store.md`
