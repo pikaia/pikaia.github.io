@@ -1141,6 +1141,10 @@ PRONUNCIATION_OVERRIDES = {
                                     # standard "mawl" (rhymes with
                                     # "ball"/"hall"). Caught by ear by
                                     # Chris on this post's opening line.
+    "malls": "mˈɔːlz",             # plural falls through to "mˈalz"
+                                    # ("mals"), not "mall"'s fix above.
+                                    # Caught by ear by Chris on the
+                                    # Robinsons post (2026-10-24).
     # "reliably" - NOT here. Tried a PRONUNCIATION_OVERRIDES fix
     # ("ɹɪlˈIəbli", reusing "reliable"'s own correct /aɪ/ vowel) but
     # Chris still heard it wrong by ear afterward ("releably" - an "ee"
