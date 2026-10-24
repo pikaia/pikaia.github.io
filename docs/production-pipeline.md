@@ -34,7 +34,7 @@ The rest maps 1:1 to this doc's own section numbers:
 8. Verify both files                             -- section 8   [Manual]
 8.4 Compress both files for upload              -- section 8.4 [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
-9.1 Copy the upload files to Google Drive        -- section 9.1 [Manual]
+9.1 Copy the upload files to Google Drive        -- section 9.1 [Claude]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
 10a. (Opt.) Upload the Short to TikTok           -- section 10a [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
@@ -1810,7 +1810,8 @@ posts.
 
 ### 9.1 Copy the upload files to Google Drive
 
-Added 2026-10-24 at Chris's request. The command file copies everything
+**[Claude]** — added 2026-10-24 at Chris's request. Once Claude has
+reviewed the 4-9 log and output and they pass, Claude copies everything
 the uploads need straight into the Google Drive videos folder,
 `G:/My Drive/videos/` (no per-post subfolder; every file name already
 starts with the slug):
@@ -1823,8 +1824,10 @@ starts with the slug):
   `.srt` of its own, its captions are burned in);
 - `docs/youtube_helper/<slug>-youtube.txt`, the staged text from section 9.
 
-It runs right after section 9, so the copied text file is the freshly
-staged one. If the text file is hand-edited later, or step 9 is re-run,
+It is not part of Chris's 4-9 run: in the command file it sits after the
+"steps 4 to 9 done, review logs" banner, so nothing reaches Drive before
+the review. Chris then uploads from Drive and sends the links (section
+11), and Claude clears the Drive copies at section 12.1. If the text file is hand-edited later, or step 9 is re-run,
 re-run 9.1 to refresh the Drive copy. `cp` overwrites the files of the
 same name, so re-running is safe.
 

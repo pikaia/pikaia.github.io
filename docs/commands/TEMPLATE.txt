@@ -147,6 +147,18 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+================================================================================================================================
+ review passed, Claude copies the upload files to Google Drive, then Chris uploads:
+================================================================================================================================
+
 { echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
   dest="G:/My Drive/videos"
   mkdir -p "$dest"
@@ -163,14 +175,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 
-powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
-
-
-
 ================================================================================================================================
- steps 4 to 9 done, review logs
+ uploaded; Chris sends the links, then step 11:
 ================================================================================================================================
-
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py {POST} scripts/video-configs/{SLUG}.py 
@@ -186,7 +193,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 ================================================================================================================================
- step 12 (commit, post log) done by Claude, then:
+ step 12 (commit, post log) and then 12.1, both done by Claude:
 ================================================================================================================================
 
 { echo; date; echo "=== 12.1 Clear the Google Drive copies ==="

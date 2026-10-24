@@ -51,7 +51,8 @@ def test_copies_upload_files_to_google_drive():
               "preview-motion/some-post-thumbnail.jpg", "preview-motion/some-post-short-thumbnail.jpg",
               "audio/some-post.srt", "docs/youtube_helper/some-post-youtube.txt"):
         assert f in step
-    assert out.index("=== 9. Stage") < out.index("=== 9.1 Copy")
+    # 9.1 is Claude's step after the review, not part of Chris's 4-9 run.
+    assert out.index("steps 4 to 9 done, review logs") < out.index("=== 9.1 Copy") < out.index("=== 11. Wire")
 
 
 def test_clears_google_drive_copies_after_step_12():
