@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Chinese Protectorate: Pickering, the Poh Leung Kuk and the Coolie Trade
+
+First posted 2026-10-25 · `2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md`
+
+- 2026-10-25: YouTube, Shorts and TikTok links in the Watch widget; gap reports and YouTube text (`3c4bb72`)
+- 2026-10-25: Narration (voice clone), Listen widget, main video config (41 slides, the 1887 Straits Times page, the Protectorate map, avatar) and... (`1873cd7`)
+
 ## From Graves to Gardens: How Singapore Makes Room for Its Dead
 
 First posted 2026-10-24 · `2026-10-24-from-graves-to-gardens-how-singapore-makes-room-for-its-dead.md`
