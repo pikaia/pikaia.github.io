@@ -4,11 +4,18 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## From Graves to Gardens: How Singapore Makes Room for Its Dead
+
+First posted 2026-10-24 · `2026-10-24-from-graves-to-gardens-how-singapore-makes-room-for-its-dead.md`
+
+- 2026-10-24: Narration (voice clone), Listen widget, main video config (44 slides, the 1952 crematorium report page, the 1946 aerial photo, the... (`5d9178a`)
+
 ## Hajjah Fatimah: The Widow Who Ran a Fleet and Built a Mosque
 
 First posted 2026-10-24 · `2026-10-24-hajjah-fatimah-the-widow-who-ran-a-fleet-and-built-a-mosque.md`
 
-- No revisions yet.
+- 2026-10-24: YouTube, Shorts and TikTok links in the Watch widget; gap reports and YouTube text (`812e5d7`)
+- 2026-10-24: Narration (voice clone), Listen widget, main video config (37 slides, the 1828 plan, 1840s harbour prints, the Thomson chart, the shoreline... (`bbd9d79`)
 
 ## The Selarang Square Squeeze, 1942
 
