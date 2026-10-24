@@ -1920,6 +1920,23 @@ PRONUNCIATION_OVERRIDES = {
     "Wray": "ɹˈA",                       # "RAY".
     "Evans": "ˈɛvənz",                   # William Evans, "EV-unz".
     "taskforce": "tˈɑːskfɔːs",           # "TASK-force".
+    # Kusu Island post (2026-10-25):
+    "Kusu": "kˈuːsuː",                    # Hokkien "KOO-soo", tortoise.
+    "Koosoo": "kˈuːsuː",                  # the same name in an 1875 spelling.
+    "Datok": "dˈɑːtɒk",                   # Malay "DAH-tok".
+    "Kramat": "kəɹˈɑːmat",                # as "Keramat".
+    "Tembakul": "tɛmbˈɑːkʊl",             # Malay "tem-BAH-kool", the mudskipper.
+    "Nenek": "nˈenɛk",                    # Malay "NEH-nek", grandmother.
+    "Ghalib": "ɡˈɑːlɪb",                  # "GHAH-lib".
+    "Sharifah": "ʃaɹˈiːfa",               # "sha-REE-fah".
+    "Chik": "ʧˈɪk",
+    "Embee": "ˈɛmbiː",
+    "Samsudin": "sˈamsʊdɪn",              # "SAHM-soo-din".
+    "Gibson": "ɡˈɪbsən",
+    "Nanyin": "nˈɑːnjɪn",                 # "NAHN-yin", Southern Chinese music.
+    "Leng": "lˈɛŋ",                       # Siong Leng.
+    "Seet-Seng-Huat": "sˌiːt sˌɛŋ hwˌɑːt",  # fused, even stress.
+    "Hoo-Tiang-Lai": "hˌuː tjˌaŋ lˌaɪ",     # fused, even stress.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -2723,6 +2740,9 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bTan Siew Sin\b"): "Tan-Siew-Sin",
     re.compile(r"\bPang Gek Kim\b"): "Pang-Gek-Kim",
     re.compile(r"\bLee Kuan Yew\b"): "Lee-Kuan-Yew",
+    re.compile(r"\bSeet Seng Huat\b"): "Seet-Seng-Huat",
+    re.compile(r"\bHoo Tiang Lai\b"): "Hoo-Tiang-Lai",
+    re.compile(r"\bTwa Pek Kong\b"): "Tua-Pek-Kong",
     re.compile(r"\bOng Ewe Hai\b"): "Ong-Ewe-Hai",
     re.compile(r"\bOng Tiang Swee\b"): "Ong-Tiang-Swee",
     re.compile(r"\bOng Siew Eng\b"): "Ong-Siew-Eng",
