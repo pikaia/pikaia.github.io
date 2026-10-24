@@ -1909,7 +1909,7 @@ PRONUNCIATION_OVERRIDES = {
     "Mandai": "mˈandI",                  # Mandai Road, "MUN-dye".
     "Theresa's": "təɹˈiːzəz",            # St Theresa's Church, "tuh-REE-zuhz".
     # Chinese Protectorate post (2026-10-24):
-    "Kuk": "kˈʊk",                       # Poh Leung Kuk, Cantonese "guk", "KOOK".
+    "Kuk": "kˈʊk", "Leung": "lˈiːʊŋ", "Siok": "sˈiɒk",                       # Poh Leung Kuk, Cantonese "guk", "KOOK".
     "sinkeh": "sˈɪnkA",                  # Hokkien "new guest", a new arrival, "SIN-kay".
     "Larut": "lˈaɹʊt",                   # the Larut wars in Perak, "LAH-root".
     "mui": "mˈuːi",                      # mui tsai, Cantonese, "MOO-ee".
