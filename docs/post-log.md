@@ -4,6 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Changi Murals: Stanley Warren's Chapel Paintings at Roberts Barracks
+
+First posted 2026-10-25 · `2026-10-25-the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks.md`
+
+- No revisions yet.
+
+## Kusu Island and the Ninth-Month Pilgrimage
+
+First posted 2026-10-25 · `2026-10-25-kusu-island-and-the-ninth-month-pilgrimage.md`
+
+- 2026-10-25: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`284ccdc`)
+- 2026-10-25: Narration (voice clone), Listen widget, main video config (42 slides, the 1948 Straits Times pages, the crossing map, the visitors chart... (`4642d7c`)
+
 ## The Chinese Protectorate: Pickering, the Poh Leung Kuk and the Coolie Trade
 
 First posted 2026-10-25 · `2026-10-25-the-chinese-protectorate-pickering-the-poh-leung-kuk-and-the-coolie-trade.md`
