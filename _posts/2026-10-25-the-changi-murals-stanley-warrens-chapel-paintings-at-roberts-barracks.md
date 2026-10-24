@@ -10,6 +10,45 @@ In September 1942, in a prisoner-of-war hospital at Changi, a British bombardier
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A painting of a sparse hospital ward with emaciated prisoners lying on low beds while an orderly walks between them](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Orderly_on_His_Rounds_in_X_Ward%2C_Changi_Gaol%2C_Singapore%2C_With_Pow%27s_Suffering_from_Starvation_and_Beri-beri_Art.IWMARTLD5618.jpg/1280px-Orderly_on_His_Rounds_in_X_Ward%2C_Changi_Gaol%2C_Singapore%2C_With_Pow%27s_Suffering_from_Starvation_and_Beri-beri_Art.IWMARTLD5618.jpg)
 
 *"Orderly on His Rounds in X Ward, Changi Gaol, Singapore, With POWs Suffering from Starvation and Beri-beri", painted in 1945 by the official war artist Leslie Cole. (Leslie Cole, Imperial War Museums, public domain, via Wikimedia Commons)*
@@ -96,9 +135,9 @@ St Luke in Prison was never fully restored, because Warren could no longer remem
 
 In October 1968 a British member of parliament, Charles Morris, asked the Defence Secretary, Denis Healey, to consider moving the murals to England, but nothing came of it, and in 1969 Singapore's Ministry of Defence took responsibility for them. In the 1990s the National Heritage Board marked the site as one of Singapore's historic sites. Most of the buildings around Block 151 were pulled down in July 2003, but the block itself still stands inside what is now the Changi Air Base camp, and access to the camp is restricted.
 
-![The front of a modern museum building with a sign reading Changi Chapel and Museum](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Changi_chapel_museum.jpg/1280px-Changi_chapel_museum.jpg)
+![A darkened exhibition gallery with a large projection screen and a wall panel headed The Interned](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Changi_chapel_museum.jpg/1280px-Changi_chapel_museum.jpg)
 
-*The Changi Chapel and Museum in July 2023. (Liaw Xin Ru, CC BY-SA 4.0, via Wikimedia Commons)*
+*Inside the Changi Chapel and Museum in July 2023. (Liaw Xin Ru, CC BY-SA 4.0, via Wikimedia Commons)*
 
 Most visitors see the murals as replicas. The Changi Chapel and Museum, on Upper Changi Road North, has shown copies of them for many years, and the museum reopened in May 2021 after a redevelopment, with the replicas again among its main exhibits. A copy of one of the murals also hangs in the Garrison Church at Larkhill, in Wiltshire, England.
 
