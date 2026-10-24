@@ -1811,7 +1811,7 @@ posts.
 
 Added 2026-10-24 at Chris's request. The command file copies everything
 the uploads need into a per-post folder in Google Drive,
-`G:\My Driveideos\<slug>\`:
+`G:/My Drive/videos/<slug>/`:
 
 - `preview-motion/<slug>-web.mp4` and `<slug>-short-web.mp4`, the
   compressed copies from section 8.4;
