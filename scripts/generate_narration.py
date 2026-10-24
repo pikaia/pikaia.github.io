@@ -1880,6 +1880,22 @@ PRONUNCIATION_OVERRIDES = {
     "ANZUK": "ˈanzʊk",                   # the 1971-74 force, "AN-zuk", not spelled out.
     "Fukuye": "fʊkˈuːA",                 # Gen. Fukuye Shimpei, "foo-KOO-ay" (ear-pick A).
     "Breavington": "bɹˈiːvɪŋtən",        # Cpl Rodney Breavington, "BREE-ving-tun" (ear-pick A).
+    # Hajjah Fatimah post (2026-10-24):
+    "Hajjah": "hˈaʤə",                   # the title of a woman who has made the hajj, "HAH-juh".
+    "binte": "bˈɪntə",                   # Malay "daughter of", "BIN-tuh".
+    "Begbie": "bˈɛɡbi",                  # Capt. Peter Begbie, "BEG-bee".
+    "Penyengat": "pənjˈɛŋat",            # Pulau Penyengat, Riau, "puh-NYENG-at".
+    "Gowa": "ɡˈOwə",                     # the Bugis kingdom in Sulawesi, "GOH-wuh".
+    "Siti": "sˈiti",                     # Raja Siti, "SEE-tee".
+    "Ahmed": "ˈɑːmɛd",                   # Syed Ahmed Alsagoff, "AH-med".
+    "Hadhrami": "hadɹˈɑːmi",             # from Hadhramaut, "had-RAH-mee".
+    "craftsmen": "kɹˈɑːftsmən",          # plural missed by misaki.
+    "Khadijah": "kadˈiːʤa",              # Masjid Khadijah, "ka-DEE-jah".
+    "Mak": "mˈak",                       # Mak Minah Palembang, Malay "mother", "MAK".
+    "Darul": "dˈɑːɹʊl",                  # Masjid Darul Aman, "DAH-rul".
+    "Aman": "ɐmˈɑːn",                    # Darul Aman, "uh-MAHN".
+    "et": "ˈA",                          # French "and", as in Brossard et Mopin, "ay".
+    "Mopin": "mˈɒpɪn",                   # Brossard et Mopin, "MOP-in".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
