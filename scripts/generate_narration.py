@@ -1872,6 +1872,12 @@ PRONUNCIATION_OVERRIDES = {
     "Rappa": "ɹˈapə",                    # George Rappa Junior, "RAP-uh".
     "Al-Futtaim": "alfʊtˈIm",            # Al-Futtaim Group, "al-fuh-TIME".
     "Canningvale": "kˈanɪŋvAl",          # Australian firm, "CAN-ing-vale".
+    # Selarang Square post (2026-10-24):
+    "Selarang": "səlˈɑːɹaŋ",             # Malay, "suh-LAH-rang" (default said "SEL-uh-rang").
+    "Beting": "bətˈɪŋ",                  # Malay "sandbank", "buh-TING" (default "betting").
+    "Kusah": "kˈuːsa",                   # Beting Kusah, "KOO-sah".
+    "Galleghan": "ɡˈaləɡən",             # Lt-Col Frederick Galleghan, "GAL-uh-gun".
+    "ANZUK": "ˈanzʊk",                   # the 1971-74 force, "AN-zuk", not spelled out.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
