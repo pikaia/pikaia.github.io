@@ -20,6 +20,11 @@ IMAGES = {
     "ORP25": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/One_Raffles_Place_20250903_%281%29.jpg/1280px-One_Raffles_Place_20250903_%281%29.jpg",  # thumbnail only
 }
 
+# Credits for images not captioned in the post or its gallery.
+CREDITS = {
+    "R71B": "Wilford Peloquin, CC BY 2.0, via Wikimedia Commons",
+}
+
 # The main video's thumbnail grid, re-panned for tall cells.
 THUMBNAIL = [
     {"img": "JL1870", "pan": (0.3, 0.5)},
