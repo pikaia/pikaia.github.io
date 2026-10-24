@@ -1878,6 +1878,8 @@ PRONUNCIATION_OVERRIDES = {
     "Kusah": "kˈuːsa",                   # Beting Kusah, "KOO-sah".
     "Galleghan": "ɡˈaləɡən",             # Lt-Col Frederick Galleghan, "GAL-uh-gun".
     "ANZUK": "ˈanzʊk",                   # the 1971-74 force, "AN-zuk", not spelled out.
+    "Fukuye": "fʊkˈuːA",                 # Gen. Fukuye Shimpei, "foo-KOO-ay" (ear-pick A).
+    "Breavington": "bɹˈiːvɪŋtən",        # Cpl Rodney Breavington, "BREE-ving-tun" (ear-pick A).
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
