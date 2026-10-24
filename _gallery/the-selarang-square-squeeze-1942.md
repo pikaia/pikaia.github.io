@@ -62,7 +62,7 @@ Twelve more photographs of the Selarang square in September 1942, most of them t
 
 ### Release, 1945
 
-![A crowd of thin men in shorts and slouch hats around an ambulance at Changi](https://upload.wikimedia.org/wikipedia/commons/8/89/The_Release_of_Allied_Prisoners_of_War_From_Changi_Prison%2C_1945_CF724.jpg)
+![A crowd of thin men in shorts and slouch hats around an ambulance at Changi](https://upload.wikimedia.org/wikipedia/commons/c/c7/The_Release_of_Allied_Prisoners_of_War_From_Changi_Prison%2C_1945_CF722.jpg)
 
 *The first sick prisoners leaving Changi Prison in 1945, after the Japanese surrender. (Flying Officer Ashley, Royal Air Force, public domain, via Wikimedia Commons)*
 

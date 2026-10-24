@@ -10,6 +10,45 @@ On the 2nd of September 1942, somewhere between 15,000 and 17,000 British and Au
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-selarang-square-squeeze-1942.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![Selarang Barracks square in September 1942, packed with thousands of prisoners and their makeshift shelters, between two three-storey barrack blocks](/assets/images/awm-132937-selarang-square-1942.jpg)
 
 *Prisoners arriving in the Selarang Barracks square on the 2nd of September 1942, in a part of the square taken by British troops. George Aspinall took the photograph in secret. (George Aspinall, Australian War Memorial 132937, public domain)*
@@ -150,7 +189,7 @@ The story is told today at the Changi Chapel and Museum on Upper Changi Road Nor
 - [Australian War Memorial P02569.153](https://www.awm.gov.au/collection/C340300)
 - [Australian War Memorial P02569.199](https://www.awm.gov.au/collection/C340346)
 - [Changi Prison in 1936.jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Changi_Prison_in_1936.jpg)
-- [The Release of Allied Prisoners of War From Changi Prison, 1945 CF724.jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Release_of_Allied_Prisoners_of_War_From_Changi_Prison,_1945_CF724.jpg)
+- [The Release of Allied Prisoners of War From Changi Prison, 1945 CF722.jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:The_Release_of_Allied_Prisoners_of_War_From_Changi_Prison,_1945_CF722.jpg)
 - [Kranji War Memorial - Tombs.jpg, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kranji_War_Memorial_-_Tombs.jpg)
 
 [← Back to all posts](/)
