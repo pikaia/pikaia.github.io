@@ -1896,6 +1896,7 @@ PRONUNCIATION_OVERRIDES = {
     "Aman": "ɐmˈɑːn",                    # Darul Aman, "uh-MAHN".
     "et": "ˈA",                          # French "and", as in Brossard et Mopin, "ay".
     "Mopin": "mˈɒpɪn",                   # Brossard et Mopin, "MOP-in".
+    "MUIS": "mˈuːɪs",                    # Majlis Ugama Islam Singapura, "MOO-iss" (ear-pick B).
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
