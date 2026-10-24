@@ -20,7 +20,7 @@ def test_render_fills_slug_and_post():
 
 def test_no_subtitle_path_line():
     out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
-    assert ".srt" not in out
+    assert not [ln for ln in out.splitlines() if ln.lstrip().startswith("#") and ".srt" in ln]
 
 
 def test_compresses_both_files_for_upload():
@@ -40,3 +40,15 @@ def test_refuses_to_overwrite(tmp_path):
 def test_rejects_badly_named_post():
     with pytest.raises(SystemExit):
         render("_posts/no-date.md", "x")
+
+
+def test_copies_upload_files_to_google_drive():
+    out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
+    step = out[out.index("=== 9.1 Copy"):]
+    step = step[:step.index("tee -a")]
+    assert 'G:/My Drive/videos/some-post' in step
+    for f in ("preview-motion/some-post-web.mp4", "preview-motion/some-post-short-web.mp4",
+              "preview-motion/some-post-thumbnail.jpg", "preview-motion/some-post-short-thumbnail.jpg",
+              "audio/some-post.srt", "docs/youtube_helper/some-post-youtube.txt"):
+        assert f in step
+    assert out.index("=== 9. Stage") < out.index("=== 9.1 Copy")

@@ -147,6 +147,22 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 
+{ echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
+  dest="G:/My Drive/videos/{SLUG}"
+  mkdir -p "$dest"
+  cmd=(cp -v
+      preview-motion/{SLUG}-web.mp4
+      preview-motion/{SLUG}-short-web.mp4
+      preview-motion/{SLUG}-thumbnail.jpg
+      preview-motion/{SLUG}-short-thumbnail.jpg
+      audio/{SLUG}.srt
+      docs/youtube_helper/{SLUG}-youtube.txt
+      "$dest/")
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/{SLUG}.log
+
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 

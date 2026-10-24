@@ -147,6 +147,22 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/the-selarang-square-squeeze-1942.log
 
+{ echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
+  dest="G:/My Drive/videos/the-selarang-square-squeeze-1942"
+  mkdir -p "$dest"
+  cmd=(cp -v
+      preview-motion/the-selarang-square-squeeze-1942-web.mp4
+      preview-motion/the-selarang-square-squeeze-1942-short-web.mp4
+      preview-motion/the-selarang-square-squeeze-1942-thumbnail.jpg
+      preview-motion/the-selarang-square-squeeze-1942-short-thumbnail.jpg
+      audio/the-selarang-square-squeeze-1942.srt
+      docs/youtube_helper/the-selarang-square-squeeze-1942-youtube.txt
+      "$dest/")
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-selarang-square-squeeze-1942.log
+
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 

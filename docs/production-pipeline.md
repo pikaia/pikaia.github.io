@@ -34,6 +34,7 @@ The rest maps 1:1 to this doc's own section numbers:
 8. Verify both files                             -- section 8   [Manual]
 8.4 Compress both files for upload              -- section 8.4 [Manual]
 9. Stage the YouTube upload text file            -- section 9   [Manual]
+9.1 Copy the upload files to Google Drive        -- section 9.1 [Manual]
 10. Upload to YouTube (Chris does the clicks)     -- section 10  [Manual]
 10a. (Opt.) Upload the Short to TikTok           -- section 10a [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
@@ -1805,6 +1806,25 @@ image layout convention), fix the parser in
 `scripts/stage_youtube_text.py` rather than hand-editing just that
 post's output — the whole point is that this stays generic across
 posts.
+
+### 9.1 Copy the upload files to Google Drive
+
+Added 2026-10-24 at Chris's request. The command file copies everything
+the uploads need into a per-post folder in Google Drive,
+`G:\My Driveideos\<slug>\`:
+
+- `preview-motion/<slug>-web.mp4` and `<slug>-short-web.mp4`, the
+  compressed copies from section 8.4;
+- `preview-motion/<slug>-thumbnail.jpg` and `<slug>-short-thumbnail.jpg`,
+  from section 8.3;
+- `audio/<slug>.srt`, the main video's subtitle track (the Short has no
+  `.srt` of its own, its captions are burned in);
+- `docs/youtube_helper/<slug>-youtube.txt`, the staged text from section 9.
+
+It runs right after section 9, so the copied text file is the freshly
+staged one. If the text file is hand-edited later, or step 9 is re-run,
+re-run 9.1 to refresh the Drive copy. `cp` overwrites the files of the
+same name, so re-running is safe.
 
 ---
 
