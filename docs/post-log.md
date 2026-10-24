@@ -8,6 +8,7 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-24 · `2026-10-24-from-graves-to-gardens-how-singapore-makes-room-for-its-dead.md`
 
+- 2026-10-25: YouTube, Shorts and TikTok links in the Watch widget; gap reports and YouTube text (`8597c34`)
 - 2026-10-24: Narration (voice clone), Listen widget, main video config (44 slides, the 1952 crematorium report page, the 1946 aerial photo, the... (`5d9178a`)
 
 ## Hajjah Fatimah: The Widow Who Ran a Fleet and Built a Mosque
