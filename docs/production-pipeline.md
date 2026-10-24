@@ -2070,6 +2070,12 @@ content changes without asking first. Rough shape:
   rewrites `docs/post-log.md` (every post's title, first-posted date and
   revisions, from the git history); commit it on its own after the
   post's commit so the log includes that commit.
+- **Then clear the Google Drive copies** (added 2026-10-24 at Chris's
+  request) — once the post is committed and pushed, delete the post's
+  files from `G:/My Drive/videos/` (`rm "G:/My Drive/videos/<slug>"*`,
+  after listing them first). They were only there for the upload
+  (section 9.1); the originals stay in `preview-motion/`, `audio/` and
+  `docs/youtube_helper/`.
 
 **Solo fallback** (Claude unavailable) — the straightforward case is
 just the post's own commit:
