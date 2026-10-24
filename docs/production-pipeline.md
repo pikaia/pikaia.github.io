@@ -39,7 +39,8 @@ The rest maps 1:1 to this doc's own section numbers:
 10a. (Opt.) Upload the Short to TikTok           -- section 10a [Manual]
 11. Wire the published URLs into the post         -- section 11  [Manual]
 12. Commit and push                               -- section 12  [Claude]
-12a. (Opt.) Publish before the scheduled date     -- section 12a [Manual]
+12.1 Clear the Google Drive copies              -- section 12.1 [Claude]
+12.2 (Opt.) Publish before the scheduled date    -- section 12.2 [Manual]
 ```
 
 **`[Manual]` vs `[Claude]`:** every `[Manual]` step is a single mechanical
@@ -507,7 +508,7 @@ don't exist yet — then run:
 scripts/publish-early.sh <slug>
 ```
 
-This is the mechanism documented in full in section 12a: it moves the
+This is the mechanism documented in full in section 12.2: it moves the
 post's `date:` to now (so GitHub Pages actually emits it) while pinning
 `permalink:` to the URL its *scheduled* date would have produced, so
 the address never moves. Doing this **first**, before the (potentially
@@ -2070,12 +2071,6 @@ content changes without asking first. Rough shape:
   rewrites `docs/post-log.md` (every post's title, first-posted date and
   revisions, from the git history); commit it on its own after the
   post's commit so the log includes that commit.
-- **Then clear the Google Drive copies** (added 2026-10-24 at Chris's
-  request) — once the post is committed and pushed, delete the post's
-  files from `G:/My Drive/videos/` (`rm "G:/My Drive/videos/<slug>"*`,
-  after listing them first). They were only there for the upload
-  (section 9.1); the originals stay in `preview-motion/`, `audio/` and
-  `docs/youtube_helper/`.
 
 **Solo fallback** (Claude unavailable) — the straightforward case is
 just the post's own commit:
@@ -2096,7 +2091,27 @@ git push
 
 ---
 
-## 12a. Publish before the scheduled date
+## 12.1 Clear the Google Drive copies
+
+**[Claude]** — added 2026-10-24 at Chris's request. Once the post's
+commits and the post log are pushed, delete the post's files from
+`G:/My Drive/videos/`, the copies section 9.1 made for the upload. The
+command file has this as its last block, after step 11; it lists the
+files, then removes them:
+
+```
+ls "G:/My Drive/videos/<slug>"*
+rm "G:/My Drive/videos/<slug>"*
+```
+
+They were only there for the upload; the originals stay in
+`preview-motion/`, `audio/` and `docs/youtube_helper/`. Google Drive
+keeps deleted files in its trash for 30 days. Clear the post's
+`scratch/` folders at the same time.
+
+---
+
+## 12.2 Publish before the scheduled date
 
 > **Superseded for new posts (2026-09-24).** New posts are created with `date:` = now and pushed as soon as the draft exists, so they are live immediately and there is no scheduled date to publish ahead of, and no `publish-early-reset.sh` follow-up. Section 3's "publish early first" step is therefore a no-op for them: just push. Everything below is reference for the older future-dated posts that still carry a `scheduled_date:` stash (`grep -l '^scheduled_date:' _posts/*.md`); reset each once its date has passed.
 

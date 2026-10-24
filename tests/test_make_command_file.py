@@ -52,3 +52,11 @@ def test_copies_upload_files_to_google_drive():
               "audio/some-post.srt", "docs/youtube_helper/some-post-youtube.txt"):
         assert f in step
     assert out.index("=== 9. Stage") < out.index("=== 9.1 Copy")
+
+
+def test_clears_google_drive_copies_after_step_12():
+    out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
+    step = out[out.index("=== 12.1 Clear"):]
+    step = step[:step.index("tee -a")]
+    assert 'rm -v "G:/My Drive/videos/some-post"*' in step
+    assert out.index("=== 11. Wire") < out.index("=== 12.1 Clear")

@@ -186,4 +186,16 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
 
 ================================================================================================================================
+ step 12 (commit, post log) done by Claude, then:
+================================================================================================================================
+
+{ echo; date; echo "=== 12.1 Clear the Google Drive copies ==="
+  ls "G:/My Drive/videos/hajjah-fatimah-the-widow-who-ran-a-fleet-and-built-a-mosque"*
+  cmd=(rm -v "G:/My Drive/videos/hajjah-fatimah-the-widow-who-ran-a-fleet-and-built-a-mosque"*)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/hajjah-fatimah-the-widow-who-ran-a-fleet-and-built-a-mosque.log
+
+================================================================================================================================
  done
