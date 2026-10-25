@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Exchange Banks of Raffles Place: Chartered, HSBC and Mercantile
+
+First posted 2026-10-26 · `2026-10-26-the-exchange-banks-of-raffles-place-chartered-hsbc-and-mercantile.md`
+
+- 2026-10-26: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`8b103b3`)
+- 2026-10-26: Narration (voice clone), Listen widget, timeline PNG, main video config (33 slides, avatar) and vertical Short config (0-67.3s), both with... (`1d4bf7d`)
+
 ## Syed Mohamed Alsagoff and the Estate That Printed Its Own Money
 
 First posted 2026-10-26 · `2026-10-26-syed-mohamed-alsagoff-and-the-estate-that-printed-its-own-money.md`
