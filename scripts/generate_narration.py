@@ -1954,6 +1954,23 @@ PRONUNCIATION_OVERRIDES = {
     "Healey": "hˈiːli",
     "Larkhill": "lˈɑːkhɪl",
     "PoW": "pˌiː ˌəʊ dˈʌbəljuː",          # "P-O-W" in a 1959 headline.
+    # Syed Mohamed Alsagoff post (2026-10-26). Standard readings:
+    "Kukup": "kˈuːkʊp",                  # Pulau Kukup, Johor - Malay "KOO-koop".
+    "Abdulrahman": "ˌabdʊlɹˈɑːmən",      # Arabic name, "ab-dul-RAH-mun".
+    "Bakar": "bˈɑːkɑː",                  # Sultan Abu Bakar of Johor, "BAH-kar".
+    "Al-Sa'aidi": "ˌalsaˈiːdi",          # the Al-Sa'aidi Press, "al-sa-EE-dee".
+    "Hadji": "hˈaʤi",                    # 1881 spelling of haji, "HA-jee".
+    "Daoud": "dɑːˈuːd",                  # Hadji Daoud, Arabic Dawud, "dah-OOD".
+    "Gullick": "ɡˈʌlɪk",                 # the historian J. M. Gullick.
+    "Tunggal": "tˈʊŋɡɑːl",               # Bukit Tunggal - Malay "TOONG-gahl".
+    "Osmanieh": "ˌɒsmɑːnˈiːjə",          # the Ottoman Order of the Osmanieh.
+    "Tehrani": "tɛɹˈɑːni",               # the writer Faisal Tehrani.
+    "Ramsar": "ɹˈamsɑː",                 # the Ramsar Convention.
+    "wakaf": "wˈɑːkɑf",                  # Malay "WAH-kahf", an Islamic endowment.
+    "madrasah": "mˈadɹəsə",              # "MAD-ruh-suh".
+    "Alkaff": "alkˈɑːf",                 # Alkaff Mansion - "al-KAHF".
+    "Alkaffs": "alkˈɑːfs",
+    "Kayu": "kˈɑːjuː",                   # Jalan Kayu - Malay "KAH-yoo".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
