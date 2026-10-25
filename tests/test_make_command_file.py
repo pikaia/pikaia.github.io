@@ -46,7 +46,7 @@ def test_copies_upload_files_to_google_drive():
     out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
     step = out[out.index("=== 9.1 Copy"):]
     step = step[:step.index("tee -a")]
-    assert 'dest="G:/My Drive/videos"' in step
+    assert 'dest="H:/My Drive/videos"' in step
     for f in ("preview-motion/some-post-web.mp4", "preview-motion/some-post-short-web.mp4",
               "preview-motion/some-post-thumbnail.jpg", "preview-motion/some-post-short-thumbnail.jpg",
               "audio/some-post.srt", "docs/youtube_helper/some-post-youtube.txt"):
@@ -59,5 +59,5 @@ def test_clears_google_drive_copies_after_step_12():
     out = render(POST, TEMPLATE.read_text(encoding="utf-8"))
     step = out[out.index("=== 12.1 Clear"):]
     step = step[:step.index("tee -a")]
-    assert 'rm -v "G:/My Drive/videos/some-post"*' in step
+    assert 'rm -v "H:/My Drive/videos/some-post"*' in step
     assert out.index("=== 11. Wire") < out.index("=== 12.1 Clear")

@@ -170,7 +170,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 ================================================================================================================================
 
 { echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
-  dest="G:/My Drive/videos"
+  dest="H:/My Drive/videos"
   mkdir -p "$dest"
   cmd=(cp -v
       preview-motion/{SLUG}-web.mp4
@@ -207,8 +207,8 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 ================================================================================================================================
 
 { echo; date; echo "=== 12.1 Clear the Google Drive copies ==="
-  ls "G:/My Drive/videos/{SLUG}"*
-  cmd=(rm -v "G:/My Drive/videos/{SLUG}"*)
+  ls "H:/My Drive/videos/{SLUG}"*
+  cmd=(rm -v "H:/My Drive/videos/{SLUG}"*)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
   echo
