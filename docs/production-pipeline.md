@@ -223,6 +223,12 @@ replace after upload. It refuses to overwrite an existing
 file, which may hold pasted URLs, unless given `--force`. A change to the
 steps themselves goes into `TEMPLATE.txt`, so later posts pick it up.
 
+Each group (1.1-2 and 4-9) opens with a time estimate from
+`scripts/estimate_times.py <slug> 1|4-9`: the median rate of the last eight
+posts' logs, scaled to this post's narration length and to the render worker
+count that the memory free right now allows. It's a rough guess, usually within
+about 15 minutes; closing Chrome before step 6 frees memory for more workers.
+
 ---
 
 ## 1. Generate narration audio
