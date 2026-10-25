@@ -1978,6 +1978,14 @@ PRONUNCIATION_OVERRIDES = {
     "Wynne": "wˈɪn",                     # M. L. Wynne, police officer and author.
     # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
     "Ho-Ah-Yam": "hˌQ ˌɑː jˌam",
+    # Sisters' Islands post (2026-10-26). Standard readings:
+    "Subar": "sˈuːbɑː",                  # Pulau Subar Laut/Darat - Malay "SOO-bar".
+    "darat": "dˈɑːɹat",                  # Malay "landward", "DAH-raht".
+    "Minah": "mˈiːnɑː",                  # the legend's sisters, Malay "MEE-nah".
+    "Linah": "lˈiːnɑː",                  # "LEE-nah".
+    "Hantu": "hˈantuː",                  # Pulau Hantu, Malay "HUN-too".
+    "Tekukor": "təkˈuːkɔː",              # Pulau Tekukor, Malay "tuh-KOO-kor".
+    "Desmond": "dˈɛzmənd",
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -3432,7 +3440,7 @@ KNOWN_LETTER_SPELLED = {
     "BBC", "BMT", "CBD", "CC", "CEO", "CHIJ", "CMG", "CMPB", "CPF", "CS", "DBS", "DFI", "DMV",
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
-    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND",
+    "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
