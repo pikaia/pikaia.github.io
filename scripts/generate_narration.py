@@ -103,6 +103,10 @@ PRONUNCIATION_OVERRIDES = {
                           # (French pronunciation) instead of the burial-site
                           # plural. Caught by ear on the four-chopsticks post
                           # ("mass graves found around the island in 1962").
+    "Graves": "ɡɹˈAvz",  # misaki has a separate capitalised gold entry, the
+                          # same "grahv", used for a title-case or
+                          # sentence-initial "Graves" - caught by ear on the
+                          # graves-to-gardens post title ("From Graves to Gardens")
     "Kuan": "kwˈɑːn",  # unknown word (no lexicon entry) - "Kuan" as in "Lee
                         # Kuan Yew". Caught by scan_for_unknown_tokens()
                         # (the --dry-run "?" scan), not by ear - this name
