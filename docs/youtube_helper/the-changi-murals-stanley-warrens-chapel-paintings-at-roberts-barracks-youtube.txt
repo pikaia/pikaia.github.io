@@ -1,0 +1,86 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+The Changi Murals: Stanley Warren's Chapel Paintings at Roberts Barracks
+
+Description:
+In September 1942, in a prisoner-of-war hospital at Changi, a British bombardier named Stanley Warren began painting Bible scenes on the walls of a small chapel. He was so ill with dysentery and kidney disease that he could only work for ten to fifteen minutes at a time, and his paints were scrounged camouflage paint and billiard chalk. Within two years his five murals had vanished under coats of distemper, and Warren went home believing they had been destroyed. They are still there today, in a building inside an air force camp that the public cannot enter.
+
+Full story: https://da.gd/IXY1F
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap, credited individually):
+- Aldwin Teo, CC BY-SA 3.0, via Wikimedia Commons (2 photos)
+- Nick-D, CC BY-SA 3.0, via Wikimedia Commons
+- Liaw Xin Ru, CC BY-SA 4.0, via Wikimedia Commons
+- Dave1185, CC BY-SA 3.0, via Wikimedia Commons
+- George Aspinall, Australian War Memorial 132935, public domain, via Wikimedia Commons
+- Leslie Cole, Imperial War Museums, public domain, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Orderinchaos, CC BY-SA 4.0, via Wikimedia Commons
+- Timeline by Lesser Known Singapore, from Wikipedia, Roots.gov.sg, the RAF Changi Association and The Straits Times
+- United States Department of Defense, public domain, via Wikimedia Commons
+- Bob Waddell, CC BY-SA 3.0, via Wikimedia Commons
+- Whoosises, CC BY-SA 3.0, via Wikimedia Commons
+
+Sources:
+- Changi Murals, Wikipedia
+- Changi Murals, Roots.gov.sg (National Heritage Board), historic sites
+- The Changi Murals, RAF Changi Association
+- Changi Chapel and Museum, Wikipedia
+- Selarang Barracks incident, Wikipedia
+- Vincent Ng, "Do you know who painted this PoW camp mural?", The Straits Times, 25 January 1959; "'Searle wasn't the Changi murals artist'", The Singapore Free Press, 26 January 1959; "Solved: Mystery of the Changi murals", The Straits Times, 1 February 1959; "A man with a mission", The Straits Times, 5 January 1964 (NewspaperSG search results)
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Changi Murals: Stanley Warren's Chapel Paintings at Roberts Barracks #Shorts
+
+Description:
+In September 1942, in a prisoner-of-war hospital at Changi, a British bombardier named Stanley Warren began painting Bible scenes on the walls of a small chapel. He was so ill with dysentery and kidney disease that he could only work for ten to fifteen minutes at a time, and his paints were scrounged camouflage paint and billiard chalk. Within two years his five murals had vanished under coats of distemper, and Warren went home believing they had been destroyed. They are still there today, in a building inside an air force camp that the public cannot enter. #Shorts
+
+Full story: https://da.gd/IXY1F
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Aldwin Teo, CC BY-SA 3.0, via Wikimedia Commons
+- Nick-D, CC BY-SA 3.0, via Wikimedia Commons
+- Liaw Xin Ru, CC BY-SA 4.0, via Wikimedia Commons
+- Dave1185, CC BY-SA 3.0, via Wikimedia Commons
+- George Aspinall, Australian War Memorial 132935, public domain, via Wikimedia Commons
+- Leslie Cole, Imperial War Museums, public domain, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+The Changi Murals: Stanley Warren's Chapel Paintings at Roberts Barracks
+
+In September 1942, in a prisoner-of-war hospital at Changi, a British bombardier named Stanley Warren began painting Bible scenes on the walls of a small chapel. He was so ill with dysentery and kidney disease that he could only work for ten to fifteen minutes at a time, and his paints were scrounged camouflage paint and billiard chalk. Within two years his five murals had vanished under coats of distemper, and Warren went home believing they had been destroyed. They are still there today, in a building inside an air force camp that the public cannot enter.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Aldwin Teo, CC BY-SA 3.0, via Wikimedia Commons
+- Nick-D, CC BY-SA 3.0, via Wikimedia Commons
+- Liaw Xin Ru, CC BY-SA 4.0, via Wikimedia Commons
+- Dave1185, CC BY-SA 3.0, via Wikimedia Commons
+- George Aspinall, Australian War Memorial 132935, public domain, via Wikimedia Commons
+- Leslie Cole, Imperial War Museums, public domain, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
