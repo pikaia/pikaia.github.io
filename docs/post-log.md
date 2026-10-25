@@ -29,6 +29,7 @@ First posted 2026-10-25 · `2026-10-25-the-chinese-protectorate-pickering-the-po
 
 First posted 2026-10-24 · `2026-10-24-from-graves-to-gardens-how-singapore-makes-room-for-its-dead.md`
 
+- 2026-10-25: Graves re-voiced in the title (was grahv), new YouTube, Shorts and TikTok videos (`3d0962f`)
 - 2026-10-25: YouTube, Shorts and TikTok links in the Watch widget; gap reports and YouTube text (`8597c34`)
 - 2026-10-24: Narration (voice clone), Listen widget, main video config (44 slides, the 1952 crematorium report page, the 1946 aerial photo, the... (`5d9178a`)
 
