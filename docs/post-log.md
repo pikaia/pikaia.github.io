@@ -8,7 +8,8 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-25 · `2026-10-25-the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks.md`
 
-- No revisions yet.
+- 2026-10-25: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`32515e6`)
+- 2026-10-25: Narration (voice clone), Listen widget, main video config (35 slides, the Changi map, the murals timeline, avatar) and vertical Short... (`a70fdf1`)
 
 ## Kusu Island and the Ninth-Month Pilgrimage
 
