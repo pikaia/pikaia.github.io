@@ -10,6 +10,45 @@ On the 1st of January 1890, a new law came into force in the Straits Settlements
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/the-ghee-hin-and-the-1890-ban-on-the-secret-societies.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![A busy colonial street of two-storey shophouses with rickshaws and carriages, and a mosque minaret and church spire beyond](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/KITLV_-_43317_-_Lambert_%26_Co.%2C_G.R._-_Singapore_-_The_North_Bridge_Road%2C_Singapore_-_circa_1900.tiff/lossy-page1-1280px-KITLV_-_43317_-_Lambert_%26_Co.%2C_G.R._-_Singapore_-_The_North_Bridge_Road%2C_Singapore_-_circa_1900.tiff.jpg)
 
 *North Bridge Road around 1900. Some 3,000 men fought along this road in the riots of 1854. (G. R. Lambert and Co., KITLV, CC BY-SA 4.0, via Wikimedia Commons)*
@@ -35,7 +74,7 @@ The colonial government had few ways of reaching these men. Until 1871 it had no
 
 ![A street of decorated Chinese shophouses with arches of greenery and flags, and a crowd in the road](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/KITLV_-_29169_-_Chinese_street_in_Singapore%2C_completely_decorated_on_the_occasion_of_the_visit_of_Prince_Albert_of_Saxe-Coburg_-_Gotha%2C_husband_of_Queen_Victoria_-_1860.tif/lossy-page1-1280px-KITLV_-_29169_-_Chinese_street_in_Singapore%2C_completely_decorated_on_the_occasion_of_the_visit_of_Prince_Albert_of_Saxe-Coburg_-_Gotha%2C_husband_of_Queen_Victoria_-_1860.tif.jpg)
 
-*A Chinese street in Singapore decorated for a celebration, in a photograph KITLV catalogues as from 1860. (Unknown photographer, KITLV, public domain, via Wikimedia Commons)*
+*A Chinese street decorated with banners hailing "our Sailor Prince," beside the signs of the opium and spirit farms. KITLV dates the photograph to 1860, but the banners point to the visit of Prince Alfred, a naval officer, in 1869. (Unknown photographer, KITLV, public domain, via Wikimedia Commons)*
 
 ## Riots
 
