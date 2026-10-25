@@ -1973,6 +1973,11 @@ PRONUNCIATION_OVERRIDES = {
     "Kayu": "kˈɑːjuː",                   # Jalan Kayu - Malay "KAH-yoo".
     # Exchange banks of Raffles Place post (2026-10-26). Standard reading:
     "Citibank": "sˈɪtibaŋk",              # "SIT-ee-bank".
+    # Ghee Hin post (2026-10-26). Standard readings:
+    "Tiandihui": "tjˌɛndiːhwˈA",         # Mandarin 天地会, "tyen-dee-HWAY".
+    "Wynne": "wˈɪn",                     # M. L. Wynne, police officer and author.
+    # Three-part name fused with even stress (see "Lim-Boon-Keng" above):
+    "Ho-Ah-Yam": "hˌQ ˌɑː jˌam",
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -2713,6 +2718,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bTan Ean Kiam\b"): "Tan-Ean-Kiam",
     re.compile(r"\bLee Choon Guan\b"): "Lee-Choon-Guan",
     re.compile(r"\bLim Peng Siang\b"): "Lim-Peng-Siang",
+    re.compile(r"\bHo Ah Yam\b"): "Ho-Ah-Yam",
     re.compile(r"\bWong Ah Fook\b"): "Wong-Ah-Fook",
     re.compile(r"\bLow Peng Yam\b"): "Low-Peng-Yam",
     re.compile(r"\bSeow Poh Leng\b"): "Seow-Poh-Leng",
