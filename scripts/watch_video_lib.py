@@ -84,6 +84,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.request
 from pathlib import Path
 
@@ -1217,6 +1218,57 @@ def _render_worker_frame(frame_i):
     return frame.tobytes()
 
 
+def _render_worker_frames(span):
+    # One task = one short run of frames, so each result message stays small
+    # (25 frames ~ 70 MB at 720p). Pool.imap's own chunksize batches a whole
+    # chunk's results into a single pickle - ~1 GB per message on a 12k-frame
+    # main video, a memory spike that broke the result pipe on the Changi
+    # Murals render - and its chunked iterator can't take a timeout.
+    return [_render_worker_frame(i) for i in range(*span)]
+
+
+class RenderPoolDied(RuntimeError):
+    pass
+
+
+def _pool_health(pool):
+    """A health check for pool: returns a reason string once it can no longer
+    deliver every result, else None. A worker killed mid-task (out of memory,
+    Changi Murals 2026-10-24) is silently replaced by the pool, but its
+    chunk's results never arrive, and a broken result pipe kills the pool's
+    result-handler thread - either way imap() would block forever."""
+    pids = {p.pid for p in pool._pool}
+
+    def check():
+        if not pool._result_handler.is_alive():
+            return "the pool's result handler died (a worker's result pipe broke)"
+        if {p.pid for p in pool._pool} != pids:
+            return "a render worker died mid-render (most likely out of memory)"
+        return None
+    return check
+
+
+def _iter_pool_results(it, health, poll=15.0, stall=600.0, clock=time.monotonic):
+    """Yield imap results like a plain loop, but raise RenderPoolDied instead
+    of hanging when health() reports a problem or nothing arrives for stall
+    seconds."""
+    last = clock()
+    while True:
+        try:
+            item = it.next(timeout=poll)
+        except StopIteration:
+            return
+        except multiprocessing.TimeoutError:
+            reason = health()
+            if reason is None and clock() - last > stall:
+                reason = f"no frame arrived for {stall:.0f}s"
+            if reason:
+                raise RenderPoolDied(reason) from None
+            continue
+        last = clock()
+        yield item
+
+
 def render(cfg, out_path, jobs=None):
     out_w, out_h = getattr(cfg, "WIDTH", 1280), getattr(cfg, "HEIGHT", 720)
     fps = getattr(cfg, "FPS", 25)
@@ -1283,6 +1335,7 @@ def render(cfg, out_path, jobs=None):
         if frame_i % 250 == 0:
             print(f"frame {frame_i}/{total_frames} t={frame_i / fps:.1f}s", file=sys.stderr)
 
+    died = None
     try:
         if jobs <= 1:
             prepared_cache = LazyPreparedCache(cfg, out_w, out_h)
@@ -1293,17 +1346,31 @@ def render(cfg, out_path, jobs=None):
                 _write(frame_i, frame.tobytes())
         else:
             print(f"rendering {total_frames} frames across {jobs} workers", file=sys.stderr)
-            chunksize = max(8, total_frames // (jobs * 16))
+            spans = [(a, min(a + fps, total_frames)) for a in range(0, total_frames, fps)]
             ctx = multiprocessing.get_context("spawn")
             with ctx.Pool(jobs, initializer=_render_worker_init,
                           initargs=(cfg._config_path, out_w, out_h, fps)) as pool:
-                for frame_i, raw in enumerate(
-                        pool.imap(_render_worker_frame, range(total_frames), chunksize=chunksize)):
-                    _write(frame_i, raw)
+                results = pool.imap(_render_worker_frames, spans)
+                frame_i = 0
+                try:
+                    for batch in _iter_pool_results(results, _pool_health(pool)):
+                        for raw in batch:
+                            _write(frame_i, raw)
+                            frame_i += 1
+                except RenderPoolDied as e:
+                    died = e
     finally:
         proc.stdin.close()
         proc.wait()
 
+    if died:
+        # ffmpeg has closed a valid-looking but truncated .mp4; remove it so
+        # 6b/8.x can't pick it up as if the render had finished.
+        Path(out_path).unlink(missing_ok=True)
+        print(f"ERROR: render stopped - {died}. Removed the partial {out_path}. "
+              f"Free some memory (close browsers) or pass --jobs 1, then re-run this step.",
+              file=sys.stderr)
+        sys.exit(1)
     if proc.returncode != 0:
         print(f"ffmpeg exited {proc.returncode}", file=sys.stderr)
         sys.exit(1)
