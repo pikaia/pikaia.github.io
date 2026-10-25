@@ -45,8 +45,8 @@ SLIDES = [
     {"img": "FCG1", **_LB},       # s5
     {"img": "CUPP", **_LB},       # s6
 ]
-SCHEDULE = [(0.0, 0), (4.6, 1), (16.375, 2), (28.9, 3), (42.025, 4), (52.775, 5), (64.025, 6)]
-TOTAL_DURATION = 73.95
+SCHEDULE = [(0.0, 0), (4.8, 1), (16.575, 2), (29.1, 3), (42.225, 4), (52.975, 5), (64.225, 6)]
+TOTAL_DURATION = 74.15
 TIMING_JSON = "audio/from-graves-to-gardens-how-singapore-makes-room-for-its-dead.timing.json"
 
 BURN_CAPTIONS = True
