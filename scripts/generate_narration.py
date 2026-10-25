@@ -1971,6 +1971,8 @@ PRONUNCIATION_OVERRIDES = {
     "Alkaff": "alkˈɑːf",                 # Alkaff Mansion - "al-KAHF".
     "Alkaffs": "alkˈɑːfs",
     "Kayu": "kˈɑːjuː",                   # Jalan Kayu - Malay "KAH-yoo".
+    # Exchange banks of Raffles Place post (2026-10-26). Standard reading:
+    "Citibank": "sˈɪtibaŋk",              # "SIT-ee-bank".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
