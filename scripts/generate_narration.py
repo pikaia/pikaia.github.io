@@ -2945,6 +2945,20 @@ def _lang_code_for(voice: str) -> str:
     return "b" if voice.startswith(("bf_", "bm_")) else "a"
 
 
+def lexicon_overrides(overrides=None) -> dict:
+    """PRONUNCIATION_OVERRIDES plus a capitalised copy of every lowercase
+    entry. misaki keeps separate gold entries for some capitalised words, so
+    a lowercase fix alone misses a title-case or sentence-initial use - the
+    graves-to-gardens title read "Graves" as "grahv" though "graves" was
+    fixed. An explicit capitalised entry always wins over the copy."""
+    overrides = PRONUNCIATION_OVERRIDES if overrides is None else overrides
+    out = dict(overrides)
+    for k, v in overrides.items():
+        if k.islower():
+            out.setdefault(k[0].upper() + k[1:], v)
+    return out
+
+
 def _sentence_cache_key(sent: str, voice: str, lang_code: str) -> str:
     # Only the overrides whose word appears in this sentence can change its
     # audio, so a change to an unrelated override doesn't bust the cache.
@@ -2964,7 +2978,7 @@ def _build_pipeline(lang_code: str):
         warnings.simplefilter("ignore")
         from kokoro import KPipeline
         pipeline = KPipeline(lang_code=lang_code)
-        pipeline.g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+        pipeline.g2p.lexicon.golds.update(lexicon_overrides())
     return pipeline
 
 
@@ -3359,7 +3373,7 @@ def scan_for_unknown_tokens(narrative: list[str], voice: str) -> list[tuple[str,
 
     lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
     g2p = en.G2P(british=(lang_code == "b"))
-    g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+    g2p.lexicon.golds.update(lexicon_overrides())
 
     flagged = []
     for para in narrative:
@@ -3446,7 +3460,7 @@ def scan_for_letter_spelled_words(narrative: list[str], voice: str) -> list[tupl
 
     lang_code = "b" if voice.startswith(("bf_", "bm_")) else "a"
     g2p = en.G2P(british=(lang_code == "b"))
-    g2p.lexicon.golds.update(PRONUNCIATION_OVERRIDES)
+    g2p.lexicon.golds.update(lexicon_overrides())
 
     flagged = []
     for para in narrative:
