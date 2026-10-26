@@ -1,0 +1,400 @@
+Delivered-To: lesserknownsingapore@gmail.com
+Received: by 2002:a05:6359:c8b:b0:2bf:73a7:ce9 with SMTP id go11csp2192446rwb;
+        Sun, 25 Oct 2026 21:06:49 -0700 (PDT)
+X-Received: by 2002:a17:903:2d1:b0:2e9:9522:ed3b with SMTP id d9443c01a7336-2ea9c84b245mr44562265ad.70.1792987609415;
+        Sun, 25 Oct 2026 21:06:49 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1792987609; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=Mav07odmpLVTdX5wHa3PNmlUBtvcZ/LlPqUur6E+UFZQihafIBNGkDg7yDysmeyxsK
+         XKYnY5axHNFlmiaUhpG/gY74tYYYvnx/kenR1ZsQ/F4jgQU679lMiFdn4d68NXOq9a8Y
+         bg2oufxaTWop6Qk2xbtSYbHLc5hjawrMB70NPzrQOFCScc7YoshwpPlveWQVo7qYB/Yt
+         Qworhcgi5HKy88yTwW+TpckPqA5vv+z7ljLGeJMozm1wCD3EcUBBaDf8dw6pM4kgrqHf
+         EDRrmR0bVZfWqw1UIqKoSCnd8rZYjhBzfBU5jHeStL0ArdXjtFg8hRTCj8TkRBOE4yzt
+         96lA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=mime-version:auto-submitted:in-reply-to:references:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=93Ya5LsR8GJIhftEW2FCu3+LD/cmuMYTINEMa+Xvjec=;
+        fh=5qMGCFl472VMn2Bbv/YdusMgJvmHLewNUpw24IQOf1s=;
+        b=AQk2FN29N6DGlGVvx/RdvXZYY6KuDmfKu7QeBG1t7TRL5mqtp/nKoPKr325EM14GvA
+         4AJsnz6hsihX1LsvqlHIhFUgZ0Y870KXoDtQEsSHrWZcaX9wQ3ZFKvWpZzt7WN7F9Fwz
+         E/CHtzy/0q2CI2Qk0r8zmklPJRXd9YsanBfXzBft86ZdE2qSPC5RuVchYIy4UmI7Ptos
+         4uoo0UwkqWgLUgBzWuatVcZvsfbbaXPUMrL86ufFbGSuQWo+rM40RvWXm/99Q1X/D4vr
+         s8L6mRS6cwOPeEQzgeg+qOQoYN+NOUWwAh7E60SVf8RpWqLW1zCGzsH/BMoaCwxJUKX8
+         OQXg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@nhb.gov.sg header.s=Singapore header.b=Vrq9fnHf;
+       dkim=pass header.i=@gccprod.onmicrosoft.com header.s=selector1-gccprod-onmicrosoft-com header.b=ZozOfHFP;
+       arc=pass (i=1 dkim=pass dkdomain=nhb.gov.sg dmarc=pass fromdomain=nhb.gov.sg);
+       spf=none (google.com: postmaster@smtp47.sgict.gov.sg does not designate permitted sender hosts) smtp.helo=smtp47.sgict.gov.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nhb.gov.sg
+Return-Path: <>
+Received: from smtp47.sgict.gov.sg (smtp47.sgict.gov.sg. [160.96.212.104])
+        by mx.google.com with ESMTPS id d9443c01a7336-2ea9af34a2csi115205935ad.5.2026.10.25.21.06.48
+        for <lesserknownsingapore@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Sun, 25 Oct 2026 21:06:49 -0700 (PDT)
+Received-SPF: none (google.com: postmaster@smtp47.sgict.gov.sg does not designate permitted sender hosts) client-ip=160.96.212.104;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nhb.gov.sg header.s=Singapore header.b=Vrq9fnHf;
+       dkim=pass header.i=@gccprod.onmicrosoft.com header.s=selector1-gccprod-onmicrosoft-com header.b=ZozOfHFP;
+       arc=pass (i=1 dkim=pass dkdomain=nhb.gov.sg dmarc=pass fromdomain=nhb.gov.sg);
+       spf=none (google.com: postmaster@smtp47.sgict.gov.sg does not designate permitted sender hosts) smtp.helo=smtp47.sgict.gov.sg;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nhb.gov.sg
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=nhb.gov.sg; i=@nhb.gov.sg; q=dns/txt; s=Singapore;
+  t=1792987609; x=1824523609;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   mime-version;
+  bh=1z0DKU20d8azbDC8skjNG+q1ze5+4xXPgCGDWCOj6lw=;
+  b=Vrq9fnHf8bxx1XrfvfgzbW7MFwiMB36sx/LRn49h9wq3xDq8SkekML47
+   MY9+32rwBMyfQ4I9ok/sabDBD/RFpFgIqa5B9iE/fv5ocivGqADBKn3aA
+   ug7gU72b6svClfaL1IN5eqe9cgqvTvq5spdjr93CvYVHK68UV0dlGY7kx
+   EwOopeZF92tsYAHVAXC2RwWbvsmr7CegORo31zubPEyDZLR86kQRZpTSd
+   zdmMSJUgRQUTZdwYA0YyLAERs/4dt8zRIAIvCeI6gatd/t1uwARXF3ag6
+   R9nYcsXkzbe/jml95a11VL83kf7M02rtiFhKxNawgqPHvvnvqzs3/MYlZ
+   w==;
+X-CSE-ConnectionGUID: BzzwZ4jVTiag2JUBnxz0tA==
+X-CSE-MsgGUID: tH8K+dTTSLmUfc6goPMeEw==
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=Bcjsr2F0YVcQxvqk2YGmin9yPH9Lj9XtVMwKo+2h0/0jBejSdK387o4i4NKu59OzJiB5Cf+s4Pxv1tN0tVktEt7allkh9oWDMpERmcQDnkIR3LR2SWrZRcaoldswYkMYeBRfKouGFGbd67P++iZNfvpYXhsLCwOePdsGuUwk0utBPsfqe4CaTP0dbt6Ub5fc+VuAY/sBtBx/qelKB6zwRVx45T9r8Mer3/qHlXYkD/9AosPlkFkPNZ5+kBo0ty+gTqCPYWFgmnmPJryWwcBpIhKhstJSsxQOpa2/NupENMEA9h5oA/n3HdrOUI/vJp8tfxxub0uKMRYxKTakCBjRrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=93Ya5LsR8GJIhftEW2FCu3+LD/cmuMYTINEMa+Xvjec=;
+ b=Zl9bVeV1cRrzZEA9HaBIct3te3tX4QXdj7zlIYb8qBYFExlwVJYdMmW/mJc65G4YqYWV9Ea4EEbWqfACrNo5xJUK8CkVfRyKwTcPVA+Z78o+bB2RzABtb5tuo7lSc16XF6MjlI2hB4JCi0jIb4L9HvnmolA/VIOCe60e5d4wHjFaiMqGypBnmC0uCALZIRrgFOoL1puFW1I4Tk9zHgo6ern39PZpxBwRUxh96ZdAaWwG/nz5ckFE8UPKLXZSb5PfRjvYnvY41dWPyqiheqz6Ks8eiHgiIC55KE2aAvYb2rgsywXG3b4hYccf/ZS/R1QqxG+3/ni2HIwo8B0lz/cexw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=pass
+ action=none header.from=nhb.gov.sg; dkim=pass header.d=nhb.gov.sg; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gccprod.onmicrosoft.com; s=selector1-gccprod-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=93Ya5LsR8GJIhftEW2FCu3+LD/cmuMYTINEMa+Xvjec=;
+ b=ZozOfHFPDH2tqWxVzwCuA8pKtvIhLmFoqIfflVWRhTORzRyU7lfunF+x3dUUtN3UaUPpr1/51ZQMsj1bi2EcgizfRBySUci0oDx5UyQ3T2r6QNF8XdptZUdOmmgbm97u6wEbrWgtXBiIjcA/B659qX7JMVeiFdaqA3mVmW1vk9M=
+From: "NHB Feedback (NHB)" <NHB_Feedback@nhb.gov.sg>
+To: Chris Lee <lesserknownsingapore@gmail.com>
+Subject: Automatic reply: Image request: Constantinople Estate banknotes
+ (1878), National Museum of Singapore collection
+Thread-Topic: Image request: Constantinople Estate banknotes (1878), National
+ Museum of Singapore collection
+Thread-Index: AQHdZP9fUvrOtVpqt02pKMLkm7oMTbcPNMHq
+Date: Mon, 26 Oct 2026 04:06:28 +0000
+Message-ID: <7d581b91711647c7b10bb3b9cbaa8c2d@SIZP274MB0337.SGPP274.PROD.OUTLOOK.COM>
+References: <CAE_m+cLrr3D71uZxi5mrC3OapKDrGVyx=jZ_a4K-imWytrfKgQ@mail.gmail.com>
+In-Reply-To: <CAE_m+cLrr3D71uZxi5mrC3OapKDrGVyx=jZ_a4K-imWytrfKgQ@mail.gmail.com>
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Inbox-Rules-Loop: NHB_Feedback@nhb.gov.sg
+X-MS-TNEF-Correlator:
+authentication-results: mx.microsoft.com 1; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=nhb.gov.sg;
+x-ms-exchange-parent-message-id: <CAE_m+cLrr3D71uZxi5mrC3OapKDrGVyx=jZ_a4K-imWytrfKgQ@mail.gmail.com>
+auto-submitted: auto-generated
+x-ms-exchange-generated-message-source: Mailbox Rules Agent
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SIZP274MB0337:EE_|SGBP274MB0236:EE_
+x-ms-office365-filtering-correlation-id: d61c00e4-4277-4603-7ffa-08df33168290
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;ARA:13230040|50650200027|376014|10070799003|19092799006|366016|1800799024|13003099007|5023799004|56012099006|261021121427099003|261021123027099003|261022113327099003|261022075727099003|261022115727099003|261022105027099003|10067099003|18002099003|22082099003|6133799003|8096899003|12063799003|5133699003|80100003;
+x-microsoft-antispam-message-info: YsBQxLS2nZ0zeadVjpHHtA9+6YzyY9SckUBz1P3N2lrNwQemeFPRyDlMvtqYMiXr2bZGVlNkylO3WBC1tge4KDSnzf46gN3Jo3gmpkwrdjGTbokKAWkfxA3IGDIvWJU6TJpgUgo7DLVVyeN44ofOR8fyfZdv8AhcxuQVY+HV4RUQgB0Lixy7VuTW3wBcCIaIGaAuEU1uDDRjWnB4Q95w1v5AoagHKNV+HGYYysVeDl31k5x1E6OylpxZAZxWtFxa325Wp7S7O0rIltk+5sHAIna1pAqqndG48/1bFZuYXfJKAYzaSPDUHwZdGfMOhZK4JCInwgifIRDtz2SwGzpxOrpPix/2ZpGBZV2GKmobSCnjoggeCk5Z0MbfgIHlXm4yqyvlQ82w+a/YPLMYIjeHDtVFUD0M13fWSR/B85NInTPb5CYV02ZJmoi2wkAYw0j1e+jmyUwaTVsMlWm5YZeOuEjP8qLs6J28pvHrgiiX5SVEBpj1qDgSbz2rbsuTH3SXzGaraDMhmC0uLZMqcv0ftEvsogxI9WENfxiyvFWQtXnqOj31DVRKhIuFigY7JmmgdDjsLB/8WtPR4YK2I8U3tG4XLbq8r1fOcAZN3YvAQ7s=
+x-forefront-antispam-report: CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SIZP274MB0337.SGPP274.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(50650200027)(376014)(10070799003)(19092799006)(366016)(1800799024)(13003099007)(5023799004)(56012099006)(261021121427099003)(261021123027099003)(261022113327099003)(261022075727099003)(261022115727099003)(261022105027099003)(10067099003)(18002099003)(22082099003)(6133799003)(8096899003)(12063799003)(5133699003)(80100003);DIR:OUT;SFP:1501;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: MRIHBnFo9vr7z9HD0xFyYpX1xyLtZiEw2b50tqGSBfdrZihJusUJTjZ3Qk8aG8gfuYuZ2ravWtysi2wraRXfy40EbZF61EEccRJGsGtqmi4Uk5JSD/xcr8lP/2ipcqvUdHfBo0ihTIQV9vjOC1y8iBsnQymxQzNJfE9kGrgXizS2ewuTn6zxGXdXGnRMco9FXX0URoLi0W/j6a9Qtidnhz2R2dOayN0dYUAfQow/hUA0vIJk9OHdLHZuKajlU/uS1AelH+ticjXcnUQ8t1YHr/wux7NvSBsQDRB/r+yz7oaJuWdH3NpL0KDd8iol6sMHv5G3kUe7Szspxdp8uBsHIejVoQyeFAcMJgqBGwySBcmjga149/hj6e9I8//QCAASuRCZKoKben5i0wg5IwM2iSKEnz7SYYDtdzKLAIaSlgnQd4UIyEieoWBqWg0aKAqG
+Content-Type: multipart/alternative;
+	boundary="_000_7d581b91711647c7b10bb3b9cbaa8c2dSIZP274MB0337SGPP274PRO_"
+MIME-Version: 1.0
+X-Exchange-RoutingPolicyChecked: 11otsePKo45bKBjtsDCpbANXMvI4x9ovHGre/Gvet9xXYT57Q65EA9jdSiN9tR/Lo2spHX1/OG5o1iGnAjhnEY/6U1fxgijNJQOpjUafb+xVJloMJFlmLOHnzyTYZHq72G0hvTVU8q1DXpidGo4HP3QZk72r6wCWONd9SuK3hjVMttCGwQYuKTdwHTcrSK6DphjttI/9ZNn/h6KBt5CPLah32L94r3Acnk/8jsN/xcqMQyVMi+6ScfIlN78oJk7ZGaXNfrmpCbCGcFtVSmgFJKibz7i7UH/YHa82lGDl+wqz+eQL4GmSjSD+i43/KgyneTACDJSHv8w8RFJyi483sQ==
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-ExternalHop-MessageData-0: xW14tNqv3rEIJY9Jrif9SmY3vezdhNQuvsjFzdtAE7szpeI4dHKMEGLYXvsQDfdlww3xxqmA38nzOBt8TfRLMUDMl/xZCBupOUEpIC8irmFSN7p33hotgfDMLhpZpHrImt/SSLnMx2hcgV6jPP/tOI8iF/ZeDqz0WfckxXpNJB0OdPF7XO4OBwl2OTdc7xDoonuW+kflbpI1zYA68I+9GtBYg2ruhmpupfn+ZsF2TTgzPYJ4ZCYZYOqdk3NjFz+a5adaLZ2JrCwFNN2iqYORHM4Py/BzkxsF5NycaARktln6KQcCNYa3JiiSvtpji2F1mhonJU6iwZQtek6b5VU5YeoqgCBLFRaeufpRW5kYvXgimXqv9tnlH9ZscFuC3CLt9S5OeXhNy1HmzXr1IpNaTGXx5lzE8K17S8x+Rw8dy/HWSbVjyuRe8KLJJfEqMOfooRuSq4MtdcoAgE6rmkchBCJ1KHJUXox0RRMjzLJ3buwITukC4civNln7ylp8vwdD6ZM+5S7iVdM1txtFc6VBHHJj1YORflVWaMZ8FIkz26OSpuqO+W8oJCGf4aa9GNyPCcvnvRcNv/nhi5FGvwWKiJqmqfq0n9dXUUr09+TOR62mPDA/N8uUp5V44hVha7gb
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SIZP274MB0337.SGPP274.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: d61c00e4-4277-4603-7ffa-08df33168290
+X-MS-Exchange-CrossTenant-originalarrivaltime: 26 Oct 2026 04:06:28.2523
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 0b11c524-9a1c-4e1b-84cb-6336aefc2243
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SGBP274MB0236
+Return-Path: <>
+X-TM-AS-Product-Ver: SMEX-14.0.0.3239-9.1.2019-30280.000
+X-TM-AS-Result: No-10--24.944900-8.000000
+X-TMASE-MatchedRID: EDuvlarLMJfErxzVPIBBI+O3xuJBek+JmFOLov0UKNGeQxlxGrnlA87r
+	tK5utXTnye9QryLzSJwI1pqhes/vCcQx9ZnhcKzQQBpwmxntgwfEQI7ydAlYHiRw6WsKVNdYVFq
+	FCcujc9faLtyJdFu19xByX3WLTbSyFGMXGHE/42o+Jg7sQdznaE7Y8qgMR0flo/gKQ9aja+DmzN
+	R9Yj6SShsgCTGMIuGqDzJgFPzQxwF56HeBiPLk9IoxDABqTJpXRvFIc2OsYQ/adl6/ye1UCrD3N
+	G6+KUbGn8XNx/kNHrW0ZUNVoKkRYmnTqal/GlimemlVKLTWWNjSCAZlUsDm4GXaLFwns1iG286W
+	xOBdhh7QYaCJ0xAZ4fooXRLXOS1ndxxsVfElhvQN+nI+bGoM6WCZc18tBXq0X/LmmwsL6gp7Hf0
+	6vpCrspLr4f7CIIts3voO92n3LCo4U3ArDcUbSQDXQSl8EetKBtE2eveRWl3qUElLNuv9M7R/n6
+	g6hoGKpQKkPBkrHKihbWzMBRoNPeac83o07WJqiHDpnd/NlzvuwJlbVg03eNRHcTPFyGXNGLEnE
+	2n7HjVuNhnxQffaELF+GhWADCGDT6RGO66pckDxDb++RBZKgDUDVZjXHQlFWU/OTA1t/2sPE0H2
+	+rVMo+LbxW4m7wUPpAr1upqf6qHPsHFfehBVZ5TqwQM+Qc2LthRFAcCnfMpIBHLe833a18hSzRE
+	OIufpzSHofk0QwHFbPqD5QrzXd40tLS/gKhup
+X-TM-AS-User-Approved-Sender: No
+X-TM-AS-User-Blocked-Sender: No
+X-TMASE-Result: 10--24.944900-8.000000
+X-TMASE-Version: SMEX-14.0.0.3239-9.1.2019-30280.000
+X-TM-SNTS-SMTP: B52D256313C3E70A349B64EE1B5BAD19BCDF572E9F0D1F69961D99186A38E16E2000:8
+X-OriginatorOrg: nhb.gov.sg
+
+--_000_7d581b91711647c7b10bb3b9cbaa8c2dSIZP274MB0337SGPP274PRO_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+
+Hi there,
+
+Thank you for getting in touch with the National Heritage Board. We=92ll do=
+ our best to get back to you as soon as we can. In the meantime, if your qu=
+ery is about:
+
+1.     The National Flag, National Anthem, Coat of Arms, National Pledge, L=
+ion Head Symbol, or National Flower,
+Please refer to our website<http://www.nhb.gov.sg/what-we-do/our-work/commu=
+nity-engagement/education/resources/national-symbols> to find out more abou=
+t our National Symbols, and the guidelines for their use. You can click her=
+e<https://www.nhb.gov.sg/national-symbol-form> to seek approval for the use=
+ of our National Flag and Coat of Arms through the online form.
+
+2.   Heritage Trails
+Please refer to our heritage portal, roots.sg/trails<https://roots.sg/trail=
+s>, to find out more about our heritage trails and to download trail bookle=
+ts. Our community heritage trails are meant to be self-guided with the book=
+lets and information from roots.sg<http://roots.sg/>.
+3.    Heritage Grants
+To find out more about our different grant schemes and to apply for a grant=
+, please click here<https://www.nhb.gov.sg/what-we-do/our-work/community-en=
+gagement/grants/grants>.
+
+4.    Photos and the National Collection
+Please visit our heritage portal, roots.sg/learn/collections<https://roots.=
+sg/learn/collections>, to search for images and artefacts from our National=
+ Collection. To seek approval to use images that belong to the National Mus=
+eum, please go to: https://go.gov.sg/nmsimagerequest. To seek approval to u=
+se images that belong to the Asian Civilisations Museum, please go to https=
+://go.gov.sg/acmtpm-image-request.
+5.    School Museum Visits and Educational Programmes
+To organise school visits to our museums and find out more about our educat=
+ion programmes, please visit the websites of the Asian Civilisations Museum=
+<https://www.acm.org.sg/content/school-visit>, National Museum<https://www.=
+nationalmuseum.sg/visitor-information/nmsquicklinkretailvenuerental/group-v=
+isits>, Indian Heritage Centre<https://www.indianheritage.org.sg/en/educati=
+on/school-visits>, Malay Heritage Centre<https://www.malayheritage.org.sg/e=
+n/education/school-visits> and Sun Yat Sun Nanyang Memorial Hall<https://ww=
+w.sysnmh.org.sg/en/education/school-visits>.
+
+6.    Corporate and other Group Museum Visits
+To organise corporate or other group visits to our museums, please visit th=
+e websites of the Asian Civilisations Museum<https://www.acm.org.sg/content=
+/group-visit-form>, National Museum<https://www.nationalmuseum.sg/visitor-i=
+nformation/nmsquicklinkretailvenuerental/group-visits>, Indian Heritage Cen=
+tre<https://www.indianheritage.org.sg/en/visit/booking>, Malay Heritage Cen=
+tre<https://www.malayheritage.org.sg/en/visit/tours/corporate-tour> and Sun=
+ Yat Sun Nanyang Memorial Hall<https://www.sysnmh.org.sg/en/visit/free-guid=
+ed-tours>.
+7.    National Monument Walking Tours
+To find out more about our National Monument Walking Tours, please click he=
+re<https://www.nhb.gov.sg/what-we-do/our-work/preserve-our-stories-treasure=
+s-and-places/national-monuments-and-marked-historic-sites/preservation-of-s=
+ites-and-monuments/participate/tours>.
+8.    Careers and Internships
+Visit our website<https://www.nhb.gov.sg/who-we-are/join-us> to find out ab=
+out joining NHB. For internship applications, please email nhb_internship@n=
+hb.gov.sg<mailto:nhb_internship@nhb.gov.sg>.
+
+If your query is about something else, someone from our team will send you =
+a reply within three working days.
+
+Regards,
+NHB Feedback
+
+
+
+
+--_000_7d581b91711647c7b10bb3b9cbaa8c2dSIZP274MB0337SGPP274PRO_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none">
+<!--
+p
+	{margin-top:0;
+	margin-bottom:0}
+-->
+</style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"divtagdefaultwrapper" dir=3D"ltr" style=3D"font-size:12pt; color=
+:#000000; font-family:Calibri,Helvetica,sans-serif">
+<span id=3D"ms-rterangepaste-start"></span>
+<div><br>
+</div>
+<div>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+Hi there,</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+Thank you for getting in touch with the National Heritage Board. We=92ll do=
+ our best to get back to you as soon as we can. In the meantime, if your qu=
+ery is about:</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+1.<span style=3D"font-size:7pt; line-height:normal; font-family:&quot;Times=
+ New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>The National Flag=
+, National Anthem, Coat of Arms, National Pledge, Lion Head Symbol, or Nati=
+onal Flower,</b></p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+Please refer to our&nbsp;<a href=3D"http://www.nhb.gov.sg/what-we-do/our-wo=
+rk/community-engagement/education/resources/national-symbols"><span style=
+=3D"color:rgb(5,99,193)">website</span></a>&nbsp;to find out more about our=
+ National Symbols, and the guidelines for their
+ use. You can click&nbsp;<a href=3D"https://www.nhb.gov.sg/national-symbol-=
+form"><span style=3D"color:rgb(5,99,193)">here</span></a>&nbsp;to seek appr=
+oval for the use of our National Flag and Coat of Arms through the online f=
+orm.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>2.&nbsp; &nbsp;Heritage Trails</b></p>
+<p class=3D"MsoNormal" style=3D"margin-right:0cm; margin-bottom:12pt; margi=
+n-left:36pt; font-family:Calibri,Helvetica,sans-serif; font-size:16px">
+Please refer to our heritage portal,&nbsp;<a href=3D"https://roots.sg/trail=
+s"><span style=3D"color:rgb(5,99,193)">roots.sg/trails</span></a>, to find =
+out more about our heritage trails and to download trail booklets. Our comm=
+unity heritage trails are meant to be self-guided
+ with the booklets and information from&nbsp;<a href=3D"http://roots.sg/"><=
+span style=3D"color:rgb(5,99,193)">roots.sg</span></a>.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>3.&nbsp;&nbsp;&nbsp; Heritage Grants</b></p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+To find out more about our different grant schemes and to apply for a grant=
+, please click&nbsp;<a href=3D"https://www.nhb.gov.sg/what-we-do/our-work/c=
+ommunity-engagement/grants/grants"><span style=3D"color:rgb(5,99,193)">here=
+</span></a>.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>4.&nbsp;&nbsp;&nbsp; Photos and the National Collection</b></p>
+<p class=3D"MsoNormal" style=3D"margin-right:0cm; margin-bottom:12pt; margi=
+n-left:36pt; font-family:Calibri,Helvetica,sans-serif; font-size:16px">
+Please visit our heritage portal,&nbsp;<a href=3D"https://roots.sg/learn/co=
+llections"><span style=3D"color:rgb(5,99,193)">roots.sg/learn/collections</=
+span></a>, to search for images and artefacts from our National Collection.=
+ To seek approval to use images that belong
+ to the National Museum, please&nbsp;go to:&nbsp;<a href=3D"https://go.gov.=
+sg/nmsimagerequest" class=3D"OWAAutoLink">https://go.gov.sg/nmsimagerequest=
+</a>. To seek approval to use images that belong to the Asian Civilisations=
+ Museum, please&nbsp;go to&nbsp;<span id=3D"ms-rterangepaste-start"></span>=
+<span style=3D"font-size:11pt; font-family:Calibri,sans-serif"><a href=3D"h=
+ttps://go.gov.sg/acmtpm-image-request">https://go.gov.sg/acmtpm-image-reque=
+st</a></span><span id=3D"ms-rterangepaste-end"></span>.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>5.&nbsp;&nbsp;&nbsp; School Museum Visits and Educational Programmes</b>=
+</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+To organise school visits to our museums and find out more about our educat=
+ion programmes, please visit the websites of the&nbsp;<a href=3D"https://ww=
+w.acm.org.sg/content/school-visit"><span style=3D"color:rgb(5,99,193)">Asia=
+n Civilisations Museum</span></a>,&nbsp;<a href=3D"https://www.nationalmuse=
+um.sg/visitor-information/nmsquicklinkretailvenuerental/group-visits"><span=
+ style=3D"color:rgb(5,99,193)">National
+ Museum</span></a>,&nbsp;<a href=3D"https://www.indianheritage.org.sg/en/ed=
+ucation/school-visits"><span style=3D"color:rgb(5,99,193)">Indian Heritage =
+Centre</span></a>,&nbsp;<a href=3D"https://www.malayheritage.org.sg/en/educ=
+ation/school-visits"><span style=3D"color:rgb(5,99,193)">Malay
+ Heritage Centre</span></a>&nbsp;and&nbsp;<a href=3D"https://www.sysnmh.org=
+.sg/en/education/school-visits"><span style=3D"color:rgb(5,99,193)">Sun Yat=
+ Sun Nanyang Memorial Hall</span></a>.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>6.&nbsp;&nbsp;&nbsp; Corporate and other Group Museum Visits</b></p>
+<p class=3D"MsoNormal" style=3D"margin-right:0cm; margin-bottom:12pt; margi=
+n-left:36pt; font-family:Calibri,Helvetica,sans-serif; font-size:16px">
+To organise corporate or other group visits to our museums, please visit th=
+e websites of the&nbsp;<a href=3D"https://www.acm.org.sg/content/group-visi=
+t-form"><span style=3D"color:rgb(5,99,193)">Asian Civilisations Museum</spa=
+n></a>,&nbsp;<a href=3D"https://www.nationalmuseum.sg/visitor-information/n=
+msquicklinkretailvenuerental/group-visits"><span style=3D"color:rgb(5,99,19=
+3)">National
+ Museum</span></a>,&nbsp;<a href=3D"https://www.indianheritage.org.sg/en/vi=
+sit/booking"><span style=3D"color:rgb(5,99,193)">Indian Heritage Centre</sp=
+an></a>,&nbsp;<a href=3D"https://www.malayheritage.org.sg/en/visit/tours/co=
+rporate-tour"><span style=3D"color:rgb(5,99,193)">Malay
+ Heritage Centre</span></a>&nbsp;and&nbsp;<a href=3D"https://www.sysnmh.org=
+.sg/en/visit/free-guided-tours"><span style=3D"color:rgb(5,99,193)">Sun Yat=
+ Sun Nanyang Memorial Hall</span></a>.</p>
+<p class=3D"MsoNormal" style=3D"margin-right:36pt; margin-bottom:12pt; marg=
+in-left:36pt; font-family:Calibri,Helvetica,sans-serif; font-size:16px; tex=
+t-indent:-18pt">
+<b>7.&nbsp;&nbsp;&nbsp; National Monument Walking Tours<br>
+</b>To find out more about our National Monument Walking Tours, please clic=
+k&nbsp;<a href=3D"https://www.nhb.gov.sg/what-we-do/our-work/preserve-our-s=
+tories-treasures-and-places/national-monuments-and-marked-historic-sites/pr=
+eservation-of-sites-and-monuments/participate/tours"><span style=3D"color:r=
+gb(5,99,193)">here</span></a>.&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt; text-indent:-18pt">
+<b>8.&nbsp;&nbsp;&nbsp; Careers and Internships</b></p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px; margin-left:36pt">
+Visit our&nbsp;<a href=3D"https://www.nhb.gov.sg/who-we-are/join-us"><span =
+style=3D"color:rgb(5,99,193)">website</span></a>&nbsp;to find out about joi=
+ning NHB. For internship applications, please email&nbsp;<a href=3D"mailto:=
+nhb_internship@nhb.gov.sg"><span style=3D"color:rgb(5,99,193)">nhb_internsh=
+ip@nhb.gov.sg</span></a>.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+If your query is about something else, someone from our team will send you =
+a reply within three working days.</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+Regards,</p>
+<p class=3D"MsoNormal" style=3D"font-family:Calibri,Helvetica,sans-serif; f=
+ont-size:16px">
+NHB Feedback</p>
+</div>
+<span id=3D"ms-rterangepaste-end"></span>
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" style=3D"text-autospace:none"></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none">&nbsp;</p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span lang=3D"EN-US" s=
+tyle=3D"font-size:8.0pt; font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp=
+;</span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span lang=3D"EN-US" s=
+tyle=3D"font-size:8.0pt; font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp=
+;</span></p>
+</div>
+</div>
+</body>
+</html>
+
+--_000_7d581b91711647c7b10bb3b9cbaa8c2dSIZP274MB0337SGPP274PRO_--
