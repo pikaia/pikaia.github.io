@@ -1,0 +1,88 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+The Sisters' Islands and Singapore's First Marine Park
+
+Description:
+Two small wooded islands sit side by side south of Sentosa, so close together that from the sea they look like a pair. A Malay legend says they were once two sisters who drowned there in a storm. In the colonial era soldiers fired howitzers at targets on them, in the 1970s they were reclaimed into picnic islands with swimming lagoons, and since 2014 they have been the heart of Singapore's first marine park, where hawksbill turtles now nest and hatch.
+
+Full story: https://da.gd/A9oR
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap, credited individually):
+- Stefan Fussan, CC BY-SA 4.0, via Wikimedia Commons (5 photos)
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+- Thaejas, CC BY 3.0, via Wikimedia Commons
+- Bob Tan, CC BY-SA 4.0, via Wikimedia Commons
+- Timeline by Lesser Known Singapore, from the Wellcome Collection, The Straits Times, wildsingapore, Ng, Toh and Chou (2013) and NParks
+- Frederick Whymper, public domain, via Wikimedia Commons
+- Artem2016-1, CC BY-SA 4.0, via Wikimedia Commons
+- Huey, via iNaturalist, CC BY 4.0, via Wikimedia Commons
+- lightforspirit, CC BY-SA 2.0, via Wikimedia Commons
+- Marine Conservation Society Seychelles, CC BY 4.0, via Wikimedia Commons
+- Deoma12, CC BY 4.0, via Wikimedia Commons
+
+Sources:
+- Sisters' Islands, Wikipedia
+- Sisters' Islands Marine Park, Wikipedia
+- Sisters' Islands, Singapore Infopedia
+- The Sisters Islands, wildsingapore
+- Southern Islands, Wikipedia
+- Chin Soon Lionel Ng, Tai Chong Toh and Loke Ming Chou, Current Status of Coral Reef Restoration in Singapore (2013), National University of Singapore
+- Singapore identifies first marine park, TTG Asia, 14 July 2014
+- Revamped Sisters' Islands Marine Park opens to public, Mothership, October 2024
+- How we protect turtle hatchlings, National Parks Board
+- Keep on swimming: 42 critically-endangered hawksbill turtles released off Singapore's Sisters' Islands, The Straits Times via The Star, 14 August 2026
+- Notice of howitzer practice at the targets on Sisters Island, The Straits Times, 29 March 1905 (NewspaperSG)
+- Report on Belgian contractors reclaiming Kusu, Sisters, Hantu, Sebarok and Coney islands, The Straits Times, 16 November 1975 (NewspaperSG)
+- Notices of community picnics at Sisters' Island, The Straits Times, 15 and 18 November 1978 (NewspaperSG)
+- Paying respects to our Big Sister, wild shores of singapore, February 2025
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Sisters' Islands and Singapore's First Marine Park #Shorts
+
+Description:
+Two small wooded islands sit side by side south of Sentosa, so close together that from the sea they look like a pair. A Malay legend says they were once two sisters who drowned there in a storm. In the colonial era soldiers fired howitzers at targets on them, in the 1970s they were reclaimed into picnic islands with swimming lagoons, and since 2014 they have been the heart of Singapore's first marine park, where hawksbill turtles now nest and hatch. #Shorts
+
+Full story: https://da.gd/A9oR
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Stefan Fussan, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+- Thaejas, CC BY 3.0, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+The Sisters' Islands and Singapore's First Marine Park
+
+Two small wooded islands sit side by side south of Sentosa, so close together that from the sea they look like a pair. A Malay legend says they were once two sisters who drowned there in a storm. In the colonial era soldiers fired howitzers at targets on them, in the 1970s they were reclaimed into picnic islands with swimming lagoons, and since 2014 they have been the heart of Singapore's first marine park, where hawksbill turtles now nest and hatch.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Stefan Fussan, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+- Thaejas, CC BY 3.0, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
