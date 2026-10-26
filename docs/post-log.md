@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Alkaff Mansion and the Alkaffs: A Hadhrami Family on Telok Blangah Hill
+
+First posted 2026-10-26 · `2026-10-26-alkaff-mansion-and-the-alkaffs-a-hadhrami-family-on-telok-blangah-hill.md`
+
+- 2026-10-26: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`c6ffc04`)
+- 2026-10-26: Narration (voice clone), Listen widget, main video config (36 slides, avatar) and vertical Short config (0-66.2s), both with 2x2 thumbnail... (`6c4067c`)
+
 ## The Sisters' Islands and Singapore's First Marine Park
 
 First posted 2026-10-26 · `2026-10-26-the-sisters-islands-and-singapores-first-marine-park.md`
