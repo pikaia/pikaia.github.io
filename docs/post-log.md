@@ -8,6 +8,7 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-26 · `2026-10-26-the-sisters-islands-and-singapores-first-marine-park.md`
 
+- 2026-10-26: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`14f85f0`)
 - 2026-10-26: Narration (voice clone), Listen widget, timeline PNG, main video config (23 slides, avatar) and vertical Short config (0-66.4s), both with... (`959aa12`)
 
 ## The Ghee Hin and the 1890 Ban on the Secret Societies
