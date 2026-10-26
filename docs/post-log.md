@@ -4,6 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Sisters' Islands and Singapore's First Marine Park
+
+First posted 2026-10-26 · `2026-10-26-the-sisters-islands-and-singapores-first-marine-park.md`
+
+- 2026-10-26: Narration (voice clone), Listen widget, timeline PNG, main video config (23 slides, avatar) and vertical Short config (0-66.4s), both with... (`959aa12`)
+
+## The Ghee Hin and the 1890 Ban on the Secret Societies
+
+First posted 2026-10-26 · `2026-10-26-the-ghee-hin-and-the-1890-ban-on-the-secret-societies.md`
+
+- 2026-10-26: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`561e7cd`)
+- 2026-10-26: Narration (voice clone), Listen widget, timeline PNG, main video config (38 slides, avatar) and vertical Short config (0-63.9s), both with... (`1d268ab`)
+
 ## The Exchange Banks of Raffles Place: Chartered, HSBC and Mercantile
 
 First posted 2026-10-26 · `2026-10-26-the-exchange-banks-of-raffles-place-chartered-hsbc-and-mercantile.md`
