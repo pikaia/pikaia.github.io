@@ -2002,6 +2002,21 @@ PRONUNCIATION_OVERRIDES = {
     "Walshe": "wˈɒlʃ",                   # Captain Walshe, the magistrate, "WOLSH".
     "Johnston's": "ʤˈɒnstənz",           # Johnston's Pier, "JON-stunz".
     "poorest": "pˈʊəɹɪst",               # superlative missed by misaki.
+    # Gas pipelines post (2026-10-27). Standard readings (Malay, Indonesian, company names):
+    "Batam": "bˈɑːtɑm",                  # Batam island, "BAH-tahm".
+    "Senoko": "sənˈQkQ",                 # Senoko, "suh-NOH-koh".
+    "Seraya": "səɹˈɑːjə",                # Pulau Seraya, "suh-RAH-yuh".
+    "PowerSeraya": "pˈWə səɹˈɑːjə",      # YTL PowerSeraya, "power suh-RAH-yuh".
+    "Petronas": "pətɹˈQnəs",             # "puh-TROH-nus".
+    "Gudang": "ɡˈuːdɑŋ",                 # Pasir Gudang, "GOO-dahng".
+    "Natuna": "nɑːtˈuːnə",               # "nah-TOO-nuh".
+    "Conoco": "kˈɒnəkQ",                 # "CON-uh-koh".
+    "Pertamina": "pˌɜːtəmˈiːnə",         # "per-tuh-MEE-nuh".
+    "SembGas": "sˈɛmbɡas",               # "SEMB-gas".
+    "Grissik": "ɡɹˈɪsɪk",                # "GRISS-ik".
+    "liquefied": "lˈɪkwɪfId",            # past tense missed by misaki.
+    "Migas": "mˈiːɡɑs",                  # SKK Migas, "MEE-gahs".
+    "Laffan": "ləfˈɑːn",                 # Ras Laffan, Arabic "luh-FAHN".
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -3457,6 +3472,7 @@ KNOWN_LETTER_SPELLED = {
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
+    "LNG", "SP", "YTL", "PGN", "SKK",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
