@@ -1,0 +1,158 @@
+---
+layout: post
+title: "Alkaff Mansion and the Alkaffs: A Hadhrami Family on Telok Blangah Hill"
+date: 2026-10-26 09:40:16 +0800
+last_modified_at: 2026-10-26 09:40:16 +0800
+categories: [history, places, people]
+image: https://upload.wikimedia.org/wikipedia/commons/6/6c/AlkaffMansion.jpg
+---
+On top of Telok Blangah Hill, above Keppel Harbour, stands a white two-storey house with a red-tiled roof and a small clock tower. It was built around 1918 as a weekend retreat by the Alkaffs, an Arab family whose fortune began with trade in spices, sugar and coffee. The family came from the Hadhramaut, a long desert valley in what is now Yemen, and for a few decades it owned some of the best-known landmarks in Singapore.
+
+[← Back to all posts](/)
+
+![A white two-storey colonial house with a clock tower and a red-tiled roof, at the top of a broad flight of steps](https://upload.wikimedia.org/wikipedia/commons/6/6c/AlkaffMansion.jpg)
+
+*Alkaff Mansion on Telok Blangah Hill in 2006. (JT Loh jotography, CC BY 2.5, via Wikimedia Commons)*
+
+## From the Hadhramaut to Singapore
+
+The Alkaffs were sayyids, a family that traces its descent to the Prophet Muhammad, from the town of Tarim in the Hadhramaut. For centuries, men from the valley had sailed out to the ports of the Indian Ocean to trade, and many of them settled in the Malay world. According to the National Heritage Board, the founder of the family firm, Syed Shaik bin Abdul Rahman Alkaff, came to Singapore from the Hadhramaut in 1852.
+
+![An old aerial photograph of a town of tall mud-brick houses spread across a flat valley floor, below a line of cliffs](https://upload.wikimedia.org/wikipedia/commons/d/d4/Tarim_RAF_1929.jpg)
+
+*Tarim, the Alkaffs' home town in the Hadhramaut, photographed from the air by the Royal Air Force in 1929. (Royal Air Force, public domain, via Wikimedia Commons)*
+
+His firm, Alkaff and Company, traded in spices, sugar, coffee and textiles between India and the Dutch East Indies, and it put much of its profit into land. By the turn of the 20th century the Alkaffs were among the largest property owners in Singapore, alongside two other Hadhrami families, the Alsagoffs and the Aljunieds. I wrote about one of the Alsagoffs [in an earlier post](/2026/10/25/syed-mohamed-alsagoff-and-the-estate-that-printed-its-own-money/).
+
+Like many Hadhrami merchants, the family kept close ties with home, and a good deal of the money made in Singapore went back to the valley. In Tarim, the Alkaffs built a cluster of large mud-brick palaces, which are still the town's grandest houses. One of the family, Sayyid Abubakr bin Shaikh Alkaff, was born in Singapore around 1890 and later settled in the Hadhramaut. He paid for a school and a hospital in Tarim and helped finance a road from the interior to the coast. In 1936 he helped the British official Harold Ingrams broker a truce between the valley's warring Qu'aiti and Kathiri states.
+
+## The Arcade
+
+<div style="float: right; max-width: 300px; width: 42%; margin: 0.25em 0 1em 1.5em;">
+<a href="/assets/images/straits-times-1909-11-27-page-7.jpg"><img src="/assets/images/straits-times-1909-11-27-page-7.jpg" alt="A full newspaper page of dense columns of small print, with a column headed Alkaff Arcade" style="width: 100%;"></a>
+<em>The Straits Times of the 27th of November 1909, page 7, with its report on the new Alkaff Arcade in the second column. (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+The family's best-known building in town was the Alkaff Arcade, which opened on Collyer Quay on the 27th of November 1909. It was designed by the architect David McLeod Craik of Swan and Maclaren in a Moorish style, with two onion domes at the corners. Inside, a covered passage ran from Raffles Square through to the waterfront, lined with shops on the ground floor and offices above. The Straits Times called it "possibly the most unique" of the city's new buildings, and it is often described as Singapore's first indoor shopping centre.
+
+The Arcade replaced the old office and godowns of the trading firm Guthrie and Company. The first tenants included the shipping line P&O and the oil company Standard Oil, and Alkaff and Company kept its own office in the building. At the opening luncheon, according to the Straits Times, the chronicler Charles Burton Buckley gave the speech on behalf of Syed Shaik, who did not speak English.
+
+<div style="clear: both;"></div>
+
+![A colour postcard of a tall ornate building with domed corner towers and arcaded floors, on a waterfront road with lamp posts](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Collyer_Quay%2C_Singapore_postcard.jpg/1280px-Collyer_Quay%2C_Singapore_postcard.jpg)
+
+*The Alkaff Arcade on Collyer Quay, on a postcard from around 1910. (Unknown photographer, public domain, via Wikimedia Commons)*
+
+The family also owned, for a time, the Hotel de l'Europe, one of the city's grand hotels, on the site where the old Supreme Court building now stands.
+
+## The gardens and the mosques
+
+Around 1930, the head of the family, Syed Abdul Rahman bin Shaikh Alkaff, opened a park on his land off Upper Serangoon Road. He brought in a Japanese landscape gardener, and the result, the Alkaff Lake Gardens, is said to have been Singapore's first Japanese-style garden. It had a man-made lake with boats and fishing, artificial hills, Japanese bridges and tea houses, and in the 1930s it was a popular place for an evening or a weekend out.
+
+![An old photograph of a calm lake with a curved wooden footbridge, small islands of trees and a few people on the paths](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Alkaff_Garden%2C_Singapore.%2C_KITLV_1404907.tiff/lossy-page1-1280px-Alkaff_Garden%2C_Singapore.%2C_KITLV_1404907.tiff.jpg)
+
+*The Alkaff Lake Gardens, on a postcard from the 1930s. (Unknown photographer, KITLV, CC BY 4.0, via Wikimedia Commons)*
+
+Nearby, on his land, he paid for a mosque. The Alkaff Upper Serangoon Mosque opened on the 24th of June 1932, with a slender Ottoman-style minaret and a prayer hall of Moorish horseshoe arches. It was made a national monument in 2014. That same year, 1932, another member of the family, Syed Ahmad Alkaff, helped pay for a mosque at Kampung Melayu, near Kaki Bukit. It was rebuilt in the 1990s and still carries the family name.
+
+![A white mosque with a tall, slender minaret and green roofs, behind a fence and trees](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Masjid_Alkaff_Upper_Serangoon%2C_October_2025.jpg/1280px-Masjid_Alkaff_Upper_Serangoon%2C_October_2025.jpg)
+
+*The Alkaff Upper Serangoon Mosque in October 2025. (GoAheadFan95, CC BY-SA 4.0, via Wikimedia Commons)*
+
+## The house on Mount Washington
+
+The hill above Telok Blangah was then known as Mount Washington, possibly because of the family's close ties with Singapore's small American community. A member of the family bought the land in 1916, and the house was finished around 1918. In 1989 the Straits Times credited it to Syed Abdulrahman Alkaff, who was born in the Hadhramaut in 1867 and came to Singapore late in the 19th century, though some accounts name other members of the family.
+
+It was a weekend house, not a home, and the Alkaffs used it to entertain. Through the 1920s and 1930s the newspapers reported receptions and parties there. In 1930 a group of young Arabs hosted Malay footballers at the house, and in 1936 the Chinese Consul-General held a reception there for a visiting general from China.
+
+## War and the years after
+
+<div style="float: left; max-width: 300px; width: 42%; margin: 0.25em 1.5em 1em 0;">
+<a href="/assets/images/straits-times-1950-07-18-page-7.jpg"><img src="/assets/images/straits-times-1950-07-18-page-7.jpg" alt="A full newspaper page with a large photograph of a lake among trees, under the headline Site For New Homes For 10,000" style="width: 100%;"></a>
+<em>The Straits Times of the 18th of July 1950, page 7, with a photograph of the Alkaff Lake Gardens and the report "Garden Lake To Be Filled Up." (Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain)</em>
+</div>
+
+In December 1941, as war reached Malaya, the British military took over the Alkaff Lake Gardens, and a volunteer ambulance unit made its headquarters there. A large Red Cross sign was laid out on the grass, but after the unit left, the gardens were bombed and shelled, and during the Japanese occupation they were closed to the public. Syed Abdul Rahman himself was kept out of his own park.
+
+After the war, the family's fortunes faded. Rent control, which from 1947 held many rents at their pre-war levels, cut into the income of landlords like the Arab families. Syed Abdul Rahman bin Shaikh Alkaff died in Tarim in August 1948. In July 1950 the gardens were sold to the Sennett Realty Company, which planned a housing estate of about 1,400 houses for some 10,000 people on the land around them. The Straits Times reported that the lake would be filled in, and readers wrote in asking for the park to be saved. The lake survived until 1964, when it was drained and the land was cleared for new schools. Cedar Girls' Secondary School stands on the site today.
+
+<div style="clear: both;"></div>
+
+The Arcade was sold in 1973 and pulled down in March 1978 to make way for the office tower that now carries its name. The house on Mount Washington stood empty for years after the war, and a Buddhist organisation is reported to have used it in the 1970s and early 1980s.
+
+## The restaurant years
+
+In the late 1980s, the house was restored as part of a plan to make the hill a tourist attraction, and in September 1990 it opened as a restaurant. Its interior was fitted out in the style of a rich Singapore home of the 1920s and 1930s, and its speciality was the rijsttafel, the Dutch-Indonesian "rice table" of many small dishes. At the sound of a gong, a line of women in kebayas came out of the kitchen, each carrying a dish.
+
+When I was working at Security Pacific, I went to a lunch at Alkaff Mansion. It was a slightly more expensive place, and brokers loved a chance to spend money on their clients. It was cooler up there than down in town, because the house sits higher up. I have wanted to go back, but it is out of the way now that I no longer drive in Singapore.
+
+The restaurant closed in 2003, and the house stood empty again for eight years. It was given conservation status in 2005, reopened as an Italian restaurant in December 2011, and closed again in 2016.
+
+## Alkaff Mansion today
+
+Since 2019, the mansion has been run by the restaurant group 1-Group, with a Spanish restaurant, a bar called the 1918 Heritage Bar, and a café. It is also a popular place for weddings.
+
+![A white colonial house with a clock tower, arched verandahs and palm trees, with outdoor tables in front](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Alkaff_Mansion.png/1280px-Alkaff_Mansion.png)
+
+*Alkaff Mansion in November 2019. (Lucius Winslow, CC BY-SA 4.0, via Wikimedia Commons)*
+
+The family name is still on the map. Besides the mansion and the two mosques, a new Alkaff Lake opened in Bidadari Park on the 3rd of September 2024, about 500 metres north of where the old lake was. It is 1.8 hectares in size and doubles as a flood-control pond for the new Bidadari housing estate, whose newest neighbourhood is also named after the Alkaffs.
+
+![A map of Singapore with pins at Alkaff Mansion, the Arcade, the Hotel de l'Europe, the Alkaff Lake Gardens, the two Alkaff mosques and the new Alkaff Lake in Bidadari Park](/assets/images/alkaff-map.png)
+
+*The Alkaff places in Singapore, plotted on today's map. Pins are approximate. (Map data © OpenStreetMap contributors)*
+
+[See more photos of the Alkaffs' Singapore and the Hadhramaut →](/gallery/alkaff-mansion-and-the-alkaffs-a-hadhrami-family-on-telok-blangah-hill/)
+
+**Where it fits in the bigger story:** The Alkaffs were one of a small number of Hadhrami families who helped build colonial Singapore, and whose money also built schools, roads and palaces in a desert valley thousands of kilometres away. Most of their landmarks have gone, but their name has outlived them, on two mosques, a new lake and a house on a hill that most visitors know only as a place to eat.
+
+---
+
+**Sources:**
+
+- [Alkaff Mansion, Wikipedia](https://en.wikipedia.org/wiki/Alkaff_Mansion)
+- [House of Al-Kaff, Wikipedia](https://en.wikipedia.org/wiki/House_of_Al-Kaff)
+- [Alkaff Arcade, Wikipedia](https://en.wikipedia.org/wiki/Alkaff_Arcade)
+- [Alkaff Gardens, Wikipedia](https://en.wikipedia.org/wiki/Alkaff_Gardens)
+- [Sayyid Abubakr bin Shaikh Al-Kaff, Wikipedia](https://en.wikipedia.org/wiki/Sayyid_Abubakr_bin_Shaikh_Al-Kaff)
+- [Qasr al-'Ishshah, Wikipedia](https://en.wikipedia.org/wiki/Qasr_al-%27Ishshah)
+- [Alkaff Upper Serangoon Mosque, Roots.gov.sg](https://www.roots.gov.sg/places/places-landing/Places/national-monuments/alkaff-upper-serangoon-mosque)
+- [Rent receipt from Alkaff and Company, 1946-47, Roots.gov.sg](https://www.roots.gov.sg/collection-landing/listing/1002215)
+- [Grand Hotel de l'Europe, Singapore, National Archives of Singapore](https://www.nas.gov.sg/archivesonline/photographs/record-details/d388053d-1161-11e3-83d5-0050568939ad)
+- [The Arcade (Alkaff Arcade), National Archives of Singapore](https://www.nas.gov.sg/archivesonline/photographs/record-details/87a81fee-1162-11e3-83d5-0050568939ad)
+- [Alkaff Lake Gardens, Singapore Infopedia](https://eresources.nlb.gov.sg/infopedia/articles/SIP_604_2005-01-24.html)
+- [This Was Once Singapore's Largest Planned Housing Development: A History of Sennett Estate, BiblioAsia, National Library Board](https://biblioasia.nlb.gov.sg/vol-18/issue-2/jul-sep-2022/history-sennett-estate/)
+- [Ameen Ali Talib, Hadramis in Singapore, Al Bab (1995)](https://al-bab.com/hadramis-singapore)
+- [Telok Blangah Hill Park: Dining, NParks](https://www.nparks.gov.sg/visit/parks/telok-blangah-hill-park/activities/dining)
+- [Opening of Bidadari Park and Alkaff Lake marks another milestone in realising the vision for Bidadari estate, NParks, September 2024](https://nparks.gov.sg/news/2024/9/opening-of-bidadari-park-and-alkaff-lake-marks-another-milestone-in-realising-the-vision-for-bidadari-estate)
+- [Media Factsheet on Alkaff Lake, PUB, September 2024](https://www.pub.gov.sg/Resources/News-Room/PressReleases/2024/09/Media-Factsheet-on-Alkaff-Lake)
+- "Alkaff Arcade: The Latest Addition to Singapore Business Buildings", The Straits Times, 27 November 1909, page 7 (NewspaperSG)
+- "The Alkaff Arcade: Congratulations at the Inaugural Luncheon", The Straits Times, 29 November 1909, page 7 (NewspaperSG)
+- "Ex-Singaporean Dies in Terim", Malaya Tribune, 24 August 1948, page 3 (NewspaperSG)
+- "Garden Lake To Be Filled Up", The Straits Times, 18 July 1950, page 7 (NewspaperSG)
+- "The Arcade makes way for development", The Straits Times, 7 March 1978, page 9 (NewspaperSG)
+- "Man behind bungalow on Mount Washington", The Straits Times, 4 January 1989 (NewspaperSG)
+- "Alkaff Mansion to get 1920s look", The New Paper, 9 March 1990 (NewspaperSG)
+- "Colonial dining on a hilltop", Timeszone Central, 2 August 1990 (NewspaperSG)
+- "Let kebaya-clad girls serve you 'rice on the table'", City Weekly, 26 April 1996 (NewspaperSG)
+- "New life for historic Alkaff Mansion", The Straits Times, 15 January 2012 (NewspaperSG)
+- Map data © OpenStreetMap contributors
+- [File:AlkaffMansion.jpg](https://commons.wikimedia.org/wiki/File:AlkaffMansion.jpg)
+- [File:Tarim RAF 1929.jpg](https://commons.wikimedia.org/wiki/File:Tarim_RAF_1929.jpg)
+- [File:Collyer Quay, Singapore postcard.jpg](https://commons.wikimedia.org/wiki/File:Collyer_Quay,_Singapore_postcard.jpg)
+- [File:Alkaff Garden, Singapore., KITLV 1404907.tiff](https://commons.wikimedia.org/wiki/File:Alkaff_Garden,_Singapore.,_KITLV_1404907.tiff)
+- [File:Masjid Alkaff Upper Serangoon, October 2025.jpg](https://commons.wikimedia.org/wiki/File:Masjid_Alkaff_Upper_Serangoon,_October_2025.jpg)
+- [File:Alkaff Mansion.png](https://commons.wikimedia.org/wiki/File:Alkaff_Mansion.png)
+- [File:De Arcade te Singapore, KITLV 34272.tiff](https://commons.wikimedia.org/wiki/File:De_Arcade_te_Singapore,_KITLV_34272.tiff)
+- [File:Gebouwen langs de kade in de haven van Singapore, KITLV 29186.tiff](https://commons.wikimedia.org/wiki/File:Gebouwen_langs_de_kade_in_de_haven_van_Singapore,_KITLV_29186.tiff)
+- [File:Alkaff Gardens, Singapore.jpg](https://commons.wikimedia.org/wiki/File:Alkaff_Gardens,_Singapore.jpg)
+- [File:KITLV - 29176 - Lambert & Co., G.R. - Singapore - Hotel de l'Europe at Singapore - 1897.tif](https://commons.wikimedia.org/wiki/File:KITLV_-_29176_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Hotel_de_l%27Europe_at_Singapore_-_1897.tif)
+- [File:Souvenir of Singapore, 1914 - Plate 03 - Europe Hotel.jpg](https://commons.wikimedia.org/wiki/File:Souvenir_of_Singapore,_1914_-_Plate_03_-_Europe_Hotel.jpg)
+- [File:Map of Hadhrami emigrations.svg](https://commons.wikimedia.org/wiki/File:Map_of_Hadhrami_emigrations.svg)
+- [File:Yemen Tarim Hadhramaut 1994 - 167531378 63715937ff o.jpg](https://commons.wikimedia.org/wiki/File:Yemen_Tarim_Hadhramaut_1994_-_167531378_63715937ff_o.jpg)
+- [File:Minaret Al Muhdhar Mosque Tarim Yemen.jpg](https://commons.wikimedia.org/wiki/File:Minaret_Al_Muhdhar_Mosque_Tarim_Yemen.jpg)
+- [File:Ottoman-styled minaret at Masjid Alkaff Upper Serangoon.jpg](https://commons.wikimedia.org/wiki/File:Ottoman-styled_minaret_at_Masjid_Alkaff_Upper_Serangoon.jpg)
+- [File:Bedok - Masjid Alkaff at Kampung Melayu.jpg](https://commons.wikimedia.org/wiki/File:Bedok_-_Masjid_Alkaff_at_Kampung_Melayu.jpg)
+- [File:Terrace Garden, Telok Blangah Hill Park, Singapore - 20100102.jpg](https://commons.wikimedia.org/wiki/File:Terrace_Garden,_Telok_Blangah_Hill_Park,_Singapore_-_20100102.jpg)
+
+[← Back to all posts](/)

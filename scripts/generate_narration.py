@@ -1986,6 +1986,18 @@ PRONUNCIATION_OVERRIDES = {
     "Hantu": "hˈantuː",                  # Pulau Hantu, Malay "HUN-too".
     "Tekukor": "təkˈuːkɔː",              # Pulau Tekukor, Malay "tuh-KOO-kor".
     "Desmond": "dˈɛzmənd",
+    # Alkaff Mansion post (2026-10-26). Standard readings:
+    "Shaik": "ʃˈAk",                     # Arabic shaykh, "SHAKE".
+    "Shaikh": "ʃˈAk",
+    "Abubakr": "ˌabuːbˈakəɹ",            # Arabic Abu Bakr, "ah-boo-BAK-er".
+    "Ingrams": "ˈɪŋɡɹəmz",               # Harold Ingrams, "ING-grumz".
+    "Qu'aiti": "kuˈAti",                 # the Qu'aiti state, Arabic "koo-AY-tee".
+    "Kathiri": "kaθˈiːɹi",               # the Kathiri state, Arabic "ka-THEE-ree".
+    "l'Europe": "lɜːɹˈɒp",               # Hotel de l'Europe, French "ler-ROP".
+    "Sennett": "sˈɛnɪt",                 # Sennett Realty, "SEN-it".
+    "Hadhramaut": "hˌadɹəmˈWt",          # "had-ruh-MOWT", matching "Hadhrami".
+    "Kampung": "kˈɑmpʊŋ",                # Malay "KAHM-pong".
+    "godowns": "ɡˈQdWnz",                # "GOH-downz" - warehouses.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
