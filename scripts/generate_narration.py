@@ -1998,6 +1998,10 @@ PRONUNCIATION_OVERRIDES = {
     "Hadhramaut": "hˌadɹəmˈWt",          # "had-ruh-MOWT", matching "Hadhrami".
     "Kampung": "kˈɑmpʊŋ",                # Malay "KAHM-pong".
     "godowns": "ɡˈQdWnz",                # "GOH-downz" - warehouses.
+    # Post Office riot post (2026-10-26). Standard readings:
+    "Walshe": "wˈɒlʃ",                   # Captain Walshe, the magistrate, "WOLSH".
+    "Johnston's": "ʤˈɒnstənz",           # Johnston's Pier, "JON-stunz".
+    "poorest": "pˈʊəɹɪst",               # superlative missed by misaki.
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
