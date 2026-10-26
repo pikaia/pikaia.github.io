@@ -4,6 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Pipelines That Feed Singapore
+
+First posted 2026-10-27 · `2026-10-27-the-pipelines-that-feed-singapore.md`
+
+- No revisions yet.
+
+## The Post Office Riot of 1876
+
+First posted 2026-10-26 · `2026-10-26-the-post-office-riot-of-1876.md`
+
+- 2026-10-27: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`5341c4a`)
+- 2026-10-27: Narration (voice clone), Listen widget, main video config (33 slides, avatar) and vertical Short config (0-69.5s), both with 2x2 thumbnail... (`2a49b61`)
+
 ## Alkaff Mansion and the Alkaffs: A Hadhrami Family on Telok Blangah Hill
 
 First posted 2026-10-26 · `2026-10-26-alkaff-mansion-and-the-alkaffs-a-hadhrami-family-on-telok-blangah-hill.md`
