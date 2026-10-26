@@ -1,0 +1,87 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+The Post Office Riot of 1876
+
+Description:
+On the morning of Friday the 15th of December 1876, a small shop at 81 Market Street opened for business as Singapore's new Chinese sub-post office. It had been set up by the colonial government to carry Chinese workers' letters and savings home to their families in China, cheaply and safely. Soon afterwards a crowd wrecked it, and by the end of the day the police had fired on rioters at two police stations and three men were dead.
+
+Full story: https://da.gd/efd2U
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and NewspaperSG and OpenStreetMap, credited individually):
+- Unknown photographer, KITLV, public domain, via Wikimedia Commons (5 photos)
+- Unknown photographer, public domain, via Wikimedia Commons
+- Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain (2 photos)
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- John Thomson, Metropolitan Museum of Art, CC0, via Wikimedia Commons (2 photos)
+- Lai Afong, public domain, via Wikimedia Commons
+- Arshak Catchatoor Galstaun, public domain, via Wikimedia Commons
+- Map data © OpenStreetMap contributors
+- G. R. Lambert and Co., KITLV, public domain, via Wikimedia Commons
+- Timeline by Lesser Known Singapore, from Makepeace et al. (1921), Song Ong Siang (1923), the Straits Times Overland Journal and NLB Infopedia
+- British Library, public domain, via Wikimedia Commons
+- Dietmar Rabich, CC BY-SA 4.0, via Wikimedia Commons
+
+Sources:
+- T. A. Melville, "The Post Office and Its History", in Walter Makepeace, Gilbert E. Brooke and Roland St J. Braddell (eds), One Hundred Years of Singapore (London: John Murray, 1921), vol. 2, pages 133-139, quoting the Postmaster-General's notice of 11 December 1876 and the placard of 13 December 1876
+- Song Ong Siang, One Hundred Years' History of the Chinese in Singapore (1923; annotated edition, 2020), chapter 7, on the riot, the trials and W. H. Read's account of the steamer
+- "The Post Office Riot" and "The Riots", Straits Times Overland Journal, 27 December 1876, page 2 (NewspaperSG)
+- "The Late Riots", Straits Times Overland Journal, 27 December 1876, page 3 (NewspaperSG)
+- Chinese Post Office Riots, Singapore Infopedia, National Library Board
+- Lane J. Harris, "The 1876 Chinese post office riot in Singapore", The Newsletter (International Institute for Asian Studies), no. 63, Spring 2013
+- William Alexander Pickering, Singapore Infopedia, National Library Board
+- Chinese Protectorate, Singapore Infopedia, National Library Board
+- William A. Pickering, Wikipedia
+- List of riots in Singapore, Wikipedia
+- Payment Services Act 2019, Monetary Authority of Singapore
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Post Office Riot of 1876 #Shorts
+
+Description:
+On the morning of Friday the 15th of December 1876, a small shop at 81 Market Street opened for business as Singapore's new Chinese sub-post office. It had been set up by the colonial government to carry Chinese workers' letters and savings home to their families in China, cheaply and safely. Soon afterwards a crowd wrecked it, and by the end of the day the police had fired on rioters at two police stations and three men were dead. #Shorts
+
+Full story: https://da.gd/efd2U
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons and NewspaperSG):
+- Unknown photographer, KITLV, public domain, via Wikimedia Commons
+- Unknown photographer, public domain, via Wikimedia Commons
+- Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- John Thomson, Metropolitan Museum of Art, CC0, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+The Post Office Riot of 1876
+
+On the morning of Friday the 15th of December 1876, a small shop at 81 Market Street opened for business as Singapore's new Chinese sub-post office. It had been set up by the colonial government to carry Chinese workers' letters and savings home to their families in China, cheaply and safely. Soon afterwards a crowd wrecked it, and by the end of the day the police had fired on rioters at two police stations and three men were dead.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and NewspaperSG):
+- Unknown photographer, KITLV, public domain, via Wikimedia Commons
+- Unknown photographer, public domain, via Wikimedia Commons
+- Singapore Press Holdings, via NewspaperSG, National Library Board Singapore, public domain
+- John Edmund Taylor, Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- John Thomson, Metropolitan Museum of Art, CC0, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
