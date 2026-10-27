@@ -8,7 +8,9 @@ Changes that touched 4 or more posts at once are listed once, under [Site-wide c
 
 First posted 2026-10-27 · `2026-10-27-the-pipelines-that-feed-singapore.md`
 
-- No revisions yet.
+- 2026-10-28: Re-voiced videos published (YouTube IvZPZDDbmP0, Shorts GbASeriOjs4, TikTok 7701386371449031967), Watch widget links, gap reports, YouTube... (`b71ad85`)
+- 2026-10-27: Re-voiced with PUB as P-U-B, configs re-timed (605.3s, Short 0-61.0s) (`b68968b`)
+- 2026-10-27: Narration (voice clone), Listen widget, timeline PNG, main video config (34 slides, avatar) and vertical Short config (0-60.7s), both with... (`e3cce8f`)
 
 ## The Post Office Riot of 1876
 
