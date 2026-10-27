@@ -1818,8 +1818,8 @@ posts.
 
 **[Claude]** — added 2026-10-24 at Chris's request. Once Claude has
 reviewed the 4-9 log and output and they pass, Claude copies everything
-the uploads need straight into the Google Drive videos folder,
-`H:/My Drive/videos/` (no per-post subfolder; every file name already
+the uploads need straight into the Google Drive LesserKnownSingapore folder,
+`H:/My Drive/LesserKnownSingapore/` (no per-post subfolder; every file name already
 starts with the slug):
 
 - `preview-motion/<slug>-web.mp4` and `<slug>-short-web.mp4`, the
@@ -2104,13 +2104,13 @@ git push
 
 **[Claude]** — added 2026-10-24 at Chris's request. Once the post's
 commits and the post log are pushed, delete the post's files from
-`H:/My Drive/videos/`, the copies section 9.1 made for the upload. The
+`H:/My Drive/LesserKnownSingapore/`, the copies section 9.1 made for the upload. The
 command file has this as its last block, after step 11; it lists the
 files, then removes them:
 
 ```
-ls "H:/My Drive/videos/<slug>"*
-rm "H:/My Drive/videos/<slug>"*
+ls "H:/My Drive/LesserKnownSingapore/<slug>"*
+rm "H:/My Drive/LesserKnownSingapore/<slug>"*
 ```
 
 They were only there for the upload; the originals stay in
