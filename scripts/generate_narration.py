@@ -2017,6 +2017,10 @@ PRONUNCIATION_OVERRIDES = {
     "liquefied": "lˈɪkwɪfId",            # past tense missed by misaki.
     "Migas": "mˈiːɡɑs",                  # SKK Migas, "MEE-gahs".
     "Laffan": "ləfˈɑːn",                 # Ras Laffan, Arabic "luh-FAHN".
+    # Public Utilities Board, "P-U-B", per Chris (2026-10-27); misaki read it as the word "pub".
+    # Same letter-by-letter stress as "PAP" (pˌiːˌApˈiː), which Chris picked by ear.
+    "PUB": "pˌiːjˌuːbˈiː",
+    "PUB's": "pˌiːjˌuːbˈiːz",
     "Symington's": "sˈaɪmɪŋtənz",        # "SY-ming-tunz".
     "Desch": "dˈɛʃ",                     # "DESH".
     "Haneda": "hˌɑːnˈɛdə",               # "hah-NEH-dah".
@@ -3472,7 +3476,7 @@ KNOWN_LETTER_SPELLED = {
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
-    "LNG", "SP", "YTL", "PGN", "SKK",
+    "LNG", "SP", "YTL", "PGN", "SKK", "PUB",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
