@@ -14,7 +14,7 @@ their sentences show power stations and Jurong Island with no people.
 The maps, the charts, the small Power Seraya photo and the timeline are
 letterboxed; the chart and timeline are fixed.
 
-34 slides, 602.3s. Narration: Kokoro with the OpenVoice clone.
+34 slides, 605.25s. Narration: Kokoro with the OpenVoice clone.
 AVATAR: first and last 30s, cartoon with motion.
 """
 
@@ -105,14 +105,14 @@ SLIDES = [
 ]
 
 SCHEDULE = [
-    (0.0, 0), (2.975, 1), (19.925, 2), (30.45, 3), (42.4, 4), (60.65, 5),
-    (73.425, 6), (90.9, 7), (113.7, 8), (131.25, 9), (156.725, 10), (170.55, 11),
-    (181.25, 12), (197.45, 13), (217.55, 14), (246.25, 15), (262.975, 16), (279.875, 17),
-    (297.575, 18), (319.9, 19), (343.625, 20), (359.95, 21), (381.375, 22), (394.0, 23),
-    (420.775, 24), (443.125, 25), (456.45, 26), (474.8, 27), (486.075, 28), (504.9, 29),
-    (516.425, 30), (546.275, 31), (569.5, 32), (593.475, 33),
+    (0.0, 0), (2.975, 1), (19.925, 2), (30.45, 3), (42.4, 4), (60.95, 5),
+    (73.725, 6), (91.2, 7), (114.55, 8), (132.425, 9), (158.225, 10), (172.05, 11),
+    (182.75, 12), (198.95, 13), (219.55, 14), (248.775, 15), (265.5, 16), (282.4, 17),
+    (300.1, 18), (322.425, 19), (346.15, 20), (362.475, 21), (383.9, 22), (396.525, 23),
+    (423.3, 24), (445.65, 25), (458.975, 26), (477.325, 27), (488.6, 28), (507.425, 29),
+    (518.95, 30), (548.8, 31), (572.025, 32), (596.425, 33),
 ]
-TOTAL_DURATION = 602.3
+TOTAL_DURATION = 605.25
 TIMING_JSON = "audio/the-pipelines-that-feed-singapore.timing.json"
 
 # The avatar presenter, cartoon with motion: corner bubble for the first and last 30 s.

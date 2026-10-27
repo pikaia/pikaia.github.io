@@ -1,6 +1,6 @@
 """Short config for the gas pipelines post.
 
-The post's opening, sentences 0-7 (0-60.65s, over the 60s line): the
+The post's opening, sentences 0-7 (0-60.95s, over the 60s line): the
 October 2026 cut that came to under 2% of daily gas, the three pipes
 under the sea, and the PUB most Singaporeans remember. No sentence names
 a person. Every slide is letterboxed.
@@ -41,7 +41,7 @@ SLIDES = [
     {"img": "PASIR18", **_LB},    # s5
 ]
 SCHEDULE = [(0.0, 0), (2.975, 1), (19.925, 2), (30.45, 3), (42.4, 4)]
-TOTAL_DURATION = 60.65
+TOTAL_DURATION = 60.95
 TIMING_JSON = "audio/the-pipelines-that-feed-singapore.timing.json"
 
 BURN_CAPTIONS = True

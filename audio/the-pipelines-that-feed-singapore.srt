@@ -50,665 +50,665 @@ and a backup built on Jurong
 Island ten years later.
 
 12
-00:00:42,400 --> 00:00:46,592
+00:00:42,400 --> 00:00:46,738
 If you grew up in Singapore,
 you probably think of the PUB as
 
 13
-00:00:46,672 --> 00:00:51,225
+00:00:46,818 --> 00:00:51,525
 the people who look after the
 water, the electricity and the gas.
 
 14
-00:00:51,225 --> 00:00:54,200
+00:00:51,525 --> 00:00:54,500
 For more than three decades it was.
 
 15
-00:00:54,200 --> 00:00:58,272
+00:00:54,500 --> 00:00:58,572
 Today the system is split
 between several organisations,
 
 16
-00:00:58,352 --> 00:01:00,650
+00:00:58,652 --> 00:01:00,950
 and it works roughly like this.
 
 17
-00:01:00,650 --> 00:01:04,156
+00:01:00,950 --> 00:01:04,456
 Almost all of Singapore's electricity,
 
 18
-00:01:04,236 --> 00:01:08,200
+00:01:04,536 --> 00:01:08,500
 about 95%, is made by burning natural gas.
 
 19
-00:01:08,200 --> 00:01:13,425
+00:01:08,500 --> 00:01:13,725
 Singapore has no gas of its own,
 so every bit of it is imported.
 
 20
-00:01:13,425 --> 00:01:17,172
+00:01:13,725 --> 00:01:17,472
 The gas goes to the power
 stations, which are run
 
 21
-00:01:17,252 --> 00:01:20,062
+00:01:17,552 --> 00:01:20,362
 by a handful of generating companies,
 
 22
-00:01:20,142 --> 00:01:24,750
+00:01:20,442 --> 00:01:25,050
 among them Senoko Energy, YTL
 PowerSeraya and PacificLight.
 
 23
-00:01:24,750 --> 00:01:27,930
+00:01:25,050 --> 00:01:28,230
 They sell their electricity
 into a wholesale
 
 24
-00:01:28,010 --> 00:01:30,900
+00:01:28,310 --> 00:01:31,200
 market that is settled every half hour.
 
 25
-00:01:30,900 --> 00:01:34,531
+00:01:31,200 --> 00:01:35,004
 SP Group, the successor to
 the PUB's power business,
 
 26
-00:01:34,611 --> 00:01:39,098
+00:01:35,084 --> 00:01:39,785
 runs the national grid that carries
 the power to every building,
 
 27
-00:01:39,178 --> 00:01:42,675
+00:01:39,865 --> 00:01:43,525
 under a licence from the
 Energy Market Authority.
 
 28
-00:01:42,675 --> 00:01:47,201
+00:01:43,525 --> 00:01:48,051
 Households either buy from SP
 Group at a regulated tariff or,
 
 29
-00:01:47,281 --> 00:01:49,693
+00:01:48,131 --> 00:01:50,543
 since the Open Electricity Market
 
 30
-00:01:49,773 --> 00:01:53,700
+00:01:50,623 --> 00:01:54,550
 reached the whole island
 in 2018, choose a retailer.
 
 31
-00:01:53,700 --> 00:01:56,196
+00:01:54,550 --> 00:01:57,192
 The PUB itself has been the
 
 32
-00:01:56,276 --> 00:01:59,425
+00:01:57,272 --> 00:02:00,600
 national water agency since 2001.
 
 33
-00:01:59,425 --> 00:02:03,313
+00:02:00,600 --> 00:02:04,488
 Energy now has a ministry
 in its name: from the 1st
 
 34
-00:02:03,393 --> 00:02:07,280
+00:02:04,568 --> 00:02:08,455
 of October 2026, the Ministry
 of Trade and Industry
 
 35
-00:02:07,360 --> 00:02:11,250
+00:02:08,535 --> 00:02:12,425
 became the Ministry of
 Energy, Trade and Industry.
 
 36
-00:02:11,250 --> 00:02:17,307
+00:02:12,425 --> 00:02:18,678
 The PUB was set up on the 1st of May
 1963 to take over the electricity,
 
 37
-00:02:17,387 --> 00:02:21,450
+00:02:18,758 --> 00:02:22,950
 gas and water services
 of the old City Council.
 
 38
-00:02:21,450 --> 00:02:25,863
+00:02:22,950 --> 00:02:27,363
 For most of its history, its
 power stations burned fuel oil,
 
 39
-00:02:25,943 --> 00:02:29,082
+00:02:27,443 --> 00:02:30,582
 from the older stations
 at Pasir Panjang to
 
 40
-00:02:29,162 --> 00:02:31,853
+00:02:30,662 --> 00:02:33,353
 the offshore station on Pulau Seraya,
 
 41
-00:02:31,933 --> 00:02:36,725
+00:02:33,433 --> 00:02:38,225
 whose first oil-fired units came
 into service in the late 1980s.
 
 42
-00:02:36,725 --> 00:02:39,385
+00:02:38,225 --> 00:02:40,885
 Oil was easy to ship in and to store,
 
 43
-00:02:39,465 --> 00:02:44,500
+00:02:40,965 --> 00:02:46,000
 and Singapore was already one of
 the world's great refining centres.
 
 44
-00:02:44,500 --> 00:02:47,336
+00:02:46,000 --> 00:02:48,836
 But it was also expensive, and its price
 
 45
-00:02:47,416 --> 00:02:50,550
+00:02:48,916 --> 00:02:52,050
 swung with every crisis
 in the Middle East.
 
 46
-00:02:50,550 --> 00:02:53,072
+00:02:52,050 --> 00:02:54,572
 Natural gas burned more cleanly and
 
 47
-00:02:53,152 --> 00:02:56,125
+00:02:54,652 --> 00:02:57,625
 could run more efficient power stations.
 
 48
-00:02:56,125 --> 00:02:58,422
+00:02:57,625 --> 00:02:59,922
 The problem was getting it to an
 
 49
-00:02:58,502 --> 00:03:01,250
+00:03:00,002 --> 00:03:02,750
 island with no gas fields of its own.
 
 50
-00:03:01,250 --> 00:03:04,250
+00:03:02,750 --> 00:03:05,750
 The answer came from Malaysia.
 
 51
-00:03:04,250 --> 00:03:08,449
+00:03:05,750 --> 00:03:09,949
 Petronas, Malaysia's national
 oil company, was building the
 
 52
-00:03:08,529 --> 00:03:12,946
+00:03:10,029 --> 00:03:14,446
 Peninsular Gas Utilisation system
 to carry gas from its fields
 
 53
-00:03:13,026 --> 00:03:17,450
+00:03:14,526 --> 00:03:18,950
 off the coast of Terengganu down
 the length of the peninsula.
 
 54
-00:03:17,450 --> 00:03:20,736
+00:03:18,950 --> 00:03:22,395
 Its southern end reached
 Pasir Gudang in Johor,
 
 55
-00:03:20,816 --> 00:03:24,389
+00:03:22,475 --> 00:03:26,220
 and from there an undersea
 line was laid across the
 
 56
-00:03:24,469 --> 00:03:28,050
+00:03:26,300 --> 00:03:30,050
 Johor Strait to the PUB's
 power station at Senoko.
 
 57
-00:03:28,050 --> 00:03:33,496
+00:03:30,050 --> 00:03:35,496
 Gas was due to start flowing
 on the 29th of January 1992,
 
 58
-00:03:33,576 --> 00:03:37,550
+00:03:35,576 --> 00:03:39,550
 about 150 million cubic feet of it a day.
 
 59
-00:03:37,550 --> 00:03:41,575
+00:03:39,550 --> 00:03:43,850
 A few years later the
 PUB itself was broken up.
 
 60
-00:03:41,575 --> 00:03:46,520
+00:03:43,850 --> 00:03:48,795
 On the 1st of October 1995, its
 electricity and gas businesses were
 
 61
-00:03:46,600 --> 00:03:51,545
+00:03:48,875 --> 00:03:53,820
 turned into companies under a new
 holding company, Singapore Power,
 
 62
-00:03:51,625 --> 00:03:56,275
+00:03:53,900 --> 00:03:58,550
 owned by the government's
 investment company Temasek Holdings.
 
 63
-00:03:56,275 --> 00:04:02,180
+00:03:58,550 --> 00:04:04,605
 In 2001 the Energy Market Authority
 was set up to regulate the industry,
 
 64
-00:04:02,260 --> 00:04:06,250
+00:04:04,685 --> 00:04:08,775
 and the PUB became the
 water agency it is today.
 
 65
-00:04:06,250 --> 00:04:10,600
+00:04:08,775 --> 00:04:13,125
 The second source lay far
 out in the South China Sea.
 
 66
-00:04:10,600 --> 00:04:15,181
+00:04:13,125 --> 00:04:17,706
 In the West Natuna fields, off
 Indonesia's Natuna Islands,
 
 67
-00:04:15,261 --> 00:04:18,556
+00:04:17,786 --> 00:04:21,081
 a group of oil companies led by Conoco and
 
 68
-00:04:18,636 --> 00:04:22,975
+00:04:21,161 --> 00:04:25,500
 Indonesia's state oil company
 Pertamina had found gas.
 
 69
-00:04:22,975 --> 00:04:26,671
+00:04:25,500 --> 00:04:29,196
 In 1998 they agreed to sell it to SembGas,
 
 70
-00:04:26,751 --> 00:04:31,525
+00:04:29,276 --> 00:04:34,050
 a consortium led by Singapore's
 Sembawang Corporation:
 
 71
-00:04:31,605 --> 00:04:35,300
+00:04:34,130 --> 00:04:37,825
 325 million cubic feet a day for 22 years,
 
 72
-00:04:35,380 --> 00:04:39,875
+00:04:37,905 --> 00:04:42,400
 under a contract worth
 about 8 billion US dollars.
 
 73
-00:04:39,875 --> 00:04:44,705
+00:04:42,400 --> 00:04:47,230
 To deliver it, the companies laid
 a pipeline about 640 kilometres
 
 74
-00:04:44,785 --> 00:04:49,086
+00:04:47,310 --> 00:04:51,611
 long across the seabed to
 Singapore's waters, with a short
 
 75
-00:04:49,166 --> 00:04:53,850
+00:04:51,691 --> 00:04:56,375
 final stretch to Jurong Island
 and its petrochemical industry.
 
 76
-00:04:53,850 --> 00:04:57,575
+00:04:56,375 --> 00:05:00,100
 The gas began to flow in 2001.
 
 77
-00:04:57,575 --> 00:05:00,500
+00:05:00,100 --> 00:05:03,025
 The third pipe came from the south.
 
 78
-00:05:00,500 --> 00:05:05,291
+00:05:03,025 --> 00:05:07,816
 In 2001 Singapore Power signed
 an agreement with Pertamina,
 
 79
-00:05:05,371 --> 00:05:10,079
+00:05:07,896 --> 00:05:12,604
 through its company Gas Supply
 Private Limited, to buy gas
 
 80
-00:05:10,159 --> 00:05:14,949
+00:05:12,684 --> 00:05:17,474
 from fields in South Sumatra,
 starting at 150 million cubic
 
 81
-00:05:15,029 --> 00:05:19,900
+00:05:17,554 --> 00:05:22,425
 feet a day and rising to 350
 million by 2009, for 20 years.
 
 82
-00:05:19,900 --> 00:05:24,768
+00:05:22,425 --> 00:05:27,293
 The pipeline, a joint project of
 Singapore Power's PowerGas and
 
 83
-00:05:24,848 --> 00:05:30,187
+00:05:27,373 --> 00:05:32,712
 Indonesia's state gas company PGN,
 runs about 470 kilometres from the
 
 84
-00:05:30,267 --> 00:05:35,450
+00:05:32,792 --> 00:05:37,975
 gas plant at Grissik, by way of
 the island of Batam, to Singapore.
 
 85
-00:05:35,450 --> 00:05:39,297
+00:05:37,975 --> 00:05:41,822
 It was formally opened on
 the 4th of August 2003,
 
 86
-00:05:39,377 --> 00:05:43,625
+00:05:41,902 --> 00:05:46,150
 and the gas arrived about
 a month later than planned.
 
 87
-00:05:43,625 --> 00:05:48,000
+00:05:46,150 --> 00:05:50,525
 With three pipes running, gas
 took over from oil very quickly.
 
 88
-00:05:48,000 --> 00:05:50,913
+00:05:50,525 --> 00:05:53,438
 In 2001 it made about a quarter
 
 89
-00:05:50,993 --> 00:05:53,600
+00:05:53,518 --> 00:05:56,125
 of Singapore's electricity.
 
 90
-00:05:53,600 --> 00:05:56,801
+00:05:56,125 --> 00:05:59,326
 By 2003 it made more than half,
 
 91
-00:05:56,881 --> 00:05:59,950
+00:05:59,406 --> 00:06:02,475
 and by 2014 almost all of it.
 
 92
-00:05:59,950 --> 00:06:02,435
+00:06:02,475 --> 00:06:04,960
 By then, every molecule of that gas
 
 93
-00:06:02,515 --> 00:06:05,300
+00:06:05,040 --> 00:06:07,825
 came by pipe from just two neighbours.
 
 94
-00:06:05,300 --> 00:06:09,354
+00:06:07,825 --> 00:06:11,879
 In 2006 the government decided
 to build a terminal for
 
 95
-00:06:09,434 --> 00:06:13,181
+00:06:11,959 --> 00:06:15,706
 liquefied natural gas, or
 LNG: gas cooled until it
 
 96
-00:06:13,261 --> 00:06:17,238
+00:06:15,786 --> 00:06:19,763
 turns to liquid, so that it
 can be shipped across the
 
 97
-00:06:17,318 --> 00:06:21,375
+00:06:19,843 --> 00:06:23,900
 world in tankers and turned
 back into gas on arrival.
 
 98
-00:06:21,375 --> 00:06:26,432
+00:06:23,900 --> 00:06:28,957
 The 1.7 billion Singapore
 dollars terminal on Jurong Island
 
 99
-00:06:26,512 --> 00:06:31,300
+00:06:29,037 --> 00:06:33,825
 took its first commercial
 cargo on the 7th of May 2013.
 
 100
-00:06:31,300 --> 00:06:34,000
+00:06:33,825 --> 00:06:36,525
 The balance has shifted since.
 
 101
-00:06:34,000 --> 00:06:38,471
+00:06:36,525 --> 00:06:40,996
 In 2025, according to the
 Energy Market Authority,
 
 102
-00:06:38,551 --> 00:06:45,205
+00:06:41,076 --> 00:06:47,730
 about 57% of Singapore's gas imports
 arrived as LNG from around the world,
 
 103
-00:06:45,285 --> 00:06:50,200
+00:06:47,810 --> 00:06:52,725
 and about 43% by pipeline
 from Malaysia and Indonesia.
 
 104
-00:06:50,200 --> 00:06:54,981
+00:06:52,725 --> 00:06:57,506
 Under an agreement made in
 2022, Indonesia agreed to keep
 
 105
-00:06:55,061 --> 00:07:00,775
+00:06:57,586 --> 00:07:03,300
 supplying gas by pipeline until
 2028, at lower volumes than before.
 
 106
-00:07:00,775 --> 00:07:04,409
+00:07:03,300 --> 00:07:06,934
 The cut announced on
 the 24th of October was
 
 107
-00:07:04,489 --> 00:07:07,278
+00:07:07,014 --> 00:07:09,803
 about 31 million cubic feet a day,
 
 108
-00:07:07,358 --> 00:07:12,000
+00:07:09,883 --> 00:07:14,525
 according to Indonesia's
 upstream regulator, SKK Migas.
 
 109
-00:07:12,000 --> 00:07:15,783
+00:07:14,525 --> 00:07:18,308
 Part of it came from the
 Natuna line and part from
 
 110
-00:07:15,863 --> 00:07:19,414
+00:07:18,388 --> 00:07:21,939
 the Sumatra line, and
 the gas was to go instead
 
 111
-00:07:19,494 --> 00:07:23,125
+00:07:22,019 --> 00:07:25,650
 to power stations on
 Batam, Bintan and Sumatra.
 
 112
-00:07:23,125 --> 00:07:27,513
+00:07:25,650 --> 00:07:30,038
 Earlier in the month a 16-hour
 blackout on Batam had cut
 
 113
-00:07:27,593 --> 00:07:30,466
+00:07:30,118 --> 00:07:32,991
 power to more than 411,000 customers,
 
 114
-00:07:30,546 --> 00:07:36,450
+00:07:33,071 --> 00:07:38,975
 and Indonesia's government said it was
 putting its own energy needs first.
 
 115
-00:07:36,450 --> 00:07:41,075
+00:07:38,975 --> 00:07:43,600
 In Singapore, the Energy Market
 Authority said the reduction
 
 116
-00:07:41,155 --> 00:07:45,153
+00:07:43,680 --> 00:07:47,678
 reported by the importers,
 expected to last 18 days,
 
 117
-00:07:45,233 --> 00:07:49,936
+00:07:47,758 --> 00:07:52,461
 came to less than 2% of the
 country's total daily gas demand,
 
 118
-00:07:50,016 --> 00:07:54,800
+00:07:52,541 --> 00:07:57,325
 and that Singapore GasCo could
 bring in more LNG at any time.
 
 119
-00:07:54,800 --> 00:07:58,362
+00:07:57,325 --> 00:08:00,887
 Prime Minister Lawrence
 Wong said Singapore expected
 
 120
-00:07:58,442 --> 00:08:02,213
+00:08:00,967 --> 00:08:04,738
 the commercial contracts to
 be honoured, and pointed to
 
 121
-00:08:02,293 --> 00:08:06,075
+00:08:04,818 --> 00:08:08,600
 the LNG terminal as the
 reason the country could cope.
 
 122
-00:08:06,075 --> 00:08:08,373
+00:08:08,600 --> 00:08:10,898
 Earlier in the year the system had
 
 123
-00:08:08,453 --> 00:08:10,900
+00:08:10,978 --> 00:08:13,425
 already absorbed a different shock.
 
 124
-00:08:10,900 --> 00:08:15,409
+00:08:13,425 --> 00:08:17,934
 War in the Middle East had
 halted production at Qatar's Ras
 
 125
-00:08:15,489 --> 00:08:20,231
+00:08:18,014 --> 00:08:22,756
 Laffan gas plant since March,
 though the authority said Qatari
 
 126
-00:08:20,311 --> 00:08:24,900
+00:08:22,836 --> 00:08:27,425
 gas had met less than 10% of
 Singapore's electricity needs.
 
 127
-00:08:24,900 --> 00:08:28,384
+00:08:27,425 --> 00:08:30,909
 Tan See Leng, the minister
 in charge of energy,
 
 128
-00:08:28,464 --> 00:08:32,781
+00:08:30,989 --> 00:08:35,306
 said electricity prices were
 not expected to rise for now,
 
 129
-00:08:32,861 --> 00:08:36,425
+00:08:35,386 --> 00:08:38,950
 and that a second LNG
 terminal was being built.
 
 130
-00:08:36,425 --> 00:08:39,658
+00:08:38,950 --> 00:08:42,183
 Further ahead, Singapore
 is studying sources
 
 131
-00:08:39,738 --> 00:08:42,750
+00:08:42,263 --> 00:08:45,275
 of power beyond gas, nuclear among them.
 
 132
-00:08:42,750 --> 00:08:46,544
+00:08:45,275 --> 00:08:49,069
 In 2012 a government
 pre-feasibility study concluded
 
 133
-00:08:46,624 --> 00:08:50,194
+00:08:49,149 --> 00:08:52,719
 that the nuclear technologies
 then available were
 
 134
-00:08:50,274 --> 00:08:53,775
+00:08:52,799 --> 00:08:56,300
 "not yet suitable for
 deployment in Singapore."
 
 135
-00:08:53,775 --> 00:08:58,013
+00:08:56,300 --> 00:09:00,538
 Two years later the Singapore
 Nuclear Research and Safety
 
 136
-00:08:58,093 --> 00:09:02,180
+00:09:00,618 --> 00:09:04,705
 Initiative was set up to
 build expertise, and more than
 
 137
-00:09:02,260 --> 00:09:06,275
+00:09:04,785 --> 00:09:08,800
 150 million dollars has gone
 into its research since.
 
 138
-00:09:06,275 --> 00:09:10,448
+00:09:08,800 --> 00:09:12,973
 Singapore has signed agreements
 with the United States, France,
 
 139
-00:09:10,528 --> 00:09:14,431
+00:09:13,053 --> 00:09:16,956
 the United Arab Emirates and
 Sweden to build up its ability
 
 140
-00:09:14,511 --> 00:09:18,617
+00:09:17,036 --> 00:09:21,142
 to assess nuclear power, and it
 is watching the development of
 
 141
-00:09:18,697 --> 00:09:22,950
+00:09:21,222 --> 00:09:25,475
 small modular reactors, a newer,
 smaller kind of nuclear plant.
 
 142
-00:09:22,950 --> 00:09:26,184
+00:09:25,475 --> 00:09:28,709
 The government says it
 has not yet made any
 
 143
-00:09:26,264 --> 00:09:29,500
+00:09:28,789 --> 00:09:32,025
 decision on whether to use nuclear energy.
 
 144
-00:09:29,500 --> 00:09:33,237
+00:09:32,025 --> 00:09:35,911
 Where it fits in the bigger
 story: Singapore has always
 
 145
-00:09:33,317 --> 00:09:36,567
+00:09:35,991 --> 00:09:39,373
 imported its fuel, from
 the coal of the colonial
 
 146
-00:09:36,647 --> 00:09:40,325
+00:09:39,453 --> 00:09:43,275
 era to the oil of the PUB
 years and the gas of today.
 
 147
-00:09:40,325 --> 00:09:44,998
+00:09:43,275 --> 00:09:47,948
 What changed over those three
 decades was not the dependence
 
 148
-00:09:45,078 --> 00:09:49,038
+00:09:48,028 --> 00:09:51,988
 but the number of ways in,
 from one pipe in 1992 to
 
 149
-00:09:49,118 --> 00:09:53,475
+00:09:52,068 --> 00:09:56,425
 three by 2003, and then to
 ships from around the world.
 
 150
-00:09:53,475 --> 00:09:58,030
+00:09:56,425 --> 00:10:00,980
 That is why a cut that would
 once have been a crisis
 
 151
-00:09:58,110 --> 00:10:02,300
+00:10:01,060 --> 00:10:05,250
 came to less than 2% of
 a day's demand in 2026.
