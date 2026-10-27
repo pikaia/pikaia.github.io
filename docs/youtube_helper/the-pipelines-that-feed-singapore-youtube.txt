@@ -1,0 +1,111 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+The Pipelines That Feed Singapore
+
+Description:
+On Saturday the 24th of October 2026, Indonesia cut the natural gas it sends to Singapore by pipeline, to keep its own power stations running after a long blackout on Batam. In Singapore, nothing went dark. The Energy Market Authority said the cut came to less than 2% of the gas the country uses each day, and that there was enough gas to go round. That it barely registered goes back to three pipes laid under the sea between 1992 and 2003, and a backup built on Jurong Island ten years later.
+
+Full story: https://da.gd/TGPvsx
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap, credited individually):
+- Terence Ong, CC BY 2.5, via Wikimedia Commons
+- Jacklee, CC BY-SA 3.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Jnzl's Photos, CC BY 2.0, via Wikimedia Commons
+- PLP2016, CC BY-SA 4.0, via Wikimedia Commons
+- YTL Power International Berhad, CC BY-SA 4.0, via Wikimedia Commons
+- Wzhkevin, CC BY-SA 4.0, via Wikimedia Commons
+- ZKang123, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- Senoko Energy Supply Pte Ltd, CC BY-SA 4.0, via Wikimedia Commons
+- Peter in s, CC BY-SA 3.0, via Wikimedia Commons
+- Arash Toudeshki, CC BY 3.0, via Wikimedia Commons
+- United Kingdom Hydrographic Office, public domain, via Wikimedia Commons
+- Badan Informasi Geospasial Republik Indonesia, public domain, via Wikimedia Commons
+- Frans Berkelaar, CC BY-SA 2.0, via Wikimedia Commons (2 photos)
+- Chart by Lesser Known Singapore, from SG101 and the Energy Market Authority's Singapore Energy Statistics
+- Towel401, public domain, via Wikimedia Commons
+- William Cho, CC BY-SA 2.0, via Wikimedia Commons
+- Timeline by Lesser Known Singapore, from the National Archives of Singapore, NLB Infopedia, the New Straits Times, the Oil & Gas Journal, the Singapore Government, METI and Bloomberg
+
+Sources:
+- PUB brand story, PUB
+- Public Utilities Board (PUB), National Archives of Singapore
+- Public Utilities Board, Singapore Infopedia, National Library Board
+- SP Group, Wikipedia
+- Celebrating 25 Years of Powering Possibilities, Energy Market Authority, 2026
+- Energy Market Authority, Wikipedia
+- Open Electricity Market rolls out nationwide from November 2018, Energy Market Authority
+- Changes to Cabinet and Other Appointments, and the Renaming of the Ministry of Trade and Industry, Prime Minister's Office, July 2026
+- Pulau Seraya power station, Global Energy Monitor
+- "Singapore to get Petronas gas supply from Jan 29", New Straits Times, January 1992, via Klik
+- "Malaysia eyes third peninsula gas line", Oil & Gas Journal, February 1992
+- Peninsula Gas Utilisation, Wikipedia
+- "W. Natuna gas project marks progress", Oil & Gas Journal, 3 August 1998
+- "Pertamina and Singapore Power sign sales agreement for supply of natural gas to Singapore", Gas Supply Pte Ltd, 12 February 2001
+- Speech by Prime Minister Goh Chok Tong at the inauguration ceremony, 4 August 2003, Ministry of Foreign Affairs
+- "Singapore firm seeks compensation from Indonesia", Petromindo
+- Gresik-Batam-Singapore Gas Pipeline, Global Energy Monitor
+- "Our Energy Security", SG101
+- Launch of the inaugural Singapore Energy Statistics, Energy Market Authority, 2011
+- Singapore Energy Statistics 2015, Singapore International Energy Week
+- Singapore Energy Statistics, chapter 2, Energy Market Authority
+- "Singapore's LNG terminal starts commercial operations", Singapore Government press release, May 2013, National Archives of Singapore
+- "Singapore Gets First Commercial LNG Cargo at Jurong Island", gCaptain
+- "Singapore GasCo Pte Ltd established to centralise procurement and supply of natural gas to power sector of Singapore", Allen & Gledhill, 2025
+- "Singapore's power prices may rise on US-Iran conflict", Argus Media
+- "Indonesia begins trimming pipeline gas exports to Singapore", Bloomberg via BusinessMirror, 25 October 2026
+- "Electricity prices unlikely to be hit by Indonesia's gas supply cuts: Minister", Tabla, October 2026
+- Nuclear Energy, Ministry of Energy, Trade and Industry
+- "Second Minister S Iswaran's reply to Parliament Question on Nuclear Energy Pre-feasibility Study in Singapore", Ministry of Trade and Industry, October 2012
+- "Singapore and US Sign Civil Nuclear Agreement", US-ASEAN Business Council, 2024
+- "Singapore Deepens Cooperation with the United States on Nuclear Energy Capability Building", Singapore International Energy Week, 27 October 2025
+- Map data © OpenStreetMap contributors
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+The Pipelines That Feed Singapore #Shorts
+
+Description:
+On Saturday the 24th of October 2026, Indonesia cut the natural gas it sends to Singapore by pipeline, to keep its own power stations running after a long blackout on Batam. In Singapore, nothing went dark. The Energy Market Authority said the cut came to less than 2% of the gas the country uses each day, and that there was enough gas to go round. That it barely registered goes back to three pipes laid under the sea between 1992 and 2003, and a backup built on Jurong Island ten years later. #Shorts
+
+Full story: https://da.gd/TGPvsx
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Terence Ong, CC BY 2.5, via Wikimedia Commons
+- Jacklee, CC BY-SA 3.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Jnzl's Photos, CC BY 2.0, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+The Pipelines That Feed Singapore
+
+On Saturday the 24th of October 2026, Indonesia cut the natural gas it sends to Singapore by pipeline, to keep its own power stations running after a long blackout on Batam. In Singapore, nothing went dark. The Energy Market Authority said the cut came to less than 2% of the gas the country uses each day, and that there was enough gas to go round. That it barely registered goes back to three pipes laid under the sea between 1992 and 2003, and a backup built on Jurong Island ten years later.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons and OpenStreetMap):
+- Terence Ong, CC BY 2.5, via Wikimedia Commons
+- Jacklee, CC BY-SA 3.0, via Wikimedia Commons (2 photos)
+- Map data © OpenStreetMap contributors
+- Jnzl's Photos, CC BY 2.0, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
