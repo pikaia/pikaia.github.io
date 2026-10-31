@@ -58,6 +58,8 @@ The Supreme Court building, designed by Frank Dorrington Ward and modelled in pa
 
 So the Europe never really left the Padang. The traveller who follows Kipling's advice today can still feed at Raffles — but to sleep at the Hotel de l'Europe, you would have to sleep in an art gallery, on the exact ground where the colonials took their dinners to the sound of waltzes, in the finest view east of Suez.
 
+[See more photos of the Hotel de l'Europe, its dining room and its Padang →](/gallery/the-hotel-de-l-europe-singapores-grand-hotel-before-the-raffles/)
+
 **Where it fits in the bigger story:** For half a century the Hotel de l'Europe was the other pole of Singapore's social world — the residents' hotel against the travellers' Raffles — and its site has been a seat of power ever since, first of hospitality, then of law, now of art. Its million-dollar rebuild also belongs to the generation of self-made fortunes, Adis's and the Alkaffs', that built so much of the civic district and then vanished with the world that made them.
 
 ---
@@ -75,5 +77,13 @@ So the Europe never really left the Padang. The traveller who follows Kipling's 
 - "The Europe Hotel Closes", The Straits Times, 30 October 1932 (NewspaperSG, via NLB references)
 - [File:KITLV - 29176 - Lambert & Co., G.R. - Singapore - Hotel de l'Europe at Singapore - 1897.tif](https://commons.wikimedia.org/wiki/File:KITLV_-_29176_-_Lambert_%26_Co.,_G.R._-_Singapore_-_Hotel_de_l%27Europe_at_Singapore_-_1897.tif)
 - [File:Souvenir of Singapore, 1914 - Plate 03 - Europe Hotel.jpg](https://commons.wikimedia.org/wiki/File:Souvenir_of_Singapore,_1914_-_Plate_03_-_Europe_Hotel.jpg)
+- [Wikimedia Commons — KITLV 377459, Hotel d'Europe, circa 1890](https://commons.wikimedia.org/wiki/File:KITLV_-_377459_-_Hotel_d%27Europe_at_Singapore_-_circa_1890.tif)
+- [Wikimedia Commons — Carriages before the Hotel de l'Europe](https://commons.wikimedia.org/wiki/File:Koetsen_voor_het_Hotel_de_l%27Europe_in_Singapore,_SFA002022355.jpg)
+- [Wikimedia Commons — Singapore. High Street with Hotel Europe (photochrom, Library of Congress)](https://commons.wikimedia.org/wiki/File:Singapore._High_Street_with_Hotel_Europe_LCCN2017657652.jpg)
+- [Wikimedia Commons — KITLV A1225, Hotel d'Europe](https://commons.wikimedia.org/wiki/File:KITLV_A1225_-_Hotel_d_%27Europe_te_Singapore,_KITLV_142885.tiff)
+- [Wikimedia Commons — Souvenir of Singapore, 1914, Plate 02, the dining room](https://commons.wikimedia.org/wiki/File:Souvenir_of_Singapore,_1914_-_Plate_02_-_Dining_Room.jpg)
+- [Wikimedia Commons — Souvenir of Singapore, 1914, Plate 12, the Padang](https://commons.wikimedia.org/wiki/File:Souvenir_of_Singapore,_1914_-_Plate_12_-_Singapore_Cricket_Club,_Town_Hall,_Supreme_Court_and_Europe_Hotel.jpg)
+- [Wikimedia Commons — Former Supreme Court Singapore](https://commons.wikimedia.org/wiki/File:Former_Supreme_Court_Singapore.jpg)
+- [Wikimedia Commons — National Gallery Singapore](https://commons.wikimedia.org/wiki/File:National_Gallery_Singapore_1.jpg)
 
 [← Back to all posts](/)

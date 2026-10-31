@@ -2567,6 +2567,20 @@ PRONUNCIATION_OVERRIDES = {
     "Chia-Thye-Poh": "ʧjˌɑː tˌI pˌO",      # fused, even stress: "chyah tie poh".
     "Kim-Jong-Un": "kˌɪm ʤˌʊŋ ˌʊn",        # fused, even stress.
     "Tua-Pek-Kong": "tˌuːə pˌɛk kˌɒŋ",     # fused, even stress - the deity.
+    # Hotel de l'Europe post (2026-10-31): French and other names —
+    # Seven's preliminary pass, NOT ear-verified yet.
+    "d'Europe": "dərˈɒp",                       # "duh-ROP".
+    "l'Esperance": "lˌɛspəˈrɑːns",              # "less-peh-RAHNSS", French /ɛs.pe.ʁɑ̃s/.
+    "Casteleyns": "kˈɑːstəlAnz",                # Flemish, "KAH-stuh-layns" (from kastelein, a castellan).
+    "Dutronquoy": "djuːtrɒnˈkwɑː",              # "dew-tron-KWAH".
+    "Hjelmstrom": "jˈɛlmstrəm",                 # Swedish, "YELM-strum".
+    "Nassim": "nəˈsiːm",                        # "nah-SEEM" — Nissim Nassim Adis.
+    "Adis": "əˈdiːs",                           # "ah-DEES".
+    "Howrah": "hˈaʊrə",                         # "HOW-rah".
+    "Esplanade": "ˌɛspləˈnɑːd",                 # "es-pluh-NAHD".
+    "Oliveiro": "ˌɒlɪvˈɪərəʊ",                  # Claude Oliveiro, "ol-iv-EER-oh".
+    "Kipling": "kˈɪplɪŋ",                       # Rudyard Kipling — insurance if the lexicon lacks it.
+
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
