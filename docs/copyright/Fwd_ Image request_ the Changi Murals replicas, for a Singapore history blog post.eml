@@ -1,0 +1,286 @@
+Delivered-To: lesserknownsingapore@gmail.com
+Received: by 2002:a05:6358:e827:b0:2c4:73ea:3131 with SMTP id gi39csp773865rwb; Fri, 30 Oct 2026 22:04:44 -0700 (PDT)
+X-Received: by 2002:a05:690c:660d:b0:8b1:2b0b:eaee with SMTP id 00721157ae682-8b2b66c4c88mr29384677b3.20.1793423084089; Fri, 30 Oct 2026 22:04:44 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1793423084; cv=pass; d=google.com; s=arc-20260327; b=AvxPUL2N/MI6UxInGEcRfqevHQ0JK9wVdtfpmEg0Rgvi/8AkOPenKF2HOz79W/NsQm ePe5f3Qz8eOasVT1dJ2HknP4OfaDLbST9o/mlCr9Zu/EwfJoNg/SAhgqkauzTTxah+AL 4MO9kyOUR5uHABauNxwK5uxxgEtIoDgCvY6gpv1sCxEUQfqzd6Tjs9oEPRNe7E8cEsKc EO3OHCEBMrAL4BKnReA8bxVGZeg6/vM3Zf621cNt436Q0u8A1UXAE0PMu4t0IwmHVV5+ 8CjMvrrhUmlWZYFT4OtWK1R6JORMd+Y9WyTDCd6BzolHljEdg/NcJQvbfN8pqjXGqHa9 HR9w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=Bq6XtKOfNz2qnJF9xAodiiyL7b32oZnPZpuBtbn1tao=; fh=itYDpzLHeZU7prkwoWY9+ZluBasTHk8qI7Kwvg2ISyY=; b=Cbkh8FD7aeDdwQ9e+LBygHqbxGM09CDobXGXpVTiOG7MfGDlx1g9T3Cj5ZGAin99Ev ZvL81XbufhJNDWxPzYPGmGwyVmagGqbXlGfVlJ+M4KHOdduOD8SeIsU7GiyS8onq0DDm XXWfR/4gTSx/mKHcBAlFECxfdBNJ6LmJNy40sfJWid0XKS9Rk3O9ltmz6u2FzhhdphfT wISORFBfBDta/vXgXgScCrc8bWPZXKCGQW64/pRbDIgZ6Bq/gJqiB2+LjkLEDD0QdpqK 4Bh7lrbRRjs6aGRKcqTa81MTZNSv/Hq9+DWeBNK/VtItRgx+68brTDPUhJXjLej1Lpwm fq7w==; dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com; dkim=pass header.i=@gmail.com header.s=20260707 header.b=X3S3jCal; arc=pass (i=1); spf=pass (google.com: domain of chriskslee@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=chriskslee@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com; dara=pass header.i=@gmail.com
+Return-Path: <chriskslee@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41]) by mx.google.com with SMTPS id 00721157ae682-8b2b4ae0ba9sor34384717b3.9.2026.10.30.22.04.44 for <lesserknownsingapore@gmail.com> (Google Transport Security); Fri, 30 Oct 2026 22:04:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of chriskslee@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com; dkim=pass header.i=@gmail.com header.s=20260707 header.b=X3S3jCal; arc=pass (i=1); spf=pass (google.com: domain of chriskslee@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=chriskslee@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com; dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1793423084; cv=none; d=google.com; s=arc-20260327; b=iFM9QSMORZuHmtGNJAsKRL9ZT7oOfygFRiXY/l6B+e+VJa+LLjDfCSTkRZJWy2CiK9 JXr0eIBZv6DpU5dpEHzwyPe9Y9MbpknrB053H5y/noq0YIZPlsqMguJMlv3zl6DF90K0 xPR/CvMD7Vg8+zREXv+8RdBR4kCiab9eWdAfsa2IDdwgmHXxK/O1osfy4Qc3IUuO/U3N Av2rJ6ZGapXEty/jsQSM4JTHInPpw+ZJyZNlL1XPgvT5NpG9I5Tw0hHjpzAvV5s0Cmuv qpwCCZ/fn9iOdMTQpmESVeeaPwNWR2W2d/KoP/K5/iQmTpPvPc4hn6/E8F7Ji0cVjKQR Xt/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=Bq6XtKOfNz2qnJF9xAodiiyL7b32oZnPZpuBtbn1tao=; fh=itYDpzLHeZU7prkwoWY9+ZluBasTHk8qI7Kwvg2ISyY=; b=r37xx/2kDq5OmSgwqIfO09EghN49eh7SwK7hLmm+rs0eGwilPdDJoyle3NLAcaoPJn MmAbJTA2eqhuUhddGVggwMBsaFKphh8yahq9euJGxPDE19irf24L+AwwngE8Zz8Oj2sw 1m5GfolaiiiEqsJ5wsNi/Kr7l/STHUFsVBTXnHN09b6/eoBeNtKkNrCKhTD/VGoluIli 0TYLPYVd6/ey1bRD3WZrPIO9CShPHIIiss/qxxMcC64sTEe++mGgSYeJpRPhDAcRUTTI SIpEdwynwILguFDABCbOuhiYPKjDg9xUZSUK8RPtbEdACkmVjuLUgEoC+ebfTmyDz+qX OPSQ==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20260707; t=1793423084; x=1794027884; dara=google.com; h=content-type:to:subject:message-id:date:from:in-reply-to:references :mime-version:from:to:cc:subject:date:message-id:reply-to :content-type; bh=Bq6XtKOfNz2qnJF9xAodiiyL7b32oZnPZpuBtbn1tao=; b=X3S3jCalt0y/72TPJc7mfpOV0Eng21rhEChbnBU6mTCdmmR8/57qGHryFbXgDvjVYt 0yeEf03JSYKFOKMmYsYub64HsCAad9sK9TysTYkdjHYbEv6pj5C5Aso6Ie8Vv1Bh0Rfs wXqqDI06dMl0KttunP/6J5p0jhlkncJYF1pmydodNBpNT7vVqkuryTkcS4WQh1/R6is+ dXFQnGfMUHUBbxCRsN7D3vqM0s2iW/9709UCadg57lBeiYCrHUPwvfMcL9AplANpOatw jtw1IQvs/nujmd2OEZX/OBo96tGB2lqgBh2qkwZHR12rTPxb7hYzeBgX74nats4DCnkA 7QBQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20260707; t=1793423084; x=1794027884; h=content-type:to:subject:message-id:date:from:in-reply-to:references :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date :message-id:reply-to:content-type; bh=Bq6XtKOfNz2qnJF9xAodiiyL7b32oZnPZpuBtbn1tao=; b=uMbpI3G7jgm2c4MPlRurHjAzKEDnxHgJvzx62u7TUBYYMxb/27qrn7yUv24/80NKEn ROSP2pTu7/+eB/+ad50Jm3F8VtSO5nZ3vxH/fOFmJco5niA1cdsmTRft4p5ai+ivojOL ZgsuTb2IqCUiPolTYrIkpJE+7K+FTQx+PlSNAXMJowaDlaIPSYdMi5KpkFjac2syhWDG u1ZpMc98MvTZP3tpvk/sXdQqQA99YoFg60hY7JSLWEoqHtRifQqO8yvJyDyvc1O/HpDo enXSd/wWnLx3vIP3tBmMVLcVNboUN5WKdQ/w1jh4U9PIHpgSPuLSmn7X4dKcMrQGyQ9F Y3ZQ==
+X-Gm-Message-State: AFq9FYJfddP8zCtRFuRcPR/ufHPXJbcUqUSuH+KGCg1sjuyDZ918pqPb JfrTpnzVCm55nNtt/KWew/oEMVl08SAG5QJyHnHUIQwreNsO012c67SFLSaz4C0vHkuF7Ib2iZ/ UgrjR30+2kEbWXh/watq3R5kce0fnmdl5pyvA
+X-Gm-Gg: AYBFou3z99+59JcI9lkLckqjKX0fCRSzAf/gL00w2gbkk/3sFXjicfX3Phrf2ggWy+H abXam8Xvx7Mo6zyVS3ZAhSO/OHr0h0Uiv7Aq3HZ/TLsXLdMGnpmEagFq6i98OyYDLWxc3niI1wi xXLbUPgjzW8K8lBAP2qw0sRQ5QT2xT8LYhvndnwaxPboiIv4Hb2D9x3T3A7+gVsjOsD3SyMQ4mC zxhZhQmlHx2dnrBCNs9hkgJEWEh2F6OCZyBp4+QvJx3n+pTIGSYLz4yjQXf7LOOra6QuydHZInr pv9HE58TrgW2moWF+G8mcMQnq6zb2VtUflDsInDQayqW6YSvBtCqzfrrwjicvEBORwzlt0+XDFK Y2wdfkRThROOFCQNdd2ZuErCXvCFzcAIipNAEzPRhMZOla218hV1pafxZHX0pMsu7usnXPjHMxD w4dwYmyMdVFq10lwPvvfGNJm+HTro=
+X-Received: by 2002:a05:690e:138e:b0:679:b1f8:72da with SMTP id 956f58d0204a3-67ba4fa145fmr2853052d50.18.1793423083351; Fri, 30 Oct 2026 22:04:43 -0700 (PDT)
+References: <CAPGAv9Sf+vHimZY9sjohap5Sh7KHj55JhxuSWK--Mr-ibHFPaA@mail.gmail.com> <SEZPR04MB74975D091B67373B3C0BF14C986C2@SEZPR04MB7497.apcprd04.prod.outlook.com>
+In-Reply-To: <SEZPR04MB74975D091B67373B3C0BF14C986C2@SEZPR04MB7497.apcprd04.prod.outlook.com>
+From: Chris Lee <chriskslee@gmail.com>
+Date: Sat, 31 Oct 2026 01:04:32 -0400
+X-Gm-Features: AclHuK9uS8hzmSSWX2450EgEG7wzOjFOh1DdjnQ7Y4NG1dHuSvncM5_uzvQFYgE
+Message-ID: <CAPGAv9SJfOZtd5LXoqnsavjOZv10UjK14CHx20qy907d-HMbTw@mail.gmail.com>
+Subject: Fwd: Image request: the Changi Murals replicas, for a Singapore history blog post
+To: lesserknownsingapore@gmail.com
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+--- decoded text/plain part ---
+---------- Forwarded message ---------
+From: Changi Chapel Museum Singapore <ccm@heritage.sg>
+Date: Fri, Oct 30, 2026, 9:24 PM
+Subject: Re: Image request: the Changi Murals replicas, for a Singapore
+history blog post
+To: Chris Lee <chriskslee@gmail.com>
+
+
+Hi Chris,
+
+Warm greetings from Changi Chapel & Museum.
+
+We have shared your enquiry with our Curatorial Team. We will share more
+updates once they have looked into you request.
+
+Thank you.
+
+Best regards,
+
+*Muhammad Farhan Bin Ab Hadi (Visitor Service Team)*
+
+Changi Chapel and Museum
+
+1000 Upper Changi Road North
+
+Singapore 507 707
+
+Tel: 9824 7240
+
+
+Visit *https://www.heritage.sg/changichapelmuseum*
+<https://protect.checkpoint.com/v2/r01/___https://www.heritage.sg/changichapelmuseum___.YzJ1OmhzZzpjOm86ZmEzM2U3YzFmN2UzNWM5YTNmMzk4MDIxN2YwYzA0MzM6NzowMTQyOmVkMDdlNWQ5YjRkNmY3OGE5MTdiZTc1NmY0NDBhNzI5ZTczNDc5YmFjMmUwOWVhZTQ0NTk5NWIxNDI4NGU2OGQ6aDpUOkY>
+for
+more information
+
+
+
+
+------------------------------
+*From:* Chris Lee <chriskslee@gmail.com>
+*Sent:* Sunday, 25 October 2026 5:54 am
+*To:* Changi Chapel Museum Singapore <ccm@heritage.sg>
+*Subject:* Image request: the Changi Murals replicas, for a Singapore
+history blog post
+
+EXTERNAL EMAIL - This email was sent by a person from outside your
+organization. Exercise caution when clicking links, opening attachments or
+taking further action, before validating its authenticity.
+*Secured by Check Point*
+
+You don't often get email from chriskslee@gmail.com. Learn why this is
+important
+<https://protect.checkpoint.com/v2/r01/___https://aka.ms/LearnAboutSenderIdentification___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpmZjhjOjBhNzRmZTJkZGMwMDIyZTM5MTc5ZjdhMmI3YTRmMGViZGU1YzA0MzNmMjQ3OTliYjQxMDhlYzM2NDdmM2Y1N2M6aDpUOkY>
+Dear Changi Chapel and Museum team,
+
+I write Lesser Known Singapore (https://pikaia.github.io
+<https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpkOTc1OmVhZTZjOTgxNTFjZDIyY2I4MjljODQyODAyOGZhZDcxZTIwNmRkNjUxZTA2NjM4N2JmYTVlNTVlM2ZhMTBiZDI6aDpUOkY>),
+a small blog about
+overlooked parts of Singapore's history, with narrated video versions of
+each
+post on YouTube (https://www.youtube.com/@LesserKnownSingapore
+<https://protect.checkpoint.com/v2/r01/___https://www.youtube.com/_@LesserKnownSingapore___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpiNWFmOmZlM2VmMzcwNzlhOTA4YzAzZWM3NWY1ODYwZmQyOTE1YjIxMDU5NjQyYzJkZmM4ODU2YjQxY2NhNzdiMDczZDI6aDpUOkY>)
+and TikTok.
+
+I have just published a post on the Changi Murals and Stanley Warren:
+https://pikaia.github.io/2026/10/24/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks/
+<https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io/2026/10/24/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks/___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpiZTAxOjY2ZDkzYjU1N2U0MzJiYTA3OWQ4MzE3MmE5MDk4ZWJiNWMwNTAwZWVjMWNjYWM0YzFhZjFiOTdkNmRkNjRhN2Y6aDpUOkY>
+
+The post describes the murals in words only, because I have not been able to
+find any freely licensed photograph of them. It points readers to the
+museum as
+the place to see the replicas. I would like to add one or two pictures of
+the
+murals, and I would be grateful for your advice on three points:
+
+1. Could the museum supply, or allow me to use, a photograph of the replica
+   murals on display? If it is easier, could I visit and photograph them
+myself
+   for this use?
+
+2. Does the museum or the National Heritage Board hold photographs of the
+   original murals in Block 151 that could be licensed, or can you tell me
+who
+   does?
+
+3. Do you know who holds the copyright in Stanley Warren's paintings today
+(his
+   family, the Ministry of Defence, or another party), so that I can ask
+them
+   too if needed?
+
+The pictures would appear in the blog post (no advertising) and in its
+narrated
+video on YouTube and TikTok, which may show platform advertising. Each
+picture
+would carry the credit line you specify, with a link to the museum. Web
+resolution is enough.
+
+If there is a fee or a form I should use instead, please let me know.
+
+Thank you for your help, and for keeping the story of the murals in front of
+visitors.
+
+Yours sincerely,
+Chris Lee
+Lesser Known Singapore
+https://pikaia.github.io
+<https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpmYTk3OjZkMGM2NzBkZmFhYTNiMDEwMzA3NzYzMmY2ZmI1MDkyMmFmMjRhNjJhYmZhY2U1MTRjOTNlNDk0MTFmNWM0MTc6aDpUOkY>
+
+
+
+--- decoded text/html part ---
+<div dir="auto"></div><br><div class="gmail_quote gmail_quote_container"><div dir="ltr" class="gmail_attr">---------- Forwarded message ---------<br>From: <strong class="gmail_sendername" dir="auto">Changi Chapel Museum Singapore</strong> <span dir="auto">&lt;<a href="mailto:ccm@heritage.sg">ccm@heritage.sg</a>&gt;</span><br>Date: Fri, Oct 30, 2026, 9:24 PM<br>Subject: Re: Image request: the Changi Murals replicas, for a Singapore history blog post<br>To: Chris Lee &lt;<a href="mailto:chriskslee@gmail.com">chriskslee@gmail.com</a>&gt;<br></div><br><br>
+
+
+
+
+<div dir="ltr">
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Hi Chris,</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Warm greetings from Changi Chapel &amp; Museum.</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+We have shared your enquiry with our Curatorial Team. We will share more updates once they have looked into you request.</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Thank you.</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Best regards,</div>
+<div id="m_7954348964255817862Signature">
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black"><b>Muhammad Farhan Bin Ab Hadi (Visitor Service Team)</b></span></p>
+<div style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black">
+<br>
+</div>
+<div style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black">
+Changi Chapel and Museum</div>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black">1000 Upper Changi Road North</span></p>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black">Singapore 507 707</span></p>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black">Tel: 9824 7240</span></p>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black"><br>
+</span></p>
+<div style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm;font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt">
+<span style="color:black">Visit </span><span style="color:blue"><a href="https://protect.checkpoint.com/v2/r01/___https://www.heritage.sg/changichapelmuseum___.YzJ1OmhzZzpjOm86ZmEzM2U3YzFmN2UzNWM5YTNmMzk4MDIxN2YwYzA0MzM6NzowMTQyOmVkMDdlNWQ5YjRkNmY3OGE5MTdiZTc1NmY0NDBhNzI5ZTczNDc5YmFjMmUwOWVhZTQ0NTk5NWIxNDI4NGU2OGQ6aDpUOkY" id="m_7954348964255817862OWAf47dd45d-489b-42d7-92ab-aab80bddb4c6" title="Original URL: https://protect.checkpoint.com/v2/r01/___https://www.heritage.sg/changichapelmuseum___.YzJ1OmhzZzpjOm86ZmEzM2U3YzFmN2UzNWM5YTNmMzk4MDIxN2YwYzA0MzM6NzowMTQyOmVkMDdlNWQ5YjRkNmY3OGE5MTdiZTc1NmY0NDBhNzI5ZTczNDc5YmFjMmUwOWVhZTQ0NTk5NWIxNDI4NGU2OGQ6aDpUOkY. Click or tap if you trust this link." style="color:blue;margin:0px" target="_blank" rel="noreferrer"><u>https://www.heritage.sg/changichapelmuseum</u></a></span><span style="color:black"> for
+ more information</span></div>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:rgb(0,0,0)"> </span></p>
+<p style="text-align:left;text-indent:0px;line-height:1.2;background-color:rgb(255,255,255);margin:0cm">
+<span style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:11pt;color:black"><img id="m_7954348964255817862x_x_x_x_x_x_Picture_x0020_19" style="max-width:649px;min-width:auto;min-height:auto;margin:0px" size="255797" src="cid:35d4c742-e6cc-4c15-afed-e50da8adc45b"></span></p>
+<div style="font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+</div>
+<hr style="display:inline-block;width:98%">
+<div id="m_7954348964255817862divRplyFwdMsg">
+<div style="direction:ltr;font-family:Calibri,sans-serif;font-size:11pt;color:rgb(0,0,0)">
+<b>From:</b> Chris Lee &lt;<a href="mailto:chriskslee@gmail.com" target="_blank" rel="noreferrer">chriskslee@gmail.com</a>&gt;<br>
+<b>Sent:</b> Sunday, 25 October 2026 5:54 am<br>
+<b>To:</b> Changi Chapel Museum Singapore &lt;<a href="mailto:ccm@heritage.sg" target="_blank" rel="noreferrer">ccm@heritage.sg</a>&gt;<br>
+<b>Subject:</b> Image request: the Changi Murals replicas, for a Singapore history blog post</div>
+<div style="direction:ltr"> </div>
+</div>
+<table style="border-width:1px 1px 1px 6px;border-style:solid;border-color:rgb(87,153,190);border-radius:5px;background-color:rgb(241,250,255);width:100%;table-layout:auto;border-collapse:separate;border-spacing:0px;box-sizing:border-box">
+<tbody>
+<tr style="background-color:rgb(241,250,255)">
+<td style="line-height:1.5;background-color:rgb(241,250,255);color:rgb(9,40,94)">
+<div style="line-height:1.5;font-family:Arial;font-size:12px">EXTERNAL EMAIL - This email was sent by a person from outside your organization. Exercise caution when clicking links, opening attachments or taking further action, before validating its authenticity.</div>
+</td>
+</tr>
+<tr style="background-color:rgb(241,250,255)">
+<td style="text-align:right;border-top:1px solid;background-color:rgb(241,250,255);padding-top:8px;color:rgb(9,40,94)">
+<div style="text-align:right;font-family:Arial;font-size:12px"><b>Secured by Check Point</b></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div><br>
+</div>
+<table cellspacing="0" cellpadding="0" border="0" style="direction:ltr;text-indent:revert;line-height:revert;white-space:revert;background-color:revert;display:table;margin:revert;width:100%;height:revert;table-layout:fixed;color:revert">
+<tbody>
+<tr style="background-color:revert">
+<td style="direction:ltr;text-indent:revert;line-height:revert;white-space:revert;border-color:revert;background-color:rgb(166,166,166);padding:7px 2px;word-break:revert;color:revert;width:0px;height:revert">
+</td>
+<td style="direction:ltr;text-align:left;text-indent:revert;line-height:revert;white-space:revert;border-width:medium;border-style:none;border-color:currentcolor;background-color:rgb(234,234,234);padding:7px 5px 7px 15px;word-break:revert;color:rgb(33,33,33);width:100%;height:revert">
+<div style="direction:ltr;text-align:left;text-indent:revert;line-height:revert;white-space:revert;font-family:wf_segoe-ui_normal,&quot;Segoe UI&quot;,&quot;Segoe WP&quot;,Tahoma,Arial,sans-serif;color:revert">
+<span style="letter-spacing:revert;background-color:revert;line-height:revert">You don&#39;t often get email from <a href="mailto:chriskslee@gmail.com" target="_blank" rel="noreferrer">chriskslee@gmail.com</a>.
+<a href="https://protect.checkpoint.com/v2/r01/___https://aka.ms/LearnAboutSenderIdentification___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpmZjhjOjBhNzRmZTJkZGMwMDIyZTM5MTc5ZjdhMmI3YTRmMGViZGU1YzA0MzNmMjQ3OTliYjQxMDhlYzM2NDdmM2Y1N2M6aDpUOkY" id="m_7954348964255817862OWA6cea326f-f584-e594-f48e-0b8157e64369" title="Protected by Check Point: https://aka.ms/LearnAboutSenderIdentification" style="color:revert;display:revert;background-color:revert" target="_blank" rel="noreferrer">
+Learn why this is important</a></span></div>
+</td>
+<td style="direction:ltr;text-align:left;text-indent:revert;line-height:revert;white-space:revert;border-color:revert;background-color:rgb(234,234,234);padding:7px 5px;word-break:revert;color:rgb(33,33,33);width:75px;height:revert">
+</td>
+</tr>
+</tbody>
+</table>
+<div style="direction:ltr">Dear Changi Chapel and Museum team,<br>
+<br>
+I write Lesser Known Singapore (<a href="https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpkOTc1OmVhZTZjOTgxNTFjZDIyY2I4MjljODQyODAyOGZhZDcxZTIwNmRkNjUxZTA2NjM4N2JmYTVlNTVlM2ZhMTBiZDI6aDpUOkY" id="m_7954348964255817862OWA9df1f568-271b-5214-865f-ce93fd0402b3" title="Protected by Check Point: https://pikaia.github.io" target="_blank" rel="noreferrer">https://pikaia.github.io</a>),
+ a small blog about<br>
+overlooked parts of Singapore&#39;s history, with narrated video versions of each<br>
+post on YouTube (<a href="https://protect.checkpoint.com/v2/r01/___https://www.youtube.com/_@LesserKnownSingapore___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpiNWFmOmZlM2VmMzcwNzlhOTA4YzAzZWM3NWY1ODYwZmQyOTE1YjIxMDU5NjQyYzJkZmM4ODU2YjQxY2NhNzdiMDczZDI6aDpUOkY" id="m_7954348964255817862OWA6450f515-3d2f-0df8-727c-9378bc15571b" title="Protected by Check Point: https://www.youtube.com/@LesserKnownSingapore" target="_blank" rel="noreferrer">https://www.youtube.com/@LesserKnownSingapore</a>)
+ and TikTok.<br>
+<br>
+I have just published a post on the Changi Murals and Stanley Warren:<br>
+<a href="https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io/2026/10/24/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks/___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpiZTAxOjY2ZDkzYjU1N2U0MzJiYTA3OWQ4MzE3MmE5MDk4ZWJiNWMwNTAwZWVjMWNjYWM0YzFhZjFiOTdkNmRkNjRhN2Y6aDpUOkY" id="m_7954348964255817862OWAc991a0ec-cefb-fd92-bf8b-d418d2d1f2ae" title="Protected by Check Point: https://pikaia.github.io/2026/10/24/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks/" target="_blank" rel="noreferrer">https://pikaia.github.io/2026/10/24/the-changi-murals-stanley-warrens-chapel-paintings-at-roberts-barracks/</a><br>
+<br>
+The post describes the murals in words only, because I have not been able to<br>
+find any freely licensed photograph of them. It points readers to the museum as<br>
+the place to see the replicas. I would like to add one or two pictures of the<br>
+murals, and I would be grateful for your advice on three points:<br>
+<br>
+1. Could the museum supply, or allow me to use, a photograph of the replica<br>
+   murals on display? If it is easier, could I visit and photograph them myself<br>
+   for this use?<br>
+<br>
+2. Does the museum or the National Heritage Board hold photographs of the<br>
+   original murals in Block 151 that could be licensed, or can you tell me who<br>
+   does?<br>
+<br>
+3. Do you know who holds the copyright in Stanley Warren&#39;s paintings today (his<br>
+   family, the Ministry of Defence, or another party), so that I can ask them<br>
+   too if needed?<br>
+<br>
+The pictures would appear in the blog post (no advertising) and in its narrated<br>
+video on YouTube and TikTok, which may show platform advertising. Each picture<br>
+would carry the credit line you specify, with a link to the museum. Web<br>
+resolution is enough.<br>
+<br>
+If there is a fee or a form I should use instead, please let me know.<br>
+<br>
+Thank you for your help, and for keeping the story of the murals in front of<br>
+visitors.<br>
+<br>
+Yours sincerely,<br>
+Chris Lee<br>
+Lesser Known Singapore<br>
+<a href="https://protect.checkpoint.com/v2/r01/___https://pikaia.github.io___.YzJ1OmhzZzpjOm86MjdiMTI1ZDNiZWU5MTNkYzQ0ZDBkMjFkN2QxMzE0YzQ6NzpmYTk3OjZkMGM2NzBkZmFhYTNiMDEwMzA3NzYzMmY2ZmI1MDkyMmFmMjRhNjJhYmZhY2U1MTRjOTNlNDk0MTFmNWM0MTc6aDpUOkY" id="m_7954348964255817862OWA0216c5c5-f829-722e-f73f-f1f6cc1e551e" title="Protected by Check Point: https://pikaia.github.io" target="_blank" rel="noreferrer">https://pikaia.github.io</a></div>
+</div>
+
+</div>
+
