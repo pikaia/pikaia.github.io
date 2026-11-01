@@ -2184,6 +2184,7 @@ PRONUNCIATION_OVERRIDES = {
     "Bahau's": "bˈɑːhWz",
     "Devals": "dəvˈɑːl",                    # "deh-VAHL", French, final s silent.
     "Po-Leung-Kok": "pˌO ljˌʊŋ kˌɒk",       # "poh-LYOONG-kok", fused, even stress.
+    "Po-Leung-Kuk": "pˌO ljˌʊŋ kˌʊk",       # "poh-LYOONG-kook", fused, even stress - the "Kuk" spelling used in the Wee Bin post (2026-11-01); Chris ear-picked the fused sample over the per-word reading.
     # 1867 transfer post (2026-10-09): single-reading fixes.
     "Buckley": "bˈʌkli",                    # C. B. Buckley, the historian.
     "Cavenagh": "kˈavənə",                  # "KAV-uh-nuh", -agh silent as in Cavanagh.
@@ -2817,6 +2818,7 @@ ABBREVIATION_EXPANSIONS = {
     re.compile(r"\bWan Leong Gay\b"): "Wan-Leong-Gay",
     re.compile(r"\bHuang Qiuhong\b"): "Huang-Qiuhong",
     re.compile(r"\bPo Leung Kok\b"): "Po-Leung-Kok",
+    re.compile(r"\bPo Leung Kuk\b"): "Po-Leung-Kuk",
     re.compile(r"\bSeah Eu Chin\b"): "Seah-Eu-Chin",
     re.compile(r"\bHoo Ah Kay\b"): "Hoo-Ah-Kay",
     re.compile(r"\bTan Jiak Kim\b"): "Tan-Jiak-Kim",
