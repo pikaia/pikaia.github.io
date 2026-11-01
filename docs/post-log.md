@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Hotel de l'Europe, Singapore's Grand Hotel Before the Raffles
+
+First posted 2026-10-31 · `2026-10-31-the-hotel-de-l-europe-singapores-grand-hotel-before-the-raffles.md`
+
+- 2026-11-01: Watch widget with the published YouTube, Shorts and TikTok videos, gap reports, YouTube text (`339810e`)
+- 2026-11-01: Hotel de l'Europe: gallery page, post gallery link, pronunciation overrides (`5f1d2fb`)
+
 ## The Pipelines That Feed Singapore
 
 First posted 2026-10-27 · `2026-10-27-the-pipelines-that-feed-singapore.md`
