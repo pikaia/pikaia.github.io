@@ -1993,7 +1993,7 @@ PRONUNCIATION_OVERRIDES = {
     "Ingrams": "ˈɪŋɡɹəmz",               # Harold Ingrams, "ING-grumz".
     "Qu'aiti": "kuˈAti",                 # the Qu'aiti state, Arabic "koo-AY-tee".
     "Kathiri": "kaθˈiːɹi",               # the Kathiri state, Arabic "ka-THEE-ree".
-    "l'Europe": "lɜːɹˈɒp",               # Hotel de l'Europe, French "ler-ROP".
+    "l'Europe": "loʊˈɹɒp",               # Hotel de l'Europe, French "loh-ROP" (Mistral's reading, Chris's pick 2026-10-31).
     "Sennett": "sˈɛnɪt",                 # Sennett Realty, "SEN-it".
     "Hadhramaut": "hˌadɹəmˈWt",          # "had-ruh-MOWT", matching "Hadhrami".
     "Kampung": "kˈɑmpʊŋ",                # Malay "KAHM-pong".
@@ -2292,7 +2292,7 @@ PRONUNCIATION_OVERRIDES = {
     "Civilisations": "sˌɪvɪlaɪzˈAʃᵊnz",     # Asian Civilisations Museum (British spelling).
     "kala": "kˈɑːlə",                       # the guardian face, Sanskrit "KAH-luh".
     "Hakim": "hˈɑːkɪm",                     # Wa Hakim, Malay "HAH-kim".
-    "Padang": "pədˈʌŋ",                     # "pə-DUNG", like Pahang and Badang (Chris, by ear).
+    "Padang": "pɑˈdɑŋ",                     # "pah-DAHNG" (Chris, by ear, sample-picked 2026-10-31: schwa version heard as "per-DUNG", pɑˈdʌŋ sample too light).
     "Palembang": "pəlˈɛmbʌŋ",               # "puh-LEM-bung".
     "Goh-Geok-Yian": "ɡˌQ ɡjˌɒk jˌɛn",      # Goh Geok Yian, fused with even stress; "Yian" as "yen" (Chris, by ear).
     # Eredia post (2026-10-13): Portuguese, Spanish, Dutch and Malay names from
@@ -2569,7 +2569,7 @@ PRONUNCIATION_OVERRIDES = {
     "Tua-Pek-Kong": "tˌuːə pˌɛk kˌɒŋ",     # fused, even stress - the deity.
     # Hotel de l'Europe post (2026-10-31): French and other names —
     # Seven's preliminary pass, NOT ear-verified yet.
-    "d'Europe": "dərˈɒp",                       # "duh-ROP".
+    "d'Europe": "doʊˈɹɒp",                       # "doh-ROP", aligned with l'Europe "loh-ROP".
     "l'Esperance": "lˌɛspəˈrɑːns",              # "less-peh-RAHNSS", French /ɛs.pe.ʁɑ̃s/.
     "Casteleyns": "kˈɑːstəlAnz",                # Flemish, "KAH-stuh-layns" (from kastelein, a castellan).
     "Dutronquoy": "djuːtrɒnˈkwɑː",              # "dew-tron-KWAH".
