@@ -1,0 +1,82 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+Wee Bin, the Shipping Magnate Whose Firm Outlived Its Own Name
+
+Description:
+In March 1911, the Straits Times announced the end of one of Singapore's oldest Chinese businesses. "Steps are in progress," it reported, "to wind up the well-known and long-established business of Messrs. Wee Bin and Co., of 106 Market St." Three weeks later the firm's steamers were sold by public auction on the waterfront they had served for half a century.
+
+Full story: https://da.gd/qcf2i
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons, credited individually):
+- G. R. Lambert & Co., KITLV, public domain, via Wikimedia Commons (2 photos)
+- Public domain, via Wikimedia Commons
+- Rijksmuseum, CC0, via Wikimedia Commons (3 photos)
+- Song Ong Siang, One Hundred Years' History of the Chinese in Singapore, 1923, CC BY-SA 4.0, via Wikimedia Commons
+- KITLV, public domain, via Wikimedia Commons (3 photos)
+- Wellcome Collection, CC BY 4.0, via Wikimedia Commons
+- Song Ong Siang, 1923, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- C. J. Kleingrothe, KITLV, public domain, via Wikimedia Commons (2 photos)
+
+Sources:
+- Wee Bin, Singapore Infopedia, National Library Board
+- Song Ong Siang, One Hundred Years' History of the Chinese in Singapore (John Murray, 1923), pp. 114–116 — the biographical source for Wee Bin, Wee Boon Teck, Lim Ho Puah and Lim Peng Siang
+- Wee Bin & Co. — Wikipedia
+- Wee Bin — Wikipedia
+- Lim Ho Puah — Wikipedia
+- Lim Peng Siang — Wikipedia
+- Jeremy Goh & Koh Keng We, "Industrialisation and Chinese big business in colonial Singapore, Malaya, and China: the transnational enterprises of Lim Peng Siang (1904–41)", Journal of Southeast Asian Studies 54(1), 2023
+- Howard Dick, "Straits Chinese Steamship Owners in the China–Straits Passenger Trade, 1890s–1949" (oldchinaships.com) — the liquidation's background and the fleet's transfers
+- "Dissolution of Well-Known Chinese Concern", The Straits Times, 7 March 1911, p. 7 (NewspaperSG index record; full text behind NLB's terms screen)
+- "Wee Bin's Steamers. Sold by Public Auction", Pinang Gazette And Straits Chronicle, 29 March 1911, p. 5 (NewspaperSG index record)
+- "The Coffin Cover. An Incident of Singapore's Longest Funeral", Singapore Free Press And Mercantile Advertiser, 24 March 1914, p. 7 (NewspaperSG index record)
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+Wee Bin, the Shipping Magnate Whose Firm Outlived Its Own Name #Shorts
+
+Description:
+In March 1911, the Straits Times announced the end of one of Singapore's oldest Chinese businesses. "Steps are in progress," it reported, "to wind up the well-known and long-established business of Messrs. Wee Bin and Co., of 106 Market St." Three weeks later the firm's steamers were sold by public auction on the waterfront they had served for half a century. #Shorts
+
+Full story: https://da.gd/qcf2i
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons):
+- G. R. Lambert & Co., KITLV, public domain, via Wikimedia Commons
+- Public domain, via Wikimedia Commons
+- Rijksmuseum, CC0, via Wikimedia Commons
+- Song Ong Siang, One Hundred Years' History of the Chinese in Singapore, 1923, CC BY-SA 4.0, via Wikimedia Commons
+- KITLV, public domain, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+Wee Bin, the Shipping Magnate Whose Firm Outlived Its Own Name
+
+In March 1911, the Straits Times announced the end of one of Singapore's oldest Chinese businesses. "Steps are in progress," it reported, "to wind up the well-known and long-established business of Messrs. Wee Bin and Co., of 106 Market St." Three weeks later the firm's steamers were sold by public auction on the waterfront they had served for half a century.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons):
+- G. R. Lambert & Co., KITLV, public domain, via Wikimedia Commons
+- Public domain, via Wikimedia Commons
+- Rijksmuseum, CC0, via Wikimedia Commons
+- Song Ong Siang, One Hundred Years' History of the Chinese in Singapore, 1923, CC BY-SA 4.0, via Wikimedia Commons
+- KITLV, public domain, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
