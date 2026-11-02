@@ -2186,6 +2186,7 @@ PRONUNCIATION_OVERRIDES = {
     "Po-Leung-Kok": "pˌO ljˌʊŋ kˌɒk",       # "poh-LYOONG-kok", fused, even stress.
     "Po-Leung-Kuk": "pˌO ljˌʊŋ kˌʊk",       # "poh-LYOONG-kook", fused, even stress - the "Kuk" spelling used in the Wee Bin post (2026-11-01); Chris ear-picked the fused sample over the per-word reading.
     "Leong": "ljˈɒŋ",                  # "LYONG" - Hong Leong. The real narration read it "le-urn" (no lexicon entry); Wee Bin post (2026-11-01), Chris ear-picked sample C - the "o" comes through.
+    "S'pore": "ˈsɪŋəpɔː",              # read in full, as "Singapore" - the Malaya Tribune headline in the Bank of China Building post (2026-11-01); Chris ear-picked sample A over "SPORE" and "ess-PORE". Straight apostrophe, as in the post text.
     # 1867 transfer post (2026-10-09): single-reading fixes.
     "Buckley": "bˈʌkli",                    # C. B. Buckley, the historian.
     "Cavenagh": "kˈavənə",                  # "KAV-uh-nuh", -agh silent as in Cavanagh.
