@@ -83,6 +83,17 @@ HTML_TAG_RE = re.compile(r"<(/?)(div|script|style|svg|audio|span|button|table|tr
 # truth, and the two are duplicated by design (keep them in sync by
 # hand, same as the route-walk animation data described in CLAUDE.md).
 PRONUNCIATION_OVERRIDES = {
+    # Force Z post (2026-11-02) - proposed by Seven pre-1.1, deployed on Chris's go-ahead; NOT ear-verified yet.
+    "Kuantan": "kuˈɑːntɑːn",          # "koo-AHN-tahn" - Malay, full vowels
+    "Singora": "sɪŋˈɡɔːɹə",           # "sing-GOR-uh" - old name for Songkhla
+    "Tenedos": "tˈɛnɪdɑːs",           # "TEN-ih-dos" - destroyer, Greek island name
+    "Kanoya": "kɑˈnoʊjə",             # "kah-NOH-yah" - Japanese air group
+    "Haruki": "hɑˈɹuːki",             # Lt Haruki Iki, the wreath pilot
+    "Iki": "ˈiːki",                   # "EE-kee"
+    "Takumi": "tɑˈkuːmi",             # Sub Lt Takumi Kitamura, 2025 wreath-laying
+    "Kitamura": "kiːtɑˈmʊɹə",         # "kee-tah-MOO-ruh"
+    "Akebono": "ɑːkɛˈboʊnoʊ",         # JS destroyer Akebono
+    "Fuzhou": "fˈuːdʒoʊ",             # "foo-JOH" - 2023 salvage vessel registry
     "Ng": "əŋ",  # anglicized "ung" (schwa + ng), closer to how the Chinese
                  # surname is actually said than the "ing" ending tried
                  # first - Chris confirmed by ear it's more "ung" than
