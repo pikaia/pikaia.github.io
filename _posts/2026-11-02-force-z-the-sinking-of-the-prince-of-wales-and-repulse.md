@@ -10,6 +10,45 @@ On the 2nd of December 1941, two of the most powerful warships in the world came
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/force-z-the-sinking-of-the-prince-of-wales-and-repulse.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 The gesture came first, and it was a politician's gesture as much as a sailor's. In the autumn of 1941, with Japan pressing south through Indochina, Winston Churchill and his cabinet settled on sending a small, modern striking force to Singapore — a "fleet in being", whose mere presence, they reasoned, would make Tokyo hesitate. The force was to be built around the new battleship HMS *Prince of Wales*, the battlecruiser HMS *Repulse*, and the aircraft carrier HMS *Indomitable*, whose planes would be the fleet's eyes and its shield. *Prince of Wales* was barely a year old and already famous: in May 1941 she had fought the *Bismarck* in the action in which HMS *Hood* was lost, and in August she had carried Churchill across the Atlantic to meet President Roosevelt. *Repulse* was her opposite in almost everything — a ship of the First World War, launched in 1916, fast and handsome and thin-skinned, a greyhound among battleships.
 
 ![HMS Repulse under way in her prime](https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/044777/screen/4086207.JPG)
@@ -63,6 +102,8 @@ The ships are still there. Both wrecks lie upside down in the South China Sea of
 And the remembering goes on, in forms the men of 1941 could not have imagined. In September 2025 the Royal Navy's new aircraft carrier — named, by a coincidence the service does not treat as one, HMS *Prince of Wales* — stopped over the wrecks and held a committal of wreaths. Beside the British officers at the rail stood a young officer of the Japanese destroyer *Akebono*, Sub Lieutenant Takumi Kitamura, helping to honour the same dead: the navies of the two countries that fought over those ships, laying wreaths together in the same water. Eighty-four years after Singapore thrilled to a fleet that was meant to frighten an enemy away, the ships' real garrison turns out to be memory — and unlike the deterrent, it has held.
 
 [See more photos of the ships, the attack and the memorials](/gallery/force-z-the-sinking-of-the-prince-of-wales-and-repulse/)
+
+---
 
 **Sources:**
 - [Sinking of Prince of Wales and Repulse — Wikipedia](https://en.wikipedia.org/wiki/Sinking_of_Prince_of_Wales_and_Repulse)
