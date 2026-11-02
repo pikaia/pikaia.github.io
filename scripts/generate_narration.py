@@ -94,7 +94,7 @@ PRONUNCIATION_OVERRIDES = {
     "Kitamura": "kiːtɑˈmʊɹə",         # "kee-tah-MOO-ruh"
     "Akebono": "ɑːkɛˈboʊnoʊ",         # JS destroyer Akebono
     "Fuzhou": "fˈuːdʒoʊ",             # "foo-JOH" - 2023 salvage vessel registry
-    # Force Z 1.1 dry-run flags (2026-11-02) - caught before any audio; NOT ear-verified yet.
+    # Force Z 1.1 dry-run flags (2026-11-02) - caught before any audio; ear-verified by Chris 2026-11-02.
     "Roosevelt": "ɹˈoʊzəvˌɛlt",       # "ROH-zuh-velt"
     "Tennant": "tˈɛnənt",             # "TEN-unt" - Capt. Tennant of Repulse
     "Palliser": "pˈælɪsə",            # "PAL-iss-er" - Rear-Adm Palliser
