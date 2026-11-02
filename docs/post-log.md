@@ -4,6 +4,18 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Bank of China Building on Battery Road
+
+First posted 2026-11-02 · `2026-11-02-the-bank-of-china-building-on-battery-road.md`
+
+- 2026-11-02: Published URLs wired in; run artifacts (`15e611f`)
+
+## Wee Bin, the Shipping Magnate Whose Firm Outlived Its Own Name
+
+First posted 2026-11-01 · `2026-11-01-wee-bin-the-shipping-magnate-whose-firm-outlived-its-own-name.md`
+
+- 2026-11-02: Published URLs wired in; run artifacts (`25fe942`)
+
 ## The Hotel de l'Europe, Singapore's Grand Hotel Before the Raffles
 
 First posted 2026-10-31 · `2026-10-31-the-hotel-de-l-europe-singapores-grand-hotel-before-the-raffles.md`
