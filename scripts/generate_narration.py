@@ -94,6 +94,12 @@ PRONUNCIATION_OVERRIDES = {
     "Kitamura": "kiːtɑˈmʊɹə",         # "kee-tah-MOO-ruh"
     "Akebono": "ɑːkɛˈboʊnoʊ",         # JS destroyer Akebono
     "Fuzhou": "fˈuːdʒoʊ",             # "foo-JOH" - 2023 salvage vessel registry
+    # Force Z 1.1 dry-run flags (2026-11-02) - caught before any audio; NOT ear-verified yet.
+    "Roosevelt": "ɹˈoʊzəvˌɛlt",       # "ROH-zuh-velt"
+    "Tennant": "tˈɛnənt",             # "TEN-unt" - Capt. Tennant of Repulse
+    "Palliser": "pˈælɪsə",            # "PAL-iss-er" - Rear-Adm Palliser
+    "Pulford": "pˈʌlfɚd",             # "PUL-ford" - Air Vice-Marshal Pulford
+    "communiqués": "kəmˈjuːnɪkeɪz",   # "kuh-MYOO-nih-kayz"
     "Ng": "əŋ",  # anglicized "ung" (schwa + ng), closer to how the Chinese
                  # surname is actually said than the "ing" ending tried
                  # first - Chris confirmed by ear it's more "ung" than
@@ -2620,6 +2626,12 @@ def _ordinal_suffix(n: int) -> str:
 
 
 ABBREVIATION_EXPANSIONS = {
+    # Force Z clock times (2026-11-02 dry-run flags): misaki cannot
+    # phonemize "HH:MM" and would spell the digits. 12-hour narrative
+    # register, matching the post's own "two o'clock" style.
+    re.compile(r"\b11:13\b"): "eleven thirteen",
+    re.compile(r"\b12:33\b"): "twelve thirty-three",
+    re.compile(r"\b13:18\b"): "one eighteen",
     re.compile(r"\bFr\.(?=\s)"): "Father",
     # "Pte Ltd" / "Pte. Ltd." - misaki has no entry for either token and
     # spells both out. Always "Private Limited" in prose. Caught on the
