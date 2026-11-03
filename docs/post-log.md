@@ -10,6 +10,13 @@ First posted 2026-11-02 · `2026-11-02-the-bank-of-china-building-on-battery-roa
 
 - 2026-11-02: Published URLs wired in; run artifacts (`15e611f`)
 
+## Force Z: The Sinking of the Prince of Wales and Repulse
+
+First posted 2026-11-02 · `2026-11-02-force-z-the-sinking-of-the-prince-of-wales-and-repulse.md`
+
+- 2026-11-03: Published URLs wired in; run artifacts (`0ae1979`)
+- 2026-11-03: Sources divider (narration stop) and Listen widget (`3e26049`)
+
 ## Wee Bin, the Shipping Magnate Whose Firm Outlived Its Own Name
 
 First posted 2026-11-01 · `2026-11-01-wee-bin-the-shipping-magnate-whose-firm-outlived-its-own-name.md`
