@@ -20,7 +20,7 @@ Two great ships in their last days: the battleship and the battlecruiser at Sing
 
 ### Repulse as she was built
 
-![A First World War battlecruiser at sea](https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/h00001/h00525.jpg)
+![A First World War battlecruiser at sea](/assets/images/hms-repulse-1916-nh525.jpg)
 
 *HMS Repulse in 1916–17, newly completed — the speed and elegance that made the battlecruisers famous, and the light armour that made them vulnerable. A quarter of a century later she was still fast enough to dodge nineteen torpedoes. (US Naval History and Heritage Command NH 525, public domain)*
 

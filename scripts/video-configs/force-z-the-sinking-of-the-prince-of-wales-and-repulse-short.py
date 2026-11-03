@@ -51,7 +51,7 @@ IMAGES = {
     "QUAY": "https://upload.wikimedia.org/wikipedia/commons/7/78/IWM_FE_487_Admirals_Phillips_and_Palliser.jpg",
     "POWSG": "https://upload.wikimedia.org/wikipedia/commons/f/f9/HMS_Prince_Of_Wales_in_Singapore.jpg",
     "REPSEA": "https://s3-ap-southeast-2.amazonaws.com/awm-media/collection/044777/screen/4086207.JPG",
-    "REPOLD": "https://www.ibiblio.org/hyperwar/OnlineLibrary/photos/images/h00001/h00525.jpg",
+    "REPOLD": "/assets/images/hms-repulse-1916-nh525.jpg",
     "LEAVE": "https://upload.wikimedia.org/wikipedia/commons/a/a5/HMS_Repulse_leaving_Singapore.jpg",
     "BOMB": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Japanese_high-level_bombing_attack_on_HMS_Prince_of_Wales_and_HMS_Repulse_on_10_December_1941_%28NH_60566%29.jpg",
     "TORP": "https://upload.wikimedia.org/wikipedia/commons/f/f6/HMS_Prince_of_Wales_and_HMS_Repulse_underway_with_a_destroyer_on_10_December_1941_%2880-G-413520%29.jpg",
