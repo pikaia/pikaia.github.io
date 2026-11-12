@@ -2600,6 +2600,38 @@ PRONUNCIATION_OVERRIDES = {
     "Esplanade": "ˌɛspləˈnɑːd",                 # "es-pluh-NAHD".
     "Oliveiro": "ˌɒlɪvˈɪərəʊ",                  # Claude Oliveiro, "ol-iv-EER-oh".
     "Kipling": "kˈɪplɪŋ",                       # Rudyard Kipling — insurance if the lexicon lacks it.
+    # Pulau Semakau post (2026-11-10) - proposed by Seven pre-1.1 from standard Malay/name pronunciations; NOT ear-verified yet.
+    "Sakeng": "sɑːkˈɛŋ",  # sah-KENG
+    "kampong": "kˈɑːmpɔːŋ",  # KAHM-pong
+    "Orang": "ˈɔːɹɑːŋ",  # AW-rahng
+    "penghulu": "pəŋhˈuːluː",  # peng-HOO-loo
+    "kolek": "kˈɔːlɛk",  # KOH-lehk
+    "Bukom": "bʊkˈɒm",  # boo-KOM
+    "Sidek": "sidˈɛk",  # see-DEK
+    "Saniff": "sɑːnˈiːf",  # sah-NEEF
+    "Kanwaljit": "kənwˈɑːldʒiːt",  # kun-WAHL-jeet
+    "Soin": "sˈɔɪn",  # SOYN
+    "Jian": "dʒiˈɑːn",  # jee-AHN
+    "REIDS": "ɹˈiːdz",  # REEDS, the microgrid testbed; all-caps token, said as a word
+    "NEWSand": "nˈuːsænd",  # Chris's ruling 2026-11-10: spoken as "new sand"
+    "TREASURES": "tɹˈɛʒəz",  # Chris's ruling 2026-11-10: spoken as the word "treasures" (deliberate pun in the acronym)
+    # Pulau Semakau 1.1 dry-run flags (2026-11-10) - readings proposed by Seven; NOT ear-verified yet.
+    "Bte": "bˈɪnte",  # BIN-teh, from binte
+    "bakau": "bˈɑːkaʊ",  # BAH-kow
+    "Pangkil": "pˈɑːŋkɪl",  # PAHNG-kil
+    "sepak": "sˈɛpɑːk",  # SEH-pahk
+    "takraw": "tˈɑːkɹɑːʊ",  # TAHK-row
+    "Imah": "ˈiːmɑːh",  # EE-mah
+    "Pemping": "pˈɛmpɪŋ",  # PEM-ping
+    "terakhir": "təɹˈɑːhɪr",  # teh-RAH-heer
+    "Saniah": "sɑːnˈiːɑːh",  # sah-NEE-ah
+    "Yatim": "jˈɑːtɪm",  # YAH-tim
+    "non-incinerable": "nˌɒnɪnsˈɪnəɹəbᵊl",  # plain English compound
+    "Syringodium": "sɪɹɪŋɡˈoʊdiəm",  # seagrass genus
+    "isoetifolium": "aɪsoʊˌɛtɪfˈoʊliəm",  # seagrass species
+    "brahminy": "bɹˈɑːmɪni",  # BRAH-mih-nee
+    "inventoried": "ˈɪnvəntˌɔːɹid",  # plain English
+    "Ghufran": "ɡʊfɹˈɑːn",  # goof-RAHN
 
 }
 
