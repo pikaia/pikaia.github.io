@@ -4,6 +4,12 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Pulau Semakau: From Fishing Village to the Island Made of Rubbish
+
+First posted 2026-11-10 · `2026-11-10-pulau-semakau-from-fishing-village-to-the-island-made-of-rubbish.md`
+
+- 2026-11-12: Published URLs wired in; run artifacts (`e78aaab`)
+
 ## The Bank of China Building on Battery Road
 
 First posted 2026-11-02 · `2026-11-02-the-bank-of-china-building-on-battery-road.md`
