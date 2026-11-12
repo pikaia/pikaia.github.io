@@ -134,9 +134,26 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 } 2>&1 | tee -a logs/{SLUG}.log
 
 { echo; date; echo "=== 8.4 Compress the main video for upload ==="
-  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/{SLUG}-avatar.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/{SLUG}-web.mp4)
-  echo "\$ ${cmd[*]}"; echo
-  time "${cmd[@]}"
+  # Size gate (2026-11-11): the -web copy is both the upload file and the
+  # retained project source, and the browser upload grant refuses files much
+  # above ~100 MB, so it must land at or under 90 MB. Start at CRF 26 and
+  # measure; while over target, step the CRF up by 2 and re-compress. If it
+  # is still over at CRF 36, keep that copy and let the log line flag it for
+  # the 4-9 review. The pre-compression intermediates are not retained after
+  # close-out - any redo regenerates them from the configs and timing.
+  target=94371840
+  crf=26
+  while :; do
+    cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/{SLUG}-avatar.mp4 -c:v libx264 -crf $crf -c:a aac -b:a 128k -movflags +faststart preview-motion/{SLUG}-web.mp4)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    size=$(stat -c %s preview-motion/{SLUG}-web.mp4)
+    echo "8.4 size check: $size bytes at CRF $crf (target <= $target)"
+    if [ "$size" -le "$target" ]; then break; fi
+    if [ "$crf" -ge 36 ]; then echo "8.4 WARNING: still over target at CRF $crf - keeping this copy; flag at the 4-9 review"; break; fi
+    crf=$((crf+2))
+    echo "Over target - re-compressing at CRF $crf"
+  done
   echo
 } 2>&1 | tee -a logs/{SLUG}.log
 { echo; date; echo "=== 8.4 Compress the Short for upload ==="
