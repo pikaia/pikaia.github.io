@@ -599,6 +599,42 @@ def draw_caption(frame, text, out_w, out_h, font_ratio, max_width_frac, y_frac):
     return frame
 
 
+# Photo-slide titles (Chris, 2026-11-11): from the Kampong Lorong
+# Buangkok post onward, every photo slide carries a discreet title -
+# the short form of the image's post/gallery caption - small, in the
+# top corner, on a soft dark backing, present for the slide's whole
+# run. A slide opts in by setting "title"; slides without one render
+# exactly as before, so older configs are unaffected.
+DEFAULT_SLIDE_TITLE_FONT_RATIO = 0.024
+SLIDE_TITLE_MARGIN_FRAC = 0.022
+
+
+def draw_slide_title(frame, title, out_w, out_h, font_ratio):
+    draw = ImageDraw.Draw(frame, "RGBA")
+    font = load_font(int(out_h * font_ratio))
+    w = draw.textlength(title, font=font)
+    line_h = font.size * 1.28
+    pad_x = font.size * 0.6
+    pad_y = font.size * 0.3
+    x0 = out_w * SLIDE_TITLE_MARGIN_FRAC
+    y0 = out_h * SLIDE_TITLE_MARGIN_FRAC
+    draw.rounded_rectangle(
+        [x0, y0, x0 + w + pad_x * 2, y0 + line_h + pad_y * 2],
+        radius=int(font.size * 0.35), fill=(0, 0, 0, 115))
+    draw.text((x0 + pad_x, y0 + pad_y), title, font=font,
+              fill=(255, 255, 255, 242))
+    return frame
+
+
+def apply_slide_title(frame, slide, out_w, out_h, cfg):
+    title = slide.get("title", "")
+    if not title:
+        return frame
+    font_ratio = getattr(cfg, "SLIDE_TITLE_FONT_RATIO",
+                         DEFAULT_SLIDE_TITLE_FONT_RATIO)
+    return draw_slide_title(frame, title, out_w, out_h, font_ratio)
+
+
 def load_captions(timing_path, max_chars=100):
     with open(timing_path, encoding="utf-8") as f:
         sentences = json.load(f)
@@ -778,6 +814,7 @@ def compose_frame_at(t, out_w, out_h, cfg, captions, prepared_cache):
         max_zoom, prepared, work_w, work_h = prepared_cache[slide_idx]
         frame = crop_from_prepared(prepared, work_w, work_h, out_w, out_h, zoom, max_zoom, pan_x, pan_y)
 
+    frame = apply_slide_title(frame, slide, out_w, out_h, cfg)
     frame = apply_caption(frame, t, out_w, out_h, cfg, captions)
     return frame, slide_idx
 
