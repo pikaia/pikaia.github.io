@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/kampong-lorong-buangkok-the-last-kampong-on-the-mainland.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py kampong-lorong-buangkok-the-last-kampong-on-the-mainland INDICES-FILLED-BY-SEVEN-WITH-THE-CONFIGS)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/kampong-lorong-buangkok-the-last-kampong-on-the-mainland.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/kampong-lorong-buangkok-the-last-kampong-on-the-mainland-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
