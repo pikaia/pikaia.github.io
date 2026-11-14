@@ -2,7 +2,7 @@
 layout: post
 title: "Kampong Lorong Buangkok: The Last Kampong on the Mainland"
 date: 2026-11-13 09:00:00 +0800
-last_modified_at: 2026-11-15 07:00:54 +0800
+last_modified_at: 2026-11-15 07:40:00 +0800
 categories: [history, places]
 image: https://upload.wikimedia.org/wikipedia/commons/5/5e/Photo_Journal_%28set%29_-_Welcome_to_Kampung_Buangkok_%289723403703%29.jpg
 ---
@@ -345,6 +345,10 @@ The residents took the minister's words the way they take most things. Mohamed S
 
 So the village goes on: twenty-five families, the surau's green roof, the mango trees that Sng Mui Hong talks to when her mood is bad — "When my mood isn't good, I can talk to [its] mango trees," she told CNA — and a rent book that would have made sense in 1986. Her advice, at seventy-one, was the kampong's philosophy in one breath: "Don't think so far ahead. The more you think, the worse it is for your brain. Just be a bit more open-minded, then you will have no problems in life."
 
+![A map of the Buangkok area with pins at Kampong Lorong Buangkok, Surau Al-Firdaus, Sungei Tongkang, the Institute of Mental Health, Buangkok MRT station and Montfort Secondary School](/assets/images/buangkok-map.png)
+
+*The last kampong and its neighbours, plotted on today's map. Pins are approximate. (Map data © OpenStreetMap contributors)*
+
 [See more photos of the kampong in the gallery](/gallery/kampong-lorong-buangkok-the-last-kampong-on-the-mainland/)
 
 **Where it fits in the bigger story:** Singapore's kampongs were not preserved by policy; they were cleared by it, almost to the last one. This one survives because a medicine seller bought a swamp in 1956, and because his youngest daughter decided that enough money was enough. When she is asked what the land is worth, she says she has had no direct offers and does not know or care — the most unusual sentence in Singapore property, and the reason a whole village is still standing at the end of an earth track behind the Buangkok flats.
@@ -365,5 +369,6 @@ So the village goes on: twenty-five families, the surau's green roof, the mango 
 - Wikipedia: [Kampong Lorong Buangkok](https://en.wikipedia.org/wiki/Kampong_Lorong_Buangkok) and [Surau Al-Firdaus](https://en.wikipedia.org/wiki/Surau_Al-Firdaus)
 - Honeycombers: [Kampong Lorong Buangkok: the story of Singapore's last village](https://thehoneycombers.com/singapore/kampong-lorong-buangkok/)
 - Photos: [entrance view](https://commons.wikimedia.org/wiki/File:Photo_Journal_(set)_-_Welcome_to_Kampung_Buangkok_(9723403703).jpg), [Surau Al-Firdaus](https://commons.wikimedia.org/wiki/File:Surau_Al_Firdaus_at_Kampong_Lorong_Buangkok_-_54292246824.jpg) and [its washing area](https://commons.wikimedia.org/wiki/File:Surau_Al_Firdaus_at_Kampong_Lorong_Buangkok_3.jpg), [village house with verandah](https://commons.wikimedia.org/wiki/File:Village_house_with_verandah_and_diner.jpg), [entrance sign](https://commons.wikimedia.org/wiki/File:Lorong_Buangkok_Singapore_signage.JPG), [a typical kampong house](https://commons.wikimedia.org/wiki/File:A_Typical_Kampong_House.JPG), [a village house](https://commons.wikimedia.org/wiki/File:Lorong_Buangkok_house.JPG), [an entrance door](https://commons.wikimedia.org/wiki/File:An_entrance_door_in_Kampong_Lorong_Buangkok.jpg), [electricity meter](https://commons.wikimedia.org/wiki/File:Photo_Journal_(Set)_-_A_power_supply_meter_to_a_wooden_kampung_house_(9682076337).jpg), [earthenware stove](https://commons.wikimedia.org/wiki/File:Photo_Journal_(set)_-_An_earthernware_stove_(9719616498).jpg), [chickens](https://commons.wikimedia.org/wiki/File:Photo_Journal_(Set)_-_Shoo!_(9695528234).jpg), [young explorers](https://commons.wikimedia.org/wiki/File:Photo_Journal_(Set)_-_Young_explorers_(9719102704).jpg) and [overgrown structure](https://commons.wikimedia.org/wiki/File:Photo_Journal_(Set)_-_Overgrown_(9685319060)_(2).jpg), all via Wikimedia Commons
+- Map data © OpenStreetMap contributors
 
 [← Back to all posts](/)
