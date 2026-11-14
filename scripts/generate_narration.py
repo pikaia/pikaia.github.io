@@ -2635,7 +2635,7 @@ PRONUNCIATION_OVERRIDES = {
     # Kampong Lorong Buangkok post (2026-11-13) - 1.1 dry-run flags; readings proposed by Seven from standard Malay/Mandarin/name pronunciations; NOT ear-verified yet.
     "buangkok": "bwˈɑːŋkɒk",  # BWAHNG-kok - confirmed by Chris 2026-11-13
     "Sng": "sˈɜːŋ",  # SUR-ng - Chris's ruling 2026-11-13: "s as in sir, ng as in urn"
-    "Teow": "tˈiːaʊ",  # TEE-ow, Teochew surname - leading candidate, Chris to rule by ear
+    "Teow": "tˈiːaʊ",  # TEE-ow, Teochew surname - confirmed by Chris 2026-11-13
     "Huang": "hwˈɑːŋ",  # HWAHNG
     "Yu": "jˈuː",  # YOO
     "Tu": "tˈuː",  # TOO
