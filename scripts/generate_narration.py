@@ -2633,8 +2633,8 @@ PRONUNCIATION_OVERRIDES = {
     "inventoried": "ˈɪnvəntˌɔːɹid",  # plain English
     "Ghufran": "ɡʊfɹˈɑːn",  # goof-RAHN
     # Kampong Lorong Buangkok post (2026-11-13) - 1.1 dry-run flags; readings proposed by Seven from standard Malay/Mandarin/name pronunciations; NOT ear-verified yet.
-    "buangkok": "bwˈɑːŋkɒk",  # BWAHNG-kok, the local reading
-    "Sng": "sˈɪŋ",  # SING - leading candidate only: the Hokkien surname has no vowel in speech (syllabic ng); Chris to rule by ear, alternative is letter-spelled
+    "buangkok": "bwˈɑːŋkɒk",  # BWAHNG-kok - confirmed by Chris 2026-11-13
+    "Sng": "sˈɜːŋ",  # SUR-ng - Chris's ruling 2026-11-13: "s as in sir, ng as in urn"
     "Teow": "tˈiːaʊ",  # TEE-ow, Teochew surname - leading candidate, Chris to rule by ear
     "Huang": "hwˈɑːŋ",  # HWAHNG
     "Yu": "jˈuː",  # YOO
