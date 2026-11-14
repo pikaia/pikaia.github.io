@@ -2632,6 +2632,24 @@ PRONUNCIATION_OVERRIDES = {
     "brahminy": "bɹˈɑːmɪni",  # BRAH-mih-nee
     "inventoried": "ˈɪnvəntˌɔːɹid",  # plain English
     "Ghufran": "ɡʊfɹˈɑːn",  # goof-RAHN
+    # Kampong Lorong Buangkok post (2026-11-13) - 1.1 dry-run flags; readings proposed by Seven from standard Malay/Mandarin/name pronunciations; NOT ear-verified yet.
+    "buangkok": "bwˈɑːŋkɒk",  # BWAHNG-kok, the local reading
+    "Sng": "sˈɪŋ",  # SING - leading candidate only: the Hokkien surname has no vowel in speech (syllabic ng); Chris to rule by ear, alternative is letter-spelled
+    "Teow": "tˈiːaʊ",  # TEE-ow, Teochew surname - leading candidate, Chris to rule by ear
+    "Huang": "hwˈɑːŋ",  # HWAHNG
+    "Yu": "jˈuː",  # YOO
+    "Tu": "tˈuː",  # TOO
+    "gotong": "ɡɔtˈɔːŋ",  # goh-TONG (gotong royong, mutual help)
+    "royong": "ɹɔjˈɔːŋ",  # roh-YONG
+    "Woodbridge": "wˈʊdbɹɪdʒ",  # WOOD-bridge, the hospital (now IMH)
+    "selak": "səlˈɑːk",  # seh-LAHK (Selak Kain, "lift up your sarong")
+    "Al-Firdaus": "ˌɑːlfˈɪədaʊs",  # the surau; built on the settled "Firdaus" entry above
+    "Ludin": "lˈuːdɪn",  # LOO-din (Awe Bin Ludin)
+    "Buang": "bwˈɑːŋ",  # BWAHNG (the old "Lorong Buang Kok" sign)
+    "Kok": "kˈɒk",  # KOK
+    "Intan": "ɪntˈɑːn",  # in-TAHN (Intan Azura Mokhtar)
+    "Azura": "əzˈʊəɹə",  # uh-ZOO-ruh
+    "Mokhtar": "mˈɒktɑːɹ",  # MOK-tar
 
 }
 
