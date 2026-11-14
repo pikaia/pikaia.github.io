@@ -2,15 +2,15 @@
 layout: post
 title: "Kampong Lorong Buangkok: The Last Kampong on the Mainland"
 date: 2026-11-13 09:00:00 +0800
-last_modified_at: 2026-11-13 09:00:00 +0800
+last_modified_at: 2026-11-14 11:35:00 +0800
 categories: [history, places]
-image: https://upload.wikimedia.org/wikipedia/commons/0/06/Photo_Journal_%28set%29_-_Welcome_to_Kampung_Buangkok_%289723403703%29.jpg
+image: https://upload.wikimedia.org/wikipedia/commons/5/5e/Photo_Journal_%28set%29_-_Welcome_to_Kampung_Buangkok_%289723403703%29.jpg
 ---
 The rent, for some of the houses, is $6.50 a month. The most anyone pays is $30. The figures have not moved in about forty years, and if a tenant is short of money, the landlady will take rice or fruit instead. There are twenty-five families left — twelve Chinese, thirteen Malay — living in wooden houses with zinc roofs along earth lanes, behind the HDB blocks of Buangkok Green. The landlady is Sng Mui Hong, who was seventy-one when CNA profiled her in November 2024, and who has promised her late father that the kampong will not be sold. "As long as I have enough to live, that's already fine," she said. "There's no need to be greedy. Even if I get a lot of money, it will all be finished eventually." This is Kampong Lorong Buangkok, the last kampong on mainland Singapore — a village that was supposed to disappear with all the others, and didn't.
 
 [← Back to all posts](/)
 
-![The way into Kampong Lorong Buangkok, the last kampong on mainland Singapore](https://upload.wikimedia.org/wikipedia/commons/0/06/Photo_Journal_%28set%29_-_Welcome_to_Kampung_Buangkok_%289723403703%29.jpg)
+![The way into Kampong Lorong Buangkok, the last kampong on mainland Singapore](https://upload.wikimedia.org/wikipedia/commons/5/5e/Photo_Journal_%28set%29_-_Welcome_to_Kampung_Buangkok_%289723403703%29.jpg)
 
 *The way in — down an earth track behind the Buangkok Green flats, the mainland's last kampong. (Erwin Soo, CC BY 2.0, via Wikimedia Commons; photographed 2013)*
 
@@ -40,7 +40,7 @@ Fame arrived slowly, then all at once. The 2004 flood put the kampong in the pap
 
 The attention has a price, and the residents pay it. Travel writers who once described gates left open now describe fences between plots, doors locked, curtains drawn — the village defending its privacy from its own celebrity. It is private residential land, not a museum: the lanes are open to a quiet walker, but the houses are people's homes, several of them elderly people's homes, and the tours exist partly so that visiting happens on the village's terms.
 
-![A village house with its verandah in Kampong Lorong Buangkok](https://upload.wikimedia.org/wikipedia/commons/9/92/Village_house_with_verandah_and_diner.jpg)
+![A village house with its verandah in Kampong Lorong Buangkok](https://upload.wikimedia.org/wikipedia/commons/d/de/Village_house_with_verandah_and_diner.jpg)
 
 *A lived-in village house, verandah and outdoor table — the kampong today is a home first and an attraction second. (M. Adrian Jurhami, CC BY 4.0, via Wikimedia Commons; photographed 2026)*
 
