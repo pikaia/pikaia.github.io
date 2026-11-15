@@ -2650,6 +2650,11 @@ PRONUNCIATION_OVERRIDES = {
     "Intan": "ɪntˈɑːn",  # in-TAHN (Intan Azura Mokhtar)
     "Azura": "əzˈʊəɹə",  # uh-ZOO-ruh
     "Mokhtar": "mˈɒktɑːɹ",  # MOK-tar
+    # Rerun 2026-11-14 - the new closing paragraph (Chris's personal note); standard Malay/name readings, NOT ear-verified yet.
+    "Teliti": "təlˈiːti",  # teh-LEE-tee (Jalan Teliti)
+    "Piring": "pˈɪɹɪŋ",  # PEE-ring (Tari Piring, the plate dance)
+    "Sindor": "sˈɪndɔːɹ",  # SIN-dor (Jalan Sindor)
+    "Yio": "jˈoʊ",  # YOH (Yio Chu Kang)
 
 }
 
