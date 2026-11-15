@@ -20,7 +20,10 @@ titles (Chris, 2026-11-11): each slide's "title" is the short
 form of its image's post/gallery caption, drawn small in the top
 corner on a soft dark backing for the slide's whole run.
 
-43 slides, 564.45s. Narration: Kokoro with the OpenVoice clone.
+46 slides, 614.85s. RERUN 2026-11-15: the post gained a re-anchored
+opening and Chris's personal closing note after the first render;
+this config is re-timed against the new narration. Narration:
+Kokoro with the OpenVoice clone.
 AVATAR: first and last 30s, cartoon with motion.
 """
 
@@ -55,62 +58,65 @@ THUMBNAIL = [
 _E = "ease-in-out"
 
 SLIDES = [
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 0  s0 title: the last kampong on the mainland (4.7s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 1  s1-2 rent: $6.50 a month, $30 at most (8.8s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 2  s3 frozen forty years; rice or fruit if a tenant is short (9.1s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 3  s4 twenty-five families behind the Buangkok Green blocks (12.0s)
-    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 4  s5 the landlady: Sng Mui Hong, seventy-one (names her: a house, no portrait) (12.0s)
-    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 5  s6-8 'As long as I have enough to live, that's already fine' (12.2s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.5)] * 3, "ease": _E}},  # 6  s9 the last kampong on mainland Singapore (10.2s)
-    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 7  s10 1956: Sng Teow Koon buys the swamp from Huang Yu Tu (names them: the land) (12.7s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 8  s11-12 a medicine seller; the first houses go up (14.1s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 9  s13 gotong royong: sand hauled, each other's houses raised (19.9s)
-    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 10  s14 Woodbridge Hospital and rubber-plantation workers (12.3s)
-    {"img": "METER", **{"type": "cover", "title": "Power to a wooden house, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)] * 3, "ease": _E}},  # 11  s15-16 the 1960s peak, forty families; water and power, 1962 (10.9s)
-    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 12  s17 Kampong Selak Kain: lift up your sarong (13.9s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)] * 3, "ease": _E}},  # 13  s18 the floods never left; March 2004 (16.2s)
-    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 14  s19-20 the stream fenced; Surau Al-Firdaus, built 1953 (18.2s)
-    {"img": "ABLUTION", **{"type": "cover", "title": "The surau's washing area, 2025", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 15  s21 the surau draws worshippers from outside too (7.9s)
-    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 16  s22 Awe Bin Ludin, the 2004 headman (names him: the surau) (12.9s)
-    {"img": "SHOO", **{"type": "cover", "title": "Pigeons take flight, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.65, 0.5)] * 3, "ease": _E}},  # 17  s23 chickens, gardens, dirt tracks, old signs (16.2s)
-    {"img": "SIGN", **{"type": "cover", "title": "House sign: 23-C Lorong Buangkok, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 18  s24-25 'Lorong Buang Kok 1954' is a postal code, not a founding year (16.5s)
-    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 19  s26 a nation rehoused; the kampongs went one by one (10.0s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 20  s27-29 a legal reason and a human one (16.6s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 21  s30-31 1997: the land passes to four children; Mui Hong stays (12.0s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 22  s32-33 her promise to her father; $300 a month in 2007 (15.1s)
-    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 23  s34 no new tenants since the 1990s (12.6s)
-    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 24  s35-36 tenants own their houses; the $33 million valuation (16.6s)
-    {"img": "STOVE", **{"type": "cover", "title": "The earthenware stove, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 25  s37 'simplicity and freedom' (her words: the stove) (8.8s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 26  s38 the New York Times, 2009: 'a deep attachment to my neighbours' (16.7s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 27  s39-40 'like my own parents... Malay or Chinese' (8.0s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.5)] * 3, "ease": _E}},  # 28  s41-42 fame: the flood, the valuation, the Times, the BBC (18.6s)
-    {"img": "EXPLORERS", **{"type": "cover", "title": "Young explorers, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 29  s43 documentary crews, school groups and weekend walkers (4.6s)
-    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 30  s44 guided tours meet Sng Mui Hong at home (names her: a house) (13.3s)
-    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 31  s45-46 the price of fame: fences, locked doors, curtains drawn (16.6s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 32  s47 private residential land, not a museum (16.0s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)] * 3, "ease": _E}},  # 33  s48-49 the Master Plan: a road, two schools, a park (14.9s)
-    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 34  s50 2014: public calls to conserve it instead (7.3s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 35  s51 Parliament, 2017: 'several decades later' (names Mokhtar and Lee: the village) (19.6s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 36  s52 no conservation status; its protection is its owners (7.7s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.65, 0.5)] * 3, "ease": _E}},  # 37  s53-55 Mohamed Sulaiman: 'if can stay, I happy' (names him: a house) (19.2s)
-    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 38  s56 the village goes on: the surau's green roof, the mango trees (18.0s)
-    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 39  s57-59 her advice: 'Don't think so far ahead' (15.8s)
-    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 40  s60 the bigger story: kampongs cleared by policy (9.0s)
-    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 41  s61 a medicine seller bought a swamp; his daughter decided enough was enough (10.2s)
-    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 42  s62 no direct offers, does not know or care; still standing (16.6s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 0  s0-1 title + 'It survived.' (6.4s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 1  s2-3 rent: $6.50 a month, $30 at most (15.3s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 2  s4 frozen forty years; rice or fruit if a tenant is short (9.3s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)], "ease": _E}},  # 3  s5 twenty-five families behind the Buangkok Green blocks (12.0s)
+    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 4  s6 the landlady: Sng Mui Hong, seventy-one (names her: a house, no portrait) (12.0s)
+    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 5  s7-9 'As long as I have enough to live, that's already fine' (12.2s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.5)], "ease": _E}},  # 6  s10 the last kampong on mainland Singapore (10.2s)
+    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 7  s11 1956: Sng Teow Koon buys the swamp from Huang Yu Tu (names them: the land) (12.7s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 8  s12-13 a medicine seller; the first houses go up (14.0s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)], "ease": _E}},  # 9  s14 gotong royong: sand hauled, each other's houses raised (19.9s)
+    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 10  s15 Woodbridge Hospital and rubber-plantation workers (12.3s)
+    {"img": "METER", **{"type": "cover", "title": "Power to a wooden house, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)], "ease": _E}},  # 11  s16-17 the 1960s peak, forty families; water and power, 1962 (10.9s)
+    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 12  s18 Kampong Selak Kain: lift up your sarong (13.9s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)], "ease": _E}},  # 13  s19 the floods never left; March 2004 (16.2s)
+    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 14  s20-21 the stream fenced; Surau Al-Firdaus, built 1953 (18.2s)
+    {"img": "ABLUTION", **{"type": "cover", "title": "The surau's washing area, 2025", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 15  s22 the surau draws worshippers from outside too (7.9s)
+    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 16  s23 Awe Bin Ludin, the 2004 headman (names him: the surau) (12.9s)
+    {"img": "SHOO", **{"type": "cover", "title": "Pigeons take flight, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.65, 0.5)], "ease": _E}},  # 17  s24 chickens, gardens, dirt tracks, old signs (16.2s)
+    {"img": "SIGN", **{"type": "cover", "title": "House sign: 23-C Lorong Buangkok, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 18  s25-26 'Lorong Buang Kok 1954' is a postal code, not a founding year (16.5s)
+    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 19  s27 a nation rehoused; the kampongs went one by one (10.0s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.35, 0.5)], "ease": _E}},  # 20  s28-30 a legal reason and a human one (16.6s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 21  s31-32 1997: the land passes to four children; Mui Hong stays (12.0s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 22  s33-34 her promise to her father; $300 a month in 2007 (15.1s)
+    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 23  s35 no new tenants since the 1990s (12.6s)
+    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.35, 0.5)], "ease": _E}},  # 24  s36-37 tenants own their houses; the $33 million valuation (16.6s)
+    {"img": "STOVE", **{"type": "cover", "title": "The earthenware stove, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 25  s38 'simplicity and freedom' (her words: the stove) (8.8s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 26  s39 the New York Times, 2009: 'a deep attachment to my neighbours' (16.7s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 27  s40-41 'like my own parents... Malay or Chinese' (8.0s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.65, 0.5)], "ease": _E}},  # 28  s42-43 fame: the flood, the valuation, the Times, the BBC (18.6s)
+    {"img": "EXPLORERS", **{"type": "cover", "title": "Young explorers, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 29  s44 documentary crews, school groups and weekend walkers (4.6s)
+    {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 30  s45 guided tours meet Sng Mui Hong at home (names her: a house) (13.3s)
+    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 31  s46-47 the price of fame: fences, locked doors, curtains drawn (16.6s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 32  s48 private residential land, not a museum (16.0s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.4)], "ease": _E}},  # 33  s49-50 the Master Plan: a road, two schools, a park (15.0s)
+    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 34  s51 2014: public calls to conserve it instead (7.3s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)], "ease": _E}},  # 35  s52 Parliament, 2017: 'several decades later' (names Mokhtar and Lee: the village) (19.6s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 36  s53 no conservation status; its protection is its owners (7.7s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.65, 0.5)], "ease": _E}},  # 37  s54-56 Mohamed Sulaiman: 'if can stay, I happy' (names him: a house) (19.2s)
+    {"img": "SURAU", **{"type": "cover", "title": "Surau Al-Firdaus, 2025", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 38  s57 the village goes on: the surau's green roof, the mango trees (18.0s)
+    {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 39  s58-60 her advice: 'Don't think so far ahead' (15.8s)
+    {"img": "OVERGROWN", **{"type": "cover", "title": "Taken back by green, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 40  s61 the bigger story: kampongs cleared by policy (9.0s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)], "ease": _E}},  # 41  s62 a medicine seller bought a swamp; his daughter decided enough was enough (10.2s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)], "ease": _E}},  # 42  s63 no direct offers, does not know or care; still standing (16.6s)
+    {"img": "EXPLORERS", **{"type": "cover", "title": "Young explorers, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 43  s64-65 a note of my own: I grew up in Aukang, a few streets away (18.2s)
+    {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.0, 1.06, 1.12], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 44  s66-67 never thought of it as the last kampong; too far to walk, to a boy (13.6s)
+    {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 45  s68-69 five miles - my Maryland walk; 'On my next visit home, I intend to walk it' (10.2s)
 ]
 
 SCHEDULE = [
-    (0.000, 0), (4.725, 1), (13.500, 2), (22.625, 3), (34.625, 4), (46.650, 5),
-    (58.800, 6), (68.975, 7), (81.675, 8), (95.725, 9), (115.675, 10), (128.000, 11),
-    (138.875, 12), (152.800, 13), (169.000, 14), (187.225, 15), (195.125, 16), (208.075, 17),
-    (224.275, 18), (240.800, 19), (250.775, 20), (267.400, 21), (279.375, 22), (294.475, 23),
-    (307.050, 24), (323.625, 25), (332.400, 26), (349.100, 27), (357.075, 28), (375.700, 29),
-    (380.325, 30), (393.625, 31), (410.225, 32), (426.200, 33), (441.150, 34), (448.425, 35),
-    (468.000, 36), (475.675, 37), (494.850, 38), (512.850, 39), (528.650, 40), (537.675, 41),
-    (547.850, 42)
+    (0.000, 0), (6.400, 1), (21.725, 2), (31.000, 3), (43.000, 4), (55.025, 5),
+    (67.175, 6), (77.350, 7), (90.050, 8), (104.100, 9), (124.050, 10), (136.375, 11),
+    (147.250, 12), (161.175, 13), (177.375, 14), (195.600, 15), (203.500, 16), (216.450, 17),
+    (232.650, 18), (249.175, 19), (259.150, 20), (275.775, 21), (287.750, 22), (302.850, 23),
+    (315.425, 24), (332.000, 25), (340.775, 26), (357.475, 27), (365.450, 28), (384.075, 29),
+    (388.700, 30), (402.000, 31), (418.600, 32), (434.575, 33), (449.525, 34), (456.800, 35),
+    (476.375, 36), (484.050, 37), (503.225, 38), (521.225, 39), (537.025, 40), (546.050, 41),
+    (556.225, 42), (572.825, 43), (591.050, 44), (604.675, 45)
 ]
-TOTAL_DURATION = 564.45
+TOTAL_DURATION = 614.85
 TIMING_JSON = "audio/kampong-lorong-buangkok-the-last-kampong-on-the-mainland.timing.json"
 
 # The avatar presenter, cartoon with motion: corner bubble for the first and last 30 s.

@@ -1,33 +1,37 @@
 """Short config for the Kampong Lorong Buangkok post - a synopsis re-cut.
 
-Built with: python scripts/build_short_audio.py kampong-lorong-buangkok-the-last-kampong-on-the-mainland 1,3,4,6,10,12,28,36,37,44,46,49,51,54,61
-(15 sentences, 155.30s - under the 3-minute Shorts ceiling
+Built with: python scripts/build_short_audio.py kampong-lorong-buangkok-the-last-kampong-on-the-mainland 2,4,5,6,7,11,29,37,38,44,46,50,52,55,56,62,65,69
+(18 sentences, 172.53s - under the 3-minute Shorts ceiling
 with margin, and well over TikTok's 1-minute floor.)
+RERUN 2026-11-15: re-picked against the new narration (the
+post gained a re-anchored opening and a personal closing note).
 
 The post's points, and the sentences that carry each:
 1. The rent hook: $6.50 a month, frozen about forty years,
-   payment in kind accepted. (s1, s3)
+   payment in kind accepted. (s2, s4)
 2. The place and its keeper: twenty-five families - twelve
    Chinese, thirteen Malay - behind the Buangkok Green blocks;
-   the landlady's rule: "As long as I have enough to live,
-   that's already fine." (s4, s6)
+   the landlady, Sng Mui Hong; her rule: "As long as I have
+   enough to live, that's already fine." (s5, s6, s7)
 3. The founding: in 1956 Sng Teow Koon, a medicine seller,
-   bought 12,248 square metres of swamp; the first families
-   built on rented parcels. (s10, s12)
+   bought 12,248 square metres of swamp. (s11)
 4. Why it survived: the land was private - and when it was
    valued at $33 million in 2007, the family's answer was "My
    family ties are not for sale"; simplicity and freedom over
-   money. (s28, s36, s37)
-5. Fame and its price: guided tours bring visitors to meet
-   Sng Mui Hong at home, while residents fence their plots and
-   lock their doors against the attention. (s44, s46)
+   money. (s29, s37, s38)
+5. Fame and its price: documentary crews, school groups and
+   weekend walkers followed - and the attention has a price,
+   which the residents pay. (s44, s46)
 6. The drawn future: Master Plan parcels - a road, two schools,
    a park - and Parliament told in 2017 that redevelopment
-   would likely come only "several decades later". (s49, s51)
+   would likely come only "several decades later". (s50, s52)
 7. The close: a resident's contentment - "if can stay, I
    happy" - and the reason the village stands: a medicine
    seller bought a swamp, and his youngest daughter decided
-   enough money was enough. (s54, s61)
+   enough money was enough. (s55, s56, s62)
+8. The author's own note: he grew up in Aukang, a few streets
+   from the kampong, and on his next visit home he intends to
+   walk the five miles he once thought unwalkable. (s65, s69)
 
 Every slide is letterboxed and carries its photo title, as in
 the main config. Named-person rule as in the main config: no
@@ -68,28 +72,31 @@ _E = "ease-in-out"
 _LB = {"type": "letterbox", "zoom": [1.0, 1.03, 1.06], "pan": [(0.5, 0.5)] * 3, "ease": _E}
 
 SLIDES = [
-    {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s1 rent: $6.50 a month (5.2s)
-    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s3 frozen forty years; rice or fruit if a tenant is short (9.1s)
-    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s4 twenty-five families behind the Buangkok Green blocks (12.0s)
-    {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s6 'As long as I have enough to live, that's already fine' (4.7s)
-    {"img": "OVERGROWN", **_LB, "title": "Taken back by green, 2013"},   # s10 1956: Sng Teow Koon buys the swamp (names him: the land) (12.7s)
-    {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s12 the first families build on rented parcels (9.7s)
-    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s28 the legal reason: the land was private (6.7s)
-    {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s36 the $33 million valuation; 'My family ties are not for sale' (11.6s)
-    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s37 'simplicity and freedom' (8.8s)
-    {"img": "EXPLORERS", **_LB, "title": "Young explorers, 2013"},   # s44 guided tours meet Sng Mui Hong at home (names her: the visitors) (13.3s)
-    {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s46 the price of fame: fences, locked doors, curtains drawn (12.7s)
-    {"img": "OVERGROWN", **_LB, "title": "Taken back by green, 2013"},   # s49 the Master Plan: a road, two schools, a park (10.8s)
-    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s51 Parliament, 2017: 'several decades later' (names Mokhtar and Lee: the village) (19.6s)
-    {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s54 Mohamed Sulaiman: 'if can stay, I happy' (names him: a house) (8.4s)
-    {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s61 a medicine seller bought a swamp; his daughter decided enough was enough (10.2s)
+    {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s2 rent: $6.50 a month (11.7s)
+    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s4 frozen forty years; rice or fruit if a tenant is short (9.3s)
+    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s5 twenty-five families behind the Buangkok Green blocks (12.0s)
+    {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s6 the landlady: Sng Mui Hong, seventy-one (names her: a house) (12.0s)
+    {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s7 'As long as I have enough to live, that's already fine' (4.7s)
+    {"img": "OVERGROWN", **_LB, "title": "Taken back by green, 2013"},   # s11 1956: Sng Teow Koon buys the swamp (names him: the land) (12.7s)
+    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s29 the legal reason: the land was private (6.7s)
+    {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s37 the $33 million valuation; 'My family ties are not for sale' (11.6s)
+    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s38 'simplicity and freedom' (8.8s)
+    {"img": "EXPLORERS", **_LB, "title": "Young explorers, 2013"},   # s44 documentary crews, school groups and weekend walkers (4.6s)
+    {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s46 the attention has a price, and the residents pay it (3.9s)
+    {"img": "OVERGROWN", **_LB, "title": "Taken back by green, 2013"},   # s50 the Master Plan: a road, two schools, a park (10.8s)
+    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s52 Parliament, 2017: 'several decades later' (names Mokhtar and Lee: the village) (19.6s)
+    {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s55 Mohamed Sulaiman: 'if can stay, 20 year...' (names him: a house) (8.4s)
+    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s56 '...but if can stay, I happy' (5.8s)
+    {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s62 a medicine seller bought a swamp; his daughter decided enough was enough (10.2s)
+    {"img": "EXPLORERS", **_LB, "title": "Young explorers, 2013"},   # s65 a note of my own: I grew up in Aukang, a few streets away (16.1s)
+    {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s69 'On my next visit home, I intend to walk it' (3.7s)
 ]
 SCHEDULE = [
-    (0.000, 0), (5.150, 1), (14.275, 2), (26.275, 3), (30.950, 4), (43.650, 5),
-    (53.350, 6), (60.000, 7), (71.575, 8), (80.350, 9), (93.650, 10), (106.325, 11),
-    (117.125, 12), (136.700, 13), (145.125, 14)
+    (0.000, 0), (11.700, 1), (20.975, 2), (32.975, 3), (45.000, 4), (49.675, 5),
+    (62.375, 6), (69.025, 7), (80.600, 8), (89.375, 9), (94.000, 10), (97.925, 11),
+    (108.725, 12), (128.300, 13), (136.725, 14), (142.550, 15), (152.725, 16), (168.800, 17)
 ]
-TOTAL_DURATION = 155.3
+TOTAL_DURATION = 172.53
 TIMING_JSON = "audio/kampong-lorong-buangkok-the-last-kampong-on-the-mainland-short.timing.json"
 
 BURN_CAPTIONS = True
