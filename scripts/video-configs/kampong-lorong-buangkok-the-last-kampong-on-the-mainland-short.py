@@ -1,14 +1,18 @@
 """Short config for the Kampong Lorong Buangkok post - a synopsis re-cut.
 
-Built with: python scripts/build_short_audio.py kampong-lorong-buangkok-the-last-kampong-on-the-mainland 2,4,5,6,7,11,29,37,38,44,46,50,52,55,56,62,65,69
-(18 sentences, 172.53s - under the 3-minute Shorts ceiling
+Built with: python scripts/build_short_audio.py kampong-lorong-buangkok-the-last-kampong-on-the-mainland 2,4,5,6,7,11,29,37,38,44,50,52,55,56,62,65,69
+(17 sentences, 176.30s - under the 3-minute Shorts ceiling
 with margin, and well over TikTok's 1-minute floor.)
 RERUN 2026-11-15: re-picked against the new narration (the
 post gained a re-anchored opening and a personal closing note).
+SOFTEN re-render 2026-11-15: the softened rent sentence (s4)
+grew from 9.3s to 17.0s and pushed the old pick over the
+180s ceiling (180.23s); s46 was cut, leaving 17 sentences
+at 176.30s.
 
 The post's points, and the sentences that carry each:
-1. The rent hook: $6.50 a month, frozen about forty years,
-   payment in kind accepted. (s2, s4)
+1. The rent hook: $6.50 a month, the figures barely moved
+   in decades, payment in kind accepted. (s2, s4)
 2. The place and its keeper: twenty-five families - twelve
    Chinese, thirteen Malay - behind the Buangkok Green blocks;
    the landlady, Sng Mui Hong; her rule: "As long as I have
@@ -19,9 +23,9 @@ The post's points, and the sentences that carry each:
    valued at $33 million in 2007, the family's answer was "My
    family ties are not for sale"; simplicity and freedom over
    money. (s29, s37, s38)
-5. Fame and its price: documentary crews, school groups and
-   weekend walkers followed - and the attention has a price,
-   which the residents pay. (s44, s46)
+5. Fame: documentary crews, school groups and weekend
+   walkers followed. (s44) The attention-has-a-price sentence
+   (s46) was the cut that kept this Short under the ceiling.
 6. The drawn future: Master Plan parcels - a road, two schools,
    a park - and Parliament told in 2017 that redevelopment
    would likely come only "several decades later". (s50, s52)
@@ -73,7 +77,7 @@ _LB = {"type": "letterbox", "zoom": [1.0, 1.03, 1.06], "pan": [(0.5, 0.5)] * 3, 
 
 SLIDES = [
     {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s2 rent: $6.50 a month (11.7s)
-    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s4 frozen forty years; rice or fruit if a tenant is short (9.3s)
+    {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s4 the rent figures barely moved in decades; rice or fruit if a tenant is short (17.0s)
     {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s5 twenty-five families behind the Buangkok Green blocks (12.0s)
     {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s6 the landlady: Sng Mui Hong, seventy-one (names her: a house) (12.0s)
     {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s7 'As long as I have enough to live, that's already fine' (4.7s)
@@ -82,7 +86,6 @@ SLIDES = [
     {"img": "VERANDAH", **_LB, "title": "A house with its verandah, 2026"},   # s37 the $33 million valuation; 'My family ties are not for sale' (11.6s)
     {"img": "TYPICAL", **_LB, "title": "A typical kampong house, 2008"},   # s38 'simplicity and freedom' (8.8s)
     {"img": "EXPLORERS", **_LB, "title": "Young explorers, 2013"},   # s44 documentary crews, school groups and weekend walkers (4.6s)
-    {"img": "DOOR", **_LB, "title": "An entrance door, 2026"},   # s46 the attention has a price, and the residents pay it (3.9s)
     {"img": "OVERGROWN", **_LB, "title": "Taken back by green, 2013"},   # s50 the Master Plan: a road, two schools, a park (10.8s)
     {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s52 Parliament, 2017: 'several decades later' (names Mokhtar and Lee: the village) (19.6s)
     {"img": "VILLAGE", **_LB, "title": "A village house, 2014"},   # s55 Mohamed Sulaiman: 'if can stay, 20 year...' (names him: a house) (8.4s)
@@ -92,11 +95,11 @@ SLIDES = [
     {"img": "WELCOME", **_LB, "title": "The way into the kampong, 2013"},   # s69 'On my next visit home, I intend to walk it' (3.7s)
 ]
 SCHEDULE = [
-    (0.000, 0), (11.700, 1), (20.975, 2), (32.975, 3), (45.000, 4), (49.675, 5),
-    (62.375, 6), (69.025, 7), (80.600, 8), (89.375, 9), (94.000, 10), (97.925, 11),
-    (108.725, 12), (128.300, 13), (136.725, 14), (142.550, 15), (152.725, 16), (168.800, 17)
+    (0.000, 0), (11.700, 1), (28.675, 2), (40.675, 3), (52.700, 4), (57.375, 5),
+    (70.075, 6), (76.725, 7), (88.300, 8), (97.075, 9), (101.700, 10), (112.500, 11),
+    (132.075, 12), (140.500, 13), (146.325, 14), (156.500, 15), (172.575, 16)
 ]
-TOTAL_DURATION = 172.53
+TOTAL_DURATION = 176.30
 TIMING_JSON = "audio/kampong-lorong-buangkok-the-last-kampong-on-the-mainland-short.timing.json"
 
 BURN_CAPTIONS = True

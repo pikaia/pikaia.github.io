@@ -20,9 +20,11 @@ titles (Chris, 2026-11-11): each slide's "title" is the short
 form of its image's post/gallery caption, drawn small in the top
 corner on a soft dark backing for the slide's whole run.
 
-46 slides, 614.85s. RERUN 2026-11-15: the post gained a re-anchored
+46 slides, 622.55s. RERUN 2026-11-15: the post gained a re-anchored
 opening and Chris's personal closing note after the first render;
-this config is re-timed against the new narration. Narration:
+this config is re-timed against the new narration.
+SOFTEN re-render 2026-11-15: re-timed once more after the rent
+sentence was softened; sentence 4 grew from 9.3s to 17.0s. Narration:
 Kokoro with the OpenVoice clone.
 AVATAR: first and last 30s, cartoon with motion.
 """
@@ -60,7 +62,7 @@ _E = "ease-in-out"
 SLIDES = [
     {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 0  s0-1 title + 'It survived.' (6.4s)
     {"img": "VILLAGE", **{"type": "cover", "title": "A village house, 2014", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 1  s2-3 rent: $6.50 a month, $30 at most (15.3s)
-    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 2  s4 frozen forty years; rice or fruit if a tenant is short (9.3s)
+    {"img": "TYPICAL", **{"type": "cover", "title": "A typical kampong house, 2008", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 2  s4 the rent figures barely moved in decades; rice or fruit if a tenant is short (17.0s)
     {"img": "WELCOME", **{"type": "cover", "title": "The way into the kampong, 2013", "zoom": [1.12, 1.06, 1.0], "pan": [(0.35, 0.5)] * 3, "ease": _E}},  # 3  s5 twenty-five families behind the Buangkok Green blocks (12.0s)
     {"img": "VERANDAH", **{"type": "cover", "title": "A house with its verandah, 2026", "zoom": [1.0, 1.06, 1.12], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 4  s6 the landlady: Sng Mui Hong, seventy-one (names her: a house, no portrait) (12.0s)
     {"img": "DOOR", **{"type": "cover", "title": "An entrance door, 2026", "zoom": [1.12, 1.06, 1.0], "pan": [(0.5, 0.5)] * 3, "ease": _E}},  # 5  s7-9 'As long as I have enough to live, that's already fine' (12.2s)
@@ -107,16 +109,16 @@ SLIDES = [
 ]
 
 SCHEDULE = [
-    (0.000, 0), (6.400, 1), (21.725, 2), (31.000, 3), (43.000, 4), (55.025, 5),
-    (67.175, 6), (77.350, 7), (90.050, 8), (104.100, 9), (124.050, 10), (136.375, 11),
-    (147.250, 12), (161.175, 13), (177.375, 14), (195.600, 15), (203.500, 16), (216.450, 17),
-    (232.650, 18), (249.175, 19), (259.150, 20), (275.775, 21), (287.750, 22), (302.850, 23),
-    (315.425, 24), (332.000, 25), (340.775, 26), (357.475, 27), (365.450, 28), (384.075, 29),
-    (388.700, 30), (402.000, 31), (418.600, 32), (434.575, 33), (449.525, 34), (456.800, 35),
-    (476.375, 36), (484.050, 37), (503.225, 38), (521.225, 39), (537.025, 40), (546.050, 41),
-    (556.225, 42), (572.825, 43), (591.050, 44), (604.675, 45)
+    (0.000, 0), (6.400, 1), (21.725, 2), (38.700, 3), (50.700, 4), (62.725, 5),
+    (74.875, 6), (85.050, 7), (97.750, 8), (111.800, 9), (131.750, 10), (144.075, 11),
+    (154.950, 12), (168.875, 13), (185.075, 14), (203.300, 15), (211.200, 16), (224.150, 17),
+    (240.350, 18), (256.875, 19), (266.850, 20), (283.475, 21), (295.450, 22), (310.550, 23),
+    (323.125, 24), (339.700, 25), (348.475, 26), (365.175, 27), (373.150, 28), (391.775, 29),
+    (396.400, 30), (409.700, 31), (426.300, 32), (442.275, 33), (457.225, 34), (464.500, 35),
+    (484.075, 36), (491.750, 37), (510.925, 38), (528.925, 39), (544.725, 40), (553.750, 41),
+    (563.925, 42), (580.525, 43), (598.750, 44), (612.375, 45)
 ]
-TOTAL_DURATION = 614.85
+TOTAL_DURATION = 622.55
 TIMING_JSON = "audio/kampong-lorong-buangkok-the-last-kampong-on-the-mainland.timing.json"
 
 # The avatar presenter, cartoon with motion: corner bubble for the first and last 30 s.
