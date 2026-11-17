@@ -4,10 +4,17 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Lim Boon Keng: The Reformer Whose Name Is Now an MRT Station
+
+First posted 2026-11-16 · `2026-11-16-lim-boon-keng-the-reformer-whose-name-is-now-an-mrt-station.md`
+
+- No revisions yet.
+
 ## Kampong Lorong Buangkok: The Last Kampong on the Mainland
 
 First posted 2026-11-13 · last updated 2026-11-16 · `2026-11-13-kampong-lorong-buangkok-the-last-kampong-on-the-mainland.md`
 
+- 2026-11-16: Published URLs wired in; run artifacts (`730d929`)
 - 2026-11-16: Buangkok: soften the forty-years rent line (`7a2baf1`)
 - 2026-11-15: Add a personal note to the Buangkok post (`aad8add`)
 - 2026-11-15: Add Buangkok map and sync YouTube helper intro (`4b0ecb0`)
