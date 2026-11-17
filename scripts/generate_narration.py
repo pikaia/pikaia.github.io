@@ -2655,7 +2655,7 @@ PRONUNCIATION_OVERRIDES = {
     "Piring": "pˈɪɹɪŋ",  # PEE-ring (Tari Piring, the plate dance)
     "Sindor": "sˈɪndɔːɹ",  # SIN-dor (Jalan Sindor)
     "Yio": "jˈoʊ",  # YOH (Yio Chu Kang)
-    # Lim Boon Keng post (2026-11-16) - 1.1 dry-run flags; readings proposed by Seven from standard Mandarin/name/English pronunciations; NOT ear-verified yet.
+    # Lim Boon Keng post (2026-11-16) - 1.1 dry-run flags; readings proposed by Seven from standard Mandarin/name/English pronunciations; cleared by Chris's ear 2026-11-16 ("pronunciations clear").
     "Hullett": "hˈʌlɪt",  # HULL-it, the Raffles Institution principal
     "Philomathic": "fɪləmˈæθɪk",  # fil-oh-MATH-ik (Chinese Philomathic Society)
     "Historicus": "hɪstˈɔːɹɪkəs",  # his-TOR-i-kus, Lim's pen name
