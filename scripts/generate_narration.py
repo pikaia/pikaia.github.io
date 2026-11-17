@@ -2655,6 +2655,25 @@ PRONUNCIATION_OVERRIDES = {
     "Piring": "pˈɪɹɪŋ",  # PEE-ring (Tari Piring, the plate dance)
     "Sindor": "sˈɪndɔːɹ",  # SIN-dor (Jalan Sindor)
     "Yio": "jˈoʊ",  # YOH (Yio Chu Kang)
+    # Lim Boon Keng post (2026-11-16) - 1.1 dry-run flags; readings proposed by Seven from standard Mandarin/name/English pronunciations; NOT ear-verified yet.
+    "Hullett": "hˈʌlɪt",  # HULL-it, the Raffles Institution principal
+    "Philomathic": "fɪləmˈæθɪk",  # fil-oh-MATH-ik (Chinese Philomathic Society)
+    "Historicus": "hɪstˈɔːɹɪkəs",  # his-TOR-i-kus, Lim's pen name
+    "towchang": "tˈaʊtʃɑːŋ",  # TOW-chahng, the queue/plait - Hokkien-derived term; the one genuinely open reading in this set
+    "Youwei": "jˈoʊweɪ",  # YOH-way (Kang Youwei)
+    "Tongmenghui": "tˈoʊŋmɛŋhweɪ",  # TOHNG-meng-hway, Sun Yat-sen's Revolutionary League
+    "Qu": "tʃˈuː",  # CHOO (Qu Yuan)
+    "Sao": "sˈaʊ",  # SOW (the Li Sao)
+    "Giles": "dʒˈaɪlz",  # JYLZ (H. A. Giles)
+    "Rabindranath": "ɹəbˈɪndɹənɑːθ",  # rah-BIN-drah-nahth (Tagore)
+    "Tagore": "təɡˈɔːɹ",  # tah-GOR
+    "Paterson": "pˈætəɹsən",  # PAT-er-son (Paterson Hill)
+    "Kon": "kˈɒn",  # KON (Stella Kon)
+    "Emily": "ˈɛmɪli",  # EM-i-lee (Emily of Emerald Hill)
+    "grandchildren": "ɡɹˈæntʃɪldɹən",  # plain English
+    "great-grandchildren": "ɡɹˈeɪtɡɹˈæntʃɪldɹən",  # plain English
+    "biculturalism": "baɪkˈʌltʃəɹəlɪzəm",  # plain English
+    "civilisations": "sˌɪvɪlaɪzˈeɪʃənz",  # British -s spelling
 
 }
 
@@ -3572,7 +3591,7 @@ KNOWN_LETTER_SPELLED = {
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
-    "LNG", "SP", "YTL", "PGN", "SKK", "PUB",
+    "LNG", "SP", "YTL", "PGN", "SKK", "PUB", "MB",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
