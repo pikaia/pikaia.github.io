@@ -32,21 +32,27 @@ for the slide's whole run.
 51 slides, 865.18s. Narration: Kokoro with the OpenVoice clone.
 Pronunciations cleared by Chris's ear 2026-11-16.
 AVATAR: first and last 30s, cartoon with motion.
+FIX 2026-11-17: the first steps 4-9 run died at step 5 - two
+of the URLs originally in this pool (taken from the research
+table rather than from the post itself) were dead on Commons:
+the 1930s portrait and the Exit A photograph. The pool now
+uses the post/gallery's own URL for all twelve pictures,
+each one verified live (direct fetch or the Commons API).
 """
 
 IMAGES = {
-    "LIM30": "https://upload.wikimedia.org/wikipedia/commons/9/92/Lim_Boon_Keng_in_the_1930s.jpg",
-    "LIMX": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Lim_Boon_Keng_from_The_Chinese_in_Southeast_Asia_Will_Forever_Remain_Eternally_Successful%2C_1947.jpg",
-    "SONG": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Song_Ong_Siang.jpg",
-    "BOOK": "https://upload.wikimedia.org/wikipedia/commons/a/a4/One_Hundred_Years%27_History_of_the_Chinese_in_Singapore_-_title_page.jpg",
-    "SCGS": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Singapore_Chinese_Girls_School_20240519_01.jpg",
-    "TANSUN": "https://upload.wikimedia.org/wikipedia/commons/9/96/Tan_Kah_Kee_with_Dr_Sun_Yat_Sen.jpg",
-    "SUN": "https://upload.wikimedia.org/wikipedia/commons/4/48/Sun_Yat-sen_1910.jpg",
-    "WENQING": "https://upload.wikimedia.org/wikipedia/commons/8/86/Xiamen_University_Wenqing_Pavillion.jpg",
-    "GRAVE": "https://upload.wikimedia.org/wikipedia/commons/7/73/Gravestone_of_Lim_Boon_Keng_and_Grace_Yin_at_Bidadari_Memorial_Garden%2C_Singapore_-_20110227.jpg",
-    "GATE": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Gate_of_Bidadari_Cemetery%2C_Singapore_-_20110227.jpg",
-    "MRT": "https://upload.wikimedia.org/wikipedia/commons/7/78/NE9_Boon_Keng_MRT_Entrance_20201010_01.jpg",
-    "EXIT": "https://upload.wikimedia.org/wikipedia/commons/8/8a/NE9_Boon_Keng_Exit_A_20201010.jpg",
+    "LIM30": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Lim_Boon_Keng%2C_1930s.jpg",
+    "LIMX": "https://upload.wikimedia.org/wikipedia/commons/c/cd/%E6%9E%97%E6%96%87%E6%85%B6.jpg",
+    "SONG": "https://upload.wikimedia.org/wikipedia/commons/1/18/Song_Ong_Siang.jpg",
+    "BOOK": "https://upload.wikimedia.org/wikipedia/commons/1/1f/One_Hundred_Years%27_History_of_the_Chinese_in_Singapore.png",
+    "SCGS": "https://upload.wikimedia.org/wikipedia/commons/d/da/%28SGP-Singapore%29_Singapore_Chinese_Girls%27_School_2024-05-03.jpg",
+    "TANSUN": "https://upload.wikimedia.org/wikipedia/commons/0/03/Tan_Kah_Kee_and_Sun_Yat-sen.jpg",
+    "SUN": "https://upload.wikimedia.org/wikipedia/commons/3/38/Sun_Yat-sen_1910.jpg",
+    "WENQING": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%E5%8E%A6%E9%97%A8%E5%A4%A7%E5%AD%A6%E6%96%87%E5%BA%86%E4%BA%AD.jpg",
+    "GRAVE": "https://upload.wikimedia.org/wikipedia/commons/7/77/Gravestone_of_Lim_Boon_Keng_and_Grace_Pek_Ha_Yin%2C_Bidadari_Garden%2C_Singapore_-_20121008.jpg",
+    "GATE": "https://upload.wikimedia.org/wikipedia/commons/2/22/Gate_of_the_former_Bidadari_Cemetery%2C_Bidadari_Garden%2C_Singapore_-_20121008-01.jpg",
+    "MRT": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Boon_Keng_MRT_Station.jpg",
+    "EXIT": "https://upload.wikimedia.org/wikipedia/commons/1/19/NE9_Boon_Keng_MRT_Exit_A_20201002_174715.jpg",
 }
 
 # Every image is captioned in the post or its gallery.
