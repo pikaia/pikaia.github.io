@@ -2674,7 +2674,7 @@ PRONUNCIATION_OVERRIDES = {
     "great-grandchildren": "ɡɹˈeɪtɡɹˈæntʃɪldɹən",  # plain English
     "biculturalism": "baɪkˈʌltʃəɹəlɪzəm",  # plain English
     "civilisations": "sˌɪvɪlaɪzˈeɪʃənz",  # British -s spelling
-    # Kopitiam two eggs post (2026-11-18) - 1.1 dry-run flags; standard Malay/Hokkien/name readings proposed by Seven, NOT ear-verified yet.
+    # Kopitiam two eggs post (2026-11-18) - 1.1 dry-run flags; standard Malay/Hokkien/name readings proposed by Seven, ear-verified by Chris 2026-11-18.
     "kaya": "kˈɑːjə",  # KAH-yah (Malay, phonetic)
     "Kaya": "kˈɑːjə",  # KAH-yah (Malay, phonetic)
     "kosong": "kˈɒsɒŋ",  # KOH-song (Malay: no sugar / empty)
@@ -2693,9 +2693,9 @@ PRONUNCIATION_OVERRIDES = {
     "dietitian's": "dˌaɪətˈɪʃənz",  # dietitian's, possessive (base word phonemizes; the possessive token does not)
     "Nutri-Grade": "nˈuːtɹɪˌɡɹeɪd",  # NEW-tri-grade (HPB label)
     "Nutri-Graded": "nˈuːtɹɪˌɡɹeɪdɪd",  # NEW-tri-grade-ed
-    "Kasumigaseki": "kˈɑsuːmiɡɑsɛki",  # KAH-soo-mee-gah-seh-kee, two even triplets, short gah (the Tokyo building; Chris corrected the long 'gar' reading 2026-11-18) - NOT ear-verified yet
+    "Kasumigaseki": "kˈɑsuːmiɡɑsɛki",  # KAH-soo-mee-gah-seh-kee, two even triplets, short gah (the Tokyo building; Chris corrected the long 'gar' reading 2026-11-18) - ear-verified by Chris 2026-11-18
 
-    "kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
+    "kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; misaki read it as "copper team" - Chris ear catch 2026-11-18 - ear-verified by Chris 2026-11-18
     "Kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; same fix
     "Kopitiam's": "kɔːpiːtjɑmz",  # kor-pee-TYAM, three even beats, no stressz; same fix
 }
