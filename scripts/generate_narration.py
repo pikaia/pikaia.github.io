@@ -2695,9 +2695,9 @@ PRONUNCIATION_OVERRIDES = {
     "Nutri-Graded": "nˈuːtɹɪˌɡɹeɪdɪd",  # NEW-tri-grade-ed
     "Kasumigaseki": "kˈɑsuːmiɡɑsɛki",  # KAH-soo-mee-gah-seh-kee, two even triplets, short gah (the Tokyo building; Chris corrected the long 'gar' reading 2026-11-18) - NOT ear-verified yet
 
-    "kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
-    "Kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; same fix
-    "Kopitiam's": "kˌɔːpiˈtiːəmz",  # kor-pee-TEE-umz; same fix
+    "kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
+    "Kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; same fix
+    "Kopitiam's": "kɔːpiːtjɑmz",  # kor-pee-TYAM, three even beats, no stressz; same fix
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
