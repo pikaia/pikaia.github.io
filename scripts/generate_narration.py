@@ -2693,7 +2693,7 @@ PRONUNCIATION_OVERRIDES = {
     "dietitian's": "dˌaɪətˈɪʃənz",  # dietitian's, possessive (base word phonemizes; the possessive token does not)
     "Nutri-Grade": "nˈuːtɹɪˌɡɹeɪd",  # NEW-tri-grade (HPB label)
     "Nutri-Graded": "nˈuːtɹɪˌɡɹeɪdɪd",  # NEW-tri-grade-ed
-    "Kasumigaseki": "kɑːsʊmɪɡˈɑːsɛki",  # kah-soo-mee-GAH-seh-kee (the Tokyo building; added with the Ya Kun paragraph, 2026-11-18) - NOT ear-verified yet
+    "Kasumigaseki": "kˈɑsuːmiɡɑsɛki",  # KAH-soo-mee-gah-seh-kee, two even triplets, short gah (the Tokyo building; Chris corrected the long 'gar' reading 2026-11-18) - NOT ear-verified yet
 
     "kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
     "Kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; same fix
