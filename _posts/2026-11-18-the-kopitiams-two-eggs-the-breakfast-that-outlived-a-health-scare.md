@@ -2,7 +2,7 @@
 layout: post
 title: "The Kopitiam's Two Eggs: The Breakfast That Outlived a Health Scare"
 date: 2026-11-18 09:00:00 +0800
-last_modified_at: 2026-11-18 09:00:00 +0800
+last_modified_at: 2026-11-19 03:06:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/5/5e/Kaya_Toast_with_Coffee.jpg
 ---
@@ -36,6 +36,8 @@ The kopitiam — the word marries Malay *kopi*, coffee, to Hokkien *tiam*, shop 
 The documented pioneer still stands at 67 Killiney Road. Kheng Hoe Heng Coffeeshop was founded there in late 1919 by the Hainanese Foo family, known for charcoal-grilled toast and coffee brewed the Hainanese way. In 1992 a former broker, Woon Tek Seng, bought it for S$800,000 and renamed it Killiney Kopitiam; three Hainanese staff from the old shop stayed on to pass on the skills, and in 2008 the shop entered the Singapore Book of Records as the oldest existing Hainanese coffeeshop.
 
 The other founding name took the opposite path, from one stall to a chain. Loi Ah Koon arrived from Hainan in 1926, aged fifteen, worked as a coffee-stall assistant, and set up his own stall at Telok Ayer Basin; the business was formally registered in 1944 — the year Ya Kun still prints on its signs. His wife, who joined him in 1936, perfected the kaya recipe the chain still trades on.
+
+Ya Kun has since gone international — the same set is served from Jakarta to Tokyo. One Tokyo outlet opened in 2021 in the Kasumigaseki Building (it has since closed), and that building carries a personal footnote: it is where I once worked, during my AOTS time in Japan. Loi Ah Koon, roasting beans over firewood at Telok Ayer, could not have imagined his breakfast turning up there.
 
 ![Chin Mee Chin Confectionery in Katong, a Hainanese institution](https://upload.wikimedia.org/wikipedia/commons/3/3a/Chin_Mee_Chin_Confectionery.jpg)
 
@@ -111,6 +113,7 @@ So the set endures, graded but intact: the eggs steeping in their pot behind the
 - [Khir Johari on the serikaya family of kaya-based confections — BiblioAsia, National Library Board](https://biblioasia.nlb.gov.sg/all-sections/podcast-serikaya-family-of-kaya-based-confections/)
 - [Serikaya — Sejarah 33(2), 2024, University of Malaya](https://ejournal.um.edu.my/index.php/SEJARAH/article/download/51430/17838/159314)
 - [From a Lone Stall to International Success (Ya Kun) — WIPO IP Advantage case study](https://www.wipo.int/en/web/ip-advantage/w/stories/from-a-lone-stall-to-international-success)
+- [Ya Kun Kaya Toast, Kasumigaseki Building shop (opened 1 April 2021; now closed) — Tabelog](https://tabelog.com/en/tokyo/A1308/A130802/13256060/)
 - [Singapore Food Statistics 2024 — Singapore Food Agency](https://www.sfa.gov.sg/news-publications/newsroom/2025/singapore-food-statistics-2024)
 - [The Fifty Year Rehabilitation of the Egg — McNamara, Nutrients, 2015 (dated milestones only; author's egg-industry links declared in the paper)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4632449/)
 - [Associations of Dietary Cholesterol or Egg Consumption With Incident Cardiovascular Disease and Mortality — Zhong et al., JAMA, 2019](https://pmc.ncbi.nlm.nih.gov:443/articles/PMC6439941/)
