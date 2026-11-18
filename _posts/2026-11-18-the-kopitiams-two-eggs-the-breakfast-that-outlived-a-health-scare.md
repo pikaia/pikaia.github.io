@@ -2,7 +2,7 @@
 layout: post
 title: "The Kopitiam's Two Eggs: The Breakfast That Outlived a Health Scare"
 date: 2026-11-18 09:00:00 +0800
-last_modified_at: 2026-11-19 03:06:00 +0800
+last_modified_at: 2026-11-19 03:18:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/5/5e/Kaya_Toast_with_Coffee.jpg
 ---
@@ -38,6 +38,10 @@ The documented pioneer still stands at 67 Killiney Road. Kheng Hoe Heng Coffeesh
 The other founding name took the opposite path, from one stall to a chain. Loi Ah Koon arrived from Hainan in 1926, aged fifteen, worked as a coffee-stall assistant, and set up his own stall at Telok Ayer Basin; the business was formally registered in 1944 — the year Ya Kun still prints on its signs. His wife, who joined him in 1936, perfected the kaya recipe the chain still trades on.
 
 Ya Kun has since gone international — the same set is served from Jakarta to Tokyo. One Tokyo outlet opened in 2021 in the Kasumigaseki Building (it has since closed), and that building carries a personal footnote: it is where I once worked, during my AOTS time in Japan. Loi Ah Koon, roasting beans over firewood at Telok Ayer, could not have imagined his breakfast turning up there.
+
+![The Kasumi Dining entrance at the Kasumigaseki Building, Tokyo](https://upload.wikimedia.org/wikipedia/commons/b/b2/Kasumi_Dining%2C_Kasumigaseki_Building%2C_Tokyo_-_Jun_19%2C_2009.jpg)
+
+*Kasumi Dining at the Kasumigaseki Building in Tokyo — a Ya Kun opened on this restaurant floor in 2021, in the building where I once worked during my AOTS time. (Hereward L, CC BY 2.0, via Wikimedia Commons; photographed 2009)*
 
 ![Chin Mee Chin Confectionery in Katong, a Hainanese institution](https://upload.wikimedia.org/wikipedia/commons/3/3a/Chin_Mee_Chin_Confectionery.jpg)
 
@@ -128,6 +132,8 @@ So the set endures, graded but intact: the eggs steeping in their pot behind the
 - [Coffee consumption and health: umbrella review of meta-analyses — Poole et al., BMJ, 2017](https://www.bmj.com/content/359/bmj.j5024)
 - [Does Coffee Raise Blood Sugar? (Straits Times drinks table and SG FoodID-derived figures) — Novi Health](https://novi-health.com/library/does-coffee-raise-blood-sugar)
 - [Whole-of-Government Healthier Food and Beverage Policy — Health Promotion Board](https://www.hpb.gov.sg/healthy-living/food-and-beverage/wog-healthier-food-and-beverage-policy/)
+- [Kasumi Dining, Kasumigaseki Building, Tokyo — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kasumi_Dining,_Kasumigaseki_Building,_Tokyo_-_Jun_19,_2009.jpg)
+
 - [Kaya Toast with Coffee — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kaya_Toast_with_Coffee.jpg)
 - [Eating Soft-Boiled Eggs, Singapore — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:EatingSoftBoiledEggs-Singapore-20080509.jpg)
 - [Chin Mee Chin Confectionery — Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Chin_Mee_Chin_Confectionery.jpg)
