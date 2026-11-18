@@ -1,0 +1,235 @@
+{ echo; date; echo "=== Time estimate (steps 1.1-2) ==="
+  python scripts/estimate_times.py the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare 1
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 1.1 Generate narration audio (dry run) ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp3 --dry-run)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 1.2 Generate narration audio ==="
+  cmd=(python scripts/generate_narration.py _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp3 --clone openvoice)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 1.3 Verify audio file ==="
+  cmd=(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 1.4 Join split narration (no-op unless parts exist) ==="
+  cmd=(python scripts/join_narration_parts.py audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 1.5 Build avatar mouth track ==="
+  cmd=(python scripts/build_avatar_track.py audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp3)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+
+{ echo; date; echo "=== 2. Insert the Listen widget ==="
+  cmd=(python scripts/insert_listen_widget.py _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+1.2 done. build video-configs
+================================================================================================================================
+
+
+{ echo; date; echo "=== Time estimate (steps 4-9) ==="
+  python scripts/estimate_times.py the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare 4-9
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 4. Author the Watch widget ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 5. Check smoothness and review the gap report ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 6. Render the main video ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --out preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 6a. Render the avatar track ==="
+  cmd=(python scripts/render_avatar_track.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 6b. Overlay the avatar ==="
+  cmd=(python scripts/overlay_avatar.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --in preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.mp4 --out preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-avatar.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 7.1 Check smoothness (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.py --check-only)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+{ echo; date; echo "=== 7.2 Render the Short ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.py --out preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 8.1 Verify frame count (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --verify-frames)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 8.2 Verify spot frame ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+{ echo; date; echo "=== 8.2 Verify spot frame (Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.py --spot-frame)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 8.3 Write the thumbnails (auto-covers the Short) ==="
+  cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py --thumbnail)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 8.4 Compress the main video for upload ==="
+  # Size gate (2026-11-11): the -web copy is both the upload file and the
+  # retained project source, and the browser upload grant refuses files much
+  # above ~100 MB, so it must land at or under 90 MB. Start at CRF 26 and
+  # measure; while over target, step the CRF up by 2 and re-compress. If it
+  # is still over at CRF 36, keep that copy and let the log line flag it for
+  # the 4-9 review. The pre-compression intermediates are not retained after
+  # close-out - any redo regenerates them from the configs and timing.
+  target=94371840
+  crf=26
+  while :; do
+    cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-avatar.mp4 -c:v libx264 -crf $crf -c:a aac -b:a 128k -movflags +faststart preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-web.mp4)
+    echo "\$ ${cmd[*]}"; echo
+    time "${cmd[@]}"
+    size=$(stat -c %s preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-web.mp4)
+    echo "8.4 size check: $size bytes at CRF $crf (target <= $target)"
+    if [ "$size" -le "$target" ]; then break; fi
+    if [ "$crf" -ge 36 ]; then echo "8.4 WARNING: still over target at CRF $crf - keeping this copy; flag at the 4-9 review"; break; fi
+    crf=$((crf+2))
+    echo "Over target - re-compressing at CRF $crf"
+  done
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+{ echo; date; echo "=== 8.4 Compress the Short for upload ==="
+  cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short-web.mp4)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+{ echo; date; echo "=== 9. Stage the YouTube upload text file ==="
+  cmd=(python scripts/stage_youtube_text.py
+      _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md
+      scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py
+      scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short.py
+      )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+
+
+================================================================================================================================
+ steps 4 to 9 done, review logs
+================================================================================================================================
+
+================================================================================================================================
+ review passed, Claude copies the upload files to Google Drive, then Chris uploads:
+================================================================================================================================
+
+{ echo; date; echo "=== 9.1 Copy the upload files to Google Drive ==="
+  dest="H:/My Drive/LesserKnownSingapore"
+  mkdir -p "$dest"
+  cmd=(cp -v
+      preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-web.mp4
+      preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short-web.mp4
+      preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-thumbnail.jpg
+      preview-motion/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-short-thumbnail.jpg
+      audio/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.srt
+      docs/youtube_helper/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare-youtube.txt
+      "$dest/")
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+================================================================================================================================
+ uploaded; Chris sends the links, then step 11:
+================================================================================================================================
+
+{ echo; date; echo "=== 11. Wire the published URLs into the post ==="
+  cmd=(python scripts/build_watch_widget.py _posts/2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md scripts/video-configs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.py 
+  --youtube-url https://youtu.be/...
+  --shorts-url https://youtube.com/shorts/...
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  )
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notify Messaging.wav").PlaySync()'
+
+================================================================================================================================
+ step 12 (commit, post log) and then 12.1, both done by Claude:
+================================================================================================================================
+
+{ echo; date; echo "=== 12.1 Clear the Google Drive copies ==="
+  ls "H:/My Drive/LesserKnownSingapore/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare"*
+  cmd=(rm -v "H:/My Drive/LesserKnownSingapore/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare"*)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.log
+
+================================================================================================================================
+ done

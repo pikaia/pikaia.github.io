@@ -2673,7 +2673,26 @@ PRONUNCIATION_OVERRIDES = {
     "grandchildren": "ɡɹˈæntʃɪldɹən",  # plain English
     "great-grandchildren": "ɡɹˈeɪtɡɹˈæntʃɪldɹən",  # plain English
     "biculturalism": "baɪkˈʌltʃəɹəlɪzəm",  # plain English
-    "civilisations": "sˌɪvɪlaɪzˈeɪʃənz",  # British -s spelling
+    "civilisations": "sˌɪvɪlaɪzˈeɪʃənz",  # British -s spelling
+    # Kopitiam two eggs post (2026-11-18) - 1.1 dry-run flags; standard Malay/Hokkien/name readings proposed by Seven, NOT ear-verified yet.
+    "kaya": "kˈɑːjə",  # KAH-yah (Malay, phonetic)
+    "Kaya": "kˈɑːjə",  # KAH-yah (Malay, phonetic)
+    "kosong": "kˈɒsɒŋ",  # KOH-song (Malay: no sugar / empty)
+    "siu": "sˈiːuː",  # SEE-oo (Hokkien: less, as in siu dai)
+    "tiam": "tˈiːəm",  # TEE-am (Hokkien: shop)
+    "teh": "tˈeɪ",  # TAY (Malay: tea)
+    "Coffeeshop": "kˈɒfiʃɒp",  # COFFEE-shop (compound misaki cannot phonemize)
+    "coffeeshop": "kˈɒfiʃɒp",  # COFFEE-shop (compound misaki cannot phonemize)
+    "Foo": "fˈuː",  # FOO (Hokkien surname, the Killiney founders)
+    "Tek": "tˈɛk",  # TEK (Woon Tek Seng)
+    "Loi": "lˈɔɪ",  # LOY (Hokkien surname, Loi Ah Koon)
+    "Kun": "kˈuːn",  # KOON (Ya Kun)
+    "Johari": "dʒəʊhˈɑːri",  # jo-HAH-ree (Khir Johari)
+    "serikaya": "sˌɛrɪkˈɑːjə",  # seh-ree-KAH-yah (Malay serikaya)
+    "Ancel": "ˈænsəl",  # AN-sel (Ancel Keys)
+    "dietitian's": "dˌaɪətˈɪʃənz",  # dietitian's, possessive (base word phonemizes; the possessive token does not)
+    "Nutri-Grade": "nˈuːtɹɪˌɡɹeɪd",  # NEW-tri-grade (HPB label)
+    "Nutri-Graded": "nˈuːtɹɪˌɡɹeɪdɪd",  # NEW-tri-grade-ed
 
 }
 
@@ -3591,7 +3610,7 @@ KNOWN_LETTER_SPELLED = {
     "EDB", "FMSR", "FX", "GDP", "GPO", "HDB", "HSBC", "IPPT", "KLM", "KNILM", "KTM", "LED", "MP", "MRT",
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
-    "LNG", "SP", "YTL", "PGN", "SKK", "PUB", "MB",
+    "LNG", "SP", "YTL", "PGN", "SKK", "PUB", "MB", "LDL", "BMJ",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
