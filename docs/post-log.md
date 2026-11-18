@@ -4,11 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Kopitiam's Two Eggs: The Breakfast That Outlived a Health Scare
+
+First posted 2026-11-18 · last updated 2026-11-19 · `2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md`
+
+- 2026-11-19: Kasumi Dining photo at the Ya Kun footnote (`608fc26`)
+- 2026-11-19: Ya Kun international; Kasumigaseki footnote (`53aa25f`)
+- 2026-11-19: Small wording polish (`68ac0a0`)
+
 ## Lim Boon Keng: The Reformer Whose Name Is Now an MRT Station
 
 First posted 2026-11-16 · `2026-11-16-lim-boon-keng-the-reformer-whose-name-is-now-an-mrt-station.md`
 
-- No revisions yet.
+- 2026-11-17: Published URLs wired in; run artifacts (`beea661`)
 
 ## Kampong Lorong Buangkok: The Last Kampong on the Mainland
 
