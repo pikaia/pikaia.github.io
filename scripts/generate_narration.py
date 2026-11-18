@@ -2695,9 +2695,9 @@ PRONUNCIATION_OVERRIDES = {
     "Nutri-Graded": "nˈuːtɹɪˌɡɹeɪdɪd",  # NEW-tri-grade-ed
     "Kasumigaseki": "kɑːsʊmɪɡˈɑːsɛki",  # kah-soo-mee-GAH-seh-kee (the Tokyo building; added with the Ya Kun paragraph, 2026-11-18) - NOT ear-verified yet
 
-    "kopitiam": "kˌoʊpiˈtiːəm",  # koh-pee-TEE-um; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
-    "Kopitiam": "kˌoʊpiˈtiːəm",  # koh-pee-TEE-um; same fix
-    "Kopitiam's": "kˌoʊpiˈtiːəmz",  # koh-pee-TEE-umz; same fix
+    "kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; misaki read it as "copper team" - Chris ear catch 2026-11-18 - NOT ear-verified yet
+    "Kopitiam": "kˌɔːpiˈtiːəm",  # kor-pee-TEE-um; same fix
+    "Kopitiam's": "kˌɔːpiˈtiːəmz",  # kor-pee-TEE-umz; same fix
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
