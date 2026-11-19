@@ -2,7 +2,7 @@
 layout: post
 title: "Pulau Bukom: The Kerosene Island That Became Singapore's First Refinery"
 date: 2026-11-19 09:00:00 +0800
-last_modified_at: 2026-11-19 09:00:00 +0800
+last_modified_at: 2026-11-20 02:35:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/e/e0/Pulau_Bukom_June_2026.jpg
 ---
@@ -25,11 +25,18 @@ In the nineteenth century the island's owner was Captain Giovanni Gaggino, a tra
 
 ## The first of its kind in the East
 
+<div style="float: left; max-width: 250px; width: 40%; margin: 0.25em 1.5em 1em 0;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Butterfly_Lantern_%28front_view%29.jpg" alt="A Butterfly brand kerosene pressure lantern" style="width: 100%; display: block; border-radius: 4px;">
+<em style="display: block; font-size: 0.8em; margin-top: 0.5em;">A Butterfly pressure lantern — the kind of lamp Bukom's kerosene crossed Asia to feed. (CC BY-SA 4.0, via Wikimedia Commons)</em>
+</div>
+
 In 1891 the London firm M. Samuel & Co. chose Singapore as its base for importing Russian kerosene in bulk and distributing it across Asia — lamp oil, in the age before electric light reached most homes. Samuel appointed the local agency house Syme & Co. to establish a petroleum tank depot. The government refused to allow bulk petroleum storage in town, so the depot went offshore: in September 1891 Syme & Co. bought eight hectares on Bukom from Captain Gaggino for $3,000 and began building.
 
 The depot cost over $60,000, with tank capacity of 4,500 tonnes, a wharf and ship-to-tank pipelines. It opened on 16 September 1892, when the first shipment arrived aboard the S.S. *Murex*. The National Library Board calls it the first depot of its kind in the East, and Singapore's first oil storage facility; by 1902, Bukom had become the oil supply centre for the Far East. The kerosene island was, in effect, the founding site of Singapore's oil trade.
 
 The Samuel business became, in 1897, a separate company called Shell Transport and Trading, and in 1907 it merged with Royal Dutch Petroleum to form Royal Dutch Shell — so the island's tenant grew into one of the largest companies on earth without ever leaving. The connection ran deep into local business life: the Lee family's firm, Lee Chim Tuan, handled stevedoring and materials for Shell at Bukom from the industry's early days, and when Lee Chim Tuan died in 1955, the flag at Shell's signal station on the island was lowered to half-mast in respect.
+
+<div style="clear: both;"></div>
 
 ## Fire, twice over
 
@@ -57,6 +64,9 @@ Growth consumed the island it had made. As operations spread onto Bukom Kechil, 
 
 The last of the island families held on remarkably late. Leng Ng Tai, who joined Shell in 1969, lived on Bukom with his family into the 1990s — by then twenty-eight families remained in two housing blocks, alongside firemen and police families. Doors were never locked; a dance instructor was ferried in every Wednesday. The Lengs moved to a West Coast terrace house in 1997. His son Benny works for the same company, and father and son still make the journey to Bukom together: car to the jetty, then the ferry across.
 
+![Workers boarding the ferry to Bukom at Pasir Panjang](https://upload.wikimedia.org/wikipedia/commons/2/2e/Pasir_Panjang_Ferry_Terminal_20260620_124930.jpg)
+*Workers boarding the Bukom ferry at Pasir Panjang — the daily commute that replaced the island town. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+
 ![Housing on Pulau Bukom, seen from the water](https://upload.wikimedia.org/wikipedia/commons/d/de/Worker_accommodations_on_Pulau_Bukom.jpg)
 *The inhabited shore: housing on Bukom today, seen from the ferry route in. (Wzhkevin, CC BY-SA 4.0, via Wikimedia Commons)*
 
@@ -76,8 +86,8 @@ In May 2010 the site had taken its modern shape with the opening of the Shell Ea
 
 Even the ferry has been renewed. Since 2023 the crossing from Pasir Panjang has been served by fully electric ferries — the first fully electric ferry service in Singapore — beginning with the *Penguin Refresh*, unveiled at Bukom in April that year. One cloud belongs in the record, stated carefully: two oil leaks at the site in 2024 led to Shell Singapore being charged in September 2026 in connection with the discharges and their reporting; the case is before the courts, and concerns the period when Shell still operated the island.
 
-![Tankers at anchor off Pulau Bukom](https://upload.wikimedia.org/wikipedia/commons/f/fe/Pulau_Bukom_20260620_152307.jpg)
-*Tankers ride at anchor off Bukom, the refinery behind them — the island's working roadstead today. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+![A tanker close off Pulau Bukom, the tank farm behind](https://upload.wikimedia.org/wikipedia/commons/9/9c/Pulau_Bukom_20260620_152408.jpg)
+*A tanker rides close off the island, the white tank farm behind it — storage, as ever, is Bukom's shoreline business. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
 
 ## The next island
 
@@ -85,8 +95,8 @@ Bukom's story may not be finished. At the National Day Rally in August 2026, the
 
 For now it stays what it has been for a century — a place most people know only as a lit shore across the water, and a few thousand know as the far end of a ferry ride to work.
 
-![Pulau Bukom at dusk, from Sentosa](https://upload.wikimedia.org/wikipedia/commons/f/f5/Pulau_Bukom_from_Sentosa.JPG)
-*Bukom at dusk from Sentosa — the view most Singaporeans know: a lit industrial shore across the anchorage. (Terence Ong, CC BY 2.5, via Wikimedia Commons)*
+![Singapore at night from the International Space Station](https://upload.wikimedia.org/wikipedia/commons/d/d8/ISS041-E-4927_-_View_of_Singapore.jpg)
+*Singapore at night, from the International Space Station. Jurong Island's grid burns at the centre; below it, the smaller mottled shore is the Bukom complex — a lit island across dark water, as it has been since 1892. (NASA, public domain, via Wikimedia Commons; photographed 2014)*
 
 [See more photos…](/gallery/pulau-bukom-the-kerosene-island-that-became-singapores-first-refinery/)
 
@@ -113,6 +123,6 @@ For now it stays what it has been for a century — a place most people know onl
 - [Fuels & Lubes: Aster launches Singapore terminals unit](https://www.fuelsandlubes.com/aster-launches-singapore-terminals-unit-expands-bukom-storage/)
 - [MPA: MPA and Shell sign MoU; electric ferry unveiled](https://www.mpa.gov.sg/media-centre/details/mpa-and-shell-sign-mou-to-accelerate-maritime-decarbonisation-efforts)
 - [Straits Times: NDR 2026 — the Western Island plan](https://cos.sg/ndr-2026-spore-to-merge-several-outer-islands-to-form-new-western-island/)
-- Image file pages: [Pulau Bukom June 2026](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_June_2026.jpg), [Pulau Bukum locator map](https://commons.wikimedia.org/wiki/File:Pulau_Bukum_locator_map.png), [Masjid in Pulau Bukom](https://commons.wikimedia.org/wiki/File:Masjid_in_Pulau_Bukom,_or_Bukom_Island.jpg), [Pulau Bukom, panorama, Nov 06](https://commons.wikimedia.org/wiki/File:Pulau_Bukom,_panorama,_Nov_06.jpg), [Worker accommodations on Pulau Bukom](https://commons.wikimedia.org/wiki/File:Worker_accommodations_on_Pulau_Bukom.jpg), [Pulau Bukom 20260620 152307](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152307.jpg), [Pulau Bukom from Sentosa](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_from_Sentosa.JPG), [Pulau Bukom 20260620 152913](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152913.jpg), [Pulau Bukom 20260620 152517](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152517.jpg), [Pulau Bukom 20260620 152757](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152757.jpg), [Pulau Bukom 20260620 130617](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_130617.jpg), [Pulau Bukom 20260620 133645](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_133645.jpg), [Pulau Bukom 20260620 130030](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_130030.jpg), [Pulau Bukom 20260620 131420](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_131420.jpg), [Pulau Bukom 20260620 130006](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_130006.jpg), [Itikaf area inside mosque at Pulau Bukom](https://commons.wikimedia.org/wiki/File:Itikaf_area_inside_mosque_at_Pulau_Bukom.jpg)
+- Image file pages: [Pulau Bukom June 2026](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_June_2026.jpg), [Pulau Bukum locator map](https://commons.wikimedia.org/wiki/File:Pulau_Bukum_locator_map.png), [Butterfly Lantern (front view)](https://commons.wikimedia.org/wiki/File:Butterfly_Lantern_(front_view).jpg), [Masjid in Pulau Bukom](https://commons.wikimedia.org/wiki/File:Masjid_in_Pulau_Bukom,_or_Bukom_Island.jpg), [Pulau Bukom, panorama, Nov 06](https://commons.wikimedia.org/wiki/File:Pulau_Bukom,_panorama,_Nov_06.jpg), [Worker accommodations on Pulau Bukom](https://commons.wikimedia.org/wiki/File:Worker_accommodations_on_Pulau_Bukom.jpg), [Pulau Bukom 20260620 152408](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152408.jpg), [Pasir Panjang Ferry Terminal 20260620 124930](https://commons.wikimedia.org/wiki/File:Pasir_Panjang_Ferry_Terminal_20260620_124930.jpg), [ISS041-E-4927 — View of Singapore](https://commons.wikimedia.org/wiki/File:ISS041-E-4927_-_View_of_Singapore.jpg), [Pulau Bukom 20260620 152913](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152913.jpg), [Pulau Bukom 20260620 152517](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152517.jpg), [Pulau Bukom 20260620 152757](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152757.jpg), [Pulau Bukom 20260620 152307](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_152307.jpg), [Pulau Bukom 20260620 134005](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_134005.jpg), [Pulau Bukom 20260620 130617](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_130617.jpg), [Pulau Bukom 20260620 133645](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_20260620_133645.jpg), [Pasir Panjang Ferry Terminal 20260620 160035](https://commons.wikimedia.org/wiki/File:Pasir_Panjang_Ferry_Terminal_20260620_160035.jpg), [Pulau Bukom from Sentosa](https://commons.wikimedia.org/wiki/File:Pulau_Bukom_from_Sentosa.JPG), [Itikaf area inside mosque at Pulau Bukom](https://commons.wikimedia.org/wiki/File:Itikaf_area_inside_mosque_at_Pulau_Bukom.jpg)
 
 [← Back to all posts](/)

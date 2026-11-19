@@ -5,7 +5,7 @@ post_url: /2026/11/19/pulau-bukom-the-kerosene-island-that-became-singapores-fir
 post_title: "Pulau Bukom: The Kerosene Island That Became Singapore's First Refinery"
 ---
 
-More photographs of Pulau Bukom and its plant, all taken from the water — the only view of the restricted island most people ever get.
+More photographs of Pulau Bukom, its plant and its ferry — the only views of the restricted island most people ever get.
 
 ### The plant from the sea, June 2026
 
@@ -18,20 +18,25 @@ More photographs of Pulau Bukom and its plant, all taken from the water — the 
 ![The plant and a moored vessel, Pulau Bukom](https://upload.wikimedia.org/wikipedia/commons/c/c4/Pulau_Bukom_20260620_152757.jpg)
 *Process towers and a moored vessel on the island's working shore. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
 
+![Tankers at anchor off Pulau Bukom](https://upload.wikimedia.org/wikipedia/commons/f/fe/Pulau_Bukom_20260620_152307.jpg)
+*Tankers ride at anchor off Bukom, the refinery behind them — the island's working roadstead today. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+
 ![A red tanker in the roadstead off Bukom](https://upload.wikimedia.org/wikipedia/commons/e/e5/Pulau_Bukom_20260620_130617.jpg)
 *A red tanker in the roadstead, with the island's stacks on the horizon. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+
+![Two large tankers in the Bukom roadstead](https://upload.wikimedia.org/wikipedia/commons/5/5d/Pulau_Bukom_20260620_134005.jpg)
+*Two large tankers ride at anchor in the roadstead off the island. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
 
 ![The wharves of Pulau Bukom from the sea](https://upload.wikimedia.org/wikipedia/commons/6/60/Pulau_Bukom_20260620_133645.jpg)
 *The wharf line from the sea — the island has had five wharves since before the war. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
 
-![The tank farm line of Pulau Bukom](https://upload.wikimedia.org/wikipedia/commons/3/3f/Pulau_Bukom_20260620_130030.jpg)
-*The tank farm line at a distance — storage is what the island was built for in 1892, and storage still dominates its shore. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+### The ferry terminal
 
-![A wide view of the Bukom plant across the water](https://upload.wikimedia.org/wikipedia/commons/1/10/Pulau_Bukom_20260620_131420.jpg)
-*A wide view of the plant across the water, from the ferry side. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+![Inside Pasir Panjang Ferry Terminal](https://upload.wikimedia.org/wikipedia/commons/e/ea/Pasir_Panjang_Ferry_Terminal_20260620_160035.jpg)
+*The waiting hall at Pasir Panjang Ferry Terminal, the Harbourmaster's Office at the back — where the Bukom day begins and ends. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
 
-![Pulau Bukom low on the horizon](https://upload.wikimedia.org/wikipedia/commons/0/0e/Pulau_Bukom_20260620_130006.jpg)
-*The island low on the horizon — the cone-shell shape that may have given Bukom its name, before reclamation squared it off. (ZKang123, CC BY-SA 4.0, via Wikimedia Commons; photographed 2026)*
+![Pulau Bukom at dusk, from Sentosa](https://upload.wikimedia.org/wikipedia/commons/f/f5/Pulau_Bukom_from_Sentosa.JPG)
+*Bukom at dusk from Sentosa — a lit industrial shore across the anchorage. (Terence Ong, CC BY 2.5, via Wikimedia Commons)*
 
 ### Inside the island mosque
 
