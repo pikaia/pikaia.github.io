@@ -163,7 +163,7 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   done
   echo
 } 2>&1 | tee -a logs/the-coe-paying-for-permission-to-own-a-car-then-paying-again-to-drive-it.log
-{ echo; date; echo "=== 8.4 Compress the Short for upload ==="
+{ echo; date; echo "=== 8.5 Compress the Short for upload ==="
   cmd=(ffmpeg -y -hide_banner -loglevel warning -stats -i preview-motion/the-coe-paying-for-permission-to-own-a-car-then-paying-again-to-drive-it-short.mp4 -c:v libx264 -crf 26 -c:a aac -b:a 128k -movflags +faststart preview-motion/the-coe-paying-for-permission-to-own-a-car-then-paying-again-to-drive-it-short-web.mp4)
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
