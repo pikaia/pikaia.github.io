@@ -4,10 +4,19 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The COE: Paying for Permission to Own a Car, Then Paying Again to Drive It
+
+First posted 2026-11-19 · `2026-11-19-the-coe-paying-for-permission-to-own-a-car-then-paying-again-to-drive-it.md`
+
+- 2026-11-19: Published URLs wired in; run artifacts (`d54e492`)
+- 2026-11-19: Anonymise further - Europe for California (`0e7a43c`)
+- 2026-11-19: Anonymise the widower family section (`433ce72`)
+
 ## The Kopitiam's Two Eggs: The Breakfast That Outlived a Health Scare
 
 First posted 2026-11-18 · last updated 2026-11-19 · `2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md`
 
+- 2026-11-19: Published URLs wired in; run artifacts (`0a002e7`)
 - 2026-11-19: Kasumi Dining photo at the Ya Kun footnote (`608fc26`)
 - 2026-11-19: Ya Kun international; Kasumigaseki footnote (`53aa25f`)
 - 2026-11-19: Small wording polish (`68ac0a0`)
