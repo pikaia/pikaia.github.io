@@ -2,7 +2,7 @@
 layout: post
 title: "The COE: Paying for Permission to Own a Car, Then Paying Again to Drive It"
 date: 2026-11-19 09:00:00 +0800
-last_modified_at: 2026-11-19 09:00:00 +0800
+last_modified_at: 2026-11-19 12:13:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/1/14/ERP_gantry_on_the_BKE.jpg
 ---
@@ -72,11 +72,11 @@ The result is the most expensive place in the world to buy a car, by a wide marg
 
 The criticisms are longstanding and are aired in Parliament regularly: that the system rations road space by wealth, that a certificate can cost more than the car it permits, that premiums swinging S$40,000 in a fortnight make planning impossible, and that private-hire fleets bidding in the same pool push prices up for families. The replies are also on the record: that the practical alternative to pricing is rationing by congestion or by queue; that rates and quotas follow measured speeds and land, not revenue targets; that residents took 84 per cent of successful car COE bids between 2022 and late 2024; and that supply smoothing now tempers the cycle. The newest attempt to adjust the balance came in October 2026, when the LTA proposed merging Categories A and B into one, with a value-based rebate or surcharge of up to S$15,000 so that expensive cars pay more of the premium. Consultation closed on 2 November 2026; the outcome is still undecided.
 
-## The house at the end of Yio Chu Kang Road
+## The house at the far end of the expressway
 
 No study we could find measures whether ERP charges change where people choose to live; the research on housing choices points to the MRT, to schools, to the distance to work and to parents. But charges do not need a study to reach into a family's decisions, and in one family the writer knows, they did.
 
-Two years ago, visiting Singapore, I caught up with a widower who lives in Sunrise Estate, off the end of Yio Chu Kang Road. When his wife was alive the big house was full. After she died, their son left for a career with Google in California, and their daughter built her own career in Singapore; the house stands mostly empty, with him in it. The daughter had at first thought she would live with her father. Then she did the sums on the daily drive — the long run in to work, under the gantries, twice a day — and found it cheaper to rent a place of her own, chosen so that no long daily drive is needed. The family home was there, and hers for the living in. The price of using the road outweighed it. That is the second lever working at a scale no statistic captures: not deciding whether she drives, but where she lives.
+Two years ago, visiting Singapore, I caught up with a widower who lives in a landed estate in the north of the island, a long way from the city centre. When his wife was alive the big house was full. After she died, their son left for a career in California, and their daughter built her own career in Singapore; the house stands mostly empty, with him in it. The daughter had at first thought she would live with her father. Then she did the sums on the daily drive — the long run in to work, down the Central Expressway and under its gantries, twice a day — and found it cheaper to rent a place of her own, chosen so that no long daily drive is needed. The family home was there, and hers for the living in. The price of using the road outweighed it. That is the second lever working at a scale no statistic captures: not deciding whether she drives, but where she lives.
 
 ## The gantries come down
 
