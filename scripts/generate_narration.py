@@ -2698,6 +2698,11 @@ PRONUNCIATION_OVERRIDES = {
     "kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; misaki read it as "copper team" - Chris ear catch 2026-11-18 - ear-verified by Chris 2026-11-18
     "Kopitiam": "kɔːpiːtjɑm",  # kor-pee-TYAM, three even beats, no stress; same fix
     "Kopitiam's": "kɔːpiːtjɑmz",  # kor-pee-TYAM, three even beats, no stressz; same fix
+    # COE post (2026-11-19) - 1.1 dry-run flags; car-make readings proposed by Seven, NOT ear-verified yet
+    "Honda": "hˈɒndə",
+    "Integra": "ɪntˈɛɡrə",
+    "Toyota": "tɔɪˈoʊtə",
+    "Altis": "ˈæltɪs",
 }
 
 # Abbreviated titles that misaki can't pronounce (falls back to "?", same
@@ -3615,6 +3620,9 @@ KNOWN_LETTER_SPELLED = {
     "NS", "NTUC", "NUS", "NWC", "OCBC", "OUB", "OUE", "POSB", "PTSD", "SG", "UK", "UN",
     "UOB", "UOL", "US", "USS", "SPH", "HMS", "ING", "UBS", "MUFG", "PGP", "SS", "PKMS", "PAP", "OBE", "MND", "JTC",
     "LNG", "SP", "YTL", "PGN", "SKK", "PUB", "MB", "LDL", "BMJ",
+    "COE",
+    "ERP",
+    "NCS",
 }
 
 _letter_phoneme_cache: dict[str, str] = {}
