@@ -2,7 +2,7 @@
 layout: post
 title: "The COE: Paying for Permission to Own a Car, Then Paying Again to Drive It"
 date: 2026-11-19 09:00:00 +0800
-last_modified_at: 2026-11-19 12:13:00 +0800
+last_modified_at: 2026-11-19 12:19:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/1/14/ERP_gantry_on_the_BKE.jpg
 ---
@@ -76,7 +76,7 @@ The criticisms are longstanding and are aired in Parliament regularly: that the 
 
 No study we could find measures whether ERP charges change where people choose to live; the research on housing choices points to the MRT, to schools, to the distance to work and to parents. But charges do not need a study to reach into a family's decisions, and in one family the writer knows, they did.
 
-Two years ago, visiting Singapore, I caught up with a widower who lives in a landed estate in the north of the island, a long way from the city centre. When his wife was alive the big house was full. After she died, their son left for a career in California, and their daughter built her own career in Singapore; the house stands mostly empty, with him in it. The daughter had at first thought she would live with her father. Then she did the sums on the daily drive — the long run in to work, down the Central Expressway and under its gantries, twice a day — and found it cheaper to rent a place of her own, chosen so that no long daily drive is needed. The family home was there, and hers for the living in. The price of using the road outweighed it. That is the second lever working at a scale no statistic captures: not deciding whether she drives, but where she lives.
+Two years ago, visiting Singapore, I caught up with a widower who lives in a landed estate in the north of the island, a long way from the city centre. When his wife was alive the big house was full. After she died, their son left for a career in Europe, and their daughter built her own career in Singapore; the house stands mostly empty, with him in it. The daughter had at first thought she would live with her father. Then she did the sums on the daily drive — the long run in to work, down the Central Expressway and under its gantries, twice a day — and found it cheaper to rent a place of her own, chosen so that no long daily drive is needed. The family home was there, and hers for the living in. The price of using the road outweighed it. That is the second lever working at a scale no statistic captures: not deciding whether she drives, but where she lives.
 
 ## The gantries come down
 
