@@ -2,7 +2,7 @@
 layout: post
 title: "St John's Island: The Quarantine Island"
 date: 2026-11-20 08:00:00 +0800
-last_modified_at: 2026-11-20 08:00:00 +0800
+last_modified_at: 2026-11-20 10:52:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/9/93/St._John%27s_Island%2C_Singapore%3B_the_Quarantine_Station%2C_Wellcome_V0030663.jpg
 ---
@@ -25,7 +25,7 @@ When the signal station was abandoned in 1834, the island went quiet. A visiting
 
 ![St John's Island seen from the sea, its station buildings scattered along the shore](https://upload.wikimedia.org/wikipedia/commons/6/68/The_Quarantine_Station%2C_St._John%27s_Island%2C_Singapore._Wellcome_V0030662.jpg)
 
-*St John's Island from the water, photographed by A. R. Wellington. (Wellcome Collection, CC BY 4.0, via Wikimedia Commons)*
+*St John's Island from the water in 1909, photographed by A. R. Wellington. (Wellcome Collection, CC BY 4.0, via Wikimedia Commons)*
 
 ## Cholera makes an island necessary
 
