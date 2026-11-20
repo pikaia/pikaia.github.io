@@ -12,6 +12,13 @@ First posted 2026-11-19 · `2026-11-19-the-coe-paying-for-permission-to-own-a-ca
 - 2026-11-19: Anonymise further - Europe for California (`0e7a43c`)
 - 2026-11-19: Anonymise the widower family section (`433ce72`)
 
+## Pulau Bukom: The Kerosene Island That Became Singapore's First Refinery
+
+First posted 2026-11-19 · last updated 2026-11-20 · `2026-11-19-pulau-bukom-the-kerosene-island-that-became-singapores-first-refinery.md`
+
+- 2026-11-20: Blank lines between images and captions (`3210e06`)
+- 2026-11-20: Richer picture set after review (`cec491a`)
+
 ## The Kopitiam's Two Eggs: The Breakfast That Outlived a Health Scare
 
 First posted 2026-11-18 · last updated 2026-11-19 · `2026-11-18-the-kopitiams-two-eggs-the-breakfast-that-outlived-a-health-scare.md`
