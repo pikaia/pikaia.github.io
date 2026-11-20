@@ -1,0 +1,79 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+St John's Island: The Quarantine Island
+
+Description:
+For more than a century, almost every stranger who came to Singapore by sea began their Singapore story on the same small island, six and a half kilometres south of the mainland: St John's Island. Migrants, pilgrims, traders and troops were landed there first, examined, disinfected, vaccinated and held — sometimes for two days, sometimes for weeks — before they were allowed to become part of the port city. At its height the island's quarantine station was the largest in the British Empire. Today the same island holds a holiday lodge, two marine laboratories and a small, ageing colony of cats, and most Singaporeans know it, if at all, as a quiet place for a picnic. This is the story of the island that stood guard at Singapore's door.
+
+Full story: https://da.gd/PcRR0
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons, credited individually):
+- Wellcome Collection, CC BY 4.0, via Wikimedia Commons (3 photos)
+- Bob Tan, CC BY-SA 4.0, via Wikimedia Commons
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons; photographed 2023 (5 photos)
+- Bob Tan, CC BY-SA 4.0, via Wikimedia Commons; photographed 2022
+- Public domain, via Wikimedia Commons (2 photos)
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons (3 photos)
+
+Sources:
+- NLB Infopedia, "St John's Island"
+- NLB Infopedia, "St John's Island quarantine station"
+- NLB Infopedia, "The Quarantine Ordinance of 1868"
+- Marcus Ng, "St John's Island: From Gateway to Getaway", BiblioAsia Vol 14 Issue 1 (2018)
+- SG101, "St John's Island Quarantine Station"
+- NLB Infopedia, Prisons Department / detention history
+- St John's Island National Marine Laboratory, "About us"
+- NUS News, "Marine lab opens to all"
+- Singapore Land Authority, "St John's Island"
+- URA Master Plan 2025, "A City in Nature"
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+St John's Island: The Quarantine Island #Shorts
+
+Description:
+For more than a century, almost every stranger who came to Singapore by sea began their Singapore story on the same small island, six and a half kilometres south of the mainland: St John's Island. Migrants, pilgrims, traders and troops were landed there first, examined, disinfected, vaccinated and held — sometimes for two days, sometimes for weeks — before they were allowed to become part of the port city. At its height the island's quarantine station was the largest in the British Empire. Today the same island holds a holiday lodge, two marine laboratories and a small, ageing colony of cats, and most Singaporeans know it, if at all, as a quiet place for a picnic. This is the story of the island that stood guard at Singapore's door. #Shorts
+
+Full story: https://da.gd/PcRR0
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons):
+- Wellcome Collection, CC BY 4.0, via Wikimedia Commons (3 photos)
+- Public domain, via Wikimedia Commons
+- Bob Tan, CC BY-SA 4.0, via Wikimedia Commons
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons; photographed 2023
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+St John's Island: The Quarantine Island
+
+For more than a century, almost every stranger who came to Singapore by sea began their Singapore story on the same small island, six and a half kilometres south of the mainland: St John's Island. Migrants, pilgrims, traders and troops were landed there first, examined, disinfected, vaccinated and held — sometimes for two days, sometimes for weeks — before they were allowed to become part of the port city. At its height the island's quarantine station was the largest in the British Empire. Today the same island holds a holiday lodge, two marine laboratories and a small, ageing colony of cats, and most Singaporeans know it, if at all, as a quiet place for a picnic. This is the story of the island that stood guard at Singapore's door.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons):
+- Wellcome Collection, CC BY 4.0, via Wikimedia Commons (3 photos)
+- Public domain, via Wikimedia Commons
+- Bob Tan, CC BY-SA 4.0, via Wikimedia Commons
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons; photographed 2023
+- Denis Barthel, CC BY-SA 4.0, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
