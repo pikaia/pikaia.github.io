@@ -93,6 +93,11 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/st-johns-island-the-quarantine-island.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py st-johns-island-the-quarantine-island 1,7,23,31,33,40,46,58,62,69,75,82,87)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+}
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/st-johns-island-the-quarantine-island-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
