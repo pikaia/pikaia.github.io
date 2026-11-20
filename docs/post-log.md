@@ -4,6 +4,12 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## St John's Island: The Quarantine Island
+
+First posted 2026-11-20 · `2026-11-20-st-johns-island-the-quarantine-island.md`
+
+- 2026-11-20: Year added to Wellington photo caption (`606d8d7`)
+
 ## The COE: Paying for Permission to Own a Car, Then Paying Again to Drive It
 
 First posted 2026-11-19 · `2026-11-19-the-coe-paying-for-permission-to-own-a-car-then-paying-again-to-drive-it.md`
@@ -16,6 +22,7 @@ First posted 2026-11-19 · `2026-11-19-the-coe-paying-for-permission-to-own-a-ca
 
 First posted 2026-11-19 · last updated 2026-11-20 · `2026-11-19-pulau-bukom-the-kerosene-island-that-became-singapores-first-refinery.md`
 
+- 2026-11-20: Published URLs wired in; run artifacts (`e7a2306`)
 - 2026-11-20: Blank lines between images and captions (`3210e06`)
 - 2026-11-20: Richer picture set after review (`cec491a`)
 
