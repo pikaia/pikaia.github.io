@@ -2,7 +2,7 @@
 layout: post
 title: "Eu Tong Sen: The Eu Yan Sang King Whose Name Is on the Street"
 date: 2026-11-22 10:00:00 +0800
-last_modified_at: 2026-11-22 10:00:00 +0800
+last_modified_at: 2026-11-23 02:12:00 +0800
 categories: [history, present-day]
 image: https://upload.wikimedia.org/wikipedia/commons/1/15/Yue_Hwa_Building%2C_Singapore%2C_2025_%2801%29.jpg
 ---
@@ -62,7 +62,7 @@ The National Library Board keeps two explanations for the honour, and both may b
 
 *A dragon decoration over Eu Tong Sen Street at Chinese New Year, the street sign carrying his name below. (JoElise (Sivanjali Sivapatham), CC BY-SA 3.0, via Wikimedia Commons; photographed 2012)*
 
-In 1927 his own theatre rose on the street at number 80: the Majestic, built as Tien Yien Moh Toi, a Cantonese opera house with an Art Deco façade of glazed tiles, blue dragons and opera figures, designed by Swan and Maclaren. The official Chinatown trail tells why: he built it for his wife, after she was reportedly refused admittance to an opera performance elsewhere. The two theatres he had bought were demolished long ago; the Majestic survives, conserved — a cinema and then a mall behind its tiled façade.
+In 1927 his own theatre rose on the street at number 80: the Majestic, built as Tien Yien Moh Toi, a Cantonese opera house with an Art Deco façade of glazed tiles, blue dragons and opera figures, designed by Swan and Maclaren. The official Chinatown trail tells why: he built it for his wife, after she was reportedly refused admittance to an opera performance elsewhere. The two theatres he had bought were demolished long ago; the Majestic survives, conserved, standing beside People's Park Complex — a cinema and then a mall behind its tiled façade.
 
 ![The Majestic Theatre](https://upload.wikimedia.org/wikipedia/commons/0/0e/The_Majestic%2C_Singapore%2C_2018_%2801%29.jpg)
 
@@ -76,7 +76,7 @@ Was it Eu's building? Here the record disagrees with itself, and the disagreemen
 
 ### The name on the hill
 
-Eu's giving reached beyond Chinatown. When Singapore raised funds for Raffles College — the colony's centenary memorial, opened in 1929 at Bukit Timah — he was among the business leaders who pledged money from 1919, giving, the reports of the day say, between $100,000 and $150,000. The college named three of its buildings for its great donors, and one of them, a student hostel around the Upper Quadrangle, took his name: the Eu Tong Sen Building. The six college buildings were gazetted together as a National Monument in 2009, and his building served for years as the entrance of the National University of Singapore's law faculty, before the faculty's move to Kent Ridge in January 2026.
+Eu's giving reached beyond Chinatown. When Singapore raised funds for Raffles College — the colony's centenary memorial, opened in 1929 at Bukit Timah — he was among the business leaders who pledged money from 1919, and his own contribution was $100,000. The college named three of its buildings for its great donors, and one of them, a student hostel around the Upper Quadrangle, took his name: the Eu Tong Sen Building. The six college buildings were gazetted together as a National Monument in 2009, and his building served for years as the entrance of the National University of Singapore's law faculty, before the faculty's move to Kent Ridge in January 2026.
 
 <div style="float: left; max-width: 250px; width: 40%; margin: 0.25em 1.5em 1em 0;">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Eu_Tong_Sen_Building%2C_Block_B_and_Upper_Quadrangle%2C_Faculty_of_Law%2C_National_University_of_Singapore.jpg" alt="The Eu Tong Sen Building at Bukit Timah" style="width: 100%; display: block; border-radius: 4px;">
