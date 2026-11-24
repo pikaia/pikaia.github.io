@@ -4,10 +4,18 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Eu Tong Sen: The Eu Yan Sang King Whose Name Is on the Street
+
+First posted 2026-11-22 · last updated 2026-11-23 · `2026-11-22-eu-tong-sen-the-eu-yan-sang-king-whose-name-is-on-the-street.md`
+
+- 2026-11-25: Published URLs wired in; run artifacts (`7f7f331`)
+- 2026-11-23: Majestic locator, Raffles College gift figure (`7ce57fb`)
+
 ## St John's Island: The Quarantine Island
 
 First posted 2026-11-20 · `2026-11-20-st-johns-island-the-quarantine-island.md`
 
+- 2026-11-20: Published URLs wired in; run artifacts (`c25f1f3`)
 - 2026-11-20: Year added to Wellington photo caption (`606d8d7`)
 
 ## The COE: Paying for Permission to Own a Car, Then Paying Again to Drive It
