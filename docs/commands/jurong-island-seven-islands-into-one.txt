@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/jurong-island-seven-islands-into-one.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py jurong-island-seven-islands-into-one 0,1,4,6,9,23,31,46,49,58,67,71,73,84,87)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/jurong-island-seven-islands-into-one.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/jurong-island-seven-islands-into-one-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-24-jurong-island-seven-islands-into-one.md scripts/video-configs/jurong-island-seven-islands-into-one.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/3x_A8_JEIf0
+  --shorts-url https://youtube.com/shorts/4wZuGVzl_QU
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712167859425660191
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

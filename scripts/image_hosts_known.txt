@@ -1,3 +1,6 @@
 s3-ap-southeast-2.amazonaws.com
 upload.wikimedia.org
 thumb.wikimedia.org
+commons.wikimedia.org
+eros.usgs.gov
+pikaia.github.io
