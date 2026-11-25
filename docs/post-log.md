@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Jurong Island: Seven Islands into One
+
+First posted 2026-11-24 · `2026-11-24-jurong-island-seven-islands-into-one.md`
+
+- 2026-11-26: Published URLs wired in; run artifacts (`07317e0`)
+- 2026-11-25: Blank lines around Sources (narration extractor narrated the list) (`94911d0`)
+
 ## Eu Tong Sen: The Eu Yan Sang King Whose Name Is on the Street
 
 First posted 2026-11-22 · last updated 2026-11-23 · `2026-11-22-eu-tong-sen-the-eu-yan-sang-king-whose-name-is-on-the-street.md`
