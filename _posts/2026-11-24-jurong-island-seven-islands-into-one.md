@@ -11,6 +11,45 @@ Almost every Singaporean depends on Jurong Island, and almost none will ever set
 
 [← Back to all posts](/)
 
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/jurong-island-seven-islands-into-one.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
+
 ![Jurong Island seen from the sea, a row of red-and-white chimneys and distillation towers along a low shoreline](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Jurong_Island%2C_Singapore_-_20110227-01.jpg/1280px-Jurong_Island%2C_Singapore_-_20110227-01.jpg)
 
 *Jurong Island from the sea in February 2011 — one shoreline where seven islands used to be. (Jacklee, CC BY-SA 3.0, via Wikimedia Commons; photographed 2011)*
@@ -102,7 +141,9 @@ The island turned twenty-five in 2025, and the anniversary brought a change of d
 **Where it fits in the bigger story:** Singapore has made land before — but Jurong Island is the only time it made land out of other inhabited islands, villages and all, and then closed the result to the public forever. The seven islands are gone from the map and present everywhere in the island that replaced them: in 1 Merlimau Road, in Sakra and Seraya and Banyan, in a strait that is no longer called Sembilan. The penghulu's nine islands were really fourteen, and are now one — and the one is an island almost nobody will ever see.
 
 ---
+
 **Sources:**
+
 - [Jurong Island — Singapore Infopedia, National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=ad9dd6c3-782d-474c-a632-92d57ba9e1e3)
 - [Jurong Island is officially opened — National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=a27a6821-9ee6-45c1-b3d1-0dce19252eed)
 - [Jurong reclamation — National Library Board](https://www.nlb.gov.sg/main/article-detail?cmsuuid=ea7f0e25-22c4-4db0-acfd-723c87d73679)
