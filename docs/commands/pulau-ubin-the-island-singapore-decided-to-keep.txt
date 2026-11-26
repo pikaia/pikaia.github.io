@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/pulau-ubin-the-island-singapore-decided-to-keep.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py pulau-ubin-the-island-singapore-decided-to-keep 0,1,11,14,27,31,35,52,59,65,71,76,81,88)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/pulau-ubin-the-island-singapore-decided-to-keep.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/pulau-ubin-the-island-singapore-decided-to-keep-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-25-pulau-ubin-the-island-singapore-decided-to-keep.md scripts/video-configs/pulau-ubin-the-island-singapore-decided-to-keep.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/kQPm0wetr_Q
+  --shorts-url https://youtube.com/shorts/ra6JT3UzYFM
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712368363275701535
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
