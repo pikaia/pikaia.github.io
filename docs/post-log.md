@@ -4,6 +4,12 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Pulau Ubin: The Island Singapore Decided to Keep
+
+First posted 2026-11-25 · `2026-11-25-pulau-ubin-the-island-singapore-decided-to-keep.md`
+
+- 2026-11-26: Published URLs wired in; run artifacts (`29fbb4f`)
+
 ## Jurong Island: Seven Islands into One
 
 First posted 2026-11-24 · `2026-11-24-jurong-island-seven-islands-into-one.md`
