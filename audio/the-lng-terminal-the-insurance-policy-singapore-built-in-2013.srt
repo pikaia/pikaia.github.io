@@ -1,0 +1,1011 @@
+﻿1
+00:00:00,080 --> 00:00:01,578
+The LNG Terminal:
+
+2
+00:00:01,658 --> 00:00:05,950
+The Insurance Policy
+Singapore Built in 2013
+
+3
+00:00:05,950 --> 00:00:10,602
+When Indonesia trimmed the
+pipeline gas it sends to Singapore
+
+4
+00:00:10,682 --> 00:00:14,868
+in October 2026, the official
+answer took one sentence:
+
+5
+00:00:14,948 --> 00:00:19,525
+more liquefied natural gas
+could be brought in at any time.
+
+6
+00:00:19,525 --> 00:00:23,774
+That sentence rested on a
+terminal on Jurong Island that
+
+7
+00:00:23,854 --> 00:00:27,716
+had been built thirteen
+years earlier, at a cost of
+
+8
+00:00:27,796 --> 00:00:32,125
+1.7 billion Singapore dollars,
+against exactly this day.
+
+9
+00:00:32,125 --> 00:00:34,910
+This post is the story of that terminal —
+
+10
+00:00:34,990 --> 00:00:38,892
+the companion piece to The
+Pipelines That Feed Singapore,
+
+11
+00:00:38,972 --> 00:00:42,675
+which told the story of the
+pipes it insures against.
+
+12
+00:00:42,675 --> 00:00:48,829
+By the middle of the 2000s, natural gas
+made about 80% of Singapore's electricity,
+
+13
+00:00:48,909 --> 00:00:52,402
+and every bit of that
+gas arrived by pipeline —
+
+14
+00:00:52,482 --> 00:00:57,800
+from Malaysia across the Johor Strait,
+and from Indonesia's West Natuna
+
+15
+00:00:57,880 --> 00:01:03,050
+fields and South Sumatra, about 800
+million cubic feet a day in all.
+
+16
+00:01:03,050 --> 00:01:07,394
+The arrangement worked, but it
+had a shape that worried planners:
+
+17
+00:01:07,474 --> 00:01:10,400
+two suppliers, three
+pipes, no alternative.
+
+18
+00:01:10,400 --> 00:01:13,521
+A disruption to Indonesian supply in
+
+19
+00:01:13,601 --> 00:01:16,625
+2004 had already caused blackouts.
+
+20
+00:01:16,625 --> 00:01:20,575
+The fields themselves
+would one day run down.
+
+21
+00:01:20,575 --> 00:01:24,191
+And gas was still growing —
+the pipelines' share of the
+
+22
+00:01:24,271 --> 00:01:27,900
+country's power was heading
+towards almost everything.
+
+23
+00:01:27,900 --> 00:01:32,951
+On the 7th of August 2006, the
+Minister for Trade and Industry,
+
+24
+00:01:33,031 --> 00:01:38,000
+Lim Hng Kiang, announced the
+decision at the first EMA Forum.
+
+25
+00:01:38,000 --> 00:01:40,988
+"We need to diversify
+our energy sources in
+
+26
+00:01:41,068 --> 00:01:44,484
+order to ensure that we
+are not over-reliant on a
+
+27
+00:01:44,564 --> 00:01:47,775
+single source for our
+energy needs," he said.
+
+28
+00:01:47,775 --> 00:01:50,578
+"As such, the Government has decided
+
+29
+00:01:50,658 --> 00:01:53,300
+to import Liquefied Natural Gas."
+
+30
+00:01:53,300 --> 00:01:57,175
+The plan was a terminal of
+3 million tonnes a year,
+
+31
+00:01:57,255 --> 00:02:02,450
+with the first gas flowing around
+2012, built and run commercially.
+
+32
+00:02:02,450 --> 00:02:05,300
+An investor search would follow.
+
+33
+00:02:05,300 --> 00:02:07,581
+LNG itself deserves a sentence,
+
+34
+00:02:07,661 --> 00:02:11,925
+because the whole story hangs
+on what it makes possible.
+
+35
+00:02:11,925 --> 00:02:16,721
+Natural gas cooled to about
+minus 162 degrees turns liquid
+
+36
+00:02:16,801 --> 00:02:21,425
+and shrinks to roughly one
+six-hundredth of its volume.
+
+37
+00:02:21,425 --> 00:02:24,420
+In that form it can be loaded onto a ship
+
+38
+00:02:24,500 --> 00:02:27,875
+anywhere on earth and
+unloaded anywhere else.
+
+39
+00:02:27,875 --> 00:02:32,000
+A pipeline ties you to whoever
+is at the other end of it.
+
+40
+00:02:32,000 --> 00:02:33,311
+LNG unties you —
+
+41
+00:02:33,391 --> 00:02:37,650
+the supplier becomes
+whoever has a cargo to sell.
+
+42
+00:02:37,650 --> 00:02:42,750
+An LNG trade has three links, and
+they are partners, not rivals.
+
+43
+00:02:42,750 --> 00:02:47,978
+At the export end, a liquefaction plant
+does the cooling and the loading —
+
+44
+00:02:48,058 --> 00:02:51,422
+Norway's Melkøya plant,
+in the photograph below,
+
+45
+00:02:51,502 --> 00:02:57,025
+or Canada's new plant at Kitimat, which
+shipped its first cargo only in 2025.
+
+46
+00:02:57,025 --> 00:03:00,381
+In the middle, the tanker
+carries the liquid,
+
+47
+00:03:00,461 --> 00:03:02,675
+kept cold in insulated tanks.
+
+48
+00:03:02,675 --> 00:03:06,239
+At the import end, a
+receiving terminal stores the
+
+49
+00:03:06,319 --> 00:03:10,400
+liquid and warms it back into
+gas for the local network.
+
+50
+00:03:10,400 --> 00:03:13,925
+Singapore's terminal is the third kind.
+
+51
+00:03:13,925 --> 00:03:18,380
+Its floating counterpart, a storage
+and regasification ship moored
+
+52
+00:03:18,460 --> 00:03:22,778
+at a berth, does the same import
+job afloat — a distinction that
+
+53
+00:03:22,858 --> 00:03:27,600
+matters later in this story, when
+Singapore ordered one of those too.
+
+54
+00:03:27,600 --> 00:03:30,625
+The commercial version came first.
+
+55
+00:03:30,625 --> 00:03:33,688
+PowerGas, Singapore Power's gas arm,
+
+56
+00:03:33,768 --> 00:03:38,053
+was designated to own and
+run the terminal in 2007
+
+57
+00:03:38,133 --> 00:03:41,800
+and appointed its developer in April 2008.
+
+58
+00:03:41,800 --> 00:03:46,566
+The same month, the Energy Market
+Authority appointed BG Asia
+
+59
+00:03:46,646 --> 00:03:51,412
+Pacific as the LNG aggregator
+— the company licensed to bring
+
+60
+00:03:51,492 --> 00:03:56,178
+in and sell up to 3 million
+tonnes a year of regasified LNG,
+
+61
+00:03:56,258 --> 00:04:01,025
+drawn from BG's worldwide
+portfolio, for up to twenty years.
+
+62
+00:04:01,025 --> 00:04:04,005
+Then the global financial crisis arrived,
+
+63
+00:04:04,085 --> 00:04:06,250
+and the sums stopped working.
+
+64
+00:04:06,250 --> 00:04:09,739
+On the 30th of June 2009,
+Second Minister S Iswaran
+
+65
+00:04:09,819 --> 00:04:13,168
+announced that the Government
+would take over the
+
+66
+00:04:13,248 --> 00:04:17,226
+terminal's development and
+ownership, "as it was difficult
+
+67
+00:04:17,306 --> 00:04:20,875
+to proceed with the project
+on a commercial basis."
+
+68
+00:04:20,875 --> 00:04:26,049
+The EMA incorporated a new company,
+Singapore LNG Corporation —
+
+69
+00:04:26,129 --> 00:04:31,550
+SLNG — to build, own and operate
+it, holding the shares in trust.
+
+70
+00:04:31,550 --> 00:04:35,445
+Prime Minister Lee Hsien Loong,
+looking back at the opening
+
+71
+00:04:35,525 --> 00:04:38,409
+five years later, put
+the reasoning plainly:
+
+72
+00:04:38,489 --> 00:04:42,800
+"The project became too risky for
+any private operator to carry.
+
+73
+00:04:42,800 --> 00:04:47,697
+But we believed that it was in Singapore's
+strategic interests to proceed,
+
+74
+00:04:47,777 --> 00:04:51,275
+and we decided that the
+Government would take over."
+
+75
+00:04:51,275 --> 00:04:55,908
+Samsung C&T won the construction
+contract in February 2010,
+
+76
+00:04:55,988 --> 00:05:00,142
+and ground was broken on
+the 31st of March that year,
+
+77
+00:05:00,222 --> 00:05:05,575
+on about thirty hectares at the
+south-western end of Jurong Island.
+
+78
+00:05:05,575 --> 00:05:08,710
+The design grew while it was being built:
+
+79
+00:05:08,790 --> 00:05:12,395
+a third storage tank,
+decided in November 2010,
+
+80
+00:05:12,475 --> 00:05:17,650
+lifted the planned throughput from
+3.5 to 6 million tonnes a year.
+
+81
+00:05:17,650 --> 00:05:20,182
+A secondary berth project reclaimed
+
+82
+00:05:20,262 --> 00:05:22,800
+about ten more hectares beside it.
+
+83
+00:05:22,800 --> 00:05:25,623
+The overall project cost came to
+
+84
+00:05:25,703 --> 00:05:28,425
+1.7 billion Singapore dollars.
+
+85
+00:05:28,425 --> 00:05:30,732
+The terminal took two first cargoes,
+
+86
+00:05:30,812 --> 00:05:33,200
+and they are worth keeping separate.
+
+87
+00:05:33,200 --> 00:05:37,156
+The first cargo of any kind
+was a commissioning cargo:
+
+88
+00:05:37,236 --> 00:05:42,312
+bought by SLNG directly from Qatargas,
+loaded at Ras Laffan in Qatar,
+
+89
+00:05:42,392 --> 00:05:45,750
+and delivered on the
+27th of March 2013 by the
+
+90
+00:05:45,830 --> 00:05:49,935
+Umm Slal — a Q-Max, then the
+largest type of LNG ship in
+
+91
+00:05:50,015 --> 00:05:54,125
+the world — to cool the tanks
+down and prove the plant.
+
+92
+00:05:54,125 --> 00:05:59,844
+Commercial operations began six
+weeks later, on the 7th of May 2013,
+
+93
+00:05:59,924 --> 00:06:04,700
+with BG's first cargo, carried
+by the Methane Kari Elin.
+
+94
+00:06:04,700 --> 00:06:08,383
+The terminal that opened
+for business had two
+
+95
+00:06:08,463 --> 00:06:12,898
+storage tanks of 180,000
+cubic metres each, one jetty,
+
+96
+00:06:12,978 --> 00:06:16,825
+and a throughput of 3.5
+million tonnes a year.
+
+97
+00:06:16,825 --> 00:06:20,392
+By the time Prime Minister
+Lee officially opened the
+
+98
+00:06:20,472 --> 00:06:24,110
+terminal on the 25th of
+February 2014, the third tank
+
+99
+00:06:24,190 --> 00:06:28,529
+was in service and throughput
+stood at 6 million tonnes a year;
+
+100
+00:06:28,609 --> 00:06:31,625
+the secondary jetty
+followed a month later.
+
+101
+00:06:31,625 --> 00:06:34,770
+His speech is where the
+insurance idea lives,
+
+102
+00:06:34,850 --> 00:06:37,000
+though he never used the word.
+
+103
+00:06:37,000 --> 00:06:40,712
+The terminal, he said,
+"greatly increases our options
+
+104
+00:06:40,792 --> 00:06:44,718
+and enhances our energy
+security," and building capacity
+
+105
+00:06:44,798 --> 00:06:48,375
+ahead of demand "will give
+us a strategic buffer."
+
+106
+00:06:48,375 --> 00:06:52,068
+He looked further ahead
+still: "We are preparing for
+
+107
+00:06:52,148 --> 00:06:55,768
+the possibility that our
+demand for natural gas may
+
+108
+00:06:55,848 --> 00:06:59,475
+one day be met entirely
+by liquefied natural gas."
+
+109
+00:06:59,475 --> 00:07:02,717
+At the same opening he
+announced a fourth tank,
+
+110
+00:07:02,797 --> 00:07:05,200
+and studies for a second terminal.
+
+111
+00:07:05,200 --> 00:07:08,915
+He also noted the site's
+ceiling — Jurong Island could
+
+112
+00:07:08,995 --> 00:07:12,570
+hold seven tanks and about
+15 million tonnes a year,
+
+113
+00:07:12,650 --> 00:07:16,375
+"but that is the limit,
+because of land constraints."
+
+114
+00:07:16,375 --> 00:07:22,435
+The fourth tank, added under a 700
+million Singapore dollars third phase,
+
+115
+00:07:22,515 --> 00:07:26,389
+holds 260,000 cubic metres
+— one of the largest
+
+116
+00:07:26,469 --> 00:07:31,600
+LNG storage tanks in the world
+— and entered service in 2018.
+
+117
+00:07:31,600 --> 00:07:35,777
+The terminal today has four
+tanks holding 800,000 cubic
+
+118
+00:07:35,857 --> 00:07:41,117
+metres in all, two jetties able to
+take the largest LNG ships afloat,
+
+119
+00:07:41,197 --> 00:07:44,909
+and a regasification plant
+rated at an average of
+
+120
+00:07:44,989 --> 00:07:49,400
+9 million tonnes a year, with
+a peak of up to 11 million.
+
+121
+00:07:49,400 --> 00:07:54,404
+SLNG's own summary of what that
+means is the policy in one line:
+
+122
+00:07:54,484 --> 00:07:58,296
+if required, the terminal
+has sufficient capacity
+
+123
+00:07:58,376 --> 00:08:02,825
+to meet all of the country's
+present natural gas demand.
+
+124
+00:08:02,825 --> 00:08:06,450
+Around that core job,
+a side business grew.
+
+125
+00:08:06,450 --> 00:08:11,499
+Trucks began loading LNG at
+the terminal in April 2017 —
+
+126
+00:08:11,579 --> 00:08:15,975
+the five-thousandth
+truckload left in June 2024.
+
+127
+00:08:15,975 --> 00:08:19,100
+Small ships reload there for the region;
+
+128
+00:08:19,180 --> 00:08:23,586
+Singapore's first LNG bunker
+vessel, the FueLNG Bellina,
+
+129
+00:08:23,666 --> 00:08:27,753
+took its first load from
+the terminal in March 2021,
+
+130
+00:08:27,833 --> 00:08:32,800
+and more than a hundred bunker
+reloads followed in 2024 alone.
+
+131
+00:08:32,800 --> 00:08:35,898
+By the end of September 2023 the
+
+132
+00:08:35,978 --> 00:08:39,950
+terminal had received about 430 cargoes.
+
+133
+00:08:39,950 --> 00:08:43,800
+The balance of supply
+shifted underneath it all.
+
+134
+00:08:43,800 --> 00:08:47,259
+In 2013, LNG made up about 11%
+
+135
+00:08:47,339 --> 00:08:50,525
+of Singapore's gas imports.
+
+136
+00:08:50,525 --> 00:08:53,854
+By 2025 it was 57% — the pipelines,
+
+137
+00:08:53,934 --> 00:08:58,025
+for the first time, were the smaller half.
+
+138
+00:08:58,025 --> 00:09:02,179
+Insurance is only interesting
+when it is claimed on,
+
+139
+00:09:02,259 --> 00:09:07,225
+and this policy was claimed on
+once before 2026 — at a price.
+
+140
+00:09:07,225 --> 00:09:11,277
+From the 6th of September to
+the 26th of December 2021,
+
+141
+00:09:11,357 --> 00:09:17,287
+upstream problems in West Natuna curtailed
+the pipeline supply, and low pressure
+
+142
+00:09:17,367 --> 00:09:22,025
+from South Sumatra added to the
+shortfall in the last quarter.
+
+143
+00:09:22,025 --> 00:09:26,329
+The power stations made up the
+difference the way the terminal
+
+144
+00:09:26,409 --> 00:09:32,199
+was built to let them: as the Ministry of
+Trade and Industry later told Parliament,
+
+145
+00:09:32,279 --> 00:09:35,523
+they "had to purchase
+more spot LNG at elevated
+
+146
+00:09:35,603 --> 00:09:39,775
+global gas prices to make up
+for the drop in PNG supplies."
+
+147
+00:09:39,775 --> 00:09:41,750
+The lights stayed on.
+
+148
+00:09:41,750 --> 00:09:44,350
+The bill arrived instead.
+
+149
+00:09:44,350 --> 00:09:49,360
+World gas prices had risen
+about fivefold since March 2021;
+
+150
+00:09:49,440 --> 00:09:54,709
+Singapore's wholesale electricity
+price averaged 491 Singapore
+
+151
+00:09:54,789 --> 00:09:58,333
+dollars per megawatt-hour in October 2021,
+
+152
+00:09:58,413 --> 00:10:04,625
+against 78 Singapore dollars to 104
+Singapore dollars earlier that year.
+
+153
+00:10:04,625 --> 00:10:08,979
+Six electricity retailers
+left the market that quarter,
+
+154
+00:10:09,059 --> 00:10:13,413
+and the regulated household
+tariff climbed to a peak of
+
+155
+00:10:13,493 --> 00:10:18,250
+30.17 cents per kilowatt-hour
+in the third quarter of 2022.
+
+156
+00:10:18,250 --> 00:10:22,698
+The episode taught the precise
+lesson the terminal embodies:
+
+157
+00:10:22,778 --> 00:10:26,325
+LNG insures the route of
+supply, not its price.
+
+158
+00:10:26,325 --> 00:10:30,540
+A cargo can always be bought —
+the terminal guarantees a door to
+
+159
+00:10:30,620 --> 00:10:35,250
+bring it through — but in a panic,
+the world charges what it charges.
+
+160
+00:10:35,250 --> 00:10:38,700
+The system adjusted around the lesson.
+
+161
+00:10:38,700 --> 00:10:42,156
+A Standby LNG Facility, a reserve stock
+
+162
+00:10:42,236 --> 00:10:45,965
+arrangement managed by SLNG, was set up in
+
+163
+00:10:46,045 --> 00:10:50,125
+October 2021 and made
+permanent a year later.
+
+164
+00:10:50,125 --> 00:10:54,703
+And in October 2023 the government
+announced the deeper change:
+
+165
+00:10:54,783 --> 00:10:56,996
+gas buying for the power sector
+
+166
+00:10:57,076 --> 00:11:00,625
+would be centralised in
+a single national buyer.
+
+167
+00:11:00,625 --> 00:11:03,956
+Singapore GasCo was
+established in April 2025,
+
+168
+00:11:04,036 --> 00:11:09,592
+fully government-owned, under chief
+executive Alan Heng — the single company
+
+169
+00:11:09,672 --> 00:11:12,632
+that now buys gas for the power stations,
+
+170
+00:11:12,712 --> 00:11:18,200
+pooling their demand to sign longer
+contracts with more diverse suppliers.
+
+171
+00:11:18,200 --> 00:11:23,277
+It is the commercial half of the insurance:
+the terminal is the physical door,
+
+172
+00:11:23,357 --> 00:11:27,125
+GasCo is the standing arrangement
+for walking through it.
+
+173
+00:11:27,125 --> 00:11:30,050
+The second door is on its way.
+
+174
+00:11:30,050 --> 00:11:34,147
+Announced in October 2023,
+Singapore's second LNG
+
+175
+00:11:34,227 --> 00:11:38,575
+terminal will not be a
+bigger version of the first.
+
+176
+00:11:38,575 --> 00:11:43,090
+It is a floating terminal — an
+FSRU, a ship that stores LNG and
+
+177
+00:11:43,170 --> 00:11:47,831
+regasifies it aboard — owned and
+operated by Mitsui O.S.K. Lines,
+
+178
+00:11:47,911 --> 00:11:52,353
+built by Hanwha Ocean in South
+Korea with 204,000 cubic metres
+
+179
+00:11:52,433 --> 00:11:56,073
+of storage and 5 million
+tonnes a year of capacity,
+
+180
+00:11:56,153 --> 00:12:01,550
+and moored not at Jurong Island but
+at Jurong Port, on the mainland shore.
+
+181
+00:12:01,550 --> 00:12:04,688
+Its steel was cut in October 2025,
+
+182
+00:12:04,768 --> 00:12:09,516
+its keel laid in May 2026,
+and the onshore works to
+
+183
+00:12:09,596 --> 00:12:13,950
+connect it began at
+Jurong Port in March 2026.
+
+184
+00:12:13,950 --> 00:12:17,320
+It is due in service by
+the end of the decade,
+
+185
+00:12:17,400 --> 00:12:22,500
+taking the two terminals together
+to up to 15 million tonnes a year.
+
+186
+00:12:22,500 --> 00:12:26,366
+The first terminal is still
+growing in its own way:
+
+187
+00:12:26,446 --> 00:12:30,313
+in October 2026 SLNG broke
+ground on a third jetty,
+
+188
+00:12:30,393 --> 00:12:33,875
+for the smaller ships
+of the bunkering trade.
+
+189
+00:12:33,875 --> 00:12:37,275
+Which brings the story
+back to where it began.
+
+190
+00:12:37,275 --> 00:12:41,034
+When Indonesia's regulator
+cut pipeline deliveries on the
+
+191
+00:12:41,114 --> 00:12:44,872
+24th of October 2026 — about
+31 million cubic feet a day,
+
+192
+00:12:44,952 --> 00:12:48,711
+redirected to power stations
+on Batam, Bintan and Sumatra
+
+193
+00:12:48,791 --> 00:12:52,685
+after a long blackout — the
+EMA's response the same evening
+
+194
+00:12:52,765 --> 00:12:56,591
+was that Singapore GasCo "is
+operationally ready to import
+
+195
+00:12:56,671 --> 00:13:00,564
+more at any time," and Prime
+Minister Lawrence Wong pointed
+
+196
+00:13:00,644 --> 00:13:04,550
+to the LNG terminals as the
+reason the country could cope.
+
+197
+00:13:04,550 --> 00:13:10,082
+No emergency purchase was ever
+announced, and none may have been needed:
+
+198
+00:13:10,162 --> 00:13:13,825
+the cut came to under 2%
+of a day's gas demand.
+
+199
+00:13:13,825 --> 00:13:18,725
+That is what a mature insurance
+policy looks like from outside.
+
+200
+00:13:18,725 --> 00:13:22,194
+Nothing happens, expensively,
+for years — and then,
+
+201
+00:13:22,274 --> 00:13:26,450
+on the one day it is needed,
+nothing happening is the point.
+
+202
+00:13:26,450 --> 00:13:29,950
+Where it fits in the bigger
+story: Singapore has never
+
+203
+00:13:30,030 --> 00:13:33,132
+had fuel of its own — not
+the coal, not the oil,
+
+204
+00:13:33,212 --> 00:13:36,977
+not the gas — so its energy
+history is a history of doors:
+
+205
+00:13:37,057 --> 00:13:41,300
+how many ways in, from how many
+directions, under whose control.
+
+206
+00:13:41,300 --> 00:13:45,975
+The pipelines made three doors,
+all opening onto two neighbours.
+
+207
+00:13:45,975 --> 00:13:50,129
+The terminal on Jurong Island
+was the first door that opened
+
+208
+00:13:50,209 --> 00:13:54,011
+onto the whole world, and it
+cost 1.7 billion Singapore
+
+209
+00:13:54,091 --> 00:13:58,325
+dollars precisely because it
+might never be strictly needed.
+
+210
+00:13:58,325 --> 00:14:02,075
+The pipelines post tells
+how the gas arrives.
+
+211
+00:14:02,075 --> 00:14:06,625
+This one is about the door that
+was built in case it stopped.

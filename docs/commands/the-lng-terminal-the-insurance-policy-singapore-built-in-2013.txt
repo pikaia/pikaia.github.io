@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/the-lng-terminal-the-insurance-policy-singapore-built-in-2013.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py the-lng-terminal-the-insurance-policy-singapore-built-in-2013 0,1,5,10,18,29,36,38,43,49,56,59,64,70,72,75,86)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-lng-terminal-the-insurance-policy-singapore-built-in-2013.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-lng-terminal-the-insurance-policy-singapore-built-in-2013-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-26-the-lng-terminal-the-insurance-policy-singapore-built-in-2013.md scripts/video-configs/the-lng-terminal-the-insurance-policy-singapore-built-in-2013.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/JrJwZuoKQiw
+  --shorts-url https://youtube.com/shorts/NL4IzC6Lkhw
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712606908011547935
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
