@@ -454,3 +454,5 @@ token's exact text to `KNOWN_LETTER_SPELLED` in `generate_narration.py`
 The set holds both Singapore-specific initialisms (HDB, CPF, MRT, KTM,
 UOB, FMSR, …) and everyday English ones (CEO, GDP, PTSD, DMV) that are
 always read as their letters.
+| Mackenzie, Preece, Cardew, Gordon, Cheong, Dennon (St James names) | Names — people and places | misaki cannot phonemise; would be spelled out letter by letter | Mackenzie məkˈɛnziː, Preece prˈiːs, Cardew kˈɑːdjuː, Gordon ɡˈɔːdən, Cheong tʃˈiːɒŋ, Dennon dˈɛnən — standard readings; NOT ear-verified | PRONUNCIATION_OVERRIDES | st-james-power-station-the-coal-fired-station-of-1926 |
+| replanned, Mandopop | Ordinary word / coinage | misaki cannot phonemise; would be spelled out letter by letter | replanned riːplˈænd, Mandopop mˈændəʊpɒp — standard readings; NOT ear-verified | PRONUNCIATION_OVERRIDES | st-james-power-station-the-coal-fired-station-of-1926 |
