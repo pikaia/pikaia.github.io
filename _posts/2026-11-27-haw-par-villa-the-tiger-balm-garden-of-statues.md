@@ -2,7 +2,7 @@
 layout: post
 title: "Haw Par Villa: The Tiger Balm Garden of Statues"
 date: 2026-11-27 10:00:00 +0800
-last_modified_at: 2026-11-27 10:00:00 +0800
+last_modified_at: 2026-11-27 15:50:00 +0800
 categories: [history, places]
 image: https://upload.wikimedia.org/wikipedia/commons/1/14/Haw_Par_Villa_Paifang.jpg
 ---
@@ -10,6 +10,45 @@ image: https://upload.wikimedia.org/wikipedia/commons/1/14/Haw_Par_Villa_Paifang
 On a hill above Pasir Panjang Road stands the strangest garden in Singapore: a terraced hillside crowded with painted concrete statues — gods and demons, monkeys and mermaids, sinners being sawn in half — built by the Tiger Balm fortune as part gift, part advertisement and part moral textbook. It has outlived the mansion it was built around, the company town of theme parks that tried to replace it, and the family that made it. Today it waits behind a partial closure while the state decides what to do with it. This is the garden's own story; the brothers who paid for it, Aw Boon Haw and Aw Boon Par, have [their own post on this blog](/2026/09/02/aw-brothers-tiger-balm-fortune/).
 
 [← Back to all posts](/)
+
+<div id="listen-widget" role="button" tabindex="0" aria-label="Play audio narration of this post" style="display: inline-flex; flex-direction: column; align-items: center; cursor: pointer; gap: 0.2em; margin: 0.5em 0 1.5em 0; user-select: none;">
+  <span id="listen-icon" aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; border-radius: 50%; border: 1px solid #888; font-size: 1.3em;">&#127911;</span>
+  <span style="font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.75;">Listen</span>
+  <audio id="listen-audio" preload="none" style="display: none;">
+    <source src="/audio/haw-par-villa-the-tiger-balm-garden-of-statues.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+(function () {
+  var widget = document.getElementById('listen-widget');
+  var icon = document.getElementById('listen-icon');
+  var audio = document.getElementById('listen-audio');
+
+  function setIcon(playing) {
+    icon.innerHTML = playing ? '&#10074;&#10074;' : '&#127911;';
+  }
+
+  function toggle() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  widget.addEventListener('click', toggle);
+  widget.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  audio.addEventListener('play', function () { setIcon(true); });
+  audio.addEventListener('pause', function () { setIcon(false); });
+  audio.addEventListener('ended', function () { setIcon(false); });
+})();
+</script>
 
 ![The entrance arch of Haw Par Villa, with its tiger panel and the garden's name in English and Chinese](https://upload.wikimedia.org/wikipedia/commons/1/14/Haw_Par_Villa_Paifang.jpg)
 
@@ -87,7 +126,7 @@ In 2015 the tourist board appointed Journeys Pte Ltd, a heritage operator, to ru
 
 ![The entrance to the Ten Courts of Hell today, guarded by Ox-Head and Horse-Face, now the heart of Hell's Museum](https://upload.wikimedia.org/wikipedia/commons/4/45/Entrance_to_10_Courts_of_Hell.jpg)
 
-*The cave-mouth entrance to the Ten Courts of Hell, guarded by Ox-Head (left) and Horse-Face. Since 2021 the Courts have formed the centrepiece of Hell's Museum. (Jameslee 1993, CC BY-SA 4.0, via Wikimedia Commons)*
+*The cave-mouth entrance to the Ten Courts of Hell, guarded by Ox-Head and Horse-Face, the escorts of the dead. Since 2021 the Courts have formed the centrepiece of Hell's Museum. (Jameslee 1993, CC BY-SA 4.0, via Wikimedia Commons)*
 
 And there the story pauses. Journeys' contract ended on 7 December 2025, and from the next day the Singapore Tourism Board closed the park partially, for essential maintenance and repair works, until further notice — saying the works were needed to ensure public safety while preserving the park's cultural and artistic elements, and that it was reviewing the future plans for Haw Par Villa. No reopening date has been announced. The park, unusually for a place so loved, is not gazetted as a national monument. What remains open is Hell's Museum, run by an associate company of the former operator: open daily from 10 in the morning to 6, at S$22 for an adult and S$12 for a child, the Ten Courts at its heart. The Halloween event the museum spawned, Haw Ror Villa, even returned in the autumn of 2026 for a fifth edition, staged in and around the museum while the grounds beyond stayed shut.
 
