@@ -4,11 +4,17 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Haw Par Villa: The Tiger Balm Garden of Statues
+
+First posted 2026-11-27 · `2026-11-27-haw-par-villa-the-tiger-balm-garden-of-statues.md`
+
+- 2026-11-28: Fix Ten Courts caption (`44a0ffd`)
+
 ## 1973: The Oil Shock and the Winter Singapore Turned Down the Lights
 
 First posted 2026-11-27 · `2026-11-27-1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights.md`
 
-- No revisions yet.
+- 2026-11-27: Published URLs wired in; run artifacts (`0b1180b`)
 
 ## St James Power Station: The Coal-Fired Station of 1926
 
