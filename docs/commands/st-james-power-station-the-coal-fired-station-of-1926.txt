@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/st-james-power-station-the-coal-fired-station-of-1926.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py st-james-power-station-the-coal-fired-station-of-1926 0,3,11,23,26,32,34,37,40,50,54,60,63,71)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/st-james-power-station-the-coal-fired-station-of-1926.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/st-james-power-station-the-coal-fired-station-of-1926-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-26-st-james-power-station-the-coal-fired-station-of-1926.md scripts/video-configs/st-james-power-station-the-coal-fired-station-of-1926.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/cxpUmHzcPq4
+  --shorts-url https://youtube.com/shorts/atW767Z_mNw
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712695872961645837
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

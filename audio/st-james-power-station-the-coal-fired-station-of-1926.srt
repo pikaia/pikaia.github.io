@@ -1,0 +1,955 @@
+﻿1
+00:00:00,080 --> 00:00:02,555
+Saint James Power Station:
+
+2
+00:00:02,635 --> 00:00:05,675
+The Coal-Fired Station of 1926
+
+3
+00:00:05,675 --> 00:00:09,447
+Ask a Singaporean about
+Saint James Power Station and
+
+4
+00:00:09,527 --> 00:00:13,525
+you will likely hear about
+a nightclub, or about Dyson.
+
+5
+00:00:13,525 --> 00:00:17,250
+Both answers are right,
+and both skip the point.
+
+6
+00:00:17,250 --> 00:00:20,827
+The red-brick building at
+HarbourFront began as a
+
+7
+00:00:20,907 --> 00:00:24,857
+coal-fired power station —
+Singapore's first municipal
+
+8
+00:00:24,937 --> 00:00:29,037
+power station — and its first
+generator was commissioned
+
+9
+00:00:29,117 --> 00:00:32,475
+a century ago, on the
+30th of September 1926.
+
+10
+00:00:32,475 --> 00:00:36,425
+For fifty years it made
+the town's electricity.
+
+11
+00:00:36,425 --> 00:00:40,148
+The parties and the technology
+headquarters came later,
+
+12
+00:00:40,228 --> 00:00:44,100
+and they are only the building's
+second and third lives.
+
+13
+00:00:44,100 --> 00:00:48,250
+Electricity came to
+Singapore in small pieces.
+
+14
+00:00:48,250 --> 00:00:52,495
+In 1878 the Tanjong Pagar Dock
+Company built a small power
+
+15
+00:00:52,575 --> 00:00:57,192
+station outside its dock and put
+up an arc lamp at the wharves,
+
+16
+00:00:57,272 --> 00:01:01,075
+so that ships could be
+worked and watched at night.
+
+17
+00:01:01,075 --> 00:01:05,082
+A generation later, the
+tramway-era station on Mackenzie
+
+18
+00:01:05,162 --> 00:01:08,805
+Road was generating for
+the electric trams by 1905,
+
+19
+00:01:08,885 --> 00:01:13,257
+and in 1906 its current lit
+Raffles Place and the Esplanade —
+
+20
+00:01:13,337 --> 00:01:17,710
+the town's first electric street
+lamps, with the Municipality
+
+21
+00:01:17,790 --> 00:01:21,950
+buying power in bulk and laying
+the distribution network.
+
+22
+00:01:21,950 --> 00:01:27,150
+By the early 1920s that
+arrangement had run out of road.
+
+23
+00:01:27,150 --> 00:01:31,845
+Mackenzie Road was overtaxed and
+could not grow, and in 1921 the
+
+24
+00:01:31,925 --> 00:01:36,769
+Municipal Engineer-in-Chief warned
+that "the backward state of the
+
+25
+00:01:36,849 --> 00:01:41,550
+electrical situation is holding
+back the progress of the town".
+
+26
+00:01:41,550 --> 00:01:45,173
+Singapore needed a proper
+power station, built for the
+
+27
+00:01:45,253 --> 00:01:49,025
+town rather than borrowed
+from the docks and the trams.
+
+28
+00:01:49,025 --> 00:01:53,849
+In October 1923 the Municipal
+Commissioners sent the London
+
+29
+00:01:53,929 --> 00:01:59,000
+consulting engineers Preece,
+Cardew and Rider to find a site.
+
+30
+00:01:59,000 --> 00:02:02,558
+They chose Cape Saint James,
+a tidal-swamp headland
+
+31
+00:02:02,638 --> 00:02:05,625
+on Telok Blangah Bay
+beside Keppel Harbour,
+
+32
+00:02:05,705 --> 00:02:09,200
+on land that had once
+belonged to the Temenggong.
+
+33
+00:02:09,200 --> 00:02:12,150
+The reasons were practical ones.
+
+34
+00:02:12,150 --> 00:02:15,150
+The sea provided cooling water.
+
+35
+00:02:15,150 --> 00:02:19,200
+Wharves at the doorstep
+could land sea-borne coal.
+
+36
+00:02:19,200 --> 00:02:22,679
+And the Federated Malay
+States Railway station
+
+37
+00:02:22,759 --> 00:02:26,550
+nearby could bring in coal
+and materials by rail.
+
+38
+00:02:26,550 --> 00:02:30,918
+In 1924 the Municipality bought the
+
+39
+00:02:30,998 --> 00:02:35,700
+65,000 square foot site for $375,000.
+
+40
+00:02:35,700 --> 00:02:39,867
+The swamp was reclaimed and
+levelled, foundation work began
+
+41
+00:02:39,947 --> 00:02:45,193
+late that year, and by Christmas 1925
+the foundations of the boiler house,
+
+42
+00:02:45,273 --> 00:02:48,800
+turbine house and switchgear
+house were complete.
+
+43
+00:02:48,800 --> 00:02:52,848
+The station was designed by
+the Chief Municipal Architect,
+
+44
+00:02:52,928 --> 00:02:56,194
+Alexander Gordon — the
+architect of City Hall —
+
+45
+00:02:56,274 --> 00:02:59,050
+with Preece, Cardew and Rider advising.
+
+46
+00:02:59,050 --> 00:03:03,097
+Behind an Edwardian red-brick
+facade with full-length
+
+47
+00:03:03,177 --> 00:03:07,847
+tinted-glass windows stood a
+steel skeleton of some 820 tons,
+
+48
+00:03:07,927 --> 00:03:10,962
+six British boilers, and three turbines:
+
+49
+00:03:11,042 --> 00:03:15,325
+one of 2,000 kilowatts and
+two of 5,000 kilowatts each.
+
+50
+00:03:15,325 --> 00:03:18,800
+Demand would not wait for the full plant.
+
+51
+00:03:18,800 --> 00:03:22,395
+The first unit, the
+2,000 kilowatt generator,
+
+52
+00:03:22,475 --> 00:03:27,377
+was installed and commissioned
+on the 30th of September 1926,
+
+53
+00:03:27,457 --> 00:03:32,275
+running only from 6 to 11 in
+the evening to shave the peak.
+
+54
+00:03:32,275 --> 00:03:36,022
+As it ramped up, Mackenzie
+Road's supply was
+
+55
+00:03:36,102 --> 00:03:40,450
+wound down and ceased on
+the 29th of October 1926.
+
+56
+00:03:40,450 --> 00:03:44,075
+By the 1st of June 1927 Saint James was
+
+57
+00:03:44,155 --> 00:03:47,575
+supplying the whole existing system.
+
+58
+00:03:47,575 --> 00:03:51,085
+The Commissioners,
+foreseeing still more demand,
+
+59
+00:03:51,165 --> 00:03:55,198
+authorised an additional
+10,000 kilowatt set that June,
+
+60
+00:03:55,278 --> 00:04:00,358
+bringing the plant to about 22,000
+kilowatts — almost seven times the
+
+61
+00:04:00,438 --> 00:04:04,850
+roughly 3,200 kilowatts of
+everything that had come before.
+
+62
+00:04:04,850 --> 00:04:10,375
+The building itself was designed
+to be extended to 40,000 kilowatts.
+
+63
+00:04:10,375 --> 00:04:14,090
+On the 7th of November 1927
+the station was officially
+
+64
+00:04:14,170 --> 00:04:18,658
+opened by Sir Hugh Clifford,
+Governor of the Straits Settlements,
+
+65
+00:04:18,738 --> 00:04:21,469
+who marked the novelty of the age with a
+
+66
+00:04:21,549 --> 00:04:25,475
+story about a servant in
+Nigeria asking to bring his wife
+
+67
+00:04:25,555 --> 00:04:29,350
+to see a kettle boil water
+from "a peg into the wall".
+
+68
+00:04:29,350 --> 00:04:32,694
+The power reached some 28,255 people,
+
+69
+00:04:32,774 --> 00:04:38,050
+besides street lighting,
+tramways, the port and industry.
+
+70
+00:04:38,050 --> 00:04:43,555
+Tariffs fell from 14 cents a unit
+in 1927 to 6.2 cents in 1932,
+
+71
+00:04:43,635 --> 00:04:47,544
+and in 1928 the Electricity
+Department opened
+
+72
+00:04:47,624 --> 00:04:52,331
+an office on Orchard Road
+to teach the public to use —
+
+73
+00:04:52,411 --> 00:04:57,375
+and to lease — electric
+cookers, fans and water heaters.
+
+74
+00:04:57,375 --> 00:05:01,471
+Saint James burned coal delivered
+by sea to its own doorstep,
+
+75
+00:05:01,551 --> 00:05:06,000
+and the supply line reached further
+than most people would guess.
+
+76
+00:05:06,000 --> 00:05:09,578
+Singapore's coal initially
+arrived from Manchuria,
+
+77
+00:05:09,658 --> 00:05:14,113
+shipped through Japanese firms
+that were the lowest tenderers,
+
+78
+00:05:14,193 --> 00:05:17,332
+until that supply stopped
+in the late 1930s;
+
+79
+00:05:17,412 --> 00:05:20,850
+after that, coal came
+from Peninsular Malaysia.
+
+80
+00:05:20,850 --> 00:05:25,438
+But coal costs were rising, and
+in 1940 the station switched
+
+81
+00:05:25,518 --> 00:05:30,575
+from coal to fuel oil, with two
+boilers converted for oil-firing.
+
+82
+00:05:30,575 --> 00:05:33,846
+So the famous coal-fired
+station burned coal
+
+83
+00:05:33,926 --> 00:05:37,200
+for only about fourteen
+of its fifty years.
+
+84
+00:05:37,200 --> 00:05:40,820
+The label is not wrong — coal
+is what it was built for,
+
+85
+00:05:40,900 --> 00:05:44,251
+and coal shaped its site,
+its wharves and its early
+
+86
+00:05:44,331 --> 00:05:47,547
+working life — but the
+greater part of its career
+
+87
+00:05:47,627 --> 00:05:51,125
+ran on oil, and its last
+machines were gas turbines.
+
+88
+00:05:51,125 --> 00:05:53,875
+The early years were troubled.
+
+89
+00:05:53,875 --> 00:05:56,525
+There were blackouts as early as 1928,
+
+90
+00:05:56,605 --> 00:06:00,765
+and one shutdown that November
+was traced to the negligence
+
+91
+00:06:00,845 --> 00:06:04,150
+of junior shift engineers,
+who were dismissed.
+
+92
+00:06:04,150 --> 00:06:07,749
+Working the station was
+hard, round-the-clock labour,
+
+93
+00:06:07,829 --> 00:06:13,175
+and staff were expected to answer a
+fault "in a matter of ten minutes or so".
+
+94
+00:06:13,175 --> 00:06:15,250
+Then came the war.
+
+95
+00:06:15,250 --> 00:06:18,806
+When the expatriate engineers
+were interned in Changi,
+
+96
+00:06:18,886 --> 00:06:23,182
+local staff kept the station and
+the distribution network running
+
+97
+00:06:23,262 --> 00:06:28,299
+under the Japanese — two Japanese
+supervisors over the distribution section,
+
+98
+00:06:28,379 --> 00:06:31,665
+and Singaporean foremen
+and assistants below them,
+
+99
+00:06:31,745 --> 00:06:34,775
+improvising spare parts
+off the black market.
+
+100
+00:06:34,775 --> 00:06:38,844
+One wireman, Lim Loo Cheong,
+recalled being fetched from
+
+101
+00:06:38,924 --> 00:06:42,925
+home for cable faults and
+paid in rice and vegetables.
+
+102
+00:06:42,925 --> 00:06:45,854
+The war wrecked the plant all the same:
+
+103
+00:06:45,934 --> 00:06:50,019
+by 1945 the turbines were
+"all very seriously damaged"
+
+104
+00:06:50,099 --> 00:06:53,725
+and the boiler house "in
+deplorable condition".
+
+105
+00:06:53,725 --> 00:06:57,951
+Demand jumped by about half after
+the war, while the machinery
+
+106
+00:06:58,031 --> 00:07:02,475
+was still on temporary repairs,
+and the failures made headlines.
+
+107
+00:07:02,475 --> 00:07:06,461
+On the 7th of February 1948
+a generator breakdown cut
+
+108
+00:07:06,541 --> 00:07:11,064
+power for eight and a half hours
+across all non-city areas —
+
+109
+00:07:11,144 --> 00:07:14,750
+the Straits Times mourned
+the melted ice-cream.
+
+110
+00:07:14,750 --> 00:07:18,692
+On the 19th of September 1950
+a single generator failure
+
+111
+00:07:18,772 --> 00:07:22,570
+cascaded into an island-wide
+blackout of about an hour
+
+112
+00:07:22,650 --> 00:07:27,885
+and a half: babies were delivered by
+lamplight at Kandang Kerbau Hospital,
+
+113
+00:07:27,965 --> 00:07:30,398
+and a play at the Victoria Memorial
+
+114
+00:07:30,478 --> 00:07:34,500
+Hall was lit by a car's
+headlamps reflected in a mirror.
+
+115
+00:07:34,500 --> 00:07:38,153
+In January 1951 a welding accident at the
+
+116
+00:07:38,233 --> 00:07:41,875
+station killed two men and injured four.
+
+117
+00:07:41,875 --> 00:07:45,153
+The engineers, meanwhile,
+fought the Monday-morning
+
+118
+00:07:45,233 --> 00:07:47,524
+demand spike — the Monday Syndrome —
+
+119
+00:07:47,604 --> 00:07:51,225
+by starting their sets at
+three or four in the morning.
+
+120
+00:07:51,225 --> 00:07:55,745
+By the mid-1950s the
+verdict was inefficiency:
+
+121
+00:07:55,825 --> 00:08:00,745
+in 1955 Saint James generated
+at 3.57 cents a unit
+
+122
+00:08:00,825 --> 00:08:06,025
+against the newer Pasir
+Panjang station's 1.4 cents.
+
+123
+00:08:06,025 --> 00:08:11,257
+The station closed for upgrading
+in 1956, and the renovated plant
+
+124
+00:08:11,337 --> 00:08:17,467
+was reopened on the 2nd of July 1960
+by the Finance Minister, Goh Keng Swee,
+
+125
+00:08:17,547 --> 00:08:22,450
+with new machines that increased
+output by 18,000 kilowatts.
+
+126
+00:08:22,450 --> 00:08:26,141
+The two tall chimneys that
+define the building today
+
+127
+00:08:26,221 --> 00:08:30,274
+date from this rebuild; the
+west chimney, 32 metres high,
+
+128
+00:08:30,354 --> 00:08:33,400
+now houses the station's heritage gallery.
+
+129
+00:08:33,400 --> 00:08:37,315
+In 1963 the Public Utilities
+Board was formed to
+
+130
+00:08:37,395 --> 00:08:41,143
+manage Singapore's
+electricity, water and gas,
+
+131
+00:08:41,223 --> 00:08:46,050
+and Saint James ran under the
+PUB for its remaining years.
+
+132
+00:08:46,050 --> 00:08:50,450
+It was not enough to keep the
+old station in the front rank.
+
+133
+00:08:50,450 --> 00:08:55,298
+With the full opening of Pasir
+Panjang Power Station in 1966,
+
+134
+00:08:55,378 --> 00:09:01,275
+and Jurong Power Station following,
+Saint James was gradually phased out.
+
+135
+00:09:01,275 --> 00:09:05,761
+The last of its gas turbines
+was decommissioned in 1976 —
+
+136
+00:09:05,841 --> 00:09:09,205
+fifty years after the
+first small generator
+
+137
+00:09:09,285 --> 00:09:13,050
+had been switched on to
+cover the evening peak.
+
+138
+00:09:13,050 --> 00:09:15,900
+The building was not demolished.
+
+139
+00:09:15,900 --> 00:09:20,638
+In the early 1980s the Port of
+Singapore Authority converted
+
+140
+00:09:20,718 --> 00:09:24,332
+it into a high-bay,
+semi-automated warehouse —
+
+141
+00:09:24,412 --> 00:09:30,275
+described as Southeast Asia's first
+fully automated commercial warehouse —
+
+142
+00:09:30,355 --> 00:09:34,450
+which opened in 1983 and
+served the PSA until 1992.
+
+143
+00:09:34,450 --> 00:09:37,241
+After that the station sat largely vacant,
+
+144
+00:09:37,321 --> 00:09:41,150
+while the HarbourFront precinct
+was replanned around it.
+
+145
+00:09:41,150 --> 00:09:45,201
+The second life began with
+nightlife entrepreneur Dennis Foo,
+
+146
+00:09:45,281 --> 00:09:48,723
+investing through Dennon
+Entertainment with partners
+
+147
+00:09:48,803 --> 00:09:52,325
+that included the state-owned
+Mapletree Investments.
+
+148
+00:09:52,325 --> 00:09:56,221
+The conversion cost about 40
+million Singapore dollars —
+
+149
+00:09:56,301 --> 00:09:59,628
+half from Mapletree,
+primarily for conservation,
+
+150
+00:09:59,708 --> 00:10:03,400
+and half from the other
+investors for the interiors.
+
+151
+00:10:03,400 --> 00:10:08,449
+Keeping the name Saint James Power
+Station, the complex officially
+
+152
+00:10:08,529 --> 00:10:14,510
+launched on the 24th of September 2006
+with 12 outlets for live entertainment,
+
+153
+00:10:14,590 --> 00:10:18,475
+music and dining, holding
+more than 10,000 people.
+
+154
+00:10:18,475 --> 00:10:22,646
+In its later years it was
+described as 11 nightclubs and
+
+155
+00:10:22,726 --> 00:10:27,655
+live-entertainment venues under
+one roof — Dragonfly for Mandopop,
+
+156
+00:10:27,735 --> 00:10:31,075
+The Boiler Room for
+rock and R&B among them.
+
+157
+00:10:31,075 --> 00:10:33,206
+Midway through the party years,
+
+158
+00:10:33,286 --> 00:10:36,425
+the building received
+its formal protection.
+
+159
+00:10:36,425 --> 00:10:41,228
+On the 11th of November 2009 the
+National Heritage Board gazetted
+
+160
+00:10:41,308 --> 00:10:46,336
+Saint James Power Station a national
+monument — the 60th building or
+
+161
+00:10:46,416 --> 00:10:51,600
+site so gazetted — while the nightclubs
+were still trading inside it.
+
+162
+00:10:51,600 --> 00:10:54,365
+In 2010 the conversion won the
+
+163
+00:10:54,445 --> 00:10:57,575
+URA Architectural Heritage Award.
+
+164
+00:10:57,575 --> 00:11:00,945
+The clubs ran on until the lease expired,
+
+165
+00:11:01,025 --> 00:11:04,475
+and the complex closed in September 2018.
+
+166
+00:11:04,475 --> 00:11:08,306
+In November 2019 Mapletree
+announced that the monument
+
+167
+00:11:08,386 --> 00:11:11,420
+would be restored with
+Dyson as its tenant,
+
+168
+00:11:11,500 --> 00:11:15,700
+as part of the Greater Southern
+Waterfront transformation.
+
+169
+00:11:15,700 --> 00:11:18,968
+The restoration inserted
+floating floor slabs and
+
+170
+00:11:19,048 --> 00:11:23,615
+atriums into the cavernous halls,
+conserved the facade and chimneys,
+
+171
+00:11:23,695 --> 00:11:26,280
+fitted a heritage gallery into the west
+
+172
+00:11:26,360 --> 00:11:30,050
+chimney and laid a heritage
+trail around the building.
+
+173
+00:11:30,050 --> 00:11:34,335
+On the 25th of March 2022
+Prime Minister Lee Hsien Loong
+
+174
+00:11:34,415 --> 00:11:39,401
+officially opened Dyson's new
+global headquarters at Saint James,
+
+175
+00:11:39,481 --> 00:11:43,300
+with the company's founder,
+James Dyson, present.
+
+176
+00:11:43,300 --> 00:11:47,117
+The restored monument
+holds 110,000 square feet;
+
+177
+00:11:47,197 --> 00:11:54,019
+more than 1,400 Dyson people work in Singapore,
+560 of them engineers and scientists,
+
+178
+00:11:54,099 --> 00:11:57,836
+and the company announced
+a further 1.5 billion
+
+179
+00:11:57,916 --> 00:12:02,625
+Singapore dollars of Singapore
+investment over four years.
+
+180
+00:12:02,625 --> 00:12:07,493
+The heritage gallery opened the
+following month, and the restoration
+
+181
+00:12:07,573 --> 00:12:11,931
+won the URA Architectural Heritage
+Award for Conservation and
+
+182
+00:12:12,011 --> 00:12:17,250
+Innovation (Distinction) in 2022 —
+the building's second heritage award.
+
+183
+00:12:17,250 --> 00:12:20,865
+A century after its first
+generator was commissioned,
+
+184
+00:12:20,945 --> 00:12:25,187
+the coal station is a technology
+company's world headquarters,
+
+185
+00:12:25,267 --> 00:12:28,125
+and its chimney carries the word "dyson".
+
+186
+00:12:28,125 --> 00:12:30,370
+The harbour at its doorstep has
+
+187
+00:12:30,450 --> 00:12:33,300
+changed as completely as the building.
+
+188
+00:12:33,300 --> 00:12:37,215
+The coal wharves are gone;
+the gas that now does the work
+
+189
+00:12:37,295 --> 00:12:40,720
+coal once did arrives by
+pipeline and by ship at a
+
+190
+00:12:40,800 --> 00:12:44,715
+terminal on Jurong Island —
+a story this blog has told in
+
+191
+00:12:44,795 --> 00:12:48,650
+The Pipelines That Feed
+Singapore and The LNG Terminal.
+
+192
+00:12:48,650 --> 00:12:51,599
+Saint James stands at
+the start of that arc:
+
+193
+00:12:51,679 --> 00:12:55,936
+the place where Singapore first
+built power at municipal scale,
+
+194
+00:12:56,016 --> 00:12:58,150
+in brick, on a reclaimed swamp.
+
+195
+00:12:58,150 --> 00:13:02,195
+A century on, Singapore's
+best-known power station is famous
+
+196
+00:13:02,275 --> 00:13:05,907
+for everything except power
+— the nightclub it became,
+
+197
+00:13:05,988 --> 00:13:09,895
+the headquarters it now houses
+— but each of its lives has
+
+198
+00:13:09,975 --> 00:13:14,100
+run inside the same Edwardian
+shell that first lit the town.
