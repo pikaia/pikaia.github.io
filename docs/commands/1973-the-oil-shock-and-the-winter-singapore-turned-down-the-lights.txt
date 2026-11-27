@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py 1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights 0,1,5,17,31,39,43,46,51,56,57,59,69,80,83,87)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-27-1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights.md scripts/video-configs/1973-the-oil-shock-and-the-winter-singapore-turned-down-the-lights.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/pQDBrrWHhsI
+  --shorts-url https://youtube.com/shorts/vVsdc568ruQ
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712871373630197023
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"

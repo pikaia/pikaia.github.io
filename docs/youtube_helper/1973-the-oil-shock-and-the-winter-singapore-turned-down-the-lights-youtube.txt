@@ -1,0 +1,93 @@
+UPLOAD NOTE (not part of any description): the narration is an AI clone of the author's voice. On YouTube, answer Yes to "Altered or synthetic content" for both the video and the Short; on TikTok, turn on the AI-generated content label.
+
+=== FULL VIDEO ===
+
+Title:
+1973: The Oil Shock and the Winter Singapore Turned Down the Lights
+
+Description:
+In the winter of 1973, Singapore's lights did not go out — and that was not luck. The island had no oil of its own, yet it refined other people's oil on a world scale and burned imported oil for every unit of its electricity. When the Arab oil producers cut production and the price of crude quadrupled in three months, Singapore's response was a strange one: it refused to help itself to the oil sitting in its own tanks, taxed its own motorists hard, and asked everyone to save a litre a day. The lights were turned down deliberately, by policy — and only just a little.
+
+Full story: https://da.gd/fj1Jes
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+Presenter: an illustrated avatar of the author, animated locally from the narration audio.
+
+Images (Wikimedia Commons, credited individually):
+- Rainer Halama, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- Terence Ong, CC BY 2.5, via Wikimedia Commons (3 photos)
+- Bob T, CC BY-SA 4.0, via Wikimedia Commons
+- Robert L. Knudsen, White House Photo Office, Public domain, via Wikimedia Commons; photographed 1971
+- The price of crude oil across the 1970s: the two steps up are the two shocks. (Chart by Seven (Muse), from the BP Statistical Review benchmark price series)
+- Central Intelligence Agency, Public domain, via Wikimedia Commons
+- David Falconer, Public domain, via Wikimedia Commons; photographed 1974
+- David Falconer, Public domain, via Wikimedia Commons; photographed 1973
+- Erwin Soo, CC BY 2.0, via Wikimedia Commons
+
+Sources:
+- Centre for Liveable Cities, Energising Singapore: Channelling Energy for a Sustainable Future (2018) — refining rank, refinery history, price and disruption figures: clc.gov.sg
+- BP, Growing With Singapore — Colin Horn's 1973 account and the "Save a litre a day" campaign (p.56): joomag.com
+- US Embassy Singapore cables, November 1973 (declassified, via WikiLeaks PlusD): 8 Nov 1973 · 9 Nov 1973 (refinery cutbacks) · 9 Nov 1973 (Esso) · 29 Nov 1973
+- US Embassy Singapore cable, 21 April 1975, "Energy Consumption Patterns" — taxes, tariffs, prices and the 9.4 percent consumption fall: archive.org
+- US Embassy Singapore cable, March 1975 — retrenchment figures: wikileaks.org
+- Lee Kuan Yew, From Third World to First — the stocks decision, as quoted in Crossroads journal: crossroadsjournal.org
+- Vivian Balakrishnan, speech at the Alibaba Cloud Summit, 2018 — the stocks decision retold: mddi.gov.sg
+- Lee Kuan Yew, New Year Message 1974 — world production at 85–87 percent of September 1973 levels: nas.gov.sg
+- Lee Kuan Yew, 1981 — the Singapore General Hospital air-conditioning: nas.gov.sg
+- Goh Chok Tong, 2001 — "Singaporeans heeded the Government's call": nas.gov.sg
+- National Library Board, Street Lighting — the January 1974 sodium-lamp conversion (citing New Nation, 21 Jan 1974): nlb.gov.sg
+- Roots (National Heritage Board) — Plaza Singapura's $1-a-month showrooms: roots.gov.sg
+- World Bank consumer price inflation series for Singapore (via FRED) — 2.1 / 19.6 / 22.4 percent: fred.stlouisfed.org
+- World Bank, 1975 country report on Singapore — growth and trade figures: worldbank.org
+- Bernard Chen, 1980 (National Archives) — the 1979 price rise: nas.gov.sg
+- The Straits Times, 21 April 1979 — the Save Electricity Campaign's first weeks: eresources.nlb.gov.sg
+- Parliament of Singapore, 15 May 1979: parliament.gov.sg
+- Posted oil prices, 1973–74: wikipedia.org; the 1973–74 oil embargo: encyclopedia.com
+- Chart data: BP Statistical Review benchmark crude prices, as tabulated at chartsbin.com
+- Remember Singapore — Singapore's past national campaigns (the 1977 energy conservation campaign): remembersingapore.org
+
+----------------------------------------------------------------------
+
+=== SHORT ===
+
+Title:
+1973: The Oil Shock and the Winter Singapore Turned Down the Lights #Shorts
+
+Description:
+In the winter of 1973, Singapore's lights did not go out — and that was not luck. The island had no oil of its own, yet it refined other people's oil on a world scale and burned imported oil for every unit of its electricity. When the Arab oil producers cut production and the price of crude quadrupled in three months, Singapore's response was a strange one: it refused to help itself to the oil sitting in its own tanks, taxed its own motorists hard, and asked everyone to save a litre a day. The lights were turned down deliberately, by policy — and only just a little. #Shorts
+
+Full story: https://da.gd/fj1Jes
+Full-length video: <paste the main video's URL here after uploading it>
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons):
+- Rainer Halama, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- Terence Ong, CC BY 2.5, via Wikimedia Commons (3 photos)
+- The price of crude oil across the 1970s: the two steps up are the two shocks. (Chart by Seven (Muse), from the BP Statistical Review benchmark price series)
+- Bob T, CC BY-SA 4.0, via Wikimedia Commons
+- David Falconer, Public domain, via Wikimedia Commons; photographed 1973
+- Erwin Soo, CC BY 2.0, via Wikimedia Commons
+
+----------------------------------------------------------------------
+
+=== TIKTOK (upload the Short's file) ===
+
+Description:
+1973: The Oil Shock and the Winter Singapore Turned Down the Lights
+
+In the winter of 1973, Singapore's lights did not go out — and that was not luck. The island had no oil of its own, yet it refined other people's oil on a world scale and burned imported oil for every unit of its electricity. When the Arab oil producers cut production and the price of crude quadrupled in three months, Singapore's response was a strange one: it refused to help itself to the oil sitting in its own tanks, taxed its own motorists hard, and asked everyone to save a litre a day. The lights were turned down deliberately, by policy — and only just a little.
+
+Full story: link in bio
+
+Narration: an AI clone of the author's voice (generated with Kokoro TTS, open-source, Apache 2.0 license, voice bm_george, then converted to the author's voice with OpenVoice, open-source, MIT license)
+
+Images (Wikimedia Commons):
+- Rainer Halama, CC BY-SA 4.0, via Wikimedia Commons (2 photos)
+- Terence Ong, CC BY 2.5, via Wikimedia Commons (3 photos)
+- The price of crude oil across the 1970s: the two steps up are the two shocks. (Chart by Seven (Muse), from the BP Statistical Review benchmark price series)
+- Bob T, CC BY-SA 4.0, via Wikimedia Commons
+- David Falconer, Public domain, via Wikimedia Commons; photographed 1973
+- Erwin Soo, CC BY 2.0, via Wikimedia Commons
+
+#Singapore #SingaporeHistory #LesserKnownSingapore #History #LearnOnTikTok
