@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/haw-par-villa-the-tiger-balm-garden-of-statues.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py haw-par-villa-the-tiger-balm-garden-of-statues 0,1,7,12,37,40,44,57,59,64,67)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/haw-par-villa-the-tiger-balm-garden-of-statues.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/haw-par-villa-the-tiger-balm-garden-of-statues-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-27-haw-par-villa-the-tiger-balm-garden-of-statues.md scripts/video-configs/haw-par-villa-the-tiger-balm-garden-of-statues.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/-bquuijWdzE
+  --shorts-url https://youtube.com/shorts/BEGcuDxKmho
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7712996206145801502
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
