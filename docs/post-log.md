@@ -4,6 +4,12 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## St James Power Station: The Coal-Fired Station of 1926
+
+First posted 2026-11-26 · `2026-11-26-st-james-power-station-the-coal-fired-station-of-1926.md`
+
+- 2026-11-27: Published URLs wired in; run artifacts (`8e2f134`)
+
 ## The LNG Terminal: The Insurance Policy Singapore Built in 2013
 
 First posted 2026-11-26 · `2026-11-26-the-lng-terminal-the-insurance-policy-singapore-built-in-2013.md`
