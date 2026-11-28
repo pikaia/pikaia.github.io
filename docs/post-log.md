@@ -4,10 +4,17 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## Changi Prison, 1936 to 2004: The Gaol Whose Wall and Gate Were Kept
+
+First posted 2026-11-27 · `2026-11-27-changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.md`
+
+- 2026-11-28: Published URLs wired in; run artifacts (`9cb0306`)
+
 ## Haw Par Villa: The Tiger Balm Garden of Statues
 
 First posted 2026-11-27 · `2026-11-27-haw-par-villa-the-tiger-balm-garden-of-statues.md`
 
+- 2026-11-28: Published URLs wired in; run artifacts (`5883ca8`)
 - 2026-11-28: Fix Ten Courts caption (`44a0ffd`)
 
 ## 1973: The Oil Shock and the Winter Singapore Turned Down the Lights
