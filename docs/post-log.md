@@ -4,6 +4,13 @@ Every post on the site, newest first, with the date it was first posted and its 
 
 Changes that touched 4 or more posts at once are listed once, under [Site-wide changes](#site-wide-changes), not under each post.
 
+## The Padang and the Cricket Club: The Field That Was Ordered to Stay Empty
+
+First posted 2026-11-28 · `2026-11-28-the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty.md`
+
+- 2026-11-28: Published URLs wired in; run artifacts (`e30d051`)
+- 2026-11-28: Fix Changi cross-link wording (`d0405fb`)
+
 ## Changi Prison, 1936 to 2004: The Gaol Whose Wall and Gate Were Kept
 
 First posted 2026-11-27 · `2026-11-27-changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.md`
