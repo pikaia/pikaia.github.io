@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio (pick) ==="
+  cmd=(python scripts/build_short_audio.py the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty 0,3,9,20,28,42,51,52,60,65,76,79)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-28-the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty.md scripts/video-configs/the-padang-and-the-cricket-club-the-field-that-was-ordered-to-stay-empty.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/Tf0jd8P-fk8
+  --shorts-url https://youtube.com/shorts/syWyWGSNLvA
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7713132272647507230
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
