@@ -93,6 +93,13 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
   echo
 } 2>&1 | tee -a logs/changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.log
 
+{ echo; date; echo "=== 7.0 Build the Short audio ==="
+  cmd=(python scripts/build_short_audio.py changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept 0,2,9,18,29,38,40,45,46,50,54,60,74,78,81)
+  echo "\$ ${cmd[*]}"; echo
+  time "${cmd[@]}"
+  echo
+} 2>&1 | tee -a logs/changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.log
+
 { echo; date; echo "=== 7.1 Check smoothness (Short) ==="
   cmd=(python scripts/watch_video_lib.py --config scripts/video-configs/changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept-short.py --check-only)
   echo "\$ ${cmd[*]}"; echo
@@ -208,9 +215,9 @@ powershell.exe -c '(New-Object Media.SoundPlayer "C:\Windows\Media\Windows Notif
 
 { echo; date; echo "=== 11. Wire the published URLs into the post ==="
   cmd=(python scripts/build_watch_widget.py _posts/2026-11-27-changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.md scripts/video-configs/changi-prison-1936-to-2004-the-gaol-whose-wall-and-gate-were-kept.py 
-  --youtube-url https://youtu.be/...
-  --shorts-url https://youtube.com/shorts/...
-   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/...
+  --youtube-url https://youtu.be/M2Yp_6cOlfA
+  --shorts-url https://youtube.com/shorts/tVSBTPf-Rzs
+   --tiktok-url https://www.tiktok.com/@lesserknownsingapore/video/7713089682233445662
   )
   echo "\$ ${cmd[*]}"; echo
   time "${cmd[@]}"
